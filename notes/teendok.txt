@@ -1,0 +1,15 @@
+1. gyakorisag/hossz x
+2. gyakorisag/igealakok x
+3. gyakorisag/fonevragozas x
+
+4. ik: regi/uj x
+5. ik: kategoriak
+6. ik: szogeneralas, szures
+
+7. vh: uj x
+8. vh: kategoriak 
+9. vh: szogeneralas, szures
+
+11. hangkivetes: regi/uj
+12. ~: kategoriak
+13. ~: szogeneralas, szures
