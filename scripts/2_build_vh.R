@@ -1,4 +1,4 @@
-## build -ik list from webcorpus2 ##
+## build front/back harmony list from webcorpus2 ##
 
 # -- header -- #
 
