@@ -10,3 +10,4 @@
 - MODELS: modelling with gcm, mgl, ndl, and various other three letter acronyms I'm not even aware of yet
 
 Webcorpus2: https://hlt.bme.hu/en/resources/webcorpus2
+Hunspell: http://hunspell.github.io/

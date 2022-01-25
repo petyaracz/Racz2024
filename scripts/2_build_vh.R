@@ -16,9 +16,8 @@ library(broom)
 
 # -- read -- #
 
-hu = read_tsv('~/Github/Racz2024/src/hu_list.txt')
-# c = read_tsv('~/Documents/Webcorpus2/frequency_list/data/freqlists2/webcorpus2_freqlist_hu_with_lemmafreq_hu_list_filt.tsv.gz')
-cfull = read_tsv('~/Documents/Webcorpus2/frequency_list/data/freqlists2/webcorpus2_freqlist_hu_with_lemmafreq.tsv.gz')
+hu = read_tsv('src/hu_list.txt')
+cfull = read_tsv('src/webcorpus2freqlist/webcorpus2_freqlist_hu_with_lemmafreq.tsv.gz')
 
 # http://szotar.mokk.bme.hu/szoszablya/searchq.php?t=type&l=100&q=lemma%7E%5E%5B%5Ea%E1e%E9i%EDo%F3%F6%F5u%FA%FC%FB%5D%2B%5Ba%E1o%F3u%FA%5D%5B%5Ea%E1e%E9i%EDo%F3%F6%F5u%FA%FC%FB%5D%2B%5Be%E9%5D%5B%5Ea%E1e%E9i%EDo%F3%F6%F5u%FA%FC%FB%5D%2B%24+analysis%7E%28NOUN%7CADJ%29%3CCAS%3C%28ILL%7CINE%7CADE%7CDAT%7CSBL%7CADE%29%3E%3E
 # lemma~^[^aáeéiíoóöőuúüű]+[aáoóuú][^aáeéiíoóöőuúüű]+[eé][^aáeéiíoóöőuúüű]+$ analysis~(NOUN|ADJ)<CAS<(ILL|INE|ADE|DAT|SBL|ADE)>>

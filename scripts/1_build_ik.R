@@ -13,9 +13,8 @@ library(broom)
 
 # -- read -- #
 
-hu = read_tsv('~/Github/Racz2024/src/hu_list.txt')
-c = read_tsv('~/Documents/Webcorpus2/frequency_list/data/freqlists2/webcorpus2_freqlist_hu_with_lemmafreq_hu_list_filt.tsv.gz')
-cfull = read_tsv('~/Documents/Webcorpus2/frequency_list/data/freqlists2/webcorpus2_freqlist_hu_with_lemmafreq.tsv.gz')
+hu = read_tsv('src/hu_list.txt')
+cfull = read_tsv('src/webcorpus2freqlist/webcorpus2_freqlist_hu_with_lemmafreq.tsv.gz')
 ik_old = read_csv('src/ik_verbs/ikes_pairs_dataset.csv')
 
 # -- list builder -- #
