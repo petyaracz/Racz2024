@@ -10,26 +10,7 @@ library(tidyverse)
 library(glue)
 library(magrittr)
 
-library(ggthemes)
-library(furrr)
-library(broom)
-
-# -- read -- #
-
-hu = read_tsv('src/hu_list.txt')
-cfull = read_tsv('src/webcorpus2freqlist/webcorpus2_freqlist_hu_with_lemmafreq.tsv.gz')
-
-# http://szotar.mokk.bme.hu/szoszablya/searchq.php?t=type&l=100&q=lemma%7E%5E%5B%5Ea%E1e%E9i%EDo%F3%F6%F5u%FA%FC%FB%5D%2B%5Ba%E1o%F3u%FA%5D%5B%5Ea%E1e%E9i%EDo%F3%F6%F5u%FA%FC%FB%5D%2B%5Be%E9%5D%5B%5Ea%E1e%E9i%EDo%F3%F6%F5u%FA%FC%FB%5D%2B%24+analysis%7E%28NOUN%7CADJ%29%3CCAS%3C%28ILL%7CINE%7CADE%7CDAT%7CSBL%7CADE%29%3E%3E
-# lemma~^[^aáeéiíoóöőuúüű]+[aáoóuú][^aáeéiíoóöőuúüű]+[eé][^aáeéiíoóöőuúüű]+$ analysis~(NOUN|ADJ)<CAS<(ILL|INE|ADE|DAT|SBL|ADE)>>
-old = read_delim('src/front_harmony/wc1_vh.csv')
-
 # -- list builder -- #
-
-# ház = cfull %>% 
-#   filter(lemma == 'ház')
-# 
-# norvég = cfull %>% 
-#   filter(lemma == 'norvég')
 
 # I selected five consonant-initial nominal suffixes and searched for these in the webcorpus. Results were narrowed down to consonant-final bisyllabic lemmata with a back vowel and e/é with a lemma frequency of at least ten. Lemma-suffixs pairs that showed variation in the webcorpus (had at least two variable forms: dzsungelban/dzsungelben) were tallied up and log odds calculated.
 
@@ -37,7 +18,7 @@ old = read_delim('src/front_harmony/wc1_vh.csv')
 xpostags = '^(\\[\\/N\\]|\\[\\/Adj\\])(\\[Ine\\]|\\[Ill\\]|\\[Ade\\]|\\[Dat\\]|\\[Subl\\])$'
 
 # filter cfull for these suffixes
-nouns = cfull %>% 
+nouns = c %>% 
   filter(
     str_detect(xpostag, xpostags)
   )
@@ -78,34 +59,27 @@ nouns2 %<>%
   filter(n_variants > 1) %>% 
   ungroup()
 
-# nouns2 %>% 
-#   ungroup() %>% 
-#   distinct(variant)
-# nouns2 %>%
-#   arrange(lemma,form,-lemma_freq,-freq)
-
-# a forms, with xpostag
-nounsa = nouns2 %>% 
-  filter(variant == 'a') %>% 
-  select(form,freq,lemma,lemma_freq,corpus_size,xpostag) %>% 
-  rename('a_form' = form, 'a_freq' = freq)
-
-# e forms, with xpostag
-nounse = nouns2 %>% 
-  filter(variant == 'e') %>% 
-  select(form,freq,lemma,lemma_freq,corpus_size,xpostag) %>% 
-  rename('e_form' = form, 'e_freq' = freq)
-
-# pair up lemma+xpostag combinations, replace na with 0 for koktél, get log odds
-nouns3 = full_join(nounsa,nounse, by = c("lemma", "lemma_freq", "corpus_size", "xpostag")) %>% 
-  mutate_if(is.numeric, ~replace(., is.na(.), 0)) %>%
+# add cols expected by function
+nouns2 %<>% 
   mutate(
-    a_e_odds =  ( a_freq + 1 ) / ( e_freq + 1 ),
-    a_e_log_odds = log(a_e_odds)
+    variation = 'hotelban/hotelben'
   ) %>% 
-  filter(
-    lemma %in% hu$word
+  rename(
+    'stem' = lemma,
+    'lemma_freq_corrected' = lemma_freq
   )
+
+# -- build pairs -- #
+
+nouns3 = buildPairs(nouns2)
+
+# keep only variable forms
+nouns3 %<>%
+  filter(!is.na(form_1) & !is.na(form_2))
+
+# -- write -- #
+
+write_tsv(nouns3, 'src/front_harmony/fh_pairs_webcorpus2.tsv')
 
 # -- quality control -- #
 
@@ -168,6 +142,4 @@ old2 %>%
   geom_text() +
   theme_few()
 
-# -- write -- #
 
-write_tsv(nouns3, 'src/front_harmony/fh_pairs_webcorpus2.tsv')
