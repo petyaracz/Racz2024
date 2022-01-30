@@ -88,7 +88,7 @@ nonce_vh = map_chr(1:10^4, ~ ns2 %>%
           buildWords(2) %>% 
           hammerIntoNoun()
 )
-nonce_vh
+
 ## ik
 
 # front
