@@ -67,7 +67,7 @@ stripClusters = function(dat){
       str_detect(string, '(c|h|ly)', negate = T),
       nchar(string) < 4,
       !(syl_pos == 'word_start' & str_detect(string, '(fj|y|pn|psz|byt|kc|khm|mb|sh|szc|th)')), 
-      !(syl_pos == 'word_mid' & str_detect(string, '(rbl|nzp|lfp|ngn|szs|zsz|rsl|byt|ckz|dzk|ftv|khm|mb.|mph|^y$|yst)')),
+      !(syl_pos == 'word_mid' & str_detect(string, '(pzs|gk|rbl|nzp|lfp|ngn|szs|zsz|rsl|byt|ckz|dzk|ftv|khm|mb.|mph|^y$|yst)')),
       !(syl_pos == 'word_end' & str_detect(string, '(ck|sb|fj|hm|nch|ndy|gn|ght|dys|yk|d.|m.|k.|p.|rj|rtz|tsz|lgy)'))
     )
   

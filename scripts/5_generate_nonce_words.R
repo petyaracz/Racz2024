@@ -10,6 +10,8 @@ library(tidyverse)
 library(glue)
 library(magrittr)
 
+library(furrr)
+
 # -- read -- #
 
 ns2 = read_tsv('src/nonce_forms/noun_grammar.tsv')
@@ -33,28 +35,25 @@ buildWords = function(dat,nsyl){
     filter(syl_pos == 'word_end') %>% 
     pull(string)
   
-  v = str_split('aáeéiíoóöőuúüű', '', simplify = T)
+  v1 = str_split('aáeéiíoóöőuúüű', '', simplify = T)
+  v2 = str_split('aeiíoöuü', '', simplify = T)
+  
+  my_word_start = sample(word_start,1)
+  my_word_end = sample(word_end,1)
+  my_mid1 = sample(word_mid,1)
+  my_mid2 = sample(word_mid,1)
+  my_mid3 = sample(word_mid,1)
+  my_v1 = sample(v1,1)
+  my_v2 = sample(v2,1)
+  my_v3 = sample(v1,1)
+  my_v4 = sample(v1,1)
   
   case_when(
-    nsyl == 1 ~ glue('{sample(word_start,1)}{sample(v,1)}{sample(word_end,1)}'),
-    nsyl == 2 ~ glue('{sample(word_start,1)}{sample(v,1)}{sample(word_mid,1)}{sample(v,1)}{sample(word_end,1)}'),
-    nsyl == 3 ~ glue('{sample(word_start,1)}{sample(v,1)}{sample(word_mid,1)}{sample(v,1)}{sample(word_mid,1)}{sample(v,1)}{sample(word_end,1)}'),
-    nsyl == 4 ~ glue('{sample(word_start,1)}{sample(v,1)}{sample(word_mid,1)}{sample(v,1)}{sample(word_mid,1)}{sample(v,1)}{sample(word_mid,1)}{sample(v,1)}{sample(word_end,1)}'),
-    !(nsyl %in% 1:4) ~ "Only 1-4 syllable length works."
-  )
-  
-}
-
-# takes output of vowelHarmony / buildWords, turns into variable noun stem. 2syl only. uses random seed.
-hammerIntoNoun = function(nonce_word){
-  
-  vowels = str_extract_all(nonce_word, '[aáeéiíoóöőuúüű]', simplify = T)
-  
-  case_when(
-    length(vowels) == 2 ~ nonce_word %>% 
-      str_replace(vowels[1], sample(c('a','á','u','ú','o','ó'),1)) %>% 
-      str_replace(vowels[2], sample(c('e','é'),1)),
-    length(vowels) != 2 ~ "I want 2-syl words."
+    nsyl == 1 ~ glue('{my_word_start}{my_v1}{my_word_end}'),
+    nsyl == 2 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_word_end}'),
+    nsyl == 3 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_mid2}{my_v3}{my_word_end}'),
+    nsyl == 4 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_mid2}{my_v3}{my_mid3}{my_v4}{my_word_end}'),
+    !(nsyl %in% 1:4) ~ 'We only do words between 1-4 syllables.'
   )
   
 }
@@ -80,73 +79,129 @@ vowelHarmony = function(nonce_word,front){
   )
 }
 
-# -- build -- #
+# take verb syllabary, toss a coin on how long the stem is, whether it's a front verb, and whether it's a long suffix (ódik vs odik), glue verb together. random!
+buildIk = function(vs2){
+  
+  length = sample(1:4,1, prob = c(.4,.4,.15,.05))
+  front = sample(c(T,F),1)
+  cat = sample(c('dik','zik','lik'),1)
+  longv = sample(c(T,F),1)
+  deriv = vs2 %>% 
+    buildWords(length) %>% 
+    vowelHarmony(front = front)
+  v = 
+    case_when(
+      str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'ö',
+      str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ő',
+      str_detect(deriv, '[eéií](?=[^aáeéiíoóöőuúüű]+$)') ~ 'e',
+      str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'o',
+      str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ó'
+    )
+  glue('{deriv}{v}{cat}')
+}
 
-## vh: easy, two-syl only, replace 1st with back vowel, 2nd with e/é
+# takes noun syllabary, make variable noun stem. 2syl only. uses random seed.
+buildNoun = function(ns2){
+  
+  flag = T
+  
+  while (flag){
+  
+  nonce_word = buildWords(ns2,2)
+  
+  vowels = str_extract_all(nonce_word, '[aáeéiíoóöőuúüű]', simplify = T)
+  
+  final_word = case_when(
+    length(vowels) == 2 ~ nonce_word %>% 
+      str_replace(vowels[1], sample(c('a','á','u','ú','o','ó'),1)) %>% 
+      str_replace(vowels[2], sample(c('e','é'),1)),
+    length(vowels) != 2 ~ "I want 2-syl words."
+  )
+  
+  flag = str_detect(final_word, '[eé](?=[^aáeéiíoóöőuúüű]+$)', negate = T)
+  
+  }
+  
+  final_word # ¯\_(ツ)_/¯
 
-nonce_vh = map_chr(1:10^4, ~ ns2 %>% 
-          buildWords(2) %>% 
-          hammerIntoNoun()
-)
+}
 
-## ik
+# takes verb syllabary, rolls for stem length, stem front/backness, whether verb is gonna be cvc or cc, picks epenthetic vowel, and then glues everything together
+buildEp = function(vs2){
+  
+  length = sample(1:4,1, prob = c(.4,.4,.15,.05))
+  front = sample(c(T,F),1)
+  ep_line = sample_n(ep_letters,1)
+  deriv = vs2 %>% 
+    buildWords(length) %>% 
+    vowelHarmony(front = front) %>% 
+    str_replace('[^aáeéiíoóöőuúüű]+$','')
+  v = case_when(
+      front == F ~ sample(str_split('aou', '', simplify = T),1),
+      front == T ~ sample(str_split('eiöü', '', simplify = T),1)
+    )
+    cvc = glue('{deriv}{ep_line$c1}{v}{ep_line$c3}ik')
+    cc = glue('{deriv}{ep_line$c1}{ep_line$c2}ik')
+  
+    c(cvc,cc)
+}
 
-# front
-nonce_ik1 = map_chr(1:10^4, ~ vs %>% 
-          buildWords(2) %>% 
-          vowelHarmony(front = T) %>% 
-          glue("{sample(c('ed','öd','őd','l','z'),1)}ik")
-)
+# -- wrangling -- #
 
-# back
-nonce_ik2 = map_chr(1:10^4, ~ vs %>% 
-          buildWords(2) %>% 
-          vowelHarmony(front = F) %>% 
-          glue("{sample(c('od','l','z'),1)}ik")
-)
-
-## epenthetic stems
-
-c1c2 = ep %>% 
-  select(form_1,stem) %>% 
+ep_letters = ep %>% 
+  select(form_1,form_2,stem) %>% 
   rowwise() %>% 
   mutate(
     c1 = str_extract(stem, '(sz|zs|ty|gy|ny|[rtpsdfghjklzcvbnm])$'),
     c2 = str_extract(form_1, glue('(?<={stem})(sz|zs|ty|gy|ny|ly|[rtpsdfghjklzcvbnm])')),
-    c1c2 = glue('{c1}{c2}')
+    v = str_extract(form_2, glue('(?<={stem})[aáeéiíoóöőuúüű]')),
+    c3 = str_extract(form_2, glue('(?<={stem}{v})(sz|zs|ty|gy|ny|ly|[rtpsdfghjklzcvbnm])'))
   ) %>%
-  distinct(c1c2) %>% 
-  pull(c1c2)
+  filter(!is.na(c1)) %>% 
+  distinct(c1,c2,c3) %>% 
+  ungroup()
 
-# front
-nonce_ep1 = map_chr(1:10^4, ~ vs %>% 
-          buildWords(2) %>% 
-          vowelHarmony(front = T) %>% 
-          str_replace('[^aáeéiíoóöőuúüű]+$','') %>% 
-          glue('{sample(c1c2,1)}ik')
-)
+# -- build -- #
 
-# back
-nonce_ep2 = map_chr(1:10^4, ~ vs %>% 
-          buildWords(2) %>% 
-          vowelHarmony(front = F) %>% 
-          str_replace('[^aáeéiíoóöőuúüű]+$','') %>% 
-          glue('{sample(c1c2,1)}ik')
-)
+plan(multisession, workers = 8)
 
-nonce_ik = c(nonce_ik1,nonce_ik2)
-nonce_ep = c(nonce_ep1,nonce_ep2)
+## vh
 
+nonce_vh = future_map_chr(1:10^3, ~ buildNoun(ns2), .options = furrr_options(seed = 1337))
+
+## ik
+
+nonce_ik = future_map_chr(1:10^3, ~ buildIk(vs2), .options = furrr_options(seed = 1337))
+
+## epenthetic stems
+
+nonce_ep = future_map(1:10^3, ~ buildEp(vs2), .options = furrr_options(seed = 1337))
+
+# -- I'm sorry -- #
+
+nonce_ik %<>% tibble()
+nonce_vh %<>% tibble()
+nonce_ep %<>% tibble()
+
+names(nonce_ik) = 'word'
+names(nonce_vh) = 'word'
+names(nonce_ep) = 'words'
+
+nonce_ep %<>% 
+  mutate(
+    cvc = map_chr(words, ~ nth(.,1)),
+    cc = map_chr(words, ~ nth(.,2))
+  ) %>% 
+  pivot_longer(-words, names_to = 'type', values_to = 'word') %>% 
+  select(-words)
+  
 # -- write -- #
 
 nonce_vh %>% 
-  tibble() %>% 
-  write_tsv('nonce_words/nonce_vh.txt')
+  write_tsv('nonce_words/raw/nonce_vh.txt')
 
 nonce_ik %>% 
-  tibble() %>% 
-  write_tsv('nonce_words/nonce_ik.txt')
+  write_tsv('nonce_words/raw/nonce_ik.txt')
 
 nonce_ep %>% 
-  tibble() %>% 
-  write_tsv('nonce_words/nonce_ep.txt')
+  write_tsv('nonce_words/raw/nonce_ep.txt')

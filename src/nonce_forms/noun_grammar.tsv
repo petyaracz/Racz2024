@@ -3818,7 +3818,6 @@ word_mid	s
 word_start	l
 word_end	r
 word_mid	l
-word_mid	gk
 word_start	v
 word_end	g
 word_mid	v
@@ -10028,7 +10027,6 @@ word_mid	t
 word_start	m
 word_end	s
 word_mid	m
-word_mid	gk
 word_mid	t
 word_end	t
 word_mid	r
@@ -10980,7 +10978,6 @@ word_mid	gb
 word_start	j
 word_end	ng
 word_mid	j
-word_mid	gk
 word_mid	r
 word_end	g
 word_mid	rs
@@ -12335,7 +12332,6 @@ word_start	v
 word_end	p
 word_mid	v
 word_mid	l
-word_mid	gk
 word_end	s
 word_mid	p
 word_mid	d
@@ -13043,7 +13039,6 @@ word_end	l
 word_mid	ny
 word_start	f
 word_mid	f
-word_mid	gk
 word_mid	f
 word_end	s
 word_mid	nyz
@@ -14849,7 +14844,6 @@ word_mid	l
 word_mid	l
 word_start	f
 word_mid	f
-word_mid	gk
 word_end	g
 word_mid	l
 word_start	s
@@ -17176,7 +17170,6 @@ word_mid	mb
 word_start	k
 word_end	g
 word_mid	k
-word_mid	pzs
 word_mid	s
 word_start	n
 word_end	s
@@ -26809,7 +26802,6 @@ word_mid	k
 word_mid	ns
 word_end	r
 word_mid	r
-word_mid	gk
 word_mid	rt
 word_mid	r
 word_start	t
@@ -38705,7 +38697,6 @@ word_mid	l
 word_mid	r
 word_start	l
 word_mid	l
-word_mid	gk
 word_start	p
 word_end	l
 word_mid	p
@@ -42162,7 +42153,6 @@ word_mid	z
 word_mid	rt
 word_start	f
 word_mid	f
-word_mid	gk
 word_mid	r
 word_mid	n
 word_start	kr
@@ -43504,7 +43494,6 @@ word_start	k
 word_mid	k
 word_start	l
 word_mid	l
-word_mid	gk
 word_mid	mr
 word_start	s
 word_mid	s
@@ -45453,7 +45442,6 @@ word_mid	z
 word_mid	l
 word_mid	l
 word_end	z
-word_mid	ngk
 word_start	n
 word_end	s
 word_mid	n
@@ -62169,7 +62157,6 @@ word_mid	z
 word_mid	ng
 word_start	m
 word_mid	m
-word_mid	gk
 word_mid	t
 word_start	m
 word_end	l
@@ -64618,7 +64605,6 @@ word_mid	d
 word_start	j
 word_end	s
 word_mid	j
-word_mid	gk
 word_mid	p
 word_start	j
 word_end	rt
@@ -70014,7 +70000,6 @@ word_mid	l
 word_mid	m
 word_mid	k
 word_mid	z
-word_mid	ngk
 word_mid	ng
 word_end	t
 word_mid	rk
@@ -70238,7 +70223,6 @@ word_mid	k
 word_mid	p
 word_start	k
 word_mid	k
-word_mid	pzs
 word_start	k
 word_mid	k
 word_mid	p

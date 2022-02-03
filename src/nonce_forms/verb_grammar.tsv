@@ -9717,7 +9717,6 @@ word_mid	jt
 word_start	r
 word_end	l
 word_mid	r
-word_mid	gk
 word_mid	p
 word_start	f
 word_end	k
