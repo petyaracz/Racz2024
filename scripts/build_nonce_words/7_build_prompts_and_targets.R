@@ -37,7 +37,8 @@ ik_vars = ik %>%
     lakok = str_replace(word, 'ik$', glue('{v}k')),
     lakom = str_replace(word, 'ik$', glue('{v}m'))
   ) %>% 
-  select(-v)
+  select(-v) %>% 
+  ungroup()
 
 # vh: multiple suffixes. 
 
@@ -59,7 +60,8 @@ vh_vars = vh %>%
     fotelnak = glue('{word}{back_suffix}'),
     fotelnek = glue('{word}{front_suffix}') 
   ) %>% 
-  select(word,type,fotelnak,fotelnek)
+  select(word,type,fotelnak,fotelnek) %>% 
+  ungroup()
 
 # ep: multiple suffixes
 
@@ -67,7 +69,7 @@ vh_vars = vh %>%
 ep_suffixes = 
   tibble(
     ep_suffix = c('nak','ni','tak','na','tok'),
-    type = c('cselekednek','cselekedni','cselekedtek','cselekedne','cselekedtek')
+    type = c('ők cselekednek','cselekedni','ők cselekedtek','ő cselekedne','ti cselekedtek')
   )
 
 # phew. cross forms with suffixes. figure out last vowel of stem which we need for suffix harmony. figure out suffix harmony. figure out linking vowel. figure out stem. create variants. fix past tense -tak/tek.
@@ -97,12 +99,13 @@ ep_vars = ep %>%
       str_replace('atak$','ottak') %>% 
       str_replace('etek$','ettek')
     ) %>% 
-  select(cvc,cc,type,cselekednek,cselekszenek)
+  select(cvc,cc,type,cselekednek,cselekszenek) %>% 
+  ungroup()
 
 # -- shuffle -- #
 
 ik_vars %<>% sample_n(n())
-ep_vars %<>% sample_n(n())
+ep_vars %<>% sample_n(n()) 
 vh_vars %<>% sample_n(n())
 
 # -- write -- #
@@ -110,3 +113,30 @@ vh_vars %<>% sample_n(n())
 write_tsv(ik_vars, 'nonce_words/prompt/ik_prompts.tsv')
 write_tsv(vh_vars, 'nonce_words/prompt/vh_prompts.tsv')
 write_tsv(ep_vars, 'nonce_words/prompt/ep_prompts.tsv')
+
+# -- google sheet -- #
+
+gs_ik = ik_vars %>% 
+  sample_n(200)
+
+gs_vh = vh_vars %>% 
+  distinct(word) %>% 
+  sample_n(200) %>% 
+  left_join(vh_vars)
+
+gs_ep = ep_vars %>% 
+  distinct(cc) %>% 
+  sample_n(200) %>% 
+  left_join(ep_vars)
+
+stems = bind_cols(
+  ik = gs_ik$word,
+  vh = unique(gs_vh$word),
+  ep_cc = unique(gs_ep$cc),
+  ep_cvc = unique(gs_ep$cvc)[1:200]
+)
+  
+googlesheets4::write_sheet(gs_ik, 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'ik')
+googlesheets4::write_sheet(gs_ep, 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'ep')
+googlesheets4::write_sheet(gs_vh, 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'vh')
+googlesheets4::write_sheet(stems, 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'stems')

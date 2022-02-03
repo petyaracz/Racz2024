@@ -38,24 +38,32 @@ buildWords = function(dat,nsyl){
   v1 = str_split('aáeéiíoóöőuúüű', '', simplify = T)
   v2 = str_split('aeiíoöuü', '', simplify = T)
   
-  my_word_start = sample(word_start,1)
-  my_word_end = sample(word_end,1)
-  my_mid1 = sample(word_mid,1)
-  my_mid2 = sample(word_mid,1)
-  my_mid3 = sample(word_mid,1)
-  my_v1 = sample(v1,1)
-  my_v2 = sample(v2,1)
-  my_v3 = sample(v1,1)
-  my_v4 = sample(v1,1)
+  repeat_in_word = T
   
-  case_when(
-    nsyl == 1 ~ glue('{my_word_start}{my_v1}{my_word_end}'),
-    nsyl == 2 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_word_end}'),
-    nsyl == 3 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_mid2}{my_v3}{my_word_end}'),
-    nsyl == 4 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_mid2}{my_v3}{my_mid3}{my_v4}{my_word_end}'),
-    !(nsyl %in% 1:4) ~ 'We only do words between 1-4 syllables.'
-  )
+  while(repeat_in_word){
   
+    my_word_start = sample(word_start,1)
+    my_word_end = sample(word_end,1)
+    my_mid1 = sample(word_mid,1)
+    my_mid2 = sample(word_mid,1)
+    my_mid3 = sample(word_mid,1)
+    my_v1 = sample(v1,1)
+    my_v2 = sample(v2,1)
+    my_v3 = sample(v1,1)
+    my_v4 = sample(v1,1)
+      
+    my_word = case_when(
+        nsyl == 1 ~ glue('{my_word_start}{my_v1}{my_word_end}'),
+        nsyl == 2 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_word_end}'),
+        nsyl == 3 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_mid2}{my_v3}{my_word_end}'),
+        nsyl == 4 ~ glue('{my_word_start}{my_v1}{my_mid1}{my_v2}{my_mid2}{my_v3}{my_mid3}{my_v4}{my_word_end}'),
+        !(nsyl %in% 1:4) ~ 'We only do words between 1-4 syllables.'
+      ) 
+  
+    repeat_in_word = str_detect(my_word,'(.+)\\1')
+  }
+    
+  my_word
 }
 
 # take a string and a front/not front specification and change the vowels therein
@@ -82,22 +90,33 @@ vowelHarmony = function(nonce_word,front){
 # take verb syllabary, toss a coin on how long the stem is, whether it's a front verb, and whether it's a long suffix (ódik vs odik), glue verb together. random!
 buildIk = function(vs2){
   
-  length = sample(1:4,1, prob = c(.4,.4,.15,.05))
+  length = sample(1:4,1, prob = c(.45,.35,.15,.05))
   front = sample(c(T,F),1)
   cat = sample(c('dik','zik','lik'),1)
   longv = sample(c(T,F),1)
-  deriv = vs2 %>% 
-    buildWords(length) %>% 
-    vowelHarmony(front = front)
-  v = 
-    case_when(
-      str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'ö',
-      str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ő',
-      str_detect(deriv, '[eéií](?=[^aáeéiíoóöőuúüű]+$)') ~ 'e',
-      str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'o',
-      str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ó'
-    )
-  glue('{deriv}{v}{cat}')
+  
+  repeat_at_end = T
+  
+  while(repeat_at_end){
+   
+    deriv = vs2 %>% 
+      buildWords(length) %>% 
+      vowelHarmony(front = front)
+    v = 
+      case_when(
+        str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'ö',
+        str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ő',
+        str_detect(deriv, '[eéií](?=[^aáeéiíoóöőuúüű]+$)') ~ 'e',
+        str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'o',
+        str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ó'
+      )
+    
+    my_word = glue('{deriv}{v}{cat}')
+    
+    repeat_at_end = str_detect(my_word, '(d.dik|l.lik|z.zik)') 
+  }
+  
+  my_word
 }
 
 # takes noun syllabary, make variable noun stem. 2syl only. uses random seed.
@@ -130,16 +149,13 @@ buildNoun = function(ns2){
 buildEp = function(vs2){
   
   length = sample(1:4,1, prob = c(.4,.4,.15,.05))
-  front = sample(c(T,F),1)
   ep_line = sample_n(ep_letters,1)
+  v = ep_line$v
+  front = str_detect(v, '[eéiíöőüű]')
   deriv = vs2 %>% 
     buildWords(length) %>% 
     vowelHarmony(front = front) %>% 
     str_replace('[^aáeéiíoóöőuúüű]+$','')
-  v = case_when(
-      front == F ~ sample(str_split('aou', '', simplify = T),1),
-      front == T ~ sample(str_split('eiöü', '', simplify = T),1)
-    )
     cvc = glue('{deriv}{ep_line$c1}{v}{ep_line$c3}ik')
     cc = glue('{deriv}{ep_line$c1}{ep_line$c2}ik')
   
@@ -158,8 +174,14 @@ ep_letters = ep %>%
     c3 = str_extract(form_2, glue('(?<={stem}{v})(sz|zs|ty|gy|ny|ly|[rtpsdfghjklzcvbnm])'))
   ) %>%
   filter(!is.na(c1)) %>% 
-  distinct(c1,c2,c3) %>% 
+  select(c1,c2,c3,v) %>% 
   ungroup()
+
+# -- test -- #
+
+# map_chr(1:10, ~ buildNoun(ns2))
+# map_chr(1:10, ~ buildIk(vs2))
+# map(1:10, ~ buildEp(vs2))
 
 # -- build -- #
 

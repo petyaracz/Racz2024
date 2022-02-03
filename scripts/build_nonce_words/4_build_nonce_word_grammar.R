@@ -48,8 +48,7 @@ createSyllables = function(dat){
       word_mid1 = syl1 %>% str_extract('[^aáeéiíoóöőuúüű]+(?=[aáeéiíoóöőuúüű])'),
       word_mid2 = syl2 %>% str_extract('[^aáeéiíoóöőuúüű]+(?=[aáeéiíoóöőuúüű])'),
       word_mid3 = syl3 %>% str_extract('[^aáeéiíoóöőuúüű]+(?=[aáeéiíoóöőuúüű])'),
-      word_mid4 = syl4 %>% str_extract('[^aáeéiíoóöőuúüű]+(?=[aáeéiíoóöőuúüű])')
-    ) %>% 
+      ) %>% 
     select(lemma,word_start,word_end,word_mid1,word_mid2,word_mid3,word_mid4) %>% 
     pivot_longer(-lemma,names_to = 'syl_pos', values_to = 'string') %>% 
     filter(!is.na(string)) %>% 
@@ -68,7 +67,7 @@ stripClusters = function(dat){
       nchar(string) < 4,
       !(syl_pos == 'word_start' & str_detect(string, '(fj|y|pn|psz|byt|kc|khm|mb|sh|szc|th)')), 
       !(syl_pos == 'word_mid' & str_detect(string, '(pzs|gk|rbl|nzp|lfp|ngn|szs|zsz|rsl|byt|ckz|dzk|ftv|khm|mb.|mph|^y$|yst)')),
-      !(syl_pos == 'word_end' & str_detect(string, '(ck|sb|fj|hm|nch|ndy|gn|ght|dys|yk|d.|m.|k.|p.|rj|rtz|tsz|lgy)'))
+      !(syl_pos == 'word_end' & str_detect(string, '(s|ck|sb|fj|hm|nch|ndy|gn|ght|dys|yk|d.|m.|k.|p.|rj|rtz|tsz|lgy)'))
     )
   
 }
