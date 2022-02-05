@@ -25,6 +25,8 @@ ep %<>% distinct()
 
 # -- build -- #
 
+# two points of order: (i) -Vlik doesn't exist. So epenthetic verb stems ending in l haven't got CVC -ik forms. (ii) the d/sz CVC/CC alternation only works with V-initial person/number suffixes. so 'aludnak/alszanak' is fine, 'aludna/*alszana' has no CC form. Taken together this means that not all nonce verbs should have all forms. -lik should only be prompted in CC (or we acknowledge that we're doing weird things that don't actually exist in Hungarian) and d/sz verbs should not be prompted with -ni and -na.
+
 # ik: glue -m and -k at end of word, watch for linking vowel, which does rounding and front harmony
 ik_vars = ik %>% 
   mutate(
