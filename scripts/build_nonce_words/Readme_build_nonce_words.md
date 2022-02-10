@@ -1,3 +1,11 @@
+## Script logic
+
+1. build_real_word_lists
+2. build_tests
+3. build_nonce_word_lists
+4. filter_nonce_word_lists
+5. build_final_forms
+
 ## Basic setup
 
 I picked three types of morphological variation, created a reference set for each type consisting of variable forms in the Hungarian webcorpus, and then generated nonce word lists based on the reference sets.
@@ -49,3 +57,14 @@ I built a simple ngram model of possible word-initial, mid-word, and word-final 
 The building units of the models were filtered based on Hungarian phonotactics, expert advice and native speaker intuition.
 
 Finally, nonce words matching the templates of the three reference sets (verbs ending in ik, bisyllabic variable noun stems, variable CVC/CC verb stems) were generated. The 3sg.indef was used as the prompt, the 1sg.indef (1sg.indef variation), the five post-positions (nouns), and the five verbal suffixes (CVC/CC verbs). Some combinations of stem and suffix are not attested in Hungarian, these were excluded from the final list of nonce words as well.
+
+## Filtering nonce words
+
+Words longer than two characters on the hunspell dictionary list were used as a reference list. Nonce words that were less than 2 Levenshtein distance from any word on the reference list or that initially completely overlapped with any word were removed. If two nonce words had less than 2 Levenshtein distance from one another one was removed.
+
+## Generating final forms
+
+Some prompts and targets don't exist in Hungarian. These were not generated. Specifically, for epenthetic verbs: 
+
+- No infinitives with -CVClik, so no CVClik prompts, áramlik, but not \*áramolik, since olik/ölik/elik don't exist.
+- For sz/d alternation verbs, -sz only works with person/number suffixes, never conditional/infinitive. (veszekszik/veszekedik: veszekszenek, veszekszik fine, \*veszekszene, \*veszekszeni don't exist).

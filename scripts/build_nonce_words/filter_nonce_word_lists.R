@@ -1,4 +1,4 @@
-## filter nonce words: no words too close, no overlaps at beginning
+## filter nonce words: no words too close to real words, no overlaps at beginning w/ real words, no words too close to each other
 
 # -- header -- #
 
@@ -21,16 +21,16 @@ ep = read_tsv('nonce_words/raw/nonce_ep.txt')
 
 ik = sample_n(ik, n())
 vh = sample_n(vh, n())
-# ep = sample_n(ep, n())
+ep = sample_n(ep, n())
 
-ik = ik[1:2500,]
-vh = vh[1:2500,]
+# ik = ik[1:2500,]
+# vh = vh[1:2500,]
 # ep = ep[1:2500,]
 
 # -- functions -- #
 
 # match individual nonce word against spelling dictionary. return T if it has an edit distance of 1 or 0 with any word on list OR overlaps with ^any word on list. else return F.
-matchNonce = function(w,h){
+matchReal = function(w,h){
   dists = map(h, ~ stringdist::stringdist(., w, method = 'lv')) %>% 
     unlist()
   beginnings = map(h, ~ str_detect(w, glue('^{.}'))) %>% 
@@ -41,19 +41,35 @@ matchNonce = function(w,h){
   pass1 & pass2
 }
 
+# match words against themselves, within each set. drop word if any other word is closer than 1 distance. technically this removes both members of such a pair and is overkill.
+matchNonce = function(dat){
+  crossing(
+    word = dat$word,
+    match = dat$word
+  ) %>% 
+    filter(target != match) %>% 
+    mutate(
+      dist = stringdist::stringdist(target, match, method = 'lv')
+    ) %>% 
+    group_by(target) %>% 
+    summarise(min_dist = min(dist)) %>% 
+    filter(min_dist > 1) %>% 
+    select(word)
+}
+
 # -- wrangle -- #
 
 h %<>%
   filter(nchar(word) > 2)
 
-# -- filter -- #
+# -- filter against real words -- #
 
 # future::nbrOfWorkers(evaluator = NULL)
 plan(multisession, workers = 8)
 
-ik2 = future_map(ik$word, ~ matchNonce(.,h))
-vh2 = future_map(vh$word, ~ matchNonce(.,h))
-ep2 = future_map(ep$word, ~ matchNonce(.,h))
+ik2 = future_map(ik$word, ~ matchReal(.,h[1:2,]))
+vh2 = future_map(vh$word, ~ matchReal(.,h))
+ep2 = future_map(ep$word, ~ matchReal(.,h))
 
 ik$pass = unlist(ik2)
 vh$pass = unlist(vh2)
@@ -75,18 +91,16 @@ ep %<>% # this is slightly more complicated because we have pairs.
   pivot_wider(id_cols = word_id, names_from = type, values_from = word, values_fill = 'drop value') %>% 
   filter(!(cvc == 'drop value'),!(cc == 'drop value'))
 
+# -- filter against each other -- #
+
+ik %<>% matchNonce()
+vh %<>% matchNonce()
+ep %<>% matchNonce()
+
 # -- write -- #
 
-ik %>% 
-  select(word) %>% 
-  write_tsv('nonce_words/filt/nonce_ik_filt.txt')
-
-vh %>% 
-  select(word) %>% 
-  write_tsv('nonce_words/filt/nonce_vh_filt.txt')
-
-ep %>% 
-  select(cvc,cc) %>% 
-  write_tsv('nonce_words/filt/nonce_ep_filt.txt')
+ik %>% write_tsv('nonce_words/filt/nonce_ik_filt.txt')
+vh %>% write_tsv('nonce_words/filt/nonce_vh_filt.txt')
+ep %>% write_tsv('nonce_words/filt/nonce_ep_filt.txt')
 
 
