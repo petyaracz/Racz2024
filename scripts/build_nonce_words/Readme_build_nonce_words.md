@@ -2,9 +2,9 @@
 
 1. build_real_word_lists
 2. build_tests
-3. build_nonce_word_lists
-4. filter_nonce_word_lists
-5. build_final_forms
+3. build_nonce_stem_lists
+4. filter_nonce_stem_lists
+5. build_nonce_words
 
 ## Basic setup
 

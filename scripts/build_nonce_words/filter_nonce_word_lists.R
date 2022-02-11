@@ -11,26 +11,21 @@ library(glue)
 library(magrittr)
 library(furrr)
 
+#library(progress)
+library(tictoc)
+
+tic('script took this long')
+
 # -- read -- #
 
 h = read_tsv('src/hu_list.txt')
-
-ik = read_tsv('nonce_words/raw/nonce_ik.txt')
-vh = read_tsv('nonce_words/raw/nonce_vh.txt')
-ep = read_tsv('nonce_words/raw/nonce_ep.txt')
-
-ik = sample_n(ik, n())
-vh = sample_n(vh, n())
-ep = sample_n(ep, n())
-
-# ik = ik[1:2500,]
-# vh = vh[1:2500,]
-# ep = ep[1:2500,]
+stems = read_tsv('src/nonce_words/stems/nonce_stems.tsv')
 
 # -- functions -- #
 
 # match individual nonce word against spelling dictionary. return T if it has an edit distance of 1 or 0 with any word on list OR overlaps with ^any word on list. else return F.
 matchReal = function(w,h){
+  #pb$tick()
   dists = map(h, ~ stringdist::stringdist(., w, method = 'lv')) %>% 
     unlist()
   beginnings = map(h, ~ str_detect(w, glue('^{.}'))) %>% 
@@ -43,15 +38,16 @@ matchReal = function(w,h){
 
 # match words against themselves, within each set. drop word if any other word is closer than 1 distance. technically this removes both members of such a pair and is overkill.
 matchNonce = function(dat){
+  #pb$tick()
   crossing(
-    word = dat$word,
-    match = dat$word
+    word = dat,
+    match = dat
   ) %>% 
-    filter(target != match) %>% 
+    filter(word != match) %>% 
     mutate(
-      dist = stringdist::stringdist(target, match, method = 'lv')
+      dist = stringdist::stringdist(word, match, method = 'lv')
     ) %>% 
-    group_by(target) %>% 
+    group_by(word) %>% 
     summarise(min_dist = min(dist)) %>% 
     filter(min_dist > 1) %>% 
     select(word)
@@ -60,47 +56,33 @@ matchNonce = function(dat){
 # -- wrangle -- #
 
 h %<>%
-  filter(nchar(word) > 2)
+  filter(nchar(word) > 3)
 
-# -- filter against real words -- #
+# -- filter for real words -- #
 
 # future::nbrOfWorkers(evaluator = NULL)
 plan(multisession, workers = 8)
 
-ik2 = future_map(ik$word, ~ matchReal(.,h[1:2,]))
-vh2 = future_map(vh$word, ~ matchReal(.,h))
-ep2 = future_map(ep$word, ~ matchReal(.,h))
+stems2 = stems[1:2,]
 
-ik$pass = unlist(ik2)
-vh$pass = unlist(vh2)
-ep$pass = unlist(ep2)
-
-ik %<>% filter(pass)
-vh %<>% filter(pass)
-ep %<>% # this is slightly more complicated because we have pairs.
-  rownames_to_column() %>% 
+# do only for nsyl>1 !
+stems2 = stems2 %>% 
+  rowwise() %>% 
   mutate(
-    rowname = as.double(rowname),
-    word_id = case_when(
-      rowname %% 2 == 0 ~ rowname - 1, # science
-      rowname %% 2 == 1 ~ rowname
-    )
-  ) %>%
-  filter(pass) %>% 
-  select(-pass) %>% 
-  pivot_wider(id_cols = word_id, names_from = type, values_from = word, values_fill = 'drop value') %>% 
-  filter(!(cvc == 'drop value'),!(cc == 'drop value'))
+    pass = map_lgl(word, ~ matchReal(.,h))
+  )
 
-# -- filter against each other -- #
+stems3 = filter(stems2, pass | nsyl == 1)
 
-ik %<>% matchNonce()
-vh %<>% matchNonce()
-ep %<>% matchNonce()
+# -- filter for nonce words -- #
+
+keep_words = matchNonce(stems3$word)
+
+stems4 = filter(stems3, word %in% keep_words)
 
 # -- write -- #
 
-ik %>% write_tsv('nonce_words/filt/nonce_ik_filt.txt')
-vh %>% write_tsv('nonce_words/filt/nonce_vh_filt.txt')
-ep %>% write_tsv('nonce_words/filt/nonce_ep_filt.txt')
+write_tsv(stems4, 'src/nonce_words/stems/nonce_stems_filt.tsv')
 
-
+toc(log = T)
+glue('We thank you for your valuable time.')

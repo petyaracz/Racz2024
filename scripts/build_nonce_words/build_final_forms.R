@@ -1,3 +1,5 @@
+# in progress
+
 ## build prompts and targets from filtered nonce word lists
 
 # -- header -- #
@@ -10,18 +12,169 @@ library(tidyverse)
 library(glue)
 library(magrittr)
 
-
 # -- read -- #
 
-ik = read_tsv('nonce_words/filt/nonce_ik_filt.txt')
-vh = read_tsv('nonce_words/filt/nonce_vh_filt.txt')
-ep = read_tsv('nonce_words/filt/nonce_ep_filt.txt')
+ep = read_tsv('src/epenthetic_stems/epenthesis_pairs_webcorpus2.tsv')
+nouns = 
 
-# -- filter -- #
+# -- functions -- #
 
-ik %<>% distinct()
-vh %<>% distinct()
-ep %<>% distinct()
+# take verb syllabary, toss a coin on how long the stem is, whether it's a front verb, and whether it's a long suffix (ódik vs odik), glue verb together. random!
+buildIk = function(vs2){
+  
+  length = sample(1:3,1, prob = c(.45,.35,.2))
+  front = sample(c(T,F),1)
+  longv = sample(c(T,F),1)
+  cat = sample(c('dik','zik','lik','sik','gyik','rik','kik'), 1, prob = c(.3,.3,.3,.025,.025,.025,.025))
+  repeat_at_end = T
+  
+  while(repeat_at_end){
+    
+    deriv = vs2 %>% 
+      buildWords(length) %>% 
+      vowelHarmony(front = front)
+    v = 
+      case_when(
+        str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'ö',
+        str_detect(deriv, '[öőüű](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ő',
+        str_detect(deriv, '[eéií](?=[^aáeéiíoóöőuúüű]+$)') ~ 'e',
+        str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & !longv ~ 'o',
+        str_detect(deriv, '[aáoóuú](?=[^aáeéiíoóöőuúüű]+$)') & longv ~ 'ó'
+      )
+    
+    # if word ends in lik, it can't be Vlik (no áramolik, only áramlik)
+    my_vowel = case_when(
+      cat %in% c('zik','rik') ~ sample(c(T,F),1),
+      cat %in% c('lik') ~ F, 
+      cat %in% c('dik','lik','sik','gyik','kik') ~ T
+    )
+    
+    my_word = case_when(
+      my_vowel ~ glue('{deriv}{v}{cat}'),
+      !my_vowel ~ glue('{deriv}{cat}')
+    )
+    
+    # no comical repeating characters like adódik, üllik, etc
+    repeat_at_end = str_detect(my_word, '(d.dik$|llik$|z.zik$)') 
+  }
+  
+  my_word
+}
+
+# takes noun syllabary, make variable noun stem. 2syl only. uses random seed.
+buildNoun = function(ns2){
+  
+  flag = T
+  
+  while (flag){
+    
+    nonce_word = buildWords(ns2,2)
+    
+    vowels = str_extract_all(nonce_word, '[aáeéiíoóöőuúüű]', simplify = T)
+    
+    final_word = case_when(
+      length(vowels) == 2 ~ nonce_word %>% 
+        str_replace(vowels[1], sample(c('a','á','u','ú','o','ó'),1)) %>% 
+        str_replace(vowels[2], sample(c('e','é'),1)),
+      length(vowels) != 2 ~ "I want 2-syl words."
+    )
+    
+    flag = str_detect(final_word, '[eé](?=[^aáeéiíoóöőuúüű]+$)', negate = T)
+    
+  }
+  
+  final_word # ¯\_(ツ)_/¯
+  
+}
+
+# takes verb syllabary, rolls for stem length, stem front/backness, whether verb is gonna be cvc or cc, picks epenthetic vowel, and then glues everything together
+buildEp = function(vs2){
+  
+  length = sample(1:3,1, prob = c(.4,.4,.2))
+  ep_line = sample_n(ep_letters,1)
+  v = ep_line$v
+  front = str_detect(v, '[eéiíöőüű]')
+  rounded = str_detect(v, '[oóuúöőüű]')
+  deriv = vs2 %>% 
+    buildWords(length) %>% 
+    vowelHarmony(front = front) %>% 
+    str_replace('[^aáeéiíoóöőuúüű]+$','')
+  
+  # derivational endings do both rounding and front harmony. if people see something that looks like a derivational ending but doesn't work out with the linking vowel, they get confused and upset. so if something looks like a derivational ending it should act like it and do vowel harmony for rounding too.
+  # this language will one day put me to the grave
+  derivational_ending = ep_line$c3 %in% c('d','l','z')
+  
+  if (derivational_ending) {
+    
+    deriv2 = case_when(
+      front & rounded ~ str_replace(deriv, '.$', 'ö'),
+      !front & rounded ~ str_replace(deriv, '.$', 'o'),
+      front & !rounded ~ str_replace(deriv, '.$', 'e'),
+      !front & !rounded ~ str_replace(deriv, '.$', 'a')
+    )
+    
+  } else {
+    deriv2 = deriv
+  }
+  
+  
+  cvc = glue('{deriv2}{ep_line$c1}{v}{ep_line$c3}ik')
+  cc = glue('{deriv2}{ep_line$c1}{ep_line$c2}ik')
+  
+  c(cvc,cc)
+  
+}
+
+# -- recycle bin -- #
+
+ep_letters = ep %>% 
+  select(form_1,form_2,stem) %>% 
+  rowwise() %>% 
+  mutate(
+    c1 = str_extract(stem, '(sz|zs|ty|gy|ny|[rtpsdfghjklzcvbnm])$'),
+    c2 = str_extract(form_1, glue('(?<={stem})(sz|zs|ty|gy|ny|ly|[rtpsdfghjklzcvbnm])')),
+    v = str_extract(form_2, glue('(?<={stem})[aáeéiíoóöőuúüű]')),
+    c3 = str_extract(form_2, glue('(?<={stem}{v})(sz|zs|ty|gy|ny|ly|[rtpsdfghjklzcvbnm])'))
+  ) %>%
+  filter(!is.na(c1)) %>% 
+  select(c1,c2,c3,v) %>% 
+  ungroup()
+
+
+nonce_ep %<>% 
+  mutate(
+    cvc = map_chr(words, ~ nth(.,1)),
+    cc = map_chr(words, ~ nth(.,2))
+  ) %>% 
+  pivot_longer(-words, names_to = 'type', values_to = 'word') %>% 
+  select(-words)
+
+
+# -- filter shake -- #
+
+# ik %<>% distinct() %>% sample_n(n())
+# vh %<>% distinct() %>% sample_n(n())
+# ep %>% 
+#   distinct() %>% 
+#   rownames_to_column() %>% 
+#   mutate(
+#     rowname = as.double(rowname),
+#     word_id = case_when(
+#       rowname %% 2 == 0 ~ rowname - 1, # science
+#       rowname %% 2 == 1 ~ rowname
+#     )
+#   ) %>%
+#   select(-rowname) %>%
+#   filter(word_id != 637) %>% 
+#   mutate(
+#     type = case_when(
+#       str_detect(word, '[aáeéiíoóöőuúüű](?=(sz|[^aáeéiíoóöőuúüű])ik)') ~ 'cvc',
+#       str_detect(word, '[^aáeéiíoóöőuúüű](?=(sz|[^aáeéiíoóöőuúüű])ik)') ~ 'cc'
+#     )
+#   ) %>%
+#   ungroup() %>% 
+#   pivot_wider(-word_id, names_from = type, values_from = word, values_fn = list)
+#   # sample_n(n())
 
 # -- build -- #
 
@@ -63,7 +216,8 @@ vh_vars = vh %>%
     fotelnek = glue('{word}{front_suffix}') 
   ) %>% 
   select(word,type,fotelnak,fotelnek) %>% 
-  ungroup()
+  ungroup() %>% 
+  right_join(vh, ., by = 'word')
 
 # ep: multiple suffixes
 
