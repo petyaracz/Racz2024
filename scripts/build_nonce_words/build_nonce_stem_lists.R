@@ -3,6 +3,19 @@
 # 2. generate nonce words from the three sets
 # 3. filter nonce words: no words too close to real words, no overlaps at beginning with real words, no words too close to one another
 
+## previous file: build_real_words_list, but we don't use it much here
+## next file: filter_nonce_stem_lists
+## in: c
+## out: noun and verb "grammars" (these are giant tables you can use as weighted ngram models). noun and verb stem lists.
+## general notes
+# there's a var called grammar_built. if it's F then you build grammar from c and build stems from grammar. if it's T you build stems from grammar.
+
+## grammar building
+# we extract beginnings, ends, and middles of consonant sequences in words, and then we exclude strings I don't like. not liking comes from a lot of trial and error and talking to people. we do this separately for verbs and nouns. we save the result to ns2 and vs2.
+
+## stem building
+# we specify the types of stems we want and then build them from noun/verb bits, respectively. vowel harmony done separately.
+
 # -- header -- #
 
 setwd('~/Github/Racz2024/')
@@ -203,15 +216,17 @@ if ( !grammar_built ){
 
 # -- build stems -- #
 
+# we want n/v stems of front/back vowels and 1-3 syl length. it was originally 4 syl but that's laughably long for verb stems (think balelülölődik)
 stems = crossing(
   grammar_type = c('noun','verb'),
   nsyl = 1:3,
   front = c(T,F)
 )
 
+# for i = n stems per category, go through stem types in stems and build words with those parameters.
 stems_list = as.list(NULL)
 
-# I don't know how to map a map
+# I don't know how to map a map (outside map: go through 1:i. inside map: cols of stems go into buildWords.)
 for (i in 1:2000){
   stems_list[[i]] = stems %>% 
     rowwise() %>% 
@@ -221,6 +236,7 @@ for (i in 1:2000){
 print(i)  
 }
 
+# combine everything.
 stems_final = bind_rows(stems_list)
 
 # -- write -- #

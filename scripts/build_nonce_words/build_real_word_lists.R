@@ -3,6 +3,24 @@
 # cselekedik/cselekszik
 # fotelben/fotelban
 
+## previous file: none.
+## next file: build tests / build_nonce_stem_lists
+## in: c, the webcorpus frequency list I made. xpostags for each var.
+## out: lists of variant pairs for each var.
+## general notes
+# variable stems mess up the morphological parser that generated the xpostags since it wants to disambiguate forms. so for variable forms, best search for form, not lemma.
+# some variable forms are people typing things wrong. no way to get round it, apart from searching for form (again), and hand-filtering. freq cutoff can work, but some of the legit variants are also super rare.
+# some forms are parsed wrong, e.g. 1sg indef is parsed as 1sg def. nothing I can do about it here.
+
+## ik
+# 1sg indef ik forms can have the exponent -k or -m. There are two problems. The first problem: For some, though not all, -k variants, there is a separate lemma for the -k form and the -m form. This means you can't filter the list based on lemma. Second problem: Some -m forms are probably parsed as def even though they are indef. There's nothing I can do about this. I pull all 1sg indef ik verb forms from the webcorpus. I generate the -k and the -m endings. I search all 1sg indef verb forms for these, circumventing problem 1. Problem 2 is hopeless. We can only exclude forms that show a suspicious lack of -m variants.
+## vh
+#  this is shockingly straightforward. since variation is in suffix, not in lemma, lemmata can be used to identify relevant forms. the +back v1 + e/é pattern is straightforward to regex.
+## ep
+# cvc and cc forms of the same verb can vary in many ways: cselekedik/cselekszik differ in c2. hidalnak / áramolnak have different v in cvc. so I had to draw up a list of forms by hand, starting from ALL CCik verbs. and then generate all possible forms and look for those. e.g. cselekszik -> cselekedik, cselekszik, cseleked, cseleksz. and then create a weird stem-type thing to use as col id ('cselek') which overlap all the time and will be a source of great many annoyances down the line.
+
+
+
 # -- header -- #
 
 setwd('~/Github/Racz2024/')
@@ -33,6 +51,7 @@ xpostags_ep = c("[/V][Prs.NDef.3Pl]","[/V][Inf]","[/V][Pst.NDef.3Pl]","[/V][Cond
 
 # -- functions -- #
 
+# take data with variants in it, pair up variants across xpostag and lemma, calculate odds, return pairs
 buildPairs = function(dat){
   
   variants = unique(dat$variant)
@@ -61,12 +80,10 @@ buildPairs = function(dat){
   
 }
 
+# take c, grab 1sg indef for V lemmata ending in ik, try both possible forms and search for those. return list of forms.
+# some verbs might be -ik verbs on some cosmic plane but not be attested in the corpus with -ik lemmata. this search method misses out on those.
 drawIk = function(c,h,hik){
 
-# 1sg indef ik forms can have the exponent -k or -m. There are two problems. The first problem: For some, though not all, -k variants, there is a separate lemma for the -k form and the -m form. This means you can't filter the list based on lemma. Second problem: Some -m forms are probably parsed as def even though they are indef. There's nothing I can do about this. I pull all 1sg indef ik verb forms from the webcorpus. I generate the -k and the -m endings. I search all 1sg indef verb forms for these, circumventing problem 1. Problem 2 is hopeless. We can only exclude forms that show a suspicious lack of -m variants.
-
-# take c, grab 1sg indef for V lemmata ending in ik.
-# some verbs might be -ik verbs on some cosmic plane but not be attested in the corpus with -ik lemmata. this search method misses out on those.
 ik1 = c %>% 
   filter(
     str_detect(lemma, 'ik$'),
@@ -129,15 +146,14 @@ ik3 %<>%
 return(ik3)
 }
 
-drawNoun = function(c){
+# take c, noun corpustags, look for 2-syl nouns where v1 back, v2 e or é, return those with suffixes in corpustags
+drawNoun = function(c,xpostags){
 
 # filter cfull for these suffixes
 nouns = c %>% 
   filter(
     str_detect(xpostag, xpostags)
   )
-
- nouns %>% filter(lemma %in% c('dzsungel','norvég','hotel','fotel','határozott')) %>% View
 
 # get rid of very odd/obnoxious lemmata. Then pluck out vowels from lemma. Then filter for lemma ending in C (not vowel) and a bisyllabic lemma skeleton of back vowel + e/é.
 nouns2 = nouns %>% 
@@ -186,7 +202,8 @@ nouns2 %<>%
 return(nouns2)  
 }
 
-predrawEP = function(c,xpostags_ep){
+# take c, write out CC-final verbs into file, so I can check them by hand.
+predrawEP = function(c){
 
 # pre-compile list, no other way
 
@@ -203,7 +220,8 @@ predrawEP = function(c,xpostags_ep){
    write_tsv('notes/ik.txt')
 }
 
-drawEP = function(hanglemmata,c){
+# take verb list I made, ep xpostags, and c. return tidy list of stems and variable forms.
+drawEP = function(hanglemmata,c,xpostags){
 
 	# we build all conceivable stem forms
 hanglemmata %<>% 
@@ -228,7 +246,7 @@ hang2 = hang %>%
     lemma_freq_corrected = sum(lemma_freq)
   ) %>% 
   ungroup() %>% 
-  filter(xpostag %in% postags) %>% 
+  filter(xpostag %in% xpostags) %>% 
   mutate(
     ending = str_replace(form, glue('^{stem}'), ''),
     type = case_when(
@@ -276,7 +294,7 @@ ik2 = buildPairs(ik) %>%
 
 ## nouns
 # create noun list
-nouns = drawNoun(c)
+nouns = drawNoun(c,xpostags_n)
 # pair up forms. only keep variable forms
 nouns3 = buildPairs(nouns2) %>%
   filter(!is.na(form_1) & !is.na(form_2))
@@ -285,7 +303,7 @@ nouns3 = buildPairs(nouns2) %>%
 # build list that I then fix by hand (see l23 in file)
 # predrawEP(c,xpostags_ep)
 # create verb list
-ep = drawEP(c,hanglemmata)
+ep = drawEP(c,hanglemmata,xpostags_ep)
 ep2 = buildPairs(ep)
 
 # -- write -- #

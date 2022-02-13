@@ -4,7 +4,8 @@
 2. build_tests
 3. build_nonce_stem_lists
 4. filter_nonce_stem_lists
-5. build_nonce_words
+5. sample_nonce_stems
+6. build_nonce_words
 
 ## Basic setup
 
