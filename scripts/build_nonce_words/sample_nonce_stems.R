@@ -19,7 +19,7 @@
 ## ep
 # ho BOY
 # we create ep verbs by taking a stem and a unique existing ep ending. for ending, think: cselekedik/cselekszik, so cvc:ked, cc:ksz. we use types of these, because we will sample this down anyway. we combine them with stems at random.
-# we use the cvc form as the gcm training and target
+# we use the cc form as the gcm training and target because some verbs have no cvc form. it matters a bit for edit distance but probably not too much. (based on my paper on these verbs)
 # we move forms back and forth a LOT to be able to keep track of them.
 
 # -- header -- #
@@ -203,21 +203,23 @@ ep_comp = read_tsv('src/epenthetic_stems/epenthesis_pairs_webcorpus2.tsv')
 
 # -- build -- #
 
+nonce %<>% sample_n(n())
+
 ## ik
 
 # we pick the 1st half of verb stems, add ik.
 ik = nonce %>% 
+  rename('stem' = word) %>% 
   filter(grammar_type == 'verb') %>% 
   rownames_to_column() %>% 
   filter(rowname < n()/2) %>% 
-  select(word,front,nsyl) %>% 
+  select(stem,front,nsyl) %>% 
   rowwise() %>% 
-  mutate(verb = glue('{word}ik'))
+  mutate('word' = glue('{stem}ik'))
 
 # this is our test set.
 ik_test = ik %>% 
-  select(verb) %>% 
-  rename('word' = verb) %>% 
+  select(word) %>% 
   distinct() %>% 
   ungroup()
 
@@ -244,12 +246,12 @@ ik_out = furGCM(ik_training,ik_test,var_s = .4, var_p = 1, distance_metric = 'lv
 
 # we turn 2syl words into variable noun stems. this is not good for filtering (some stems might be turned into a real-looking word because of the vowel replacement) but we'll worry about that later, if ever
 noun_test = nonce %>% 
+  rename('stem' = word) %>% 
   filter(grammar_type == 'noun')  %>% 
-  select(word,front) %>% 
+  select(stem,front) %>% 
   rowwise() %>% 
-  mutate(noun = buildNoun(word)) %>% 
-  select(noun) %>% 
-  rename('word' = noun) %>% 
+  mutate(word = buildNoun(stem)) %>% 
+  select(word) %>% 
   distinct() %>% 
   ungroup()
 
@@ -272,9 +274,12 @@ noun_out = furGCM(noun_training,noun_test,var_s = .3, var_p = 1, distance_metric
 
 ## ep
 
-# you need to extract the consonants from cc and cvc and the vowel from cvc. second c might be different based on stem. first c always the same.
+# you need to extract the consonants from cc and cvc and the vowel from cvc. second c might be different based on stem. first c always the same. using ndef3pl as most freq v-init xpostag (so we get alternations)
 ep_end = ep_comp %>% 
-  filter(str_detect(form_1, 'dni$', negate = T)) %>% 
+  filter(
+    xpostag == '[/V][Prs.NDef.3Pl]', #those where d/sz alteration happens, also most freq xpost
+    str_detect(form_1, 'dni$', negate = T)
+    ) %>%
   select(stem,form_1,form_2) %>% 
   mutate(
     end_1 = str_extract(form_1, glue('(?<={stem}).*$')),
@@ -284,105 +289,148 @@ ep_end = ep_comp %>%
     cc_c2 = str_extract(end_1, '^(sz|[^aáeéiíoóöőuúüű])'),
     v = str_extract(end_2, '^[aáeéiíoóöőuúüű]')
   ) %>%
-  distinct(c1,v,cvc_c2,cc_c2)
+  select(c1,v,cvc_c2,cc_c2)
  
-# you build ep forms by taking stems and turning them into ep verbs by randomly adding an ep ending.   
+# you build ep forms by taking stems and turning them into ep verbs by randomly adding an ep ending. Vlik forms don't exist, but we keep them for reference for now.   
 ep = nonce %>% 
+  rename('stem' = word) %>% 
   filter(grammar_type == 'verb') %>% 
   rownames_to_column() %>% 
   filter(rowname < n()/2) %>% 
-  select(word,front,nsyl) %>% 
+  select(stem,front,nsyl) %>% 
   rowwise() %>% 
   mutate(
-    verb = list(buildEp(word,ep_end)),
-    cvc = verb[[1]],
-    cc = verb[[2]]
+    word = list(buildEp(stem,ep_end)),
+    cvc = word[[1]],
+    cc = word[[2]]
   )
 
+# some forms were made several times, also we don't need stem etc.
+ep %<>% 
+  ungroup() %>% 
+  select(-stem,-front,-nsyl) %>% 
+  distinct()
+
 ep_test = ep %>% 
-  select(cvc) %>% 
-  rename('word' = cvc) %>% 
+  select(cc) %>% 
+  rename('word' = cc) %>% 
   distinct() %>% 
   ungroup()
 
 # ep_comp %>% 
 #   count(xpostag)
 
-ep_training = ep_comp %>%
-  rename('word' = stem) %>% 
+# we grab cc forms for stems
+ep_word_cc = ep_comp %>%
+  filter(xpostag == '[/V][Prs.NDef.3Pl]') %>% 
+  mutate(word = str_replace(form_1, '.n.k$', 'ik')) %>% 
+  select(word,stem) 
+
+# we build training grouping under "word" (= cc form)
+ep_training = ep_comp %>% 
+  left_join(ep_word_cc, by = "stem") %>%
   buildGCMtraining()
 
-ep_training = ep_comp %>%
-  rename('word' = stem) %>% 
-  filter(xpostag == '[/V][Prs.NDef.3Pl]') %>% 
-  mutate(word2 = str_replace(form_2, 'n.k$', 'ik')) %>% 
-  select(word,word2) %>% 
-  inner_join(ep_training,., by = 'word') %>% 
-  select(-word) %>% 
-  rename('word' = word2)
-
-# ggplot(ep_training, aes(fct_reorder(word,log_odds),log_odds,colour = ntile_log_odds)) +
-  # geom_point()
-# ep_test = furGCM(ep_training,ep_training,var_s = .4, var_p = 1, distance_metric = 'lv')
-# left_join(ep_training,ep_test) %>%
-# summarise(cor = broom::tidy(cor.test(high,log_odds)))
-# .3, .39  
-# .4, .4
-# .5 .5
 ep_out = furGCM(ep_training,ep_test,var_s = .4, var_p = 1, distance_metric = 'lv')
+# hist(ep_out$high)
 
 # -- merge -- #
 
-ik %<>% 
-  select(-word) %>% 
-  rename('word' = verb) %>% 
+ik2 = ik %>% 
+  ungroup() %>% 
   left_join(ik_out, by = 'word') %>% 
   select(-low) %>% 
   rename('gcm_weight' = high) %>% 
   mutate(gcm_decile = ntile(gcm_weight,10))
 
-vh = noun_out %>% 
+vh2 = noun_out %>% # vh2 called vh2 for naming consistency, even though no vh
   ungroup() %>% 
   mutate(vowel = str_extract(word,'[eé]')) %>% 
   select(-low) %>% 
   rename('gcm_weight' = high) %>% 
   mutate(gcm_decile = ntile(gcm_weight,10))
 
-ep = ep_out %>% 
-  rename('cvc' = word) %>% 
-  inner_join(ep) %>% 
-  select(-front) %>% 
+ep2 = ep_out %>% 
+  rename('cc' = word) %>% 
+  inner_join(ep, by = "cc") %>% 
   mutate(
     nsyl = str_count(cvc, '[aáeéiíoóöőuúüű]')-2,
-    ending = str_extract(cvc, '..ik$'),
-    linking_vowel = str_extract(ending, '.'),
-    suffix = str_extract(ending, '.ik')
+    ending1 = str_extract(cvc, '[aáeéiíoóöőuúüű](sz|ty|gy|ny|zs|[^aáeéiíoóöőuúüű])ik$'),
+    suffix2 = str_extract(cc, '(sz|ty|gy|ny|zs|[^aáeéiíoóöőuúüű])ik$'),
+    linking_vowel = str_extract(ending1, '.'),
+    suffix1 = str_extract(ending1, '.ik')
   ) %>% 
   select(-low) %>% 
   rename('gcm_weight' = high) %>% 
-  mutate(gcm_decile = ntile(gcm_weight,10)) %>% 
-  filter(str_detect(linking_vowel, '[uü]', negate = T))
+  mutate(gcm_decile = ntile(gcm_weight,10)) 
 
 # -- sample -- #
 
-# something weird with ik
+ik2 %>% 
+  count(front,nsyl,gcm_decile) %>% 
+  pivot_wider(names_from = gcm_decile, values_from = n)
 
-vh %>% 
+ik3 = ik2 %>% 
+  group_by(front,nsyl,gcm_decile) %>% 
+  sample_n(10, replace = T) %>% 
+  distinct()
+  
+vh2 %>% 
   count(vowel,gcm_decile) %>% 
   pivot_wider(names_from = gcm_decile, values_from = n)
 
-vh2 = vh %>% 
-  group_by(vowel,gcm_decile) %>% 
-  sample_n(20, replace = T) %>% 
+vh3 = vh2 %>% 
+  subset(vowel == 'e') %>% 
+  group_by(gcm_decile) %>% 
+  sample_n(30, replace = T) %>% # we overshoot the target, 20, because of replacement
   distinct()
 
-ep %>% 
-  filter(str_detect(linking_vowel, '[uü]', negate = T)) %>% 
-  count(suffix,linking_vowel) %>% 
+vh3 = vh2 %>% 
+  subset(vowel == 'é') %>% 
+  group_by(gcm_decile) %>% 
+  sample_n(10) %>% 
+  distinct() %>% 
+  bind_rows(vh3)
+
+ep2 %>% 
+  count(suffix1,suffix2,linking_vowel) %>% 
   pivot_wider(names_from = linking_vowel, values_from = n)
 
-# something weird here.
+ep2 %>% 
+  count(suffix1,suffix2,gcm_decile) %>% 
+  pivot_wider(names_from = gcm_decile, values_from = n)
+
+ep3 = ep2 %>% 
+  group_by(gcm_decile) %>% 
+  sample_n(40)
 
 # -- write -- #
 
-write_tsv(vh2, 'src/nonce_words/forms/vh_prompts.tsv')
+write_tsv(ik3, 'src/nonce_words/forms/ik_prompts.tsv')
+write_tsv(vh3, 'src/nonce_words/forms/vh_prompts.tsv')
+write_tsv(ep3, 'src/nonce_words/forms/ep_prompts.tsv')
+
+ik3 %>% 
+  ungroup() %>% 
+  sample_n(n()) %>% 
+  arrange(gcm_decile) %>% 
+  select(word,gcm_decile) %>% 
+  googlesheets4::write_sheet(ss = 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'lakok/lakom')
+
+vh3 %>% 
+  ungroup() %>% 
+  sample_n(n()) %>% 
+  arrange(gcm_decile) %>% 
+  select(word,gcm_decile) %>% 
+  googlesheets4::write_sheet(ss = 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'dzsungelban/dzsungelben')
+
+ep3 %>% 
+  ungroup() %>% 
+  sample_n(n()) %>% 
+  arrange(gcm_decile) %>%
+  mutate(
+    cvc = ifelse(
+      str_detect(cc, 'lik$'), str_replace(cvc, 'ik$', ''), cvc)
+  ) %>% 
+  select(cc,cvc,gcm_decile) %>%
+googlesheets4::write_sheet(ss = 'https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing', sheet = 'cselekszik/cselekedik')
