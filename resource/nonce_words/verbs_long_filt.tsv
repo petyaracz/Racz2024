@@ -1,462 +1,1025 @@
-onset	v1c1c2	v2c3c4	tr	word	target	keep_enough_distance	keep_no_overlap
-¥	eml	iz	¥emlizik	nyemlizik	¥emliz	TRUE	TRUE
-h	e†h	iz	he†hizik	hetyhizik	he†hiz	TRUE	TRUE
-z	uml	űdz	zumlűdzik	zumlűdzik	zumlűdz	TRUE	TRUE
-p	ó¬	úd	pó¬údik	pólyúdik	pó¬úd	TRUE	TRUE
-z	öls	űz	zölsűzik	zölsűzik	zölsűz	TRUE	TRUE
-l	ob	ud	lobudik	lobudik	lobud	TRUE	TRUE
-p	étk	edz	pétkedzik	pétkedzik	pétkedz	TRUE	TRUE
-m	ínl	eml	mínlemlik	mínlemlik	mínleml	TRUE	TRUE
-d	ezd	érß	dezdérßik	dezdérszik	dezdérß	TRUE	TRUE
-pr	űv	oz	prűvozik	prűvozik	prűvoz	TRUE	TRUE
-fl	oh	uz	flohuzik	flohuzik	flohuz	TRUE	TRUE
-k	ipr	ajl	kiprajlik	kiprajlik	kiprajl	TRUE	TRUE
-p	ukl	ódz	puklódzik	puklódzik	puklódz	TRUE	TRUE
-c	ögb	öz	cögbözik	cögbözik	cögböz	TRUE	TRUE
-NA	ipr	érß	iprérßik	iprérszik	iprérß	TRUE	TRUE
-bl	int	éz	blintézik	blintézik	blintéz	TRUE	TRUE
-b	újh	óz	bújhózik	bújhózik	bújhóz	TRUE	TRUE
-b	esl	égß	beslégßik	beslégszik	beslégß	TRUE	TRUE
-tr	erz	iz	trerzizik	trerzizik	trerziz	TRUE	TRUE
-sp	áç	adz	spáçadzik	spácsadzik	spáçadz	TRUE	TRUE
-v	id	eng	videngik	videngik	videng	TRUE	TRUE
-ç	il	akz	çilakzik	csilakzik	çilakz	TRUE	TRUE
-s	av	apß	savapßik	savapszik	savapß	TRUE	TRUE
-ß	as	á¥l	ßasá¥lik	szasánylik	ßasá¥l	TRUE	TRUE
-h	ámp	agl	hámpaglik	hámpaglik	hámpagl	TRUE	TRUE
-fl	űz	o¥l	flűzo¥lik	flűzonylik	flűzo¥l	TRUE	TRUE
-ß	a©	asl	ßa©aslik	szagyaslik	ßa©asl	TRUE	TRUE
-n	ult	os	nultosik	nultosik	nultos	TRUE	TRUE
-Ω	ig	agl	Ωigaglik	zsigaglik	Ωigagl	TRUE	TRUE
-¥	iml	agß	¥imlagßik	nyimlagszik	¥imlagß	TRUE	TRUE
-s	őrk	őz	sőrkőzik	sőrkőzik	sőrkőz	TRUE	TRUE
-NA	ol	óz	olózik	olózik	olóz	TRUE	TRUE
-bl	ém	éz	blémézik	blémézik	bléméz	TRUE	TRUE
-k	ugl	os	kuglosik	kuglosik	kuglos	TRUE	TRUE
-c	ipr	akl	cipraklik	cipraklik	ciprakl	TRUE	TRUE
-g	í¥l	az	gí¥lazik	gínylazik	gí¥laz	TRUE	TRUE
-m	epr	esl	mepreslik	mepreslik	mepresl	TRUE	TRUE
-†	ag	at	†agatik	tyagatik	†agat	TRUE	TRUE
-d	akn	arz	daknarzik	daknarzik	daknarz	TRUE	TRUE
-n	ar	akl	naraklik	naraklik	narakl	TRUE	TRUE
-ß	ínl	arz	ßínlarzik	színlarzik	ßínlarz	TRUE	TRUE
-ç	ud	osl	çudoslik	csudoslik	çudosl	TRUE	TRUE
-c	arj	ágz	carjágzik	carjágzik	carjágz	TRUE	TRUE
-s	op	űdz	sopűdzik	sopűdzik	sopűdz	TRUE	TRUE
-b	ojt	okl	bojtoklik	bojtoklik	bojtokl	TRUE	TRUE
-ç	ül	öd	çülödik	csülödik	çülöd	TRUE	TRUE
-l	esl	ékß	leslékßik	leslékszik	leslékß	TRUE	TRUE
-©	iç	atl	©içatlik	gyicsatlik	©içatl	TRUE	TRUE
-sm	e¥	én	sme¥énik	smenyénik	sme¥én	TRUE	TRUE
-NA	ált	ajl	áltajlik	áltajlik	áltajl	TRUE	TRUE
-tr	or	od	trorodik	trorodik	trorod	TRUE	TRUE
-v	op	o¥l	vopo¥lik	voponylik	vopo¥l	TRUE	TRUE
-c	is	akß	cisakßik	cisakszik	cisakß	TRUE	TRUE
-Ω	aj	aml	Ωajamlik	zsajamlik	Ωajaml	TRUE	TRUE
-h	erg	é¥l	hergé¥lik	hergénylik	hergé¥l	TRUE	TRUE
-NA	e†h	egß	e†hegßik	etyhegszik	e†hegß	TRUE	TRUE
-b	ac	atl	bacatlik	bacatlik	bacatl	TRUE	TRUE
-h	ug	o¥l	hugo¥lik	hugonylik	hugo¥l	TRUE	TRUE
-m	égz	ek	mégzekik	mégzekik	mégzek	TRUE	TRUE
-c	ald	áΩl	caldáΩlik	caldázslik	caldáΩl	TRUE	TRUE
-g	ap	áß	gapáßik	gapászik	gapáß	TRUE	TRUE
-f	e†	erß	fe†erßik	fetyerszik	fe†erß	TRUE	TRUE
-f	erz	ejl	ferzejlik	ferzejlik	ferzejl	TRUE	TRUE
-¥	é¥k	eml	¥é¥kemlik	nyénykemlik	¥é¥keml	TRUE	TRUE
-†	ík	et	†íketik	tyíketik	†íket	TRUE	TRUE
-r	ás	asl	rásaslik	rásaslik	rásasl	TRUE	TRUE
-s	u†	űdz	su†űdzik	sutyűdzik	su†űdz	TRUE	TRUE
-NA	or	okl	oroklik	oroklik	orokl	TRUE	TRUE
-ß	en	ez	ßenezik	szenezik	ßenez	TRUE	TRUE
-z	iml	ed	zimledik	zimledik	zimled	TRUE	TRUE
-br	ám	ajl	brámajlik	brámajlik	brámajl	TRUE	TRUE
-ç	ilm	akl	çilmaklik	csilmaklik	çilmakl	TRUE	TRUE
-v	est	ek	vestekik	vestekik	vestek	TRUE	TRUE
-¥	ikr	edz	¥ikredzik	nyikredzik	¥ikredz	TRUE	TRUE
-pr	üt	önl	prütönlik	prütönlik	prütönl	TRUE	TRUE
-ß	ar	aml	ßaramlik	szaramlik	ßaraml	TRUE	TRUE
-b	őz	ökl	bőzöklik	bőzöklik	bőzökl	TRUE	TRUE
-v	obr	óz	vobrózik	vobrózik	vobróz	TRUE	TRUE
-pr	áç	ádz	práçádzik	prácsádzik	práçádz	TRUE	TRUE
-©	int	en	©intenik	gyintenik	©inten	TRUE	TRUE
-ç	ínl	ékß	çínlékßik	csínlékszik	çínlékß	TRUE	TRUE
-v	ík	agl	víkaglik	víkaglik	víkagl	TRUE	TRUE
-t	ík	ez	tíkezik	tíkezik	tíkez	TRUE	TRUE
-fl	ü©k	üd	flü©küdik	flügyküdik	flü©küd	TRUE	TRUE
-ç	esl	et	çesletik	csesletik	çeslet	TRUE	TRUE
-dΩ	űr	onl	dΩűronlik	dzsűronlik	dΩűronl	TRUE	TRUE
-ß	edv	ekß	ßedvekßik	szedvekszik	ßedvekß	TRUE	TRUE
-fl	ack	ád	flackádik	flackádik	flackád	TRUE	TRUE
-m	údb	uz	múdbuzik	múdbuzik	múdbuz	TRUE	TRUE
-Ω	is	ajl	Ωisajlik	zsisajlik	Ωisajl	TRUE	TRUE
-Ω	ősk	önl	Ωőskönlik	zsőskönlik	Ωőskönl	TRUE	TRUE
-v	eΩg	érß	veΩgérßik	vezsgérszik	veΩgérß	TRUE	TRUE
-n	ík	at	níkatik	níkatik	níkat	TRUE	TRUE
-f	űn	ösl	fűnöslik	fűnöslik	fűnösl	TRUE	TRUE
-dΩ	ism	at	dΩismatik	dzsismatik	dΩismat	TRUE	TRUE
-¥	edv	é¥l	¥edvé¥lik	nyedvénylik	¥edvé¥l	TRUE	TRUE
-g	a©	á¥z	ga©á¥zik	gagyányzik	ga©á¥z	TRUE	TRUE
-m	alh	akz	malhakzik	malhakzik	malhakz	TRUE	TRUE
-t	ol	okl	toloklik	toloklik	tolokl	TRUE	TRUE
-sn	ír	áz	snírázik	snírázik	sníráz	TRUE	TRUE
-v	esl	ez	veslezik	veslezik	veslez	TRUE	TRUE
-k	ant	árz	kantárzik	kantárzik	kantárz	TRUE	TRUE
-r	ölt	önl	röltönlik	röltönlik	röltönl	TRUE	TRUE
-dΩ	a©	ánz	dΩa©ánzik	dzsagyánzik	dΩa©ánz	TRUE	TRUE
-©	úk	ud	©úkudik	gyúkudik	©úkud	TRUE	TRUE
-s	ipr	érl	siprérlik	siprérlik	siprérl	TRUE	TRUE
-tr	í¥l	az	trí¥lazik	trínylazik	trí¥laz	TRUE	TRUE
-h	ifj	á¬l	hifjá¬lik	hifjálylik	hifjá¬l	TRUE	TRUE
-dΩ	örl	őd	dΩörlődik	dzsörlődik	dΩörlőd	TRUE	TRUE
-f	arj	áΩl	farjáΩlik	farjázslik	farjáΩl	TRUE	TRUE
-f	úr	onl	fúronlik	fúronlik	fúronl	TRUE	TRUE
-sn	ölt	üd	snöltüdik	snöltüdik	snöltüd	TRUE	TRUE
-ç	umç	oz	çumçozik	csumcsozik	çumçoz	TRUE	TRUE
-sp	ukd	óz	spukdózik	spukdózik	spukdóz	TRUE	TRUE
-z	of	os	zofosik	zofosik	zofos	TRUE	TRUE
-NA	ujd	uz	ujduzik	ujduzik	ujduz	TRUE	TRUE
-c	el	esl	celeslik	celeslik	celesl	TRUE	TRUE
-Ω	öt	őrz	Ωötőrzik	zsötőrzik	Ωötőrz	TRUE	TRUE
-b	ögl	önl	böglönlik	böglönlik	böglönl	TRUE	TRUE
-NA	ag	á¥z	agá¥zik	agányzik	agá¥z	TRUE	TRUE
-d	uml	ód	dumlódik	dumlódik	dumlód	TRUE	TRUE
-p	ök	üd	pöküdik	pöküdik	pöküd	TRUE	TRUE
-ß	ajh	atl	ßajhatlik	szajhatlik	ßajhatl	TRUE	TRUE
-k	arj	iz	karjizik	karjizik	karjiz	TRUE	TRUE
-br	öl	ökl	brölöklik	brölöklik	brölökl	TRUE	TRUE
-b	árk	amz	bárkamzik	bárkamzik	bárkamz	TRUE	TRUE
-¥	esl	ejl	¥eslejlik	nyeslejlik	¥eslejl	TRUE	TRUE
-d	int	ek	dintekik	dintekik	dintek	TRUE	TRUE
-NA	omj	osl	omjoslik	omjoslik	omjosl	TRUE	TRUE
-fl	ev	érl	flevérlik	flevérlik	flevérl	TRUE	TRUE
-sk	ajl	ád	skajládik	skajládik	skajlád	TRUE	TRUE
-c	al	ajl	calajlik	calajlik	calajl	TRUE	TRUE
-j	arj	árz	jarjárzik	jarjárzik	jarjárz	TRUE	TRUE
-k	und	óz	kundózik	kundózik	kundóz	TRUE	TRUE
-sm	id	agl	smidaglik	smidaglik	smidagl	TRUE	TRUE
-fl	a†	áß	fla†áßik	flatyászik	fla†áß	TRUE	TRUE
-pr	ör	űz	prörűzik	prörűzik	prörűz	TRUE	TRUE
-m	ül	üd	mülüdik	mülüdik	mülüd	TRUE	TRUE
-ßt	őr	ökl	ßtőröklik	sztőröklik	ßtőrökl	TRUE	TRUE
-sn	orl	űz	snorlűzik	snorlűzik	snorlűz	TRUE	TRUE
-c	áts	agß	cátsagßik	cátsagszik	cátsagß	TRUE	TRUE
-¥	aj	á¬l	¥ajá¬lik	nyajálylik	¥ajá¬l	TRUE	TRUE
-n	ub	os	nubosik	nubosik	nubos	TRUE	TRUE
-©	id	aml	©idamlik	gyidamlik	©idaml	TRUE	TRUE
-s	í¥l	egz	sí¥legzik	sínylegzik	sí¥legz	TRUE	TRUE
-sp	áv	árz	spávárzik	spávárzik	spávárz	TRUE	TRUE
-g	uld	úz	guldúzik	guldúzik	guldúz	TRUE	TRUE
-NA	űv	üß	űvüßik	űvüszik	űvüß	TRUE	TRUE
-ßt	al	áΩl	ßtaláΩlik	sztalázslik	ßtaláΩl	TRUE	TRUE
-bl	árh	az	blárhazik	blárhazik	blárhaz	TRUE	TRUE
-p	omj	űdz	pomjűdzik	pomjűdzik	pomjűdz	TRUE	TRUE
-n	erm	érß	nermérßik	nermérszik	nermérß	TRUE	TRUE
-sn	u©	uz	snu©uzik	snugyuzik	snu©uz	TRUE	TRUE
-sk	ón	uz	skónuzik	skónuzik	skónuz	TRUE	TRUE
-b	i©	es	bi©esik	bigyesik	bi©es	TRUE	TRUE
-c	őr	űdz	cőrűdzik	cőrűdzik	cőrűdz	TRUE	TRUE
-bl	ot	uz	blotuzik	blotuzik	blotuz	TRUE	TRUE
-m	omj	orz	momjorzik	momjorzik	momjorz	TRUE	TRUE
-h	ag	áΩl	hagáΩlik	hagázslik	hagáΩl	TRUE	TRUE
-f	ir	egß	firegßik	firegszik	firegß	TRUE	TRUE
-h	ál	áΩl	háláΩlik	hálázslik	háláΩl	TRUE	TRUE
-h	on	onl	hononlik	hononlik	hononl	TRUE	TRUE
-b	aßt	ágz	baßtágzik	basztágzik	baßtágz	TRUE	TRUE
-z	ar	ád	zarádik	zarádik	zarád	TRUE	TRUE
-br	ult	ód	brultódik	brultódik	brultód	TRUE	TRUE
-†	úv	ud	†úvudik	tyúvudik	†úvud	TRUE	TRUE
-f	an	agß	fanagßik	fanagszik	fanagß	TRUE	TRUE
-f	ib	ed	fibedik	fibedik	fibed	TRUE	TRUE
-br	úv	osl	brúvoslik	brúvoslik	brúvosl	TRUE	TRUE
-dΩ	u†	orz	dΩu†orzik	dzsutyorzik	dΩu†orz	TRUE	TRUE
-sm	irk	áß	smirkáßik	smirkászik	smirkáß	TRUE	TRUE
-ç	uml	uz	çumluzik	csumluzik	çumluz	TRUE	TRUE
-j	újh	úz	jújhúzik	jújhúzik	jújhúz	TRUE	TRUE
-v	uçk	űdz	vuçkűdzik	vucskűdzik	vuçkűdz	TRUE	TRUE
-t	ül	üß	tülüßik	tülüszik	tülüß	TRUE	TRUE
-sp	ib	akß	spibakßik	spibakszik	spibakß	TRUE	TRUE
-tr	am	á¬l	tramá¬lik	tramálylik	tramá¬l	TRUE	TRUE
-Ω	a¥	iz	Ωa¥izik	zsanyizik	Ωa¥iz	TRUE	TRUE
-©	elp	éß	©elpéßik	gyelpészik	©elpéß	TRUE	TRUE
-m	imb	ágz	mimbágzik	mimbágzik	mimbágz	TRUE	TRUE
-h	eßk	étl	heßkétlik	heszkétlik	heßkétl	TRUE	TRUE
-c	on	uz	conuzik	conuzik	conuz	TRUE	TRUE
-†	ajr	apß	†ajrapßik	tyajrapszik	†ajrapß	TRUE	TRUE
-dΩ	oh	osl	dΩohoslik	dzsohoslik	dΩohosl	TRUE	TRUE
-n	at	apß	natapßik	natapszik	natapß	TRUE	TRUE
-p	ipr	ékß	piprékßik	piprékszik	piprékß	TRUE	TRUE
-©	u†	óz	©u†ózik	gyutyózik	©u†óz	TRUE	TRUE
-c	ald	á¥z	caldá¥zik	caldányzik	caldá¥z	TRUE	TRUE
-j	ív	atl	jívatlik	jívatlik	jívatl	TRUE	TRUE
-NA	eml	éz	emlézik	emlézik	emléz	TRUE	TRUE
-n	árk	áΩl	nárkáΩlik	nárkázslik	nárkáΩl	TRUE	TRUE
-pl	it	ekß	plitekßik	plitekszik	plitekß	TRUE	TRUE
-s	akl	amz	saklamzik	saklamzik	saklamz	TRUE	TRUE
-m	ul	úd	mulúdik	mulúdik	mulúd	TRUE	TRUE
-tr	áv	iz	trávizik	trávizik	tráviz	TRUE	TRUE
-tr	iml	éß	trimléßik	trimlészik	trimléß	TRUE	TRUE
-k	ac	agz	kacagzik	kacagzik	kacagz	TRUE	TRUE
-s	ack	agl	sackaglik	sackaglik	sackagl	TRUE	TRUE
-r	orn	űdz	rornűdzik	rornűdzik	rornűdz	TRUE	TRUE
-ßt	a†	amz	ßta†amzik	sztatyamzik	ßta†amz	TRUE	TRUE
-bl	űn	űdz	blűnűdzik	blűnűdzik	blűnűdz	TRUE	TRUE
-sp	ík	áß	spíkáßik	spíkászik	spíkáß	TRUE	TRUE
-r	á¥	iz	rá¥izik	rányizik	rá¥iz	TRUE	TRUE
-©	oßt	űdz	©oßtűdzik	gyosztűdzik	©oßtűdz	TRUE	TRUE
-pl	a†	áz	pla†ázik	platyázik	pla†áz	TRUE	TRUE
-pl	olg	óz	plolgózik	plolgózik	plolgóz	TRUE	TRUE
-†	epr	étl	†eprétlik	tyeprétlik	†eprétl	TRUE	TRUE
-v	oh	od	vohodik	vohodik	vohod	TRUE	TRUE
-n	ip	akß	nipakßik	nipakszik	nipakß	TRUE	TRUE
-c	uks	úz	cuksúzik	cuksúzik	cuksúz	TRUE	TRUE
-v	áç	agz	váçagzik	vácsagzik	váçagz	TRUE	TRUE
-d	árh	ád	dárhádik	dárhádik	dárhád	TRUE	TRUE
-sp	edv	én	spedvénik	spedvénik	spedvén	TRUE	TRUE
-g	áç	az	gáçazik	gácsazik	gáçaz	TRUE	TRUE
-†	oç	od	†oçodik	tyocsodik	†oçod	TRUE	TRUE
-pl	ic	eml	plicemlik	plicemlik	pliceml	TRUE	TRUE
-ç	ifl	et	çifletik	csifletik	çiflet	TRUE	TRUE
-Ω	ók	úz	Ωókúzik	zsókúzik	Ωókúz	TRUE	TRUE
-j	ágt	arz	jágtarzik	jágtarzik	jágtarz	TRUE	TRUE
-†	áv	ágz	†ávágzik	tyávágzik	†ávágz	TRUE	TRUE
-j	ag	agz	jagagzik	jagagzik	jagagz	TRUE	TRUE
-fl	otr	úz	flotrúzik	flotrúzik	flotrúz	TRUE	TRUE
-Ω	úr	ud	Ωúrudik	zsúrudik	Ωúrud	TRUE	TRUE
-sm	edv	éß	smedvéßik	smedvészik	smedvéß	TRUE	TRUE
-¥	oßt	óz	¥oßtózik	nyosztózik	¥oßtóz	TRUE	TRUE
-t	a©l	iz	ta©lizik	tagylizik	ta©liz	TRUE	TRUE
-bl	ár	ád	blárádik	blárádik	blárád	TRUE	TRUE
-v	ab	aml	vabamlik	vabamlik	vabaml	TRUE	TRUE
-sm	ób	ód	smóbódik	smóbódik	smóbód	TRUE	TRUE
-d	at	agl	dataglik	dataglik	datagl	TRUE	TRUE
-dΩ	ár	apß	dΩárapßik	dzsárapszik	dΩárapß	TRUE	TRUE
-d	ant	ak	dantakik	dantakik	dantak	TRUE	TRUE
-r	ilm	epß	rilmepßik	rilmepszik	rilmepß	TRUE	TRUE
-©	e†	éß	©e†éßik	gyetyészik	©e†éß	TRUE	TRUE
-v	iΩ	áΩl	viΩáΩlik	vizsázslik	viΩáΩl	TRUE	TRUE
-fl	urj	úd	flurjúdik	flurjúdik	flurjúd	TRUE	TRUE
-ç	ic	agl	çicaglik	csicaglik	çicagl	TRUE	TRUE
-l	újt	ud	lújtudik	lújtudik	lújtud	TRUE	TRUE
-¥	an	akz	¥anakzik	nyanakzik	¥anakz	TRUE	TRUE
-fl	el	ékß	flelékßik	flelékszik	flelékß	TRUE	TRUE
-j	űv	ódz	jűvódzik	jűvódzik	jűvódz	TRUE	TRUE
-l	urn	osl	lurnoslik	lurnoslik	lurnosl	TRUE	TRUE
-g	ír	edz	gíredzik	gíredzik	gíredz	TRUE	TRUE
-NA	ík	epß	íkepßik	íkepszik	íkepß	TRUE	TRUE
-l	oc	úd	locúdik	locúdik	locúd	TRUE	TRUE
-l	og	okl	logoklik	logoklik	logokl	TRUE	TRUE
-z	orj	uz	zorjuzik	zorjuzik	zorjuz	TRUE	TRUE
-z	omp	ódz	zompódzik	zompódzik	zompódz	TRUE	TRUE
-sp	óg	onl	spógonlik	spógonlik	spógonl	TRUE	TRUE
-sp	onz	ód	sponzódik	sponzódik	sponzód	TRUE	TRUE
-f	í©	ágz	fí©ágzik	fígyágzik	fí©ágz	TRUE	TRUE
-NA	úk	os	úkosik	úkosik	úkos	TRUE	TRUE
-pr	ír	ékz	prírékzik	prírékzik	prírékz	TRUE	TRUE
-sm	ív	arz	smívarzik	smívarzik	smívarz	TRUE	TRUE
-†	am	agl	†amaglik	tyamaglik	†amagl	TRUE	TRUE
-d	a¥	agß	da¥agßik	danyagszik	da¥agß	TRUE	TRUE
-ç	étk	étl	çétkétlik	csétkétlik	çétkétl	TRUE	TRUE
-l	o¬	od	lo¬odik	lolyodik	lo¬od	TRUE	TRUE
-fl	ifj	én	flifjénik	flifjénik	flifjén	TRUE	TRUE
-ß	úd	okl	ßúdoklik	szúdoklik	ßúdokl	TRUE	TRUE
-r	i©	árz	ri©árzik	rigyárzik	ri©árz	TRUE	TRUE
-ß	ut	os	ßutosik	szutosik	ßutos	TRUE	TRUE
-n	űnh	óz	nűnhózik	nűnhózik	nűnhóz	TRUE	TRUE
-pr	űnh	öz	prűnhözik	prűnhözik	prűnhöz	TRUE	TRUE
-b	űt	üd	bűtüdik	bűtüdik	bűtüd	TRUE	TRUE
-sn	al	á¥l	snalá¥lik	snalánylik	snalá¥l	TRUE	TRUE
-†	az	akß	†azakßik	tyazakszik	†azakß	TRUE	TRUE
-tr	a©	akß	tra©akßik	tragyakszik	tra©akß	TRUE	TRUE
-j	ev	egl	jeveglik	jeveglik	jevegl	TRUE	TRUE
-pr	az	arz	prazarzik	prazarzik	prazarz	TRUE	TRUE
-l	uml	ódz	lumlódzik	lumlódzik	lumlódz	TRUE	TRUE
-m	árk	at	márkatik	márkatik	márkat	TRUE	TRUE
-h	ejt	éz	hejtézik	hejtézik	hejtéz	TRUE	TRUE
-l	ürk	örl	lürkörlik	lürkörlik	lürkörl	TRUE	TRUE
-p	öm	ődz	pömődzik	pömődzik	pömődz	TRUE	TRUE
-Ω	ürd	üß	Ωürdüßik	zsürdüszik	Ωürdüß	TRUE	TRUE
-b	őn	öd	bőnödik	bőnödik	bőnöd	TRUE	TRUE
-sk	á©	agl	ská©aglik	skágyaglik	ská©agl	TRUE	TRUE
-ç	or	űdz	çorűdzik	csorűdzik	çorűdz	TRUE	TRUE
-g	öng	őd	göngődik	göngődik	göngőd	TRUE	TRUE
-Ω	ilm	ágz	Ωilmágzik	zsilmágzik	Ωilmágz	TRUE	TRUE
-f	ip	et	fipetik	fipetik	fipet	TRUE	TRUE
-†	ack	á¥z	†acká¥zik	tyackányzik	†acká¥z	TRUE	TRUE
-s	ált	ánz	sáltánzik	sáltánzik	sáltánz	TRUE	TRUE
-n	id	érl	nidérlik	nidérlik	nidérl	TRUE	TRUE
-d	í¥l	é¥l	dí¥lé¥lik	dínylénylik	dí¥lé¥l	TRUE	TRUE
-z	ót	úd	zótúdik	zótúdik	zótúd	TRUE	TRUE
-g	a©	arz	ga©arzik	gagyarzik	ga©arz	TRUE	TRUE
-Ω	árm	iz	Ωármizik	zsármizik	Ωármiz	TRUE	TRUE
-sm	e†	egl	sme†eglik	smetyeglik	sme†egl	TRUE	TRUE
-v	í¥l	esl	ví¥leslik	vínyleslik	ví¥lesl	TRUE	TRUE
-pr	etk	et	pretketik	pretketik	pretket	TRUE	TRUE
-†	ing	ágl	†ingáglik	tyingáglik	†ingágl	TRUE	TRUE
-f	ír	adz	fíradzik	fíradzik	fíradz	TRUE	TRUE
-†	iΩ	adz	†iΩadzik	tyizsadzik	†iΩadz	TRUE	TRUE
-pr	űt	okl	prűtoklik	prűtoklik	prűtokl	TRUE	TRUE
-c	ínl	ek	cínlekik	cínlekik	cínlek	TRUE	TRUE
-k	i¥	égß	ki¥égßik	kinyégszik	ki¥égß	TRUE	TRUE
-p	al	arz	palarzik	palarzik	palarz	TRUE	TRUE
-ß	os	o¥l	ßoso¥lik	szosonylik	ßoso¥l	TRUE	TRUE
-ßt	i¥	adz	ßti¥adzik	sztinyadzik	ßti¥adz	TRUE	TRUE
-pl	újt	ód	plújtódik	plújtódik	plújtód	TRUE	TRUE
-ç	obz	okl	çobzoklik	csobzoklik	çobzokl	TRUE	TRUE
-v	ipr	égß	viprégßik	viprégszik	viprégß	TRUE	TRUE
-d	idr	en	didrenik	didrenik	didren	TRUE	TRUE
-d	alh	akl	dalhaklik	dalhaklik	dalhakl	TRUE	TRUE
-h	ém	epß	hémepßik	hémepszik	hémepß	TRUE	TRUE
-¥	ifj	áß	¥ifjáßik	nyifjászik	¥ifjáß	TRUE	TRUE
-†	as	asl	†asaslik	tyasaslik	†asasl	TRUE	TRUE
-Ω	ack	az	Ωackazik	zsackazik	Ωackaz	TRUE	TRUE
-bl	í©	ekß	blí©ekßik	blígyekszik	blí©ekß	TRUE	TRUE
-pl	ut	o¥l	pluto¥lik	plutonylik	pluto¥l	TRUE	TRUE
-†	uml	onl	†umlonlik	tyumlonlik	†umlonl	TRUE	TRUE
-d	elh	ejl	delhejlik	delhejlik	delhejl	TRUE	TRUE
-ßt	ac	akz	ßtacakzik	sztacakzik	ßtacakz	TRUE	TRUE
-d	ár	áß	dáráßik	dárászik	dáráß	TRUE	TRUE
-br	ik	ajl	brikajlik	brikajlik	brikajl	TRUE	TRUE
-NA	urn	onl	urnonlik	urnonlik	urnonl	TRUE	TRUE
-sp	ifj	éß	spifjéßik	spifjészik	spifjéß	TRUE	TRUE
-f	a¥	ajl	fa¥ajlik	fanyajlik	fa¥ajl	TRUE	TRUE
-j	ór	osl	jóroslik	jóroslik	jórosl	TRUE	TRUE
-©	átl	asl	©átlaslik	gyátlaslik	©átlasl	TRUE	TRUE
-†	á¬	arz	†á¬arzik	tyályarzik	†á¬arz	TRUE	TRUE
-n	őr	őd	nőrődik	nőrődik	nőrőd	TRUE	TRUE
-h	ér	ejl	hérejlik	hérejlik	hérejl	TRUE	TRUE
-j	urh	úd	jurhúdik	jurhúdik	jurhúd	TRUE	TRUE
-g	e†h	eng	ge†hengik	getyhengik	ge†heng	TRUE	TRUE
-b	ikr	en	bikrenik	bikrenik	bikren	TRUE	TRUE
-b	és	erß	béserßik	béserszik	béserß	TRUE	TRUE
-d	áts	arz	dátsarzik	dátsarzik	dátsarz	TRUE	TRUE
-sk	ár	ánz	skáránzik	skáránzik	skáránz	TRUE	TRUE
-NA	é¥k	étl	é¥kétlik	énykétlik	é¥kétl	TRUE	TRUE
-NA	ajt	ak	ajtakik	ajtakik	ajtak	TRUE	TRUE
-s	am	á¬l	samá¬lik	samálylik	samá¬l	TRUE	TRUE
-f	is	egz	fisegzik	fisegzik	fisegz	TRUE	TRUE
-l	irt	agß	lirtagßik	lirtagszik	lirtagß	TRUE	TRUE
-ß	ikr	agß	ßikragßik	szikragszik	ßikragß	TRUE	TRUE
-sk	orn	uz	skornuzik	skornuzik	skornuz	TRUE	TRUE
-sm	av	á¥l	smavá¥lik	smaványlik	smavá¥l	TRUE	TRUE
-bl	ás	á¥z	blásá¥zik	blásányzik	blásá¥z	TRUE	TRUE
-bl	elh	ed	blelhedik	blelhedik	blelhed	TRUE	TRUE
-Ω	ig	á¥l	Ωigá¥lik	zsigánylik	Ωigá¥l	TRUE	TRUE
-sp	epr	ek	speprekik	speprekik	speprek	TRUE	TRUE
-c	énh	ékz	cénhékzik	cénhékzik	cénhékz	TRUE	TRUE
-tr	öz	őrz	trözőrzik	trözőrzik	trözőrz	TRUE	TRUE
-sn	ás	az	snásazik	snásazik	snásaz	TRUE	TRUE
-s	ant	aml	santamlik	santamlik	santaml	TRUE	TRUE
-sk	an	arz	skanarzik	skanarzik	skanarz	TRUE	TRUE
-j	ém	ek	jémekik	jémekik	jémek	TRUE	TRUE
-©	ih	edz	©ihedzik	gyihedzik	©ihedz	TRUE	TRUE
-¥	űr	örl	¥űrörlik	nyűrörlik	¥űrörl	TRUE	TRUE
-j	urh	orz	jurhorzik	jurhorzik	jurhorz	TRUE	TRUE
-d	ilm	én	dilménik	dilménik	dilmén	TRUE	TRUE
-h	eΩg	éß	heΩgéßik	hezsgészik	heΩgéß	TRUE	TRUE
-t	akl	áz	taklázik	taklázik	takláz	TRUE	TRUE
-m	étk	epß	métkepßik	métkepszik	métkepß	TRUE	TRUE
-t	iç	ek	tiçekik	ticsekik	tiçek	TRUE	TRUE
-ß	ag	á¬l	ßagá¬lik	szagálylik	ßagá¬l	TRUE	TRUE
-l	ar	ak	larakik	larakik	larak	TRUE	TRUE
-NA	elh	érß	elhérßik	elhérszik	elhérß	TRUE	TRUE
-f	uks	osl	fuksoslik	fuksoslik	fuksosl	TRUE	TRUE
-c	ad	iz	cadizik	cadizik	cadiz	TRUE	TRUE
-ç	ond	űdz	çondűdzik	csondűdzik	çondűdz	TRUE	TRUE
-n	ír	egz	níregzik	níregzik	níregz	TRUE	TRUE
-k	űn	os	kűnosik	kűnosik	kűnos	TRUE	TRUE
-t	int	akß	tintakßik	tintakszik	tintakß	TRUE	TRUE
-sn	ár	at	snáratik	snáratik	snárat	TRUE	TRUE
-c	orn	úd	cornúdik	cornúdik	cornúd	TRUE	TRUE
-c	érz	erß	cérzerßik	cérzerszik	cérzerß	TRUE	TRUE
-ç	í¥l	ágl	çí¥láglik	csínyláglik	çí¥lágl	TRUE	TRUE
-z	ámp	ánz	zámpánzik	zámpánzik	zámpánz	TRUE	TRUE
-©	ac	agß	©acagßik	gyacagszik	©acagß	TRUE	TRUE
-†	űn	öd	†űnödik	tyűnödik	†űnöd	TRUE	TRUE
-b	int	á¥z	bintá¥zik	bintányzik	bintá¥z	TRUE	TRUE
-j	ikr	ánz	jikránzik	jikránzik	jikránz	TRUE	TRUE
-bl	eh	ekß	blehekßik	blehekszik	blehekß	TRUE	TRUE
-t	alk	apß	talkapßik	talkapszik	talkapß	TRUE	TRUE
-bl	ajt	ád	blajtádik	blajtádik	blajtád	TRUE	TRUE
-br	ukl	oz	bruklozik	bruklozik	brukloz	TRUE	TRUE
-t	ik	at	tikatik	tikatik	tikat	TRUE	TRUE
-v	eml	en	vemlenik	vemlenik	vemlen	TRUE	TRUE
-t	e†	egl	te†eglik	tetyeglik	te†egl	TRUE	TRUE
-h	üt	üß	hütüßik	hütüszik	hütüß	TRUE	TRUE
-k	ejl	iz	kejlizik	kejlizik	kejliz	TRUE	TRUE
-p	ap	aml	papamlik	papamlik	papaml	TRUE	TRUE
-j	alt	áΩl	jaltáΩlik	jaltázslik	jaltáΩl	TRUE	TRUE
-z	iml	ajl	zimlajlik	zimlajlik	zimlajl	TRUE	TRUE
-k	ét	égß	kétégßik	kétégszik	kétégß	TRUE	TRUE
-sn	ezd	en	snezdenik	snezdenik	snezden	TRUE	TRUE
-©	ifj	egß	©ifjegßik	gyifjegszik	©ifjegß	TRUE	TRUE
-ßt	olf	úd	ßtolfúdik	sztolfúdik	ßtolfúd	TRUE	TRUE
-sn	én	ed	snénedik	snénedik	snéned	TRUE	TRUE
-r	of	onl	rofonlik	rofonlik	rofonl	TRUE	TRUE
-ßt	oc	űz	ßtocűzik	sztocűzik	ßtocűz	TRUE	TRUE
-h	a†	akß	ha†akßik	hatyakszik	ha†akß	TRUE	TRUE
-NA	úk	orz	úkorzik	úkorzik	úkorz	TRUE	TRUE
-ß	ámp	árz	ßámpárzik	számpárzik	ßámpárz	TRUE	TRUE
-sm	ón	o¥l	smóno¥lik	smónonylik	smóno¥l	TRUE	TRUE
-tr	u©	onl	tru©onlik	trugyonlik	tru©onl	TRUE	TRUE
-©	ótl	ódz	©ótlódzik	gyótlódzik	©ótlódz	TRUE	TRUE
-Ω	ant	az	Ωantazik	zsantazik	Ωantaz	TRUE	TRUE
-NA	at	ágl	atáglik	atáglik	atágl	TRUE	TRUE
-fl	av	apß	flavapßik	flavapszik	flavapß	TRUE	TRUE
-p	ukd	uz	pukduzik	pukduzik	pukduz	TRUE	TRUE
-ß	ud	űz	ßudűzik	szudűzik	ßudűz	TRUE	TRUE
-s	üh	üd	sühüdik	sühüdik	sühüd	TRUE	TRUE
-g	ing	epß	gingepßik	gingepszik	gingepß	TRUE	TRUE
-sk	ir	éß	skiréßik	skirészik	skiréß	TRUE	TRUE
-d	am	ágz	damágzik	damágzik	damágz	TRUE	TRUE
-sn	elç	éz	snelçézik	snelcsézik	snelçéz	TRUE	TRUE
-g	őg	őrz	gőgőrzik	gőgőrzik	gőgőrz	TRUE	TRUE
-p	ark	agß	parkagßik	parkagszik	parkagß	TRUE	TRUE
-fl	ír	esl	flíreslik	flíreslik	flíresl	TRUE	TRUE
-pl	er	egl	plereglik	plereglik	pleregl	TRUE	TRUE
-z	ajt	áz	zajtázik	zajtázik	zajtáz	TRUE	TRUE
-j	emp	égß	jempégßik	jempégszik	jempégß	TRUE	TRUE
-pr	ón	uz	prónuzik	prónuzik	prónuz	TRUE	TRUE
-k	ig	asl	kigaslik	kigaslik	kigasl	TRUE	TRUE
-tr	on	o¥l	trono¥lik	trononylik	trono¥l	TRUE	TRUE
-Ω	iml	egz	Ωimlegzik	zsimlegzik	Ωimlegz	TRUE	TRUE
-k	ágt	ádz	kágtádzik	kágtádzik	kágtádz	TRUE	TRUE
-¥	emp	ékz	¥empékzik	nyempékzik	¥empékz	TRUE	TRUE
-z	et	érß	zetérßik	zetérszik	zetérß	TRUE	TRUE
-fl	örz	üß	flörzüßik	flörzüszik	flörzüß	TRUE	TRUE
-ç	arj	atl	çarjatlik	csarjatlik	çarjatl	TRUE	TRUE
-sn	ib	á¥l	snibá¥lik	snibánylik	snibá¥l	TRUE	TRUE
-sn	o†	űdz	sno†űdzik	snotyűdzik	sno†űdz	TRUE	TRUE
-j	ágt	á¬l	jágtá¬lik	jágtálylik	jágtá¬l	TRUE	TRUE
-NA	úd	ódz	údódzik	údódzik	údódz	TRUE	TRUE
-©	uml	ud	©umludik	gyumludik	©umlud	TRUE	TRUE
-NA	irk	en	irkenik	irkenik	irken	TRUE	TRUE
-l	ütk	űdz	lütkűdzik	lütkűdzik	lütkűdz	TRUE	TRUE
-bl	ik	eng	blikengik	blikengik	blikeng	TRUE	TRUE
-ç	ult	úd	çultúdik	csultúdik	çultúd	TRUE	TRUE
-ç	ih	akß	çihakßik	csihakszik	çihakß	TRUE	TRUE
-pl	as	akß	plasakßik	plasakszik	plasakß	TRUE	TRUE
-m	ar	árz	marárzik	marárzik	marárz	TRUE	TRUE
-pr	ojt	uz	projtuzik	projtuzik	projtuz	TRUE	TRUE
-pr	év	ekß	prévekßik	prévekszik	prévekß	TRUE	TRUE
-pr	iç	áz	priçázik	pricsázik	priçáz	TRUE	TRUE
-t	ond	űz	tondűzik	tondűzik	tondűz	TRUE	TRUE
-sk	ölt	őz	sköltőzik	sköltőzik	sköltőz	TRUE	TRUE
-f	érz	ek	férzekik	férzekik	férzek	TRUE	TRUE
-j	aj	akz	jajakzik	jajakzik	jajakz	TRUE	TRUE
-s	ors	okl	sorsoklik	sorsoklik	sorsokl	TRUE	TRUE
-Ω	uçk	orz	Ωuçkorzik	zsucskorzik	Ωuçkorz	TRUE	TRUE
-b	í¥l	adz	bí¥ladzik	bínyladzik	bí¥ladz	TRUE	TRUE
-b	ißt	esl	bißteslik	biszteslik	bißtesl	TRUE	TRUE
-h	í¥l	ajl	hí¥lajlik	hínylajlik	hí¥lajl	TRUE	TRUE
-†	ért	égß	†értégßik	tyértégszik	†értégß	TRUE	TRUE
-k	ing	eml	kingemlik	kingemlik	kingeml	TRUE	TRUE
-p	ag	atl	pagatlik	pagatlik	pagatl	TRUE	TRUE
-ç	e¥	iz	çe¥izik	csenyizik	çe¥iz	TRUE	TRUE
-c	ódl	úd	códlúdik	códlúdik	códlúd	TRUE	TRUE
-g	ind	egß	gindegßik	gindegszik	gindegß	TRUE	TRUE
-f	űr	óz	fűrózik	fűrózik	fűróz	TRUE	TRUE
-sm	e©	éz	sme©ézik	smegyézik	sme©éz	TRUE	TRUE
-h	átl	ajl	hátlajlik	hátlajlik	hátlajl	TRUE	TRUE
-f	orj	ód	forjódik	forjódik	forjód	TRUE	TRUE
-z	on	úz	zonúzik	zonúzik	zonúz	TRUE	TRUE
-sk	aj	ánz	skajánzik	skajánzik	skajánz	TRUE	TRUE
+onset	v1c1c2	v2c3c4	tr	word	target	keep_enough_distance	keep_no_overlap	keep_self_diff
+br	üf	üß	brüfüßik	brüfüszik	brüfüß	TRUE	TRUE	TRUE
+s	iml	akß	simlakßik	simlakszik	simlakß	TRUE	TRUE	TRUE
+k	a©l	agl	ka©laglik	kagylaglik	ka©lagl	TRUE	TRUE	FALSE
+t	ig	ekß	tigekßik	tigekszik	tigekß	TRUE	TRUE	TRUE
+k	úv	űdz	kúvűdzik	kúvűdzik	kúvűdz	TRUE	TRUE	TRUE
+r	átß	asl	rátßaslik	rátszaslik	rátßasl	TRUE	TRUE	FALSE
+r	a†	iz	ra†izik	ratyizik	ra†iz	FALSE	TRUE	TRUE
+l	esl	érß	leslérßik	leslérszik	leslérß	TRUE	TRUE	FALSE
+n	ir	edz	niredzik	niredzik	niredz	TRUE	FALSE	TRUE
+¥	í¥l	atl	¥í¥latlik	nyínylatlik	¥í¥latl	TRUE	TRUE	TRUE
+dΩ	úv	úz	dΩúvúzik	dzsúvúzik	dΩúvúz	TRUE	TRUE	TRUE
+v	o†	ud	vo†udik	votyudik	vo†ud	TRUE	TRUE	TRUE
+n	e©	érl	ne©érlik	negyérlik	ne©érl	TRUE	TRUE	TRUE
+n	ágt	ád	nágtádik	nágtádik	nágtád	TRUE	TRUE	FALSE
+l	ár†	adz	lár†adzik	lártyadzik	lár†adz	TRUE	TRUE	TRUE
+p	el	eml	pelemlik	pelemlik	peleml	TRUE	TRUE	TRUE
+¥	údb	óz	¥údbózik	nyúdbózik	¥údbóz	TRUE	TRUE	TRUE
+NA	oç	ódz	oçódzik	ocsódzik	oçódz	TRUE	TRUE	TRUE
+bl	ug	ód	blugódik	blugódik	blugód	TRUE	TRUE	TRUE
+fl	us	ód	flusódik	flusódik	flusód	TRUE	TRUE	TRUE
+k	orΩ	ud	korΩudik	korzsudik	korΩud	TRUE	TRUE	TRUE
+n	álm	ajl	nálmajlik	nálmajlik	nálmajl	TRUE	TRUE	TRUE
+fl	ad	áz	fladázik	fladázik	fladáz	TRUE	TRUE	TRUE
+s	ír	edz	síredzik	síredzik	síredz	TRUE	FALSE	TRUE
+fl	í©	az	flí©azik	flígyazik	flí©az	TRUE	TRUE	TRUE
+c	eßk	égß	ceßkégßik	ceszkégszik	ceßkégß	TRUE	TRUE	TRUE
+pl	ér	esl	pléreslik	pléreslik	pléresl	TRUE	TRUE	TRUE
+m	aç	at	maçatik	macsatik	maçat	TRUE	FALSE	FALSE
+c	o©	oz	co©ozik	cogyozik	co©oz	TRUE	TRUE	TRUE
+sm	ack	at	smackatik	smackatik	smackat	TRUE	TRUE	TRUE
+dΩ	ir	arz	dΩirarzik	dzsirarzik	dΩirarz	TRUE	TRUE	FALSE
+p	űk	üd	pűküdik	pűküdik	pűküd	TRUE	TRUE	FALSE
+b	ißt	adz	bißtadzik	bisztadzik	bißtadz	TRUE	TRUE	TRUE
+n	ágt	asl	nágtaslik	nágtaslik	nágtasl	TRUE	TRUE	TRUE
+h	ond	ud	hondudik	hondudik	hondud	TRUE	TRUE	TRUE
+©	aßt	ajl	©aßtajlik	gyasztajlik	©aßtajl	TRUE	TRUE	TRUE
+†	irk	áz	†irkázik	tyirkázik	†irkáz	TRUE	TRUE	TRUE
+tr	óg	oz	trógozik	trógozik	trógoz	TRUE	TRUE	TRUE
+Ω	ár†	árz	Ωár†árzik	zsártyárzik	Ωár†árz	TRUE	TRUE	TRUE
+k	am	arz	kamarzik	kamarzik	kamarz	TRUE	TRUE	FALSE
+fl	iΩ	áΩl	fliΩáΩlik	flizsázslik	fliΩáΩl	TRUE	TRUE	TRUE
+Ω	üh	őz	Ωühőzik	zsühőzik	Ωühőz	TRUE	TRUE	TRUE
+¥	u©	os	¥u©osik	nyugyosik	¥u©os	TRUE	TRUE	TRUE
+p	abl	az	pablazik	pablazik	pablaz	TRUE	TRUE	TRUE
+h	árh	áz	hárházik	hárházik	hárház	FALSE	TRUE	TRUE
+Ω	etk	et	Ωetketik	zsetketik	Ωetket	TRUE	TRUE	TRUE
+ç	ejt	en	çejtenik	csejtenik	çejten	TRUE	TRUE	TRUE
+k	idr	égß	kidrégßik	kidrégszik	kidrégß	TRUE	TRUE	TRUE
+©	ü©k	őz	©ü©kőzik	gyügykőzik	©ü©kőz	FALSE	TRUE	TRUE
+sk	ir	éz	skirézik	skirézik	skiréz	TRUE	TRUE	TRUE
+NA	erg	éz	ergézik	ergézik	ergéz	TRUE	TRUE	FALSE
+bl	or†	ud	blor†udik	blortyudik	blor†ud	TRUE	TRUE	TRUE
+¥	alh	atl	¥alhatlik	nyalhatlik	¥alhatl	TRUE	TRUE	FALSE
+l	epr	epß	leprepßik	leprepszik	leprepß	TRUE	TRUE	FALSE
+t	alm	áß	talmáßik	talmászik	talmáß	TRUE	TRUE	TRUE
+g	u©	úz	gu©úzik	gugyúzik	gu©úz	TRUE	TRUE	TRUE
+Ω	urh	ódz	Ωurhódzik	zsurhódzik	Ωurhódz	TRUE	TRUE	TRUE
+t	id	agl	tidaglik	tidaglik	tidagl	TRUE	TRUE	FALSE
+v	ing	akß	vingakßik	vingakszik	vingakß	TRUE	TRUE	TRUE
+h	ét	eml	hétemlik	hétemlik	héteml	TRUE	TRUE	TRUE
+z	újh	osl	zújhoslik	zújhoslik	zújhosl	TRUE	TRUE	TRUE
+Ω	erm	ékz	Ωermékzik	zsermékzik	Ωermékz	TRUE	TRUE	TRUE
+NA	oz	úd	ozúdik	ozúdik	ozúd	FALSE	TRUE	TRUE
+br	űn	osl	brűnoslik	brűnoslik	brűnosl	TRUE	TRUE	TRUE
+n	ókl	onl	nóklonlik	nóklonlik	nóklonl	TRUE	TRUE	FALSE
+n	is	ek	nisekik	nisekik	nisek	TRUE	TRUE	FALSE
+pl	id	égß	plidégßik	plidégszik	plidégß	TRUE	TRUE	TRUE
+j	irt	aml	jirtamlik	jirtamlik	jirtaml	TRUE	TRUE	TRUE
+b	ism	asl	bismaslik	bismaslik	bismasl	TRUE	TRUE	TRUE
+pr	iΩ	edz	priΩedzik	prizsedzik	priΩedz	TRUE	TRUE	TRUE
+sk	iç	agl	skiçaglik	skicsaglik	skiçagl	TRUE	TRUE	TRUE
+s	ép	ékß	sépékßik	sépékszik	sépékß	TRUE	TRUE	TRUE
+s	árk	á¬l	sárká¬lik	sárkálylik	sárká¬l	TRUE	TRUE	TRUE
+NA	ig	akß	igakßik	igakszik	igakß	TRUE	TRUE	TRUE
+l	ámp	ánz	lámpánzik	lámpánzik	lámpánz	TRUE	TRUE	TRUE
+ß	iΩ	ajl	ßiΩajlik	szizsajlik	ßiΩajl	TRUE	TRUE	TRUE
+n	ár	ágl	náráglik	náráglik	nárágl	TRUE	TRUE	FALSE
+ß	iv	et	ßivetik	szivetik	ßivet	TRUE	TRUE	TRUE
+t	eßk	epß	teßkepßik	teszkepszik	teßkepß	TRUE	TRUE	TRUE
+d	ind	ak	dindakik	dindakik	dindak	TRUE	TRUE	TRUE
+j	ép	ekß	jépekßik	jépekszik	jépekß	TRUE	TRUE	TRUE
+pr	ib	áΩl	pribáΩlik	pribázslik	pribáΩl	TRUE	TRUE	TRUE
+Ω	ifj	edz	Ωifjedzik	zsifjedzik	Ωifjedz	TRUE	TRUE	TRUE
+d	űgl	o¥l	dűglo¥lik	dűglonylik	dűglo¥l	TRUE	TRUE	TRUE
+fl	ütk	őz	flütkőzik	flütkőzik	flütkőz	TRUE	TRUE	TRUE
+j	űnh	onl	jűnhonlik	jűnhonlik	jűnhonl	TRUE	TRUE	FALSE
+m	á¥	adz	má¥adzik	mányadzik	má¥adz	TRUE	TRUE	TRUE
+pr	iç	árz	priçárzik	pricsárzik	priçárz	TRUE	TRUE	TRUE
+Ω	ojt	od	Ωojtodik	zsojtodik	Ωojtod	TRUE	TRUE	TRUE
+d	éh	ékz	déhékzik	déhékzik	déhékz	TRUE	TRUE	TRUE
+t	év	egß	tévegßik	tévegszik	tévegß	TRUE	TRUE	TRUE
+dΩ	it	ajl	dΩitajlik	dzsitajlik	dΩitajl	TRUE	TRUE	TRUE
+m	ámp	atl	mámpatlik	mámpatlik	mámpatl	TRUE	TRUE	TRUE
+s	ó¬	óz	só¬ózik	sólyózik	só¬óz	TRUE	TRUE	FALSE
+m	elç	én	melçénik	melcsénik	melçén	TRUE	TRUE	TRUE
+n	ét	edz	nétedzik	nétedzik	nétedz	TRUE	TRUE	TRUE
+sn	oç	űdz	snoçűdzik	snocsűdzik	snoçűdz	TRUE	TRUE	TRUE
+s	ajt	ád	sajtádik	sajtádik	sajtád	TRUE	TRUE	TRUE
+dΩ	üf	őd	dΩüfődik	dzsüfődik	dΩüfőd	TRUE	TRUE	TRUE
+pl	id	egz	plidegzik	plidegzik	plidegz	TRUE	TRUE	TRUE
+¥	ált	arz	¥áltarzik	nyáltarzik	¥áltarz	TRUE	TRUE	TRUE
+†	a©	amz	†a©amzik	tyagyamzik	†a©amz	TRUE	TRUE	TRUE
+Ω	ínl	at	Ωínlatik	zsínlatik	Ωínlat	TRUE	TRUE	TRUE
+k	iΩ	az	kiΩazik	kizsazik	kiΩaz	TRUE	FALSE	TRUE
+d	ánk	á¬l	dánká¬lik	dánkálylik	dánká¬l	TRUE	TRUE	FALSE
+br	údb	óz	brúdbózik	brúdbózik	brúdbóz	TRUE	TRUE	TRUE
+Ω	é¥k	én	Ωé¥kénik	zsénykénik	Ωé¥kén	TRUE	TRUE	TRUE
+b	idr	ád	bidrádik	bidrádik	bidrád	TRUE	TRUE	TRUE
+sn	ép	éz	snépézik	snépézik	snépéz	TRUE	TRUE	TRUE
+l	öz	öd	lözödik	lözödik	lözöd	TRUE	TRUE	TRUE
+tr	űk	os	trűkosik	trűkosik	trűkos	TRUE	TRUE	TRUE
+©	űn	űdz	©űnűdzik	gyűnűdzik	©űnűdz	FALSE	TRUE	TRUE
+ç	ih	ád	çihádik	csihádik	çihád	TRUE	TRUE	TRUE
+b	űv	őrz	bűvőrzik	bűvőrzik	bűvőrz	TRUE	TRUE	TRUE
+l	eml	én	lemlénik	lemlénik	lemlén	TRUE	FALSE	TRUE
+c	í¥l	érß	cí¥lérßik	cínylérszik	cí¥lérß	TRUE	TRUE	TRUE
+¥	e†	epß	¥e†epßik	nyetyepszik	¥e†epß	TRUE	TRUE	TRUE
+ß	e†	edz	ße†edzik	szetyedzik	ße†edz	TRUE	TRUE	TRUE
+m	el	edz	meledzik	meledzik	meledz	FALSE	TRUE	FALSE
+ß	a©l	at	ßa©latik	szagylatik	ßa©lat	TRUE	TRUE	TRUE
+NA	e¥	ejl	e¥ejlik	enyejlik	e¥ejl	TRUE	TRUE	TRUE
+s	al	árz	salárzik	salárzik	salárz	TRUE	TRUE	TRUE
+d	öz	ődz	döződzik	döződzik	döződz	TRUE	TRUE	TRUE
+sn	emp	ek	snempekik	snempekik	snempek	TRUE	TRUE	TRUE
+ç	őrk	örl	çőrkörlik	csőrkörlik	çőrkörl	TRUE	TRUE	TRUE
+Ω	ált	akl	Ωáltaklik	zsáltaklik	Ωáltakl	TRUE	TRUE	TRUE
+sn	öm	önl	snömönlik	snömönlik	snömönl	TRUE	TRUE	TRUE
+c	int	ádz	cintádzik	cintádzik	cintádz	TRUE	FALSE	TRUE
+tr	í©	ekß	trí©ekßik	trígyekszik	trí©ekß	TRUE	TRUE	FALSE
+pl	ét	et	plétetik	plétetik	plétet	TRUE	FALSE	TRUE
+b	ot	okl	botoklik	botoklik	botokl	TRUE	TRUE	TRUE
+pl	ek	epß	plekepßik	plekepszik	plekepß	TRUE	TRUE	TRUE
+t	org	oz	torgozik	torgozik	torgoz	TRUE	TRUE	TRUE
+sp	en	et	spenetik	spenetik	spenet	TRUE	TRUE	TRUE
+k	ágt	áß	kágtáßik	kágtászik	kágtáß	TRUE	TRUE	TRUE
+br	ú¬z	úd	brú¬zúdik	brúlyzúdik	brú¬zúd	TRUE	TRUE	TRUE
+sk	orl	od	skorlodik	skorlodik	skorlod	TRUE	TRUE	TRUE
+h	ih	ékz	hihékzik	hihékzik	hihékz	TRUE	TRUE	TRUE
+pr	eß	en	preßenik	preszenik	preßen	TRUE	TRUE	TRUE
+sk	arj	ád	skarjádik	skarjádik	skarjád	TRUE	TRUE	TRUE
+p	ótl	orz	pótlorzik	pótlorzik	pótlorz	TRUE	TRUE	TRUE
+d	aj	iz	dajizik	dajizik	dajiz	TRUE	TRUE	TRUE
+tr	üh	örl	trühörlik	trühörlik	trühörl	TRUE	TRUE	TRUE
+d	olg	úz	dolgúzik	dolgúzik	dolgúz	FALSE	TRUE	TRUE
+sp	az	ád	spazádik	spazádik	spazád	TRUE	TRUE	TRUE
+ßt	és	éz	ßtésézik	sztésézik	ßtéséz	TRUE	TRUE	TRUE
+pr	id	epß	pridepßik	pridepszik	pridepß	TRUE	TRUE	TRUE
+v	ét	é¥l	vété¥lik	véténylik	vété¥l	TRUE	TRUE	FALSE
+m	eh	edz	mehedzik	mehedzik	mehedz	TRUE	TRUE	FALSE
+z	i¥	az	zi¥azik	zinyazik	zi¥az	TRUE	TRUE	TRUE
+dΩ	ut	oz	dΩutozik	dzsutozik	dΩutoz	TRUE	TRUE	FALSE
+v	al	amz	valamzik	valamzik	valamz	FALSE	TRUE	FALSE
+h	elp	én	helpénik	helpénik	helpén	TRUE	TRUE	TRUE
+Ω	id	á¥l	Ωidá¥lik	zsidánylik	Ωidá¥l	TRUE	TRUE	TRUE
+br	égz	iz	brégzizik	brégzizik	brégziz	TRUE	TRUE	TRUE
+b	ug	od	bugodik	bugodik	bugod	FALSE	TRUE	TRUE
+©	ajç	ádz	©ajçádzik	gyajcsádzik	©ajçádz	TRUE	TRUE	TRUE
+l	űk	od	lűkodik	lűkodik	lűkod	TRUE	TRUE	TRUE
+l	inc	ékß	lincékßik	lincékszik	lincékß	TRUE	TRUE	TRUE
+ç	uld	ud	çuldudik	csuldudik	çuldud	TRUE	TRUE	TRUE
+dΩ	ök	ődz	dΩökődzik	dzsökődzik	dΩökődz	TRUE	FALSE	TRUE
+Ω	id	egß	Ωidegßik	zsidegszik	Ωidegß	FALSE	TRUE	TRUE
+z	árf	az	zárfazik	zárfazik	zárfaz	TRUE	FALSE	TRUE
+r	ip	akß	ripakßik	ripakszik	ripakß	TRUE	TRUE	TRUE
+f	irt	áΩl	firtáΩlik	firtázslik	firtáΩl	TRUE	TRUE	TRUE
+†	alt	az	†altazik	tyaltazik	†altaz	TRUE	TRUE	TRUE
+n	ig	en	nigenik	nigenik	nigen	TRUE	FALSE	TRUE
+s	art	aml	sartamlik	sartamlik	sartaml	TRUE	TRUE	TRUE
+ß	í©	éß	ßí©éßik	szígyészik	ßí©éß	TRUE	FALSE	TRUE
+f	i¥	étl	fi¥étlik	finyétlik	fi¥étl	TRUE	TRUE	TRUE
+d	ipr	é¥l	dipré¥lik	diprénylik	dipré¥l	TRUE	TRUE	TRUE
+p	ezd	étl	pezdétlik	pezdétlik	pezdétl	TRUE	TRUE	TRUE
+m	apc	arz	mapcarzik	mapcarzik	mapcarz	TRUE	TRUE	TRUE
+NA	ajh	ád	ajhádik	ajhádik	ajhád	TRUE	TRUE	TRUE
+NA	áßt	iz	áßtizik	ásztizik	áßtiz	TRUE	TRUE	TRUE
+p	újh	úd	pújhúdik	pújhúdik	pújhúd	TRUE	TRUE	TRUE
+NA	erz	ékz	erzékzik	erzékzik	erzékz	TRUE	TRUE	TRUE
+sm	áts	iz	smátsizik	smátsizik	smátsiz	TRUE	TRUE	TRUE
+n	int	áß	nintáßik	nintászik	nintáß	TRUE	FALSE	TRUE
+c	ujd	onl	cujdonlik	cujdonlik	cujdonl	TRUE	TRUE	TRUE
+n	a©	aml	na©amlik	nagyamlik	na©aml	TRUE	TRUE	TRUE
+d	ág	á¬l	dágá¬lik	dágálylik	dágá¬l	TRUE	TRUE	TRUE
+¥	ik	ádz	¥ikádzik	nyikádzik	¥ikádz	TRUE	TRUE	TRUE
+c	ezd	epß	cezdepßik	cezdepszik	cezdepß	TRUE	TRUE	TRUE
+dΩ	at	akß	dΩatakßik	dzsatakszik	dΩatakß	TRUE	TRUE	TRUE
+NA	ajh	áΩl	ajháΩlik	ajházslik	ajháΩl	TRUE	TRUE	TRUE
+d	ü©	önl	dü©önlik	dügyönlik	dü©önl	TRUE	TRUE	FALSE
+l	ißt	ékz	lißtékzik	lisztékzik	lißtékz	TRUE	TRUE	TRUE
+k	égz	eng	kégzengik	kégzengik	kégzeng	TRUE	TRUE	TRUE
+dΩ	űv	okl	dΩűvoklik	dzsűvoklik	dΩűvokl	TRUE	TRUE	TRUE
+ßt	ad	ajl	ßtadajlik	sztadajlik	ßtadajl	TRUE	TRUE	TRUE
+m	érz	ez	mérzezik	mérzezik	mérzez	TRUE	FALSE	TRUE
+g	ám	ajl	gámajlik	gámajlik	gámajl	TRUE	TRUE	TRUE
+s	ek	én	sekénik	sekénik	sekén	TRUE	FALSE	TRUE
+br	ig	á¬l	brigá¬lik	brigálylik	brigá¬l	TRUE	TRUE	TRUE
+br	ar	á¥z	brará¥zik	brarányzik	brará¥z	TRUE	TRUE	TRUE
+NA	égz	egl	égzeglik	égzeglik	égzegl	TRUE	TRUE	TRUE
+sm	űr	ökl	sműröklik	sműröklik	sműrökl	TRUE	TRUE	TRUE
+bl	ek	esl	blekeslik	blekeslik	blekesl	TRUE	TRUE	TRUE
+b	olk	orz	bolkorzik	bolkorzik	bolkorz	TRUE	TRUE	TRUE
+ç	ajç	ánz	çajçánzik	csajcsánzik	çajçánz	TRUE	TRUE	TRUE
+sm	í©	árz	smí©árzik	smígyárzik	smí©árz	TRUE	TRUE	TRUE
+t	aj	adz	tajadzik	tajadzik	tajadz	TRUE	FALSE	TRUE
+r	ír	apß	rírapßik	rírapszik	rírapß	TRUE	TRUE	TRUE
+sk	ev	ez	skevezik	skevezik	skevez	TRUE	TRUE	TRUE
+ßt	emp	ez	ßtempezik	sztempezik	ßtempez	TRUE	TRUE	TRUE
+©	alk	asl	©alkaslik	gyalkaslik	©alkasl	TRUE	TRUE	TRUE
+sm	aç	iz	smaçizik	smacsizik	smaçiz	FALSE	TRUE	TRUE
+f	ond	űz	fondűzik	fondűzik	fondűz	TRUE	FALSE	FALSE
+n	ug	úd	nugúdik	nugúdik	nugúd	TRUE	TRUE	TRUE
+ßt	av	akl	ßtavaklik	sztavaklik	ßtavakl	TRUE	TRUE	TRUE
+sp	ond	uz	sponduzik	sponduzik	sponduz	TRUE	TRUE	TRUE
+m	ért	ekß	mértekßik	mértekszik	mértekß	TRUE	TRUE	TRUE
+r	ezd	esl	rezdeslik	rezdeslik	rezdesl	TRUE	TRUE	TRUE
+tr	e†	egß	tre†egßik	tretyegszik	tre†egß	TRUE	TRUE	TRUE
+b	irk	ajl	birkajlik	birkajlik	birkajl	TRUE	TRUE	TRUE
+j	éh	étl	jéhétlik	jéhétlik	jéhétl	TRUE	TRUE	TRUE
+c	iç	á¬l	ciçá¬lik	cicsálylik	ciçá¬l	TRUE	TRUE	TRUE
+j	eg	eml	jegemlik	jegemlik	jegeml	TRUE	TRUE	TRUE
+d	űv	ud	dűvudik	dűvudik	dűvud	TRUE	TRUE	TRUE
+f	átl	adz	fátladzik	fátladzik	fátladz	TRUE	TRUE	TRUE
+ßt	ürk	üd	ßtürküdik	sztürküdik	ßtürküd	TRUE	TRUE	TRUE
+f	and	atl	fandatlik	fandatlik	fandatl	TRUE	TRUE	TRUE
+sn	ódl	úd	snódlúdik	snódlúdik	snódlúd	TRUE	TRUE	TRUE
+fl	a†	áΩl	fla†áΩlik	flatyázslik	fla†áΩl	TRUE	TRUE	TRUE
+fl	év	en	flévenik	flévenik	fléven	TRUE	TRUE	TRUE
+NA	e†	ed	e†edik	etyedik	e†ed	FALSE	TRUE	TRUE
+z	odr	od	zodrodik	zodrodik	zodrod	TRUE	TRUE	TRUE
+h	öng	őrz	höngőrzik	höngőrzik	höngőrz	TRUE	TRUE	TRUE
+j	á¬	ak	já¬akik	jályakik	já¬ak	TRUE	TRUE	TRUE
+pl	ih	apß	plihapßik	plihapszik	plihapß	TRUE	TRUE	TRUE
+j	énh	et	jénhetik	jénhetik	jénhet	TRUE	TRUE	TRUE
+p	ald	arz	paldarzik	paldarzik	paldarz	TRUE	TRUE	TRUE
+s	it	á¥l	sitá¥lik	sitánylik	sitá¥l	TRUE	TRUE	TRUE
+v	a¥	amz	va¥amzik	vanyamzik	va¥amz	TRUE	TRUE	FALSE
+¥	alk	áΩl	¥alkáΩlik	nyalkázslik	¥alkáΩl	TRUE	TRUE	TRUE
+d	iv	arz	divarzik	divarzik	divarz	FALSE	TRUE	TRUE
+ç	ínl	ed	çínledik	csínledik	çínled	TRUE	FALSE	TRUE
+j	as	á¥z	jasá¥zik	jasányzik	jasá¥z	TRUE	TRUE	TRUE
+sp	or	ód	sporódik	sporódik	sporód	TRUE	TRUE	TRUE
+ßt	i¥	é¥l	ßti¥é¥lik	sztinyénylik	ßti¥é¥l	TRUE	TRUE	TRUE
+s	i©	edz	si©edzik	sigyedzik	si©edz	TRUE	TRUE	TRUE
+r	ajr	agl	rajraglik	rajraglik	rajragl	TRUE	TRUE	TRUE
+z	uml	os	zumlosik	zumlosik	zumlos	TRUE	TRUE	TRUE
+p	e†	en	pe†enik	petyenik	pe†en	TRUE	TRUE	TRUE
+br	oj	űz	brojűzik	brojűzik	brojűz	TRUE	TRUE	TRUE
+tr	u†	orz	tru†orzik	trutyorzik	tru†orz	TRUE	TRUE	TRUE
+ß	art	ágl	ßartáglik	szartáglik	ßartágl	TRUE	TRUE	TRUE
+m	űr	ódz	műródzik	műródzik	műródz	TRUE	FALSE	TRUE
+†	on	úd	†onúdik	tyonúdik	†onúd	TRUE	TRUE	TRUE
+fl	áts	ád	flátsádik	flátsádik	flátsád	TRUE	TRUE	TRUE
+r	iv	áΩl	riváΩlik	rivázslik	riváΩl	TRUE	TRUE	TRUE
+s	érz	erß	sérzerßik	sérzerszik	sérzerß	TRUE	TRUE	TRUE
+j	öz	őrz	jözőrzik	jözőrzik	jözőrz	TRUE	TRUE	TRUE
+ß	iml	ak	ßimlakik	szimlakik	ßimlak	TRUE	TRUE	TRUE
+dΩ	ü©k	őz	dΩü©kőzik	dzsügykőzik	dΩü©kőz	TRUE	FALSE	TRUE
+ßt	í¥l	at	ßtí¥latik	sztínylatik	ßtí¥lat	TRUE	TRUE	TRUE
+¥	omj	űz	¥omjűzik	nyomjűzik	¥omjűz	TRUE	FALSE	TRUE
+z	o©	orz	zo©orzik	zogyorzik	zo©orz	TRUE	TRUE	TRUE
+s	üf	örl	süförlik	süförlik	süförl	TRUE	TRUE	FALSE
+sk	ib	éß	skibéßik	skibészik	skibéß	TRUE	TRUE	FALSE
+z	akn	apß	zaknapßik	zaknapszik	zaknapß	TRUE	TRUE	TRUE
+n	ir	ágl	niráglik	niráglik	nirágl	TRUE	TRUE	FALSE
+j	öt	önl	jötönlik	jötönlik	jötönl	TRUE	TRUE	TRUE
+dΩ	is	arz	dΩisarzik	dzsisarzik	dΩisarz	TRUE	TRUE	FALSE
+bl	öv	önl	blövönlik	blövönlik	blövönl	TRUE	TRUE	TRUE
+n	ih	az	nihazik	nihazik	nihaz	TRUE	FALSE	TRUE
+g	otr	okl	gotroklik	gotroklik	gotrokl	TRUE	TRUE	TRUE
+m	eßk	éß	meßkéßik	meszkészik	meßkéß	TRUE	TRUE	TRUE
+†	ir	en	†irenik	tyirenik	†iren	TRUE	TRUE	TRUE
+sn	ec	éz	snecézik	snecézik	snecéz	TRUE	TRUE	TRUE
+†	ek	érß	†ekérßik	tyekérszik	†ekérß	TRUE	TRUE	TRUE
+bl	uk	ódz	blukódzik	blukódzik	blukódz	TRUE	TRUE	TRUE
+ß	a¥	asl	ßa¥aslik	szanyaslik	ßa¥asl	TRUE	TRUE	FALSE
+f	arj	á¥z	farjá¥zik	farjányzik	farjá¥z	TRUE	TRUE	TRUE
+c	ö¬k	őd	cö¬kődik	cölykődik	cö¬kőd	TRUE	TRUE	TRUE
+dΩ	at	aml	dΩatamlik	dzsatamlik	dΩataml	TRUE	TRUE	TRUE
+Ω	ü©	önl	Ωü©önlik	zsügyönlik	Ωü©önl	TRUE	TRUE	FALSE
+l	ug	onl	lugonlik	lugonlik	lugonl	TRUE	TRUE	TRUE
+s	id	ékß	sidékßik	sidékszik	sidékß	TRUE	TRUE	FALSE
+©	and	az	©andazik	gyandazik	©andaz	TRUE	TRUE	TRUE
+l	odr	okl	lodroklik	lodroklik	lodrokl	TRUE	TRUE	TRUE
+ß	érk	én	ßérkénik	szérkénik	ßérkén	TRUE	TRUE	TRUE
+k	orn	űz	kornűzik	kornűzik	kornűz	TRUE	FALSE	TRUE
+tr	eng	iz	trengizik	trengizik	trengiz	TRUE	TRUE	TRUE
+n	el	én	nelénik	nelénik	nelén	TRUE	FALSE	FALSE
+d	edz	ekß	dedzekßik	dedzekszik	dedzekß	TRUE	TRUE	TRUE
+tr	oh	úz	trohúzik	trohúzik	trohúz	TRUE	TRUE	TRUE
+†	ism	epß	†ismepßik	tyismepszik	†ismepß	TRUE	TRUE	TRUE
+dΩ	est	én	dΩesténik	dzsesténik	dΩestén	TRUE	FALSE	TRUE
+p	ig	amz	pigamzik	pigamzik	pigamz	TRUE	TRUE	TRUE
+sk	ab	aml	skabamlik	skabamlik	skabaml	TRUE	TRUE	TRUE
+sm	űn	üß	sműnüßik	sműnüszik	sműnüß	TRUE	TRUE	TRUE
+g	őg	őz	gőgőzik	gőgőzik	gőgőz	FALSE	FALSE	TRUE
+g	ag	áΩl	gagáΩlik	gagázslik	gagáΩl	TRUE	TRUE	TRUE
+f	ív	áz	fívázik	fívázik	fíváz	TRUE	TRUE	TRUE
+sk	iΩg	ed	skiΩgedik	skizsgedik	skiΩged	TRUE	TRUE	TRUE
+l	újt	ód	lújtódik	lújtódik	lújtód	TRUE	TRUE	FALSE
+j	omj	osl	jomjoslik	jomjoslik	jomjosl	TRUE	TRUE	TRUE
+v	il	éß	viléßik	vilészik	viléß	TRUE	TRUE	TRUE
+¥	é¥k	égß	¥é¥kégßik	nyénykégszik	¥é¥kégß	TRUE	TRUE	TRUE
+k	emp	égß	kempégßik	kempégszik	kempégß	TRUE	TRUE	FALSE
+sp	ih	es	spihesik	spihesik	spihes	TRUE	TRUE	TRUE
+†	ald	ágl	†aldáglik	tyaldáglik	†aldágl	TRUE	TRUE	TRUE
+Ω	újh	o¥l	Ωújho¥lik	zsújhonylik	Ωújho¥l	TRUE	TRUE	TRUE
+z	en	ez	zenezik	zenezik	zenez	TRUE	FALSE	TRUE
+NA	úv	o¥l	úvo¥lik	úvonylik	úvo¥l	TRUE	TRUE	TRUE
+tr	ét	egß	trétegßik	trétegszik	trétegß	TRUE	TRUE	TRUE
+tr	á¬	ád	trá¬ádik	trályádik	trá¬ád	TRUE	TRUE	TRUE
+pr	ac	á¥z	pracá¥zik	pracányzik	pracá¥z	TRUE	TRUE	TRUE
+f	ót	uz	fótuzik	fótuzik	fótuz	TRUE	TRUE	TRUE
+†	i¥	ek	†i¥ekik	tyinyekik	†i¥ek	TRUE	TRUE	TRUE
+ß	oj	úd	ßojúdik	szojúdik	ßojúd	TRUE	TRUE	TRUE
+f	esl	éß	fesléßik	feslészik	fesléß	TRUE	TRUE	TRUE
+z	eg	egz	zegegzik	zegegzik	zegegz	TRUE	TRUE	TRUE
+d	erz	erß	derzerßik	derzerszik	derzerß	TRUE	TRUE	TRUE
+©	í¥l	ágl	©í¥láglik	gyínyláglik	©í¥lágl	TRUE	TRUE	TRUE
+h	úç	orz	húçorzik	húcsorzik	húçorz	TRUE	TRUE	TRUE
+s	ald	at	saldatik	saldatik	saldat	TRUE	TRUE	TRUE
+p	ár	atl	páratlik	páratlik	páratl	TRUE	TRUE	TRUE
+sn	ór	ód	snóródik	snóródik	snóród	TRUE	TRUE	TRUE
+l	irt	erß	lirterßik	lirterszik	lirterß	TRUE	TRUE	FALSE
+¥	ip	eml	¥ipemlik	nyipemlik	¥ipeml	TRUE	TRUE	TRUE
+v	örl	ődz	vörlődzik	vörlődzik	vörlődz	TRUE	FALSE	FALSE
+g	úv	od	gúvodik	gúvodik	gúvod	TRUE	TRUE	TRUE
+sk	az	apß	skazapßik	skazapszik	skazapß	TRUE	TRUE	TRUE
+†	ir	erß	†irerßik	tyirerszik	†irerß	TRUE	TRUE	TRUE
+m	omb	orz	momborzik	momborzik	momborz	TRUE	TRUE	TRUE
+b	őr	öd	bőrödik	bőrödik	bőröd	TRUE	TRUE	TRUE
+h	esk	egß	heskegßik	heskegszik	heskegß	TRUE	TRUE	TRUE
+m	ámk	á¥l	mámká¥lik	mámkánylik	mámká¥l	TRUE	TRUE	TRUE
+fl	ult	oz	flultozik	flultozik	flultoz	TRUE	TRUE	TRUE
+Ω	ab	ágl	Ωabáglik	zsabáglik	Ωabágl	TRUE	TRUE	FALSE
+c	űt	úz	cűtúzik	cűtúzik	cűtúz	TRUE	TRUE	TRUE
+ß	arj	ajl	ßarjajlik	szarjajlik	ßarjajl	TRUE	TRUE	TRUE
+t	urj	uz	turjuzik	turjuzik	turjuz	TRUE	TRUE	TRUE
+l	úz	osl	lúzoslik	lúzoslik	lúzosl	TRUE	TRUE	TRUE
+j	étk	iz	jétkizik	jétkizik	jétkiz	TRUE	TRUE	TRUE
+†	ók	úd	†ókúdik	tyókúdik	†ókúd	TRUE	TRUE	FALSE
+h	őrl	ösl	hőrlöslik	hőrlöslik	hőrlösl	TRUE	TRUE	TRUE
+s	ol	oz	solozik	solozik	soloz	TRUE	TRUE	TRUE
+c	eng	étl	cengétlik	cengétlik	cengétl	TRUE	TRUE	TRUE
+r	ap	agz	rapagzik	rapagzik	rapagz	TRUE	TRUE	TRUE
+ßt	oh	orz	ßtohorzik	sztohorzik	ßtohorz	TRUE	TRUE	TRUE
+sm	í©	eml	smí©emlik	smígyemlik	smí©eml	TRUE	TRUE	TRUE
+fl	il	ekß	flilekßik	flilekszik	flilekß	TRUE	TRUE	TRUE
+©	öl	öd	©ölödik	gyölödik	©ölöd	TRUE	TRUE	TRUE
+k	u†	ód	ku†ódik	kutyódik	ku†ód	TRUE	TRUE	TRUE
+NA	óg	uz	óguzik	óguzik	óguz	TRUE	TRUE	TRUE
+pl	ám	iz	plámizik	plámizik	plámiz	TRUE	TRUE	FALSE
+ß	ík	edz	ßíkedzik	szíkedzik	ßíkedz	TRUE	FALSE	TRUE
+l	er	epß	lerepßik	lerepszik	lerepß	TRUE	TRUE	FALSE
+ßt	e¥	égß	ßte¥égßik	sztenyégszik	ßte¥égß	TRUE	TRUE	TRUE
+©	áßt	at	©áßtatik	gyásztatik	©áßtat	TRUE	FALSE	TRUE
+sn	at	agß	snatagßik	snatagszik	snatagß	TRUE	TRUE	TRUE
+dΩ	öt	űz	dΩötűzik	dzsötűzik	dΩötűz	TRUE	FALSE	TRUE
+v	odr	ud	vodrudik	vodrudik	vodrud	TRUE	TRUE	TRUE
+g	ag	amz	gagamzik	gagamzik	gagamz	TRUE	TRUE	TRUE
+l	űv	őd	lűvődik	lűvődik	lűvőd	FALSE	TRUE	TRUE
+r	of	ud	rofudik	rofudik	rofud	TRUE	TRUE	TRUE
+¥	iv	ágz	¥ivágzik	nyivágzik	¥ivágz	TRUE	TRUE	TRUE
+pl	uml	ud	plumludik	plumludik	plumlud	TRUE	TRUE	TRUE
+pl	ar	agß	plaragßik	plaragszik	plaragß	TRUE	TRUE	TRUE
+NA	el	én	elénik	elénik	elén	FALSE	FALSE	FALSE
+sk	am	arz	skamarzik	skamarzik	skamarz	TRUE	TRUE	FALSE
+n	obr	úd	nobrúdik	nobrúdik	nobrúd	TRUE	FALSE	TRUE
+tr	áv	adz	trávadzik	trávadzik	trávadz	TRUE	TRUE	TRUE
+z	ágt	ád	zágtádik	zágtádik	zágtád	TRUE	TRUE	FALSE
+ßt	ip	á¥z	ßtipá¥zik	sztipányzik	ßtipá¥z	TRUE	TRUE	TRUE
+ç	ark	ajl	çarkajlik	csarkajlik	çarkajl	TRUE	TRUE	TRUE
+g	áç	az	gáçazik	gácsazik	gáçaz	TRUE	TRUE	TRUE
+h	az	ádz	hazádzik	hazádzik	hazádz	TRUE	FALSE	TRUE
+br	o¬	oz	bro¬ozik	brolyozik	bro¬oz	TRUE	TRUE	TRUE
+pr	of	úz	profúzik	profúzik	profúz	TRUE	TRUE	TRUE
+s	i©	ánz	si©ánzik	sigyánzik	si©ánz	TRUE	TRUE	TRUE
+r	ark	agz	rarkagzik	rarkagzik	rarkagz	TRUE	TRUE	TRUE
+k	elp	égß	kelpégßik	kelpégszik	kelpégß	TRUE	TRUE	FALSE
+f	el	ékz	felékzik	felékzik	felékz	TRUE	TRUE	TRUE
+br	idr	et	bridretik	bridretik	bridret	TRUE	TRUE	TRUE
+sp	ánk	at	spánkatik	spánkatik	spánkat	TRUE	TRUE	TRUE
+n	eßk	erß	neßkerßik	neszkerszik	neßkerß	TRUE	TRUE	TRUE
+n	áç	aml	náçamlik	nácsamlik	náçaml	TRUE	TRUE	TRUE
+bl	ás	arz	blásarzik	blásarzik	blásarz	TRUE	TRUE	TRUE
+r	al	ádz	raládzik	raládzik	raládz	TRUE	FALSE	TRUE
+d	irk	ágz	dirkágzik	dirkágzik	dirkágz	TRUE	TRUE	TRUE
+¥	alh	ajl	¥alhajlik	nyalhajlik	¥alhajl	TRUE	TRUE	FALSE
+pr	uçk	űz	pruçkűzik	prucskűzik	pruçkűz	TRUE	TRUE	TRUE
+t	ár	ádz	tárádzik	tárádzik	tárádz	TRUE	FALSE	TRUE
+s	usk	o¥l	susko¥lik	suskonylik	susko¥l	TRUE	TRUE	TRUE
+©	iml	á¥z	©imlá¥zik	gyimlányzik	©imlá¥z	TRUE	TRUE	TRUE
+br	ek	érl	brekérlik	brekérlik	brekérl	TRUE	TRUE	TRUE
+k	idr	az	kidrazik	kidrazik	kidraz	TRUE	FALSE	TRUE
+f	imb	erß	fimberßik	fimberszik	fimberß	TRUE	TRUE	TRUE
+bl	ámk	az	blámkazik	blámkazik	blámkaz	TRUE	TRUE	TRUE
+g	uk	od	gukodik	gukodik	gukod	TRUE	TRUE	TRUE
+pr	ámp	ak	prámpakik	prámpakik	prámpak	TRUE	TRUE	TRUE
+b	í¥l	ajl	bí¥lajlik	bínylajlik	bí¥lajl	TRUE	TRUE	TRUE
+p	ism	á¥l	pismá¥lik	pismánylik	pismá¥l	TRUE	TRUE	TRUE
+d	ápr	ak	dáprakik	dáprakik	dáprak	TRUE	TRUE	TRUE
+l	otr	onl	lotronlik	lotronlik	lotronl	TRUE	TRUE	TRUE
+s	ó¬	o¥l	só¬o¥lik	sólyonylik	só¬o¥l	TRUE	TRUE	TRUE
+s	onz	os	sonzosik	sonzosik	sonzos	TRUE	TRUE	TRUE
+bl	o†	okl	blo†oklik	blotyoklik	blo†okl	TRUE	TRUE	TRUE
+j	usk	űz	juskűzik	juskűzik	juskűz	TRUE	TRUE	TRUE
+fl	ajç	áz	flajçázik	flajcsázik	flajçáz	TRUE	TRUE	TRUE
+ç	a†	ágl	ça†áglik	csatyáglik	ça†ágl	TRUE	TRUE	TRUE
+h	ajl	áz	hajlázik	hajlázik	hajláz	FALSE	FALSE	TRUE
+†	ag	ádz	†agádzik	tyagádzik	†agádz	TRUE	TRUE	TRUE
+f	ür	űz	fürűzik	fürűzik	fürűz	TRUE	TRUE	FALSE
+pl	ap	akl	plapaklik	plapaklik	plapakl	TRUE	TRUE	TRUE
+pl	uld	od	pluldodik	pluldodik	pluldod	TRUE	FALSE	TRUE
+p	akn	á¥l	pakná¥lik	paknánylik	pakná¥l	TRUE	TRUE	TRUE
+n	ók	úd	nókúdik	nókúdik	nókúd	TRUE	TRUE	FALSE
+¥	űt	óz	¥űtózik	nyűtózik	¥űtóz	TRUE	TRUE	TRUE
+¥	o†	űdz	¥o†űdzik	nyotyűdzik	¥o†űdz	TRUE	TRUE	TRUE
+©	inc	ak	©incakik	gyincakik	©incak	TRUE	TRUE	TRUE
+tr	iv	ád	trivádik	trivádik	trivád	TRUE	TRUE	TRUE
+h	and	agß	handagßik	handagszik	handagß	TRUE	TRUE	TRUE
+c	ikr	atl	cikratlik	cikratlik	cikratl	TRUE	TRUE	TRUE
+j	en	esl	jeneslik	jeneslik	jenesl	TRUE	TRUE	TRUE
+s	ók	űdz	sókűdzik	sókűdzik	sókűdz	TRUE	FALSE	TRUE
+†	ic	egz	†icegzik	tyicegzik	†icegz	TRUE	TRUE	TRUE
+d	áç	áΩl	dáçáΩlik	dácsázslik	dáçáΩl	TRUE	TRUE	TRUE
+s	ifj	á¥z	sifjá¥zik	sifjányzik	sifjá¥z	TRUE	TRUE	TRUE
+¥	inc	ekß	¥incekßik	nyincekszik	¥incekß	TRUE	TRUE	TRUE
+br	iΩ	éz	briΩézik	brizsézik	briΩéz	TRUE	TRUE	TRUE
+g	ór	onl	góronlik	góronlik	góronl	TRUE	TRUE	TRUE
+z	étk	eng	zétkengik	zétkengik	zétkeng	TRUE	TRUE	TRUE
+pr	u¥	orz	pru¥orzik	prunyorzik	pru¥orz	TRUE	TRUE	TRUE
+sk	áç	adz	skáçadzik	skácsadzik	skáçadz	TRUE	TRUE	TRUE
+z	ifl	eml	ziflemlik	ziflemlik	zifleml	TRUE	TRUE	TRUE
+f	én	eng	fénengik	fénengik	féneng	TRUE	TRUE	FALSE
+c	ald	apß	caldapßik	caldapszik	caldapß	TRUE	TRUE	TRUE
+d	ev	epß	devepßik	devepszik	devepß	TRUE	TRUE	TRUE
+©	űn	o¥l	©űno¥lik	gyűnonylik	©űno¥l	TRUE	TRUE	TRUE
+ßt	ot	úd	ßtotúdik	sztotúdik	ßtotúd	TRUE	TRUE	TRUE
+fl	ib	á¥l	flibá¥lik	flibánylik	flibá¥l	TRUE	TRUE	TRUE
+tr	ív	ekß	trívekßik	trívekszik	trívekß	TRUE	TRUE	FALSE
+z	és	érß	zésérßik	zésérszik	zésérß	TRUE	TRUE	TRUE
+b	ír	ád	bírádik	bírádik	bírád	TRUE	FALSE	TRUE
+h	úç	ódz	húçódzik	húcsódzik	húçódz	TRUE	TRUE	TRUE
+m	ukl	os	muklosik	muklosik	muklos	TRUE	TRUE	TRUE
+n	or	óz	norózik	norózik	noróz	TRUE	TRUE	TRUE
+t	eml	egz	temlegzik	temlegzik	temlegz	TRUE	TRUE	FALSE
+p	áç	arz	páçarzik	pácsarzik	páçarz	TRUE	TRUE	TRUE
+l	ißt	erß	lißterßik	liszterszik	lißterß	TRUE	TRUE	FALSE
+f	e©	edz	fe©edzik	fegyedzik	fe©edz	TRUE	TRUE	FALSE
+©	óg	óz	©ógózik	gyógózik	©ógóz	TRUE	TRUE	FALSE
+NA	and	ánz	andánzik	andánzik	andánz	TRUE	TRUE	TRUE
+l	ev	et	levetik	levetik	levet	TRUE	FALSE	TRUE
+h	id	at	hidatik	hidatik	hidat	TRUE	TRUE	TRUE
+r	iΩg	apß	riΩgapßik	rizsgapszik	riΩgapß	TRUE	TRUE	TRUE
+d	org	os	dorgosik	dorgosik	dorgos	FALSE	TRUE	TRUE
+sn	ív	ékß	snívékßik	snívékszik	snívékß	TRUE	TRUE	TRUE
+NA	o©	űdz	o©űdzik	ogyűdzik	o©űdz	TRUE	TRUE	TRUE
+Ω	ögl	őd	Ωöglődik	zsöglődik	Ωöglőd	FALSE	TRUE	TRUE
+n	ilm	apß	nilmapßik	nilmapszik	nilmapß	TRUE	TRUE	TRUE
+sk	áßt	áz	skáßtázik	skásztázik	skáßtáz	TRUE	TRUE	TRUE
+g	ac	agz	gacagzik	gacagzik	gacagz	TRUE	TRUE	FALSE
+tr	á¥	iz	trá¥izik	trányizik	trá¥iz	TRUE	TRUE	TRUE
+sm	ér	ejl	smérejlik	smérejlik	smérejl	TRUE	TRUE	TRUE
+g	obr	űdz	gobrűdzik	gobrűdzik	gobrűdz	TRUE	TRUE	TRUE
+NA	uld	úz	uldúzik	uldúzik	uldúz	TRUE	TRUE	TRUE
+bl	őr	önl	blőrönlik	blőrönlik	blőrönl	TRUE	TRUE	TRUE
+m	omp	o¥l	mompo¥lik	momponylik	mompo¥l	TRUE	TRUE	TRUE
+NA	alm	aml	almamlik	almamlik	almaml	TRUE	TRUE	TRUE
+s	ib	ágz	sibágzik	sibágzik	sibágz	TRUE	TRUE	FALSE
+m	űr	orz	műrorzik	műrorzik	műrorz	TRUE	TRUE	TRUE
+r	ip	es	ripesik	ripesik	ripes	TRUE	TRUE	TRUE
+g	ik	asl	gikaslik	gikaslik	gikasl	TRUE	TRUE	TRUE
+n	op	osl	noposlik	noposlik	noposl	TRUE	TRUE	TRUE
+z	á¥k	aml	zá¥kamlik	zánykamlik	zá¥kaml	TRUE	TRUE	TRUE
+sm	ám	akz	smámakzik	smámakzik	smámakz	TRUE	TRUE	TRUE
+Ω	í©	ágz	Ωí©ágzik	zsígyágzik	Ωí©ágz	TRUE	TRUE	TRUE
+v	usk	orz	vuskorzik	vuskorzik	vuskorz	TRUE	TRUE	TRUE
+pr	as	adz	prasadzik	prasadzik	prasadz	TRUE	TRUE	TRUE
+p	ip	et	pipetik	pipetik	pipet	TRUE	TRUE	FALSE
+ßt	u†	úd	ßtu†údik	sztutyúdik	ßtu†úd	TRUE	TRUE	TRUE
+n	ic	agl	nicaglik	nicaglik	nicagl	TRUE	TRUE	TRUE
+sp	és	ez	spésezik	spésezik	spésez	TRUE	TRUE	TRUE
+ß	ob	oz	ßobozik	szobozik	ßoboz	FALSE	TRUE	TRUE
+sn	e¥	egß	sne¥egßik	snenyegszik	sne¥egß	TRUE	TRUE	FALSE
+k	ib	éß	kibéßik	kibészik	kibéß	TRUE	FALSE	FALSE
+v	eß	egß	veßegßik	veszegszik	veßegß	FALSE	TRUE	TRUE
+pr	edv	ez	predvezik	predvezik	predvez	TRUE	TRUE	TRUE
+NA	ágt	at	ágtatik	ágtatik	ágtat	TRUE	FALSE	TRUE
+s	al	áß	saláßik	salászik	saláß	FALSE	TRUE	TRUE
+fl	ib	étl	flibétlik	flibétlik	flibétl	TRUE	TRUE	TRUE
+m	esk	eng	meskengik	meskengik	meskeng	TRUE	TRUE	TRUE
+v	ögb	ődz	vögbődzik	vögbődzik	vögbődz	TRUE	FALSE	FALSE
+br	ív	epß	brívepßik	brívepszik	brívepß	TRUE	TRUE	TRUE
+h	ih	amz	hihamzik	hihamzik	hihamz	TRUE	TRUE	TRUE
+sm	ip	ek	smipekik	smipekik	smipek	TRUE	TRUE	TRUE
+b	or†	úd	bor†údik	bortyúdik	bor†úd	TRUE	TRUE	TRUE
+©	űnh	ökl	©űnhöklik	gyűnhöklik	©űnhökl	TRUE	TRUE	TRUE
+p	urj	ód	purjódik	purjódik	purjód	TRUE	TRUE	TRUE
+fl	ép	ékß	flépékßik	flépékszik	flépékß	TRUE	TRUE	TRUE
+h	aç	á¬l	haçá¬lik	hacsálylik	haçá¬l	TRUE	TRUE	TRUE
+ç	ókl	űz	çóklűzik	csóklűzik	çóklűz	TRUE	FALSE	TRUE
+†	e©	iz	†e©izik	tyegyizik	†e©iz	TRUE	TRUE	TRUE
+z	ip	agz	zipagzik	zipagzik	zipagz	TRUE	TRUE	TRUE
+l	iΩg	áz	liΩgázik	lizsgázik	liΩgáz	FALSE	TRUE	TRUE
+z	ism	ed	zismedik	zismedik	zismed	TRUE	TRUE	TRUE
+NA	ünd	ökl	ündöklik	ündöklik	ündökl	TRUE	TRUE	TRUE
+z	edz	esl	zedzeslik	zedzeslik	zedzesl	TRUE	TRUE	TRUE
+fl	olk	úd	flolkúdik	flolkúdik	flolkúd	TRUE	TRUE	TRUE
+pr	az	á¥l	prazá¥lik	prazánylik	prazá¥l	TRUE	TRUE	TRUE
+NA	iv	ánz	ivánzik	ivánzik	ivánz	TRUE	TRUE	TRUE
+fl	ém	eng	flémengik	flémengik	flémeng	TRUE	TRUE	TRUE
+h	irt	éz	hirtézik	hirtézik	hirtéz	TRUE	TRUE	TRUE
+h	imb	é¥l	himbé¥lik	himbénylik	himbé¥l	TRUE	TRUE	TRUE
+l	omp	űdz	lompűdzik	lompűdzik	lompűdz	TRUE	FALSE	TRUE
+ßt	urh	oz	ßturhozik	szturhozik	ßturhoz	TRUE	TRUE	TRUE
+v	ál	áz	válázik	válázik	váláz	TRUE	FALSE	TRUE
+sp	új	ódz	spújódzik	spújódzik	spújódz	TRUE	TRUE	TRUE
+ß	áç	ánz	ßáçánzik	szácsánzik	ßáçánz	TRUE	TRUE	TRUE
+ß	ét	eng	ßétengik	szétengik	ßéteng	TRUE	FALSE	TRUE
+ç	ém	ejl	çémejlik	csémejlik	çémejl	TRUE	TRUE	FALSE
+bl	ör	üß	blörüßik	blörüszik	blörüß	TRUE	TRUE	TRUE
+Ω	ajl	ágl	Ωajláglik	zsajláglik	Ωajlágl	TRUE	TRUE	TRUE
+v	öz	űdz	vözűdzik	vözűdzik	vözűdz	TRUE	FALSE	TRUE
+h	ilm	érl	hilmérlik	hilmérlik	hilmérl	TRUE	TRUE	TRUE
+b	énh	ek	bénhekik	bénhekik	bénhek	TRUE	TRUE	TRUE
+fl	ak	at	flakatik	flakatik	flakat	TRUE	TRUE	TRUE
+v	uml	onl	vumlonlik	vumlonlik	vumlonl	TRUE	TRUE	TRUE
+s	eg	étl	segétlik	segétlik	segétl	TRUE	TRUE	FALSE
+n	iç	egß	niçegßik	nicsegszik	niçegß	TRUE	TRUE	TRUE
+f	und	úd	fundúdik	fundúdik	fundúd	TRUE	TRUE	TRUE
+b	ódl	orz	bódlorzik	bódlorzik	bódlorz	TRUE	TRUE	TRUE
+ß	edv	ékß	ßedvékßik	szedvékszik	ßedvékß	TRUE	TRUE	TRUE
+d	ütk	űdz	dütkűdzik	dütkűdzik	dütkűdz	TRUE	TRUE	TRUE
+©	űnh	onl	©űnhonlik	gyűnhonlik	©űnhonl	TRUE	TRUE	FALSE
+¥	alt	agz	¥altagzik	nyaltagzik	¥altagz	TRUE	TRUE	TRUE
+fl	í©	eng	flí©engik	flígyengik	flí©eng	TRUE	TRUE	TRUE
+†	űt	o¥l	†űto¥lik	tyűtonylik	†űto¥l	TRUE	TRUE	TRUE
+l	est	érß	lestérßik	lestérszik	lestérß	TRUE	TRUE	FALSE
+j	ütk	öz	jütközik	jütközik	jütköz	FALSE	TRUE	TRUE
+l	a†	ajl	la†ajlik	latyajlik	la†ajl	TRUE	TRUE	TRUE
+l	ind	esl	lindeslik	lindeslik	lindesl	TRUE	TRUE	TRUE
+pl	űn	önl	plűnönlik	plűnönlik	plűnönl	TRUE	TRUE	TRUE
+j	ald	áz	jaldázik	jaldázik	jaldáz	TRUE	TRUE	TRUE
+k	iml	ád	kimládik	kimládik	kimlád	TRUE	TRUE	TRUE
+t	urj	osl	turjoslik	turjoslik	turjosl	TRUE	TRUE	TRUE
+Ω	a©	akl	Ωa©aklik	zsagyaklik	Ωa©akl	TRUE	TRUE	TRUE
+g	üf	öz	güfözik	güfözik	güföz	TRUE	TRUE	TRUE
+sm	ap	agl	smapaglik	smapaglik	smapagl	TRUE	TRUE	TRUE
+br	űt	oz	brűtozik	brűtozik	brűtoz	TRUE	TRUE	TRUE
+g	apl	ágz	gaplágzik	gaplágzik	gaplágz	TRUE	TRUE	TRUE
+t	a©	á¥z	ta©á¥zik	tagyányzik	ta©á¥z	TRUE	TRUE	TRUE
+dΩ	őrl	űz	dΩőrlűzik	dzsőrlűzik	dΩőrlűz	TRUE	FALSE	TRUE
+d	orj	űz	dorjűzik	dorjűzik	dorjűz	TRUE	TRUE	TRUE
+b	ejl	et	bejletik	bejletik	bejlet	TRUE	TRUE	TRUE
+fl	iv	éz	flivézik	flivézik	flivéz	TRUE	TRUE	TRUE
+l	imb	agß	limbagßik	limbagszik	limbagß	TRUE	TRUE	TRUE
+ß	ás	agl	ßásaglik	szásaglik	ßásagl	TRUE	TRUE	TRUE
+c	ack	ajl	cackajlik	cackajlik	cackajl	TRUE	TRUE	TRUE
+br	örv	öz	brörvözik	brörvözik	brörvöz	TRUE	TRUE	TRUE
+v	ajh	á¬l	vajhá¬lik	vajhálylik	vajhá¬l	TRUE	TRUE	TRUE
+j	ünd	űz	jündűzik	jündűzik	jündűz	TRUE	TRUE	TRUE
+f	ond	óz	fondózik	fondózik	fondóz	TRUE	TRUE	FALSE
+¥	aç	at	¥açatik	nyacsatik	¥açat	TRUE	TRUE	FALSE
+v	őn	öz	vőnözik	vőnözik	vőnöz	TRUE	TRUE	TRUE
+ç	úç	o¥l	çúço¥lik	csúcsonylik	çúço¥l	TRUE	TRUE	FALSE
+NA	iç	asl	içaslik	icsaslik	içasl	TRUE	TRUE	FALSE
+h	űz	örl	hűzörlik	hűzörlik	hűzörl	TRUE	TRUE	TRUE
+b	ark	agl	barkaglik	barkaglik	barkagl	TRUE	TRUE	TRUE
+k	ißt	epß	kißtepßik	kisztepszik	kißtepß	TRUE	TRUE	TRUE
+l	ép	ed	lépedik	lépedik	léped	TRUE	FALSE	TRUE
+s	ind	ajl	sindajlik	sindajlik	sindajl	TRUE	TRUE	TRUE
+ç	ór	orz	çórorzik	csórorzik	çórorz	TRUE	TRUE	TRUE
+Ω	ók	ud	Ωókudik	zsókudik	Ωókud	TRUE	TRUE	TRUE
+ç	ajt	árz	çajtárzik	csajtárzik	çajtárz	TRUE	TRUE	TRUE
+NA	ih	agz	ihagzik	ihagzik	ihagz	TRUE	TRUE	TRUE
+pl	ám	ádz	plámádzik	plámádzik	plámádz	TRUE	FALSE	TRUE
+pr	ám	arz	prámarzik	prámarzik	prámarz	TRUE	TRUE	TRUE
+dΩ	ö¬k	üß	dΩö¬küßik	dzsölyküszik	dΩö¬küß	TRUE	FALSE	TRUE
+Ω	eg	étl	Ωegétlik	zsegétlik	Ωegétl	TRUE	TRUE	FALSE
+p	i©	et	pi©etik	pigyetik	pi©et	TRUE	TRUE	FALSE
+d	ánt	á¥z	dántá¥zik	dántányzik	dántá¥z	TRUE	TRUE	TRUE
+g	úç	o¥l	gúço¥lik	gúcsonylik	gúço¥l	TRUE	TRUE	FALSE
+d	üh	ökl	dühöklik	dühöklik	dühökl	TRUE	TRUE	TRUE
+g	el	érl	gelérlik	gelérlik	gelérl	TRUE	TRUE	FALSE
+Ω	irt	áz	Ωirtázik	zsirtázik	Ωirtáz	TRUE	TRUE	TRUE
+t	épz	éß	tépzéßik	tépzészik	tépzéß	TRUE	FALSE	TRUE
+t	ip	éz	tipézik	tipézik	tipéz	TRUE	TRUE	TRUE
+ßt	av	agß	ßtavagßik	sztavagszik	ßtavagß	TRUE	TRUE	TRUE
+br	el	iz	brelizik	brelizik	breliz	TRUE	TRUE	TRUE
+ç	ant	amz	çantamzik	csantamzik	çantamz	TRUE	TRUE	TRUE
+sm	ürk	őz	smürkőzik	smürkőzik	smürkőz	TRUE	TRUE	TRUE
+z	újh	od	zújhodik	zújhodik	zújhod	FALSE	TRUE	TRUE
+NA	e†	éß	e†éßik	etyészik	e†éß	FALSE	TRUE	TRUE
+†	údb	ud	†údbudik	tyúdbudik	†údbud	TRUE	TRUE	TRUE
+g	ás	ágz	gáságzik	gáságzik	gáságz	TRUE	TRUE	TRUE
+v	ajr	ajl	vajrajlik	vajrajlik	vajrajl	TRUE	TRUE	TRUE
+p	uld	óz	puldózik	puldózik	puldóz	TRUE	TRUE	TRUE
+sp	apc	ád	spapcádik	spapcádik	spapcád	TRUE	TRUE	TRUE
+dΩ	ig	áß	dΩigáßik	dzsigászik	dΩigáß	TRUE	FALSE	TRUE
+sm	iç	atl	smiçatlik	smicsatlik	smiçatl	TRUE	TRUE	TRUE
+n	őzk	őrz	nőzkőrzik	nőzkőrzik	nőzkőrz	TRUE	TRUE	TRUE
+tr	ikr	at	trikratik	trikratik	trikrat	TRUE	TRUE	TRUE
+d	úç	óz	dúçózik	dúcsózik	dúçóz	TRUE	TRUE	TRUE
+tr	emp	ek	trempekik	trempekik	trempek	TRUE	TRUE	TRUE
+t	ek	eml	tekemlik	tekemlik	tekeml	TRUE	TRUE	TRUE
+dΩ	ár	adz	dΩáradzik	dzsáradzik	dΩáradz	TRUE	FALSE	TRUE
+n	átl	á¥l	nátlá¥lik	nátlánylik	nátlá¥l	TRUE	TRUE	TRUE
+v	ad	agl	vadaglik	vadaglik	vadagl	TRUE	TRUE	FALSE
+p	ánt	akß	pántakßik	pántakszik	pántakß	TRUE	TRUE	TRUE
+sm	eß	egz	smeßegzik	smeszegzik	smeßegz	TRUE	TRUE	TRUE
+bl	átß	iz	blátßizik	blátszizik	blátßiz	TRUE	TRUE	TRUE
+f	ab	ád	fabádik	fabádik	fabád	TRUE	TRUE	TRUE
+sp	ev	es	spevesik	spevesik	speves	TRUE	TRUE	FALSE
+ß	av	arz	ßavarzik	szavarzik	ßavarz	TRUE	TRUE	TRUE
+Ω	az	at	Ωazatik	zsazatik	Ωazat	TRUE	TRUE	TRUE
+Ω	id	apß	Ωidapßik	zsidapszik	Ωidapß	TRUE	TRUE	TRUE
+t	áts	ajl	tátsajlik	tátsajlik	tátsajl	TRUE	TRUE	TRUE
+Ω	őr	őz	Ωőrőzik	zsőrőzik	Ωőrőz	TRUE	TRUE	TRUE
+¥	ögl	űdz	¥öglűdzik	nyöglűdzik	¥öglűdz	TRUE	FALSE	TRUE
+ç	ar	akß	çarakßik	csarakszik	çarakß	FALSE	TRUE	TRUE
+ç	ih	eng	çihengik	csihengik	çiheng	TRUE	TRUE	TRUE
+k	orz	orz	korzorzik	korzorzik	korzorz	TRUE	TRUE	TRUE
+z	ölt	ökl	zöltöklik	zöltöklik	zöltökl	TRUE	TRUE	TRUE
+c	átß	asl	cátßaslik	cátszaslik	cátßasl	TRUE	TRUE	FALSE
+NA	id	áz	idázik	idázik	idáz	FALSE	TRUE	TRUE
+ç	iç	ejl	çiçejlik	csicsejlik	çiçejl	TRUE	TRUE	TRUE
+pr	alm	az	pralmazik	pralmazik	pralmaz	TRUE	TRUE	TRUE
+g	öls	űdz	gölsűdzik	gölsűdzik	gölsűdz	TRUE	TRUE	TRUE
+h	u¥	úz	hu¥úzik	hunyúzik	hu¥úz	TRUE	FALSE	TRUE
+f	üt	űz	fütűzik	fütűzik	fütűz	TRUE	TRUE	FALSE
+©	ót	óz	©ótózik	gyótózik	©ótóz	TRUE	TRUE	FALSE
+ß	ól	űdz	ßólűdzik	szólűdzik	ßólűdz	TRUE	FALSE	TRUE
+sn	őg	őrz	snőgőrzik	snőgőrzik	snőgőrz	TRUE	TRUE	TRUE
+pr	op	űz	propűzik	propűzik	propűz	TRUE	FALSE	TRUE
+v	áv	amz	vávamzik	vávamzik	vávamz	TRUE	TRUE	TRUE
+k	ól	úz	kólúzik	kólúzik	kólúz	TRUE	TRUE	FALSE
+¥	őr	üd	¥őrüdik	nyőrüdik	¥őrüd	TRUE	TRUE	TRUE
+v	ét	étl	vététlik	vététlik	vététl	TRUE	TRUE	FALSE
+l	áts	ádz	látsádzik	látsádzik	látsádz	TRUE	FALSE	TRUE
+l	ajt	apß	lajtapßik	lajtapszik	lajtapß	TRUE	TRUE	TRUE
+k	um	osl	kumoslik	kumoslik	kumosl	TRUE	TRUE	TRUE
+g	ér	érß	gérérßik	gérérszik	gérérß	TRUE	TRUE	TRUE
+pl	ujd	uz	plujduzik	plujduzik	plujduz	TRUE	TRUE	TRUE
+r	iml	akl	rimlaklik	rimlaklik	rimlakl	TRUE	TRUE	TRUE
+sp	ál	apß	spálapßik	spálapszik	spálapß	TRUE	TRUE	TRUE
+sk	or	űdz	skorűdzik	skorűdzik	skorűdz	TRUE	TRUE	TRUE
+br	és	ékz	brésékzik	brésékzik	brésékz	TRUE	TRUE	TRUE
+b	eg	esl	begeslik	begeslik	begesl	TRUE	TRUE	TRUE
+NA	ápr	á¬l	áprá¬lik	áprálylik	áprá¬l	TRUE	TRUE	TRUE
+b	ajt	ágz	bajtágzik	bajtágzik	bajtágz	TRUE	TRUE	TRUE
+br	id	akß	bridakßik	bridakszik	bridakß	TRUE	TRUE	TRUE
+¥	üßk	ösl	¥üßköslik	nyüszköslik	¥üßkösl	TRUE	TRUE	TRUE
+pr	int	áz	printázik	printázik	printáz	TRUE	TRUE	TRUE
+dΩ	am	á¥l	dΩamá¥lik	dzsamánylik	dΩamá¥l	TRUE	TRUE	TRUE
+†	ic	adz	†icadzik	tyicadzik	†icadz	TRUE	TRUE	TRUE
+p	úrl	os	púrlosik	púrlosik	púrlos	TRUE	FALSE	TRUE
+NA	ik	amz	ikamzik	ikamzik	ikamz	TRUE	TRUE	TRUE
+sk	ih	eng	skihengik	skihengik	skiheng	TRUE	TRUE	TRUE
+c	is	akz	cisakzik	cisakzik	cisakz	TRUE	TRUE	TRUE
+†	a¥	agz	†a¥agzik	tyanyagzik	†a¥agz	TRUE	TRUE	TRUE
+s	ih	agß	sihagßik	sihagszik	sihagß	TRUE	TRUE	TRUE
+f	űv	őz	fűvőzik	fűvőzik	fűvőz	FALSE	FALSE	TRUE
+¥	an	áz	¥anázik	nyanázik	¥anáz	TRUE	TRUE	TRUE
+pl	uks	oz	pluksozik	pluksozik	pluksoz	TRUE	TRUE	TRUE
+n	elp	érß	nelpérßik	nelpérszik	nelpérß	TRUE	TRUE	TRUE
+Ω	ak	ágl	Ωakáglik	zsakáglik	Ωakágl	TRUE	TRUE	FALSE
+n	o†	orz	no†orzik	notyorzik	no†orz	TRUE	TRUE	TRUE
+b	usk	ód	buskódik	buskódik	buskód	TRUE	TRUE	TRUE
+tr	ír	ek	trírekik	trírekik	trírek	TRUE	TRUE	TRUE
+t	id	ajl	tidajlik	tidajlik	tidajl	TRUE	TRUE	FALSE
+k	ipr	egz	kipregzik	kipregzik	kipregz	TRUE	TRUE	TRUE
+c	ifj	ágl	cifjáglik	cifjáglik	cifjágl	TRUE	TRUE	TRUE
+z	úd	ód	zúdódik	zúdódik	zúdód	FALSE	TRUE	TRUE
+z	ögz	örl	zögzörlik	zögzörlik	zögzörl	TRUE	TRUE	TRUE
+c	ut	o¥l	cuto¥lik	cutonylik	cuto¥l	TRUE	TRUE	TRUE
+pr	uld	űz	pruldűzik	pruldűzik	pruldűz	TRUE	TRUE	TRUE
+pl	eß	érß	pleßérßik	pleszérszik	pleßérß	TRUE	TRUE	TRUE
+l	örl	ődz	lörlődzik	lörlődzik	lörlődz	TRUE	TRUE	FALSE
+fl	ifj	áz	flifjázik	flifjázik	flifjáz	TRUE	TRUE	TRUE
+©	etk	ed	©etkedik	gyetkedik	©etked	TRUE	TRUE	TRUE
+pl	olf	os	plolfosik	plolfosik	plolfos	TRUE	FALSE	TRUE
+h	ism	akl	hismaklik	hismaklik	hismakl	TRUE	TRUE	TRUE
+z	int	ek	zintekik	zintekik	zintek	TRUE	TRUE	TRUE
+g	én	éß	généßik	génészik	généß	TRUE	FALSE	TRUE
+f	onz	oz	fonzozik	fonzozik	fonzoz	TRUE	TRUE	FALSE
+NA	aç	asl	açaslik	acsaslik	açasl	TRUE	TRUE	FALSE
+v	őzk	őz	vőzkőzik	vőzkőzik	vőzkőz	TRUE	FALSE	TRUE
+l	ag	apß	lagapßik	lagapszik	lagapß	TRUE	TRUE	TRUE
+NA	ezd	éz	ezdézik	ezdézik	ezdéz	TRUE	TRUE	TRUE
+pr	ír	á¬l	prírá¬lik	prírálylik	prírá¬l	TRUE	TRUE	TRUE
+t	űk	üd	tűküdik	tűküdik	tűküd	TRUE	TRUE	FALSE
+©	omp	oz	©ompozik	gyompozik	©ompoz	TRUE	TRUE	TRUE
+tr	ért	én	trérténik	trérténik	trértén	TRUE	FALSE	TRUE
+s	aßt	á¥z	saßtá¥zik	sasztányzik	saßtá¥z	TRUE	TRUE	TRUE
+sn	ik	ejl	snikejlik	snikejlik	snikejl	TRUE	TRUE	TRUE
+sm	el	erß	smelerßik	smelerszik	smelerß	TRUE	TRUE	TRUE
+p	akn	atl	paknatlik	paknatlik	paknatl	TRUE	TRUE	TRUE
+j	alt	árz	jaltárzik	jaltárzik	jaltárz	TRUE	TRUE	TRUE
+l	iΩg	akß	liΩgakßik	lizsgakszik	liΩgakß	TRUE	TRUE	TRUE
+sk	ult	ud	skultudik	skultudik	skultud	TRUE	TRUE	TRUE
+c	int	epß	cintepßik	cintepszik	cintepß	TRUE	TRUE	TRUE
+m	ét	egß	métegßik	métegszik	métegß	TRUE	TRUE	TRUE
+t	akn	áß	taknáßik	taknászik	taknáß	TRUE	TRUE	TRUE
+Ω	ifj	áß	Ωifjáßik	zsifjászik	Ωifjáß	TRUE	TRUE	TRUE
+sk	ü©	öd	skü©ödik	skügyödik	skü©öd	TRUE	TRUE	TRUE
+k	erg	éz	kergézik	kergézik	kergéz	TRUE	TRUE	FALSE
+NA	örv	őz	örvőzik	örvőzik	örvőz	TRUE	FALSE	TRUE
+bl	ip	asl	blipaslik	blipaslik	blipasl	TRUE	TRUE	TRUE
+d	is	éß	diséßik	disészik	diséß	TRUE	TRUE	TRUE
+p	erm	eml	permemlik	permemlik	permeml	TRUE	TRUE	TRUE
+g	óßt	od	góßtodik	gósztodik	góßtod	TRUE	FALSE	TRUE
+f	ucl	ód	fuclódik	fuclódik	fuclód	TRUE	TRUE	TRUE
+f	í©	arz	fí©arzik	fígyarzik	fí©arz	TRUE	TRUE	TRUE
+t	ík	éß	tíkéßik	tíkészik	tíkéß	TRUE	TRUE	TRUE
+d	úrl	úd	dúrlúdik	dúrlúdik	dúrlúd	TRUE	FALSE	TRUE
+h	u†	os	hu†osik	hutyosik	hu†os	TRUE	TRUE	TRUE
+¥	id	ékß	¥idékßik	nyidékszik	¥idékß	TRUE	TRUE	FALSE
+b	ec	egß	becegßik	becegszik	becegß	FALSE	TRUE	TRUE
+ß	ar	á¥z	ßará¥zik	szarányzik	ßará¥z	TRUE	TRUE	TRUE
+tr	átl	ak	trátlakik	trátlakik	trátlak	TRUE	TRUE	TRUE
+s	öls	űz	sölsűzik	sölsűzik	sölsűz	TRUE	TRUE	TRUE
+ç	ap	áΩl	çapáΩlik	csapázslik	çapáΩl	TRUE	TRUE	TRUE
+g	ot	oz	gotozik	gotozik	gotoz	TRUE	TRUE	TRUE
+Ω	ágt	aml	Ωágtamlik	zságtamlik	Ωágtaml	TRUE	TRUE	TRUE
+dΩ	énh	éz	dΩénhézik	dzsénhézik	dΩénhéz	TRUE	TRUE	TRUE
+pr	öm	ődz	prömődzik	prömődzik	prömődz	TRUE	TRUE	TRUE
+©	on	ud	©onudik	gyonudik	©onud	TRUE	TRUE	TRUE
+ç	év	edz	çévedzik	csévedzik	çévedz	TRUE	FALSE	TRUE
+sp	éh	egß	spéhegßik	spéhegszik	spéhegß	TRUE	TRUE	TRUE
+n	is	es	nisesik	nisesik	nises	TRUE	FALSE	FALSE
+t	or†	osl	tor†oslik	tortyoslik	tor†osl	TRUE	TRUE	TRUE
+br	o©	ud	bro©udik	brogyudik	bro©ud	TRUE	TRUE	TRUE
+¥	er	ed	¥eredik	nyeredik	¥ered	TRUE	FALSE	TRUE
+n	ür	öz	nürözik	nürözik	nüröz	TRUE	TRUE	TRUE
+sm	am	ajl	smamajlik	smamajlik	smamajl	TRUE	TRUE	TRUE
+pl	ág	at	plágatik	plágatik	plágat	TRUE	TRUE	TRUE
+m	í©	ékß	mí©ékßik	mígyékszik	mí©ékß	TRUE	TRUE	TRUE
+dΩ	ukt	oz	dΩuktozik	dzsuktozik	dΩuktoz	TRUE	TRUE	FALSE
+p	ór	o¥l	póro¥lik	póronylik	póro¥l	TRUE	TRUE	TRUE
+f	úd	űz	fúdűzik	fúdűzik	fúdűz	TRUE	FALSE	TRUE
+br	i¥	éß	bri¥éßik	brinyészik	bri¥éß	TRUE	TRUE	FALSE
+j	el	égß	jelégßik	jelégszik	jelégß	FALSE	TRUE	TRUE
+z	erg	es	zergesik	zergesik	zerges	TRUE	FALSE	TRUE
+l	orz	űz	lorzűzik	lorzűzik	lorzűz	TRUE	TRUE	TRUE
+p	e¥	ed	pe¥edik	penyedik	pe¥ed	TRUE	TRUE	TRUE
+pr	őg	őd	prőgődik	prőgődik	prőgőd	TRUE	TRUE	TRUE
+ß	ab	asl	ßabaslik	szabaslik	ßabasl	TRUE	TRUE	FALSE
+l	op	od	lopodik	lopodik	lopod	TRUE	FALSE	TRUE
+pl	ür	őrz	plürőrzik	plürőrzik	plürőrz	TRUE	TRUE	TRUE
+f	i©	et	fi©etik	figyetik	fi©et	TRUE	TRUE	FALSE
+Ω	ud	osl	Ωudoslik	zsudoslik	Ωudosl	TRUE	TRUE	TRUE
+sp	alt	áz	spaltázik	spaltázik	spaltáz	TRUE	TRUE	TRUE
+ß	ejl	ejl	ßejlejlik	szejlejlik	ßejlejl	TRUE	TRUE	TRUE
+sn	en	edz	snenedzik	snenedzik	snenedz	TRUE	TRUE	TRUE
+l	ih	én	lihénik	lihénik	lihén	TRUE	TRUE	TRUE
+†	iç	epß	†içepßik	tyicsepszik	†içepß	TRUE	TRUE	TRUE
+g	úr	úz	gúrúzik	gúrúzik	gúrúz	TRUE	TRUE	TRUE
+†	i¥	atl	†i¥atlik	tyinyatlik	†i¥atl	TRUE	TRUE	TRUE
+dΩ	úd	orz	dΩúdorzik	dzsúdorzik	dΩúdorz	TRUE	TRUE	TRUE
+c	e©k	egl	ce©keglik	cegykeglik	ce©kegl	TRUE	TRUE	TRUE
+¥	orn	okl	¥ornoklik	nyornoklik	¥ornokl	TRUE	TRUE	TRUE
+v	űk	orz	vűkorzik	vűkorzik	vűkorz	TRUE	TRUE	TRUE
+fl	ét	é¥l	flété¥lik	fléténylik	flété¥l	TRUE	TRUE	TRUE
+ç	onz	oz	çonzozik	csonzozik	çonzoz	TRUE	TRUE	FALSE
+p	ív	ajl	pívajlik	pívajlik	pívajl	TRUE	TRUE	TRUE
+t	on	okl	tonoklik	tonoklik	tonokl	TRUE	TRUE	TRUE
+b	i¥	éß	bi¥éßik	binyészik	bi¥éß	TRUE	TRUE	FALSE
+†	ür	ődz	†ürődzik	tyürődzik	†ürődz	TRUE	TRUE	TRUE
+br	am	akß	bramakßik	bramakszik	bramakß	TRUE	TRUE	TRUE
+sk	ib	ágz	skibágzik	skibágzik	skibágz	TRUE	TRUE	FALSE
+j	a¥	apß	ja¥apßik	janyapszik	ja¥apß	TRUE	TRUE	TRUE
+Ω	émk	et	Ωémketik	zsémketik	Ωémket	TRUE	TRUE	TRUE
+NA	ism	ejl	ismejlik	ismejlik	ismejl	TRUE	TRUE	TRUE
+k	ínl	apß	kínlapßik	kínlapszik	kínlapß	TRUE	TRUE	TRUE
+s	elp	ejl	selpejlik	selpejlik	selpejl	TRUE	TRUE	TRUE
+v	av	agl	vavaglik	vavaglik	vavagl	TRUE	TRUE	FALSE
+Ω	eng	epß	Ωengepßik	zsengepszik	Ωengepß	TRUE	TRUE	TRUE
+ßt	il	áz	ßtilázik	sztilázik	ßtiláz	TRUE	TRUE	TRUE
+ß	usk	ódz	ßuskódzik	szuskódzik	ßuskódz	TRUE	TRUE	TRUE
+k	a©l	asl	ka©laslik	kagylaslik	ka©lasl	TRUE	TRUE	FALSE
+¥	e©	ékß	¥e©ékßik	nyegyékszik	¥e©ékß	TRUE	TRUE	TRUE
+c	ul	onl	culonlik	culonlik	culonl	TRUE	TRUE	FALSE
+tr	ing	áß	tringáßik	tringászik	tringáß	TRUE	TRUE	TRUE
+h	ilm	éß	hilméßik	hilmészik	hilméß	TRUE	TRUE	TRUE
+g	eml	érl	gemlérlik	gemlérlik	gemlérl	TRUE	TRUE	FALSE
+sp	ámp	az	spámpazik	spámpazik	spámpaz	TRUE	TRUE	TRUE
+NA	ad	ajl	adajlik	adajlik	adajl	TRUE	TRUE	TRUE
+b	áßt	ád	báßtádik	básztádik	báßtád	TRUE	TRUE	TRUE
+c	ifj	éz	cifjézik	cifjézik	cifjéz	TRUE	TRUE	TRUE
+j	ét	é¥l	jété¥lik	jéténylik	jété¥l	TRUE	TRUE	FALSE
+p	uld	o¥l	puldo¥lik	puldonylik	puldo¥l	TRUE	TRUE	TRUE
+h	üf	önl	hüfönlik	hüfönlik	hüfönl	TRUE	TRUE	TRUE
+sk	él	egß	skélegßik	skélegszik	skélegß	TRUE	TRUE	TRUE
+l	őg	öz	lőgözik	lőgözik	lőgöz	TRUE	TRUE	TRUE
+d	aßt	ánz	daßtánzik	dasztánzik	daßtánz	TRUE	TRUE	TRUE
+ßt	ü©k	őd	ßtü©kődik	sztügykődik	ßtü©kőd	TRUE	TRUE	TRUE
+p	aßt	akl	paßtaklik	pasztaklik	paßtakl	TRUE	TRUE	TRUE
+v	ögb	őd	vögbődik	vögbődik	vögbőd	TRUE	TRUE	FALSE
+sp	ang	at	spangatik	spangatik	spangat	TRUE	TRUE	TRUE
+pl	og	od	plogodik	plogodik	plogod	TRUE	FALSE	TRUE
+r	ilm	atl	rilmatlik	rilmatlik	rilmatl	TRUE	TRUE	TRUE
+Ω	óßt	okl	Ωóßtoklik	zsósztoklik	Ωóßtokl	TRUE	TRUE	TRUE
+sn	ajt	áß	snajtáßik	snajtászik	snajtáß	TRUE	TRUE	TRUE
+br	eg	érß	bregérßik	bregérszik	bregérß	TRUE	TRUE	TRUE
+g	űr	oz	gűrozik	gűrozik	gűroz	TRUE	TRUE	TRUE
+v	óbl	oz	vóblozik	vóblozik	vóbloz	TRUE	TRUE	TRUE
+ç	űr	űdz	çűrűdzik	csűrűdzik	çűrűdz	FALSE	FALSE	TRUE
+©	uçk	ud	©uçkudik	gyucskudik	©uçkud	TRUE	TRUE	TRUE
+z	inc	adz	zincadzik	zincadzik	zincadz	TRUE	TRUE	FALSE
+g	újt	úz	gújtúzik	gújtúzik	gújtúz	TRUE	TRUE	TRUE
+j	emp	egz	jempegzik	jempegzik	jempegz	TRUE	TRUE	TRUE
+k	áç	iz	káçizik	kácsizik	káçiz	FALSE	TRUE	TRUE
+fl	ig	ékz	fligékzik	fligékzik	fligékz	TRUE	TRUE	TRUE
+b	óg	ódz	bógódzik	bógódzik	bógódz	TRUE	TRUE	TRUE
+s	ojt	orz	sojtorzik	sojtorzik	sojtorz	TRUE	TRUE	TRUE
+s	art	akß	sartakßik	sartakszik	sartakß	TRUE	TRUE	TRUE
+l	ápr	aml	lápramlik	lápramlik	lápraml	TRUE	TRUE	TRUE
+r	ukt	úd	ruktúdik	ruktúdik	ruktúd	TRUE	TRUE	TRUE
+tr	ar	ak	trarakik	trarakik	trarak	TRUE	TRUE	TRUE
+pr	üh	őz	prühőzik	prühőzik	prühőz	TRUE	TRUE	TRUE
+c	óg	űz	cógűzik	cógűzik	cógűz	TRUE	TRUE	TRUE
+br	er	epß	brerepßik	brerepszik	brerepß	TRUE	TRUE	FALSE
+m	ind	en	mindenik	mindenik	minden	FALSE	FALSE	TRUE
+Ω	ém	ejl	Ωémejlik	zsémejlik	Ωémejl	TRUE	TRUE	FALSE
+r	u©	orz	ru©orzik	rugyorzik	ru©orz	TRUE	TRUE	TRUE
+ß	ilm	epß	ßilmepßik	szilmepszik	ßilmepß	TRUE	TRUE	TRUE
+j	égz	iz	jégzizik	jégzizik	jégziz	TRUE	TRUE	TRUE
+l	í©	á¥z	lí©á¥zik	lígyányzik	lí©á¥z	TRUE	TRUE	TRUE
+t	iΩg	eml	tiΩgemlik	tizsgemlik	tiΩgeml	TRUE	TRUE	TRUE
+sp	őrk	őd	spőrkődik	spőrkődik	spőrkőd	TRUE	TRUE	TRUE
+z	ír	étl	zírétlik	zírétlik	zírétl	TRUE	TRUE	TRUE
+n	eml	egz	nemlegzik	nemlegzik	nemlegz	TRUE	TRUE	FALSE
+ç	ág	ágz	çágágzik	cságágzik	çágágz	TRUE	TRUE	TRUE
+v	óbl	okl	vóbloklik	vóbloklik	vóblokl	TRUE	TRUE	TRUE
+k	esl	egl	kesleglik	kesleglik	keslegl	TRUE	TRUE	TRUE
+NA	ánk	á¬l	ánká¬lik	ánkálylik	ánká¬l	TRUE	TRUE	FALSE
+d	ißt	ez	dißtezik	disztezik	dißtez	TRUE	FALSE	FALSE
+g	én	ek	génekik	génekik	gének	TRUE	FALSE	TRUE
+h	ir	á¬l	hirá¬lik	hirálylik	hirá¬l	TRUE	TRUE	TRUE
+r	inc	á¬l	rincá¬lik	rincálylik	rincá¬l	TRUE	TRUE	TRUE
+j	ur	úd	jurúdik	jurúdik	jurúd	TRUE	TRUE	TRUE
+r	á¥	á¬l	rá¥á¬lik	rányálylik	rá¥á¬l	TRUE	TRUE	TRUE
+fl	és	egz	flésegzik	flésegzik	flésegz	TRUE	TRUE	TRUE
+c	ub	onl	cubonlik	cubonlik	cubonl	TRUE	TRUE	FALSE
+k	ab	iz	kabizik	kabizik	kabiz	TRUE	TRUE	TRUE
+c	orΩ	uz	corΩuzik	corzsuzik	corΩuz	TRUE	TRUE	TRUE
+pl	ás	iz	plásizik	plásizik	plásiz	TRUE	TRUE	FALSE
+k	ir	apß	kirapßik	kirapszik	kirapß	TRUE	TRUE	TRUE
+f	űn	üd	fűnüdik	fűnüdik	fűnüd	TRUE	TRUE	TRUE
+br	árk	at	brárkatik	brárkatik	brárkat	TRUE	TRUE	TRUE
+tr	ip	ed	tripedik	tripedik	triped	TRUE	TRUE	TRUE
+r	ír	aml	ríramlik	ríramlik	ríraml	TRUE	TRUE	TRUE
+†	ad	aml	†adamlik	tyadamlik	†adaml	TRUE	TRUE	TRUE
+pr	ík	ánz	príkánzik	príkánzik	príkánz	TRUE	TRUE	TRUE
+z	u©	ódz	zu©ódzik	zugyódzik	zu©ódz	TRUE	TRUE	TRUE
+br	ór	ud	brórudik	brórudik	brórud	TRUE	TRUE	TRUE
+NA	imb	ed	imbedik	imbedik	imbed	TRUE	TRUE	TRUE
+c	ár	az	cárazik	cárazik	cáraz	TRUE	FALSE	TRUE
+d	aj	á¬l	dajá¬lik	dajálylik	dajá¬l	TRUE	TRUE	TRUE
+tr	i¥	at	tri¥atik	trinyatik	tri¥at	TRUE	TRUE	TRUE
+ç	én	eng	çénengik	csénengik	çéneng	TRUE	TRUE	FALSE
+br	ámp	ád	brámpádik	brámpádik	brámpád	TRUE	TRUE	TRUE
+h	oz	uz	hozuzik	hozuzik	hozuz	TRUE	TRUE	TRUE
+†	alt	ajl	†altajlik	tyaltajlik	†altajl	TRUE	TRUE	TRUE
+m	aç	atl	maçatlik	macsatlik	maçatl	TRUE	TRUE	FALSE
+f	ír	akz	fírakzik	fírakzik	fírakz	TRUE	TRUE	TRUE
+f	ißt	en	fißtenik	fisztenik	fißten	TRUE	TRUE	FALSE
+sp	ek	es	spekesik	spekesik	spekes	TRUE	TRUE	FALSE
+n	or	okl	noroklik	noroklik	norokl	TRUE	TRUE	TRUE
+tr	áßt	ád	tráßtádik	trásztádik	tráßtád	TRUE	TRUE	TRUE
+†	öls	őz	†ölsőzik	työlsőzik	†ölsőz	TRUE	TRUE	TRUE
+sp	urj	úd	spurjúdik	spurjúdik	spurjúd	TRUE	TRUE	TRUE
+h	ajr	árz	hajrárzik	hajrárzik	hajrárz	FALSE	TRUE	TRUE
+ßt	ámp	az	ßtámpazik	sztámpazik	ßtámpaz	TRUE	TRUE	TRUE
+z	újt	ód	zújtódik	zújtódik	zújtód	TRUE	TRUE	FALSE
+tr	i¥	ágz	tri¥ágzik	trinyágzik	tri¥ágz	TRUE	TRUE	TRUE
+fl	öz	öz	flözözik	flözözik	flözöz	TRUE	TRUE	TRUE
+¥	ört	őz	¥örtőzik	nyörtőzik	¥örtőz	TRUE	TRUE	TRUE
+Ω	ißt	eml	Ωißtemlik	zsisztemlik	Ωißteml	TRUE	TRUE	TRUE
+Ω	epr	esl	Ωepreslik	zsepreslik	Ωepresl	TRUE	TRUE	TRUE
+l	ét	ékz	létékzik	létékzik	létékz	TRUE	TRUE	TRUE
+g	ilm	akß	gilmakßik	gilmakszik	gilmakß	TRUE	TRUE	TRUE
+n	am	akß	namakßik	namakszik	namakß	TRUE	TRUE	TRUE
+©	i¥	éz	©i¥ézik	gyinyézik	©i¥éz	TRUE	TRUE	TRUE
+¥	ajt	ak	¥ajtakik	nyajtakik	¥ajtak	TRUE	TRUE	TRUE
+ßt	erz	en	ßterzenik	szterzenik	ßterzen	TRUE	TRUE	TRUE
+¥	et	eml	¥etemlik	nyetemlik	¥eteml	TRUE	TRUE	TRUE
+dΩ	erg	éz	dΩergézik	dzsergézik	dΩergéz	TRUE	FALSE	TRUE
+tr	ism	áß	trismáßik	trismászik	trismáß	TRUE	TRUE	TRUE
+br	u©	úd	bru©údik	brugyúdik	bru©úd	TRUE	TRUE	TRUE
+k	ál	agz	kálagzik	kálagzik	kálagz	TRUE	TRUE	TRUE
+NA	ant	atl	antatlik	antatlik	antatl	TRUE	TRUE	TRUE
+n	ót	űz	nótűzik	nótűzik	nótűz	FALSE	TRUE	TRUE
+j	ib	ágl	jibáglik	jibáglik	jibágl	TRUE	TRUE	TRUE
+dΩ	alm	ak	dΩalmakik	dzsalmakik	dΩalmak	TRUE	TRUE	TRUE
+bl	ér	étl	blérétlik	blérétlik	blérétl	TRUE	TRUE	TRUE
+d	űt	oz	dűtozik	dűtozik	dűtoz	TRUE	TRUE	TRUE
+p	ól	ud	póludik	póludik	pólud	TRUE	TRUE	TRUE
+h	és	egß	hésegßik	hésegszik	hésegß	TRUE	TRUE	TRUE
+fl	or	űz	florűzik	florűzik	florűz	TRUE	TRUE	TRUE
+sk	ir	égß	skirégßik	skirégszik	skirégß	TRUE	TRUE	TRUE
+sp	us	űdz	spusűdzik	spusűdzik	spusűdz	TRUE	TRUE	TRUE
+g	am	agß	gamagßik	gamagszik	gamagß	TRUE	TRUE	TRUE
+sk	ib	et	skibetik	skibetik	skibet	TRUE	TRUE	TRUE
+c	int	agz	cintagzik	cintagzik	cintagz	TRUE	TRUE	TRUE
+k	ipr	en	kiprenik	kiprenik	kipren	TRUE	FALSE	TRUE
+NA	eml	ejl	emlejlik	emlejlik	emlejl	TRUE	TRUE	TRUE
+f	í¥l	én	fí¥lénik	fínylénik	fí¥lén	TRUE	TRUE	TRUE
+n	ík	iz	níkizik	níkizik	níkiz	TRUE	TRUE	TRUE
+b	i¥	én	bi¥énik	binyénik	bi¥én	TRUE	TRUE	FALSE
+c	omb	od	combodik	combodik	combod	TRUE	FALSE	TRUE
+ß	eh	ékz	ßehékzik	szehékzik	ßehékz	TRUE	TRUE	TRUE
+dΩ	oç	ódz	dΩoçódzik	dzsocsódzik	dΩoçódz	TRUE	FALSE	TRUE
+ß	elç	érl	ßelçérlik	szelcsérlik	ßelçérl	TRUE	TRUE	FALSE
+k	ip	á¬l	kipá¬lik	kipálylik	kipá¬l	TRUE	TRUE	TRUE
+NA	ól	úz	ólúzik	ólúzik	ólúz	TRUE	TRUE	FALSE
+z	uk	űdz	zukűdzik	zukűdzik	zukűdz	TRUE	TRUE	TRUE
+k	év	eml	kévemlik	kévemlik	kéveml	TRUE	TRUE	TRUE
+dΩ	oçm	úz	dΩoçmúzik	dzsocsmúzik	dΩoçmúz	TRUE	TRUE	TRUE
+s	ás	ak	sásakik	sásakik	sásak	TRUE	TRUE	TRUE
+ßt	ik	arz	ßtikarzik	sztikarzik	ßtikarz	TRUE	TRUE	TRUE
+sm	o†	okl	smo†oklik	smotyoklik	smo†okl	TRUE	TRUE	TRUE
+†	elç	érl	†elçérlik	tyelcsérlik	†elçérl	TRUE	TRUE	FALSE
+s	eh	étl	sehétlik	sehétlik	sehétl	TRUE	TRUE	FALSE
+s	a©l	ágl	sa©láglik	sagyláglik	sa©lágl	TRUE	TRUE	TRUE
+br	erg	et	brergetik	brergetik	brerget	TRUE	TRUE	TRUE
+ß	old	okl	ßoldoklik	szoldoklik	ßoldokl	TRUE	TRUE	TRUE
+NA	él	érß	élérßik	élérszik	élérß	TRUE	TRUE	TRUE
+p	áç	akß	páçakßik	pácsakszik	páçakß	TRUE	TRUE	TRUE
+bl	edz	en	bledzenik	bledzenik	bledzen	TRUE	TRUE	TRUE
+br	eh	ékß	brehékßik	brehékszik	brehékß	TRUE	TRUE	TRUE
+†	ajt	akz	†ajtakzik	tyajtakzik	†ajtakz	TRUE	TRUE	TRUE
+tr	as	atl	trasatlik	trasatlik	trasatl	TRUE	TRUE	TRUE
+sn	öm	öz	snömözik	snömözik	snömöz	TRUE	TRUE	TRUE
+m	árk	ágz	márkágzik	márkágzik	márkágz	TRUE	TRUE	TRUE
+n	e¥	egß	ne¥egßik	nenyegszik	ne¥egß	TRUE	TRUE	FALSE
+s	ü©	örl	sü©örlik	sügyörlik	sü©örl	TRUE	TRUE	FALSE
+NA	ápr	akz	áprakzik	áprakzik	áprakz	TRUE	TRUE	TRUE
+ç	er	epß	çerepßik	cserepszik	çerepß	TRUE	TRUE	FALSE
+br	eh	epß	brehepßik	brehepszik	brehepß	TRUE	TRUE	FALSE
+d	árm	ajl	dármajlik	dármajlik	dármajl	TRUE	TRUE	TRUE
+j	an	atl	janatlik	janatlik	janatl	TRUE	TRUE	TRUE
+c	ép	edz	cépedzik	cépedzik	cépedz	TRUE	FALSE	TRUE
+f	iΩg	ak	fiΩgakik	fizsgakik	fiΩgak	TRUE	TRUE	TRUE
+d	ic	én	dicénik	dicénik	dicén	TRUE	TRUE	TRUE
+c	í©	á¥l	cí©á¥lik	cígyánylik	cí©á¥l	TRUE	TRUE	TRUE
+f	e¥	edz	fe¥edzik	fenyedzik	fe¥edz	TRUE	TRUE	FALSE
+ß	omj	od	ßomjodik	szomjodik	ßomjod	TRUE	FALSE	TRUE
+br	alt	az	braltazik	braltazik	braltaz	TRUE	TRUE	TRUE
+h	u©	osl	hu©oslik	hugyoslik	hu©osl	TRUE	TRUE	TRUE
+r	elç	en	relçenik	relcsenik	relçen	TRUE	FALSE	TRUE
+h	uks	űz	huksűzik	huksűzik	huksűz	TRUE	TRUE	TRUE
+z	inc	amz	zincamzik	zincamzik	zincamz	TRUE	TRUE	FALSE
+†	oj	ud	†ojudik	tyojudik	†ojud	TRUE	TRUE	TRUE
+k	ágt	árz	kágtárzik	kágtárzik	kágtárz	TRUE	TRUE	TRUE
+v	á¥	at	vá¥atik	ványatik	vá¥at	TRUE	TRUE	TRUE
+sk	al	áz	skalázik	skalázik	skaláz	FALSE	TRUE	TRUE
+k	oc	o¥l	koco¥lik	koconylik	koco¥l	TRUE	TRUE	TRUE
+NA	ajt	iz	ajtizik	ajtizik	ajtiz	TRUE	TRUE	TRUE
+bl	i©	ékz	bli©ékzik	bligyékzik	bli©ékz	TRUE	TRUE	TRUE
+g	it	érß	gitérßik	gitérszik	gitérß	TRUE	TRUE	TRUE
+bl	álm	ád	blálmádik	blálmádik	blálmád	TRUE	TRUE	TRUE
+©	ißt	á¥l	©ißtá¥lik	gyisztánylik	©ißtá¥l	TRUE	TRUE	TRUE
+pl	erm	es	plermesik	plermesik	plermes	TRUE	FALSE	TRUE
+s	ór	óz	sórózik	sórózik	sóróz	TRUE	TRUE	FALSE
+br	org	úd	brorgúdik	brorgúdik	brorgúd	TRUE	TRUE	TRUE
+z	onz	osl	zonzoslik	zonzoslik	zonzosl	TRUE	TRUE	TRUE
+dΩ	á¥	áΩl	dΩá¥áΩlik	dzsányázslik	dΩá¥áΩl	TRUE	TRUE	TRUE
+v	ec	egz	vecegzik	vecegzik	vecegz	TRUE	TRUE	TRUE
+b	as	akz	basakzik	basakzik	basakz	TRUE	TRUE	TRUE
+s	údb	orz	súdborzik	súdborzik	súdborz	TRUE	TRUE	TRUE
+sm	ág	apß	smágapßik	smágapszik	smágapß	TRUE	TRUE	TRUE
+fl	ec	é¥l	flecé¥lik	flecénylik	flecé¥l	TRUE	TRUE	TRUE
+c	urn	ud	curnudik	curnudik	curnud	TRUE	TRUE	TRUE
+h	int	az	hintazik	hintazik	hintaz	FALSE	FALSE	TRUE
+f	átß	agz	fátßagzik	fátszagzik	fátßagz	TRUE	TRUE	TRUE
+br	apc	az	brapcazik	brapcazik	brapcaz	TRUE	TRUE	TRUE
+h	í¥l	asl	hí¥laslik	hínylaslik	hí¥lasl	TRUE	TRUE	TRUE
+ß	ókl	onl	ßóklonlik	szóklonlik	ßóklonl	TRUE	TRUE	FALSE
+h	akn	asl	haknaslik	haknaslik	haknasl	TRUE	TRUE	TRUE
+t	ejl	iz	tejlizik	tejlizik	tejliz	TRUE	TRUE	TRUE
+v	év	érl	vévérlik	vévérlik	vévérl	TRUE	TRUE	TRUE
+Ω	ón	uz	Ωónuzik	zsónuzik	Ωónuz	TRUE	TRUE	TRUE
+b	omp	okl	bompoklik	bompoklik	bompokl	TRUE	TRUE	TRUE
+h	iml	ádz	himládzik	himládzik	himládz	TRUE	TRUE	FALSE
+†	edv	epß	†edvepßik	tyedvepszik	†edvepß	TRUE	TRUE	TRUE
+j	ind	atl	jindatlik	jindatlik	jindatl	TRUE	TRUE	TRUE
+NA	úz	onl	úzonlik	úzonlik	úzonl	TRUE	TRUE	TRUE
+ß	iç	ek	ßiçekik	szicsekik	ßiçek	TRUE	TRUE	TRUE
+ß	ém	egß	ßémegßik	szémegszik	ßémegß	TRUE	TRUE	TRUE
+f	ujd	o¥l	fujdo¥lik	fujdonylik	fujdo¥l	TRUE	TRUE	TRUE
+g	irt	adz	girtadzik	girtadzik	girtadz	TRUE	TRUE	TRUE
+sp	ib	ánz	spibánzik	spibánzik	spibánz	TRUE	TRUE	TRUE
+sm	ünd	öz	smündözik	smündözik	smündöz	TRUE	TRUE	TRUE
+l	id	agz	lidagzik	lidagzik	lidagz	TRUE	TRUE	TRUE
+z	ú¬z	ód	zú¬zódik	zúlyzódik	zú¬zód	FALSE	TRUE	TRUE
+Ω	év	egz	Ωévegzik	zsévegzik	Ωévegz	TRUE	TRUE	TRUE
+j	iml	ádz	jimládzik	jimládzik	jimládz	TRUE	TRUE	FALSE
+b	öt	űz	bötűzik	bötűzik	bötűz	TRUE	TRUE	TRUE
+p	er	ékß	perékßik	perékszik	perékß	TRUE	TRUE	TRUE
+©	il	érl	©ilérlik	gyilérlik	©ilérl	TRUE	TRUE	TRUE
+Ω	ifj	agz	Ωifjagzik	zsifjagzik	Ωifjagz	TRUE	TRUE	TRUE
+j	ang	akz	jangakzik	jangakzik	jangakz	TRUE	TRUE	TRUE
+sn	ürk	öd	snürködik	snürködik	snürköd	TRUE	TRUE	TRUE
+bl	űk	öz	blűközik	blűközik	blűköz	TRUE	TRUE	TRUE
+¥	ém	egl	¥émeglik	nyémeglik	¥émegl	TRUE	TRUE	TRUE
+sn	at	á¬l	snatá¬lik	snatálylik	snatá¬l	TRUE	TRUE	TRUE
+d	ißt	en	dißtenik	disztenik	dißten	TRUE	FALSE	FALSE
+NA	iΩ	ágl	iΩáglik	izságlik	iΩágl	TRUE	TRUE	TRUE
+d	apl	ád	dapládik	dapládik	daplád	TRUE	TRUE	TRUE
+t	ul	űz	tulűzik	tulűzik	tulűz	TRUE	TRUE	TRUE
+z	ant	ánz	zantánzik	zantánzik	zantánz	TRUE	TRUE	TRUE
+tr	iml	ek	trimlekik	trimlekik	trimlek	TRUE	TRUE	TRUE
+g	ürd	üß	gürdüßik	gürdüszik	gürdüß	TRUE	TRUE	TRUE
+NA	is	á¥z	isá¥zik	isányzik	isá¥z	TRUE	TRUE	TRUE
+k	ilm	érß	kilmérßik	kilmérszik	kilmérß	TRUE	TRUE	TRUE
+g	av	agz	gavagzik	gavagzik	gavagz	TRUE	TRUE	FALSE
+t	urj	ódz	turjódzik	turjódzik	turjódz	TRUE	TRUE	TRUE
+NA	ás	ágl	áságlik	áságlik	áságl	TRUE	TRUE	TRUE
+b	a†	ádz	ba†ádzik	batyádzik	ba†ádz	TRUE	FALSE	TRUE
+n	ant	árz	nantárzik	nantárzik	nantárz	TRUE	TRUE	TRUE
+z	údb	űz	zúdbűzik	zúdbűzik	zúdbűz	TRUE	TRUE	TRUE
+j	ing	áΩl	jingáΩlik	jingázslik	jingáΩl	TRUE	TRUE	TRUE
+br	í©	á¬l	brí©á¬lik	brígyálylik	brí©á¬l	TRUE	TRUE	TRUE
+v	őn	ösl	vőnöslik	vőnöslik	vőnösl	TRUE	TRUE	TRUE
+m	ajl	agz	majlagzik	majlagzik	majlagz	TRUE	TRUE	TRUE

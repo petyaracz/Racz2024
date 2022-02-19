@@ -11,6 +11,7 @@ onset	v	c1c2	tr	word
 	a	kl	aklik	aklik
 	a	kß	akßik	akszik
 	a	ll	allik	allik
+	a	lß	alßik	alszik
 	a	ml	amlik	amlik
 	a	ng	angik	angik
 	a	rd	ardik	ardik
@@ -19,6 +20,7 @@ onset	v	c1c2	tr	word
 	a	sd	asdik	asdik
 	a	sl	aslik	aslik
 	a	ßl	aßlik	aszlik
+	a	ßp	aßpik	aszpik
 	a	tl	atlik	atlik
 	a	tß	atßik	atszik
 	a	zl	azlik	azlik
@@ -60,6 +62,7 @@ onset	v	c1c2	tr	word
 	e	jz	ejzik	ejzik
 	e	kl	eklik	eklik
 	e	kß	ekßik	ekszik
+	e	ll	ellik	ellik
 	e	lß	elßik	elszik
 	e	ml	emlik	emlik
 	e	ng	engik	engik
@@ -111,6 +114,7 @@ onset	v	c1c2	tr	word
 	i	jz	ijzik	ijzik
 	i	kl	iklik	iklik
 	i	kß	ikßik	ikszik
+	i	ll	illik	illik
 	i	lß	ilßik	ilszik
 	i	ml	imlik	imlik
 	i	ng	ingik	ingik
@@ -124,6 +128,7 @@ onset	v	c1c2	tr	word
 	i	tl	itlik	itlik
 	i	tß	itßik	itszik
 	i	zl	izlik	izlik
+	i	zz	izzik	izzik
 	í	¥l	í¥lik	ínylik
 	í	bz	íbzik	íbzik
 	í	dl	ídlik	ídlik
@@ -148,6 +153,7 @@ onset	v	c1c2	tr	word
 	í	ßp	íßpik	íszpik
 	í	tl	ítlik	ítlik
 	í	tß	ítßik	ítszik
+	í	zl	ízlik	ízlik
 	í	zz	ízzik	ízzik
 	o	¥l	o¥lik	onylik
 	o	bz	obzik	obzik
@@ -162,12 +168,14 @@ onset	v	c1c2	tr	word
 	o	kß	okßik	okszik
 	o	ll	ollik	ollik
 	o	lß	olßik	olszik
+	o	ml	omlik	omlik
 	o	ng	ongik	ongik
 	o	rd	ordik	ordik
 	o	rl	orlik	orlik
 	o	rz	orzik	orzik
 	o	sd	osdik	osdik
 	o	sl	oslik	oslik
+	o	ßl	oßlik	oszlik
 	o	ßp	oßpik	oszpik
 	o	tl	otlik	otlik
 	o	tß	otßik	otszik
@@ -186,6 +194,7 @@ onset	v	c1c2	tr	word
 	ö	kß	ökßik	ökszik
 	ö	ll	öllik	öllik
 	ö	lß	ölßik	ölszik
+	ö	ml	ömlik	ömlik
 	ö	ng	öngik	öngik
 	ö	rd	ördik	ördik
 	ö	rl	örlik	örlik
@@ -202,6 +211,7 @@ onset	v	c1c2	tr	word
 	u	bz	ubzik	ubzik
 	u	dl	udlik	udlik
 	u	gl	uglik	uglik
+	u	gr	ugrik	ugrik
 	u	gß	ugßik	ugszik
 	u	gz	ugzik	ugzik
 	u	jl	ujlik	ujlik
@@ -284,6 +294,7 @@ onset	v	c1c2	tr	word
 ¥	a	gz	¥agzik	nyagzik
 ¥	a	jl	¥ajlik	nyajlik
 ¥	a	jz	¥ajzik	nyajzik
+¥	a	kl	¥aklik	nyaklik
 ¥	a	kß	¥akßik	nyakszik
 ¥	a	ll	¥allik	nyallik
 ¥	a	lß	¥alßik	nyalszik
@@ -487,6 +498,7 @@ onset	v	c1c2	tr	word
 ¥	u	dl	¥udlik	nyudlik
 ¥	u	gl	¥uglik	nyuglik
 ¥	u	gr	¥ugrik	nyugrik
+¥	u	gß	¥ugßik	nyugszik
 ¥	u	gz	¥ugzik	nyugzik
 ¥	u	jl	¥ujlik	nyujlik
 ¥	u	jz	¥ujzik	nyujzik
@@ -565,6 +577,7 @@ b	a	dl	badlik	badlik
 b	a	gl	baglik	baglik
 b	a	gr	bagrik	bagrik
 b	a	gß	bagßik	bagszik
+b	a	gz	bagzik	bagzik
 b	a	jl	bajlik	bajlik
 b	a	jz	bajzik	bajzik
 b	a	kl	baklik	baklik
@@ -727,6 +740,7 @@ b	o	kl	boklik	boklik
 b	o	kß	bokßik	bokszik
 b	o	ll	bollik	bollik
 b	o	lß	bolßik	bolszik
+b	o	ml	bomlik	bomlik
 b	o	ng	bongik	bongik
 b	o	rd	bordik	bordik
 b	o	rl	borlik	borlik
@@ -735,6 +749,7 @@ b	o	sd	bosdik	bosdik
 b	o	sl	boslik	boslik
 b	o	ßl	boßlik	boszlik
 b	o	ßp	boßpik	boszpik
+b	o	tl	botlik	botlik
 b	o	tß	botßik	botszik
 b	o	zl	bozlik	bozlik
 b	o	zz	bozzik	bozzik
@@ -840,6 +855,7 @@ b	ű	ßl	bűßlik	bűszlik
 b	ű	ßp	bűßpik	bűszpik
 b	ű	tl	bűtlik	bűtlik
 b	ű	tß	bűtßik	bűtszik
+b	ű	zl	bűzlik	bűzlik
 b	ű	zz	bűzzik	bűzzik
 ç	a	¥l	ça¥lik	csanylik
 ç	a	bz	çabzik	csabzik
@@ -915,6 +931,7 @@ b	ű	zz	bűzzik	bűzzik
 ç	e	sl	çeslik	cseslik
 ç	e	ßl	çeßlik	cseszlik
 ç	e	ßp	çeßpik	cseszpik
+ç	e	tl	çetlik	csetlik
 ç	e	tß	çetßik	csetszik
 ç	e	zl	çezlik	csezlik
 ç	e	zz	çezzik	csezzik
@@ -1057,6 +1074,7 @@ b	ű	zz	bűzzik	bűzzik
 ç	u	gz	çugzik	csugzik
 ç	u	jl	çujlik	csujlik
 ç	u	jz	çujzik	csujzik
+ç	u	kl	çuklik	csuklik
 ç	u	kß	çukßik	csukszik
 ç	u	ll	çullik	csullik
 ç	u	lß	çulßik	csulszik
@@ -1275,6 +1293,7 @@ d	í	rl	dírlik	dírlik
 d	í	rz	dírzik	dírzik
 d	í	sd	dísdik	dísdik
 d	í	sl	díslik	díslik
+d	í	ßl	díßlik	díszlik
 d	í	ßp	díßpik	díszpik
 d	í	tl	dítlik	dítlik
 d	í	tß	dítßik	dítszik
@@ -1309,6 +1328,7 @@ d	o	zz	dozzik	dozzik
 d	ö	¥l	dö¥lik	dönylik
 d	ö	bz	döbzik	döbzik
 d	ö	dl	dödlik	dödlik
+d	ö	gl	döglik	döglik
 d	ö	gr	dögrik	dögrik
 d	ö	gß	dögßik	dögszik
 d	ö	gz	dögzik	dögzik
@@ -1417,6 +1437,7 @@ f	a	gr	fagrik	fagrik
 f	a	gß	fagßik	fagszik
 f	a	gz	fagzik	fagzik
 f	a	jl	fajlik	fajlik
+f	a	jz	fajzik	fajzik
 f	a	kl	faklik	faklik
 f	a	kß	fakßik	fakszik
 f	a	ll	fallik	fallik
@@ -1467,8 +1488,10 @@ f	e	gl	feglik	feglik
 f	e	gr	fegrik	fegrik
 f	e	gß	fegßik	fegszik
 f	e	gz	fegzik	fegzik
+f	e	jl	fejlik	fejlik
 f	e	jz	fejzik	fejzik
 f	e	kl	feklik	feklik
+f	e	kß	fekßik	fekszik
 f	e	ll	fellik	fellik
 f	e	lß	felßik	felszik
 f	e	ml	femlik	femlik
@@ -1477,12 +1500,14 @@ f	e	rd	ferdik	ferdik
 f	e	rl	ferlik	ferlik
 f	e	rz	ferzik	ferzik
 f	e	sd	fesdik	fesdik
+f	e	sl	feslik	feslik
 f	e	ßl	feßlik	feszlik
 f	e	ßp	feßpik	feszpik
 f	e	tl	fetlik	fetlik
 f	e	tß	fetßik	fetszik
 f	e	zl	fezlik	fezlik
 f	e	zz	fezzik	fezzik
+f	é	¥l	fé¥lik	fénylik
 f	é	bz	fébzik	fébzik
 f	é	dl	fédlik	fédlik
 f	é	gl	féglik	féglik
@@ -1522,6 +1547,7 @@ f	i	kß	fikßik	fikszik
 f	i	ll	fillik	fillik
 f	i	lß	filßik	filszik
 f	i	ml	fimlik	fimlik
+f	i	ng	fingik	fingik
 f	i	rd	firdik	firdik
 f	i	rl	firlik	firlik
 f	i	rz	firzik	firzik
@@ -1565,6 +1591,7 @@ f	o	dl	fodlik	fodlik
 f	o	gl	foglik	foglik
 f	o	gr	fogrik	fogrik
 f	o	gß	fogßik	fogszik
+f	o	gz	fogzik	fogzik
 f	o	jl	fojlik	fojlik
 f	o	jz	fojzik	fojzik
 f	o	kl	foklik	foklik
@@ -1578,6 +1605,7 @@ f	o	rl	forlik	forlik
 f	o	rz	forzik	forzik
 f	o	sd	fosdik	fosdik
 f	o	sl	foslik	foslik
+f	o	ßl	foßlik	foszlik
 f	o	ßp	foßpik	foszpik
 f	o	tl	fotlik	fotlik
 f	o	tß	fotßik	fotszik
@@ -1650,6 +1678,7 @@ f	ü	ll	füllik	füllik
 f	ü	lß	fülßik	fülszik
 f	ü	ml	fümlik	fümlik
 f	ü	ng	füngik	füngik
+f	ü	rd	fürdik	fürdik
 f	ü	rl	fürlik	fürlik
 f	ü	rz	fürzik	fürzik
 f	ü	sd	füsdik	füsdik
@@ -1687,14 +1716,17 @@ f	ű	tß	fűtßik	fűtszik
 f	ű	zl	fűzlik	fűzlik
 f	ű	zz	fűzzik	fűzzik
 h	a	¥l	ha¥lik	hanylik
+h	a	bz	habzik	habzik
 h	a	dl	hadlik	hadlik
 h	a	gl	haglik	haglik
 h	a	gr	hagrik	hagrik
 h	a	gß	hagßik	hagszik
 h	a	gz	hagzik	hagzik
+h	a	jl	hajlik	hajlik
 h	a	jz	hajzik	hajzik
 h	a	kl	haklik	haklik
 h	a	kß	hakßik	hakszik
+h	a	ll	hallik	hallik
 h	a	lß	halßik	halszik
 h	a	ml	hamlik	hamlik
 h	a	ng	hangik	hangik
@@ -1722,6 +1754,7 @@ h	á	kl	háklik	háklik
 h	á	kß	hákßik	hákszik
 h	á	ll	hállik	hállik
 h	á	lß	hálßik	hálszik
+h	á	ml	hámlik	hámlik
 h	á	ng	hángik	hángik
 h	á	rd	hárdik	hárdik
 h	á	rl	hárlik	hárlik
@@ -1828,6 +1861,7 @@ h	í	lß	hílßik	hílszik
 h	í	ml	hímlik	hímlik
 h	í	ng	híngik	híngik
 h	í	rd	hírdik	hírdik
+h	í	rl	hírlik	hírlik
 h	í	rz	hírzik	hírzik
 h	í	sd	hísdik	hísdik
 h	í	sl	híslik	híslik
@@ -1900,6 +1934,7 @@ h	u	jl	hujlik	hujlik
 h	u	jz	hujzik	hujzik
 h	u	kl	huklik	huklik
 h	u	kß	hukßik	hukszik
+h	u	ll	hullik	hullik
 h	u	lß	hulßik	hulszik
 h	u	ml	humlik	humlik
 h	u	ng	hungik	hungik
@@ -2015,6 +2050,7 @@ j	á	sl	jáslik	jáslik
 j	á	ßl	jáßlik	jászlik
 j	á	ßp	jáßpik	jászpik
 j	á	tl	játlik	játlik
+j	á	tß	játßik	játszik
 j	á	zl	jázlik	jázlik
 j	á	zz	jázzik	jázzik
 j	e	¥l	je¥lik	jenylik
@@ -2343,6 +2379,7 @@ k	é	sd	késdik	késdik
 k	é	sl	késlik	késlik
 k	é	ßl	kéßlik	készlik
 k	é	ßp	kéßpik	készpik
+k	é	tl	kétlik	kétlik
 k	é	tß	kétßik	kétszik
 k	é	zl	kézlik	kézlik
 k	é	zz	kézzik	kézzik
@@ -2414,11 +2451,13 @@ k	o	sd	kosdik	kosdik
 k	o	sl	koslik	koslik
 k	o	ßl	koßlik	koszlik
 k	o	ßp	koßpik	koszpik
+k	o	tl	kotlik	kotlik
 k	o	tß	kotßik	kotszik
 k	o	zl	kozlik	kozlik
 k	o	zz	kozzik	kozzik
 k	ö	¥l	kö¥lik	könylik
 k	ö	bz	köbzik	köbzik
+k	ö	dl	ködlik	ködlik
 k	ö	gl	köglik	köglik
 k	ö	gr	kögrik	kögrik
 k	ö	gß	kögßik	kögszik
@@ -2559,6 +2598,7 @@ l	á	sl	láslik	láslik
 l	á	ßl	láßlik	lászlik
 l	á	ßp	láßpik	lászpik
 l	á	tl	látlik	látlik
+l	á	tß	látßik	látszik
 l	á	zl	lázlik	lázlik
 l	á	zz	lázzik	lázzik
 l	e	¥l	le¥lik	lenylik
@@ -2592,6 +2632,7 @@ l	é	dl	lédlik	lédlik
 l	é	gl	léglik	léglik
 l	é	gr	légrik	légrik
 l	é	gß	légßik	légszik
+l	é	gz	légzik	légzik
 l	é	jl	léjlik	léjlik
 l	é	jz	léjzik	léjzik
 l	é	kl	léklik	léklik
@@ -2791,6 +2832,7 @@ m	a	dl	madlik	madlik
 m	a	gl	maglik	maglik
 m	a	gr	magrik	magrik
 m	a	gß	magßik	magszik
+m	a	gz	magzik	magzik
 m	a	jl	majlik	majlik
 m	a	jz	majzik	majzik
 m	a	kl	maklik	maklik
@@ -2821,6 +2863,7 @@ m	á	jl	májlik	májlik
 m	á	jz	májzik	májzik
 m	á	kl	máklik	máklik
 m	á	kß	mákßik	mákszik
+m	á	ll	mállik	mállik
 m	á	lß	málßik	málszik
 m	á	ml	mámlik	mámlik
 m	á	ng	mángik	mángik
@@ -2858,6 +2901,7 @@ m	e	sl	meslik	meslik
 m	e	ßl	meßlik	meszlik
 m	e	ßp	meßpik	meszpik
 m	e	tl	metlik	metlik
+m	e	tß	metßik	metszik
 m	e	zl	mezlik	mezlik
 m	e	zz	mezzik	mezzik
 m	é	¥l	mé¥lik	ménylik
@@ -2956,6 +3000,7 @@ m	o	ng	mongik	mongik
 m	o	rd	mordik	mordik
 m	o	rl	morlik	morlik
 m	o	rz	morzik	morzik
+m	o	sd	mosdik	mosdik
 m	o	sl	moslik	moslik
 m	o	ßl	moßlik	moszlik
 m	o	ßp	moßpik	moszpik
@@ -3104,11 +3149,13 @@ p	á	jl	pájlik	pájlik
 p	á	jz	pájzik	pájzik
 p	á	kl	páklik	páklik
 p	á	kß	pákßik	pákszik
+p	á	ll	pállik	pállik
 p	á	lß	pálßik	pálszik
 p	á	ml	pámlik	pámlik
 p	á	ng	pángik	pángik
 p	á	rd	párdik	párdik
 p	á	rl	párlik	párlik
+p	á	rz	párzik	párzik
 p	á	sd	pásdik	pásdik
 p	á	sl	páslik	páslik
 p	á	ßl	páßlik	pászlik
@@ -3237,6 +3284,8 @@ p	o	lß	polßik	polszik
 p	o	ml	pomlik	pomlik
 p	o	ng	pongik	pongik
 p	o	rd	pordik	pordik
+p	o	rl	porlik	porlik
+p	o	rz	porzik	porzik
 p	o	sd	posdik	posdik
 p	o	sl	poslik	poslik
 p	o	ßl	poßlik	poszlik
@@ -3357,6 +3406,7 @@ r	a	gr	ragrik	ragrik
 r	a	gß	ragßik	ragszik
 r	a	gz	ragzik	ragzik
 r	a	jl	rajlik	rajlik
+r	a	jz	rajzik	rajzik
 r	a	kl	raklik	raklik
 r	a	kß	rakßik	rakszik
 r	a	ll	rallik	rallik
@@ -3407,6 +3457,7 @@ r	e	gl	reglik	reglik
 r	e	gr	regrik	regrik
 r	e	gß	regßik	regszik
 r	e	gz	regzik	regzik
+r	e	jl	rejlik	rejlik
 r	e	jz	rejzik	rejzik
 r	e	kl	reklik	reklik
 r	e	kß	rekßik	rekszik
@@ -3438,6 +3489,7 @@ r	é	kl	réklik	réklik
 r	é	kß	rékßik	rékszik
 r	é	ll	réllik	réllik
 r	é	lß	rélßik	rélszik
+r	é	ml	rémlik	rémlik
 r	é	ng	réngik	réngik
 r	é	rd	rérdik	rérdik
 r	é	rl	rérlik	rérlik
@@ -3515,6 +3567,7 @@ r	o	kl	roklik	roklik
 r	o	kß	rokßik	rokszik
 r	o	ll	rollik	rollik
 r	o	lß	rolßik	rolszik
+r	o	ml	romlik	romlik
 r	o	ng	rongik	rongik
 r	o	rd	rordik	rordik
 r	o	rl	rorlik	rorlik
@@ -3650,6 +3703,7 @@ s	a	rd	sardik	sardik
 s	a	rl	sarlik	sarlik
 s	a	rz	sarzik	sarzik
 s	a	sd	sasdik	sasdik
+s	a	sl	saslik	saslik
 s	a	ßl	saßlik	saszlik
 s	a	ßp	saßpik	saszpik
 s	a	tl	satlik	satlik
@@ -3672,6 +3726,7 @@ s	á	lß	sálßik	sálszik
 s	á	ml	sámlik	sámlik
 s	á	ng	sángik	sángik
 s	á	rd	sárdik	sárdik
+s	á	rl	sárlik	sárlik
 s	á	rz	sárzik	sárzik
 s	á	sd	sásdik	sásdik
 s	á	sl	sáslik	sáslik
@@ -3688,6 +3743,7 @@ s	e	gl	seglik	seglik
 s	e	gr	segrik	segrik
 s	e	gß	segßik	segszik
 s	e	gz	segzik	segzik
+s	e	jl	sejlik	sejlik
 s	e	jz	sejzik	sejzik
 s	e	kl	seklik	seklik
 s	e	kß	sekßik	sekszik
@@ -3741,6 +3797,7 @@ s	i	gß	sigßik	sigszik
 s	i	gz	sigzik	sigzik
 s	i	jl	sijlik	sijlik
 s	i	jz	sijzik	sijzik
+s	i	kl	siklik	siklik
 s	i	kß	sikßik	sikszik
 s	i	ll	sillik	sillik
 s	i	lß	silßik	silszik
@@ -3757,6 +3814,7 @@ s	i	tl	sitlik	sitlik
 s	i	tß	sitßik	sitszik
 s	i	zl	sizlik	sizlik
 s	i	zz	sizzik	sizzik
+s	í	¥l	sí¥lik	sínylik
 s	í	bz	síbzik	síbzik
 s	í	dl	sídlik	sídlik
 s	í	gl	síglik	síglik
@@ -3915,6 +3973,7 @@ s	ű	zz	sűzzik	sűzzik
 ß	a	¥l	ßa¥lik	szanylik
 ß	a	bz	ßabzik	szabzik
 ß	a	dl	ßadlik	szadlik
+ß	a	gl	ßaglik	szaglik
 ß	a	gr	ßagrik	szagrik
 ß	a	gß	ßagßik	szagszik
 ß	a	gz	ßagzik	szagzik
@@ -4261,6 +4320,7 @@ t	e	sl	teslik	teslik
 t	e	ßl	teßlik	teszlik
 t	e	ßp	teßpik	teszpik
 t	e	tl	tetlik	tetlik
+t	e	tß	tetßik	tetszik
 t	e	zl	tezlik	tezlik
 t	e	zz	tezzik	tezzik
 t	é	¥l	té¥lik	ténylik
@@ -4481,6 +4541,7 @@ v	a	gz	vagzik	vagzik
 v	a	jl	vajlik	vajlik
 v	a	jz	vajzik	vajzik
 v	a	kl	vaklik	vaklik
+v	a	kß	vakßik	vakszik
 v	a	ll	vallik	vallik
 v	a	lß	valßik	valszik
 v	a	ml	vamlik	vamlik
@@ -4524,6 +4585,7 @@ v	á	zl	vázlik	vázlik
 v	á	zz	vázzik	vázzik
 v	e	¥l	ve¥lik	venylik
 v	e	bz	vebzik	vebzik
+v	e	dl	vedlik	vedlik
 v	e	gl	veglik	veglik
 v	e	gr	vegrik	vegrik
 v	e	gß	vegßik	vegszik
@@ -4564,6 +4626,7 @@ v	é	ml	vémlik	vémlik
 v	é	ng	véngik	véngik
 v	é	rd	vérdik	vérdik
 v	é	rl	vérlik	vérlik
+v	é	rz	vérzik	vérzik
 v	é	sd	vésdik	vésdik
 v	é	sl	véslik	véslik
 v	é	ßl	véßlik	vészlik
@@ -4761,6 +4824,7 @@ z	a	gl	zaglik	zaglik
 z	a	gr	zagrik	zagrik
 z	a	gß	zagßik	zagszik
 z	a	gz	zagzik	zagzik
+z	a	jl	zajlik	zajlik
 z	a	jz	zajzik	zajzik
 z	a	kl	zaklik	zaklik
 z	a	kß	zakßik	zakszik
@@ -4989,6 +5053,7 @@ z	ü	jl	züjlik	züjlik
 z	ü	jz	züjzik	züjzik
 z	ü	kl	züklik	züklik
 z	ü	kß	zükßik	zükszik
+z	ü	ll	züllik	züllik
 z	ü	lß	zülßik	zülszik
 z	ü	ml	zümlik	zümlik
 z	ü	ng	züngik	züngik
