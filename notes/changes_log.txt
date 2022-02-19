@@ -1,3 +1,37 @@
+## 19-2-2022
+
+moving new code into build_nonce_word_lists
+
+## 15-2-2022
+
+new approach.
+
+build forms directly from real forms (not a generalised grammar).
+developed in musings_1 and musings_2.
+a LOT simpler but needs some more filtering. but that's where we were, so you know
+
+## 15-2-2022
+
+Rebrus comments
+long V + cc only when V=á/é
+*gb
+*ccc
+*lm
+*lp
+*écc#
+*gv
+ep verbs:
+kalapszik/kalapozik or baszakszik/baszakodik
+1: watch for vowels in "stem"
+2: second vowel in "stem" can't be ö
+1syl+szik nope (a few exceptions only)
+no ö in v2 (front labial harmony thing)
+
+
+## 14-2-2022
+
+sample_nonce_stems finished, need to check otka szavak google sheet by hand
+
 ## 13-2-2022
 
 got to sample_nonce_stems, but need to check it again. 
