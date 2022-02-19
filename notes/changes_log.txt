@@ -1,6 +1,9 @@
 ## 19-2-2022
 
-moving new code into build_nonce_word_lists
+moving new code into build_nonce_word_lists.
+to do:
+- talk to people
+- add gcm to code. it's missing now.
 
 ## 15-2-2022
 
