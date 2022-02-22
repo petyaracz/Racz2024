@@ -1,9 +1,33 @@
+## 22-2-22
+
+to do: check new word set in gsheet.
+prelim ideas:
+only coc/cöc/cec, no cuc/cüc
+simpler onsets! timike mondta
+
+## 21-2-2022
+
+put filtering to very very end, before gcm. done. to do: gcm
+
 ## 19-2-2022
 
 moving new code into build_nonce_word_lists.
 to do:
 - talk to people
 - add gcm to code. it's missing now.
+
+here we are
+https://docs.google.com/spreadsheets/d/1Iximhc57X1yYPwtm10ubvYfNaT7YL7jje5RkOilUAPw/edit?usp=sharing
+
+ideas for verbs:
+different var for 2sg plural form / 3sg
+no mixed voicing consonants in stem! maybe too serious. or at least not w/ sibilants? or not adjacent?
+no mixed front harmony stems? some keep slipping through filter.
+
+alternatively alternatively:
+build ep verbs from ep stems ONLY (not many of these) (maybe add custom onsets)
+-- not by stiching together ik verb stems and ep verb endings into bizarre frankenstein monsters (note that eszek/eszem verbs look miles less laughable currently)
+
 
 ## 15-2-2022
 

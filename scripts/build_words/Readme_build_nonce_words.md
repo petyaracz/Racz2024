@@ -50,13 +50,7 @@ All three variable patterns are strongly correlated with cross-referenced sets f
 
 ## Generating nonce words
 
-...
-
-## Filtering nonce words
-
-Words longer than two characters on the hunspell dictionary list were used as a reference list. Nonce words that were less than 2 Levenshtein distance from any word on the reference list or that initially completely overlapped with any word were removed. Nonce words that had less than 2 Levenshtein distance from any other one were removed.
-
-This restriction was used sparingly for monosyllabic verb stems.
+Three sets were drawn from Hungarian: bisyllabic nouns, bisyllabic -ik verbs, trisyllabic -ik verbs. Each list was divided into syllabic constituents and these were freely recombined to create nonce forms. Some combinations were filtered out as these do not occur in monomorphemic forms.
 
 ## Generating final forms
 
@@ -64,3 +58,9 @@ Some prompts and targets don't exist in Hungarian. These were not generated. Spe
 
 - No infinitives with -CVClik, so no CVClik prompts, áramlik, but not \*áramolik, since olik/ölik/elik don't exist.
 - For sz/d alternation verbs, -sz only works with person/number suffixes, never conditional/infinitive. (veszekszik/veszekedik: veszekszenek, veszekszik fine, \*veszekszene, \*veszekszeni don't exist).
+
+## Filtering nonce words
+
+Final words longer than two characters on the hunspell dictionary list were used as a reference list. Nonce words that were less than 2 Levenshtein distance from any word on the reference list or that initially completely overlapped with any word were removed. Nonce words that had less than 2 Levenshtein distance from any other one were removed.
+
+This restriction was used sparingly for monosyllabic verb stems.
