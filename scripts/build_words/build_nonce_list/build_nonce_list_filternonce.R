@@ -52,11 +52,11 @@ h_margins = h %>%
 
 # -- try -- #
 
-# nouns = nouns[1:2,]
-# ik_short_verbs = ik_short_verbs[1:2,]
-# ep_short_verbs = ep_short_verbs[1:2,]
-# ik_long_verbs = ik_long_verbs[1:2,]
-# ep_long_verbs = ep_long_verbs[1:2,]
+# nouns = nouns[1:8,]
+# ik_short_verbs = ik_short_verbs[1:8,]
+# ep_short_verbs = ep_short_verbs[1:8,]
+# ik_long_verbs = ik_long_verbs[1:8,]
+# ep_long_verbs = ep_long_verbs[1:8,]
 
 # -- filter -- #
 

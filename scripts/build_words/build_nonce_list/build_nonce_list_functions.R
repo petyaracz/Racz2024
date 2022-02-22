@@ -109,24 +109,28 @@ matchWrapper = function(d,h,h_margins,dist){
   return(d2)
 }
 
-# take word vector. match words against themselves, within each set. drop word if any other word is closer than 1 distance. technically this removes both members of such a pair and is overkill. return filtered vector
+# take word vector. iterate through words. if word i has a neighbour that's only 1 edit distance away, set boolean to F. otherwise set it to T. then exclude word i from comparison set and move on to word i+1. repeat. this means that if there's a pair of words that are 1 dist from one another, first one will be removed only. last word automatically wins. (no comparisons left). uses random seed.
 matchNonce = function(words){
-  formz = crossing(
-    tr = words,
-    match = words
-  ) %>%
-    filter(tr != match) %>%
-    mutate(
-      dist = stringdist::stringdist(tr, match, method = 'lv')
-    )
   
-  formz %<>%
-    group_by(tr) %>%
-    summarise(min_dist = min(dist))
+  words2 = sample(words)
+  passes = as.list(NULL)
+  for (i in 1:length(words2)){
+    
+    if (i == length(words2)) break
+    
+    word = words2[i]
+    words3 = words2[(i+1):length(words2)]
+    
+    dist = stringdist::stringdist(word, words3, method = 'lv') 
+    passes[[i]] = min(dist) > 1 
+    
+  }
+  passes = c(unlist(passes),T)
+  tibble(
+    tr = words2, #!!! how ugly
+    keep_self_diff = passes
+  )
   
-  formz %>% 
-    filter(min_dist > 1) %>%
-    pull(tr)
 }
 
 # wrap similarity function and subsetter, take d, return d with new col
@@ -136,8 +140,77 @@ similarityWrapper = function(d){
     pull(tr) %>% 
     matchNonce()
   
-  d %>% 
-    mutate(keep_self_diff = tr %in% dw)
+  left_join(d,dw) # since we want to keep words w/ !keep_enough and !keep_no
+}
+
+# take set of words w/ variant comparisons, sum up freqs per stem for gcm for real forms, return sum
+buildGCMtraining = function(dat){
+  
+  dat %>% 
+    group_by(stem) %>% 
+    summarise(
+      tr = transcribe(stem, 'single'),
+      freq_1 = sum(freq_1),
+      freq_2 = sum(freq_2),
+      log_odds = log( freq_1 / freq_2 )
+    ) %>% 
+    distinct()
+}
+
+# gcm! uses fur. expects training with word and category, word is string, category is string. expects test with word. uses future_map. returns test list with cat weights.
+furGCM = function(training,test,var_s=0.3,var_p=1,distance_metric='lv'){
+  
+  training = training %>% droplevels 
+  test = test %>% droplevels
+  
+  getTargetSimilarity = function(target,training){
+    
+    # we drop target from training in case we are cross-validating  
+    training = training %>% 
+      filter(
+        word != target,
+        !is.na(category)
+      )
+    
+    training$target = target # this line is for tidier bookkeeping
+    
+    # for each row in training, calculate target ~ word-in-row distance and pairwise similarity  
+    distances = training %>% 
+      mutate(dist = stringdist::stringdist(word,target, method = distance_metric),
+             pairwise.similarity = exp ( -dist / var_s )^var_p)
+    
+    # sum pairwise similarity for each category  
+    category.distances = distances %>% 
+      group_by(category) %>% 
+      summarise(summed.pairwise.similarity = sum(pairwise.similarity))
+    
+    # get total similarity  
+    total.similarity = distances %>% 
+      summarise(sum(pairwise.similarity)) %>% 
+      pull
+    
+    category.distances$total.similarity = total.similarity # this line is for tidier bookkeeping
+    
+    # get gcm weight of category  
+    form.total.category.distances = category.distances %>% 
+      mutate(gcm.weight = summed.pairwise.similarity / total.similarity) %>% 
+      select(category, gcm.weight)
+    
+    # spread gcm weights. we end up with a line which is 'target w1, w2... wn'  
+    ftdc.wide = form.total.category.distances %>% 
+      spread(category, gcm.weight)
+    
+    return(ftdc.wide)
+    
+  }
+  
+  # for each target in test, get ftdc.wide using getTargetsimilarity and put into new cell, unnest. we won.  
+  result = test %>% 
+    mutate(similarities = furrr::future_map(word, ~ getTargetSimilarity(., training))) %>% 
+    select(word, similarities) %>% 
+    unnest(cols = c(similarities))
+  
+  return(result)
 }
 
 # -- vars -- #
