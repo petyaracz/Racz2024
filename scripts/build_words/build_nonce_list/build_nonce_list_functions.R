@@ -6,9 +6,9 @@
 # code logic:
 # 1. draw 2-syl nouns and ik verbs from frequency list
 # 2. break noun and verb forms into pieces and recombine those into new nonce words. do this separately for nouns, 1syl verbs, 2 syl verbs.
-# 3. draw some forms at random from these lists, filter them across similarity to existing words, similarity to each other.
-# 4. build epenthetic verb stems. (nouns and ik verbs are already there anyway!)
-# 5. gcm
+# 4. build final forms.
+# 5. take final forms, filter them across similarity to existing words, similarity to each other.
+# 6. gcm
 
 ## in: c, the webcorpus frequency list I made. xpostags for each var.
 ## out: nonce forms with endings for the psychopy script
@@ -78,7 +78,7 @@ checkVH = function(tr){
     ( str_detect(v1, '[aáeéií]') & str_detect(v2, '[aáeéií]') ) |
     ( str_detect(v1, '[oóöőuúüű]') & str_detect(v2, '[oóöőuúüű]') )
   frontness = 
-    ( str_detect(v1, '[aáoóuűúií]') & str_detect(v2, '[aáoóuűúií]') ) |
+    ( str_detect(v1, '[aáoóuúií]') & str_detect(v2, '[aáoóuúií]') ) |
     ( str_detect(v1, '[eéiíöőüű]') & str_detect(v2, '[eéiíöőüű]') )
   
   roundness & frontness  
@@ -96,6 +96,17 @@ matchMargins = function(w,my_h){
   pass1 = !any(str_detect(w, glue('^{my_h}')))
   pass2 = !any(str_detect(w, glue('{my_h}$')))
   pass1 | pass2
+}
+
+# parallelised wrapper around the two matching functions
+matchWrapper = function(d,h,h_margins,dist){
+  d2 = d %>%
+    rowwise() %>%
+    mutate(
+      keep_enough_distance = future_map_lgl(tr, ~ matchReal(., h, dist)),
+      keep_no_overlap = future_map_lgl(tr, ~ matchMargins(., h_margins))
+    )
+  return(d2)
 }
 
 # take word vector. match words against themselves, within each set. drop word if any other word is closer than 1 distance. technically this removes both members of such a pair and is overkill. return filtered vector
@@ -116,6 +127,17 @@ matchNonce = function(words){
   formz %>% 
     filter(min_dist > 1) %>%
     pull(tr)
+}
+
+# wrap similarity function and subsetter, take d, return d with new col
+similarityWrapper = function(d){
+  dw = d %>% 
+    filter(keep_enough_distance,keep_no_overlap) %>% 
+    pull(tr) %>% 
+    matchNonce()
+  
+  d %>% 
+    mutate(keep_self_diff = tr %in% dw)
 }
 
 # -- vars -- #
