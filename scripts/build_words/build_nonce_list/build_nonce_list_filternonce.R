@@ -21,28 +21,31 @@ ep = read_tsv('resource/nonce_words/ep_unfilt_sample.tsv')
 # -- setup -- #
 
 # sets to filter
-nouns = distinct(n,tr)
+nouns = distinct(n,tr) %>% 
+  filter(nchar(tr) > 4)
 ik_short_verbs = filter(ik, nsyl == 1) %>% 
   select(tr)
 ik_long_verbs = filter(ik, nsyl == 2) %>% 
   select(tr)
 ep_short_verbs = ep %>% 
-  mutate(nsyl = str_count(stem, '[aáeéiíoóöőuúüű]')) %>% 
   filter(nsyl == 1) %>% 
   distinct(prompt_cc_tr) %>% 
   mutate(tr = prompt_cc_tr)
 ep_long_verbs = ep %>% 
-  mutate(nsyl = str_count(stem, '[aáeéiíoóöőuúüű]')) %>% 
   filter(nsyl == 2) %>% 
   distinct(prompt_cc_tr) %>% 
   mutate(tr = prompt_cc_tr)
 
+range(nchar(nouns$tr))
+range(nchar(ep_long_verbs$tr))
+range(nchar(ik_long_verbs$tr))
+
 # comparison sets
 h_n_vl = h %>% 
-  filter(nchar(tr) > 2, nchar(tr) <= 7) %>% 
+  filter(nchar(tr) > 5, nchar(tr) <= 9) %>% 
   pull(tr)
 h_vs = h %>% 
-  filter(nchar(tr) > 2, nchar(tr) <= 7) %>% 
+  filter(nchar(tr) > 2, nchar(tr) <= 6) %>% 
   pull(tr)
 
 # relevant sets for margin search (short existing words)
@@ -91,19 +94,11 @@ tictoc::tic('ep long verbs')
 ep_long_verbs2 = matchWrapper(d = ep_long_verbs, h = h_n_vl, h_margins = h_margins, dist = 2)
 tictoc::toc()
 
-glue('doing within-set similarity...')
-## filtering based on similarity to other nonce words in group
-nouns3 = similarityWrapper(nouns2)
-ik_short_verbs3 = similarityWrapper(ik_short_verbs2)
-ep_short_verbs3 = similarityWrapper(ep_short_verbs2)
-ik_long_verbs3 = similarityWrapper(ik_long_verbs2)
-ep_long_verbs3 = similarityWrapper(ep_long_verbs2)
-
 # -- recombine -- #
-n2 = right_join(nouns3,n)
-ik2 = bind_rows(ik_short_verbs3,ik_long_verbs3) %>% 
+n2 = right_join(nouns2,n)
+ik2 = bind_rows(ik_short_verbs2,ik_long_verbs2) %>% 
   right_join(ik,.)
-ep2 = bind_rows(ep_short_verbs3,ep_long_verbs3) %>% 
+ep2 = bind_rows(ep_short_verbs2,ep_long_verbs2) %>% 
   right_join(ep,.)
 
 # -- write -- #

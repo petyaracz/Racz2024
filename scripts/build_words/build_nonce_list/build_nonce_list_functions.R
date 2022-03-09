@@ -8,13 +8,13 @@
 # 2. break noun and verb forms into pieces and recombine those into new nonce words. do this separately for nouns, 1syl verbs, 2 syl verbs.
 # 4. build final forms.
 # 5. take final forms, filter them across similarity to existing words, similarity to each other.
-# 6. gcm
+# 6. some similarity thing
 
 ## in: c, the webcorpus frequency list I made. xpostags for each var.
 ## out: nonce forms with endings for the psychopy script
 ## general notes
-# the code is broken up into four parts. part one involves indexing a very large file and part three takes ages. which part is active is controlled by four vars (build1-4) that are on by default meaning that no parts are active and so running the code does nothing.
-# the starting points are bisyllabic mixed V nouns (makes sense), and separately mono and bisyllabic verbs. words are taken apart into chunks that take phonotactics into account (word onset, vowel with all the C after it) and then combined freely. this results in stem V combinations that don't really exist (e+ö etc) so those are filtered out.
+# the code is broken up into four parts. part one involves indexing a very large file and part three takes ages.
+# the starting points are bisyllabic mixed V nouns (makes sense), and separately mono and bisyllabic -CCik verbs that end in a derivational suffix (lik zik szik Vdik). words are taken apart into chunks that take phonotactics into account (word onset, vowel with all the C after it, etc) and then combined freely. this results in stem V combinations that don't really exist (e+ö etc) so those are filtered out.
 
 # -- header -- #
 
@@ -110,7 +110,7 @@ matchWrapper = function(d,h,h_margins,dist){
 }
 
 # take word vector. iterate through words. if word i has a neighbour that's only 1 edit distance away, set boolean to F. otherwise set it to T. then exclude word i from comparison set and move on to word i+1. repeat. this means that if there's a pair of words that are 1 dist from one another, first one will be removed only. last word automatically wins. (no comparisons left). uses random seed.
-matchNonce = function(words){
+matchNonce = function(words,my_dist){
   
   words2 = sample(words)
   passes = as.list(NULL)
@@ -122,7 +122,7 @@ matchNonce = function(words){
     words3 = words2[(i+1):length(words2)]
     
     dist = stringdist::stringdist(word, words3, method = 'lv') 
-    passes[[i]] = min(dist) > 1 
+    passes[[i]] = min(dist) > my_dist 
     
   }
   passes = c(unlist(passes),T)
@@ -131,16 +131,6 @@ matchNonce = function(words){
     keep_self_diff = passes
   )
   
-}
-
-# wrap similarity function and subsetter, take d, return d with new col
-similarityWrapper = function(d){
-  dw = d %>% 
-    filter(keep_enough_distance,keep_no_overlap) %>% 
-    pull(tr) %>% 
-    matchNonce()
-  
-  left_join(d,dw) # since we want to keep words w/ !keep_enough and !keep_no
 }
 
 # take set of words w/ variant comparisons, sum up freqs per stem for gcm for real forms, return sum

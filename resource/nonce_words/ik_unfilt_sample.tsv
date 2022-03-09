@@ -1,2049 +1,536 @@
-prompt	tr	nsyl	target_k	target_m
-zéjik	zéjik	1	zéjek	zéjem
-dukszik	dukßik	1	dukszok	dukszom
-kaszik	kaßik	1	kaszok	kaszom
-högyik	hö©ik	1	högyök	högyöm
-búrdik	búrdik	1	búrdok	búrdom
-gyugyik	©u©ik	1	gyugyok	gyugyom
-mölik	mölik	1	mölök	mölöm
-pálszik	pálßik	1	pálszok	pálszom
-jejlik	jejlik	1	jejlek	jejlem
-zángik	zángik	1	zángok	zángom
-fásdik	fásdik	1	fásdok	fásdom
-maslik	maslik	1	maslok	maslom
-csúglik	çúglik	1	csúglok	csúglom
-gyogszik	©ogßik	1	gyogszok	gyogszom
-csonylik	ço¥lik	1	csonylok	csonylom
-lüszlik	lüßlik	1	lüszlök	lüszlöm
-zűrlik	zűrlik	1	zűrlök	zűrlöm
-rábzik	rábzik	1	rábzok	rábzom
-mőtlik	mőtlik	1	mőtlök	mőtlöm
-zilyik	zi¬ik	1	zilyok	zilyom
-bábzik	bábzik	1	bábzok	bábzom
-lájlik	lájlik	1	lájlok	lájlom
-bozik	bozik	1	bozok	bozom
-nyujzik	¥ujzik	1	nyujzok	nyujzom
-nébzik	nébzik	1	nébzek	nébzem
-sítszik	sítßik	1	sítszok	sítszom
-húpik	húpik	1	húpok	húpom
-abzik	abzik	1	abzok	abzom
-hítszik	hítßik	1	hítszok	hítszom
-jómlik	jómlik	1	jómlok	jómlom
-nyüsdik	¥üsdik	1	nyüsdök	nyüsdöm
-sisdik	sisdik	1	sisdok	sisdom
-túlyik	tú¬ik	1	túlyok	túlyom
-lirlik	lirlik	1	lirlok	lirlom
-vozzik	vozzik	1	vozzok	vozzom
-húsdik	húsdik	1	húsdok	húsdom
-gyűnylik	©ű¥lik	1	gyűnylök	gyűnylöm
-vűrdik	vűrdik	1	vűrdök	vűrdöm
-csöszpik	çößpik	1	csöszpök	csöszpöm
-kárzik	kárzik	1	kárzok	kárzom
-tűjlik	tűjlik	1	tűjlök	tűjlöm
-kűszik	kűßik	1	kűszök	kűszöm
-böszpik	bößpik	1	böszpök	böszpöm
-turik	turik	1	turok	turom
-nakik	nakik	1	nakok	nakom
-dírdik	dírdik	1	dírdok	dírdom
-sigszik	sigßik	1	sigszok	sigszom
-gyűgszik	©űgßik	1	gyűgszök	gyűgszöm
-lebzik	lebzik	1	lebzek	lebzem
-nyuszlik	¥ußlik	1	nyuszlok	nyuszlom
-érzik	érzik	1	érzek	érzem
-vílyik	ví¬ik	1	vílyok	vílyom
-hajzik	hajzik	1	hajzok	hajzom
-norik	norik	1	norok	norom
-gyöpik	©öpik	1	gyöpök	gyöpöm
-dingik	dingik	1	dingok	dingom
-döszpik	dößpik	1	döszpök	döszpöm
-acsik	açik	1	acsok	acsom
-músdik	músdik	1	músdok	músdom
-nomik	nomik	1	nomok	nomom
-húslik	húslik	1	húslok	húslom
-győmik	©őmik	1	győmök	győmöm
-csuglik	çuglik	1	csuglok	csuglom
-késdik	késdik	1	késdek	késdem
-jezik	jezik	1	jezek	jezem
-vívik	vívik	1	vívok	vívom
-nyásdik	¥ásdik	1	nyásdok	nyásdom
-dúsik	dúsik	1	dúsok	dúsom
-nyarik	¥arik	1	nyarok	nyarom
-szasik	ßasik	1	szasok	szasom
-rékik	rékik	1	rékek	rékem
-nyútlik	¥útlik	1	nyútlok	nyútlom
-sűgzik	sűgzik	1	sűgzök	sűgzöm
-gyüjlik	©üjlik	1	gyüjlök	gyüjlöm
-rőszik	rőßik	1	rőszök	rőszöm
-lójlik	lójlik	1	lójlok	lójlom
-típik	típik	1	típok	típom
-györik	©örik	1	györök	györöm
-vérik	vérik	1	vérek	vérem
-győkik	©őkik	1	győkök	győköm
-csesdik	çesdik	1	csesdek	csesdem
-kujzik	kujzik	1	kujzok	kujzom
-tűszpik	tűßpik	1	tűszpök	tűszpöm
-szűgzik	ßűgzik	1	szűgzök	szűgzöm
-gyikszik	©ikßik	1	gyokszik	gyomszik
-rölik	rölik	1	rölök	rölöm
-ázik	ázik	1	ázok	ázom
-nyírik	¥írik	1	nyírok	nyírom
-hukik	hukik	1	hukok	hukom
-lüszpik	lüßpik	1	lüszpök	lüszpöm
-zúngik	zúngik	1	zúngok	zúngom
-szísdik	ßísdik	1	szísdok	szísdom
-zujlik	zujlik	1	zujlok	zujlom
-csézzik	çézzik	1	csézzek	csézzem
-zúlik	zúlik	1	zúlok	zúlom
-csosdik	çosdik	1	csosdok	csosdom
-tólyik	tó¬ik	1	tólyok	tólyom
-hákszik	hákßik	1	hákszok	hákszom
-gyómlik	©ómlik	1	gyómlok	gyómlom
-főgzik	főgzik	1	főgzök	főgzöm
-varlik	varlik	1	varlok	varlom
-pevik	pevik	1	pevek	pevem
-vulik	vulik	1	vulok	vulom
-júpik	júpik	1	júpok	júpom
-csíjik	çíjik	1	csíjok	csíjom
-jöcsik	jöçik	1	jöcsök	jöcsöm
-bészlik	béßlik	1	bészlek	bészlem
-fínik	fínik	1	fínok	fínom
-solszik	solßik	1	solszok	solszom
-szícsik	ßíçik	1	szícsok	szícsom
-inylik	i¥lik	1	inylok	inylom
-gyéjik	©éjik	1	gyéjek	gyéjem
-sénylik	sé¥lik	1	sénylek	sénylem
-néllik	néllik	1	néllek	néllem
-hüglik	hüglik	1	hüglök	hüglöm
-biszlik	bißlik	1	biszlok	biszlom
-úzzik	úzzik	1	úzzok	úzzom
-núrlik	núrlik	1	núrlok	núrlom
-tószlik	tóßlik	1	tószlok	tószlom
-sűdlik	sűdlik	1	sűdlök	sűdlöm
-százlik	ßázlik	1	százlok	százlom
-csusdik	çusdik	1	csusdok	csusdom
-esdik	esdik	1	esdek	esdem
-bíjzik	bíjzik	1	bíjzok	bíjzom
-núngik	núngik	1	núngok	núngom
-vitlik	vitlik	1	vitlok	vitlom
-nátszik	nátßik	1	nátszok	nátszom
-tajlik	tajlik	1	tajlok	tajlom
-szirdik	ßirdik	1	szirdok	szirdom
-hecsik	heçik	1	hecsek	hecsem
-lémlik	lémlik	1	lémlek	lémlem
-köglik	köglik	1	köglök	köglöm
-bógyik	bó©ik	1	bógyok	bógyom
-zinik	zinik	1	zinok	zinom
-vüzlik	vüzlik	1	vüzlök	vüzlöm
-vűslik	vűslik	1	vűslök	vűslöm
-tűnylik	tű¥lik	1	tűnylök	tűnylöm
-kőrzik	kőrzik	1	kőrzök	kőrzöm
-muzik	muzik	1	muzok	muzom
-tőnylik	tő¥lik	1	tőnylök	tőnylöm
-ajlik	ajlik	1	ajlok	ajlom
-mebzik	mebzik	1	mebzek	mebzem
-csávik	çávik	1	csávok	csávom
-csújlik	çújlik	1	csújlok	csújlom
-taklik	taklik	1	taklok	taklom
-turzik	turzik	1	turzok	turzom
-fálik	fálik	1	fálok	fálom
-gyészik	©éßik	1	gyészek	gyészem
-vaklik	vaklik	1	vaklok	vaklom
-mipik	mipik	1	mipok	mipom
-jonylik	jo¥lik	1	jonylok	jonylom
-fílszik	fílßik	1	fílszok	fílszom
-zékik	zékik	1	zékek	zékem
-túgzik	túgzik	1	túgzok	túgzom
-sűsdik	sűsdik	1	sűsdök	sűsdöm
-szetszik	ßetßik	1	szetszek	szetszem
-bűgzik	bűgzik	1	bűgzök	bűgzöm
-nyurdik	¥urdik	1	nyurdok	nyurdom
-vígrik	vígrik	1	vígrok	vígrom
-kügszik	kügßik	1	kügszök	kügszöm
-nűsik	nűsik	1	nűsök	nűsöm
-műgyik	mű©ik	1	műgyök	műgyöm
-gyurdik	©urdik	1	gyurdok	gyurdom
-jókik	jókik	1	jókok	jókom
-hülyik	hü¬ik	1	hülyök	hülyöm
-pámlik	pámlik	1	pámlok	pámlom
-tujzik	tujzik	1	tujzok	tujzom
-razzik	razzik	1	razzok	razzom
-fályik	fá¬ik	1	fályok	fályom
-vegszik	vegßik	1	vegszek	vegszem
-vájik	vájik	1	vájok	vájom
-núgyik	nú©ik	1	núgyok	núgyom
-súlyik	sú¬ik	1	súlyok	súlyom
-sülszik	sülßik	1	sülszök	sülszöm
-mógszik	mógßik	1	mógszok	mógszom
-szikik	ßikik	1	szokik	szomik
-henylik	he¥lik	1	henylek	henylem
-jorik	jorik	1	jorok	jorom
-gyucsik	©uçik	1	gyucsok	gyucsom
-vagzik	vagzik	1	vagzok	vagzom
-júgszik	júgßik	1	júgszok	júgszom
-páglik	páglik	1	páglok	páglom
-tígszik	tígßik	1	tígszok	tígszom
-gyútlik	©útlik	1	gyútlok	gyútlom
-csungik	çungik	1	csungok	csungom
-béjzik	béjzik	1	béjzek	béjzem
-dólyik	dó¬ik	1	dólyok	dólyom
-tölik	tölik	1	tölök	tölöm
-sílyik	sí¬ik	1	sílyok	sílyom
-nyügrik	¥ügrik	1	nyügrök	nyügröm
-zutszik	zutßik	1	zutszok	zutszom
-vütlik	vütlik	1	vütlök	vütlöm
-nyulyik	¥u¬ik	1	nyulyok	nyulyom
-míjik	míjik	1	míjok	míjom
-kógrik	kógrik	1	kógrok	kógrom
-nyábzik	¥ábzik	1	nyábzok	nyábzom
-píkszik	píkßik	1	píkszok	píkszom
-résik	résik	1	rések	résem
-risik	risik	1	risok	risom
-nónik	nónik	1	nónok	nónom
-vozlik	vozlik	1	vozlok	vozlom
-nucsik	nuçik	1	nucsok	nucsom
-dűlszik	dűlßik	1	dűlszök	dűlszöm
-megyik	me©ik	1	megyek	megyem
-jútlik	jútlik	1	jútlok	jútlom
-tömik	tömik	1	tömök	tömöm
-csótszik	çótßik	1	csótszok	csótszom
-pőmik	pőmik	1	pőmök	pőmöm
-dúgrik	dúgrik	1	dúgrok	dúgrom
-nyazik	¥azik	1	nyazok	nyazom
-zisik	zisik	1	zisok	zisom
-noszpik	noßpik	1	noszpok	noszpom
-rölszik	rölßik	1	rölszök	rölszöm
-faslik	faslik	1	faslok	faslom
-muglik	muglik	1	muglok	muglom
-tőgszik	tőgßik	1	tőgszök	tőgszöm
-fakik	fakik	1	fakok	fakom
-pürik	pürik	1	pürök	püröm
-rogyik	ro©ik	1	rogyok	rogyom
-lúszlik	lúßlik	1	lúszlok	lúszlom
-vúszik	vúßik	1	vúszok	vúszom
-gyümlik	©ümlik	1	gyümlök	gyümlöm
-fívik	fívik	1	fívok	fívom
-lípik	lípik	1	lípok	lípom
-vümik	vümik	1	vümök	vümöm
-korik	korik	1	korok	korom
-míglik	míglik	1	míglok	míglom
-vigzik	vigzik	1	vigzok	vigzom
-dúzzik	dúzzik	1	dúzzok	dúzzom
-kűnik	kűnik	1	kűnök	kűnöm
-pémlik	pémlik	1	pémlek	pémlem
-kegrik	kegrik	1	kegrek	kegrem
-búlik	búlik	1	búlok	búlom
-zungik	zungik	1	zungok	zungom
-píglik	píglik	1	píglok	píglom
-szonik	ßonik	1	szonok	szonom
-fésdik	fésdik	1	fésdek	fésdem
-csólszik	çólßik	1	csólszok	csólszom
-zásdik	zásdik	1	zásdok	zásdom
-uzlik	uzlik	1	uzlok	uzlom
-zúsdik	zúsdik	1	zúsdok	zúsdom
-nevik	nevik	1	nevek	nevem
-dungik	dungik	1	dungok	dungom
-rőgrik	rőgrik	1	rőgrök	rőgröm
-vibzik	vibzik	1	vibzok	vibzom
-nyozik	¥ozik	1	nyozok	nyozom
-pűpik	pűpik	1	pűpök	pűpöm
-möjlik	möjlik	1	möjlök	möjlöm
-müllik	müllik	1	müllök	müllöm
-köszpik	kößpik	1	köszpök	köszpöm
-csűmlik	çűmlik	1	csűmlök	csűmlöm
-jéglik	jéglik	1	jéglek	jéglem
-jatlik	jatlik	1	jatlok	jatlom
-nyordik	¥ordik	1	nyordok	nyordom
-nadlik	nadlik	1	nadlok	nadlom
-fószpik	fóßpik	1	fószpok	fószpom
-folyik	fo¬ik	1	folyok	folyom
-csegrik	çegrik	1	csegrek	csegrem
-zérlik	zérlik	1	zérlek	zérlem
-jőjzik	jőjzik	1	jőjzök	jőjzöm
-szészpik	ßéßpik	1	szészpek	szészpem
-főgyik	fő©ik	1	főgyök	főgyöm
-szükszik	ßükßik	1	szükszök	szükszöm
-túrlik	túrlik	1	túrlok	túrlom
-gyokik	©okik	1	gyokok	gyokom
-jévik	jévik	1	jévek	jévem
-jéslik	jéslik	1	jéslek	jéslem
-rotlik	rotlik	1	rotlok	rotlom
-pőlszik	pőlßik	1	pőlszök	pőlszöm
-zelik	zelik	1	zelek	zelem
-dővik	dővik	1	dővök	dővöm
-avik	avik	1	avok	avom
-pőzzik	pőzzik	1	pőzzök	pőzzöm
-lőzik	lőzik	1	lőzök	lőzöm
-hasdik	hasdik	1	hasdok	hasdom
-rölyik	rö¬ik	1	rölyök	rölyöm
-gyoslik	©oslik	1	gyoslok	gyoslom
-adlik	adlik	1	adlok	adlom
-hötlik	hötlik	1	hötlök	hötlöm
-fórdik	fórdik	1	fórdok	fórdom
-loglik	loglik	1	loglok	loglom
-hűnik	hűnik	1	hűnök	hűnöm
-zözik	zözik	1	zözök	zözöm
-nyórzik	¥órzik	1	nyórzok	nyórzom
-mutszik	mutßik	1	mutszok	mutszom
-jozik	jozik	1	jozok	jozom
-szigyik	ßi©ik	1	szigyok	szigyom
-tícsik	tíçik	1	tícsok	tícsom
-jűzlik	jűzlik	1	jűzlök	jűzlöm
-dőmik	dőmik	1	dőmök	dőmöm
-nyarzik	¥arzik	1	nyarzok	nyarzom
-jocsik	joçik	1	jocsok	jocsom
-börlik	börlik	1	börlök	börlöm
-suszlik	sußlik	1	suszlok	suszlom
-fünylik	fü¥lik	1	fünylök	fünylöm
-kőjzik	kőjzik	1	kőjzök	kőjzöm
-zókik	zókik	1	zókok	zókom
-mízzik	mízzik	1	mízzok	mízzom
-űslik	űslik	1	űslök	űslöm
-császpik	çáßpik	1	császpok	császpom
-húgzik	húgzik	1	húgzok	húgzom
-sisik	sisik	1	sisok	sisom
-núvik	núvik	1	núvok	núvom
-détszik	détßik	1	détszek	détszem
-zordik	zordik	1	zordok	zordom
-zajzik	zajzik	1	zajzok	zajzom
-jüglik	jüglik	1	jüglök	jüglöm
-savik	savik	1	savok	savom
-tászik	táßik	1	tászok	tászom
-pácsik	páçik	1	pácsok	pácsom
-nyűmlik	¥űmlik	1	nyűmlök	nyűmlöm
-tügyik	tü©ik	1	tügyök	tügyöm
-égyik	é©ik	1	égyek	égyem
-hüslik	hüslik	1	hüslök	hüslöm
-gyűrik	©űrik	1	gyűrök	gyűröm
-csümlik	çümlik	1	csümlök	csümlöm
-sapik	sapik	1	sapok	sapom
-súbzik	súbzik	1	súbzok	súbzom
-túglik	túglik	1	túglok	túglom
-deslik	deslik	1	deslek	deslem
-vazlik	vazlik	1	vazlok	vazlom
-vőszlik	vőßlik	1	vőszlök	vőszlöm
-sogrik	sogrik	1	sogrok	sogrom
-tídlik	tídlik	1	tídlok	tídlom
-kúlik	kúlik	1	kúlok	kúlom
-szúngik	ßúngik	1	szúngok	szúngom
-dalszik	dalßik	1	dalszok	dalszom
-seszlik	seßlik	1	seszlek	seszlem
-gyútszik	©útßik	1	gyútszok	gyútszom
-dogszik	dogßik	1	dogszok	dogszom
-szonylik	ßo¥lik	1	szonylok	szonylom
-csulszik	çulßik	1	csulszok	csulszom
-zúklik	zúklik	1	zúklok	zúklom
-szószpik	ßóßpik	1	szószpok	szószpom
-szujzik	ßujzik	1	szujzok	szujzom
-kőszlik	kőßlik	1	kőszlök	kőszlöm
-szejzik	ßejzik	1	szejzek	szejzem
-nyémik	¥émik	1	nyémek	nyémem
-jünylik	jü¥lik	1	jünylök	jünylöm
-jűslik	jűslik	1	jűslök	jűslöm
-jőszlik	jőßlik	1	jőszlök	jőszlöm
-szilszik	ßilßik	1	szilszok	szilszom
-púrlik	púrlik	1	púrlok	púrlom
-naszlik	naßlik	1	naszlok	naszlom
-názik	názik	1	názok	názom
-kíjlik	kíjlik	1	kíjlok	kíjlom
-böpik	böpik	1	böpök	böpöm
-naklik	naklik	1	naklok	naklom
-pügyik	pü©ik	1	pügyök	pügyöm
-gyéjlik	©éjlik	1	gyéjlek	gyéjlem
-bárzik	bárzik	1	bárzok	bárzom
-poglik	poglik	1	poglok	poglom
-pícsik	píçik	1	pícsok	pícsom
-gyógszik	©ógßik	1	gyógszok	gyógszom
-hűjlik	hűjlik	1	hűjlök	hűjlöm
-sócsik	sóçik	1	sócsok	sócsom
-sóslik	sóslik	1	sóslok	sóslom
-pötlik	pötlik	1	pötlök	pötlöm
-öpik	öpik	1	öpök	öpöm
-urdik	urdik	1	urdok	urdom
-szúdlik	ßúdlik	1	szúdlok	szúdlom
-dénylik	dé¥lik	1	dénylek	dénylem
-fúlyik	fú¬ik	1	fúlyok	fúlyom
-lőlik	lőlik	1	lőlök	lőlöm
-fíklik	fíklik	1	fíklok	fíklom
-nyúzlik	¥úzlik	1	nyúzlok	nyúzlom
-csájik	çájik	1	csájok	csájom
-pőtlik	pőtlik	1	pőtlök	pőtlöm
-ritlik	ritlik	1	ritlok	ritlom
-gyúcsik	©úçik	1	gyúcsok	gyúcsom
-kőrik	kőrik	1	kőrök	kőröm
-úgrik	úgrik	1	úgrok	úgrom
-müsdik	müsdik	1	müsdök	müsdöm
-umik	umik	1	umok	umom
-inik	inik	1	inok	inom
-nekszik	nekßik	1	nekszek	nekszem
-rírdik	rírdik	1	rírdok	rírdom
-rárik	rárik	1	rárok	rárom
-széjzik	ßéjzik	1	széjzek	széjzem
-écsik	éçik	1	écsek	écsem
-zürik	zürik	1	zürök	züröm
-fálszik	fálßik	1	fálszok	fálszom
-tórdik	tórdik	1	tórdok	tórdom
-csínik	çínik	1	csínok	csínom
-zibzik	zibzik	1	zibzok	zibzom
-fúsik	fúsik	1	fúsok	fúsom
-sűrzik	sűrzik	1	sűrzök	sűrzöm
-jangik	jangik	1	jangok	jangom
-besdik	besdik	1	besdek	besdem
-súrdik	súrdik	1	súrdok	súrdom
-dáslik	dáslik	1	dáslok	dáslom
-tóklik	tóklik	1	tóklok	tóklom
-gyírdik	©írdik	1	gyírdok	gyírdom
-zeszlik	zeßlik	1	zeszlek	zeszlem
-jenik	jenik	1	jenek	jenem
-nőglik	nőglik	1	nőglök	nőglöm
-müjzik	müjzik	1	müjzök	müjzöm
-nyizlik	¥izlik	1	nyizlok	nyizlom
-gyükik	©ükik	1	gyükök	gyüköm
-nüszik	nüßik	1	nüszök	nüszöm
-őnik	őnik	1	őnök	őnöm
-tőlyik	tő¬ik	1	tőlyök	tőlyöm
-gyajzik	©ajzik	1	gyajzok	gyajzom
-linylik	li¥lik	1	linylok	linylom
-kurzik	kurzik	1	kurzok	kurzom
-csökszik	çökßik	1	csökszök	csökszöm
-zorik	zorik	1	zorok	zorom
-vátszik	vátßik	1	vátszok	vátszom
-zálik	zálik	1	zálok	zálom
-kösik	kösik	1	kösök	kösöm
-nyükszik	¥ükßik	1	nyükszök	nyükszöm
-döklik	döklik	1	döklök	döklöm
-büvik	büvik	1	büvök	büvöm
-rúrik	rúrik	1	rúrok	rúrom
-píszik	píßik	1	píszok	píszom
-csolik	çolik	1	csolok	csolom
-lűsdik	lűsdik	1	lűsdök	lűsdöm
-mislik	mislik	1	mislok	mislom
-oslik	oslik	1	oslok	oslom
-csőszlik	çőßlik	1	csőszlök	csőszlöm
-járik	járik	1	járok	járom
-jézlik	jézlik	1	jézlek	jézlem
-morzik	morzik	1	morzok	morzom
-dúngik	dúngik	1	dúngok	dúngom
-kájlik	kájlik	1	kájlok	kájlom
-tójzik	tójzik	1	tójzok	tójzom
-űbzik	űbzik	1	űbzök	űbzöm
-súdlik	súdlik	1	súdlok	súdlom
-rüszlik	rüßlik	1	rüszlök	rüszlöm
-mírik	mírik	1	mírok	mírom
-pódlik	pódlik	1	pódlok	pódlom
-jápik	jápik	1	jápok	jápom
-mószik	móßik	1	mószok	mószom
-ővik	ővik	1	ővök	ővöm
-nügrik	nügrik	1	nügrök	nügröm
-nyörzik	¥örzik	1	nyörzök	nyörzöm
-püzik	püzik	1	püzök	püzöm
-csúnik	çúnik	1	csúnok	csúnom
-főzzik	főzzik	1	főzzök	főzzöm
-viklik	viklik	1	voklik	vomlik
-úcsik	úçik	1	úcsok	úcsom
-pálik	pálik	1	pálok	pálom
-gyunik	©unik	1	gyunok	gyunom
-nöszpik	nößpik	1	nöszpök	nöszpöm
-torik	torik	1	torok	torom
-loslik	loslik	1	loslok	loslom
-teglik	teglik	1	teglek	teglem
-züjzik	züjzik	1	züjzök	züjzöm
-pogzik	pogzik	1	pogzok	pogzom
-küzzik	küzzik	1	küzzök	küzzöm
-szőglik	ßőglik	1	szőglök	szőglöm
-songik	songik	1	songok	songom
-bizik	bizik	1	bizok	bizom
-búmlik	búmlik	1	búmlok	búmlom
-szokszik	ßokßik	1	szokszok	szokszom
-pöllik	pöllik	1	pöllök	pöllöm
-végzik	végzik	1	végzek	végzem
-püzlik	püzlik	1	püzlök	püzlöm
-jíglik	jíglik	1	jíglok	jíglom
-lénylik	lé¥lik	1	lénylek	lénylem
-szudlik	ßudlik	1	szudlok	szudlom
-bürdik	bürdik	1	bürdök	bürdöm
-vótszik	vótßik	1	vótszok	vótszom
-zállik	zállik	1	zállok	zállom
-róklik	róklik	1	róklok	róklom
-vízik	vízik	1	vízok	vízom
-csitszik	çitßik	1	csitszok	csitszom
-zöllik	zöllik	1	zöllök	zöllöm
-csunik	çunik	1	csunok	csunom
-szegszik	ßegßik	1	szegszek	szegszem
-dutszik	dutßik	1	dutszok	dutszom
-holik	holik	1	holok	holom
-halyik	ha¬ik	1	halyok	halyom
-zelszik	zelßik	1	zelszek	zelszem
-zűklik	zűklik	1	zűklök	zűklöm
-gyozlik	©ozlik	1	gyozlok	gyozlom
-fügzik	fügzik	1	fügzök	fügzöm
-hőkszik	hőkßik	1	hőkszök	hőkszöm
-rumlik	rumlik	1	rumlok	rumlom
-nyüpik	¥üpik	1	nyüpök	nyüpöm
-csűjzik	çűjzik	1	csűjzök	csűjzöm
-széklik	ßéklik	1	széklek	széklem
-déjlik	déjlik	1	déjlek	déjlem
-pelszik	pelßik	1	pelszek	pelszem
-böbzik	böbzik	1	böbzök	böbzöm
-rulik	rulik	1	rulok	rulom
-sőpik	sőpik	1	sőpök	sőpöm
-zájzik	zájzik	1	zájzok	zájzom
-csőmik	çőmik	1	csőmök	csőmöm
-másik	másik	1	mások	másom
-dasik	dasik	1	dasok	dasom
-hógyik	hó©ik	1	hógyok	hógyom
-rümik	rümik	1	rümök	rümöm
-csazik	çazik	1	csazok	csazom
-télyik	té¬ik	1	télyek	télyem
-fúnylik	fú¥lik	1	fúnylok	fúnylom
-ríjzik	ríjzik	1	ríjzok	ríjzom
-győgszik	©őgßik	1	győgszök	győgszöm
-lőszpik	lőßpik	1	lőszpök	lőszpöm
-lókik	lókik	1	lókok	lókom
-foglik	foglik	1	foglok	foglom
-sálik	sálik	1	sálok	sálom
-tüllik	tüllik	1	tüllök	tüllöm
-szűnik	ßűnik	1	szűnök	szűnöm
-zólik	zólik	1	zólok	zólom
-gyúbzik	©úbzik	1	gyúbzok	gyúbzom
-sűszlik	sűßlik	1	sűszlök	sűszlöm
-küszpik	küßpik	1	küszpök	küszpöm
-fűklik	fűklik	1	fűklök	fűklöm
-jöpik	jöpik	1	jöpök	jöpöm
-kacsik	kaçik	1	kacsok	kacsom
-csálik	çálik	1	csálok	csálom
-üzzik	üzzik	1	üzzök	üzzöm
-hubzik	hubzik	1	hubzok	hubzom
-csirlik	çirlik	1	csirlok	csirlom
-vezlik	vezlik	1	vezlek	vezlem
-csazzik	çazzik	1	csazzok	csazzom
-csájzik	çájzik	1	csájzok	csájzom
-szesdik	ßesdik	1	szesdek	szesdem
-tomlik	tomlik	1	tomlok	tomlom
-fókik	fókik	1	fókok	fókom
-nuvik	nuvik	1	nuvok	nuvom
-csátszik	çátßik	1	csátszok	csátszom
-düszlik	düßlik	1	düszlök	düszlöm
-síjlik	síjlik	1	síjlok	síjlom
-dónik	dónik	1	dónok	dónom
-lánylik	lá¥lik	1	lánylok	lánylom
-júlik	júlik	1	júlok	júlom
-szójzik	ßójzik	1	szójzok	szójzom
-rönik	rönik	1	rönök	rönöm
-föllik	föllik	1	föllök	föllöm
-pagszik	pagßik	1	pagszok	pagszom
-rűkik	rűkik	1	rűkök	rűköm
-nyirlik	¥irlik	1	nyirlok	nyirlom
-heglik	heglik	1	heglek	heglem
-víllik	víllik	1	víllok	víllom
-hüllik	hüllik	1	hüllök	hüllöm
-sépik	sépik	1	sépek	sépem
-putlik	putlik	1	putlok	putlom
-limik	limik	1	limok	limom
-bórzik	bórzik	1	bórzok	bórzom
-kegszik	kegßik	1	kegszek	kegszem
-sígrik	sígrik	1	sígrok	sígrom
-gyutszik	©utßik	1	gyutszok	gyutszom
-amik	amik	1	amok	amom
-jukik	jukik	1	jukok	jukom
-múlik	múlik	1	múlok	múlom
-rúszik	rúßik	1	rúszok	rúszom
-nöklik	nöklik	1	nöklök	nöklöm
-diszpik	dißpik	1	diszpok	diszpom
-vóllik	vóllik	1	vóllok	vóllom
-nérdik	nérdik	1	nérdek	nérdem
-nállik	nállik	1	nállok	nállom
-gyiszpik	©ißpik	1	gyiszpok	gyiszpom
-tíklik	tíklik	1	tíklok	tíklom
-vószpik	vóßpik	1	vószpok	vószpom
-kürdik	kürdik	1	kürdök	kürdöm
-lócsik	lóçik	1	lócsok	lócsom
-bögzik	bögzik	1	bögzök	bögzöm
-lugzik	lugzik	1	lugzok	lugzom
-őlyik	ő¬ik	1	őlyök	őlyöm
-tűszik	tűßik	1	tűszök	tűszöm
-pokik	pokik	1	pokok	pokom
-ásik	ásik	1	ások	ásom
-hélszik	hélßik	1	hélszek	hélszem
-másdik	másdik	1	másdok	másdom
-kánik	kánik	1	kánok	kánom
-pögrik	pögrik	1	pögrök	pögröm
-vősdik	vősdik	1	vősdök	vősdöm
-jacsik	jaçik	1	jacsok	jacsom
-járdik	járdik	1	járdok	járdom
-begszik	begßik	1	begszek	begszem
-csórdik	çórdik	1	csórdok	csórdom
-fögzik	fögzik	1	fögzök	fögzöm
-vúkszik	vúkßik	1	vúkszok	vúkszom
-kűnylik	kű¥lik	1	kűnylök	kűnylöm
-rúvik	rúvik	1	rúvok	rúvom
-pikszik	pikßik	1	pokszik	pomszik
-borlik	borlik	1	borlok	borlom
-doszlik	doßlik	1	doszlok	doszlom
-kullik	kullik	1	kullok	kullom
-dúklik	dúklik	1	dúklok	dúklom
-zeslik	zeslik	1	zeslek	zeslem
-tovik	tovik	1	tovok	tovom
-dusdik	dusdik	1	dusdok	dusdom
-osik	osik	1	osok	osom
-zőzik	zőzik	1	zőzök	zőzöm
-darlik	darlik	1	darlok	darlom
-jámlik	jámlik	1	jámlok	jámlom
-pópik	pópik	1	pópok	pópom
-fogrik	fogrik	1	fogrok	fogrom
-fólik	fólik	1	fólok	fólom
-csógszik	çógßik	1	csógszok	csógszom
-nyúllik	¥úllik	1	nyúllok	nyúllom
-mardik	mardik	1	mardok	mardom
-kögyik	kö©ik	1	kögyök	kögyöm
-júgyik	jú©ik	1	júgyok	júgyom
-úllik	úllik	1	úllok	úllom
-pűmik	pűmik	1	pűmök	pűmöm
-nyoszpik	¥oßpik	1	nyoszpok	nyoszpom
-szebzik	ßebzik	1	szebzek	szebzem
-mamlik	mamlik	1	mamlok	mamlom
-pöjlik	pöjlik	1	pöjlök	pöjlöm
-retlik	retlik	1	retlek	retlem
-győrlik	©őrlik	1	győrlök	győrlöm
-davik	davik	1	davok	davom
-sinylik	si¥lik	1	sinylok	sinylom
-csürlik	çürlik	1	csürlök	csürlöm
-lukik	lukik	1	lukok	lukom
-csarik	çarik	1	csarok	csarom
-gyinylik	©i¥lik	1	gyinylok	gyinylom
-nyovik	¥ovik	1	nyovok	nyovom
-nyúbzik	¥úbzik	1	nyúbzok	nyúbzom
-sónik	sónik	1	sónok	sónom
-kavik	kavik	1	kavok	kavom
-röszpik	rößpik	1	röszpök	röszpöm
-fángik	fángik	1	fángok	fángom
-zűlyik	zű¬ik	1	zűlyök	zűlyöm
-csúklik	çúklik	1	csúklok	csúklom
-rizik	rizik	1	rizok	rizom
-ízzik	ízzik	1	ízzok	ízzom
-nótlik	nótlik	1	nótlok	nótlom
-nyácsik	¥áçik	1	nyácsok	nyácsom
-zugzik	zugzik	1	zugzok	zugzom
-lojzik	lojzik	1	lojzok	lojzom
-csórlik	çórlik	1	csórlok	csórlom
-lérlik	lérlik	1	lérlek	lérlem
-pírik	pírik	1	pírok	pírom
-ratlik	ratlik	1	ratlok	ratlom
-bangik	bangik	1	bangok	bangom
-nyőzlik	¥őzlik	1	nyőzlök	nyőzlöm
-sevik	sevik	1	sevek	sevem
-témlik	témlik	1	témlek	témlem
-jíszpik	jíßpik	1	jíszpok	jíszpom
-lorzik	lorzik	1	lorzok	lorzom
-lőzzik	lőzzik	1	lőzzök	lőzzöm
-gyunylik	©u¥lik	1	gyunylok	gyunylom
-lazlik	lazlik	1	lazlok	lazlom
-térlik	térlik	1	térlek	térlem
-sérzik	sérzik	1	sérzek	sérzem
-kejzik	kejzik	1	kejzek	kejzem
-müszlik	müßlik	1	müszlök	müszlöm
-csázzik	çázzik	1	csázzok	csázzom
-hőrzik	hőrzik	1	hőrzök	hőrzöm
-bosdik	bosdik	1	bosdok	bosdom
-zólyik	zó¬ik	1	zólyok	zólyom
-nenik	nenik	1	nenek	nenem
-pozik	pozik	1	pozok	pozom
-hozlik	hozlik	1	hozlok	hozlom
-züdlik	züdlik	1	züdlök	züdlöm
-hűszik	hűßik	1	hűszök	hűszöm
-láklik	láklik	1	láklok	láklom
-dunik	dunik	1	dunok	dunom
-csuklik	çuklik	1	csuklok	csuklom
-túslik	túslik	1	túslok	túslom
-haklik	haklik	1	haklok	haklom
-mükszik	mükßik	1	mükszök	mükszöm
-tépik	tépik	1	tépek	tépem
-fékik	fékik	1	fékek	fékem
-sátszik	sátßik	1	sátszok	sátszom
-datlik	datlik	1	datlok	datlom
-szalyik	ßa¬ik	1	szalyok	szalyom
-csíngik	çíngik	1	csíngok	csíngom
-nuzlik	nuzlik	1	nuzlok	nuzlom
-vőklik	vőklik	1	vőklök	vőklöm
-mövik	mövik	1	mövök	mövöm
-vejik	vejik	1	vejek	vejem
-üklik	üklik	1	üklök	üklöm
-szúszpik	ßúßpik	1	szúszpok	szúszpom
-fenik	fenik	1	fenek	fenem
-dúszlik	dúßlik	1	dúszlok	dúszlom
-silyik	si¬ik	1	silyok	silyom
-féglik	féglik	1	féglek	féglem
-gyádlik	©ádlik	1	gyádlok	gyádlom
-nagyik	na©ik	1	nagyok	nagyom
-gyemlik	©emlik	1	gyemlek	gyemlem
-gyígrik	©ígrik	1	gyígrok	gyígrom
-lúkik	lúkik	1	lúkok	lúkom
-csűkszik	çűkßik	1	csűkszök	csűkszöm
-forik	forik	1	forok	forom
-tősdik	tősdik	1	tősdök	tősdöm
-gyúrdik	©úrdik	1	gyúrdok	gyúrdom
-jíngik	jíngik	1	jíngok	jíngom
-szarzik	ßarzik	1	szarzok	szarzom
-paklik	paklik	1	paklok	paklom
-vorzik	vorzik	1	vorzok	vorzom
-zezik	zezik	1	zezek	zezem
-múgyik	mú©ik	1	múgyok	múgyom
-jősik	jősik	1	jősök	jősöm
-csugyik	çu©ik	1	csugyok	csugyom
-péjzik	péjzik	1	péjzek	péjzem
-búvik	búvik	1	búvok	búvom
-bérik	bérik	1	bérek	bérem
-szijik	ßijik	1	szijok	szijom
-ősik	ősik	1	ősök	ősöm
-győzik	©őzik	1	győzök	győzöm
-zőklik	zőklik	1	zőklök	zőklöm
-gyitszik	©itßik	1	gyitszok	gyitszom
-jűlszik	jűlßik	1	jűlszök	jűlszöm
-nüsik	nüsik	1	nüsök	nüsöm
-hegrik	hegrik	1	hegrek	hegrem
-féllik	féllik	1	féllek	féllem
-fűtszik	fűtßik	1	fűtszök	fűtszöm
-csotszik	çotßik	1	csotszok	csotszom
-tüglik	tüglik	1	tüglök	tüglöm
-lőmlik	lőmlik	1	lőmlök	lőmlöm
-kécsik	kéçik	1	kécsek	kécsem
-feszpik	feßpik	1	feszpek	feszpem
-kósik	kósik	1	kósok	kósom
-zúgyik	zú©ik	1	zúgyok	zúgyom
-punik	punik	1	punok	punom
-júnylik	jú¥lik	1	júnylok	júnylom
-nyőzik	¥őzik	1	nyőzök	nyőzöm
-senylik	se¥lik	1	senylek	senylem
-kizzik	kizzik	1	kizzok	kizzom
-füklik	füklik	1	füklök	füklöm
-rüjik	rüjik	1	rüjök	rüjöm
-zürdik	zürdik	1	zürdök	zürdöm
-zíngik	zíngik	1	zíngok	zíngom
-kötlik	kötlik	1	kötlök	kötlöm
-csészik	çéßik	1	csészek	csészem
-tekszik	tekßik	1	tekszek	tekszem
-tilik	tilik	1	tilok	tilom
-vingik	vingik	1	vingok	vingom
-szúsik	ßúsik	1	szúsok	szúsom
-rüllik	rüllik	1	rüllök	rüllöm
-zőllik	zőllik	1	zőllök	zőllöm
-nyőlszik	¥őlßik	1	nyőlszök	nyőlszöm
-dazzik	dazzik	1	dazzok	dazzom
-pómik	pómik	1	pómok	pómom
-tojik	tojik	1	tojok	tojom
-szemlik	ßemlik	1	szemlek	szemlem
-sászlik	sáßlik	1	sászlok	sászlom
-nurik	nurik	1	nurok	nurom
-micsik	miçik	1	micsok	micsom
-síszik	síßik	1	síszok	síszom
-kűrlik	kűrlik	1	kűrlök	kűrlöm
-féngik	féngik	1	féngek	féngem
-hugzik	hugzik	1	hugzok	hugzom
-cseszlik	çeßlik	1	cseszlek	cseszlem
-tászlik	táßlik	1	tászlok	tászlom
-pölik	pölik	1	pölök	pölöm
-nyógrik	¥ógrik	1	nyógrok	nyógrom
-bunik	bunik	1	bunok	bunom
-csözlik	çözlik	1	csözlök	csözlöm
-gyígyik	©í©ik	1	gyígyok	gyígyom
-csóslik	çóslik	1	csóslok	csóslom
-rákik	rákik	1	rákok	rákom
-vűlyik	vű¬ik	1	vűlyök	vűlyöm
-szazik	ßazik	1	szazok	szazom
-fíjik	fíjik	1	fíjok	fíjom
-lőtszik	lőtßik	1	lőtszök	lőtszöm
-zószik	zóßik	1	zószok	zószom
-ónik	ónik	1	ónok	ónom
-jűcsik	jűçik	1	jűcsök	jűcsöm
-nardik	nardik	1	nardok	nardom
-kijik	kijik	1	kijok	kijom
-lalik	lalik	1	lalok	lalom
-vókik	vókik	1	vókok	vókom
-zéllik	zéllik	1	zéllek	zéllem
-csemlik	çemlik	1	csemlek	csemlem
-kodlik	kodlik	1	kodlok	kodlom
-pésik	pésik	1	pések	pésem
-mosik	mosik	1	mosok	mosom
-röjik	röjik	1	röjök	röjöm
-víjzik	víjzik	1	víjzok	víjzom
-vógzik	vógzik	1	vógzok	vógzom
-setszik	setßik	1	setszek	setszem
-tirdik	tirdik	1	tirdok	tirdom
-ríjik	ríjik	1	ríjok	ríjom
-rajlik	rajlik	1	rajlok	rajlom
-szákik	ßákik	1	szákok	szákom
-szuszik	ßußik	1	szuszok	szuszom
-kejlik	kejlik	1	kejlek	kejlem
-töklik	töklik	1	töklök	töklöm
-kümik	kümik	1	kümök	kümöm
-csójlik	çójlik	1	csójlok	csójlom
-lígszik	lígßik	1	lígszok	lígszom
-dószik	dóßik	1	dószok	dószom
-dűgyik	dű©ik	1	dűgyök	dűgyöm
-pétlik	pétlik	1	pétlek	pétlem
-gyúmlik	©úmlik	1	gyúmlok	gyúmlom
-nyűngik	¥űngik	1	nyűngök	nyűngöm
-zugyik	zu©ik	1	zugyok	zugyom
-migrik	migrik	1	migrok	migrom
-csújzik	çújzik	1	csújzok	csújzom
-kúcsik	kúçik	1	kúcsok	kúcsom
-rürik	rürik	1	rürök	rüröm
-nésik	nésik	1	nések	nésem
-rójik	rójik	1	rójok	rójom
-dóllik	dóllik	1	dóllok	dóllom
-ítlik	ítlik	1	ítlok	ítlom
-hőkik	hőkik	1	hőkök	hőköm
-toszpik	toßpik	1	toszpok	toszpom
-csőzlik	çőzlik	1	csőzlök	csőzlöm
-sakik	sakik	1	sakok	sakom
-lusik	lusik	1	lusok	lusom
-múrdik	múrdik	1	múrdok	múrdom
-sámlik	sámlik	1	sámlok	sámlom
-szisdik	ßisdik	1	szisdok	szisdom
-lüjik	lüjik	1	lüjök	lüjöm
-hárzik	hárzik	1	hárzok	hárzom
-bászpik	báßpik	1	bászpok	bászpom
-támlik	támlik	1	támlok	támlom
-hujzik	hujzik	1	hujzok	hujzom
-ratszik	ratßik	1	ratszok	ratszom
-sibzik	sibzik	1	sibzok	sibzom
-zőtlik	zőtlik	1	zőtlök	zőtlöm
-gyaglik	©aglik	1	gyaglok	gyaglom
-kiglik	kiglik	1	kiglok	kiglom
-dűzzik	dűzzik	1	dűzzök	dűzzöm
-szevik	ßevik	1	szevek	szevem
-zönylik	zö¥lik	1	zönylök	zönylöm
-nóngik	nóngik	1	nóngok	nóngom
-szómik	ßómik	1	szómok	szómom
-csójik	çójik	1	csójok	csójom
-hanik	hanik	1	hanok	hanom
-tuslik	tuslik	1	tuslok	tuslom
-baszlik	baßlik	1	baszlok	baszlom
-szétlik	ßétlik	1	szétlek	szétlem
-rűkszik	rűkßik	1	rűkszök	rűkszöm
-űkszik	űkßik	1	űkszök	űkszöm
-zogyik	zo©ik	1	zogyok	zogyom
-csőgrik	çőgrik	1	csőgrök	csőgröm
-jűgszik	jűgßik	1	jűgszök	jűgszöm
-hótlik	hótlik	1	hótlok	hótlom
-búrik	búrik	1	búrok	búrom
-részlik	réßlik	1	részlek	részlem
-rögrik	rögrik	1	rögrök	rögröm
-zűsik	zűsik	1	zűsök	zűsöm
-mütszik	mütßik	1	mütszök	mütszöm
-remik	remik	1	remek	remem
-núlszik	núlßik	1	núlszok	núlszom
-dígyik	dí©ik	1	dígyok	dígyom
-lonylik	lo¥lik	1	lonylok	lonylom
-gyárdik	©árdik	1	gyárdok	gyárdom
-nyikik	¥ikik	1	nyokik	nyomik
-nizzik	nizzik	1	nizzok	nizzom
-únik	únik	1	únok	únom
-gyekszik	©ekßik	1	gyekszek	gyekszem
-pöcsik	pöçik	1	pöcsök	pöcsöm
-gyűlik	©űlik	1	gyűlök	gyűlöm
-mújzik	mújzik	1	mújzok	mújzom
-néjlik	néjlik	1	néjlek	néjlem
-nalszik	nalßik	1	nalszok	nalszom
-mébzik	mébzik	1	mébzek	mébzem
-físzpik	fíßpik	1	físzpok	físzpom
-nyéslik	¥éslik	1	nyéslek	nyéslem
-júvik	júvik	1	júvok	júvom
-szóllik	ßóllik	1	szóllok	szóllom
-sádlik	sádlik	1	sádlok	sádlom
-nőlik	nőlik	1	nőlök	nőlöm
-figlik	figlik	1	figlok	figlom
-sűglik	sűglik	1	sűglök	sűglöm
-szűszlik	ßűßlik	1	szűszlök	szűszlöm
-tünylik	tü¥lik	1	tünylök	tünylöm
-nyucsik	¥uçik	1	nyucsok	nyucsom
-dobzik	dobzik	1	dobzok	dobzom
-pisdik	pisdik	1	pisdok	pisdom
-jűgrik	jűgrik	1	jűgrök	jűgröm
-szerlik	ßerlik	1	szerlek	szerlem
-luszpik	lußpik	1	luszpok	luszpom
-sérdik	sérdik	1	sérdek	sérdem
-gyürdik	©ürdik	1	gyürdök	gyürdöm
-zazlik	zazlik	1	zazlok	zazlom
-nyíszik	¥íßik	1	nyíszok	nyíszom
-zísdik	zísdik	1	zísdok	zísdom
-bácsik	báçik	1	bácsok	bácsom
-pűlyik	pű¬ik	1	pűlyök	pűlyöm
-jágzik	jágzik	1	jágzok	jágzom
-omlik	omlik	1	omlok	omlom
-kűlszik	kűlßik	1	kűlszök	kűlszöm
-gyűdlik	©űdlik	1	gyűdlök	gyűdlöm
-őglik	őglik	1	őglök	őglöm
-lajlik	lajlik	1	lajlok	lajlom
-ucsik	uçik	1	ucsok	ucsom
-nyadlik	¥adlik	1	nyadlok	nyadlom
-madlik	madlik	1	madlok	madlom
-sőngik	sőngik	1	sőngök	sőngöm
-tímlik	tímlik	1	tímlok	tímlom
-nűzzik	nűzzik	1	nűzzök	nűzzöm
-lűrik	lűrik	1	lűrök	lűröm
-mórlik	mórlik	1	mórlok	mórlom
-nyűrdik	¥űrdik	1	nyűrdök	nyűrdöm
-szíklik	ßíklik	1	szíklok	szíklom
-nájik	nájik	1	nájok	nájom
-csepik	çepik	1	csepek	csepem
-túllik	túllik	1	túllok	túllom
-nulik	nulik	1	nulok	nulom
-fökik	fökik	1	fökök	fököm
-síllik	síllik	1	síllok	síllom
-künylik	kü¥lik	1	künylök	künylöm
-fővik	fővik	1	fővök	fővöm
-píslik	píslik	1	píslok	píslom
-csögzik	çögzik	1	csögzök	csögzöm
-züszik	züßik	1	züszök	züszöm
-szötlik	ßötlik	1	szötlök	szötlöm
-nuzik	nuzik	1	nuzok	nuzom
-fírik	fírik	1	fírok	fírom
-vángik	vángik	1	vángok	vángom
-bűbzik	bűbzik	1	bűbzök	bűbzöm
-rígszik	rígßik	1	rígszok	rígszom
-sészik	séßik	1	sészek	sészem
-szoglik	ßoglik	1	szoglok	szoglom
-lűjik	lűjik	1	lűjök	lűjöm
-pűszlik	pűßlik	1	pűszlök	pűszlöm
-széllik	ßéllik	1	széllek	széllem
-hészik	héßik	1	hészek	hészem
-tüszlik	tüßlik	1	tüszlök	tüszlöm
-zötszik	zötßik	1	zötszök	zötszöm
-szomlik	ßomlik	1	szomlok	szomlom
-sigrik	sigrik	1	sigrok	sigrom
-jölyik	jö¬ik	1	jölyök	jölyöm
-beslik	beslik	1	beslek	beslem
-zűgyik	zű©ik	1	zűgyök	zűgyöm
-ákszik	ákßik	1	ákszok	ákszom
-szölik	ßölik	1	szölök	szölöm
-mupik	mupik	1	mupok	mupom
-gyébzik	©ébzik	1	gyébzek	gyébzem
-rítszik	rítßik	1	rítszok	rítszom
-vőgzik	vőgzik	1	vőgzök	vőgzöm
-tugrik	tugrik	1	tugrok	tugrom
-jugzik	jugzik	1	jugzok	jugzom
-hökik	hökik	1	hökök	hököm
-pírlik	pírlik	1	pírlok	pírlom
-dagszik	dagßik	1	dagszok	dagszom
-vösik	vösik	1	vösök	vösöm
-szaszlik	ßaßlik	1	szaszlok	szaszlom
-ülyik	ü¬ik	1	ülyök	ülyöm
-csöslik	çöslik	1	csöslök	csöslöm
-bókik	bókik	1	bókok	bókom
-lizlik	lizlik	1	lizlok	lizlom
-buslik	buslik	1	buslok	buslom
-jusik	jusik	1	jusok	jusom
-fellik	fellik	1	fellek	fellem
-hotszik	hotßik	1	hotszok	hotszom
-hönik	hönik	1	hönök	hönöm
-túrdik	túrdik	1	túrdok	túrdom
-hóglik	hóglik	1	hóglok	hóglom
-mögyik	mö©ik	1	mögyök	mögyöm
-dűsik	dűsik	1	dűsök	dűsöm
-zegszik	zegßik	1	zegszek	zegszem
-fátszik	fátßik	1	fátszok	fátszom
-bőcsik	bőçik	1	bőcsök	bőcsöm
-nómik	nómik	1	nómok	nómom
-lézlik	lézlik	1	lézlek	lézlem
-kőjik	kőjik	1	kőjök	kőjöm
-zalszik	zalßik	1	zalszok	zalszom
-bámlik	bámlik	1	bámlok	bámlom
-csímlik	çímlik	1	csímlok	csímlom
-aslik	aslik	1	aslok	aslom
-rinik	rinik	1	rinok	rinom
-vöjik	vöjik	1	vöjök	vöjöm
-nyöszpik	¥ößpik	1	nyöszpök	nyöszpöm
-jutlik	jutlik	1	jutlok	jutlom
-nőszpik	nőßpik	1	nőszpök	nőszpöm
-hungik	hungik	1	hungok	hungom
-csúrzik	çúrzik	1	csúrzok	csúrzom
-hűglik	hűglik	1	hűglök	hűglöm
-rejzik	rejzik	1	rejzek	rejzem
-nyidlik	¥idlik	1	nyidlok	nyidlom
-nojlik	nojlik	1	nojlok	nojlom
-sácsik	sáçik	1	sácsok	sácsom
-ukszik	ukßik	1	ukszok	ukszom
-herik	herik	1	herek	herem
-kúrik	kúrik	1	kúrok	kúrom
-dűllik	dűllik	1	dűllök	dűllöm
-vúlyik	vú¬ik	1	vúlyok	vúlyom
-főtlik	főtlik	1	főtlök	főtlöm
-lidlik	lidlik	1	lidlok	lidlom
-hérlik	hérlik	1	hérlek	hérlem
-öjik	öjik	1	öjök	öjöm
-lugrik	lugrik	1	lugrok	lugrom
-dekik	dekik	1	dekek	dekem
-börik	börik	1	börök	böröm
-hóklik	hóklik	1	hóklok	hóklom
-szűbzik	ßűbzik	1	szűbzök	szűbzöm
-rőngik	rőngik	1	rőngök	rőngöm
-rórlik	rórlik	1	rórlok	rórlom
-gyűvik	©űvik	1	gyűvök	gyűvöm
-tézik	tézik	1	tézek	tézem
-cságszik	çágßik	1	cságszok	cságszom
-pujlik	pujlik	1	pujlok	pujlom
-nápik	nápik	1	nápok	nápom
-söslik	söslik	1	söslök	söslöm
-csurik	çurik	1	csurok	csurom
-sűlyik	sű¬ik	1	sűlyök	sűlyöm
-kónik	kónik	1	kónok	kónom
-zakik	zakik	1	zakok	zakom
-csűlik	çűlik	1	csűlök	csűlöm
-sollik	sollik	1	sollok	sollom
-reglik	reglik	1	reglek	reglem
-tíslik	tíslik	1	tíslok	tíslom
-víklik	víklik	1	víklok	víklom
-ragrik	ragrik	1	ragrok	ragrom
-híszpik	híßpik	1	híszpok	híszpom
-toglik	toglik	1	toglok	toglom
-tűrik	tűrik	1	tűrök	tűröm
-noklik	noklik	1	noklok	noklom
-büklik	büklik	1	büklök	büklöm
-pőslik	pőslik	1	pőslök	pőslöm
-vikszik	vikßik	1	vokszik	vomszik
-mobzik	mobzik	1	mobzok	mobzom
-fúgrik	fúgrik	1	fúgrok	fúgrom
-paglik	paglik	1	paglok	paglom
-szírdik	ßírdik	1	szírdok	szírdom
-nyúszik	¥úßik	1	nyúszok	nyúszom
-kűzzik	kűzzik	1	kűzzök	kűzzöm
-ögyik	ö©ik	1	ögyök	ögyöm
-dápik	dápik	1	dápok	dápom
-csisdik	çisdik	1	csisdok	csisdom
-lutszik	lutßik	1	lutszok	lutszom
-sőmlik	sőmlik	1	sőmlök	sőmlöm
-ejik	ejik	1	ejek	ejem
-rüzlik	rüzlik	1	rüzlök	rüzlöm
-gyagzik	©agzik	1	gyagzok	gyagzom
-iglik	iglik	1	iglok	iglom
-vűlszik	vűlßik	1	vűlszök	vűlszöm
-dösdik	dösdik	1	dösdök	dösdöm
-csokszik	çokßik	1	csokszok	csokszom
-vűgrik	vűgrik	1	vűgrök	vűgröm
-csípik	çípik	1	csípok	csípom
-gyíszpik	©íßpik	1	gyíszpok	gyíszpom
-bétlik	bétlik	1	bétlek	bétlem
-gyireglik	©ireglik	2	gyireglek	gyireglem
-jélesik	jélesik	2	jélesek	jélesem
-tágapszik	tágapßik	2	tágapszok	tágapszom
-sztónoklik	ßtónoklik	2	sztónoklok	sztónoklom
-fóbozik	fóbozik	2	fóbozok	fóbozom
-juldodik	juldodik	2	juldodok	juldodom
-trágánylik	trágá¥lik	2	trágánylok	trágánylom
-gyimládik	©imládik	2	gyimládok	gyimládom
-flívetik	flívetik	2	flívetek	flívetem
-mávádik	mávádik	2	mávádok	mávádom
-tyabazik	†abazik	2	tyabazok	tyabazom
-szegénik	ßegénik	2	szegének	szegénem
-maratik	maratik	2	maratok	maratom
-ekeglik	ekeglik	2	ekeglek	ekeglem
-jerizik	jerizik	2	jerizok	jerizom
-mápradzik	mápradzik	2	mápradzok	mápradzom
-sánkázik	sánkázik	2	sánkázok	sánkázom
-skühödik	skühödik	2	skühödök	skühödöm
-dipramlik	dipramlik	2	dipramlok	dipramlom
-tretegzik	tretegzik	2	tretegzek	tretegzem
-pörtűdzik	pörtűdzik	2	pörtűdzök	pörtűdzöm
-vidazik	vidazik	2	vidazok	vidazom
-uglódik	uglódik	2	uglódok	uglódom
-cigyazik	ci©azik	2	cigyazok	cigyazom
-cuglodik	cuglodik	2	cuglodok	cuglodom
-gúdódzik	gúdódzik	2	gúdódzok	gúdódzom
-cogyudik	co©udik	2	cogyudok	cogyudom
-smályádik	smá¬ádik	2	smályádok	smályádom
-flavádzik	flavádzik	2	flavádzok	flavádzom
-hintászik	hintáßik	2	hintászok	hintászom
-kigézik	kigézik	2	kigézek	kigézem
-mogódzik	mogódzik	2	mogódzok	mogódzom
-röröklik	röröklik	2	röröklök	röröklöm
-vápragszik	vápragßik	2	vápragszok	vápragszom
-hubúzik	hubúzik	2	hubúzok	hubúzom
-vugódzik	vugódzik	2	vugódzok	vugódzom
-zsíramlik	Ωíramlik	2	zsíramlok	zsíramlom
-mengezik	mengezik	2	mengezek	mengezem
-majtaslik	majtaslik	2	majtaslok	majtaslom
-papagzik	papagzik	2	papagzok	papagzom
-sálmaklik	sálmaklik	2	sálmaklok	sálmaklom
-hapaklik	hapaklik	2	hapaklok	hapaklom
-lejtegzik	lejtegzik	2	lejtegzek	lejtegzem
-fáltádik	fáltádik	2	fáltádok	fáltádom
-giprágzik	giprágzik	2	giprágzok	giprágzom
-zornodik	zornodik	2	zornodok	zornodom
-cúcsodik	cúçodik	2	cúcsodok	cúcsodom
-vósztodik	vóßtodik	2	vósztodok	vósztodom
-gyólódik	©ólódik	2	gyólódok	gyólódom
-plolúzik	plolúzik	2	plolúzok	plolúzom
-muskudik	muskudik	2	muskudok	muskudom
-nerzénik	nerzénik	2	nerzének	nerzénem
-evedzik	evedzik	2	evedzek	evedzem
-sótoklik	sótoklik	2	sótoklok	sótoklom
-brorozik	brorozik	2	brorozok	brorozom
-síkeglik	síkeglik	2	síkeglek	síkeglem
-tyolodik	†olodik	2	tyolodok	tyolodom
-dürődzik	dürődzik	2	dürődzök	dürődzöm
-degemlik	degemlik	2	degemlek	degemlem
-pígyádik	pí©ádik	2	pígyádok	pígyádom
-bígyagszik	bí©agßik	2	bígyagszok	bígyagszom
-cantadzik	cantadzik	2	cantadzok	cantadzom
-bojoklik	bojoklik	2	bojoklok	bojoklom
-rütődzik	rütődzik	2	rütődzök	rütődzöm
-vihászik	viháßik	2	vihászok	vihászom
-pipégszik	pipégßik	2	pipégszek	pipégszem
-ágyágzik	á©ágzik	2	ágyágzok	ágyágzom
-tyérizik	†érizik	2	tyérizok	tyérizom
-hengemlik	hengemlik	2	hengemlek	hengemlem
-gyirtatik	©irtatik	2	gyirtatok	gyirtatom
-kugyudik	ku©udik	2	kugyudok	kugyudom
-monódik	monódik	2	monódok	monódom
-gindarzik	gindarzik	2	gindarzok	gindarzom
-limlapszik	limlapßik	2	limlapszok	limlapszom
-helesik	helesik	2	helesek	helesem
-breredik	breredik	2	breredek	breredem
-igedzik	igedzik	2	igedzek	igedzem
-brorlúdik	brorlúdik	2	brorlúdok	brorlúdom
-csépetik	çépetik	2	csépetek	csépetem
-mérténik	mérténik	2	mértének	mérténem
-zántaglik	zántaglik	2	zántaglok	zántaglom
-prénészik	prénéßik	2	prénészek	prénészem
-lármamlik	lármamlik	2	lármamlok	lármamlom
-jirtaslik	jirtaslik	2	jirtaslok	jirtaslom
-cúkonylik	cúko¥lik	2	cúkonylok	cúkonylom
-nárapszik	nárapßik	2	nárapszok	nárapszom
-cotyudik	co†udik	2	cotyudok	cotyudom
-smatyajlik	sma†ajlik	2	smatyajlok	smatyajlom
-brémeglik	brémeglik	2	brémeglek	brémeglem
-szterénik	ßterénik	2	szterének	szterénem
-ántárzik	ántárzik	2	ántárzok	ántárzom
-gyanázik	©anázik	2	gyanázok	gyanázom
-gírégszik	gírégßik	2	gírégszek	gírégszem
-szengedik	ßengedik	2	szengedek	szengedem
-jibaslik	jibaslik	2	jibaslok	jibaslom
-gigyesik	gi©esik	2	gigyesek	gigyesem
-lidagzik	lidagzik	2	lidagzok	lidagzom
-zsihádik	Ωihádik	2	zsihádok	zsihádom
-szompodik	ßompodik	2	szompodok	szompodom
-tréneglik	tréneglik	2	tréneglek	tréneglem
-dzsiteglik	dΩiteglik	2	dzsiteglek	dzsiteglem
-plicánylik	plicá¥lik	2	plicánylok	plicánylom
-lövödik	lövödik	2	lövödök	lövödöm
-brarkázik	brarkázik	2	brarkázok	brarkázom
-kosódik	kosódik	2	kosódok	kosódom
-rudoslik	rudoslik	2	rudoslok	rudoslom
-flivapszik	flivapßik	2	flivapszok	flivapszom
-hötöslik	hötöslik	2	hötöslök	hötöslöm
-hetketik	hetketik	2	hetketek	hetketem
-ulúzik	ulúzik	2	ulúzok	ulúzom
-smarádzik	smarádzik	2	smarádzok	smarádzom
-spúdudik	spúdudik	2	spúdudok	spúdudom
-raltánylik	raltá¥lik	2	raltánylok	raltánylom
-valdaslik	valdaslik	2	valdaslok	valdaslom
-omposlik	omposlik	2	omposlok	omposlom
-szantatik	ßantatik	2	szantatok	szantatom
-brandázik	brandázik	2	brandázok	brandázom
-plivemlik	plivemlik	2	plivemlek	plivemlem
-rojódik	rojódik	2	rojódok	rojódom
-dáltágzik	dáltágzik	2	dáltágzok	dáltágzom
-szomódik	ßomódik	2	szomódok	szomódom
-pakádzik	pakádzik	2	pakádzok	pakádzom
-círagzik	círagzik	2	círagzok	círagzom
-vusozik	vusozik	2	vusozok	vusozom
-skéhenik	skéhenik	2	skéhenek	skéhenem
-prűvőzik	prűvőzik	2	prűvőzök	prűvőzöm
-tragaglik	tragaglik	2	tragaglok	tragaglom
-bobózik	bobózik	2	bobózok	bobózom
-flóbódzik	flóbódzik	2	flóbódzok	flóbódzom
-omoklik	omoklik	2	omoklok	omoklom
-pritatik	pritatik	2	pritatok	pritatom
-plantizik	plantizik	2	plantizok	plantizom
-érkemlik	érkemlik	2	érkemlek	érkemlem
-hakágzik	hakágzik	2	hakágzok	hakágzom
-rétészik	rétéßik	2	rétészek	rétészem
-spiprenik	spiprenik	2	spiprenek	spiprenem
-gyadaslik	©adaslik	2	gyadaslok	gyadaslom
-bácsizik	báçizik	2	bácsizok	bácsizom
-fitáglik	fitáglik	2	fitáglok	fitáglom
-dempenik	dempenik	2	dempenek	dempenem
-páratik	páratik	2	páratok	páratom
-sporjozik	sporjozik	2	sporjozok	sporjozom
-bűglűdzik	bűglűdzik	2	bűglűdzök	bűglűdzöm
-favaklik	favaklik	2	favaklok	favaklom
-ésegzik	ésegzik	2	ésegzek	ésegzem
-trokodik	trokodik	2	trokodok	trokodom
-dígyenik	dí©enik	2	dígyenek	dígyenem
-bigagzik	bigagzik	2	bigagzok	bigagzom
-dármáglik	dármáglik	2	dármáglok	dármáglom
-jígyarzik	jí©arzik	2	jígyarzok	jígyarzom
-skorlúdik	skorlúdik	2	skorlúdok	skorlúdom
-cásádik	cásádik	2	cásádok	cásádom
-tribárzik	tribárzik	2	tribárzok	tribárzom
-szörlöklik	ßörlöklik	2	szörlöklök	szörlöklöm
-sztörlödik	ßtörlödik	2	sztörlödök	sztörlödöm
-ploldúdik	ploldúdik	2	ploldúdok	ploldúdom
-szartánylik	ßartá¥lik	2	szartánylok	szartánylom
-lavaglik	lavaglik	2	lavaglok	lavaglom
-momúdik	momúdik	2	momúdok	momúdom
-zsétetik	Ωétetik	2	zsétetek	zsétetem
-plivegszik	plivegßik	2	plivegszek	plivegszem
-prárkászik	prárkáßik	2	prárkászok	prárkászom
-kőgűzik	kőgűzik	2	kőgűzök	kőgűzöm
-héhetik	héhetik	2	héhetek	héhetem
-péhegzik	péhegzik	2	péhegzek	péhegzem
-mélezik	mélezik	2	mélezek	mélezem
-nigénik	nigénik	2	nigének	nigénem
-spunyúzik	spu¥úzik	2	spunyúzok	spunyúzom
-távádik	távádik	2	távádok	távádom
-hénizik	hénizik	2	hénizok	hénizom
-higagszik	higagßik	2	higagszok	higagszom
-narádzik	narádzik	2	narádzok	narádzom
-rályáglik	rá¬áglik	2	rályáglok	rályáglom
-cepregszik	cepregßik	2	cepregszek	cepregszem
-goródzik	goródzik	2	goródzok	goródzom
-dilárzik	dilárzik	2	dilárzok	dilárzom
-pumudik	pumudik	2	pumudok	pumudom
-hibarzik	hibarzik	2	hibarzok	hibarzom
-kűvődik	kűvődik	2	kűvődök	kűvődöm
-béteglik	béteglik	2	béteglek	béteglem
-lígyászik	lí©áßik	2	lígyászok	lígyászom
-tyásárzik	†ásárzik	2	tyásárzok	tyásárzom
-húdonylik	húdo¥lik	2	húdonylok	húdonylom
-lígyádzik	lí©ádzik	2	lígyádzok	lígyádzom
-fűglődzik	fűglődzik	2	fűglődzök	fűglődzöm
-fűrűdzik	fűrűdzik	2	fűrűdzök	fűrűdzöm
-gyitenik	©itenik	2	gyitenek	gyitenem
-csigyagzik	çi©agzik	2	csigyagzok	csigyagzom
-virtézik	virtézik	2	virtézek	virtézem
-gúvoslik	gúvoslik	2	gúvoslok	gúvoslom
-jutózik	jutózik	2	jutózok	jutózom
-boboslik	boboslik	2	boboslok	boboslom
-gerenik	gerenik	2	gerenek	gerenem
-gyémezik	©émezik	2	gyémezek	gyémezem
-lenyepszik	le¥epßik	2	lenyepszek	lenyepszem
-záltáglik	záltáglik	2	záltáglok	záltáglom
-nyálmarzik	¥álmarzik	2	nyálmarzok	nyálmarzom
-tyámpádzik	†ámpádzik	2	tyámpádzok	tyámpádzom
-nyácsizik	¥áçizik	2	nyácsizok	nyácsizom
-brémizik	brémizik	2	brémizok	brémizom
-vémékszik	vémékßik	2	vémékszek	vémékszem
-baklászik	bakláßik	2	baklászok	baklászom
-jálmáglik	jálmáglik	2	jálmáglok	jálmáglom
-fisegzik	fisegzik	2	fisegzek	fisegzem
-görlüszik	görlüßik	2	görlüszök	görlüszöm
-távászik	táváßik	2	távászok	távászom
-skinyénik	ski¥énik	2	skinyének	skinyénem
-ágyáglik	á©áglik	2	ágyáglok	ágyáglom
-kiprádzik	kiprádzik	2	kiprádzok	kiprádzom
-horloklik	horloklik	2	horloklok	horloklom
-cilázik	cilázik	2	cilázok	cilázom
-pokozik	pokozik	2	pokozok	pokozom
-návagszik	návagßik	2	návagszok	návagszom
-japáglik	japáglik	2	japáglok	japáglom
-numlódzik	numlódzik	2	numlódzok	numlódzom
-gibészik	gibéßik	2	gibészek	gibészem
-plombódik	plombódik	2	plombódok	plombódom
-bumoslik	bumoslik	2	bumoslok	bumoslom
-kürüszik	kürüßik	2	kürüszök	kürüszöm
-cejtetik	cejtetik	2	cejtetek	cejtetem
-fornúdik	fornúdik	2	fornúdok	fornúdom
-berepszik	berepßik	2	berepszek	berepszem
-rotoslik	rotoslik	2	rotoslok	rotoslom
-cörtödik	cörtödik	2	cörtödök	cörtödöm
-skíváglik	skíváglik	2	skíváglok	skíváglom
-sumlózik	sumlózik	2	sumlózok	sumlózom
-csejtézik	çejtézik	2	csejtézek	csejtézem
-tokodik	tokodik	2	tokodok	tokodom
-spindenik	spindenik	2	spindenek	spindenem
-trindetik	trindetik	2	trindetek	trindetem
-dzsígyaglik	dΩí©aglik	2	dzsígyaglok	dzsígyaglom
-nojtozik	nojtozik	2	nojtozok	nojtozom
-tyétkégszik	†étkégßik	2	tyétkégszek	tyétkégszem
-tyundoklik	†undoklik	2	tyundoklok	tyundoklom
-picsénik	piçénik	2	picsének	picsénem
-pletyékszik	ple†ékßik	2	pletyékszek	pletyékszem
-jutódik	jutódik	2	jutódok	jutódom
-trikáglik	trikáglik	2	trokáglik	tromáglik
-csegyedzik	çe©edzik	2	csegyedzek	csegyedzem
-trígyészik	trí©éßik	2	trígyészek	trígyészem
-rolúdik	rolúdik	2	rolúdok	rolúdom
-bórodik	bórodik	2	bórodok	bórodom
-plipegzik	plipegzik	2	plipegzek	plipegzem
-vidékszik	vidékßik	2	vidékszek	vidékszem
-gugloklik	gugloklik	2	gugloklok	gugloklom
-brőzödik	brőzödik	2	brőzödök	brőzödöm
-sztindádik	ßtindádik	2	sztindádok	sztindádom
-hógozik	hógozik	2	hógozok	hógozom
-ranánylik	raná¥lik	2	ranánylok	ranánylom
-zsipajlik	Ωipajlik	2	zsipajlok	zsipajlom
-sirtajlik	sirtajlik	2	sirtajlok	sirtajlom
-áltádik	áltádik	2	áltádok	áltádom
-lisajlik	lisajlik	2	lisajlok	lisajlom
-simbarzik	simbarzik	2	simbarzok	simbarzom
-fisztánylik	fißtá¥lik	2	fisztánylok	fisztánylom
-lásztádik	láßtádik	2	lásztádok	lásztádom
-pingamlik	pingamlik	2	pingamlok	pingamlom
-csornózik	çornózik	2	csornózok	csornózom
-ugluzik	ugluzik	2	ugluzok	ugluzom
-prüröslik	prüröslik	2	prüröslök	prüröslöm
-virkezik	virkezik	2	virkezek	virkezem
-gásázik	gásázik	2	gásázok	gásázom
-trémenik	trémenik	2	trémenek	trémenem
-zsondúdik	Ωondúdik	2	zsondúdok	zsondúdom
-depremlik	depremlik	2	depremlek	depremlem
-gicsarzik	giçarzik	2	gicsarzok	gicsarzom
-brirágzik	brirágzik	2	brirágzok	brirágzom
-sozodik	sozodik	2	sozodok	sozodom
-sélézik	sélézik	2	sélézek	sélézem
-flújuzik	flújuzik	2	flújuzok	flújuzom
-nuklódik	nuklódik	2	nuklódok	nuklódom
-nyörtődzik	¥örtődzik	2	nyörtődzök	nyörtődzöm
-béseglik	béseglik	2	béseglek	béseglem
-szívamlik	ßívamlik	2	szívamlok	szívamlom
-télepszik	télepßik	2	télepszek	télepszem
-gyajakszik	©ajakßik	2	gyajakszok	gyajakszom
-rulúdik	rulúdik	2	rulúdok	rulúdom
-tyánkagzik	†ánkagzik	2	tyánkagzok	tyánkagzom
-csuglozik	çuglozik	2	csuglozok	csuglozom
-zsíkánylik	Ωíká¥lik	2	zsíkánylok	zsíkánylom
-búdonylik	búdo¥lik	2	búdonylok	búdonylom
-gyiházik	©iházik	2	gyiházok	gyiházom
-hajtánylik	hajtá¥lik	2	hajtánylok	hajtánylom
-tyivaslik	†ivaslik	2	tyivaslok	tyivaslom
-aklázik	aklázik	2	aklázok	aklázom
-kajtáglik	kajtáglik	2	kajtáglok	kajtáglom
-nartázik	nartázik	2	nartázok	nartázom
-bivetik	bivetik	2	bivetek	bivetem
-iprazik	iprazik	2	iprazok	iprazom
-jilagzik	jilagzik	2	jilagzok	jilagzom
-lirkáglik	lirkáglik	2	lirkáglok	lirkáglom
-hicsánylik	hiçá¥lik	2	hicsánylok	hicsánylom
-tomózik	tomózik	2	tomózok	tomózom
-rindeglik	rindeglik	2	rindeglek	rindeglem
-fógúzik	fógúzik	2	fógúzok	fógúzom
-smapáglik	smapáglik	2	smapáglok	smapáglom
-jaltáglik	jaltáglik	2	jaltáglok	jaltáglom
-dühöklik	dühöklik	2	dühöklök	dühöklöm
-harajlik	harajlik	2	harajlok	harajlom
-csecénik	çecénik	2	csecének	csecénem
-tavárzik	tavárzik	2	tavárzok	tavárzom
-fimbemlik	fimbemlik	2	fimbemlek	fimbemlem
-nyagamlik	¥agamlik	2	nyagamlok	nyagamlom
-súkonylik	súko¥lik	2	súkonylok	súkonylom
-tabázik	tabázik	2	tabázok	tabázom
-kemledik	kemledik	2	kemledek	kemledem
-méhizik	méhizik	2	méhizok	méhizom
-skicemlik	skicemlik	2	skicemlek	skicemlem
-zúrúdik	zúrúdik	2	zúrúdok	zúrúdom
-plidemlik	plidemlik	2	plidemlek	plidemlem
-jompódik	jompódik	2	jompódok	jompódom
-barkánylik	barká¥lik	2	barkánylok	barkánylom
-gyetemlik	©etemlik	2	gyetemlek	gyetemlem
-őrkűdzik	őrkűdzik	2	őrkűdzök	őrkűdzöm
-zsejtedik	Ωejtedik	2	zsejtedek	zsejtedem
-rarkagzik	rarkagzik	2	rarkagzok	rarkagzom
-emlenik	emlenik	2	emlenek	emlenem
-brigyenik	bri©enik	2	brigyenek	brigyenem
-bérketik	bérketik	2	bérketek	bérketem
-vakászik	vakáßik	2	vakászok	vakászom
-tigyagzik	ti©agzik	2	tigyagzok	tigyagzom
-eredzik	eredzik	2	eredzek	eredzem
-tajagszik	tajagßik	2	tajagszok	tajagszom
-flolyódzik	flo¬ódzik	2	flolyódzok	flolyódzom
-fisazik	fisazik	2	fisazok	fisazom
-sulodik	sulodik	2	sulodok	sulodom
-sivázik	sivázik	2	sivázok	sivázom
-gyéhesik	©éhesik	2	gyéhesek	gyéhesem
-dzsíratik	dΩíratik	2	dzsíratok	dzsíratom
-lonúzik	lonúzik	2	lonúzok	lonúzom
-legeglik	legeglik	2	legeglek	legeglem
-nyacágzik	¥acágzik	2	nyacágzok	nyacágzom
-trütűdzik	trütűdzik	2	trütűdzök	trütűdzöm
-tirtajlik	tirtajlik	2	tirtajlok	tirtajlom
-pérkézik	pérkézik	2	pérkézek	pérkézem
-nyúzoslik	¥úzoslik	2	nyúzoslok	nyúzoslom
-spühőzik	spühőzik	2	spühőzök	spühőzöm
-truronylik	truro¥lik	2	truronylok	truronylom
-mekézik	mekézik	2	mekézek	mekézem
-káprárzik	káprárzik	2	káprárzok	káprárzom
-flibapszik	flibapßik	2	flibapszok	flibapszom
-szterménik	ßterménik	2	sztermének	szterménem
-pletyegszik	ple†egßik	2	pletyegszek	pletyegszem
-bretyedzik	bre†edzik	2	bretyedzek	bretyedzem
-csajtatik	çajtatik	2	csajtatok	csajtatom
-csányagzik	çá¥agzik	2	csányagzok	csányagzom
-vűnödik	vűnödik	2	vűnödök	vűnödöm
-jomuzik	jomuzik	2	jomuzok	jomuzom
-sibemlik	sibemlik	2	sibemlek	sibemlem
-pülődzik	pülődzik	2	pülődzök	pülődzöm
-ründőzik	ründőzik	2	ründőzök	ründőzöm
-verekszik	verekßik	2	verekszek	verekszem
-tyirtedik	†irtedik	2	tyirtedek	tyirtedem
-nyörtödik	¥örtödik	2	nyörtödök	nyörtödöm
-utódik	utódik	2	utódok	utódom
-tyeteslik	†eteslik	2	tyeteslek	tyeteslem
-bricetik	bricetik	2	bricetek	bricetem
-plévézik	plévézik	2	plévézek	plévézem
-plenyekszik	ple¥ekßik	2	plenyekszek	plenyekszem
-prigénik	prigénik	2	prigének	prigénem
-foboslik	foboslik	2	foboslok	foboslom
-jingászik	jingáßik	2	jingászok	jingászom
-skígyárzik	skí©árzik	2	skígyárzok	skígyárzom
-szogoklik	ßogoklik	2	szogoklok	szogoklom
-sörűdzik	sörűdzik	2	sörűdzök	sörűdzöm
-hadaslik	hadaslik	2	hadaslok	hadaslom
-hipraklik	hipraklik	2	hipraklok	hipraklom
-coldúzik	coldúzik	2	coldúzok	coldúzom
-necedzik	necedzik	2	necedzek	necedzem
-plukludik	plukludik	2	plukludok	plukludom
-láltatik	láltatik	2	láltatok	láltatom
-hiházik	hiházik	2	hiházok	hiházom
-dzsavatik	dΩavatik	2	dzsavatok	dzsavatom
-űglöslik	űglöslik	2	űglöslök	űglöslöm
-gyuboslik	©uboslik	2	gyuboslok	gyuboslom
-nyírarzik	¥írarzik	2	nyírarzok	nyírarzom
-nimbetik	nimbetik	2	nimbetek	nimbetem
-kévezik	kévezik	2	kévezek	kévezem
-trürűdzik	trürűdzik	2	trürűdzök	trürűdzöm
-bracságzik	braçágzik	2	bracságzok	bracságzom
-skéhézik	skéhézik	2	skéhézek	skéhézem
-dzsűnöklik	dΩűnöklik	2	dzsűnöklök	dzsűnöklöm
-nígyezik	ní©ezik	2	nígyezek	nígyezem
-banyáglik	ba¥áglik	2	banyáglok	banyáglom
-jinyenik	ji¥enik	2	jinyenek	jinyenem
-csermemlik	çermemlik	2	csermemlek	csermemlem
-jondúdik	jondúdik	2	jondúdok	jondúdom
-féheslik	féheslik	2	féheslek	féheslem
-dármádik	dármádik	2	dármádok	dármádom
-kácsádik	káçádik	2	kácsádok	kácsádom
-pruldozik	pruldozik	2	pruldozok	pruldozom
-jinteslik	jinteslik	2	jinteslek	jinteslem
-fegeslik	fegeslik	2	fegeslek	fegeslem
-nólódik	nólódik	2	nólódok	nólódom
-gírekszik	gírekßik	2	gírekszek	gírekszem
-lalarzik	lalarzik	2	lalarzok	lalarzom
-igyetik	i©etik	2	igyetek	igyetem
-vurúdik	vurúdik	2	vurúdok	vurúdom
-brilmenik	brilmenik	2	brilmenek	brilmenem
-cőrköslik	cőrköslik	2	cőrköslök	cőrköslöm
-fartászik	fartáßik	2	fartászok	fartászom
-patyádzik	pa†ádzik	2	patyádzok	patyádzom
-plágyaklik	plá©aklik	2	plágyaklok	plágyaklom
-flúrlódik	flúrlódik	2	flúrlódok	flúrlódom
-szinyetik	ßi¥etik	2	szinyetek	szinyetem
-daltaglik	daltaglik	2	daltaglok	daltaglom
-plihatik	plihatik	2	plihatok	plihatom
-gibetik	gibetik	2	gibetek	gibetem
-plihemlik	plihemlik	2	plihemlek	plihemlem
-skuglúzik	skuglúzik	2	skuglúzok	skuglúzom
-kerézik	kerézik	2	kerézek	kerézem
-nyörtőzik	¥örtőzik	2	nyörtőzök	nyörtőzöm
-meteglik	meteglik	2	meteglek	meteglem
-gyapádik	©apádik	2	gyapádok	gyapádom
-vataglik	vataglik	2	vataglok	vataglom
-työltűdzik	†öltűdzik	2	työltűdzök	työltűdzöm
-pésezik	pésezik	2	pésezek	pésezem
-trubonylik	trubo¥lik	2	trubonylok	trubonylom
-csűrőzik	çűrőzik	2	csűrőzök	csűrőzöm
-pügyöklik	pü©öklik	2	pügyöklök	pügyöklöm
-lűtöklik	lűtöklik	2	lűtöklök	lűtöklöm
-cingenik	cingenik	2	cingenek	cingenem
-skidárzik	skidárzik	2	skidárzok	skidárzom
-gyálmádik	©álmádik	2	gyálmádok	gyálmádom
-ragadzik	ragadzik	2	ragadzok	ragadzom
-félézik	félézik	2	félézek	félézem
-flagánylik	flagá¥lik	2	flagánylok	flagánylom
-gyarizik	©arizik	2	gyarizok	gyarizom
-kármádzik	kármádzik	2	kármádzok	kármádzom
-skindezik	skindezik	2	skindezek	skindezem
-tyirkászik	†irkáßik	2	tyirkászok	tyirkászom
-lipázik	lipázik	2	lipázok	lipázom
-pitaklik	pitaklik	2	pitaklok	pitaklom
-sáltánylik	sáltá¥lik	2	sáltánylok	sáltánylom
-tegyészik	te©éßik	2	tegyészek	tegyészem
-csompózik	çompózik	2	csompózok	csompózom
-spikamlik	spikamlik	2	spokamlik	spomamlik
-arkizik	arkizik	2	arkizok	arkizom
-didagzik	didagzik	2	didagzok	didagzom
-gyújuzik	©újuzik	2	gyújuzok	gyújuzom
-nyíkamlik	¥íkamlik	2	nyíkamlok	nyíkamlom
-vágyajlik	vá©ajlik	2	vágyajlok	vágyajlom
-spőgődzik	spőgődzik	2	spőgődzök	spőgődzöm
-spombozik	spombozik	2	spombozok	spombozom
-smunyoklik	smu¥oklik	2	smunyoklok	smunyoklom
-mugluzik	mugluzik	2	mugluzok	mugluzom
-trígyaklik	trí©aklik	2	trígyaklok	trígyaklom
-vírégszik	vírégßik	2	vírégszek	vírégszem
-flivagzik	flivagzik	2	flivagzok	flivagzom
-púrózik	púrózik	2	púrózok	púrózom
-plónúdik	plónúdik	2	plónúdok	plónúdom
-sztéremlik	ßtéremlik	2	sztéremlek	sztéremlem
-brújódzik	brújódzik	2	brújódzok	brújódzom
-zónódik	zónódik	2	zónódok	zónódom
-trigyekszik	tri©ekßik	2	trigyekszek	trigyekszem
-jörűzik	jörűzik	2	jörűzök	jörűzöm
-zóloslik	zóloslik	2	zóloslok	zóloslom
-mindazik	mindazik	2	mindazok	mindazom
-jermedzik	jermedzik	2	jermedzek	jermedzem
-jompódzik	jompódzik	2	jompódzok	jompódzom
-tyerzesik	†erzesik	2	tyerzesek	tyerzesem
-timládik	timládik	2	timládok	timládom
-skicagzik	skicagzik	2	skicagzok	skicagzom
-utoslik	utoslik	2	utoslok	utoslom
-fávágzik	fávágzik	2	fávágzok	fávágzom
-trörtözik	trörtözik	2	trörtözök	trörtözöm
-kéreglik	kéreglik	2	kéreglek	kéreglem
-flémeglik	flémeglik	2	flémeglek	flémeglem
-móklúzik	móklúzik	2	móklúzok	móklúzom
-szuglodik	ßuglodik	2	szuglodok	szuglodom
-tyénénik	†énénik	2	tyénének	tyénénem
-pásánylik	pásá¥lik	2	pásánylok	pásánylom
-tálatik	tálatik	2	tálatok	tálatom
-praldizik	praldizik	2	praldizok	praldizom
-nyilmazik	¥ilmazik	2	nyilmazok	nyilmazom
-dzsértedik	dΩértedik	2	dzsértedek	dzsértedem
-adapszik	adapßik	2	adapszok	adapszom
-bamakszik	bamakßik	2	bamakszok	bamakszom
-zivaslik	zivaslik	2	zivaslok	zivaslom
-nyúdódzik	¥údódzik	2	nyúdódzok	nyúdódzom
-valdádzik	valdádzik	2	valdádzok	valdádzom
-nyondúdik	¥ondúdik	2	nyondúdok	nyondúdom
-fimbepszik	fimbepßik	2	fimbepszek	fimbepszem
-mótudik	mótudik	2	mótudok	mótudom
-zsirtenik	Ωirtenik	2	zsirtenek	zsirtenem
-tagaklik	tagaklik	2	tagaklok	tagaklom
-zsúkúdik	Ωúkúdik	2	zsúkúdok	zsúkúdom
-sipádik	sipádik	2	sipádok	sipádom
-náprapszik	náprapßik	2	náprapszok	náprapszom
-hacázik	hacázik	2	hacázok	hacázom
-tiveglik	tiveglik	2	tiveglek	tiveglem
-hávágzik	hávágzik	2	hávágzok	hávágzom
-mántázik	mántázik	2	mántázok	mántázom
-tétkegszik	tétkegßik	2	tétkegszek	tétkegszem
-roldózik	roldózik	2	roldózok	roldózom
-gipáglik	gipáglik	2	gipáglok	gipáglom
-jegedzik	jegedzik	2	jegedzek	jegedzem
-tropózik	tropózik	2	tropózok	tropózom
-trólúdik	trólúdik	2	trólúdok	trólúdom
-prőrlűzik	prőrlűzik	2	prőrlűzök	prőrlűzöm
-plénénik	plénénik	2	plénének	plénénem
-lárajlik	lárajlik	2	lárajlok	lárajlom
-nyaltagszik	¥altagßik	2	nyaltagszok	nyaltagszom
-tagyagzik	ta©agzik	2	tagyagzok	tagyagzom
-nundúzik	nundúzik	2	nundúzok	nundúzom
-trívézik	trívézik	2	trívézek	trívézem
-tapapszik	tapapßik	2	tapapszok	tapapszom
-páltázik	páltázik	2	páltázok	páltázom
-csüröklik	çüröklik	2	csüröklök	csüröklöm
-prűköslik	prűköslik	2	prűköslök	prűköslöm
-jompozik	jompozik	2	jompozok	jompozom
-zsombúdik	Ωombúdik	2	zsombúdok	zsombúdom
-rirtazik	rirtazik	2	rirtazok	rirtazom
-smacágzik	smacágzik	2	smacágzok	smacágzom
-surnudik	surnudik	2	surnudok	surnudom
-trérégszik	trérégßik	2	trérégszek	trérégszem
-privészik	privéßik	2	privészek	privészem
-góbodik	góbodik	2	góbodok	góbodom
-júrlózik	júrlózik	2	júrlózok	júrlózom
-retyekszik	re†ekßik	2	retyekszek	retyekszem
-tyidekszik	†idekßik	2	tyidekszek	tyidekszem
-kámpánylik	kámpá¥lik	2	kámpánylok	kámpánylom
-gojódik	gojódik	2	gojódok	gojódom
-vépenik	vépenik	2	vépenek	vépenem
-dingapszik	dingapßik	2	dingapszok	dingapszom
-prilmazik	prilmazik	2	prilmazok	prilmazom
-mötüszik	mötüßik	2	mötüszök	mötüszöm
-etegzik	etegzik	2	etegzek	etegzem
-trosztudik	troßtudik	2	trosztudok	trosztudom
-flíregzik	flíregzik	2	flíregzek	flíregzem
-vigatik	vigatik	2	vigatok	vigatom
-fánkászik	fánkáßik	2	fánkászok	fánkászom
-faklaslik	faklaslik	2	faklaslok	faklaslom
-jaltapszik	jaltapßik	2	jaltapszok	jaltapszom
-tikatik	tikatik	2	tokatik	tomatik
-gyondózik	©ondózik	2	gyondózok	gyondózom
-csepredik	çepredik	2	csepredek	csepredem
-sacaklik	sacaklik	2	sacaklok	sacaklom
-vikedik	vikedik	2	vekedik	vemedik
-atyakszik	a†akßik	2	atyakszok	atyakszom
-nyérepszik	¥érepßik	2	nyérepszek	nyérepszem
-ipredik	ipredik	2	ipredek	ipredem
-diraslik	diraslik	2	diraslok	diraslom
-acsamlik	açamlik	2	acsamlok	acsamlom
-szivedik	ßivedik	2	szivedek	szivedem
-larjadzik	larjadzik	2	larjadzok	larjadzom
-hőrköslik	hőrköslik	2	hőrköslök	hőrköslöm
-pámakszik	pámakßik	2	pámakszok	pámakszom
-föngözik	föngözik	2	föngözök	föngözöm
-ráprázik	ráprázik	2	ráprázok	ráprázom
-csályadzik	çá¬adzik	2	csályadzok	csályadzom
-tyarjakszik	†arjakßik	2	tyarjakszok	tyarjakszom
-sibatik	sibatik	2	sibatok	sibatom
-cogúzik	cogúzik	2	cogúzok	cogúzom
-uldoslik	uldoslik	2	uldoslok	uldoslom
-flolyuzik	flo¬uzik	2	flolyuzok	flolyuzom
-tavaslik	tavaslik	2	tavaslok	tavaslom
-hundódik	hundódik	2	hundódok	hundódom
-flanyajlik	fla¥ajlik	2	flanyajlok	flanyajlom
-nőrközik	nőrközik	2	nőrközök	nőrközöm
-zíkánylik	zíká¥lik	2	zíkánylok	zíkánylom
-zsindemlik	Ωindemlik	2	zsindemlek	zsindemlem
-lidaslik	lidaslik	2	lidaslok	lidaslom
-skálázik	skálázik	2	skálázok	skálázom
-tiprékszik	tiprékßik	2	tiprékszek	tiprékszem
-piheslik	piheslik	2	piheslek	piheslem
-planyazik	pla¥azik	2	planyazok	planyazom
-bingádik	bingádik	2	bingádok	bingádom
-flitádik	flitádik	2	flitádok	flitádom
-karjamlik	karjamlik	2	karjamlok	karjamlom
-lálmárzik	lálmárzik	2	lálmárzok	lálmárzom
-gyavászik	©aváßik	2	gyavászok	gyavászom
-cörőzik	cörőzik	2	cörőzök	cörőzöm
-vűnöklik	vűnöklik	2	vűnöklök	vűnöklöm
-sputyoklik	spu†oklik	2	sputyoklok	sputyoklom
-pirketik	pirketik	2	pirketek	pirketem
-hanyatik	ha¥atik	2	hanyatok	hanyatom
-nyavárzik	¥avárzik	2	nyavárzok	nyavárzom
-zsatyajlik	Ωa†ajlik	2	zsatyajlok	zsatyajlom
-irkázik	irkázik	2	irkázok	irkázom
-plalágzik	plalágzik	2	plalágzok	plalágzom
-dilézik	dilézik	2	dilézek	dilézem
-mimbádik	mimbádik	2	mimbádok	mimbádom
-túrluzik	túrluzik	2	túrluzok	túrluzom
-vügyözik	vü©özik	2	vügyözök	vügyözöm
-trémezik	trémezik	2	trémezek	trémezem
-legyeslik	le©eslik	2	legyeslek	legyeslem
-lilesik	lilesik	2	lilesek	lilesem
-fugyuzik	fu©uzik	2	fugyuzok	fugyuzom
-lanágzik	lanágzik	2	lanágzok	lanágzom
-bríketik	bríketik	2	bríketek	bríketem
-tyingádik	†ingádik	2	tyingádok	tyingádom
-trömöklik	trömöklik	2	trömöklök	trömöklöm
-nótuzik	nótuzik	2	nótuzok	nótuzom
-prikenik	prikenik	2	prekenik	premenik
-luskózik	luskózik	2	luskózok	luskózom
-praragzik	praragzik	2	praragzok	praragzom
-geprekszik	geprekßik	2	geprekszek	geprekszem
-panádzik	panádzik	2	panádzok	panádzom
-prindázik	prindázik	2	prindázok	prindázom
-zsultudik	Ωultudik	2	zsultudok	zsultudom
-flimbedik	flimbedik	2	flimbedek	flimbedem
-hintetik	hintetik	2	hintetek	hintetem
-möngődik	möngődik	2	möngődök	möngődöm
-rólyuzik	ró¬uzik	2	rólyuzok	rólyuzom
-imlánylik	imlá¥lik	2	imlánylok	imlánylom
-sogúzik	sogúzik	2	sogúzok	sogúzom
-rinyemlik	ri¥emlik	2	rinyemlek	rinyemlem
-szöglödik	ßöglödik	2	szöglödök	szöglödöm
-csikedzik	çikedzik	2	csekedzik	csemedzik
-trályádik	trá¬ádik	2	trályádok	trályádom
-gütöklik	gütöklik	2	gütöklök	gütöklöm
-tiketik	tiketik	2	teketik	temetik
-zsanaglik	Ωanaglik	2	zsanaglok	zsanaglom
-nyisárzik	¥isárzik	2	nyisárzok	nyisárzom
-trataklik	trataklik	2	trataklok	trataklom
-fepreglik	fepreglik	2	fepreglek	fepreglem
-brihagzik	brihagzik	2	brihagzok	brihagzom
-pacsizik	paçizik	2	pacsizok	pacsizom
-metyepszik	me†epßik	2	metyepszek	metyepszem
-brapamlik	brapamlik	2	brapamlok	brapamlom
-trikárzik	trikárzik	2	trokárzik	tromárzik
-trürkőzik	trürkőzik	2	trürkőzök	trürkőzöm
-ramadzik	ramadzik	2	ramadzok	ramadzom
-pragyázik	pra©ázik	2	pragyázok	pragyázom
-ikegzik	ikegzik	2	ekegzik	emegzik
-tosztonylik	toßto¥lik	2	tosztonylok	tosztonylom
-digarzik	digarzik	2	digarzok	digarzom
-nipajlik	nipajlik	2	nipajlok	nipajlom
-hásaglik	hásaglik	2	hásaglok	hásaglom
-döküszik	döküßik	2	döküszök	döküszöm
-plóronylik	plóro¥lik	2	plóronylok	plóronylom
-dörődzik	dörődzik	2	dörődzök	dörődzöm
-hetkészik	hetkéßik	2	hetkészek	hetkészem
-canádzik	canádzik	2	canádzok	canádzom
-filádzik	filádzik	2	filádzok	filádzom
-gegézik	gegézik	2	gegézek	gegézem
-sztegemlik	ßtegemlik	2	sztegemlek	sztegemlem
-smumudik	smumudik	2	smumudok	smumudom
-plumoslik	plumoslik	2	plumoslok	plumoslom
-szotyódik	ßo†ódik	2	szotyódok	szotyódom
-flépekszik	flépekßik	2	flépekszek	flépekszem
-plurnúdik	plurnúdik	2	plurnúdok	plurnúdom
-bámpaslik	bámpaslik	2	bámpaslok	bámpaslom
-fokudik	fokudik	2	fokudok	fokudom
-gyicsegzik	©içegzik	2	gyicsegzek	gyicsegzem
-cajtapszik	cajtapßik	2	cajtapszok	cajtapszom
-pitatik	pitatik	2	pitatok	pitatom
-raltizik	raltizik	2	raltizok	raltizom
-núkoslik	núkoslik	2	núkoslok	núkoslom
-pridénik	pridénik	2	pridének	pridénem
-lálmászik	lálmáßik	2	lálmászok	lálmászom
-sztűvődik	ßtűvődik	2	sztűvődök	sztűvődöm
-sejtemlik	sejtemlik	2	sejtemlek	sejtemlem
-nyempenik	¥empenik	2	nyempenek	nyempenem
-féneslik	féneslik	2	féneslek	féneslem
-nacazik	nacazik	2	nacazok	nacazom
-fagádzik	fagádzik	2	fagádzok	fagádzom
-zágádik	zágádik	2	zágádok	zágádom
-smülűdzik	smülűdzik	2	smülűdzök	smülűdzöm
-trevezik	trevezik	2	trevezek	trevezem
-skiletik	skiletik	2	skiletek	skiletem
-nyaldizik	¥aldizik	2	nyaldizok	nyaldizom
-rigesik	rigesik	2	rigesek	rigesem
-cenyégszik	ce¥égßik	2	cenyégszek	cenyégszem
-cajapszik	cajapßik	2	cajapszok	cajapszom
-trályádzik	trá¬ádzik	2	trályádzok	trályádzom
-dzsúvodik	dΩúvodik	2	dzsúvodok	dzsúvodom
-jozodik	jozodik	2	jozodok	jozodom
-dimlatik	dimlatik	2	dimlatok	dimlatom
-tricegszik	tricegßik	2	tricegszek	tricegszem
-placágzik	placágzik	2	placágzok	placágzom
-csélemlik	çélemlik	2	csélemlek	csélemlem
-lenyékszik	le¥ékßik	2	lenyékszek	lenyékszem
-smévizik	smévizik	2	smévizok	smévizom
-vornózik	vornózik	2	vornózok	vornózom
-lirénik	lirénik	2	lirének	lirénem
-givezik	givezik	2	givezek	givezem
-dzságyáglik	dΩá©áglik	2	dzságyáglok	dzságyáglom
-néhepszik	néhepßik	2	néhepszek	néhepszem
-rűnőzik	rűnőzik	2	rűnőzök	rűnőzöm
-gyívárzik	©ívárzik	2	gyívárzok	gyívárzom
-szaládik	ßaládik	2	szaládok	szaládom
-luldodik	luldodik	2	luldodok	luldodom
-lúrlózik	lúrlózik	2	lúrlózok	lúrlózom
-higészik	higéßik	2	higészek	higészem
-plótozik	plótozik	2	plótozok	plótozom
-tyálászik	†áláßik	2	tyálászok	tyálászom
-nirkenik	nirkenik	2	nirkenek	nirkenem
-nyőgődik	¥őgődik	2	nyőgődök	nyőgődöm
-zórúdik	zórúdik	2	zórúdok	zórúdom
-gyantapszik	©antapßik	2	gyantapszok	gyantapszom
-rejtékszik	rejtékßik	2	rejtékszek	rejtékszem
-cseretik	çeretik	2	cseretek	cseretem
-tűződik	tűződik	2	tűződök	tűződöm
-prókodik	prókodik	2	prókodok	prókodom
-mipegzik	mipegzik	2	mipegzek	mipegzem
-métkepszik	métkepßik	2	métkepszek	métkepszem
-právatik	právatik	2	právatok	právatom
-spipázik	spipázik	2	spipázok	spipázom
-nindágzik	nindágzik	2	nindágzok	nindágzom
-rozódik	rozódik	2	rozódok	rozódom
-permékszik	permékßik	2	permékszek	permékszem
-bacsajlik	baçajlik	2	bacsajlok	bacsajlom
-csirkajlik	çirkajlik	2	csirkajlok	csirkajlom
-dacságzik	daçágzik	2	dacságzok	dacságzom
-zanánylik	zaná¥lik	2	zanánylok	zanánylom
-hintádzik	hintádzik	2	hintádzok	hintádzom
-brakazik	brakazik	2	brakazok	brakazom
-skunyuzik	sku¥uzik	2	skunyuzok	skunyuzom
-smóbódik	smóbódik	2	smóbódok	smóbódom
-trígyedik	trí©edik	2	trígyedek	trígyedem
-rámádzik	rámádzik	2	rámádzok	rámádzom
-broconylik	broco¥lik	2	broconylok	broconylom
-halazik	halazik	2	halazok	halazom
-satárzik	satárzik	2	satárzok	satárzom
-skidaglik	skidaglik	2	skidaglok	skidaglom
-kinyáglik	ki¥áglik	2	kinyáglok	kinyáglom
-gitagszik	gitagßik	2	gitagszok	gitagszom
-vitészik	vitéßik	2	vitészek	vitészem
-cérkegzik	cérkegzik	2	cérkegzek	cérkegzem
-hicagzik	hicagzik	2	hicagzok	hicagzom
-döglödik	döglödik	2	döglödök	döglödöm
-dacsárzik	daçárzik	2	dacsárzok	dacsárzom
-brívatik	brívatik	2	brívatok	brívatom
-catyaslik	ca†aslik	2	catyaslok	catyaslom
-pakládik	pakládik	2	pakládok	pakládom
-gyókloslik	©ókloslik	2	gyókloslok	gyókloslom
-dújtózik	dújtózik	2	dújtózok	dújtózom
-plivádik	plivádik	2	plivádok	plivádom
-vejtegszik	vejtegßik	2	vejtegszek	vejtegszem
-biramlik	biramlik	2	biramlok	biramlom
-sevénik	sevénik	2	sevének	sevénem
-szadaklik	ßadaklik	2	szadaklok	szadaklom
-midajlik	midajlik	2	midajlok	midajlom
-plenyégszik	ple¥égßik	2	plenyégszek	plenyégszem
-csöngözik	çöngözik	2	csöngözök	csöngözöm
-zétemlik	zétemlik	2	zétemlek	zétemlem
-gyipratik	©ipratik	2	gyipratok	gyipratom
-dzseprénik	dΩeprénik	2	dzseprének	dzseprénem
-vámázik	vámázik	2	vámázok	vámázom
-fajászik	fajáßik	2	fajászok	fajászom
-jintezik	jintezik	2	jintezek	jintezem
-skálaglik	skálaglik	2	skálaglok	skálaglom
-flemlenik	flemlenik	2	flemlenek	flemlenem
-kicsénik	kiçénik	2	kicsének	kicsénem
-pérzedik	pérzedik	2	pérzedek	pérzedem
-tyépenik	†épenik	2	tyépenek	tyépenem
-fultoslik	fultoslik	2	fultoslok	fultoslom
-plajaglik	plajaglik	2	plajaglok	plajaglom
-mágyaslik	má©aslik	2	mágyaslok	mágyaslom
-kámadzik	kámadzik	2	kámadzok	kámadzom
-pértékszik	pértékßik	2	pértékszek	pértékszem
-hotúzik	hotúzik	2	hotúzok	hotúzom
-hirázik	hirázik	2	hirázok	hirázom
-boluzik	boluzik	2	boluzok	boluzom
-daráglik	daráglik	2	daráglok	daráglom
-mamádzik	mamádzik	2	mamádzok	mamádzom
-spágizik	spágizik	2	spágizok	spágizom
-zaldajlik	zaldajlik	2	zaldajlok	zaldajlom
-rurnonylik	rurno¥lik	2	rurnonylok	rurnonylom
-tólyuzik	tó¬uzik	2	tólyuzok	tólyuzom
-tingézik	tingézik	2	tingézek	tingézem
-cigyepszik	ci©epßik	2	cigyepszek	cigyepszem
-pengezik	pengezik	2	pengezek	pengezem
-spegyenik	spe©enik	2	spegyenek	spegyenem
-flilmedik	flilmedik	2	flilmedek	flilmedem
-csejtegzik	çejtegzik	2	csejtegzek	csejtegzem
-vihézik	vihézik	2	vihézek	vihézem
-pricakszik	pricakßik	2	pricakszok	pricakszom
-bojózik	bojózik	2	bojózok	bojózom
-trálágzik	trálágzik	2	trálágzok	trálágzom
-jősközik	jősközik	2	jősközök	jősközöm
-bilmesik	bilmesik	2	bilmesek	bilmesem
-plikégszik	plikégßik	2	plekégszik	plemégszik
-trenizik	trenizik	2	trenizok	trenizom
-sztevénik	ßtevénik	2	sztevének	sztevénem
-nyülöklik	¥ülöklik	2	nyülöklök	nyülöklöm
-nyénemlik	¥énemlik	2	nyénemlek	nyénemlem
-tyeceglik	†eceglik	2	tyeceglek	tyeceglem
-flikatik	flikatik	2	flokatik	flomatik
-jicsadzik	jiçadzik	2	jicsadzok	jicsadzom
-szemletik	ßemletik	2	szemletek	szemletem
-prindászik	prindáßik	2	prindászok	prindászom
-plűrődzik	plűrődzik	2	plűrődzök	plűrődzöm
-trakadzik	trakadzik	2	trakadzok	trakadzom
-nejtizik	nejtizik	2	nejtizok	nejtizom
-prugozik	prugozik	2	prugozok	prugozom
-fumlódik	fumlódik	2	fumlódok	fumlódom
-zújonylik	zújo¥lik	2	zújonylok	zújonylom
-macsázik	maçázik	2	macsázok	macsázom
-szíkádik	ßíkádik	2	szíkádok	szíkádom
-simleglik	simleglik	2	simleglek	simleglem
-csombúzik	çombúzik	2	csombúzok	csombúzom
-retketik	retketik	2	retketek	retketem
-matagszik	matagßik	2	matagszok	matagszom
-támparzik	támparzik	2	támparzok	támparzom
-bámadzik	bámadzik	2	bámadzok	bámadzom
-digyészik	di©éßik	2	digyészek	digyészem
-parkarzik	parkarzik	2	parkarzok	parkarzom
-győrlődik	©őrlődik	2	győrlődök	győrlődöm
-tyagaslik	†agaslik	2	tyagaslok	tyagaslom
-simletik	simletik	2	simletek	simletem
-tyonoslik	†onoslik	2	tyonoslok	tyonoslom
-zsutyódik	Ωu†ódik	2	zsutyódok	zsutyódom
-nöngőzik	nöngőzik	2	nöngőzök	nöngőzöm
-génekszik	génekßik	2	génekszek	génekszem
-smenyemlik	sme¥emlik	2	smenyemlek	smenyemlem
-zsolyodik	Ωo¬odik	2	zsolyodok	zsolyodom
-cármádzik	cármádzik	2	cármádzok	cármádzom
-tűnűzik	tűnűzik	2	tűnűzök	tűnűzöm
-spárádik	spárádik	2	spárádok	spárádom
-plógozik	plógozik	2	plógozok	plógozom
-tyivádik	†ivádik	2	tyivádok	tyivádom
-brinyégszik	bri¥égßik	2	brinyégszek	brinyégszem
-zingánylik	zingá¥lik	2	zingánylok	zingánylom
-fipremlik	fipremlik	2	fipremlek	fipremlem
-flatánylik	flatá¥lik	2	flatánylok	flatánylom
-césemlik	césemlik	2	césemlek	césemlem
-tróronylik	tróro¥lik	2	tróronylok	tróronylom
-notyuzik	no†uzik	2	notyuzok	notyuzom
-túvoklik	túvoklik	2	túvoklok	túvoklom
-pirkeglik	pirkeglik	2	pirkeglek	pirkeglem
-smimbezik	smimbezik	2	smimbezek	smimbezem
-nácsázik	náçázik	2	nácsázok	nácsázom
-tyíkáglik	†íkáglik	2	tyíkáglok	tyíkáglom
-igajlik	igajlik	2	igajlok	igajlom
-zocsudik	zoçudik	2	zocsudok	zocsudom
-licazik	licazik	2	licazok	licazom
-lipáglik	lipáglik	2	lipáglok	lipáglom
-trérzenik	trérzenik	2	trérzenek	trérzenem
-fértegzik	fértegzik	2	fértegzek	fértegzem
-gomoslik	gomoslik	2	gomoslok	gomoslom
-sondódik	sondódik	2	sondódok	sondódom
-lérkénik	lérkénik	2	lérkének	lérkénem
-hoboslik	hoboslik	2	hoboslok	hoboslom
-pérkedzik	pérkedzik	2	pérkedzek	pérkedzem
-partapszik	partapßik	2	partapszok	partapszom
-solúdik	solúdik	2	solúdok	solúdom
-ginténik	ginténik	2	gintének	ginténem
-smétezik	smétezik	2	smétezek	smétezem
-gyazaslik	©azaslik	2	gyazaslok	gyazaslom
-cérénik	cérénik	2	cérének	cérénem
-tyajtarzik	†ajtarzik	2	tyajtarzok	tyajtarzom
-findesik	findesik	2	findesek	findesem
-smólyúdik	smó¬údik	2	smólyúdok	smólyúdom
-csámpazik	çámpazik	2	csámpazok	csámpazom
-rántagszik	rántagßik	2	rántagszok	rántagszom
-hénedzik	hénedzik	2	hénedzek	hénedzem
-nyürődik	¥ürődik	2	nyürődök	nyürődöm
-ragyádik	ra©ádik	2	ragyádok	ragyádom
-brultúdik	brultúdik	2	brultúdok	brultúdom
-dzsigetik	dΩigetik	2	dzsigetek	dzsigetem
-pléhedik	pléhedik	2	pléhedek	pléhedem
-pidaglik	pidaglik	2	pidaglok	pidaglom
-jicénik	jicénik	2	jicének	jicénem
-sűvődik	sűvődik	2	sűvődök	sűvődöm
-otozik	otozik	2	otozok	otozom
-rulonylik	rulo¥lik	2	rulonylok	rulonylom
-damakszik	damakßik	2	damakszok	damakszom
-kasztaglik	kaßtaglik	2	kasztaglok	kasztaglom
-spotyoklik	spo†oklik	2	spotyoklok	spotyoklom
-lígyagzik	lí©agzik	2	lígyagzok	lígyagzom
-mundonylik	mundo¥lik	2	mundonylok	mundonylom
-csimbatik	çimbatik	2	csimbatok	csimbatom
-gyóludik	©óludik	2	gyóludok	gyóludom
-apázik	apázik	2	apázok	apázom
-kuglódzik	kuglódzik	2	kuglódzok	kuglódzom
-topoklik	topoklik	2	topoklok	topoklom
-nyocodik	¥ocodik	2	nyocodok	nyocodom
-sztágyaglik	ßtá©aglik	2	sztágyaglok	sztágyaglom
-flölődik	flölődik	2	flölődök	flölődöm
-dengégszik	dengégßik	2	dengégszek	dengégszem
-gühöklik	gühöklik	2	gühöklök	gühöklöm
-spejtizik	spejtizik	2	spejtizok	spejtizom
-anádzik	anádzik	2	anádzok	anádzom
-rilakszik	rilakßik	2	rilakszok	rilakszom
-horjoklik	horjoklik	2	horjoklok	horjoklom
-detkemlik	detkemlik	2	detkemlek	detkemlem
-tirtegzik	tirtegzik	2	tirtegzek	tirtegzem
-dzsumlúdik	dΩumlúdik	2	dzsumlúdok	dzsumlúdom
-tidaslik	tidaslik	2	tidaslok	tidaslom
-csívádik	çívádik	2	csívádok	csívádom
-détepszik	détepßik	2	détepszek	détepszem
-tróklódik	tróklódik	2	tróklódok	tróklódom
-csóronylik	çóro¥lik	2	csóronylok	csóronylom
-nyimbarzik	¥imbarzik	2	nyimbarzok	nyimbarzom
-rirkapszik	rirkapßik	2	rirkapszok	rirkapszom
-jadázik	jadázik	2	jadázok	jadázom
-falajlik	falajlik	2	falajlok	falajlom
-prőgűdzik	prőgűdzik	2	prőgűdzök	prőgűdzöm
-cánkágzik	cánkágzik	2	cánkágzok	cánkágzom
-tinyészik	ti¥éßik	2	tinyészek	tinyészem
-brógozik	brógozik	2	brógozok	brógozom
-ranyaglik	ra¥aglik	2	ranyaglok	ranyaglom
-gyitézik	©itézik	2	gyitézek	gyitézem
-zermeglik	zermeglik	2	zermeglek	zermeglem
-ütűdzik	ütűdzik	2	ütűdzök	ütűdzöm
-carjázik	carjázik	2	carjázok	carjázom
-nyárkáglik	¥árkáglik	2	nyárkáglok	nyárkáglom
-gicénik	gicénik	2	gicének	gicénem
-tóbódik	tóbódik	2	tóbódok	tóbódom
-skányarzik	ská¥arzik	2	skányarzok	skányarzom
-jemlenik	jemlenik	2	jemlenek	jemlenem
-kengegszik	kengegßik	2	kengegszek	kengegszem
-bepreslik	bepreslik	2	bepreslek	bepreslem
-mágyamlik	má©amlik	2	mágyamlok	mágyamlom
-työrőzik	†örőzik	2	työrőzök	työrőzöm
-csálajlik	çálajlik	2	csálajlok	csálajlom
-flanyaklik	fla¥aklik	2	flanyaklok	flanyaklom
-jojonylik	jojo¥lik	2	jojonylok	jojonylom
-halmapszik	halmapßik	2	halmapszok	halmapszom
-veprézik	veprézik	2	veprézek	veprézem
-progoslik	progoslik	2	progoslok	progoslom
-smajtazik	smajtazik	2	smajtazok	smajtazom
-gyondúzik	©ondúzik	2	gyondúzok	gyondúzom
-doldozik	doldozik	2	doldozok	doldozom
-flíratik	flíratik	2	flíratok	flíratom
-pivezik	pivezik	2	pivezek	pivezem
-ditesik	ditesik	2	ditesek	ditesem
-prinyádzik	pri¥ádzik	2	prinyádzok	prinyádzom
-tremlenik	tremlenik	2	tremlenek	tremlenem
-rilezik	rilezik	2	rilezek	rilezem
-mívedik	mívedik	2	mívedek	mívedem
-dzsamánylik	dΩamá¥lik	2	dzsamánylok	dzsamánylom
-prénégszik	prénégßik	2	prénégszek	prénégszem
-barkárzik	barkárzik	2	barkárzok	barkárzom
-málmazik	málmazik	2	málmazok	málmazom
-bavagzik	bavagzik	2	bavagzok	bavagzom
-sacadzik	sacadzik	2	sacadzok	sacadzom
-combuzik	combuzik	2	combuzok	combuzom
-calmakszik	calmakßik	2	calmakszok	calmakszom
-nyimlagszik	¥imlagßik	2	nyimlagszok	nyimlagszom
-zsírádik	Ωírádik	2	zsírádok	zsírádom
-cőrlüszik	cőrlüßik	2	cőrlüszök	cőrlüszöm
-fikadzik	fikadzik	2	fokadzik	fomadzik
-trásazik	trásazik	2	trásazok	trásazom
-hermézik	hermézik	2	hermézek	hermézem
-csalmádzik	çalmádzik	2	csalmádzok	csalmádzom
-gúkúdik	gúkúdik	2	gúkúdok	gúkúdom
-gitadzik	gitadzik	2	gitadzok	gitadzom
-sojúzik	sojúzik	2	sojúzok	sojúzom
-tyáprakszik	†áprakßik	2	tyáprakszok	tyáprakszom
-bisánylik	bisá¥lik	2	bisánylok	bisánylom
-zundonylik	zundo¥lik	2	zundonylok	zundonylom
-bigyászik	bi©áßik	2	bigyászok	bigyászom
-gíkézik	gíkézik	2	gíkézek	gíkézem
-skűvözik	skűvözik	2	skűvözök	skűvözöm
-bésedik	bésedik	2	bésedek	bésedem
-simlaglik	simlaglik	2	simlaglok	simlaglom
-nűkődik	nűkődik	2	nűkődök	nűkődöm
-nyántajlik	¥ántajlik	2	nyántajlok	nyántajlom
-bripekszik	bripekßik	2	bripekszek	bripekszem
-smőrűzik	smőrűzik	2	smőrűzök	smőrűzöm
-dügyűdzik	dü©űdzik	2	dügyűdzök	dügyűdzöm
-tenyegzik	te¥egzik	2	tenyegzek	tenyegzem
-dzsecénik	dΩecénik	2	dzsecének	dzsecénem
-cenepszik	cenepßik	2	cenepszek	cenepszem
-fácsárzik	fáçárzik	2	fácsárzok	fácsárzom
-skulodik	skulodik	2	skulodok	skulodom
-lógozik	lógozik	2	lógozok	lógozom
-tyamajlik	†amajlik	2	tyamajlok	tyamajlom
-rikesik	rikesik	2	rekesik	remesik
-sztomúdik	ßtomúdik	2	sztomúdok	sztomúdom
-osztoklik	oßtoklik	2	osztoklok	osztoklom
-sztinyáglik	ßti¥áglik	2	sztinyáglok	sztinyáglom
-mulduzik	mulduzik	2	mulduzok	mulduzom
-pundódik	pundódik	2	pundódok	pundódom
-gempedik	gempedik	2	gempedek	gempedem
-pluglózik	pluglózik	2	pluglózok	pluglózom
-brikagzik	brikagzik	2	brokagzik	bromagzik
-dajaglik	dajaglik	2	dajaglok	dajaglom
-dépeslik	dépeslik	2	dépeslek	dépeslem
-pimbakszik	pimbakßik	2	pimbakszok	pimbakszom
-rangarzik	rangarzik	2	rangarzok	rangarzom
-cindázik	cindázik	2	cindázok	cindázom
-zsornúdik	Ωornúdik	2	zsornúdok	zsornúdom
-zanyádik	za¥ádik	2	zanyádok	zanyádom
-nápránylik	náprá¥lik	2	nápránylok	nápránylom
-púrlonylik	púrlo¥lik	2	púrlonylok	púrlonylom
-brocsonylik	broço¥lik	2	brocsonylok	brocsonylom
-gyiregzik	©iregzik	2	gyiregzek	gyiregzem
-dörtödik	dörtödik	2	dörtödök	dörtödöm
-tyoldúzik	†oldúzik	2	tyoldúzok	tyoldúzom
-detyesik	de†esik	2	detyesek	detyesem
-skaráglik	skaráglik	2	skaráglok	skaráglom
-sibáglik	sibáglik	2	sibáglok	sibáglom
-sztígyádik	ßtí©ádik	2	sztígyádok	sztígyádom
-fipazik	fipazik	2	fipazok	fipazom
-britapszik	britapßik	2	britapszok	britapszom
-posztonylik	poßto¥lik	2	posztonylok	posztonylom
-fépedzik	fépedzik	2	fépedzek	fépedzem
-spémegzik	spémegzik	2	spémegzek	spémegzem
-bígyatik	bí©atik	2	bígyatok	bígyatom
-tyacságzik	†açágzik	2	tyacságzok	tyacságzom
-baltádik	baltádik	2	baltádok	baltádom
-cimbádzik	cimbádzik	2	cimbádzok	cimbádzom
-jindádik	jindádik	2	jindádok	jindádom
-tyempeslik	†empeslik	2	tyempeslek	tyempeslem
-digészik	digéßik	2	digészek	digészem
-rangadzik	rangadzik	2	rangadzok	rangadzom
-spihazik	spihazik	2	spihazok	spihazom
-főgőzik	főgőzik	2	főgőzök	főgőzöm
-flatágzik	flatágzik	2	flatágzok	flatágzom
-gudózik	gudózik	2	gudózok	gudózom
-gagyaslik	ga©aslik	2	gagyaslok	gagyaslom
-prumuzik	prumuzik	2	prumuzok	prumuzom
-cűtőzik	cűtőzik	2	cűtőzök	cűtőzöm
-trakaslik	trakaslik	2	trakaslok	trakaslom
-csévézik	çévézik	2	csévézek	csévézem
-gasztáglik	gaßtáglik	2	gasztáglok	gasztáglom
-gartizik	gartizik	2	gartizok	gartizom
-kobuzik	kobuzik	2	kobuzok	kobuzom
-martatik	martatik	2	martatok	martatom
-tyőrlődik	†őrlődik	2	tyőrlődök	tyőrlődöm
-zányaglik	zá¥aglik	2	zányaglok	zányaglom
-skétedik	skétedik	2	skétedek	skétedem
-tyerepszik	†erepßik	2	tyerepszek	tyerepszem
-jáláglik	jáláglik	2	jáláglok	jáláglom
-tárkatik	tárkatik	2	tárkatok	tárkatom
-mámatik	mámatik	2	mámatok	mámatom
-plályakszik	plá¬akßik	2	plályakszok	plályakszom
-parazik	parazik	2	parazok	parazom
-dágarzik	dágarzik	2	dágarzok	dágarzom
+prompt	tr	nsyl	ending	target_k	target_m
+mamlik	mamlik	1	lik	mamlok	mamlom
+brüjlik	brüjlik	1	lik	brüjlök	brüjlöm
+díslik	díslik	1	lik	díslok	díslom
+likszik	likßik	1	zik	lokszik	lomszik
+bítlik	bítlik	1	lik	bítlok	bítlom
+flűmlik	flűmlik	1	lik	flűmlök	flűmlöm
+flérlik	flérlik	1	lik	flérlek	flérlem
+nyágzik	¥ágzik	1	zik	nyágzok	nyágzom
+sprüslik	sprüslik	1	lik	sprüslök	sprüslöm
+klárzik	klárzik	1	zik	klárzok	klárzom
+síklik	síklik	1	lik	síklok	síklom
+szöszlik	ßößlik	1	lik	szöszlök	szöszlöm
+sztremlik	ßtremlik	1	lik	sztremlek	sztremlem
+sojzik	sojzik	1	zik	sojzok	sojzom
+csünylik	çü¥lik	1	lik	csünylök	csünylöm
+büglik	büglik	1	lik	büglök	büglöm
+klűlszik	klűlßik	1	zik	klűlszök	klűlszöm
+lerzik	lerzik	1	zik	lerzek	lerzem
+kábzik	kábzik	1	zik	kábzok	kábzom
+prárzik	prárzik	1	zik	prárzok	prárzom
+figlik	figlik	1	lik	figlok	figlom
+rájzik	rájzik	1	zik	rájzok	rájzom
+prujlik	prujlik	1	lik	prujlok	prujlom
+léglik	léglik	1	lik	léglek	léglem
+ribzik	ribzik	1	zik	ribzok	ribzom
+trádlik	trádlik	1	lik	trádlok	trádlom
+marzik	marzik	1	zik	marzok	marzom
+fugzik	fugzik	1	zik	fugzok	fugzom
+delszik	delßik	1	zik	delszek	delszem
+féslik	féslik	1	lik	féslek	féslem
+brűnylik	brű¥lik	1	lik	brűnylök	brűnylöm
+femlik	femlik	1	lik	femlek	femlem
+spatszik	spatßik	1	zik	spatszok	spatszom
+frunylik	fru¥lik	1	lik	frunylok	frunylom
+trorzik	trorzik	1	zik	trorzok	trorzom
+kléslik	kléslik	1	lik	kléslek	kléslem
+klétszik	klétßik	1	zik	klétszek	klétszem
+csöglik	çöglik	1	lik	csöglök	csöglöm
+klüjlik	klüjlik	1	lik	klüjlök	klüjlöm
+bűtszik	bűtßik	1	zik	bűtszök	bűtszöm
+drünylik	drü¥lik	1	lik	drünylök	drünylöm
+rokszik	rokßik	1	zik	rokszok	rokszom
+prűtszik	prűtßik	1	zik	prűtszök	prűtszöm
+flüjzik	flüjzik	1	zik	flüjzök	flüjzöm
+prűrlik	prűrlik	1	lik	prűrlök	prűrlöm
+plolszik	plolßik	1	zik	plolszok	plolszom
+dröjlik	dröjlik	1	lik	dröjlök	dröjlöm
+frodlik	frodlik	1	lik	frodlok	frodlom
+sztruglik	ßtruglik	1	lik	sztruglok	sztruglom
+spéslik	spéslik	1	lik	spéslek	spéslem
+düjzik	düjzik	1	zik	düjzök	düjzöm
+sitlik	sitlik	1	lik	sitlok	sitlom
+dralszik	dralßik	1	zik	dralszok	dralszom
+bükszik	bükßik	1	zik	bükszök	bükszöm
+jüslik	jüslik	1	lik	jüslök	jüslöm
+aglik	aglik	1	lik	aglok	aglom
+szirlik	ßirlik	1	lik	szirlok	szirlom
+mékszik	mékßik	1	zik	mékszek	mékszem
+spűmlik	spűmlik	1	lik	spűmlök	spűmlöm
+szabzik	ßabzik	1	zik	szabzok	szabzom
+klubzik	klubzik	1	zik	klubzok	klubzom
+plödlik	plödlik	1	lik	plödlök	plödlöm
+hatlik	hatlik	1	lik	hatlok	hatlom
+spröbzik	spröbzik	1	zik	spröbzök	spröbzöm
+píjlik	píjlik	1	lik	píjlok	píjlom
+csukszik	çukßik	1	zik	csukszok	csukszom
+plajlik	plajlik	1	lik	plajlok	plajlom
+urzik	urzik	1	zik	urzok	urzom
+drügzik	drügzik	1	zik	drügzök	drügzöm
+félszik	félßik	1	zik	félszek	félszem
+taslik	taslik	1	lik	taslok	taslom
+floglik	floglik	1	lik	floglok	floglom
+bobzik	bobzik	1	zik	bobzok	bobzom
+spüjzik	spüjzik	1	zik	spüjzök	spüjzöm
+bríszlik	bríßlik	1	lik	bríszlok	bríszlom
+kumlik	kumlik	1	lik	kumlok	kumlom
+böjzik	böjzik	1	zik	böjzök	böjzöm
+sprökszik	sprökßik	1	zik	sprökszök	sprökszöm
+paszlik	paßlik	1	lik	paszlok	paszlom
+drobzik	drobzik	1	zik	drobzok	drobzom
+törlik	törlik	1	lik	törlök	törlöm
+brubzik	brubzik	1	zik	brubzok	brubzom
+sprédlik	sprédlik	1	lik	sprédlek	sprédlem
+drikszik	drikßik	1	zik	drokszik	dromszik
+spüszlik	spüßlik	1	lik	spüszlök	spüszlöm
+klörlik	klörlik	1	lik	klörlök	klörlöm
+zurlik	zurlik	1	lik	zurlok	zurlom
+ímlik	ímlik	1	lik	ímlok	ímlom
+csírzik	çírzik	1	zik	csírzok	csírzom
+szegzik	ßegzik	1	zik	szegzek	szegzem
+sztrédlik	ßtrédlik	1	lik	sztrédlek	sztrédlem
+jazlik	jazlik	1	lik	jazlok	jazlom
+csíszlik	çíßlik	1	lik	csíszlok	csíszlom
+fligzik	fligzik	1	zik	fligzok	fligzom
+flüslik	flüslik	1	lik	flüslök	flüslöm
+trözlik	trözlik	1	lik	trözlök	trözlöm
+pluslik	pluslik	1	lik	pluslok	pluslom
+nyáslik	¥áslik	1	lik	nyáslok	nyáslom
+pebzik	pebzik	1	zik	pebzek	pebzem
+drászlik	dráßlik	1	lik	drászlok	drászlom
+vanylik	va¥lik	1	lik	vanylok	vanylom
+trilszik	trilßik	1	zik	trilszok	trilszom
+féjzik	féjzik	1	zik	féjzek	féjzem
+cségzik	çégzik	1	zik	cségzek	cségzem
+spedlik	spedlik	1	lik	spedlek	spedlem
+tűjzik	tűjzik	1	zik	tűjzök	tűjzöm
+pletlik	pletlik	1	lik	pletlek	pletlem
+ploklik	ploklik	1	lik	ploklok	ploklom
+troklik	troklik	1	lik	troklok	troklom
+plűbzik	plűbzik	1	zik	plűbzök	plűbzöm
+rílszik	rílßik	1	zik	rílszok	rílszom
+klátlik	klátlik	1	lik	klátlok	klátlom
+jonylik	jo¥lik	1	lik	jonylok	jonylom
+szüzlik	ßüzlik	1	lik	szüzlök	szüzlöm
+jíjzik	jíjzik	1	zik	jíjzok	jíjzom
+plugzik	plugzik	1	zik	plugzok	plugzom
+sűzlik	sűzlik	1	lik	sűzlök	sűzlöm
+sztrélszik	ßtrélßik	1	zik	sztrélszek	sztrélszem
+mánylik	má¥lik	1	lik	mánylok	mánylom
+plíjzik	plíjzik	1	zik	plíjzok	plíjzom
+pálszik	pálßik	1	zik	pálszok	pálszom
+juszlik	jußlik	1	lik	juszlok	juszlom
+zigzik	zigzik	1	zik	zigzok	zigzom
+táklik	táklik	1	lik	táklok	táklom
+borlik	borlik	1	lik	borlok	borlom
+zödlik	zödlik	1	lik	zödlök	zödlöm
+csuzlik	çuzlik	1	lik	csuzlok	csuzlom
+nyökszik	¥ökßik	1	zik	nyökszök	nyökszöm
+nyeklik	¥eklik	1	lik	nyeklek	nyeklem
+matszik	matßik	1	zik	matszok	matszom
+plíszlik	plíßlik	1	lik	plíszlok	plíszlom
+vízlik	vízlik	1	lik	vízlok	vízlom
+meslik	meslik	1	lik	meslek	meslem
+zűmlik	zűmlik	1	lik	zűmlök	zűmlöm
+hűgzik	hűgzik	1	zik	hűgzök	hűgzöm
+agzik	agzik	1	zik	agzok	agzom
+friszlik	frißlik	1	lik	friszlok	friszlom
+jorzik	jorzik	1	zik	jorzok	jorzom
+trétlik	trétlik	1	lik	trétlek	trétlem
+tulszik	tulßik	1	zik	tulszok	tulszom
+sztrűkszik	ßtrűkßik	1	zik	sztrűkszök	sztrűkszöm
+étlik	étlik	1	lik	étlek	étlem
+szűslik	ßűslik	1	lik	szűslök	szűslöm
+vűjlik	vűjlik	1	lik	vűjlök	vűjlöm
+csiklik	çiklik	1	lik	csoklik	csomlik
+flitlik	flitlik	1	lik	flitlok	flitlom
+trurlik	trurlik	1	lik	trurlok	trurlom
+sztrínylik	ßtrí¥lik	1	lik	sztrínylok	sztrínylom
+kürlik	kürlik	1	lik	kürlök	kürlöm
+klidlik	klidlik	1	lik	klidlok	klidlom
+drozlik	drozlik	1	lik	drozlok	drozlom
+huklik	huklik	1	lik	huklok	huklom
+sprálszik	sprálßik	1	zik	sprálszok	sprálszom
+tomlik	tomlik	1	lik	tomlok	tomlom
+spírzik	spírzik	1	zik	spírzok	spírzom
+prezlik	prezlik	1	lik	prezlek	prezlem
+sprogzik	sprogzik	1	zik	sprogzok	sprogzom
+praslik	praslik	1	lik	praslok	praslom
+özlik	özlik	1	lik	özlök	özlöm
+sztrijzik	ßtrijzik	1	zik	sztrijzok	sztrijzom
+tragzik	tragzik	1	zik	tragzok	tragzom
+spélszik	spélßik	1	zik	spélszek	spélszem
+bölszik	bölßik	1	zik	bölszök	bölszöm
+déjlik	déjlik	1	lik	déjlek	déjlem
+fretszik	fretßik	1	zik	fretszek	fretszem
+ruslik	ruslik	1	lik	ruslok	ruslom
+jötlik	jötlik	1	lik	jötlök	jötlöm
+treglik	treglik	1	lik	treglek	treglem
+brarzik	brarzik	1	zik	brarzok	brarzom
+flözlik	flözlik	1	lik	flözlök	flözlöm
+brutlik	brutlik	1	lik	brutlok	brutlom
+pézlik	pézlik	1	lik	pézlek	pézlem
+flátszik	flátßik	1	zik	flátszok	flátszom
+sádlik	sádlik	1	lik	sádlok	sádlom
+frakszik	frakßik	1	zik	frakszok	frakszom
+pítszik	pítßik	1	zik	pítszok	pítszom
+frerzik	frerzik	1	zik	frerzek	frerzem
+sprűglik	sprűglik	1	lik	sprűglök	sprűglöm
+ülszik	ülßik	1	zik	ülszök	ülszöm
+sztrurzik	ßtrurzik	1	zik	sztrurzok	sztrurzom
+prínylik	prí¥lik	1	lik	prínylok	prínylom
+nyitszik	¥itßik	1	zik	nyitszok	nyitszom
+brarlik	brarlik	1	lik	brarlok	brarlom
+sztrítszik	ßtrítßik	1	zik	sztrítszok	sztrítszom
+trákszik	trákßik	1	zik	trákszok	trákszom
+flörzik	flörzik	1	zik	flörzök	flörzöm
+sztrozlik	ßtrozlik	1	lik	sztrozlok	sztrozlom
+drűslik	drűslik	1	lik	drűslök	drűslöm
+tínylik	tí¥lik	1	lik	tínylok	tínylom
+klaráglik	klaráglik	2	lik	klaráglok	klaráglom
+lágakszik	lágakßik	2	zik	lágakszok	lágakszom
+gyatágzik	©atágzik	2	zik	gyatágzok	gyatágzom
+lubódzik	lubódzik	2	zik	lubódzok	lubódzom
+spohódzik	spohódzik	2	zik	spohódzok	spohódzom
+kilaglik	kilaglik	2	lik	kilaglok	kilaglom
+vilejlik	vilejlik	2	lik	vilejlek	vilejlem
+delénylik	delé¥lik	2	lik	delénylek	delénylem
+tréleslik	tréleslik	2	lik	tréleslek	tréleslem
+felégszik	felégßik	2	zik	felégszek	felégszem
+málapszik	málapßik	2	zik	málapszok	málapszom
+frihágzik	frihágzik	2	zik	frihágzok	frihágzom
+fralárzik	fralárzik	2	zik	fralárzok	fralárzom
+bélejlik	bélejlik	2	lik	bélejlek	bélejlem
+szibaglik	ßibaglik	2	lik	szibaglok	szibaglom
+nyélemlik	¥élemlik	2	lik	nyélemlek	nyélemlem
+driharzik	driharzik	2	zik	driharzok	driharzom
+firadzik	firadzik	2	zik	firadzok	firadzom
+gyihegszik	©ihegßik	2	zik	gyihegszek	gyihegszem
+gyivékszik	©ivékßik	2	zik	gyivékszek	gyivékszem
+nyiraklik	¥iraklik	2	lik	nyiraklok	nyiraklom
+prihádzik	prihádzik	2	zik	prihádzok	prihádzom
+tárapszik	tárapßik	2	zik	tárapszok	tárapszom
+fliragzik	fliragzik	2	zik	fliragzok	fliragzom
+riláglik	riláglik	2	lik	riláglok	riláglom
+klibadzik	klibadzik	2	zik	klibadzok	klibadzom
+varáglik	varáglik	2	lik	varáglok	varáglom
+vilakszik	vilakßik	2	zik	vilakszok	vilakszom
+klirágzik	klirágzik	2	zik	klirágzok	klirágzom
+klatárzik	klatárzik	2	zik	klatárzok	klatárzom
+fivepszik	fivepßik	2	zik	fivepszek	fivepszem
+frivajlik	frivajlik	2	lik	frivajlok	frivajlom
+mibagszik	mibagßik	2	zik	mibagszok	mibagszom
+spubonylik	spubo¥lik	2	lik	spubonylok	spubonylom
+drivapszik	drivapßik	2	zik	drivapszok	drivapszom
+tövőrzik	tövőrzik	2	zik	tövőrzök	tövőrzöm
+flehénylik	flehé¥lik	2	lik	flehénylek	flehénylem
+plövőrzik	plövőrzik	2	zik	plövőrzök	plövőrzöm
+pratágzik	pratágzik	2	zik	pratágzok	pratágzom
+nyibejlik	¥ibejlik	2	lik	nyibejlek	nyibejlem
+bihánylik	bihá¥lik	2	lik	bihánylok	bihánylom
+luborzik	luborzik	2	zik	luborzok	luborzom
+flűröklik	flűröklik	2	lik	flűröklök	flűröklöm
+trihagzik	trihagzik	2	zik	trihagzok	trihagzom
+gilegzik	gilegzik	2	zik	gilegzek	gilegzem
+klubonylik	klubo¥lik	2	lik	klubonylok	klubonylom
+kérepszik	kérepßik	2	zik	kérepszek	kérepszem
+spibádzik	spibádzik	2	zik	spibádzok	spibádzom
+klibamlik	klibamlik	2	lik	klibamlok	klibamlom
+iránylik	irá¥lik	2	lik	iránylok	iránylom
+pliraglik	pliraglik	2	lik	pliraglok	pliraglom
+fliraklik	fliraklik	2	lik	fliraklok	fliraklom
+hatánylik	hatá¥lik	2	lik	hatánylok	hatánylom
+drubódzik	drubódzik	2	zik	drubódzok	drubódzom
+spilágzik	spilágzik	2	zik	spilágzok	spilágzom
+bivégszik	bivégßik	2	zik	bivégszek	bivégszem
+tribarzik	tribarzik	2	zik	tribarzok	tribarzom
+salárzik	salárzik	2	zik	salárzok	salárzom
+nűröklik	nűröklik	2	lik	nűröklök	nűröklöm
+klövűdzik	klövűdzik	2	zik	klövűdzök	klövűdzöm
+pivegszik	pivegßik	2	zik	pivegszek	pivegszem
+hurjorzik	hurjorzik	2	zik	hurjorzok	hurjorzom
+flagárzik	flagárzik	2	zik	flagárzok	flagárzom
+huroslik	huroslik	2	lik	huroslok	huroslom
+fövűdzik	fövűdzik	2	zik	fövűdzök	fövűdzöm
+tugonylik	tugo¥lik	2	lik	tugonylok	tugonylom
+trihemlik	trihemlik	2	lik	trihemlek	trihemlem
+sérejlik	sérejlik	2	lik	sérejlek	sérejlem
+dáladzik	dáladzik	2	zik	dáladzok	dáladzom
+bribaglik	bribaglik	2	lik	bribaglok	bribaglom
+kibemlik	kibemlik	2	lik	kibemlek	kibemlem
+dürődzik	dürődzik	2	zik	dürődzök	dürődzöm
+spiramlik	spiramlik	2	lik	spiramlok	spiramlom
+ivemlik	ivemlik	2	lik	ivemlek	ivemlem
+plirénylik	pliré¥lik	2	lik	plirénylek	plirénylem
+nirágzik	nirágzik	2	zik	nirágzok	nirágzom
+marjágzik	marjágzik	2	zik	marjágzok	marjágzom
+narjárzik	narjárzik	2	zik	narjárzok	narjárzom
+darjánylik	darjá¥lik	2	lik	darjánylok	darjánylom
+drubonylik	drubo¥lik	2	lik	drubonylok	drubonylom
+dribaklik	dribaklik	2	lik	dribaklok	dribaklom
+kágadzik	kágadzik	2	zik	kágadzok	kágadzom
+frihapszik	frihapßik	2	zik	frihapszok	frihapszom
+brobódzik	brobódzik	2	zik	brobódzok	brobódzom
+spötűdzik	spötűdzik	2	zik	spötűdzök	spötűdzöm
+plugoklik	plugoklik	2	lik	plugoklok	plugoklom
+irégszik	irégßik	2	zik	irégszek	irégszem
+brivegzik	brivegzik	2	zik	brivegzek	brivegzem
+lihemlik	lihemlik	2	lik	lihemlek	lihemlem
+pruboklik	pruboklik	2	lik	pruboklok	pruboklom
+kléregszik	kléregßik	2	zik	kléregszek	kléregszem
+dágajlik	dágajlik	2	lik	dágajlok	dágajlom
+trötőrzik	trötőrzik	2	zik	trötőrzök	trötőrzöm
+brivénylik	brivé¥lik	2	lik	brivénylek	brivénylem
+brugódzik	brugódzik	2	zik	brugódzok	brugódzom
+ihágzik	ihágzik	2	zik	ihágzok	ihágzom
+pribedzik	pribedzik	2	zik	pribedzek	pribedzem
+gilárzik	gilárzik	2	zik	gilárzok	gilárzom
+spülöklik	spülöklik	2	lik	spülöklök	spülöklöm
+narádzik	narádzik	2	zik	narádzok	narádzom
+csólorzik	çólorzik	2	zik	csólorzok	csólorzom
+prilegzik	prilegzik	2	zik	prilegzek	prilegzem
+pribagszik	pribagßik	2	zik	pribagszok	pribagszom
+fribénylik	fribé¥lik	2	lik	fribénylek	fribénylem
+plihegzik	plihegzik	2	zik	plihegzek	plihegzem
+csolódzik	çolódzik	2	zik	csolódzok	csolódzom
+szibánylik	ßibá¥lik	2	lik	szibánylok	szibánylom
+szilaklik	ßilaklik	2	lik	szilaklok	szilaklom
+iragzik	iragzik	2	zik	iragzok	iragzom
+drólonylik	drólo¥lik	2	lik	drólonylok	drólonylom
+dihajlik	dihajlik	2	lik	dihajlok	dihajlom
+ilepszik	ilepßik	2	zik	ilepszek	ilepszem
+káraslik	káraslik	2	lik	káraslok	káraslom
+tűrődzik	tűrődzik	2	zik	tűrődzök	tűrődzöm
+spihemlik	spihemlik	2	lik	spihemlek	spihemlem
+hilénylik	hilé¥lik	2	lik	hilénylek	hilénylem
+válaglik	válaglik	2	lik	válaglok	válaglom
+klivégszik	klivégßik	2	zik	klivégszek	klivégszem
+plágadzik	plágadzik	2	zik	plágadzok	plágadzom
+brágadzik	brágadzik	2	zik	brágadzok	brágadzom
+herégszik	herégßik	2	zik	herégszek	herégszem
+pratánylik	pratá¥lik	2	lik	pratánylok	pratánylom
+nibarzik	nibarzik	2	zik	nibarzok	nibarzom
+frülődzik	frülődzik	2	zik	frülődzök	frülődzöm
+lorjódzik	lorjódzik	2	zik	lorjódzok	lorjódzom
+luboslik	luboslik	2	lik	luboslok	luboslom
+drötűdzik	drötűdzik	2	zik	drötűdzök	drötűdzöm
+pribemlik	pribemlik	2	lik	pribemlek	pribemlem
+prálakszik	prálakßik	2	zik	prálakszok	prálakszom
+mivarzik	mivarzik	2	zik	mivarzok	mivarzom
+bivárzik	bivárzik	2	zik	bivárzok	bivárzom
+hilarzik	hilarzik	2	zik	hilarzok	hilarzom
+prihekszik	prihekßik	2	zik	prihekszek	prihekszem
+klágarzik	klágarzik	2	zik	klágarzok	klágarzom
+plibánylik	plibá¥lik	2	lik	plibánylok	plibánylom
+gyetékszik	©etékßik	2	zik	gyetékszek	gyetékszem
+fivénylik	fivé¥lik	2	lik	fivénylek	fivénylem
+prólorzik	prólorzik	2	zik	prólorzok	prólorzom
+filágzik	filágzik	2	zik	filágzok	filágzom
+sperénylik	speré¥lik	2	lik	sperénylek	sperénylem
+kohódzik	kohódzik	2	zik	kohódzok	kohódzom
+flireglik	flireglik	2	lik	flireglek	flireglem
+brilekszik	brilekßik	2	zik	brilekszek	brilekszem
+klivegzik	klivegzik	2	zik	klivegzek	klivegzem
+gyivádzik	©ivádzik	2	zik	gyivádzok	gyivádzom
+sárajlik	sárajlik	2	lik	sárajlok	sárajlom
+lörűdzik	lörűdzik	2	zik	lörűdzök	lörűdzöm
+csugorzik	çugorzik	2	zik	csugorzok	csugorzom
+gyibakszik	©ibakßik	2	zik	gyibakszok	gyibakszom
+filajlik	filajlik	2	lik	filajlok	filajlom
+ötűdzik	ötűdzik	2	zik	ötűdzök	ötűdzöm
+feténylik	feté¥lik	2	lik	feténylek	feténylem
+bárakszik	bárakßik	2	zik	bárakszok	bárakszom
+süröklik	süröklik	2	lik	süröklök	süröklöm
+klárapszik	klárapßik	2	zik	klárapszok	klárapszom
+trivágzik	trivágzik	2	zik	trivágzok	trivágzom
+driládzik	driládzik	2	zik	driládzok	driládzom
+kugódzik	kugódzik	2	zik	kugódzok	kugódzom
+szálajlik	ßálajlik	2	lik	szálajlok	szálajlom
+táradzik	táradzik	2	zik	táradzok	táradzom
+préleglik	préleglik	2	lik	préleglek	préleglem
+spibarzik	spibarzik	2	zik	spibarzok	spibarzom
+hilamlik	hilamlik	2	lik	hilamlok	hilamlom
+klivaslik	klivaslik	2	lik	klivaslok	klivaslom
+gibapszik	gibapßik	2	zik	gibapszok	gibapszom
+hilapszik	hilapßik	2	zik	hilapszok	hilapszom
+spatárzik	spatárzik	2	zik	spatárzok	spatárzom
+harjáglik	harjáglik	2	lik	harjáglok	harjáglom
+rálagzik	rálagzik	2	zik	rálagzok	rálagzom
+gatárzik	gatárzik	2	zik	gatárzok	gatárzom
+téledzik	téledzik	2	zik	téledzek	téledzem
+trilárzik	trilárzik	2	zik	trilárzok	trilárzom
+magárzik	magárzik	2	zik	magárzok	magárzom
+plihaslik	plihaslik	2	lik	plihaslok	plihaslom
+fléremlik	fléremlik	2	lik	fléremlek	fléremlem
+guronylik	guro¥lik	2	lik	guronylok	guronylom
+direpszik	direpßik	2	zik	direpszek	direpszem
+dréledzik	dréledzik	2	zik	dréledzek	dréledzem
+irapszik	irapßik	2	zik	irapszok	irapszom
+fibamlik	fibamlik	2	lik	fibamlok	fibamlom
+livaklik	livaklik	2	lik	livaklok	livaklom
+direglik	direglik	2	lik	direglek	direglem
+spülőrzik	spülőrzik	2	zik	spülőrzök	spülőrzöm
+flivemlik	flivemlik	2	lik	flivemlek	flivemlem
+mihaklik	mihaklik	2	lik	mihaklok	mihaklom
+friványlik	frivá¥lik	2	lik	friványlok	friványlom
+guródzik	guródzik	2	zik	guródzok	guródzom
+ilaslik	ilaslik	2	lik	ilaslok	ilaslom
+lihadzik	lihadzik	2	zik	lihadzok	lihadzom
+pireslik	pireslik	2	lik	pireslek	pireslem
+kélegzik	kélegzik	2	zik	kélegzek	kélegzem
+kivagszik	kivagßik	2	zik	kivagszok	kivagszom
+driheglik	driheglik	2	lik	driheglek	driheglem
+plarádzik	plarádzik	2	zik	plarádzok	plarádzom
+fihaglik	fihaglik	2	lik	fihaglok	fihaglom
+miveslik	miveslik	2	lik	miveslek	miveslem
+pugoslik	pugoslik	2	lik	pugoslok	pugoslom
+trágarzik	trágarzik	2	zik	trágarzok	trágarzom
+drálajlik	drálajlik	2	lik	drálajlok	drálajlom
+véreglik	véreglik	2	lik	véreglek	véreglem
+bivejlik	bivejlik	2	lik	bivejlek	bivejlem
+gyáramlik	©áramlik	2	lik	gyáramlok	gyáramlom
+dretégszik	dretégßik	2	zik	dretégszek	dretégszem
+csurjonylik	çurjo¥lik	2	lik	csurjonylok	csurjonylom
+frilegszik	frilegßik	2	zik	frilegszek	frilegszem
+drövőrzik	drövőrzik	2	zik	drövőrzök	drövőrzöm
+vagánylik	vagá¥lik	2	lik	vagánylok	vagánylom
+truborzik	truborzik	2	zik	truborzok	truborzom
+frülöklik	frülöklik	2	lik	frülöklök	frülöklöm
+malánylik	malá¥lik	2	lik	malánylok	malánylom
+nehékszik	nehékßik	2	zik	nehékszek	nehékszem
+drülöslik	drülöslik	2	lik	drülöslök	drülöslöm
+flerégszik	flerégßik	2	zik	flerégszek	flerégszem
+pliháglik	pliháglik	2	lik	pliháglok	pliháglom
+piharzik	piharzik	2	zik	piharzok	piharzom
+ribegzik	ribegzik	2	zik	ribegzek	ribegzem
+trágaslik	trágaslik	2	lik	trágaslok	trágaslom
+klogódzik	klogódzik	2	zik	klogódzok	klogódzom
+gyibeslik	©ibeslik	2	lik	gyibeslek	gyibeslem
+firemlik	firemlik	2	lik	firemlek	firemlem
+drihegszik	drihegßik	2	zik	drihegszek	drihegszem
+néleglik	néleglik	2	lik	néleglek	néleglem
+vülöklik	vülöklik	2	lik	vülöklök	vülöklöm
+turjódzik	turjódzik	2	zik	turjódzok	turjódzom
+frugoklik	frugoklik	2	lik	frugoklok	frugoklom
+furoklik	furoklik	2	lik	furoklok	furoklom
+kihénylik	kihé¥lik	2	lik	kihénylek	kihénylem
+géremlik	géremlik	2	lik	géremlek	géremlem
+élegszik	élegßik	2	zik	élegszek	élegszem
+spibaklik	spibaklik	2	lik	spibaklok	spibaklom
+vágaslik	vágaslik	2	lik	vágaslok	vágaslom
+tribepszik	tribepßik	2	zik	tribepszek	tribepszem
+mötőrzik	mötőrzik	2	zik	mötőrzök	mötőrzöm
+niheglik	niheglik	2	lik	niheglek	niheglem
+brivarzik	brivarzik	2	zik	brivarzok	brivarzom
+héredzik	héredzik	2	zik	héredzek	héredzem
+vűröslik	vűröslik	2	lik	vűröslök	vűröslöm
+gyihamlik	©ihamlik	2	lik	gyihamlok	gyihamlom
+féregszik	féregßik	2	zik	féregszek	féregszem
+sehénylik	sehé¥lik	2	lik	sehénylek	sehénylem
+prugonylik	prugo¥lik	2	lik	prugonylok	prugonylom
+lurjoklik	lurjoklik	2	lik	lurjoklok	lurjoklom
+péleslik	péleslik	2	lik	péleslek	péleslem
+móloklik	móloklik	2	lik	móloklok	móloklom
+kihedzik	kihedzik	2	zik	kihedzek	kihedzem
+flürődzik	flürődzik	2	zik	flürődzök	flürődzöm
+drihedzik	drihedzik	2	zik	drihedzek	drihedzem
+ibékszik	ibékßik	2	zik	ibékszek	ibékszem
+spáraklik	spáraklik	2	lik	spáraklok	spáraklom
+fléregzik	fléregzik	2	zik	fléregzek	fléregzem
+sogódzik	sogódzik	2	zik	sogódzok	sogódzom
+trehégszik	trehégßik	2	zik	trehégszek	trehégszem
+klárajlik	klárajlik	2	lik	klárajlok	klárajlom
+preténylik	preté¥lik	2	lik	preténylek	preténylem
+plibégszik	plibégßik	2	zik	plibégszek	plibégszem
+siladzik	siladzik	2	zik	siladzok	siladzom
+flivékszik	flivékßik	2	zik	flivékszek	flivékszem
+kluroslik	kluroslik	2	lik	kluroslok	kluroslom
+gyilekszik	©ilekßik	2	zik	gyilekszek	gyilekszem
+merékszik	merékßik	2	zik	merékszek	merékszem
+fibedzik	fibedzik	2	zik	fibedzek	fibedzem
+dribekszik	dribekßik	2	zik	dribekszek	dribekszem
+kléreglik	kléreglik	2	lik	kléreglek	kléreglem
+tibénylik	tibé¥lik	2	lik	tibénylek	tibénylem
+vihepszik	vihepßik	2	zik	vihepszek	vihepszem
+giványlik	givá¥lik	2	lik	giványlok	giványlom
+flehékszik	flehékßik	2	zik	flehékszek	flehékszem
+spűrődzik	spűrődzik	2	zik	spűrődzök	spűrődzöm
+csivamlik	çivamlik	2	lik	csivamlok	csivamlom
+trivagszik	trivagßik	2	zik	trivagszok	trivagszom
+brálagszik	brálagßik	2	zik	brálagszok	brálagszom
+brülőrzik	brülőrzik	2	zik	brülőrzök	brülőrzöm
+ibáglik	ibáglik	2	lik	ibáglok	ibáglom
+mihárzik	mihárzik	2	zik	mihárzok	mihárzom
+lérekszik	lérekßik	2	zik	lérekszek	lérekszem
+tuboklik	tuboklik	2	lik	tuboklok	tuboklom
+kliremlik	kliremlik	2	lik	kliremlek	kliremlem
+prilaslik	prilaslik	2	lik	prilaslok	prilaslom
+csirajlik	çirajlik	2	lik	csirajlok	csirajlom
+brövűdzik	brövűdzik	2	zik	brövűdzök	brövűdzöm
+plibaklik	plibaklik	2	lik	plibaklok	plibaklom
+flibekszik	flibekßik	2	zik	flibekszek	flibekszem
+láragszik	láragßik	2	zik	láragszok	láragszom
+küröslik	küröslik	2	lik	küröslök	küröslöm
+déreslik	déreslik	2	lik	déreslek	déreslem
+vágapszik	vágapßik	2	zik	vágapszok	vágapszom
+gövődzik	gövődzik	2	zik	gövődzök	gövődzöm
+dalágzik	dalágzik	2	zik	dalágzok	dalágzom
+vülődzik	vülődzik	2	zik	vülődzök	vülődzöm
+drilégszik	drilégßik	2	zik	drilégszek	drilégszem
+bágamlik	bágamlik	2	lik	bágamlok	bágamlom
+brágaklik	brágaklik	2	lik	brágaklok	brágaklom
+tibádzik	tibádzik	2	zik	tibádzok	tibádzom
+spülűdzik	spülűdzik	2	zik	spülűdzök	spülűdzöm
+csilagzik	çilagzik	2	zik	csilagzok	csilagzom
+givaglik	givaglik	2	lik	givaglok	givaglom
+hóloslik	hóloslik	2	lik	hóloslok	hóloslom
+spilénylik	spilé¥lik	2	lik	spilénylek	spilénylem
+nyilégszik	¥ilégßik	2	zik	nyilégszek	nyilégszem
+gálaklik	gálaklik	2	lik	gálaklok	gálaklom
+plaránylik	plará¥lik	2	lik	plaránylok	plaránylom
+mibadzik	mibadzik	2	zik	mibadzok	mibadzom
+ratáglik	ratáglik	2	lik	ratáglok	ratáglom
+dribejlik	dribejlik	2	lik	dribejlek	dribejlem
+spibánylik	spibá¥lik	2	lik	spibánylok	spibánylom
+flüröslik	flüröslik	2	lik	flüröslök	flüröslöm
+spihegzik	spihegzik	2	zik	spihegzek	spihegzem
+dragádzik	dragádzik	2	zik	dragádzok	dragádzom
+bruboslik	bruboslik	2	lik	bruboslok	bruboslom
+givágzik	givágzik	2	zik	givágzok	givágzom
+sörődzik	sörődzik	2	zik	sörődzök	sörődzöm
+spibejlik	spibejlik	2	lik	spibejlek	spibejlem
+prohódzik	prohódzik	2	zik	prohódzok	prohódzom
+tribékszik	tribékßik	2	zik	tribékszek	tribékszem
+piragszik	piragßik	2	zik	piragszok	piragszom
+kibagzik	kibagzik	2	zik	kibagzok	kibagzom
+nyihakszik	¥ihakßik	2	zik	nyihakszok	nyihakszom
+poródzik	poródzik	2	zik	poródzok	poródzom
+dágarzik	dágarzik	2	zik	dágarzok	dágarzom
+miregszik	miregßik	2	zik	miregszek	miregszem
+flirapszik	flirapßik	2	zik	flirapszok	flirapszom
+tiregzik	tiregzik	2	zik	tiregzek	tiregzem
+spéledzik	spéledzik	2	zik	spéledzek	spéledzem
+vurjoslik	vurjoslik	2	lik	vurjoslok	vurjoslom
+dihékszik	dihékßik	2	zik	dihékszek	dihékszem
+tilegszik	tilegßik	2	zik	tilegszek	tilegszem
+klibegszik	klibegßik	2	zik	klibegszek	klibegszem
+drilénylik	drilé¥lik	2	lik	drilénylek	drilénylem
+gerénylik	geré¥lik	2	lik	gerénylek	gerénylem
+trilejlik	trilejlik	2	lik	trilejlek	trilejlem
+tileglik	tileglik	2	lik	tileglek	tileglem
+irejlik	irejlik	2	lik	irejlek	irejlem
+türűdzik	türűdzik	2	zik	türűdzök	türűdzöm
+trivedzik	trivedzik	2	zik	trivedzek	trivedzem
+spagánylik	spagá¥lik	2	lik	spagánylok	spagánylom
+siredzik	siredzik	2	zik	siredzek	siredzem
+gyiváglik	©iváglik	2	lik	gyiváglok	gyiváglom
+délekszik	délekßik	2	zik	délekszek	délekszem
+milemlik	milemlik	2	lik	milemlek	milemlem
+flagánylik	flagá¥lik	2	lik	flagánylok	flagánylom
+pelékszik	pelékßik	2	zik	pelékszek	pelékszem
+kehégszik	kehégßik	2	zik	kehégszek	kehégszem
+fálagszik	fálagßik	2	zik	fálagszok	fálagszom
+csólonylik	çólo¥lik	2	lik	csólonylok	csólonylom
+gyibárzik	©ibárzik	2	zik	gyibárzok	gyibárzom
+frágapszik	frágapßik	2	zik	frágapszok	frágapszom

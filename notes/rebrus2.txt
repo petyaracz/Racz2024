@@ -1,0 +1,55 @@
+legyen felso levenshtein hatar is, ne csak also!
+
+dzsungel
+
+ilyet ne:
+szib+j x
+t+sz x
+s+r x
+t+k x
+p+t x
+nem á+é pl í é is rossz x
+kulonbozo zongessegu obstruensek egymas mellett x
+zarhangok egymas mellett x
+dv$ x
+ch x
+^c és -cC-  (nem cs) x
+mk x
+mz x
+^ji x
+ij x
+zj x
+ccvc: itt c2 es c3 ne legyen azonos x
+
+lakok
+
+1sztg:
+ne legyen rovid v+1c+ik x
+(ez a szigoru valtozat, a megengedo valtozat az, hogy szonorans c-vel ne legyen)
+
+carrier sentence: egy keveset
+
+2sztg:
+ne legyen ugyanaz a mgh ketszer (smumuzik)
+cvc-ben ne legyen azonos c
+^sm ^ty ne
+c ne
+
+cselekszek
+
+sz-d alszanak aludnak:
+van: szemelyragok (nak,tok) nincs: na, ni, tak (vesz: vesznek, vesztek, venne, venni, vettek)
+esetleg akkor +ok (veszek)? hogy legyen meg egy ilyen
+
+amugy:
+i. ugor/ugrik: monomorfemikus hangkiveto, szigoru a fonotaktikaja; elvileg a cvc-ben a ket cnek meg kellene allnia egymas mellett is
+ii. patakozik/patakzik: ketszotagos fonevi to: ik elotti to sem monomorfemikus
+iii. gyarapodik/gyarapszik: d/sz. ketszotagos igei to. mindig a-e kotohangzo
+szet kell szedni a hangkiveto generatort egy es ketszotagos alakokra!
+
+l-l se legyen. ahogyan sz-sz sincs.
+csak l-d/l-z es sz-d/sz-l stb.
+esetleg: c2!=c3?!?!
+produktiv ozik sose hangkiveto! szoval az ne legyen veletlenul se.
+
+esetleg ugyanez ikes igeknel is, es akkor ott csak kepzos alakok? -ol -oz -odik
