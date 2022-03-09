@@ -35,9 +35,9 @@ n2 = n %>%
     mid = str_extract(nucleus, glue('(?<=^{v1}).*$'))
   )
 
-# take out very rare contituents
+# take out very rare constituents
 n_ons = n2 %>% 
-  count(onset, sort = T) %>% 
+  count(onset, sort = T) %>% View
   filter(n >= 4) %>% 
   pull(onset)
 n_nuc = n2 %>% 
@@ -49,41 +49,32 @@ n_cod = n2 %>%
   filter(n >= 3) %>% 
   pull(coda)
 
-# we take out some combinations that downgrade realness of final words
-n3 = n2 %>%
-  filter(
-#     nchar(mid) < 3, # no vcccv
-#     str_detect(mid, '(.)\\1{1,}', negate = T), # midsection: no same cc
-#     str_detect(mid, '(h|ly|^y$)', negate = T), # no.
-#     str_detect(mid, '(¥l|vf|©r|çf|tß|[tsß][dzΩ]|[dzΩ][tsß]|[tdc][tdc]|cç|çc|n¥|[ßΩ][sz]|[sz][ßΩ]|g©)', negate = T), # no ssz, zzs, szs, zsz
-#     # nchar(coda) == 2,
-#     str_detect(coda, '(.)\\1{1,}', negate = T), # same for coda
-#     str_detect(coda, '(h|ly)', negate = T),
-#     str_detect(coda, '(n¥|[ßΩ][sz]|[sz][ßΩ]|g©)', negate = T),
-#     str_detect(coda, '(rs|ly|d.|m.|k.|p.|rj|lm|lp|¥v|rv)$', negate = T), # a couple weird word endings
-    onset %in% n_ons,
-    nucleus %in% n_nuc,
-    coda %in% n_cod,
-    nucleus != v1, # no vv word
-    coda != v2 # no v$ word
-  )
+# we filter the frequency weighted lists
+n_ons = n2 %>% 
+  filter(onset %in% n_ons) %>% 
+  pull(onset)
+n_nuc = n2 %>% 
+  filter(nucleus %in% n_nuc) %>% 
+  pull(nucleus)
+n_cod = n2 %>% 
+  filter(coda %in% n_cod) %>% 
+  pull(coda)
 
-# n4$mid %>% unique %>% sort
-
-# we combine parts of words to create nonce words. filter for those that happen to exist. filter for very long ones, those tend to turn out silly.
-n4 = 
+# we combine parts of words to create nonce words. filter for those that happen to exist. filter for very long ones, those tend to turn out silly. filter for some across-word sequences that are bad. é in heavy syllable, same character twice, not á and é word, word ending in ij/zj
+n3 = 
   crossing(
-    onset = n3$onset,
-    nucleus = n3$nucleus,
-    coda = n3$coda
+    onset = n_ons,
+    nucleus = n_nuc,
+    coda = n_cod
   ) %>% 
   mutate(
     tr = glue('{onset}{nucleus}{coda}')
   ) %>% 
   filter(
     !(tr %in% h$tr),
+    nchar(nucleus) >= 2,
     # nchar(tr) <= 7, # only cccvcvc or ccvccvc or cvccvcc or ccvcvcc  
-    str_detect(tr, 'é.{2,}$', negate = T)
+    str_detect(tr, '(^ji|ch|é.{2,}$|(.)\\1+|[íóú].*é|[iz]j$|[eé]$|^[aáoóuú]|é(s|.t)$)', negate = T),
   ) %>% 
   mutate(
     word = transcribe(tr,'double')
@@ -94,7 +85,7 @@ n4 =
   ) %>% 
   ungroup()
 
-# sample_n(n4, 10)
+# sample_n(n3, 10)
 # # chef's kiss
 
 # -- build verbs -- #
@@ -127,15 +118,12 @@ v_1syl %<>%
     ),
     c1c2 = glue('{c1}{c2}')
   )
-  
-# v_1syl$c1c2 %>% unique %>% sort
-# v_1syl_2 = v_1syl %>% 
-  # filter(nchar(c1c2) == 2) # vcik verbs look a lot like possessives w/ -om (lakom?!) so we drop those.
 
-# combine bits to form nonce verbs
+# combine bits to form nonce verbs. we don't need to worry about non-monomorphemic character combinations here, because a word with these derivational suffixes is by definition not monomorphemic. except no character twice, no Bszik and Tzik, no zzik, llik, sszik
+# we add some more onsets because we only have simplex ones here.
 v_1syl_2 = 
   crossing(
-    onset = v_1syl$onset,
+    onset = c(v_1syl$onset,c('sp','kl','tr','br','pr','spr','fl','fr','pl','dr','ßtr')),
     v = v_1syl$v,
     c1c2 = v_1syl$c1c2
   ) %>% 
@@ -150,16 +138,18 @@ v_1syl_2 =
   ) %>% 
   rowwise() %>% 
   filter(
-    countUnique(word,2) # one character can happen twice, as I'm more mellow here
+    countUnique(word,2), # one character can happen twice, as I'm more mellow here
+    str_detect(tr, '(^ji|ch|[sßfd]dik$|[bdgzΩß]ßik$|[ptksßz]zik$|llik$)', negate = T)
   ) %>% 
   ungroup()
 
-sample_n(v_1syl_2,10)
+# sample_n(v_1syl_2,10)
 # # chef's kiss
 
 ## 2syl
 
 # build 2-syl verbs
+# filter for 2syl stems, drop igekötők, only keep derivational lik zik szik dik (new one!)
 v_2syl = v %>% 
   select(lemma) %>% 
   filter(
@@ -171,6 +161,7 @@ v_2syl = v %>%
 
 # take them apart
 v_2syl %<>% 
+  rowwise() %>% 
   mutate(
     tr = transcribe(lemma,'single'),
     onset = ifelse(
@@ -216,22 +207,21 @@ v2_c3c4 = v_2syl %>%
   filter(n >= 3) %>% 
   pull(c3c4)
 
-# filtering w/ restrictions
-v_2syl_2 = v_2syl %>% 
-  filter(
-    nchar(v2c3c4) >= 2,
-    nchar(v1c1c2) >= 2,
-    # str_detect(c3c4, '.t$', negate = T)
-    c1c2 %in% v2_c1c2,
-    c3c4 %in% v2_c3c4
-  )
+# making and filtering frequency-weighted constituents
+v2_v1c1c2 = v_2syl %>% 
+  filter(c1c2 %in% v2_c1c2) %>% 
+  pull(v1c1c2)
+v2_v2c3c4 = v_2syl %>% 
+  filter(c3c4 %in% v2_c3c4) %>% 
+  pull(v2c3c4)
 
 # combine bits to form new words
-v_2syl_3 =
+# add some more onsets
+v_2syl_2 =
   crossing(
-    onset = v_2syl_2$onset,
-    v1c1c2 = v_2syl_2$v1c1c2,
-    v2c3c4 = v_2syl_2$v2c3c4,
+    onset = c(v_2syl$onset,c('sp','kl','tr','br','pr','spr','fl','fr','pl','dr','ßtr')),
+    v1c1c2 = v2_v1c1c2,
+    v2c3c4 = v2_v2c3c4
   ) %>% 
   mutate(
     tr = glue('{onset}{v1c1c2}{v2c3c4}ik')
@@ -244,20 +234,33 @@ v_2syl_3 =
     word = transcribe(tr,'double')
   ) %>% 
   rowwise() %>% 
+  mutate(
+    vowel_skeleton = tr %>% 
+      str_extract_all('[aáeéiíoóöőuúüű]') %>% 
+      unlist() %>% 
+      paste(collapse = ''),
+    consonant_skeleton = tr %>% 
+      str_extract_all('[^aáeéiíoóöőuúüű]') %>% 
+      unlist() %>% 
+      paste(collapse = '')
+  ) %>% 
   filter(
     checkVH(tr),
     countUnique(word,2), # zoinks scoob
     str_count(word, 's') <= 1, # no szazs-type words
     str_count(word, 'z') <= 1, # no szazs-type words
-    str_count(word, 'y') <= 1 # no gyaly-type words
+    str_count(word, 'y') <= 1, # no gyaly-type words
+    str_detect(vowel_skeleton, '(.)\\1+', negate = T), # no repeat cons or vow
+    str_detect(consonant_skeleton, '(.)\\1+', negate = T),
+    str_detect(tr, '(^ji|[íóú].*é|[uúüű][zdl]ik$)', negate = T)
   ) %>% 
   ungroup()
 
-# sample_n(v_2syl_3,10)
+# sample_n(v_2syl_2,10)
 # chef's kiss
 
 # -- write -- #
 
-write_tsv(n4, 'resource/nonce_words/nounstems.tsv')
+write_tsv(n3, 'resource/nonce_words/nounstems.tsv')
 write_tsv(v_1syl_2, 'resource/nonce_words/verbsshortstems.tsv')
-write_tsv(v_2syl_3, 'resource/nonce_words/verbslongstems.tsv')
+write_tsv(v_2syl_2, 'resource/nonce_words/verbslongstems.tsv')

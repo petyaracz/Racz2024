@@ -39,7 +39,7 @@ h = read_tsv('resource/hu_list.txt') %>%
 hik = str_replace(h, 'ik$', '')
 
 # tidy hand-cleaned ep verb list, made from output of predrawEP()
-hanglemmata = read_tsv('src/epenthetic_stems/stemlist_from_webcorpus_cleared.tsv')
+hanglemmata = read_tsv('resource/real_words/epenthetic_stems/stemlist_from_webcorpus_cleared.tsv')
 
 # -- def -- #
 
@@ -48,7 +48,7 @@ xpostag_ik = '\\[\\/V\\]\\[Prs.NDef.1Sg\\]'
 # five interesting, c-initial variable nominal suffixes (nouns that can be adjectives are marked as adjectives in the tags)
 xpostags_n = '^(\\[\\/N\\]|\\[\\/Adj\\])(\\[Ine\\]|\\[Ill\\]|\\[Ade\\]|\\[Dat\\]|\\[Subl\\])$'
 # five v-initial verbal conjugations to trigger verb ep
-xpostags_ep = c("[/V][Prs.NDef.3Pl]","[/V][Inf]","[/V][Pst.NDef.3Pl]","[/V][Cond.NDef.3Sg]","[/V][Prs.NDef.2Pl]")
+xpostags_ep = c("[/V][Prs.NDef.3Pl]","[/V][Inf]","[/V][Pst.NDef.3Pl]","[/V][Cond.NDef.3Sg]","[/V][Prs.NDef.2Pl]","[/V][Prs.NDef.1Pl]")
 
 # -- functions -- #
 
@@ -310,8 +310,8 @@ ep2 = buildPairs(ep)
 # -- write -- #
 
 # save ik2 which is the tidy merged pair thing for ik verbs
-write_tsv(ik2, 'resource/ik_verbs/ikes_pairs_webcorpus2.tsv')
+write_tsv(ik2, 'resource/real_words/ik_verbs/ikes_pairs_webcorpus2.tsv')
 # save nouns2 which is the tidy merged pair thing for nouns
-write_tsv(nouns3, 'resource/front_harmony/fh_pairs_webcorpus2.tsv')
+write_tsv(nouns3, 'resource/real_words/front_harmony/fh_pairs_webcorpus2.tsv')
 # save ep2 which is ~ for ep verbs
-write_tsv(ep2, 'resource/epenthetic_stems/epenthesis_pairs_webcorpus2.tsv')
+write_tsv(ep2, 'resource/real_words/epenthetic_stems/epenthesis_pairs_webcorpus2.tsv')

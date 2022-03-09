@@ -19,22 +19,10 @@ ep = read_tsv('resource/real_words/epenthetic_stems/epenthesis_pairs_webcorpus2.
 
 # -- wrangle -- #
 
-# randomise form order
-
-n %<>% sample_n(n())
-v1 %<>% sample_n(n())
-v2 %<>% sample_n(n())
-
-# first half of each set goes into eszek/eszem. second half to cselekedik/cselekszik
-v1a = v1 %>% head(round(nrow(v1)/2))
-v1b = v1 %>% tail(round(nrow(v1)/2))
-v2a = v2 %>% head(round(nrow(v2)/2))
-v2b = v2 %>% tail(round(nrow(v2)/2))
-
 ## nouns
 
 # we want these suffixes
-suffix_back = c('ban', 'ba', 'nak', 'ra', 'nál')
+suffix_back = c('ban','nak','nál')
 
 # we combine stems with suffixes, generate the two alternatives.
 n2 = n %>% 
@@ -43,46 +31,36 @@ n2 = n %>%
   rename('prompt' = word) %>% 
   crossing(suffix_back) %>% 
   mutate(
-    suffix_front = str_replace_all(suffix_back, c('ban$' = 'ben', 'ba' = 'be', 'nak' = 'nek', 'ra$' = 're', 'nál$' = 'nél')),
+    suffix_front = str_replace_all(suffix_back, c('ban$' = 'ben', 'nak' = 'nek', 'nál$' = 'nél')),
     target_front = glue('{prompt}{suffix_front}'),
     target_back = glue('{prompt}{suffix_back}')
   )
 
+# sample base forms
+n2 = n %>% 
+  sample_n(n()) %>% 
+  select(tr) %>% 
+  left_join(n2, by = 'tr')
+
 ## verbs
 
-# ik
+# split word sets. we need more fuel for the ep words
 
-# take eszek/eszem, figure out linking vowel, generate targets
-# 1syl
-v1a2 = v1a %>% 
-  mutate(nsyl = 1) %>% 
-  select(v,word,nsyl) %>% 
-  rename('prompt' = word)
+v1l = v1 %>% 
+  sample_n(n()) %>% 
+  rownames_to_column() %>% 
+  mutate(three = as.double(rowname) %% 3 == 0) %>% 
+  group_split(three)
 
-# 2syl
-v2a2 = v2a %>% 
-  mutate(nsyl = 2) %>% 
-  rename('prompt' = word) %>% 
-  mutate(v = str_extract(v2c3c4, '[aáeéiíoóöőuúüű]')) %>% 
-  select(v,prompt,nsyl)
-
-# 1sg indef -k/-m requires a linking vowel that agrees in front and round with stem.    
-v_ik = bind_rows(v1a2,v2a2) %>% 
-  mutate(
-    suffix_v = case_when(
-      str_detect(v, '[aáiíoóuú]') ~ 'o',
-      str_detect(v, '[üűöő]') ~ 'ö',
-      str_detect(v, '[eé]') ~ 'e'
-    ),
-    target_k = str_replace(prompt, 'ik', glue('{suffix_v}k')),
-    target_m = str_replace(prompt, 'ik', glue('{suffix_v}m')),
-    tr = transcribe(prompt, 'single')
-  ) %>% 
-  select(prompt,tr,nsyl,target_k,target_m)
+v2l = v2 %>% 
+  sample_n(n()) %>% 
+  rownames_to_column() %>% 
+  mutate(three = as.double(rowname) %% 3 == 0) %>% 
+  group_split(three)
 
 # ep
 
-# we take possible endings from real ep verbs: think alszik -> a-lsza-na and a-lusz-na. what are the existing combinations of consonants and vowels here?
+# we take possible endings from real ep verbs: think alszik -> a-lsza-na and a-lud-na. what are the existing combinations of consonants and vowels here? what are the pairs where c2 != c3? like above
 # form1 = alszanak/ form2 = aludnak: c1 = l, c2 = sz, c3 = d, epv = u, lv = a
 ep_pieces = ep %>%
   mutate(
@@ -98,71 +76,79 @@ ep_pieces = ep %>%
     #   str_detect(epv, '[aáoóuú]') ~ 'a',
     #   str_detect(epv, '[eéiíöőüű]') ~ 'e'
     # ),
+    c1c2 = glue('{c1}{c2}'),
     ending = glue('{c1}(V){c2}/{c3}')
   ) %>% 
-  distinct(c1,c2,c3,ending) %>% 
-  filter(!(c2 == 'ß' & c3 == 'ß')) # we only want aludtok / alszotok, emlékeztek / emlékszetek, not alusztok / alszotok. otherwise lot of similar forms in final, and c alteration is cooler.
+  distinct(c1,c2,c3,ending,c1c2) 
 
-# these are the possible combinations of c1c2-c1Vc3 that exist. some cc forms go with linking vowels that are not a or e by default. this is because these are lowering stems / the suffixes have something funky going on.
-# so we fix linking vowels as a and e for now.
-# and then change them later when necessary.
-# it won't be pretty.
+# all of these look like sort of derivational suffixes (zik, lik, ßik), except rik.
+ep_pieces %<>% 
+  filter(str_detect(c2, '[zßld]'))
 
-# ep_pieces
-# "u" "o" "ö" "e" "ü" "a"
-
-# ep %>% 
-#   sample_n(n()) %>% 
-#   group_by(xpostag) %>% 
-#   slice_head(n = 1) %>% 
-#   select(stem,form_1,form_2,xpostag)
+# ep_pieces %>% 
+#   distinct(c2,c3) %>% 
+#   filter(c2 != c3)
+# ß/d ß/z l/d
 
 # we want these suffixes
-suffix_ep = c('na', 'ni', 'tok', 'nak', 'tak')
+suffix_ep = c('ünk', 'tek', 'nek')
 
 # 1syl stems
-v1b2 = v1b %>% 
+v1_ep = v1l[[1]] %>% 
   mutate(
-    nsyl = 1,
-    stem = glue('{onset}{v}')
+    nsyl = 1
   ) %>% 
-  select(stem,v,nsyl)
+  filter(
+    c1c2 %in% ep_pieces$c1c2
+  )
 
 # 2syl stems
-v2b2 = v2b %>% 
-  filter(nchar(v1c1c2) < 3) %>% # one CC cluster in a word is more than enough.
+v2_ep = v2l[[1]] %>% 
   mutate(
+    cc = str_extract(tr, '..(?=ik$)'),
     nsyl = 2,
     v = str_extract(v2c3c4, '^.'),
-    stem = glue('{onset}{v1c1c2}{v}')
+    vowel_skeleton = str_extract_all(tr, '[aáeéiíoóöőuúüű]') %>% 
+      unlist() %>% 
+      paste(collapse = '')
   ) %>% 
-  select(stem,v,nsyl) 
+  filter(
+    nchar(v1c1c2) < 3, # one CC cluster in a word is more than enough.
+    nchar(v2c3c4) == 3, # we need vccik.
+    cc %in% ep_pieces$c1c2
+  )
 
 # bind stems. 
 # cross with possible ep endings, giving us every combination in the world.
 # build vowels
 # create various stems: cc stem, cvc stem. also w/o ik. that might not be a viable form in itself, but we need it for endings. think: bomol, *boml, bomlik, *bomolik, but boml-anak, bomol-na.
-v_ep_1 = bind_rows(v1b2,v2b2) %>% 
-  sample_n(n()) %>% 
-  crossing(ep_pieces) %>% 
+v_ep_1 = bind_rows(v1_ep,v2_ep) %>% 
   mutate(
     epv = case_when(
       str_detect(v, '[aáoóuú]') ~ 'o',
-      str_detect(v, '[eéií]') ~ 'e',
-      str_detect(v, '[öőüű]') ~ 'ö'
+      str_detect(v, '[eé]') ~ 'e',
+      str_detect(v, '[öőüű]') ~ 'ö',
+      nsyl == 1 & str_detect(v, '[ií]') ~ 'o',
+      str_detect(vowel_skeleton, '[aáoóuú][ií]') ~ 'o',
+      str_detect(vowel_skeleton, '[eéöőüű][ií]') ~ 'e'
     ),
     lv = case_when(
       str_detect(v, '[aáoóuú]') ~ 'a',
-      str_detect(v, '[eéiíöőüű]') ~ 'e'
+      str_detect(v, '[eéöőüű]') ~ 'e',
+      nsyl == 1 & str_detect(v, '[ií]') ~ 'a',
+      str_detect(vowel_skeleton, '[aáoóuú][ií]') ~ 'a',
+      str_detect(vowel_skeleton, '[eéöőüű][ií]') ~ 'e'
     ),
-    prompt_cc_tr = glue('{stem}{c1}{c2}ik'),
-    prompt_cvc_tr = glue('{stem}{c1}{epv}{c3}ik'),
+    tr_end = str_extract(tr, '.ik$'),
+    tr_stem = str_extract(tr, glue('^.*(?={tr_end})')),
+    prompt_cc_tr = tr,
+    prompt_cvc_tr = glue('{tr_stem}{epv}{tr_end}'),
     prompt_cc = transcribe(prompt_cc_tr, 'double'),
     prompt_cvc = transcribe(prompt_cvc_tr, 'double'),
-    prompt_cvc_bare = str_replace(prompt_cvc, 'ik', ''),
-    prompt_cc_bare = str_replace(prompt_cc, 'ik', lv)
+    prompt_cvc_bare = str_replace(prompt_cvc, 'ik$', ''),
+    prompt_cc_bare = str_replace(prompt_cc, 'ik$', lv)
   ) %>% 
-  select(stem,prompt_cc_tr,nsyl,prompt_cc,prompt_cvc,prompt_cc_bare,prompt_cvc_bare,epv,lv,ending)
+  select(tr_stem,tr_end,prompt_cc_tr,nsyl,prompt_cc,prompt_cvc,prompt_cc_bare,prompt_cvc_bare,epv,lv)
 
 # we do some common-sense filtering here as well.
 v_ep_1 %<>% 
@@ -172,7 +158,14 @@ v_ep_1 %<>%
     str_count(prompt_cc, 'z') <= 1
   )
 
-# this is a lot of similar looking forms. we'll sample them down later.
+# we want to spice it up: so ß will vary with d and l will vary with z
+v_ep_1 %<>% 
+  mutate(
+    prompt_cvc_bare = str_replace_all(
+      prompt_cvc_bare, c('sz$' = 'd', 'l$' = 'z')
+    ),
+    prompt_cvc = glue('{prompt_cvc_bare}ik') # yes we build it back
+  )
 
 # NOW we combine these with the suffixes. the way we did with the nouns (except there the stems were a given).
 # there's some THIS IS X EXCEPT WHEN IT ISN'T code here. could be done nicer.
@@ -181,66 +174,119 @@ v_ep_1 %<>%
 # tak lengthens t after linking vowel: áramoltak, áramlottak
 # of course charmingly enough tok and tak are the same for cc front stems: ti lélegeztek (you breath), ők lélegeztek (they breathed). but due to above, not for cvc forms: ti lélegzetek, ők lélegzettek.
 
-# I should parallellise this at some point:
 v_ep_2 = v_ep_1 %>% 
-  sample_n(n()) %>% 
   crossing(suffix_ep) %>%  
   mutate(
     suffix_ep_vh = case_when(
-      str_detect(epv, '[aáiíoóuú]') & str_detect(suffix_ep, '(na|nak|tak|na)') ~ 'a',
-      str_detect(epv, '[eéöőüű]') & str_detect(suffix_ep, '(na|nak|tak|na)') ~ 'e',
-      str_detect(epv, '[aáiíoóuú]') & suffix_ep == 'tok' ~ 'o',
-      str_detect(epv, '[öőüű]') & suffix_ep == 'tok' ~ 'ö',
-      str_detect(epv, '[eéöőüű]') & suffix_ep == 'tok' ~ 'e',
-      suffix_ep == 'ni' ~ 'i'
-    ),
-    suffix_ep_f = str_replace(suffix_ep, '[aio]', suffix_ep_vh),
-    target_cc = case_when(
-      suffix_ep != 'tak' ~ glue('{prompt_cc_bare}{suffix_ep_f}'),
-      suffix_ep == 'tak' ~ glue('{prompt_cc_bare}t{suffix_ep_f}')
-    ),
-    target_cc = target_cc %>% 
-      str_replace_all( c('.(?=ttak)' = 'o', '.(?=tok)' = 'o', '.(?=ttek)' = 'ö', '.(?=tök)' = 'ö')), # cf ők játszottak, ti játszotok, ők döglöttek, ti dögöltök
+      str_detect(epv, '[aáiíoóuú]') & suffix_ep == 'nek' ~ 'a',
+      str_detect(epv, '[eéöőüű]') & suffix_ep == 'nek' ~ 'e',
+      str_detect(epv, '[aáiíoóuú]') & suffix_ep == 'ünk' ~ 'u',
+      str_detect(epv, '[eéöőüű]') & suffix_ep == 'ünk' ~ 'ü',
+      str_detect(epv, '[aáií]') & suffix_ep == 'tek' ~ 'a',
+      str_detect(epv, '[oóuú]') & suffix_ep == 'tek' ~ 'o',
+      str_detect(epv, '[eé]') & suffix_ep == 'tek' ~ 'e',
+      str_detect(epv, '[öőüű]') & suffix_ep == 'tek' ~ 'ö'
+      ),
+    suffix_ep_f = str_replace(suffix_ep, '[eü]', suffix_ep_vh),
+    target_cc = glue('{prompt_cc_bare}{suffix_ep_f}') %>% 
+      str_replace_all(
+        c('.(?=[uü]nk$)' = '', 'atok$' = 'otok', 'etök$' = 'ötök')
+        ),
     target_cvc = glue('{prompt_cvc_bare}{suffix_ep_f}')
   ) %>%
-  select(prompt_cc,prompt_cvc,suffix_ep,target_cc,target_cvc,stem,prompt_cc_tr,nsyl,ending)
+  select(prompt_cc,prompt_cvc,suffix_ep,target_cc,target_cvc,tr_stem,tr_end,prompt_cc_tr,nsyl)
 
-# count(v_ep_2,suffix_ep)
-
-# -- winnow -- #
-
-n_keep = n2 %>% 
+v_ep_2 = v_ep_1 %>% 
   sample_n(n()) %>% 
-  distinct(prompt,vowel_e) %>% 
+  select(prompt_cc,prompt_cvc) %>% 
+  left_join(v_ep_2)
+
+# ik
+
+# take eszek/eszem, figure out linking vowel, generate targets
+# 1syl
+v1_ik = v1l[[2]] %>% 
+  mutate(nsyl = 1) %>% 
+  select(v,word,nsyl) %>% 
+  rename('prompt' = word)
+
+# 2syl
+v2_ik = v2l[[2]] %>% 
+  mutate(nsyl = 2) %>% 
+  rename('prompt' = word) %>% 
+  mutate(v = str_extract(v2c3c4, '[aáeéiíoóöőuúüű]')) %>% 
+  select(v,prompt,nsyl)
+
+# 1sg indef -k/-m requires a linking vowel that agrees in front and round with stem.    
+v_ik = bind_rows(v1_ik,v2_ik) %>% 
+  mutate(
+    suffix_v = case_when(
+      str_detect(v, '[aáiíoóuú]') ~ 'o',
+      str_detect(v, '[üűöő]') ~ 'ö',
+      str_detect(v, '[eé]') ~ 'e'
+    ),
+    target_k = str_replace(prompt, 'ik', glue('{suffix_v}k')),
+    target_m = str_replace(prompt, 'ik', glue('{suffix_v}m')),
+    tr = transcribe(prompt, 'single'),
+    ending = str_extract(prompt, '.ik$')
+  ) %>% 
+  select(prompt,tr,nsyl,ending,target_k,target_m)
+
+# -- get sufficiently distant nonce words in sets -- #
+
+nk = n2 %>% 
+  distinct(tr,vowel_e) %>% 
   group_by(vowel_e) %>% 
-  sample_n(1024) %>% 
-  pull(prompt)
+  sample_n(500) %>% 
+  nest() %>% 
+  mutate(subset = map(data, ~ matchNonce(.$tr,1))) %>% 
+  select(-data) %>% 
+  unnest(cols = c(subset)) %>% 
+  filter(keep_self_diff)
 
-ep_keep = v_ep_2 %>% 
-  distinct(nsyl,stem,ending,prompt_cc,prompt_cvc) %>% 
+# count(n3,vowel_e)
+
+v_ikk = v_ik %>% 
+  mutate(ending = str_extract(tr, '.ik$')) %>% 
+  filter(ending != 'dik') %>% 
+  distinct(tr,nsyl,ending) %>% 
   group_by(nsyl,ending) %>% 
-  sample_n(48) %>% 
-  pull(prompt_cc)
+  nest() %>% 
+  mutate(subset = map(data, ~ matchNonce(.$tr,1))) %>% 
+  select(-data) %>% 
+  unnest(cols = c(subset)) %>% 
+  filter(keep_self_diff)
 
-v_ik2 = v_ik %>% 
-  group_by(nsyl) %>% 
-  sample_n(1024) %>% 
-  ungroup()
+# count(v_ik2,nsyl,ending)
+
+v_epk = v_ep_2 %>% 
+  filter(tr_end != 'dik') %>% 
+  distinct(prompt_cc_tr,nsyl,tr_end) %>% 
+  group_by(nsyl,tr_end) %>% 
+  nest() %>% 
+  mutate(subset = map(data, ~ matchNonce(.$prompt_cc_tr,1))) %>% 
+  select(-data) %>% 
+  unnest(cols = c(subset)) %>% 
+  filter(keep_self_diff)
+
+# count(v_ep_3,nsyl,tr_end)
 
 n3 = n2 %>% 
-  filter(prompt %in% n_keep)
-
+  filter(tr %in% nk$tr)
+v_ik2 = v_ik %>%   
+  filter(tr %in% v_ikk$tr)
 v_ep_3 = v_ep_2 %>% 
-  filter(prompt_cc %in% ep_keep)
+  filter(prompt_cc_tr %in% v_epk$tr)
 
 # -- write -- #
 
 # dzsungelban
 write_tsv(n2, 'resource/nonce_words/nouns_unfilt.tsv.gz')
-write_tsv(n3, 'resource/nonce_words/nouns_unfilt_sample.tsv')
 # eszek
 write_tsv(v_ik, 'resource/nonce_words/ik_unfilt.tsv.gz')
-write_tsv(v_ik2, 'resource/nonce_words/ik_unfilt_sample.tsv')
 # cselekszik
 write_tsv(v_ep_2, 'resource/nonce_words/ep_unfilt.tsv.gz')
+# filtered
+write_tsv(n3, 'resource/nonce_words/nouns_unfilt_sample.tsv')
+write_tsv(v_ik2, 'resource/nonce_words/ik_unfilt_sample.tsv')
 write_tsv(v_ep_3, 'resource/nonce_words/ep_unfilt_sample.tsv')

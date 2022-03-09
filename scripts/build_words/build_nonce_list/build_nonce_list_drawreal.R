@@ -8,7 +8,7 @@
 
 setwd('~/Github/Racz2024/')
 
-source('build_nonce_list_functions.R')
+source('scripts/build_words/build_nonce_list/build_nonce_list_functions.R')
 
 # -- read -- #
 
@@ -45,11 +45,29 @@ n2 = n %>%
     str_detect(v2, '[eé]')
   )
 
-# extract ik verbs
+# filter noun set to more or less monomorphemic forms
 
-v2 = v %>% 
+n2 %<>% 
+  mutate(tr = transcribe(lemma, 'single')) %>% 
   filter(
-    str_detect(lemma, 'ik$')
+    str_detect(tr, '(^c|dv$|m[kz]|[ßszΩ]j|tß|ßr|[ptkbdg©†][ptkbdg©†]|[bdgzΩ©][ptksßf†]|[ptksßf†][bdgzΩ©])', negate = T)
+  )
+
+# extract CCik verbs
+
+v2 = v %>%
+  mutate(
+    tr = transcribe(lemma,'single')
+  ) %>% 
+  filter(
+    str_detect(tr, '[^aáeéiíoóöőuúüű]{2,}ik')
+  )
+
+# keep only derivational suffixed forms
+
+v2 %<>%
+  filter(
+    str_detect(tr, '[zßld]ik$')
   )
 
 # comparison sets for nouns

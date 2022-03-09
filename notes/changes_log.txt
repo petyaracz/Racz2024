@@ -1,9 +1,68 @@
+## 8-3-22
+
+word lists: filter for intrasimilarity first, then filter for extrasimilarity
+word lists: we're gonna have lists of 48 (since %% 3 == 0 and we have three suffixes for nouns and ep verbs)
+
+made up some onsets for the verbs. there weren't enough verbs.
+
+baseline exp: only keyboard control
+all player lists compiled of everything and not even in blocks!
+
+## 5-3-22
+
+to do
+psychopy script (see 4-3-22)
+update real word roster w/ -unk/-ünk
+filter nonce words, eventually
+
+## 4-3-22
+
+fixed: cc cvc pairs should have consonant alternation
+new set of suffixes for ep verbs:
+[/V][Prs.NDef.1Pl] cselekszünk/cselekedünk
+[/V][Prs.NDef.3Pl] cselekszenek/cselekednek
+[/V][Prs.NDef.2Pl] cselekedtek/cselekszetek
+
+built psychopy script (github/pavlovia/baseline_demo)
+it now does what I want. but at what cost. (cue PIL: Theme)
+random list selection
+random button order
+records buttons and responses
+random participant id????!!!
+need to test it with pen and paper
+need to see if mouse / keyboard setup works at all
+need to add button press to experiment
+
+## 3-3-22
+
+rewrote everything, new round, ideas on words:
+nouns
+
+no empty coda for nouns!
+no "-c" (gópec etc) coda
+
+verbs
+watch out for linking vowel in -dzik 
+consonant match for szik zik? (gzik, kszik)
+valami nem stimmel a kibaszott kurva distance fuggvennyel, tele van egy dist-ra levo szavakkal ez a fos
+maybe drop szik/dik?
+
+## 2-3-22
+
+consulted with Rebrus. drafted filters on whole words, sequences.
+rewrote filters. now word-level restrictions are done on corpus lists, and then constituents are filtered separately, and then holistic filters on combinations
+big changes for verbs:
+only working with CCik verbs now. specifically, -dik -szik -lik -zik verbs. this is because verb class is closed in hungarian, need to sell my nonce verbs are real on some level. plömplömözik sounds more real than plömplömik.
+rewriting readme today, it's pretty outdated and I can't remember my code logic already!
+
 ## 22-2-22
 
 to do: check new word set in gsheet.
 prelim ideas:
 only coc/cöc/cec, no cuc/cüc
 simpler onsets! timike mondta
+
+...this has been done & words filtered
 
 ## 21-2-2022
 
