@@ -8,6 +8,8 @@ made up some onsets for the verbs. there weren't enough verbs.
 baseline exp: only keyboard control
 all player lists compiled of everything and not even in blocks!
 
+potential change: also make up suffixes for nouns!!! (e.g. enc, ely, esz, ek, ens, egy, ély, ény, )
+
 ## 5-3-22
 
 to do
