@@ -1,4 +1,9 @@
+setwd('~/Github/Racz2024/')
+
+library(tidyverse)
 library(patchwork)
+
+set.seed(1337)
 
 d = read_tsv('exp_data/baseline/baseline_tidy.tsv')
 
@@ -35,3 +40,6 @@ plots = d2 %>%
 
 wrap_plots(plots, ncol = 1)  
 ggsave('~/Downloads/plots.pdf', width = 4, height = 40)
+
+plot(sort(round(runif(486, 0, 10), 0)))
+plot(d2$word,d2$p)

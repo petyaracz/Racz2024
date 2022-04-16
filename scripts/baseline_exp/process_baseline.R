@@ -103,6 +103,9 @@ d %<>%
     ) 
   )
 
+d %<>%
+  filter(str_detect(Azonosító, 'nincsen', negate = T)) # watch out
+
 d %>% 
   select(file_name,file_name_date,my_list,my_button1,my_button2,keyboard_input.keys,keyboard_input.rt,withinBlock.thisN,word,prompt,suffix,vowel,carrier_sentence,target_sentence,target1,target2,my_choice,resp_is_first_variant,category,derivational,nsyl,Azonosító,`Melyik évben születtél?`,`Mi a nemed?`,`Tanultál nyelvészetet?`,date,expName,psychopyVersion,OS) %>% 
   write_tsv('exp_data/baseline/baseline_tidy.tsv')
