@@ -64,6 +64,7 @@ vc %<>%
     word = str_replace(lemma, 'ik$', '') %>% 
       transcribe('single')
     )
+
 ik_training = vc %>% 
   mutate(category = ifelse(ik, 'ik','no_ik')) %>% 
   select(word,category)

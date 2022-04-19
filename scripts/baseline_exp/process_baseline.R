@@ -88,7 +88,7 @@ d %>%
   count(my_list)
 
 d %>% 
-  count(Azonosító)
+  count(Azonosító) %>% View
 
 d %<>%
   fill(my_list) %>% 
@@ -104,8 +104,42 @@ d %<>%
   )
 
 d %<>%
+  mutate(str_replace(Azonosító, '2066', 'PR2066')) %>% 
   filter(str_detect(Azonosító, 'nincsen', negate = T)) # watch out
 
 d %>% 
   select(file_name,file_name_date,my_list,my_button1,my_button2,keyboard_input.keys,keyboard_input.rt,withinBlock.thisN,word,prompt,suffix,vowel,carrier_sentence,target_sentence,target1,target2,my_choice,resp_is_first_variant,category,derivational,nsyl,Azonosító,`Melyik évben születtél?`,`Mi a nemed?`,`Tanultál nyelvészetet?`,date,expName,psychopyVersion,OS) %>% 
   write_tsv('exp_data/baseline/baseline_tidy.tsv')
+
+d2 = d %>% 
+  count(
+    word,suffix,target1,target2,carrier_sentence,target_sentence,category,derivational,nsyl,vowel,resp_is_first_variant
+  ) %>% 
+  pivot_wider(
+    names_from = resp_is_first_variant, 
+    values_from = n, 
+    values_fill = 0
+  ) %>%
+  rename(
+    'target1_resp' = `TRUE`, 
+    'target2_resp' = `FALSE`
+  ) %>% 
+  mutate(
+    p = target1_resp / ( target1_resp + target2_resp ),
+    log_odds = log( ( target1_resp + 1 ) / ( target2_resp + 1 ) ),
+    word = fct_reorder(word, p),
+    type = 'nonce word response',
+    base = word,
+    base_tr = transcribe(base, 'single'),
+    log_odds = ifelse(
+      category == 'dzsungel', -log_odds, log_odds
+    ),
+    variation = case_when(
+      category == 'dzsungel' ~ 'hotelban/hotelben',
+      category == 'lakik' ~ 'lakom/lakok',
+      category == 'cselekszik' ~ 'cselekszenek/cselekednek'
+    )
+  ) %>% 
+  select(base,base_tr,variation,type,log_odds,derivational,nsyl,vowel,suffix)
+
+write_tsv(d2, 'exp_data/baseline/baseline_tidy_proc.tsv')
