@@ -284,6 +284,18 @@ hang3 = hang2 %>%
 return(hang3) 
 }
 
+# take string, transcribe to single digits digraphs or back to double digit ones, return string
+transcribe = function(nonce_word,direction){
+  
+  case_when(
+    direction == 'single' ~ nonce_word %>% 
+      str_replace_all(., c('cs' = 'ç', 'sz' = 'ß', 'zs' = 'Ω', 'ty' = '†', 'gy' = '©', 'ny' = '¥', 'ly' = '¬')),
+    direction == 'double' ~ nonce_word %>% 
+      str_replace_all(., c('ç' = 'cs', 'ß' = 'sz', 'Ω' = 'zs', '†' = 'ty', '©' = 'gy', '¥' = 'ny', '¬' = 'ly')),
+    T ~ 'wrong direction, either (to) "single" or "double"'
+  )
+}
+
 # -- run -- #
 
 ## ik
@@ -307,6 +319,56 @@ nouns3 = buildPairs(nouns2) %>%
 ep = drawEP(c,hanglemmata,xpostags_ep)
 ep2 = buildPairs(ep)
 
+# -- add useful information for later comparison with baseline results -- #
+
+ik2 %<>%
+  mutate(
+    base = str_replace(stem, '.$', 'ik'),
+    derivational = case_when(
+      str_detect(base, 'lik$') ~ 'lik',
+      str_detect(base, 'szik$') ~ 'szik',
+      str_detect(base, 'zik$') ~ 'zik'
+    ),
+    nsyl = str_count(base, '[aáeéiíoóöőuúüű]') - 1,
+    base_tr = transcribe(base, 'single')
+  )
+
+nouns3 %<>%
+  mutate(
+    suffix = case_when(
+      str_detect(form_1, 'ban$') ~ 'ban',
+      str_detect(form_1, 'nak$') ~ 'nak',
+      str_detect(form_1, 'nál$') ~ 'nál'
+    ),
+    vowel = case_when(
+      str_detect(stem, 'e') ~ 'e',
+      str_detect(stem, 'é') ~ 'é'
+    ),
+    base = stem,
+    base_tr = transcribe(base, 'single')
+  )
+
+ep2 %<>%
+  mutate(
+    darab = str_extract(form_1, glue('(?<={stem})[^aáeéiíoóöőuúüű]+(?=[aáeéiíoóöőuúüű])')),
+    base = glue('{stem}{darab}ik'),
+    derivational = case_when(
+      str_detect(base, 'lik$') ~ 'lik',
+      str_detect(base, 'zik$') ~ 'zik',
+      str_detect(base, 'szik$') ~ 'szik'
+    ),
+    suffix = case_when(
+      xpostag == '[/V][Prs.NDef.3Pl]' ~ 'nek',
+      xpostag == '[/V][Prs.NDef.2Pl]' ~ 'tek',
+      xpostag == '[/V][Prs.NDef.1Pl]' ~ 'ünk'
+    ),
+    nsyl = str_count(base, '[aáeéiíoóöőuúüű]') - 1,
+    base_tr = transcribe(base, 'single')
+  ) %>% 
+  filter(!base %in%
+           c('cselekdnik','dohányztik','gyarapdnik','melegdnik','növekdnik','verekdnik','vérengztik')
+  )
+
 # -- write -- #
 
 # save ik2 which is the tidy merged pair thing for ik verbs
@@ -315,3 +377,6 @@ write_tsv(ik2, 'resource/real_words/ik_verbs/ikes_pairs_webcorpus2.tsv')
 write_tsv(nouns3, 'resource/real_words/front_harmony/fh_pairs_webcorpus2.tsv')
 # save ep2 which is ~ for ep verbs
 write_tsv(ep2, 'resource/real_words/epenthetic_stems/epenthesis_pairs_webcorpus2.tsv')
+# save combo
+bind_rows(ik2,nouns3,ep2) %>% 
+  write_tsv('resource/real_words/all_pairs_webcorpus2.tsv')
