@@ -159,7 +159,7 @@ r %>%
   mutate(
     log_odds =  log(`TRUE` / `FALSE`),
     id = fct_reorder(Azonosító,log_odds)
-         ) %>% View
+         ) %>% 
   ggplot(aes(log_odds)) +
   geom_histogram()
   

@@ -1,3 +1,5 @@
+# -- header -- #
+
 setwd('~/Github/Racz2024/')
 
 library(tidyverse)
@@ -55,6 +57,23 @@ col_specs = cols(
   frameRate = col_double()
 )
 
+# -- functions -- #
+
+# -- functions -- #
+
+transcribe = function(nonce_word,direction){
+  
+  case_when(
+    direction == 'single' ~ nonce_word %>% 
+      str_replace_all(., c('cs' = 'ç', 'sz' = 'ß', 'zs' = 'Ω', 'ty' = '†', 'gy' = '©', 'ny' = '¥', 'ly' = '¬')),
+    direction == 'double' ~ nonce_word %>% 
+      str_replace_all(., c('ç' = 'cs', 'ß' = 'sz', 'Ω' = 'zs', '†' = 'ty', '©' = 'gy', '¥' = 'ny', '¬' = 'ly')),
+    T ~ 'wrong direction, either (to) "single" or "double"'
+  )
+}
+
+# -- parse -- #
+
 file_name = list.files('exp_data/baseline/data/') %>% 
   str_subset('.*csv') %>% 
   str_subset('hesp')
@@ -67,6 +86,11 @@ d = tibble(
       ymd()
   ) %>% 
   filter(file_name_date >= '2022-03-25')
+
+d %<>% 
+  filter(
+    !file_name %in% c('PARTICIPANT_hesp_baseline_2022-04-14_11h50.46.771.csv','PARTICIPANT_hesp_baseline_2022-04-18_21h37.12.531.csv')
+  ) # these have no Azonosító (nincsen) and parse weirdly
 
 d %<>%
   mutate(
@@ -104,8 +128,10 @@ d %<>%
   )
 
 d %<>%
-  mutate(str_replace(Azonosító, '2066', 'PR2066')) %>% 
+  mutate(Azonosító = str_replace(Azonosító, '2066', 'PR2066')) %>% 
   filter(str_detect(Azonosító, 'nincsen', negate = T)) # watch out
+
+# -- write -- #
 
 d %>% 
   select(file_name,file_name_date,my_list,my_button1,my_button2,keyboard_input.keys,keyboard_input.rt,withinBlock.thisN,word,prompt,suffix,vowel,carrier_sentence,target_sentence,target1,target2,my_choice,resp_is_first_variant,category,derivational,nsyl,Azonosító,`Melyik évben születtél?`,`Mi a nemed?`,`Tanultál nyelvészetet?`,date,expName,psychopyVersion,OS) %>% 
