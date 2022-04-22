@@ -166,6 +166,6 @@ d2 = d %>%
       category == 'cselekszik' ~ 'cselekszenek/cselekednek'
     )
   ) %>% 
-  select(base,base_tr,variation,type,log_odds,derivational,nsyl,vowel,suffix)
+  select(base,base_tr,variation,type,target1,target2,target1_resp,target2_resp,log_odds,derivational,nsyl,vowel,suffix)
 
 write_tsv(d2, 'exp_data/baseline/baseline_tidy_proc.tsv')
