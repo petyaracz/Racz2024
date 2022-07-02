@@ -1,3 +1,5 @@
+# read in downloaded data from psychopy exp on pavlovia, tidy up, write out
+
 # -- header -- #
 
 setwd('~/Github/Racz2024/')
@@ -56,8 +58,6 @@ col_specs = cols(
   OS = col_character(),
   frameRate = col_double()
 )
-
-# -- functions -- #
 
 # -- functions -- #
 
@@ -137,6 +137,8 @@ d %>%
   select(file_name,file_name_date,my_list,my_button1,my_button2,keyboard_input.keys,keyboard_input.rt,withinBlock.thisN,word,prompt,suffix,vowel,carrier_sentence,target_sentence,target1,target2,my_choice,resp_is_first_variant,category,derivational,nsyl,Azonosító,`Melyik évben születtél?`,`Mi a nemed?`,`Tanultál nyelvészetet?`,date,expName,psychopyVersion,OS) %>% 
   write_tsv('exp_data/baseline/baseline_tidy.tsv')
 
+# in corpus data: lakok/lakom,hotelban/hotelben,cselekszenek/cselekednek
+# in test data: 
 d2 = d %>% 
   count(
     word,suffix,target1,target2,carrier_sentence,target_sentence,category,derivational,nsyl,vowel,resp_is_first_variant
@@ -151,21 +153,38 @@ d2 = d %>%
     'target2_resp' = `FALSE`
   ) %>% 
   mutate(
-    p = target1_resp / ( target1_resp + target2_resp ),
-    log_odds = log( ( target1_resp + 1 ) / ( target2_resp + 1 ) ),
+    variation = case_when(
+      category == 'dzsungel' ~ 'hotelban/hotelben',
+      category == 'lakik' ~ 'lakok/lakom',
+      category == 'cselekszik' ~ 'cselekszenek/cselekednek'
+    ),
+    resp1 = case_when(
+      variation == 'lakok/lakom' ~ target1_resp,
+      variation == 'hotelban/hotelben' ~ target2_resp,
+      variation == 'cselekszenek/cselekednek' ~ target1_resp
+    ),
+    resp2 = case_when(
+      variation == 'lakok/lakom' ~ target2_resp,
+      variation == 'hotelban/hotelben' ~ target1_resp,
+      variation == 'cselekszenek/cselekednek' ~ target2_resp
+    ),
+    variant1 = case_when(
+      variation == 'lakok/lakom' ~ target1,
+      variation == 'hotelban/hotelben' ~ target2,
+      variation == 'cselekszenek/cselekednek' ~ target1
+    ),
+    variant2 = case_when(
+      variation == 'lakok/lakom' ~ target2,
+      variation == 'hotelban/hotelben' ~ target1,
+      variation == 'cselekszenek/cselekednek' ~ target2
+    ),
+    p = resp1 / ( resp1 + resp2 ),
+    log_odds = log( ( resp1 + 1 ) / ( resp2 + 1 ) ),
     word = fct_reorder(word, p),
     type = 'nonce word response',
     base = word,
-    base_tr = transcribe(base, 'single'),
-    log_odds = ifelse(
-      category == 'dzsungel', -log_odds, log_odds
-    ),
-    variation = case_when(
-      category == 'dzsungel' ~ 'hotelban/hotelben',
-      category == 'lakik' ~ 'lakom/lakok',
-      category == 'cselekszik' ~ 'cselekszenek/cselekednek'
-    )
-  ) %>% 
-  select(base,base_tr,variation,type,target1,target2,target1_resp,target2_resp,log_odds,derivational,nsyl,vowel,suffix)
+    base_tr = transcribe(base, 'single')
+    ) %>% 
+  select(base,base_tr,variation,type,variant1,variant2,resp1,resp2,log_odds,derivational,nsyl,vowel,suffix,carrier_sentence,target_sentence)
 
 write_tsv(d2, 'exp_data/baseline/baseline_tidy_proc.tsv')

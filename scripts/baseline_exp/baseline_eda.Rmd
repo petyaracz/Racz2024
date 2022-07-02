@@ -1,0 +1,482 @@
+---
+title: "Toldalékolós baseline"
+author: "Rácz"
+date: "27/24/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FALSE, fig.path = 'figures/', fig.width = 8, fig.height = 4)
+
+# -- header -- #
+
+setwd('~/Github/Racz2024')
+
+set.seed(1989)
+
+library(tidyverse)
+library(magrittr)
+library(glue)
+library(furrr)
+library(broom)
+library(knitr)
+library(rstanarm)
+library(ggthemes)
+library(patchwork)
+
+plan(multisession, workers = 8)
+
+set.seed(1337)
+
+plotBox = function(d,ez,az){
+  ggplot(d, aes({{ez}},log_odds, colour = {{az}})) +
+    geom_point(position=position_jitterdodge(jitter.width = 0.2, dodge.width = 0.6), alpha = .05) +
+    # geom_violin(alpha = .5, position = position_dodge(width = 0.6)) +
+    geom_boxplot(alpha = .5, width = .5, position = position_dodge(width = 0.6)) +
+    geom_hline(yintercept = 0, lty = 3) +
+    scale_y_continuous(sec.axis = sec_axis(trans = ~ plogis(.), breaks = c(.1,.25,.5,.75,.9), name = 'p'), name = 'log odds') +
+    coord_cartesian(ylim = c(-5,5)) +
+    theme_bw() +
+    scale_colour_colorblind()
+}
+
+ref = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_gcm_ref_sets.tsv')
+d = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy_proc_with_corpus_and_gcm.tsv')
+ind = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy.tsv')
+
+n = filter(d, variation == 'hotelban/hotelben')
+ik = filter(d, variation == 'lakok/lakom')
+cvccc = filter(d, variation == 'cselekszenek/cselekednek')
+
+nr = filter(n, type == 'nonce word response')
+ikr = filter(ik, type == 'nonce word response')
+cvcccr = filter(cvccc, type == 'nonce word response')
+```
+
+```{r }
+
+fit1 = glm(
+  cbind(resp1,resp2) ~ 1 + cat1_weight + long_cluster + stem_vowel + vowel + suffix,
+  data = nr,
+  family = binomial(link = 'logit')
+)
+
+fit2 = glm(
+  cbind(resp1,resp2) ~ 1 + cat1_weight + nsyl + derivational, 
+  data = ikr,
+  family = binomial(link = 'logit')
+)
+
+fit3 = glm(
+  cbind(resp1,resp2) ~ 1 + cat1_weight + consonants + nsyl + suffix,
+  data = cvcccr,
+  family = binomial(link = 'logit')
+)
+
+```
+
+80 ember válaszolt fejenként 162 szóra, így lett kb 25 válasz egy szóra.
+
+Feltéve, hogy a kísérlet működik, két lehetőség volt: (i) a válaszokat a célszavak jól kontrollált alapvető tulajdonságai határozzák meg (szótagszám, végződés, ilyesmi), (b) a válaszokat az határozza meg, hogy a célszavak általában mennyire hasonlítanak bizonyos módon viselkedő létező szavakra. (Ez a két dolog persze átfed.)
+
+Végigmegyek a három szókategórián, megnézem, hogy egyáltalán hasonlítottak-e a kísérletben adott válaszok arra, ahogyan a kategóriába tartozó létező szavak viselkednek az új webkorpuszban (jellemzően igen), és hogy ezt specifikus tulajdonságok vagy valamilyen általános hasonlósági metrika határozta-e meg (is!).
+
+## Dzsungelban/dzsungelben
+
+### Célszavak
+
+A célszavak főnevek, a válaszlehetőségek a -ban, -nak, -nál elöl vagy hátulképzett alakjai. Egy szóhoz egy toldalék tartozik, amit kidobtam kockával: tehát ban, nak, vagy nál.
+
+Azt, hogy a célszó főnév, és a válaszlehetőségek posztpozíciós alakok, a szövegkörnyezet tette tisztába:
+
+- "Ez itt egy kalréz."
+- "Elneveztem a kutyámat..." / "Ott vagyunk a..." / "Nincs is jobb egy jó..."
+- "kraléznak - kraléznek" / "kralézban - kralézben" / "kraléznál - kraléznél"
+
+A két variáns sorrendje trialonként változott, összevissza módon.
+
+Minden célszó kétszótagos, az első magánhangzó hátul képzett vagy i/í, a második e/é. i/í szóból csak néhányat akartam eredetileg, kontrollnak (erősen azt várjuk, hogy ezek elölképzett toldalékot választanak), de aztán kicsit több lett végül, mint kéne, nem baj.
+
+### Mintázatok
+
+Először nézzük meg, mennyire hasonlítanak a kísérletben adott válaszok az új webkorpuszban látott mintázatokra. Ezt mutatják a lenti ábrák:
+
+```{r }
+p1 = n %>% 
+  filter(
+    !stem_vowel %in% c('i','í')
+  ) %>%
+  plotBox(stem_vowel,type) +
+  guides(colour = 'none') +
+  theme(
+    axis.title.y.right = element_blank(),
+    axis.text.y.right = element_blank(),
+    axis.ticks.y.right = element_blank()
+    ) +
+  ggtitle('first vowel')
+
+p2 = n %>% 
+  plotBox(vowel,type) +
+  theme(
+    axis.title.y.left = element_blank(),
+    axis.text.y.left = element_blank(),
+    axis.ticks.y.left = element_blank()
+    ) +
+  ggtitle('second vowel')
+
+p1 + p2 + plot_layout(widths = c(2,1)) + plot_annotation(title = 'dzsungelban/dzsungelben')
+```
+
+A baloldali ábrán azt látjuk, hogy az első magánhangzó (mgh), a másodikban azt, hogy a második mgh mennyiben befolyásolja a toldalék hátulképzettségét. Az y tengelyen a hátul és elölképzett válasz log oddsa látható (a jobb oldalra tettem egy valószínűségeket mutató tengelyt is segítségnek, de a mértékegység a log odds). Tehát magasabb érték = több ban-nak-nál. Alacsonyabb érték = több ben-nek-nél. Nulla = fele-fele arány. 
+
+A fekete eloszlás a kísérletben, a sárga a korpuszban kapott arányok. Mindent pont egy szópár. Az ábrára rá van nagyítva, mert a korpuszos eloszlások sokkal zajosabbak, és nem lehetne látni jól a kontrasztokat, ha benne lenne az egész mindenség.
+
+Valószínűbb az elölképzett alak, ha az első mgh hosszú u vagy o, illetve ha a második mgh e, nem pedig é. Ez igaz a korpuszra is és a kísérletre is. Az e-é kontraszt nem meglepő, a hosszú u-o valszeg a szó összetettszó hangulatát erősíti, erre később visszatérek.
+
+Na jó, szóval bizonyos alapvető paraméterekben hasonlít a kísérlet a korpuszra, de miért van ez? 
+
+### Lexikon
+
+A Rebrus Péter szerint a hotel/dzsungel/fotel szavak a magyarban három osztályba sorolhatók.
+
+1. Egyértelműen idegen eredetű, művelt regiszterben használt szavak (kódex, modell, koncert, projekt), ezek jellemzően _elölképzettek_ lesznek.
+2. Szlengszavak, sőt argó (matek, haver, kolesz), ezek jellemzően _hátulképzettek_ lesznek.
+3. A többiek (dzsungel, bunker, motel), ezeknek kb mindegy.
+
+Az új magyar webkorpuszban található vegyes hangrendű főnévi tövek közül kiválasztottam azokat, amelyek elég gyakoriak, szoktak variálni szépen hátul- és elölképzett alakok között, aztán számoltam mindegyikre egy átlagos hátul-elölképzettségi arányt, és ez alapján három egyenlő elemszámú részre osztottam a szavakat, nagyon hátulképzett, nagyon elölképzett, és a langyosak (őket kiköpi az úr). 
+
+Ezek a számalapú osztályok elég jól hozzák a Rebrus Péter intuícióit. A (főleg) hátulképzett kategóriában ilyen szavak vannak:
+
+```{r }
+ref %>% 
+  filter(variation == 'hotelban/hotelben',category == 'tilt_freq1') %>% 
+  pull(szo)
+```
+
+A (főleg) elölképzettben ilyenek:
+
+```{r }
+ref %>% 
+  filter(variation == 'hotelban/hotelben',category == 'tilt_freq2') %>% 
+  pull(szo)
+```
+
+Van pár de facto összetett szó is, de emellett a Rebrus Péter kategóriái jól látszanak szerintem: argó (pancser, flaszter, muter, krapek) és művelt (partner, koncert, modell, parkett).
+
+Írtam egy sima kategorizációs algoritmust, amely kiszámolgatja, hogy egy adott célszó inkább az első vagy a második csoportra hasonlít, és ez alapján ad neki egy hasonlósági súlyt. Ez a súly valamennyire korrellál azzal, mennyire nézték az emberek elöl/hátulképzettnek a célszavakat a kísérletben:
+
+```{r }
+nr %>% 
+  ggplot(aes(cat1_weight,log_odds,label = base)) +
+  geom_label() +
+  geom_smooth(method = 'lm') +
+  theme_few() +
+  xlab('hátulképzett a modell szerint (0-1)') +
+  ylab('hátulképzett a válaszok szerint (log odds)')
+```
+
+Ez persze annyiban csal, hogy a két létező szavak alkotta célkategóriát (nagyon elölképzett és nagyon hátulképzett) teljesen diszkrétnek képzeli el, ami nyilván abstart nem igaz, de szerintem elég messze vannak egymástól az eloszlások ahhoz, hogy ez ne legyen komoly gond.
+
+Csináltam egy regressziós modellt, ami azt jósolja meg, mekkora lesz az elölképzett válaszok aránya, abból, hogy az adott célszó: 
+
+- mennyire hasonlít az elölképzett szavakra a kategorizációs modell szerint
+- mi az első magánhangzója
+- mi a második magánhangzója
+- mi a toldalék amivel szerepelt
+- egynél több mássalhangzó van-e a két magánhangzó között ("iszkenc" vs "trodély") -- ez az összetettszó-szerűségnek egy primitív mérőszáma (a trodély tuti lehet monomorfemikus, az iszkenc nem biztos)
+
+A modell r^2-je .8. Itt vannak a becslések a prediktorokra:
+
+```{r}
+tidy(fit1, conf.int = T) %>% 
+  select(-p.value) %>% 
+  kable(digits = 2, format = 'simple')
+
+# with(summary(fit1), 1 - deviance/null.deviance)
+```
+
+Mit látunk? 
+
+- Az intercept  nem értelmezhető önmagában.
+- Nem túl meglepő, hogy az első magánhangzó (ezt hívom stem vowel-nek) és a második magánhangzó (ez simán vowel) baromi fontosak: Nyilván, ha az első mgh i vagy í, akkor nagyon elölképzett lesz a válasz (negatív értékek). A hosszú ó és ú is elölképzettebb szót eredményez, valszeg azért, mert ezektől a célszónak összetett szó hangulata támad (ld lentebb)
+- Szintén nem túl meglepő, hogy ha a második magánhangzó é, akkor az alapértelmezett e-hez képest jóval hátulképzettebb lesz a válasz (pozitív értékek: tehát az é átlátszóbb). 
+- Ha több msh van a két mgh között, akkor inkább lesz elölképzett a szó (ha összetettszó-szerű, akkor úgy is fog viselkedni, mint egy összetett szó: tanév, látkép).
+- Ha a toldalék -nak vagy -nál, elölképzettebb lesz a szó, mint az itt alapértelmezett -ban. Passz. Mondjuk ez nem egy óriási különbség.
+- És a legérdekesebb: ezek a tulajdonságok fontosabbak, mint a hasonlósági kategóriasúly (amely itt a nem nagyon egyértemű cat1_weight nevet kapta). Ez nem ad hozzá semmit az eredményhez.
+
+Tehát úgy tűnik, hogy a résztvevők a válaszaikat az alapján hozzák meg, hogyan néznek ki a célszavak. Ez jó. De itt nem holisztikusan nézik, hogy hogyan néz ki a szó, hanem bizonyos fix dolgokat néznek, és az alapján "döntenek": milyen a mgh, összetett-e a szó vajon intuitíve.
+
+Én ennek az ellenkezőjét vártam, a Rebrus-féle sejtéssel párhuzamosan: ha egy szó kódex-hangulatú, akkor elölképzett lesz, ha stukker-hangulatú, akkor hátulképzett. Ez nem jött be.
+
+## Lakok/lakom
+
+### Célszavak
+
+Ezek a célszavak két vagy háromszótagosak voltak (tehát egy vagy kétszótagos volt az igető kvázi) és három képző valamelyikével végződtek (-szik, -zik, -lik).
+
+A két válaszlehetőség minden esetben az indefinit alak jelölt -m és a jelöletlen -k változatai voltak.
+
+- "Te bizony sokat pratánylasz."
+- "Én is sokat..."
+- "pratánylok - pratánylom"
+
+### Mintázatok
+
+Nézzük, mennyire hasonlítanak a kísérletben adott válaszok az új webkorpuszban látott mintázatokra. Ezt mutatják a lenti ábrák:
+
+```{r }
+p3 = ik %>% 
+  filter(nsyl %in% 1:2) %>% 
+  plotBox(as.factor(nsyl),type) +
+  guides(colour = 'none') +
+  theme(
+    axis.title.y.right = element_blank(),
+    axis.text.y.right = element_blank(),
+    axis.ticks.y.right = element_blank()
+    ) +
+  ggtitle('stem syllable count') +
+  xlab('stem syllable count')
+
+p4 = ik %>% 
+  filter(!is.na(derivational)) %>% 
+  plotBox(derivational,type) +
+  theme(
+    axis.title.y.left = element_blank(),
+    axis.text.y.left = element_blank(),
+    axis.ticks.y.left = element_blank()
+    ) +
+  ggtitle('stem ending')
+
+p3 + p4 + plot_layout(widths = c(1,2)) + plot_annotation(title = 'lakok/lakom')
+```
+
+A baloldali panelon azt látjuk, hogy az egyszótagú tövek inkább lesznek -k-sak, mint a kétszótagúak. 
+
+A jobboldali panel azt mutatja, hogy a -lik sokkal -k-sabb, mint a másik két képző. A korpuszban ide kevés, de olyan jó ikes, tárgyatlan ige tartozik, mint a botlik, csuklik, hanyatlik. A másik két osztály jóval nagyobb, mert az -ozik és a -szik elég produktívok.
+
+Az új webkorpuszon végigment egy morfológiai egyértelműsítő. Tehát elvileg meg tudja különböztetni az "eszem egy kenyeret" alakokat az "eszem a kenyeret" alakoktól a mondatszerkezet alapján. De ebben nem lehetünk teljesen biztosak. A hibák azoknak a szavaknak fognak "kedvezni", amelyeknek eleve van tárgyas alakjuk, mivel ezek fognak feltűnni -m végződéssel a korpuszban.
+
+Elképzelhető például, hogy az indef "egész nap dolgozom" és def "végigdolgozom a napot" típusú alakokat az elemző keresztbe fogja címkézni. Olyan igéknél, amelyek szívesen tárgyasak, ez a hiba megdobja az "indef" (valójában rosszul címkézett) -m alakok arányát. 
+
+Ez a Rebrus Péter félelme, én itt két okból nem aggódnék ezen nagyon. Ha megnézzük a végződéseket fent jobbra, akkor egyrészt az emberek hozzák azt, amit a korpuszban találunk, és ők nem tudnak ilyen értelemben rosszul parse-olni. Abban az értelemben persze tudnak, hogy inkább tudnak analógiázni létező gyakori paradigmacellákból. Másrészt ezek a képzett igealakok nem olyan nagyon tárgyaznak, a definit alakok előfordulása intuitíve alacsony lesz. Erre lentebb mutatok példát.
+
+### Lexikon
+
+Ugyanúgy fogtam azokat a szavakat, amik az új webkorpuszban 1sg.indef alakban váltakozást mutatnak, és megnéztem, hogy melyik mennyire preferálja az -m végződést a -k-val szemben.
+
+A főleg -k kategóriában ilyen szavak vannak:
+
+```{r }
+ref %>% 
+  filter(variation == 'lakok/lakom',category == 'tilt_freq1') %>% 
+  sample_n(50) %>% 
+  pull(szo)
+```
+
+A főleg -m kategóriában ilyenek:
+
+```{r }
+ref %>% 
+  filter(variation == 'lakok/lakom',category == 'tilt_freq2') %>% 
+  sample_n(50) %>% 
+  pull(szo)
+```
+
+Ugye ha erre úgy ránéz az ember, akkor nincsenek kiugró különbségek. Valami gyakorisági izé van, hogy az iszik meg a fázik az inkább m-es, az aszik meg nem.
+
+Ha megépítjük az előző körből ismert tanulóalgoritmust, és megnézzük, hogyan kategorizálgatja a kísérlet célszavait, azt kapjuk, hogy a kategóriahasonlóság itt is jósolja azt, hogy milyen válaszokat kapunk a kísérletben:
+
+```{r }
+ikr %>% 
+  ggplot(aes(cat1_weight,log_odds,label = base)) +
+  geom_label() +
+  geom_smooth(method = 'lm') +
+  theme_few() +
+  xlab('-k a modell szerint (0-1)') +
+  ylab('-k a válaszok szerint (log odds)')
+```
+
+Ha pedig regressziós modellt építünk, amibe betesszük ezt a kategóriasúlyt, és azt, hogy a szótő hány szótagos, és milyen képzővel dolgozunk, akkor a modell r^2-e .57 lesz (tehát jóval pontatlanabb, mint a főneves, jóval kevésbé tudja megmondani, mit fognak csinálni az emberek), és így néznek ki a prediktorok:  
+
+```{r}
+tidy(fit2, conf.int = T) %>% 
+  select(-p.value) %>% 
+  kable(digits = 2, format = 'simple')
+
+# with(summary(fit2), 1 - deviance/null.deviance)
+```
+
+- Az intercept megint nem túl értelmes magába.
+- A kategóriasúly nagyon zajos prediktor, de eléggé pozitív, tehát valamennyire hasznosak a hasonlóságalapú jóslatok: mennél jobban hasonlít a célszó k-s szavakra, annál több k választ kap. Persze az, hogy ez a prediktor itt ilyen nagyot megy, az azért is van, mert a szavak belsejéről itt mást nem tudunk mondani (az előző modellban ott volt rögtön mind a két magánhangzó, ami egy harmonikus váltakozásnál azért elég fontos). 
+- A hosszabb szavak inkább -k-sak (azt tippeltük, hogy ez valszeg azért van, mert Kedvenc Jelölt Szavaink, mint az eszek, a lakok, az iszok, stb, mind rövidebbek).
+- A szik és a zik jóval -m-esebb, mint a -lik. Ezt láttuk a nyers adatokban is.
+
+És hát itt a legfontosabb az, hogy bőven nem használták kategorikusan az emberek az -m szabályt az új szavakra, de közben jónéhány -m válasz becsúszott, és viszonylag szisztematikus módon. 
+
+Ez.. fura? A webkorpusz legjelöltebb -m-es alakjai jellemzően művelt regiszterbe tartozó olyan klasszikusok, mint az esküszöm, tolakszom, törekszem, származom. A legkevésbé -m-esek olyan gyakori képzett alakok, mint a bűnözök, távozok, szűnök, tartozok, emlékezek. Az lik/szik különbség itt ránézésre egyáltalán nem feltűnő például.
+
+Én azt gondolnám, hogy van a magyarban egy elég zárt belvárosi halálzóna szókincs (eszek, bízok, játszok, iszok, lakok, alszok, stb), és ez képes lehet valamennyire produktívan kiterjeszteni az indef m-et hasonló új alakokra. Na itt nem ez látszik: nagyjából egy alaktani hasonlóságokra épülő papírforma érvényesül, ahol a valahogyan viselkedő létező alakokhoz hasonló célszavak követik a megfelelő viselkedési mintát, egy bizonyos mértékig.
+
+## cselekedik / cselekszik
+
+### Célszavak
+
+Ez volt a legelborultabb kategória. Három váltakozás volt a célszavakon belül: l-z (briváglik/brivágozik), sz-d (brivepszik/brivepedik), és z-z (bratárzik/bratározik).
+
+Ezek közül az l-z nem nagyon van a valóságban, illetve van, de nem ikesen (szkvasol-szkvasozik). De be akartam rakni, mert nagyon tetszett. A másik két típus azok aránylag gyakoriak (cselekszik-cselekedik és hullámzik-hullámozik).
+
+Ezen belül voltak egy és kétszótagos tövek, és ezt három toldalékkal néztem meg, ez a T3 (áramlanak-áramolnak), a T2 (áramlotok-áramoltok), és a T1 (áramlunk-áramolunk). Ezekben az a jó, hogy minden hangkivető típus mindkét alakja létezik velük, ami más, gyakoribb végződésekre nem igaz (ld. ő cselekedne - *ő cselekszene), illetve ketten mássalhangzó (msh), egy pedig mgh kezdetű.
+
+A prompt így nézett ki:
+
+- "János imád prihegedni, ezért sokat prihegszik."
+- "Ti/mi/ők ritkán..."
+- "Prihegedtek-prihegszetek/prihegedünk-prihegszünk/prihegednek-prihegszenek.
+
+A célmondatban mindig a cvc alak van előbb.
+
+### Mintázatok
+
+```{r }
+p5 = cvccc %>% 
+  filter(nsyl %in% 1:2) %>% 
+  plotBox(as.factor(nsyl),type) +
+  guides(colour = 'none') +
+  theme(
+    axis.title.y.right = element_blank(),
+    axis.text.y.right = element_blank(),
+    axis.ticks.y.right = element_blank()
+    ) +
+  ggtitle('stem\nsyllable count') +
+  xlab('stem syllable count')
+
+p6 = cvccc %>% 
+  filter(!is.na(derivational)) %>% 
+  plotBox(derivational,type) +
+  guides(colour = 'none') +
+  theme(
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+    ) +
+  ggtitle('stem ending')
+
+p7 =  cvccc %>% 
+  filter(!is.na(suffix)) %>% 
+  plotBox(suffix,type) +
+  theme(
+    axis.title.y.left = element_blank(),
+    axis.text.y.left = element_blank(),
+    axis.ticks.y.left = element_blank()
+    ) +
+  ggtitle('suffix')
+
+p5 + p6 + p7 + plot_layout(widths = c(1,2,2)) + plot_annotation(title = 'cselekszik/cselekedik')
+```
+
+Mit látunk a válaszokban és a korpuszban? A bal panelon azt látjuk, hogy a kétszótagos tövek (pl cselekszik) jóval markánsabban választják a cvc alakot (cselekedik) mint az egyszótagos tövek (hajlik). Akinek van, annak megadatik, ugye, és ezt a mintázatot a kísérletben is szépen hozták a válaszok, ha nem is ilyen erősen.
+
+A középső panelon a tővégződések összehasonlítása annyiban trükkös, hogy a kéklenek-kékeznek típusú, a valóságban azért nem nagyon létező minta egybeesik a lélegzenek-lélegeznek mintával. Talán ezzel is magyarázható, hogy itt a kísérletben a válaszok arányai nem követik a korpuszban talált arányokat.
+
+A jobb panelon az igeragok hatását látjuk. Itt ismét, mondja a Rebrus Péter, az indef-def eszem alakok félrecímkézéséhez hasonló zajforrást jelent az, hogy a T2 cvc alakja egybeesik a múltidejű T3 alakjával, igaz, csak elölképzett töveknél: melegszetek-melegedtek vs áramlotok-áramoltok-áramoltak. A magyar pro drop nyelv, egy elemzőnek bizonyos esetekben a tágabb szövegkontextusból kéne megmondania, hogy itt most ti melegedtek, vagy ők melegedtek, és a hibalehetőség viszonylag magas. Ráadásul a T3 jóval gyakoribb, mint a T2.
+
+Ennek ellentmond, hogy a kísérletben, ahol a T2 egyértelműsített (ti ritkán...), az emberek kb ugyanazt a mintát mutatják, mint amit a korpuszban látunk: T3 jelen cc-sebb (cselekszenek/cselekednek), mint a T2 jelen (cselekszetek/cselekedtek). A legcc-sebb persze a T1 jelen, ami mgh-ra végződik (cselekszünk/cselekedünk), ezért bármilyen ikes tővel kötőhangzó nélkül is elvan (csuklotok, hanyatlotok), nyilván ez fontos része ennek.
+
+### Lexikon
+
+Részben intuitív, részben a próbálkozásaim is alátámasztják azt, hogy a cvc-cc célszavak viselkedését a fenti példákkal szemben nem az határozza meg, hogy milyen vacilláló szavakhoz hasonlítanak, hanem az, hogy milyen stabil CVC és CC igékhez.
+
+Ez szerintem oké: a hotelban és lakom osztályban minden olyan alak variálni fog, amelyre az alaktani leírás ráillik (az ikes igéknél van pár jelölt kivétel, mint a \*válom és a \*szarom). Ha a leírást vesszük alapul (cvc-ik vagy cc-ikre végződő ige), akkor összességében CVC és CC igékkel kell összehasonlítanunk a célszavaink. Mi több, az egyszerűség kedvéért ki is szűrtem innen azokat a szavakat, amelyek variálnak a webkorpuszban.
+
+A cvc kategóriában végül tehát ilyen szavak voltak:
+
+```{r }
+ref %>% 
+  filter(variation == 'cselekszenek/cselekednek',category == 'cvcik') %>% 
+  sample_n(50) %>% 
+  pull(szo)
+```
+
+A cc kategóriában ilyenek:
+
+```{r }
+ref %>% 
+  filter(variation == 'cselekszenek/cselekednek',category == 'ccik') %>% 
+  sample_n(50) %>% 
+  pull(szo)
+```
+
+A kísérletben adott válaszok korrellálnak azzal, hogy a szó inkább cvc vagy cc szavakra hasonlít, de azért nem olyan rettenetesen:
+
+```{r }
+cvcccr %>% 
+  ggplot(aes(cat1_weight,log_odds,label = base)) +
+  geom_label() +
+  geom_smooth(method = 'lm') +
+  theme_few() +
+  xlab('cc/cvc a modell szerint (0-1)') +
+  ylab('cc/cvc a válaszok szerint (log odds)')
+```
+
+A regressziós modell a leggyengébb a három közül (r^2 = .36). 
+
+```{r }
+tidy(fit3, conf.int = T) %>% 
+  select(-p.value) %>% 
+  kable(digits = 2, format = 'simple')
+
+# with(summary(fit3), 1 - deviance/null.deviance)
+```
+
+- Az általános hasonlóság fontos valamennyire, még ha a nulla bőven benne is van a 95%-os konfidenciaintervallumban. Ez rezonál Rácz Rebrus Törkenczy eredményére, akik azt találták, hogy a korpuszban vacilláló cvc/cc igéknél a variációt kismértékben jósolja az, hogy az ige inkább fix cvc vagy fix cc igékre hasonlít. Valószínűleg ha kicsit még tekergetném az algoritmust, akkor fel lehetne rugdosni ezt az együtthatót, de a lényeg kb az, hogy van, de nem erős.
+- A cselekszik/cselekedik párok egyértelműen a cselekszik alakot preferálják az emlékszik-emlékezik illetve hullámlik-hullámozik típusú párokhoz képest. 
+- A rövdebb igék inkább cc-sek, tehát alszotok inkább mint aludtok.
+- Az áramlunk típusú alakok jóval gyakoribbak, mint az áramolunk típus, ami nem meglepő, viszont érdekes módon az áramoltok típusok népszerűbbnek az áramlotok típusnál.
+
+Ez valszeg nem azért van, mert az emberek kerülik az elölképzett cvc T2 alakokat, mert azok egybeesnének a T3 múltidejű alakokkal ("cselekedtek"). Ha megnézzük, hogyan választottak a cc és cvc alak közül annak függvényében, hogy mi volt a toldalék ÉS hogy a tő elöl- vagy hátulképzett volt, nem látunk ilyen eltérést (lenti ábra, középső oszlop):
+
+```{r }
+cvcccr %>% 
+  mutate(
+    stemtype = ifelse(
+      str_detect(variant1, '(nek$|tek$|ünk$)'), 'front', 'back'
+    )
+  ) %>% 
+  ggplot(aes(suffix,log_odds,colour = stemtype)) +
+  geom_boxplot() +
+  scale_y_continuous(sec.axis = sec_axis(trans = ~ plogis(.), breaks = c(.1,.25,.5,.75,.9), name = 'p'), name = 'log odds') +
+  theme_bw()
+```
+
+Mi a tanulság itt összességében? Hát. Ha azt gondoljuk, hogy van egy mögöttes modell, amely meghatározza általában az ikes igék viselkedését, akkor azt mondanám, hogy ennek a hangkivetés tünete, de nem következménye: vannak valamilyen lexikális megszorítások arra, hogy milyen tőben lehet epentetikus mgh és milyenben nem, és vannak morfofonológiai megszorítások arra, hogy milyen toldalékhoz kell epentetikus mgh, és aztán vannak alakok, amelyek ebbe belepusztulnak (mint a csuklik), és van néhány, amelyek instabilok, és bizonyos helyeken mindkét alak lehetséges (ez a dohányozik-dohányzik osztály), és itt totális a káosz abban, hogy melyik alak milyen végződéssel hogyan variálhat (dohányzanak nincs de dohányzunk van, cselekszenek van, de cselekszene nincs, és így tovább). Persze ezt nem neked kell magyaráznom!
+
+## Összefoglalás
+
+A résztvevők válaszai elég jól lekövetik a korpuszban talált arányokat. Ez alsó hangon valami olyasmit jelent, hogy a korpuszban látott eloszlás nem teljesen lexikalizált (hogy nem tudom az eszik imád indef-ben is eszem lenni), és nem is a mintát konzisztensen használó emberek rakták össze (ahol az egyik mindik eszek-et ír, a másik mindig eszem-et). Ez részben a fenti eredményekből is látszik, részben pedig abból is, hogy az egyes résztvevők még a részkategoriákon belül sem viselkednek kategorikusan. Ezt mutatja a lenti ábra, ami a szavak helyett az alanyokra számol átlagokat, és ezeket ábrázolja kategoriánként, kétféle módon:
+
+```{r }
+p8 = ind %>% 
+  group_by(file_name,category) %>% 
+  summarise(mean = mean(resp_is_first_variant)) %>% 
+  ggplot(aes(category,mean)) +
+  geom_jitter(width = .25) +
+  geom_boxplot(width = .25, alpha = .5) +
+  theme_bw() +
+  ggtitle('participant averages across category')
+
+p9 = ind %>% 
+  group_by(file_name,category) %>% 
+  summarise(mean = mean(resp_is_first_variant)) %>% 
+  ggplot(aes(category,mean,group = file_name)) +
+  geom_line() + 
+  theme_bw() +
+  ggtitle('participant avg changes across category')
+
+p8 + p9
+```
+
+A következő kérdés az, hogy mi bújik meg a kísérletben és a korpuszban tapasztalt eloszlások mögött. Van egy (akár stochasztikus) nyelvi szabály, vagy minden a lexikális hasonlóságon alapul?
+
+- A magánhangzóharmónia (vh) esetén valszeg könnyű kiabsztrahálni a szabályszerűséget: a vh eleve csak mgh-kon működik, ezekből a célszavakban véges kombinációk lehetségesek, a hatások pedig aránylag additívak: e ilyen, é olyan. Ehhez képest minimálisan van jelen az, hogy mennyire elemzik az emberek összetett szónak a kevert töveket (tanév vs nem tudom, malév). Ez utóbbihoz kéne esetleg valamilyen tudás arról, hogy a magyarban a szavak hogyan szoknak kinézni.
+- A másik véglet a hangkivető ikes igék esete. Valszeg itt is van egy szabály, ami a magyarban eltűrt msh csoportokról mond valamit, ez keveredik egy hangsúlyosabb lexikális elemmel, hogy ti. bizonyos igék baromira utálják az epentetikus mgh-t (csuklik, hanyatlik), másokban pedig mindig ott van, pedig nélküle is meglenne az ige (vonatozik,vonatoznak). A csavar ebben az, hogy összességében véve a beszélőknek nincs közvetlen tapasztalatuk arról, hogy egy igető hogyan néz ki "valójában", hanem a különféle toldalékolt alakokból próbálják ezt retrofitelni. És ennek az egésznek valójában egy viszonylag kis szelete az, hogy a cselekszik-típusú igék mennyire variálnak -- ebben a leosztásban még mindig a defektív igék az igazán érdekesek, csak azok nem fognak variálni persze.
+- Az eszek-eszem váltakozás pedig teljesen ortogonális erre az egészre, mert semmilyen strukturális vetülete nincs. Bármilyen igének lehet -k-t vagy -m-et rakni a végére. Az E1 def-indef neutralizációnak annyiban van strukturális része, hogy kevésbé agresszívan tárgyas igéknél kisebb ár az, ha E1-ben a def és az indef egybeesik. De a világ összes nyelve elég jól elvan def-indef megkülönböztetés nélkül, tehát nem hiszem, hogy a magyar ne élné ezt túl. Itt talán az van, hogy valamilyen történeti folyamat kb meghatározta azokat az ikes igéket, amelyek E1-ben mindenhol -m-et szeretnek használni, főleg gyakoriság, kisebb részben pedig valencia és alaktan alapján, a beszélők pedig ehhez a fejben tartott listához hasonlítgatják az álszavakat, amikor el akarják dönteni, hogy ezek "ikesek", vagy sem. (Arról aztán nem is beszélve, hogy a kitöltők szociolingvisztikai profilja korántsem biztos, hogy homogén!)

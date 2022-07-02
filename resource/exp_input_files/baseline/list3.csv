@@ -1,0 +1,163 @@
+rowname,word,prompt,suffix,vowel,carrier_sentence,target_sentence,target1,target2,category,derivational,nsyl
+109,lismév,lismév,ban,é,Ez itt egy lismév.,Ott vagyunk a...,lismévben,lismévban,dzsungel,NA,NA
+110,pristél,pristél,ban,é,Ez itt egy pristél.,Ott vagyunk a...,pristélben,pristélban,dzsungel,NA,NA
+111,bidem,bidem,ban,e,Ez itt egy bidem.,Ott vagyunk a...,bidemben,bidemban,dzsungel,NA,NA
+112,pijél,pijél,nál,é,Ez itt egy pijél.,Nincs is jobb egy jó...,pijélnél,pijélnál,dzsungel,NA,NA
+113,szihét,szihét,nak,é,Ez itt egy szihét.,Elneveztem a kutyámat...,szihétnek,szihétnak,dzsungel,NA,NA
+114,trismél,trismél,nak,é,Ez itt egy trismél.,Elneveztem a kutyámat...,trismélnek,trismélnak,dzsungel,NA,NA
+115,brindez,brindez,nak,e,Ez itt egy brindez.,Elneveztem a kutyámat...,brindeznek,brindeznak,dzsungel,NA,NA
+116,braszenc,braszenc,nál,e,Ez itt egy braszenc.,Nincs is jobb egy jó...,braszencnél,braszencnál,dzsungel,NA,NA
+117,surnegy,surnegy,nál,e,Ez itt egy surnegy.,Nincs is jobb egy jó...,surnegynél,surnegynál,dzsungel,NA,NA
+118,fincek,fincek,nál,e,Ez itt egy fincek.,Nincs is jobb egy jó...,finceknél,finceknál,dzsungel,NA,NA
+119,brukész,brukész,nál,é,Ez itt egy brukész.,Nincs is jobb egy jó...,brukésznél,brukésznál,dzsungel,NA,NA
+120,szutend,szutend,ban,e,Ez itt egy szutend.,Ott vagyunk a...,szutendben,szutendban,dzsungel,NA,NA
+121,kátel,kátel,nak,e,Ez itt egy kátel.,Elneveztem a kutyámat...,kátelnek,kátelnak,dzsungel,NA,NA
+122,sprivenc,sprivenc,nál,e,Ez itt egy sprivenc.,Nincs is jobb egy jó...,sprivencnél,sprivencnál,dzsungel,NA,NA
+123,trájeg,trájeg,ban,e,Ez itt egy trájeg.,Ott vagyunk a...,trájegben,trájegban,dzsungel,NA,NA
+124,licegy,licegy,ban,e,Ez itt egy licegy.,Ott vagyunk a...,licegyben,licegyban,dzsungel,NA,NA
+125,jurdent,jurdent,nál,e,Ez itt egy jurdent.,Nincs is jobb egy jó...,jurdentnél,jurdentnál,dzsungel,NA,NA
+126,gicéj,gicéj,nál,é,Ez itt egy gicéj.,Nincs is jobb egy jó...,gicéjnél,gicéjnál,dzsungel,NA,NA
+127,ronszek,ronszek,ban,e,Ez itt egy ronszek.,Ott vagyunk a...,ronszekben,ronszekban,dzsungel,NA,NA
+128,spumény,spumény,nak,é,Ez itt egy spumény.,Elneveztem a kutyámat...,spuménynek,spuménynak,dzsungel,NA,NA
+129,zsádév,zsádév,nak,é,Ez itt egy zsádév.,Elneveztem a kutyámat...,zsádévnek,zsádévnak,dzsungel,NA,NA
+130,spatel,spatel,nak,e,Ez itt egy spatel.,Elneveztem a kutyámat...,spatelnek,spatelnak,dzsungel,NA,NA
+131,zined,zined,nak,e,Ez itt egy zined.,Elneveztem a kutyámat...,zinednek,zinednak,dzsungel,NA,NA
+132,humék,humék,nak,é,Ez itt egy humék.,Elneveztem a kutyámat...,huméknek,huméknak,dzsungel,NA,NA
+133,spanél,spanél,nál,é,Ez itt egy spanél.,Nincs is jobb egy jó...,spanélnél,spanélnál,dzsungel,NA,NA
+134,zsáder,zsáder,ban,e,Ez itt egy zsáder.,Ott vagyunk a...,zsáderben,zsáderban,dzsungel,NA,NA
+135,vublet,vublet,nál,e,Ez itt egy vublet.,Nincs is jobb egy jó...,vubletnél,vubletnál,dzsungel,NA,NA
+136,dibez,dibez,ban,e,Ez itt egy dibez.,Ott vagyunk a...,dibezben,dibezban,dzsungel,NA,NA
+137,csodeg,csodeg,nál,e,Ez itt egy csodeg.,Nincs is jobb egy jó...,csodegnél,csodegnál,dzsungel,NA,NA
+138,dorzéj,dorzéj,nak,é,Ez itt egy dorzéj.,Elneveztem a kutyámat...,dorzéjnek,dorzéjnak,dzsungel,NA,NA
+139,vodec,vodec,nál,e,Ez itt egy vodec.,Nincs is jobb egy jó...,vodecnél,vodecnál,dzsungel,NA,NA
+140,dalenc,dalenc,nál,e,Ez itt egy dalenc.,Nincs is jobb egy jó...,dalencnél,dalencnál,dzsungel,NA,NA
+141,bródesz,bródesz,nak,e,Ez itt egy bródesz.,Elneveztem a kutyámat...,bródesznek,bródesznak,dzsungel,NA,NA
+142,trikép,trikép,ban,é,Ez itt egy trikép.,Ott vagyunk a...,triképben,triképban,dzsungel,NA,NA
+143,zatéj,zatéj,nál,é,Ez itt egy zatéj.,Nincs is jobb egy jó...,zatéjnél,zatéjnál,dzsungel,NA,NA
+144,gótem,gótem,nak,e,Ez itt egy gótem.,Elneveztem a kutyámat...,gótemnek,gótemnak,dzsungel,NA,NA
+145,pazév,pazév,nál,é,Ez itt egy pazév.,Nincs is jobb egy jó...,pazévnél,pazévnál,dzsungel,NA,NA
+146,nyarcéj,nyarcéj,nak,é,Ez itt egy nyarcéj.,Elneveztem a kutyámat...,nyarcéjnek,nyarcéjnak,dzsungel,NA,NA
+147,danét,danét,nál,é,Ez itt egy danét.,Nincs is jobb egy jó...,danétnél,danétnál,dzsungel,NA,NA
+148,trapszegy,trapszegy,nál,e,Ez itt egy trapszegy.,Nincs is jobb egy jó...,trapszegynél,trapszegynál,dzsungel,NA,NA
+149,sartely,sartely,ban,e,Ez itt egy sartely.,Ott vagyunk a...,sartelyben,sartelyban,dzsungel,NA,NA
+150,nyítem,nyítem,ban,e,Ez itt egy nyítem.,Ott vagyunk a...,nyítemben,nyítemban,dzsungel,NA,NA
+151,hágyét,hágyét,nak,é,Ez itt egy hágyét.,Elneveztem a kutyámat...,hágyétnek,hágyétnak,dzsungel,NA,NA
+152,zábény,zábény,nak,é,Ez itt egy zábény.,Elneveztem a kutyámat...,zábénynek,zábénynak,dzsungel,NA,NA
+153,kábesz,kábesz,nál,e,Ez itt egy kábesz.,Nincs is jobb egy jó...,kábesznél,kábesznál,dzsungel,NA,NA
+154,klosét,klosét,nak,é,Ez itt egy klosét.,Elneveztem a kutyámat...,klosétnek,klosétnak,dzsungel,NA,NA
+155,trincseg,trincseg,ban,e,Ez itt egy trincseg.,Ott vagyunk a...,trincsegben,trincsegban,dzsungel,NA,NA
+156,murdes,murdes,nál,e,Ez itt egy murdes.,Nincs is jobb egy jó...,murdesnél,murdesnál,dzsungel,NA,NA
+157,bupéz,bupéz,ban,é,Ez itt egy bupéz.,Ott vagyunk a...,bupézben,bupézban,dzsungel,NA,NA
+158,fizend,fizend,ban,e,Ez itt egy fizend.,Ott vagyunk a...,fizendben,fizendban,dzsungel,NA,NA
+159,vurnel,vurnel,nak,e,Ez itt egy vurnel.,Elneveztem a kutyámat...,vurnelnek,vurnelnak,dzsungel,NA,NA
+160,briskéd,briskéd,nál,é,Ez itt egy briskéd.,Nincs is jobb egy jó...,briskédnél,briskédnál,dzsungel,NA,NA
+161,nyupér,nyupér,nál,é,Ez itt egy nyupér.,Nincs is jobb egy jó...,nyupérnél,nyupérnál,dzsungel,NA,NA
+162,brotes,brotes,ban,e,Ez itt egy brotes.,Ott vagyunk a...,brotesben,brotesban,dzsungel,NA,NA
+109,sűzlik,sűzlesz,NA,NA,Te bizony sokat sűzlesz.,Én is sokat...,sűzlök,sűzlöm,lakik,-lik,1
+110,brüjlik,brüjlesz,NA,NA,Te bizony sokat brüjlesz.,Én is sokat...,brüjlök,brüjlöm,lakik,-lik,1
+111,spülöklik,spülöklesz,NA,NA,Te bizony sokat spülöklesz.,Én is sokat...,spülöklök,spülöklöm,lakik,-lik,2
+112,gyibakszik,gyibakszol,NA,NA,Te bizony sokat gyibakszol.,Én is sokat...,gyibakszok,gyibakszom,lakik,-szik,2
+113,tínylik,tínylasz,NA,NA,Te bizony sokat tínylasz.,Én is sokat...,tínylok,tínylom,lakik,-lik,1
+114,vihepszik,vihepszel,NA,NA,Te bizony sokat vihepszel.,Én is sokat...,vihepszek,vihepszem,lakik,-szik,2
+115,klétszik,klétszel,NA,NA,Te bizony sokat klétszel.,Én is sokat...,klétszek,klétszem,lakik,-szik,1
+116,narjárzik,narjárzol,NA,NA,Te bizony sokat narjárzol.,Én is sokat...,narjárzok,narjárzom,lakik,-zik,2
+117,klivaslik,klivaslasz,NA,NA,Te bizony sokat klivaslasz.,Én is sokat...,klivaslok,klivaslom,lakik,-lik,2
+118,drubódzik,drubódzol,NA,NA,Te bizony sokat drubódzol.,Én is sokat...,drubódzok,drubódzom,lakik,-zik,2
+119,spírzik,spírzol,NA,NA,Te bizony sokat spírzol.,Én is sokat...,spírzok,spírzom,lakik,-zik,1
+120,sprálszik,sprálszol,NA,NA,Te bizony sokat sprálszol.,Én is sokat...,sprálszok,sprálszom,lakik,-szik,1
+121,fretszik,fretszel,NA,NA,Te bizony sokat fretszel.,Én is sokat...,fretszek,fretszem,lakik,-szik,1
+122,sztruglik,sztruglasz,NA,NA,Te bizony sokat sztruglasz.,Én is sokat...,sztruglok,sztruglom,lakik,-lik,1
+123,sztrijzik,sztrijzol,NA,NA,Te bizony sokat sztrijzol.,Én is sokat...,sztrijzok,sztrijzom,lakik,-zik,1
+124,spülőrzik,spülőrzöl,NA,NA,Te bizony sokat spülőrzöl.,Én is sokat...,spülőrzök,spülőrzöm,lakik,-zik,2
+125,rájzik,rájzol,NA,NA,Te bizony sokat rájzol.,Én is sokat...,rájzok,rájzom,lakik,-zik,1
+126,mékszik,mékszel,NA,NA,Te bizony sokat mékszel.,Én is sokat...,mékszek,mékszem,lakik,-szik,1
+127,frilegszik,frilegszel,NA,NA,Te bizony sokat frilegszel.,Én is sokat...,frilegszek,frilegszem,lakik,-szik,2
+128,bivejlik,bivejlesz,NA,NA,Te bizony sokat bivejlesz.,Én is sokat...,bivejlek,bivejlem,lakik,-lik,2
+129,plágadzik,plágadzol,NA,NA,Te bizony sokat plágadzol.,Én is sokat...,plágadzok,plágadzom,lakik,-zik,2
+130,prűrlik,prűrlesz,NA,NA,Te bizony sokat prűrlesz.,Én is sokat...,prűrlök,prűrlöm,lakik,-lik,1
+131,pribagszik,pribagszol,NA,NA,Te bizony sokat pribagszol.,Én is sokat...,pribagszok,pribagszom,lakik,-szik,2
+132,sztrűkszik,sztrűkszöl,NA,NA,Te bizony sokat sztrűkszöl.,Én is sokat...,sztrűkszök,sztrűkszöm,lakik,-szik,1
+133,frivajlik,frivajlasz,NA,NA,Te bizony sokat frivajlasz.,Én is sokat...,frivajlok,frivajlom,lakik,-lik,2
+134,táklik,táklasz,NA,NA,Te bizony sokat táklasz.,Én is sokat...,táklok,táklom,lakik,-lik,1
+135,böjzik,böjzöl,NA,NA,Te bizony sokat böjzöl.,Én is sokat...,böjzök,böjzöm,lakik,-zik,1
+136,treglik,treglesz,NA,NA,Te bizony sokat treglesz.,Én is sokat...,treglek,treglem,lakik,-lik,1
+137,bűtszik,bűtszöl,NA,NA,Te bizony sokat bűtszöl.,Én is sokat...,bűtszök,bűtszöm,lakik,-szik,1
+138,piragszik,piragszol,NA,NA,Te bizony sokat piragszol.,Én is sokat...,piragszok,piragszom,lakik,-szik,2
+139,tuboklik,tuboklasz,NA,NA,Te bizony sokat tuboklasz.,Én is sokat...,tuboklok,tuboklom,lakik,-lik,2
+140,klárzik,klárzol,NA,NA,Te bizony sokat klárzol.,Én is sokat...,klárzok,klárzom,lakik,-zik,1
+141,trehégszik,trehégszel,NA,NA,Te bizony sokat trehégszel.,Én is sokat...,trehégszek,trehégszem,lakik,-szik,2
+142,prezlik,prezlesz,NA,NA,Te bizony sokat prezlesz.,Én is sokat...,prezlek,prezlem,lakik,-lik,1
+143,sprökszik,sprökszöl,NA,NA,Te bizony sokat sprökszöl.,Én is sokat...,sprökszök,sprökszöm,lakik,-szik,1
+144,bihánylik,bihánylasz,NA,NA,Te bizony sokat bihánylasz.,Én is sokat...,bihánylok,bihánylom,lakik,-lik,2
+145,spröbzik,spröbzöl,NA,NA,Te bizony sokat spröbzöl.,Én is sokat...,spröbzök,spröbzöm,lakik,-zik,1
+146,féjzik,féjzel,NA,NA,Te bizony sokat féjzel.,Én is sokat...,féjzek,féjzem,lakik,-zik,1
+147,klibamlik,klibamlasz,NA,NA,Te bizony sokat klibamlasz.,Én is sokat...,klibamlok,klibamlom,lakik,-lik,2
+148,siladzik,siladzol,NA,NA,Te bizony sokat siladzol.,Én is sokat...,siladzok,siladzom,lakik,-zik,2
+149,vűjlik,vűjlesz,NA,NA,Te bizony sokat vűjlesz.,Én is sokat...,vűjlök,vűjlöm,lakik,-lik,1
+150,ibékszik,ibékszel,NA,NA,Te bizony sokat ibékszel.,Én is sokat...,ibékszek,ibékszem,lakik,-szik,2
+151,spüszlik,spüszlesz,NA,NA,Te bizony sokat spüszlesz.,Én is sokat...,spüszlök,spüszlöm,lakik,-lik,1
+152,düjzik,düjzöl,NA,NA,Te bizony sokat düjzöl.,Én is sokat...,düjzök,düjzöm,lakik,-zik,1
+153,fliraklik,fliraklasz,NA,NA,Te bizony sokat fliraklasz.,Én is sokat...,fliraklok,fliraklom,lakik,-lik,2
+154,gerénylik,gerénylesz,NA,NA,Te bizony sokat gerénylesz.,Én is sokat...,gerénylek,gerénylem,lakik,-lik,2
+155,nyáslik,nyáslasz,NA,NA,Te bizony sokat nyáslasz.,Én is sokat...,nyáslok,nyáslom,lakik,-lik,1
+156,büglik,büglesz,NA,NA,Te bizony sokat büglesz.,Én is sokat...,büglök,büglöm,lakik,-lik,1
+157,prínylik,prínylasz,NA,NA,Te bizony sokat prínylasz.,Én is sokat...,prínylok,prínylom,lakik,-lik,1
+158,trilszik,trilszol,NA,NA,Te bizony sokat trilszol.,Én is sokat...,trilszok,trilszom,lakik,-szik,1
+159,sztrozlik,sztrozlasz,NA,NA,Te bizony sokat sztrozlasz.,Én is sokat...,sztrozlok,sztrozlom,lakik,-lik,1
+160,trádlik,trádlasz,NA,NA,Te bizony sokat trádlasz.,Én is sokat...,trádlok,trádlom,lakik,-lik,1
+161,zödlik,zödlesz,NA,NA,Te bizony sokat zödlesz.,Én is sokat...,zödlök,zödlöm,lakik,-lik,1
+162,hűgzik,hűgzöl,NA,NA,Te bizony sokat hűgzöl.,Én is sokat...,hűgzök,hűgzöm,lakik,-zik,1
+109,bratárzik / bratározik,"bratárzik, bratározni",nek,NA,"János imád bratározni, ezért sokat bratárzik.",Ők ritkán...,bratárzanak,bratároznak,cselekszik,-zik,2
+110,trugoklik / trugokozik,"trugoklik, trugokozni",nek,NA,"János imád trugokozni, ezért sokat trugoklik.",Ők ritkán...,trugoklanak,trugokoznak,cselekszik,-lik,2
+111,brürzik / brürözik,"brürzik, brürözni",nek,NA,"János imád brürözni, ezért sokat brürzik.",Ők ritkán...,brürzenek,brüröznek,cselekszik,-zik,1
+112,flugonylik / flugonyozik,"flugonylik, flugonyozni",nek,NA,"János imád flugonyozni, ezért sokat flugonylik.",Ők ritkán...,flugonylanak,flugonyoznak,cselekszik,-lik,2
+113,drivegzik / drivegezik,"drivegzik, drivegezni",tek,NA,"János imád drivegezni, ezért sokat drivegzik.",Ti ritkán...,drivegzetek,drivegeztek,cselekszik,-zik,2
+114,brivepszik / brivepedik,"brivepszik, brivepedni",ünk,NA,"János imád brivepedni, ezért sokat brivepszik.",Mi ritkán...,brivepszünk,brivepedünk,cselekszik,-szik,2
+115,klarágzik / klarágozik,"klarágzik, klarágozni",tek,NA,"János imád klarágozni, ezért sokat klarágzik.",Ti ritkán...,klarágzotok,klarágoztok,cselekszik,-zik,2
+116,gibemlik / gibemezik,"gibemlik, gibemezni",ünk,NA,"János imád gibemezni, ezért sokat gibemlik.",Mi ritkán...,gibemlünk,gibemezünk,cselekszik,-lik,2
+117,trálaklik / trálakozik,"trálaklik, trálakozni",nek,NA,"János imád trálakozni, ezért sokat trálaklik.",Ők ritkán...,trálaklanak,trálakoznak,cselekszik,-lik,2
+118,vehékszik / vehékedik,"vehékszik, vehékedni",ünk,NA,"János imád vehékedni, ezért sokat vehékszik.",Mi ritkán...,vehékszünk,vehékedünk,cselekszik,-szik,2
+119,trivakszik / trivakodik,"trivakszik, trivakodni",ünk,NA,"János imád trivakodni, ezért sokat trivakszik.",Mi ritkán...,trivakszunk,trivakodunk,cselekszik,-szik,2
+120,trűnylik / trűnyözik,"trűnylik, trűnyözni",nek,NA,"János imád trűnyözni, ezért sokat trűnylik.",Ők ritkán...,trűnylenek,trűnyöznek,cselekszik,-lik,1
+121,mülőrzik / mülőrözik,"mülőrzik, mülőrözni",ünk,NA,"János imád mülőrözni, ezért sokat mülőrzik.",Mi ritkán...,mülőrzünk,mülőrözünk,cselekszik,-zik,2
+122,flöklik / flöközik,"flöklik, flöközni",tek,NA,"János imád flöközni, ezért sokat flöklik.",Ti ritkán...,flöklötök,flököztök,cselekszik,-lik,1
+123,kléglik / klégezik,"kléglik, klégezni",ünk,NA,"János imád klégezni, ezért sokat kléglik.",Mi ritkán...,kléglünk,klégezünk,cselekszik,-lik,1
+124,kláragszik / kláragodik,"kláragszik, kláragodni",tek,NA,"János imád kláragodni, ezért sokat kláragszik.",Ti ritkán...,kláragszotok,kláragodtok,cselekszik,-szik,2
+125,brilegzik / brilegezik,"brilegzik, brilegezni",ünk,NA,"János imád brilegezni, ezért sokat brilegzik.",Mi ritkán...,brilegzünk,brilegezünk,cselekszik,-zik,2
+126,virzik / virozik,"virzik, virozni",nek,NA,"János imád virozni, ezért sokat virzik.",Ők ritkán...,virzanak,viroznak,cselekszik,-zik,1
+127,brárlik / brározik,"brárlik, brározni",nek,NA,"János imád brározni, ezért sokat brárlik.",Ők ritkán...,brárlanak,brároznak,cselekszik,-lik,1
+128,pibegzik / pibegezik,"pibegzik, pibegezni",nek,NA,"János imád pibegezni, ezért sokat pibegzik.",Ők ritkán...,pibegzenek,pibegeznek,cselekszik,-zik,2
+129,sűjlik / sűjözik,"sűjlik, sűjözni",ünk,NA,"János imád sűjözni, ezért sokat sűjlik.",Mi ritkán...,sűjlünk,sűjözünk,cselekszik,-lik,1
+130,döjlik / döjözik,"döjlik, döjözni",nek,NA,"János imád döjözni, ezért sokat döjlik.",Ők ritkán...,döjlenek,döjöznek,cselekszik,-lik,1
+131,trálszik / trálodik,"trálszik, trálodni",ünk,NA,"János imád trálodni, ezért sokat trálszik.",Mi ritkán...,trálszunk,trálodunk,cselekszik,-szik,1
+132,drilarzik / drilarozik,"drilarzik, drilarozni",ünk,NA,"János imád drilarozni, ezért sokat drilarzik.",Mi ritkán...,drilarzunk,drilarozunk,cselekszik,-zik,2
+133,flátlik / flátozik,"flátlik, flátozni",tek,NA,"János imád flátozni, ezért sokat flátlik.",Ti ritkán...,flátlotok,flátoztok,cselekszik,-lik,1
+134,pragánylik / pragányozik,"pragánylik, pragányozni",tek,NA,"János imád pragányozni, ezért sokat pragánylik.",Ti ritkán...,pragánylotok,pragányoztok,cselekszik,-lik,2
+135,filánylik / filányozik,"filánylik, filányozni",ünk,NA,"János imád filányozni, ezért sokat filánylik.",Mi ritkán...,filánylunk,filányozunk,cselekszik,-lik,2
+136,spiráglik / spirágozik,"spiráglik, spirágozni",tek,NA,"János imád spirágozni, ezért sokat spiráglik.",Ti ritkán...,spiráglotok,spirágoztok,cselekszik,-lik,2
+137,lűklik / lűközik,"lűklik, lűközni",nek,NA,"János imád lűközni, ezért sokat lűklik.",Ők ritkán...,lűklenek,lűköznek,cselekszik,-lik,1
+138,spalárzik / spalározik,"spalárzik, spalározni",nek,NA,"János imád spalározni, ezért sokat spalárzik.",Ők ritkán...,spalárzanak,spalároznak,cselekszik,-zik,2
+139,briváglik / brivágozik,"briváglik, brivágozni",nek,NA,"János imád brivágozni, ezért sokat briváglik.",Ők ritkán...,briváglanak,brivágoznak,cselekszik,-lik,2
+140,vileslik / vilesezik,"vileslik, vilesezni",ünk,NA,"János imád vilesezni, ezért sokat vileslik.",Mi ritkán...,vileslünk,vilesezünk,cselekszik,-lik,2
+141,mágamlik / mágamozik,"mágamlik, mágamozni",ünk,NA,"János imád mágamozni, ezért sokat mágamlik.",Mi ritkán...,mágamlunk,mágamozunk,cselekszik,-lik,2
+142,ribegszik / ribegedik,"ribegszik, ribegedni",tek,NA,"János imád ribegedni, ezért sokat ribegszik.",Ti ritkán...,ribegszetek,ribegedtek,cselekszik,-szik,2
+143,spibamlik / spibamozik,"spibamlik, spibamozni",nek,NA,"János imád spibamozni, ezért sokat spibamlik.",Ők ritkán...,spibamlanak,spibamoznak,cselekszik,-lik,2
+144,tűgzik / tűgözik,"tűgzik, tűgözni",tek,NA,"János imád tűgözni, ezért sokat tűgzik.",Ti ritkán...,tűgzötök,tűgöztök,cselekszik,-zik,1
+145,brálamlik / brálamozik,"brálamlik, brálamozni",nek,NA,"János imád brálamozni, ezért sokat brálamlik.",Ők ritkán...,brálamlanak,brálamoznak,cselekszik,-lik,2
+146,sztredlik / sztredezik,"sztredlik, sztredezni",tek,NA,"János imád sztredezni, ezért sokat sztredlik.",Ti ritkán...,sztredletek,sztredeztek,cselekszik,-lik,1
+147,nivárzik / nivározik,"nivárzik, nivározni",tek,NA,"János imád nivározni, ezért sokat nivárzik.",Ti ritkán...,nivárzotok,nivároztok,cselekszik,-zik,2
+148,sprozlik / sprozozik,"sprozlik, sprozozni",nek,NA,"János imád sprozozni, ezért sokat sprozlik.",Ők ritkán...,sprozlanak,sprozoznak,cselekszik,-lik,1
+149,dirlik / dirozik,"dirlik, dirozni",tek,NA,"János imád dirozni, ezért sokat dirlik.",Ti ritkán...,dirlotok,diroztok,cselekszik,-lik,1
+150,lumlik / lumozik,"lumlik, lumozni",tek,NA,"János imád lumozni, ezért sokat lumlik.",Ti ritkán...,lumlotok,lumoztok,cselekszik,-lik,1
+151,frálapszik / frálapodik,"frálapszik, frálapodni",tek,NA,"János imád frálapodni, ezért sokat frálapszik.",Ti ritkán...,frálapszotok,frálapodtok,cselekszik,-szik,2
+152,pehégszik / pehégedik,"pehégszik, pehégedni",tek,NA,"János imád pehégedni, ezért sokat pehégszik.",Ti ritkán...,pehégszetek,pehégedtek,cselekszik,-szik,2
+153,nágapszik / nágapodik,"nágapszik, nágapodni",nek,NA,"János imád nágapodni, ezért sokat nágapszik.",Ők ritkán...,nágapszanak,nágapodnak,cselekszik,-szik,2
+154,brűklik / brűközik,"brűklik, brűközni",tek,NA,"János imád brűközni, ezért sokat brűklik.",Ti ritkán...,brűklötök,brűköztök,cselekszik,-lik,1
+155,sztritlik / sztritozik,"sztritlik, sztritozni",nek,NA,"János imád sztritozni, ezért sokat sztritlik.",Ők ritkán...,sztritlanak,sztritoznak,cselekszik,-lik,1
+156,tibarzik / tibarozik,"tibarzik, tibarozni",nek,NA,"János imád tibarozni, ezért sokat tibarzik.",Ők ritkán...,tibarzanak,tibaroznak,cselekszik,-zik,2
+157,dralágzik / dralágozik,"dralágzik, dralágozni",ünk,NA,"János imád dralágozni, ezért sokat dralágzik.",Mi ritkán...,dralágzunk,dralágozunk,cselekszik,-zik,2
+158,trilekszik / trilekedik,"trilekszik, trilekedni",tek,NA,"János imád trilekedni, ezért sokat trilekszik.",Ti ritkán...,trilekszetek,trilekedtek,cselekszik,-szik,2
+159,vobzik / vobozik,"vobzik, vobozni",tek,NA,"János imád vobozni, ezért sokat vobzik.",Ti ritkán...,vobzotok,voboztok,cselekszik,-zik,1
+160,lájzik / lájozik,"lájzik, lájozni",tek,NA,"János imád lájozni, ezért sokat lájzik.",Ti ritkán...,lájzotok,lájoztok,cselekszik,-zik,1
+161,triklik / trikozik,"triklik, trikozni",tek,NA,"János imád trikozni, ezért sokat triklik.",Ti ritkán...,triklotok,trikoztok,cselekszik,-lik,1
+162,spuborzik / spuborozik,"spuborzik, spuborozni",nek,NA,"János imád spuborozni, ezért sokat spuborzik.",Ők ritkán...,spuborzanak,spuboroznak,cselekszik,-zik,2
