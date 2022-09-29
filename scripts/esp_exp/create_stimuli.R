@@ -1,150 +1,95 @@
-# creating lists for the esp experiment
-
-setwd('~/Github/Racz2024/')
+# create stimuli for the hesp experiment
 
 library(tidyverse)
-library(magrittr)
-library(glue)
 library(ggthemes)
-library(patchwork)
-library(jsonlite)
 
-addRanks = function(dat){
+set.seed(1337)
+
+# -- fun -- #
+
+buildMaster = function(dat){
   dat %>% 
-    select(-vowel,-type) %>% 
-    arrange(log_odds) %>% 
+    mutate(prompt = glue('{carrier_sentence} {target_sentence}')) %>% 
+    select(base,log_odds,variation,prompt,variant1,variant2,nsyl,suffix) %>% 
+    arrange(-log_odds) %>%
     mutate(
-      list = c(rep(c(1:3),54))
+      list_number = rep(1:3,54),
+      word_rank = sort(rep(1:54,3)),
+      top_20 = word_rank %in% 1:15,
+      bottom_20 = word_rank %in% 40:54
     ) %>% 
-    group_by(list) %>% 
-    mutate(
-      rank = 1:54
+    crossing(
+      reg_rate = c('low','high'),
+      reg_dist = c('typical','reversed'),
     ) %>% 
-    ungroup()
-}
-
-# 39:15
-
-vizDat = function(dat,regrate){
-  dat %>% 
+    rowwise() %>% 
     mutate(
-      group = case_when(
-        regrate == 'high' & rank %in% 1:39 ~ 'lower',
-        regrate == 'high' & rank %in% 40:54 ~ 'upper',
-        regrate == 'low' & rank %in% 1:15 ~ 'lower',
-        regrate == 'low' & rank %in% 16:54 ~ 'upper',
-        regrate == 'nc' & rank %in% 1:27 ~ 'lower',
-        regrate == 'nc' & rank %in% 28:54 ~ 'upper'
-      )
-    ) %>% 
-    mutate(base = fct_reorder(base, log_odds)) %>% 
-    ggplot(aes(base,plogis(log_odds),label = base, colour = group)) +
-    geom_label() +
-    theme_few() +
-    scale_y_continuous(breaks = seq(0,1,.1), limits = c(0,1)) +
-    facet_wrap(~ list) +
-    guides(group = 'none')
-}
-
-setFlags = function(regrate,regdist,dat){
-  dat %>% 
-    mutate(
-      lower_upper = case_when(
-        regrate == 'high39' & rank %in% 1:39 ~ 'lower',
-        regrate == 'low15' & rank %in% 1:15 ~ 'lower',
-        regrate == 'nc27' & rank %in% 1:27 ~ 'lower',
-        regrate == 'high39' & rank %in% 40:54 ~ 'upper',
-        regrate == 'low15' & rank %in% 16:54 ~ 'upper',
-        regrate == 'nc27' & rank %in% 28:54 ~ 'upper'
+      # high, typ: !bottom_20, var1. 
+      #bottom_20, var2
+      # low, typ: top_20, var1. 
+      #!top_20, var2
+      # high, rev: !bottom_20,var2. 
+      #bottom_20,var1
+      # low, rev: top_20, var2. 
+      #!top_20 var1
+      esp_response = case_when(
+        reg_rate == 'high' & reg_dist == 'typical' & !bottom_20 ~ variant1,
+        reg_rate == 'high' & reg_dist == 'typical' & bottom_20 ~ variant2,
+        reg_rate == 'low' & reg_dist == 'typical' & top_20 ~ variant1,
+        reg_rate == 'low' & reg_dist == 'typical' & !top_20 ~ variant2,
+        reg_rate == 'high' & reg_dist == 'reversed' & bottom_20 ~ variant1,
+        reg_rate == 'high' & reg_dist == 'reversed' & !bottom_20 ~ variant2,
+        reg_rate == 'low' & reg_dist == 'reversed' & !top_20 ~ variant1,
+        reg_rate == 'low' & reg_dist == 'reversed' & top_20 ~ variant2
       ),
-      pick = case_when(
-        lower_upper == 'upper' & regdist == 'typical' ~ 'variant1',
-        lower_upper == 'lower' & regdist == 'reversed' ~ 'variant1',
-        lower_upper == 'lower' & regdist == 'typical' ~ 'variant2',
-        lower_upper == 'upper' & regdist == 'reversed' ~ 'variant2'
-      )
+      target_words = list(c(variant1,variant2))
     )
 }
 
-# target_word: 'weave', response_words: ['weaved','wove'], esp_response: 'wove'
+checkBuild = function(dat,list_number){
+  dat %>% 
+    filter(list_number == list_number) %>% 
+    mutate(
+      word_quantile = case_when(
+        word_rank %in% 1:15 ~ 'top',
+        word_rank %in% 16:39 ~ 'middle',
+        word_rank %in% 40:54 ~ 'bottom'
+      )
+    ) %>% 
+    ggplot(aes(word_rank,log_odds,label = esp_response, colour = word_quantile)) +
+    geom_text() +
+    facet_wrap( ~ reg_rate + reg_dist, ncol = 2) +
+    theme_classic()
+}
+
+# -- dat -- #
 
 s = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')
 cvc = filter(s, variation == 'cselekszenek/cselekednek')
 ik = filter(s, variation == 'lakok/lakom')
 
-ik = addRanks(ik)
-cvc = addRanks(cvc)
+# -- build list -- #
 
-esp_master = crossing(
-  regrate = c('low15','high39','nc27'),
-  regdist = c('typical','reversed'),
-  data = list(ik,cvc)
-) %>% 
-  mutate(
-    t_data = pmap(list(regrate,regdist,data), ~ setFlags(..1,..2,..3))
-  ) %>% 
-  select(-data) %>% 
-  unnest(cols = t_data) %>% 
-  mutate(
-    target_word = base,
-    response_words = list(c(variant1,variant2)),
-    esp_response = case_when(
-      pick == 'variant1' ~ variant1,
-      pick == 'variant2' ~ variant2
-    ),
-    var_name = str_extract(variation, '^.*(?=\\/)'),
-    file_name = glue('type_{var_name}_rate_{regrate}_dist_{regdist}_list_{list}')
-  ) %>% 
-  arrange(var_name,regrate,regdist,list)
+ik_m = buildMaster(ik)
+cvc_m = buildMaster(cvc)
 
-# check this
+master = bind_rows(ik_m,cvc_m) %>%
+  mutate(file_name = glue('{str_extract(variation, "^.*(?=/)")}_{list_number}_{reg_rate}_{reg_dist}'))
+  
 
-plots = esp_master %>% 
-  group_by(file_name) %>% 
-  mutate(base = fct_reorder(base,log_odds)) %>% 
-  nest() %>% 
-  mutate(
-    plot = map2(data,file_name, ~ ggplot(.x,
-                              aes(rank,log_odds,colour = lower_upper,label = esp_response)
-                              ) +
-                 geom_text() +
-                 theme_few() +
-                 ggtitle(glue('{.y}'))
-               )
-  ) %>% 
-  pull(plot)
+# -- write out -- #
 
-# for (i in 1:36){
-#   ggsave(plots[[i]], filename = glue('whatever/file{i}.png'), width = 8, height = 8)
-# }
+# tsv
 
-# write master
+master %>% 
+  select(-target_words) %>% 
+  write_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
 
-write_tsv(esp_master, 'resource/exp_input_files/esp/esp_master_input.tsv')
+# json
 
-# write json
-
-# toy examples
-
-
-# I'm here:
-esp_master %>% 
-  filter(list == 1) %>% 
-  mutate(weight = case_when(
-    regrate == 'high39' ~ .6,
-    regrate == 'low15' ~ .4,
-    regrate == 'nc27' ~ .5
-  )
-           ) %>%
-  group_by(regrate,regdist,var_name) %>% 
-  sample_n(6, weight = weight)
-
-esp_master %>% 
-  filter(file_name == 'type_lakok_rate_low15_dist_typical_list_3') %>% 
-  write_json(path = 'resource/exp_input_files/esp/toy.json')
-
-esp_master %>% 
-  group_by(file_name) %>% 
-  nest() %>% 
-  map2(data, ~ write_json(glue('resource/exp_input_files/esp/')))
+master %>% 
+  select(file_name,word_rank,reg_rate,reg_dist,variation,prompt,target_words,esp_response) %>% 
+  arrange(file_name,word_rank) %>% 
+  nest(-file_name) %>% 
+  pwalk(~ write_json(x = .y, path = glue('resource/exp_input_files/esp/jsons/{.x}.json')) )
   
