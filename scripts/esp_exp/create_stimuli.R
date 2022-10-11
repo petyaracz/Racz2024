@@ -1,7 +1,10 @@
 # create stimuli for the hesp experiment
-
+setwd('~/Github/Racz2024')
 library(tidyverse)
+library(magrittr)
 library(ggthemes)
+library(glue)
+library(jsonlite)
 
 set.seed(1337)
 
@@ -13,7 +16,7 @@ buildMaster = function(dat){
     select(base,log_odds,variation,prompt,variant1,variant2,nsyl,suffix) %>% 
     arrange(-log_odds) %>%
     mutate(
-      list_number = rep(1:3,54),
+      sample_number = rep(1:3,54),
       word_rank = sort(rep(1:54,3)),
       top_20 = word_rank %in% 1:15,
       bottom_20 = word_rank %in% 40:54
@@ -24,31 +27,27 @@ buildMaster = function(dat){
     ) %>% 
     rowwise() %>% 
     mutate(
-      # high, typ: !bottom_20, var1. 
-      #bottom_20, var2
-      # low, typ: top_20, var1. 
-      #!top_20, var2
-      # high, rev: !bottom_20,var2. 
-      #bottom_20,var1
-      # low, rev: top_20, var2. 
-      #!top_20 var1
+      # high typ: bottom 20 is variant2, rest is variant1
+      # low typ: top 20 is variant1, rest is variant2
+      # high rev: top 20 is variant2, rest is variant1
+      # low rev: bottom 20 is variant1, rest is variant1
       esp_response = case_when(
-        reg_rate == 'high' & reg_dist == 'typical' & !bottom_20 ~ variant1,
         reg_rate == 'high' & reg_dist == 'typical' & bottom_20 ~ variant2,
+        reg_rate == 'high' & reg_dist == 'typical' & !bottom_20 ~ variant1,
         reg_rate == 'low' & reg_dist == 'typical' & top_20 ~ variant1,
         reg_rate == 'low' & reg_dist == 'typical' & !top_20 ~ variant2,
-        reg_rate == 'high' & reg_dist == 'reversed' & bottom_20 ~ variant1,
-        reg_rate == 'high' & reg_dist == 'reversed' & !bottom_20 ~ variant2,
-        reg_rate == 'low' & reg_dist == 'reversed' & !top_20 ~ variant1,
-        reg_rate == 'low' & reg_dist == 'reversed' & top_20 ~ variant2
+        reg_rate == 'high' & reg_dist == 'reversed' & top_20 ~ variant2,
+        reg_rate == 'high' & reg_dist == 'reversed' & !top_20 ~ variant1,
+        reg_rate == 'low' & reg_dist == 'reversed' & bottom_20 ~ variant1,
+        reg_rate == 'low' & reg_dist == 'reversed' & !bottom_20 ~ variant2
       ),
       target_words = list(c(variant1,variant2))
     )
 }
 
-checkBuild = function(dat,list_number){
+checkBuild = function(dat,sample_number){
   dat %>% 
-    filter(list_number == list_number) %>% 
+    filter(sample_number == sample_number) %>% 
     mutate(
       word_quantile = case_when(
         word_rank %in% 1:15 ~ 'top',
@@ -74,8 +73,19 @@ ik_m = buildMaster(ik)
 cvc_m = buildMaster(cvc)
 
 master = bind_rows(ik_m,cvc_m) %>%
-  mutate(file_name = glue('{str_extract(variation, "^.*(?=/)")}_{list_number}_{reg_rate}_{reg_dist}'))
+  mutate(file_name = glue('{str_extract(variation, "^.*(?=/)")}_{sample_number}_{reg_rate}_{reg_dist}'))
   
+# -- order, thin -- #
+
+master %<>% 
+  ungroup() %>% 
+  arrange(file_name,word_rank) %>% 
+  distinct(file_name,variation) %>% 
+  mutate(column = 1:24) %>% 
+  group_by(variation) %>% 
+  mutate(list_number = 0:11) %>% 
+  ungroup() %>% 
+  left_join(master, by = c("variation", "file_name"))
 
 # -- write out -- #
 
@@ -88,8 +98,7 @@ master %>%
 # json
 
 master %>% 
-  select(file_name,word_rank,reg_rate,reg_dist,variation,prompt,target_words,esp_response) %>% 
-  arrange(file_name,word_rank) %>% 
-  nest(-file_name) %>% 
+  select(column,file_name,list_number,word_rank,prompt,target_words,esp_response) %>% 
+  nest(-column) %>% 
   pwalk(~ write_json(x = .y, path = glue('resource/exp_input_files/esp/jsons/{.x}.json')) )
   

@@ -1,0 +1,2 @@
+figure out reg_rate + reg_dist in create_stimuli
+recreate exp gitlab, add lists, figure out repeat test
