@@ -41,7 +41,7 @@ procDat = function(dat){
       picked_v1 = response_string == variant1,
       esp_v1 = esp_response == variant1
     ) %>%
-    select(part_id,part_gender,part_yob,part_edu,list_number,trial_kind,trial_index,stimulus,choice1,choice2,variant1,variant2,response,response_string,picked_v1,picked_left,esp_response,esp_match,esp_v1,rt) %>% 
+    select(part_id,part_gender,part_yob,part_edu,list_number,trial_kind,trial_index,stimulus,choice1,choice2,variant1,variant2,response,response_string,picked_v1,picked_left,esp_response,esp_match,esp_v1,rt,time_elapsed) %>% 
     group_split(trial_kind)
   
   master2 = master %>% 
