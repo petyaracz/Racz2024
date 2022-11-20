@@ -1,10 +1,17 @@
+setwd('~/Github/Racz2024/')
 library(tidyverse)
 
 d = read_tsv('exp_data/esp/esp_master.tsv')
 
 d %>% 
-  distinct(part_id,reg_rate,reg_dist) %>% 
-  count(reg_rate,reg_dist)
+  filter(picked_left) %>% 
+  count(part_id,trial_kind) %>% 
+  filter(n > 40)
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>% 
+  distinct(part_id,list_number,reg_rate,reg_dist) %>% 
+  count(list_number,reg_rate,reg_dist)
 
 d %>% 
   filter(trial_kind %in% c('esp trial', 'posttest trial')) %>% 
