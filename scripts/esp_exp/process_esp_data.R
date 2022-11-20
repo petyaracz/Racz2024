@@ -104,6 +104,8 @@ d %<>% mutate(
   select(dat_id,proc) %>% 
   unnest(cols = c(proc))
 
+unique(d$dat_id)
+
 d %<>% filter(
   part_id != 'próba'
 )
