@@ -1,7 +1,7 @@
 # process hesp data
 setwd('~/Github/Racz2024')
 library(tidyverse)
-library(ggthemes)
+library(magrittr)
 library(glue)
 
 # -- fun -- #
@@ -68,21 +68,28 @@ master = read_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
 
 # -- dat -- #
 
-# dat_id = list.files('~/Github/Pavlovia/hesp/data/')
+dat_id = list.files('~/Github/Pavlovia/hesp/data/')
 # dat_id = dat_id[str_detect(dat_id, 'ESP-DEMO_SESSION_2022-10-06_2')]
-# path = '~/Github/Pavlovia/hesp/data/'
+path = '~/Github/Pavlovia/hesp/data/'
 # simulated data:
-dat_id = list.files('resource/simulated_hesp/')
-path = 'resource/simulated_hesp/'
+# dat_id = list.files('resource/simulated_hesp/')
+# path = 'resource/simulated_hesp/'
 
 d = tibble(
-    dat_id = dat_id
+    dat_id = dat_id,
+    record_date = str_extract(dat_id, '2022-[0-9]{2}-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% 
+      lubridate::ymd_hm()
   ) %>% 
   mutate(
-    data = map(dat_id, ~ read_csv(glue('{path}{.}')))
+    data = map(dat_id, ~ read_csv(glue('{path}{.}'))),
+    n_rows = map(data, ~ nrow(.))
     )
 
-# d$data[[1]] %>% View
+d %<>%
+  filter(
+    record_date > '2022-11-17',
+    n_rows == 176
+         )
 
 d %<>% mutate(
     proc = map(data, ~ procDat(.)),
@@ -90,6 +97,10 @@ d %<>% mutate(
   ) %>% 
   select(dat_id,proc) %>% 
   unnest(cols = c(proc))
+
+d %<>% filter(
+  part_id != 'próba'
+)
 
 write_tsv(d, 'exp_data/esp/esp_master.tsv')
 
