@@ -3,15 +3,12 @@ library(tidyverse)
 
 d = read_tsv('exp_data/esp/esp_master.tsv')
 
+# baj lesz
+
 d %>% 
   filter(picked_left) %>% 
   count(part_id,trial_kind) %>% 
   filter(n > 40)
-
-d %>% 
-  filter(trial_kind == 'esp trial') %>% 
-  distinct(part_id,list_number,reg_rate,reg_dist) %>% 
-  count(list_number,reg_rate,reg_dist)
 
 d %>% 
   filter(trial_kind %in% c('esp trial', 'posttest trial')) %>% 
@@ -20,6 +17,15 @@ d %>%
   ) %>% 
   filter(missing) %>% 
   count(part_id,trial_kind)
+
+# list counts
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>% 
+  distinct(part_id,list_number,reg_rate,reg_dist) %>% 
+  count(list_number,reg_rate,reg_dist)
+
+# esp
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%
@@ -35,11 +41,10 @@ d %>%
   summarise(match = mean(esp_match)) %>% 
   ggplot(aes(trial_index, match, colour = reg_dist)) +
   geom_jitter(width = .01, height = .05, alpha = .1) +
-  geom_smooth() +
+  geom_smooth(method = 'lm') +
   theme_bw() +
   facet_wrap( ~ reg_rate)
 
-# ??
 d %>% 
   filter(trial_kind == 'posttest trial') %>%
   group_by(part_id,reg_rate,reg_dist) %>% 
