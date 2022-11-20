@@ -15,7 +15,7 @@ d %>%
   mutate(
     missing = is.na(response_string)
   ) %>% 
-  filter(missing) %>% 
+  filter(!missing) %>% 
   count(part_id,trial_kind)
 
 # list counts
@@ -45,6 +45,8 @@ d %>%
   theme_bw() +
   facet_wrap( ~ reg_rate)
 
+# posttest
+
 d %>% 
   filter(trial_kind == 'posttest trial') %>%
   group_by(part_id,reg_rate,reg_dist) %>% 
@@ -52,3 +54,34 @@ d %>%
   ggplot(aes(reg_rate,picked_v1,fill = reg_dist)) +
   geom_boxplot() +
   theme_bw()
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  group_by(part_id,reg_rate,reg_dist) %>% 
+  summarise(esp_v1 = mean(esp_v1)) %>% 
+  ggplot(aes(reg_rate,esp_v1,fill = reg_dist)) +
+  geom_boxplot() +
+  theme_bw()
+
+# something something specific picks in esp?
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  ggplot(aes(trial_index,log_odds,colour = esp_v1)) +
+  geom_point() +
+  theme_bw() +
+  facet_wrap(~ reg_rate + reg_dist)
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  mutate(word = fct_reorder(base, log_odds)) %>% 
+  group_by(word,reg_rate,reg_dist) %>% 
+  summarise(
+    mean_part = mean(picked_v1),
+    mean_robot = mean(esp_v1)
+  ) %>% 
+  ggplot(aes(mean_part,mean_robot)) +
+  geom_jitter(width = .01, height = .05) +
+  geom_smooth() +
+  theme_bw() +
+  facet_wrap(~ reg_rate + reg_dist)
+
