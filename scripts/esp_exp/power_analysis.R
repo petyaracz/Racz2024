@@ -8,33 +8,33 @@ library(ggthemes)
 library(lme4)
 library(broom.mixed)
 
-# we go back to the experiment that sort of that a similar structure and look at variance across groups.
+# we go back to the experiment that sort of had a similar structure and look at variance across groups.
 
-d = read_csv('~/Github/RaczBecknerHayPierrehumbert2019/data/convergence_paper_esp_test2_predictions.txt')
+# d = read_csv('~/Github/RaczBecknerHayPierrehumbert2019/data/convergence_paper_esp_test2_predictions.txt')
 
-distros = d %>% 
-  filter(resp_post_reg == 1) %>% 
-  count(participant_id,lex_typicality,reg_rate, name = 'P')
+# distros = d %>% 
+  # filter(resp_post_reg == 1) %>% 
+  # count(participant_id,lex_typicality,reg_rate, name = 'P')
 
-distros %>%   
-  ggplot(aes(P)) +
-  geom_histogram() +
-  theme_few() +
-  facet_wrap( ~ reg_rate + lex_typicality )
+# distros %>%   
+  # ggplot(aes(P)) +
+  # geom_histogram() +
+  # theme_few() +
+  # facet_wrap( ~ reg_rate + lex_typicality )
 # sqrt[ n * P * ( 1 - P ) ].
 
 # whatever we'll just go with the normal distribution
-distros %>% 
-  group_by(reg_rate,lex_typicality) %>% 
-  summarise(
-    median = median(P),
-    n = n(),
-    mad = mad(P),
-    lower3 = median - 3 * mad,
-    upper3 = median + 3 * mad,
-    lower2.5 = median - 2.5 * mad,
-    upper2.5 = median + 2.5 * mad
-  )
+# distros %>% 
+#   group_by(reg_rate,lex_typicality) %>% 
+#   summarise(
+#     median = median(P),
+#     n = n(),
+#     mad = mad(P),
+#     lower3 = median - 3 * mad,
+#     upper3 = median + 3 * mad,
+#     lower2.5 = median - 2.5 * mad,
+#     upper2.5 = median + 2.5 * mad
+#   )
 
 # now we simulate something.
 
