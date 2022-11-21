@@ -11,6 +11,15 @@ d %>%
   filter(n > 40)
 
 d %>% 
+  mutate(
+    s_elapsed = time_elapsed / 1000
+  ) %>% 
+  ggplot(aes(trial_index,s_elapsed, colour = trial_kind)) +
+  geom_point() +
+  theme_bw() +
+  facet_wrap(~ part_id)
+
+d %>% 
   filter(trial_kind %in% c('esp trial', 'posttest trial')) %>% 
   mutate(
     missing = is.na(response_string)
@@ -39,7 +48,8 @@ d %>%
   ggplot(aes(trial_index, match)) +
   geom_jitter(width = .01, height = .05, alpha = .1) +
   geom_smooth(method = glm, method.args= list(family="binomial")) +
-  theme_bw()
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2)
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%
@@ -47,8 +57,9 @@ d %>%
   summarise(match = mean(esp_match)) %>% 
   ggplot(aes(trial_index, match)) +
   geom_jitter(width = .01, height = .05, alpha = .1) +
-  geom_smooth(method = 'lm') +
-  theme_bw()
+  geom_smooth() +
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2)
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%
@@ -56,9 +67,10 @@ d %>%
   summarise(match = mean(esp_match)) %>% 
   ggplot(aes(trial_index, match, colour = reg_dist)) +
   geom_jitter(width = .01, height = .05, alpha = .1) +
-  geom_smooth(method = 'lm') +
+  geom_smooth() +
   theme_bw() +
-  facet_wrap( ~ reg_rate)
+  facet_wrap( ~ reg_rate) +
+  geom_hline(yintercept = 0.5, lty = 2)
 
 # posttest
 
@@ -68,7 +80,18 @@ d %>%
   summarise(picked_v1 = mean(picked_v1)) %>% 
   ggplot(aes(reg_rate,picked_v1,fill = reg_dist)) +
   geom_boxplot() +
-  theme_bw()
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2)
+
+d %>% 
+  filter(trial_kind == 'posttest trial') %>%
+  group_by(part_id,reg_rate,reg_dist) %>% 
+  summarise(picked_v1 = mean(picked_v1)) %>% 
+  ggplot(aes(reg_dist,picked_v1,fill = reg_rate)) +
+  geom_boxplot() +
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2) +
+  geom_hline(yintercept = c(.278,.722), lty = 3)
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%
