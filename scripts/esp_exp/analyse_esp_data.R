@@ -15,10 +15,16 @@ d %>%
   mutate(
     missing = is.na(response_string)
   ) %>% 
-  filter(!missing) %>% 
+  filter(missing) %>% 
   count(part_id,trial_kind)
 
 # list counts
+
+# when a list hits 7 take it out since we want 3*7 participants for each list
+d %>% 
+  pull(part_id) %>% 
+  unique() %>% 
+  length()
 
 d %>% 
   filter(trial_kind == 'esp trial') %>% 
@@ -33,6 +39,15 @@ d %>%
   ggplot(aes(trial_index, match)) +
   geom_jitter(width = .01, height = .05, alpha = .1) +
   geom_smooth(method = glm, method.args= list(family="binomial")) +
+  theme_bw()
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  group_by(trial_index) %>% 
+  summarise(match = mean(esp_match)) %>% 
+  ggplot(aes(trial_index, match)) +
+  geom_jitter(width = .01, height = .05, alpha = .1) +
+  geom_smooth(method = 'lm') +
   theme_bw()
 
 d %>% 
@@ -67,6 +82,14 @@ d %>%
 d %>% 
   filter(trial_kind == 'esp trial') %>%
   ggplot(aes(trial_index,log_odds,colour = esp_v1)) +
+  geom_point() +
+  theme_bw() +
+  facet_wrap(~ reg_rate + reg_dist)
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  mutate(word = fct_reorder(base,log_odds)) %>% 
+  ggplot(aes(word,log_odds,colour = esp_v1)) +
   geom_point() +
   theme_bw() +
   facet_wrap(~ reg_rate + reg_dist)
