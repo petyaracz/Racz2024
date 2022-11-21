@@ -81,7 +81,8 @@ d %>%
   ggplot(aes(reg_rate,picked_v1,fill = reg_dist)) +
   geom_boxplot() +
   theme_bw() +
-  geom_hline(yintercept = 0.5, lty = 2)
+  geom_hline(yintercept = 0.5, lty = 2) +
+  geom_rug()
 
 d %>% 
   filter(trial_kind == 'posttest trial') %>%
@@ -91,7 +92,8 @@ d %>%
   geom_boxplot() +
   theme_bw() +
   geom_hline(yintercept = 0.5, lty = 2) +
-  geom_hline(yintercept = c(.278,.722), lty = 3)
+  geom_hline(yintercept = c(.278,.722), lty = 3) +
+  geom_rug()
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%

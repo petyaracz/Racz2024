@@ -105,6 +105,9 @@ d %<>% mutate(
   unnest(cols = c(proc))
 
 unique(d$dat_id)
+unique(d$part_id)
+# d[d$part_id == '' & d$part_gender == 'nő' & d$part_yob == 1997 & d$part_edu == 18,]$dat_id
+d[d$dat_id == "hungarian-esp_esp_participant_SESSION_2022-11-21_15h30.11.810.csv",]$part_id = 'DAG7T4'
 
 d %<>% filter(
   part_id != 'próba'
