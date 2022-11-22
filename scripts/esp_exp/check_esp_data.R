@@ -3,6 +3,7 @@ setwd('~/Github/Racz2024')
 library(tidyverse)
 library(ggthemes)
 library(glue)
+library(knitr)
 
 # -- in -- #
 
@@ -40,4 +41,40 @@ flag3 = d %>%
   any()
 
 if(all(flag1,flag2,flag3)){print('Checks completed successfully.')}else{print('Ruh-roh.')}
-  
+
+nmissing = d %>% 
+  mutate(
+    missing = is.na(response_string)
+  ) %>% 
+  filter(missing) %>% 
+  nrow()
+
+if(nmissing == 0){print('No data missing.')}else{print('Data are missing.')}
+
+ncareless = d %>% 
+  filter(picked_left) %>% 
+  count(part_id,trial_kind) %>% 
+  filter(n > 40) %>% 
+  nrow()
+
+if(ncareless == 0){print('No careless participants.')}else{print('Some participants were careless.')}
+
+# slow people
+
+nslow = d %>% 
+  group_by(part_id) %>%
+  slice(1,108) %>%
+  mutate(nt = 1:2) %>% 
+  select(part_id,nt,time_elapsed) %>% 
+  pivot_wider(id_cols=part_id, names_from = nt, values_from = time_elapsed) %>% 
+  mutate(m_elapsed = (`2`-`1`) / 1000 / 60) %>% 
+  filter(m_elapsed > 25) %>% 
+  nrow()
+
+if(nslow == 0){print('No participants over 25min.')}else{print('Some participants over 25min.')}
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>% 
+  distinct(part_id,list_number,reg_rate,reg_dist) %>% 
+  count(list_number,reg_rate,reg_dist) %>% 
+  kable(caption = 'List counts.')
