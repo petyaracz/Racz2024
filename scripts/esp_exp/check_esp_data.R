@@ -42,6 +42,8 @@ flag3 = d %>%
 
 if(all(flag1,flag2,flag3)){print('Checks completed successfully.')}else{print('Ruh-roh.')}
 
+# counts
+
 nmissing = d %>% 
   mutate(
     missing = is.na(response_string)
@@ -72,6 +74,15 @@ nslow = d %>%
   nrow()
 
 if(nslow == 0){print('No participants over 25min.')}else{print('Some participants over 25min.')}
+
+# totals
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>% 
+  distinct(part_id,list_number,reg_rate,reg_dist) %>% 
+  count(reg_rate,reg_dist) %>% 
+  kable(caption = 'Cond counts.')
+
 
 d %>% 
   filter(trial_kind == 'esp trial') %>% 
