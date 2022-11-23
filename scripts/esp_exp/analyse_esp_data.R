@@ -3,43 +3,6 @@ library(tidyverse)
 
 d = read_tsv('exp_data/esp/esp_master.tsv')
 
-# baj lesz
-
-d %>% 
-  filter(picked_left) %>% 
-  count(part_id,trial_kind) %>% 
-  filter(n > 40)
-
-d %>% 
-  mutate(
-    s_elapsed = time_elapsed / 1000
-  ) %>% 
-  ggplot(aes(trial_index,s_elapsed, colour = trial_kind)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~ part_id)
-
-d %>% 
-  filter(trial_kind %in% c('esp trial', 'posttest trial')) %>% 
-  mutate(
-    missing = is.na(response_string)
-  ) %>% 
-  filter(missing) %>% 
-  count(part_id,trial_kind)
-
-# list counts
-
-# when a list hits 7 take it out since we want 3*7 participants for each list
-d %>% 
-  pull(part_id) %>% 
-  unique() %>% 
-  length()
-
-d %>% 
-  filter(trial_kind == 'esp trial') %>% 
-  distinct(part_id,list_number,reg_rate,reg_dist) %>% 
-  count(list_number,reg_rate,reg_dist)
-
 # esp
 
 d %>% 
@@ -72,7 +35,37 @@ d %>%
   facet_wrap( ~ reg_rate) +
   geom_hline(yintercept = 0.5, lty = 2)
 
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  group_by(part_id,reg_rate) %>% 
+  summarise(match = mean(esp_match)) %>% 
+  ggplot(aes(reg_rate,match)) +
+  geom_boxplot() +
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2) +
+  geom_rug()
+
+d %>% 
+  filter(trial_kind == 'esp trial') %>%
+  group_by(part_id,reg_rate,reg_dist) %>% 
+  summarise(match = mean(esp_match)) %>% 
+  ggplot(aes(reg_rate,match, colour = reg_dist)) +
+  geom_boxplot() +
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2) +
+  geom_rug()
+
 # posttest
+
+d %>% 
+  filter(trial_kind == 'posttest trial') %>%
+  group_by(part_id,reg_rate) %>% 
+  summarise(picked_v1 = mean(picked_v1)) %>% 
+  ggplot(aes(reg_rate,picked_v1)) +
+  geom_boxplot() +
+  theme_bw() +
+  geom_hline(yintercept = 0.5, lty = 2) +
+  geom_rug()
 
 d %>% 
   filter(trial_kind == 'posttest trial') %>%
