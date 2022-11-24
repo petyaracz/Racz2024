@@ -1,5 +1,4 @@
-setwd('~/Github/Racz2024/')
-
+setwd('~/Github/Racz2024')
 library(googlesheets4)
 library(tidyverse)
 library(magrittr)
