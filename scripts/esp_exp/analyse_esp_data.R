@@ -30,7 +30,7 @@ d %>%
   summarise(match = mean(esp_match)) %>% 
   ggplot(aes(trial_index, match, colour = reg_dist)) +
   geom_jitter(width = .01, height = .05, alpha = .1) +
-  geom_smooth() +
+  geom_smooth(method = 'lm') +
   theme_bw() +
   facet_wrap( ~ reg_rate) +
   geom_hline(yintercept = 0.5, lty = 2)
