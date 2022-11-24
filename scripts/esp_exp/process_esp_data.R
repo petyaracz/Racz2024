@@ -50,11 +50,11 @@ procDat = function(dat){
   esp = exp_pair[[1]] %>% 
     inner_join(master, by = c("list_number", "variant1", "variant2", "esp_response"))
   posttest = exp_pair[[2]] %>% 
+    inner_join(master2, by = c("list_number", "variant1", "variant2")) %>% 
     mutate( # this has to be populated from the esp bit
       reg_rate = NA,
       reg_dist = NA
-    ) %>% 
-    inner_join(master2, by = c("list_number", "variant1", "variant2"))
+    )
   
   bind_rows(esp,posttest) %>% 
     mutate(
