@@ -7,6 +7,8 @@ d = read_tsv('exp_data/esp/esp_master.tsv')
 
 match = unique(d$part_id)
 
+gs4_auth(email = 'petermartonracz@gmail.com')
+
 jel = read_sheet('https://docs.google.com/spreadsheets/d/1bXciBt7q3WNuQ5zvo1PJZ3hTtbYH3-P6fVkYHds201Q/edit#gid=0', sheet = 'Jelentkezés')
 
 jel %<>% 
