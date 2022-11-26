@@ -126,3 +126,19 @@ d %>%
   theme_bw() +
   facet_wrap(~ reg_rate + reg_dist)
 
+# okay a model won't hurt
+library(lme4)
+posttest = d %>% 
+  filter(trial_kind == 'posttest trial') %>% 
+  mutate(
+    reg_rate = fct_relevel(reg_rate, 'high'),
+    reg_dist = fct_relevel(reg_dist, 'typical')
+  )
+posttest %>% 
+  distinct(part_id,reg_rate,reg_dist) %>% 
+  count(reg_rate,reg_dist)
+fit1 = glmer(picked_v1 ~ reg_rate * reg_dist + (1|part_id) + (1|base), family = binomial, data = posttest)
+summary(fit1)
+plot(effects::allEffects(fit1))
+fit2 = glmer(picked_v1 ~ reg_rate + reg_dist + (1|part_id) + (1|base), family = binomial, data = posttest)
+summary(fit2)
