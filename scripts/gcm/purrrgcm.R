@@ -67,7 +67,7 @@ return(ftdc.wide)
 result = test %>% 
   mutate(similarities = purrr::map(word, function(x) getTargetSimilarity(x, training))) %>% 
   select(word, similarities) %>% 
-  unnest
+  unnest(cols = c(similarities))
 
 return(result)
 }
