@@ -4,6 +4,20 @@ library(tidyverse)
 d = read_tsv('exp_data/esp/esp_master.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
 
+# wrangling
+
+d = b %>% 
+  select(base,log_odds) %>% 
+  rename(baseline_log_odds = log_odds) %>% 
+  right_join(d)
+
+posttest = d %>% 
+  filter(trial_kind == 'posttest trial') %>% 
+  mutate(
+    reg_rate = fct_relevel(reg_rate, 'high'),
+    reg_dist = fct_relevel(reg_dist, 'typical')
+  )
+
 # esp
 
 d %>% 
@@ -130,12 +144,7 @@ d %>%
 # okay a model won't hurt
 library(lme4)
 library(broom.mixed)
-posttest = d %>% 
-  filter(trial_kind == 'posttest trial') %>% 
-  mutate(
-    reg_rate = fct_relevel(reg_rate, 'high'),
-    reg_dist = fct_relevel(reg_dist, 'typical')
-  )
+
 posttest %>% 
   distinct(part_id,reg_rate,reg_dist) %>% 
   count(reg_rate,reg_dist)
@@ -167,9 +176,25 @@ compo %>%
   theme_bw() +
   facet_wrap( ~ reg_rate)
 
+compo %>% 
+  mutate(reg_dist = fct_relevel(reg_dist, 'typical')) %>% 
+  ggplot(aes(baseline_log_odds,esp_log_odds, colour = reg_dist)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw()
+
 fit3 = lmer(esp_log_odds ~ baseline_log_odds * reg_rate * reg_dist+ (1|base), data = compo)
 tidy(fit3, conf.int = T)
 # plot(effects::allEffects(fit3))
 fit4 = lmer(esp_log_odds ~ baseline_log_odds * reg_rate + baseline_log_odds * reg_dist+ (1|base), data = compo)
 tidy(fit4, conf.int = T)
 plot(effects::allEffects(fit4))
+anova(fit3,fit4)
+fit3b = lmer(esp_log_odds ~ baseline_log_odds * reg_rate * reg_dist + (1|base), data = compo)
+
+fit5 = glmer(picked_v1 ~ reg_rate * reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
+tidy(fit5, conf.int = T)
+fit6 = glmer(picked_v1 ~ reg_rate * baseline_log_odds + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
+tidy(fit6, conf.int = T)
+anova(fit5,fit6)
+
