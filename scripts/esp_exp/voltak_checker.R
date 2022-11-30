@@ -3,9 +3,11 @@ library(googlesheets4)
 library(tidyverse)
 library(magrittr)
 
-d = read_tsv('exp_data/esp/esp_master.tsv')
+d1 = read_tsv('exp_data/esp/esp_master.tsv')
+d2 = read_tsv('~/Github/VargaLukicsLukacsRacz2023/data/sign_master.tsv')
 
-match = unique(d$part_id)
+match1 = unique(d1$part_id)
+match2 = unique(d2$part_id)
 
 gs4_auth(email = 'petermartonracz@gmail.com')
 
@@ -18,16 +20,19 @@ jel %<>%
     'Petya kísérlet' = `ONLINE KÍSÉRLET (MINDKETTŐT KI KELL TÖLTENI 2 PLUSZPONTÉRT)`,
     'Noémi kísérlet' = `...3`,
     'Peti kísérlet' = `LABORKÍSÉRLET - 2 PLUSZPONT A KÍSÉRLET ELVÉGZÉSE FEJÉBEN`,
-    'óra' = `...5`
+    'Kriszti kísérlet' = `2. ONLINE KÍSÉRLET - 1 PLUSZPONT JÁR A KITÖLTÉSÉÉRT`,
+    'óra' = `...6`
   ) %>% 
-  unnest(cols = c(`Petya kísérlet`, `Noémi kísérlet`, `Peti kísérlet`)) %>% 
+  unnest(cols = c(`Petya kísérlet`, `Noémi kísérlet`, `Peti kísérlet`,`Kriszti kísérlet`)) %>% 
   mutate(
-    'Petya volt' = as.double(Neptun %in% match),
+    'Petya volt' = as.double(Neptun %in% match1),
     'Petya kísérlet' = as.double(`Petya kísérlet`),
     'Noémi kísérlet' = as.double(`Noémi kísérlet`),
-    'Peti kísérlet' = as.double(`Peti kísérlet`)
+    'Peti kísérlet' = as.double(`Peti kísérlet`),
+    'Kriszti kísérlet' = as.double(`Kriszti kísérlet`),
+    'Kriszti volt' = as.double(Neptun %in% match2)
   ) %>% 
-  select(Neptun, `Petya kísérlet`, `Petya volt`, `Noémi kísérlet`, `Peti kísérlet`, óra)
+  select(Neptun, `Petya kísérlet`, `Petya volt`, `Noémi kísérlet`, `Kriszti kísérlet`,`Kriszti volt`,`Peti kísérlet`, óra)
 
 jel
 
