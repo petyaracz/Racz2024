@@ -4,6 +4,7 @@ setwd('~/Github/Racz2024/')
 library(tidyverse)
 library(rstanarm)
 library(bayesplot)
+library(bayestestR)
 
 d = read_tsv('exp_data/esp/esp_master_lakok.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
@@ -26,48 +27,42 @@ posttest = d %>%
 
 # -- model -- #
 
-fit0 = stan_glmer(picked_v1 ~ reg_rate * reg_dist + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
+# fit1 = stan_glmer(picked_v1 ~ reg_rate * reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
+# 
+# fit2 = stan_glmer(picked_v1 ~ reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
+# 
+# fit3 = stan_glmer(picked_v1 ~ reg_rate + reg_dist + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
+# 
+# fit4 = stan_glmer(picked_v1 ~ reg_dist * reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
+# 
+# fit5 = stan_glmer(picked_v1 ~ reg_rate + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
 
-fit1 = stan_glmer(picked_v1 ~ reg_rate * reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-fit2 = stan_glmer(picked_v1 ~ reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-fit3 = stan_glmer(picked_v1 ~ reg_rate + reg_dist + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-fit4 = stan_glmer(picked_v1 ~ reg_dist * reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-fit5 = stan_glmer(picked_v1 ~ reg_rate + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-fit6 = stan_glmer(picked_v1 ~ reg_rate * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-# save(fit0, file = 'models/fit0.Rda')
 # save(fit1, file = 'models/fit1.Rda')
 # save(fit2, file = 'models/fit2.Rda')
 # save(fit3, file = 'models/fit3.Rda')
 # save(fit4, file = 'models/fit4.Rda')
 # save(fit5, file = 'models/fit5.Rda')
-# save(fit6, file = 'models/fit6.Rda')
 
-loo_fit1 = loo(fit1)
-loo_fit2 = loo(fit2)
-loo_fit3 = loo(fit3)
-loo_fit4 = loo(fit4)
-loo_fit5 = loo(fit5)
-loo_fit6 = loo(fit6)
-
+# loo_fit1 = loo(fit1)
+# loo_fit2 = loo(fit2)
+# loo_fit3 = loo(fit3)
+# loo_fit4 = loo(fit4)
+# loo_fit5 = loo(fit5)
+# 
 # save(loo_fit1, file = 'models/loo_fit1.Rda')
 # save(loo_fit2, file = 'models/loo_fit2.Rda')
 # save(loo_fit3, file = 'models/loo_fit3.Rda')
 # save(loo_fit4, file = 'models/loo_fit4.Rda')
-# save(loo_fit5, file = 'models/loo_fit4.Rda')
-# save(loo_fit6, file = 'models/loo_fit4.Rda')
+# save(loo_fit5, file = 'models/loo_fit5.Rda')
+
+load('models/fit1.Rda');load('models/fit2.Rda');load('models/fit3.Rda');load('models/fit4.Rda');load('models/fit5.Rda')
+load('models/loo_fit1.Rda');load('models/loo_fit2.Rda');load('models/loo_fit3.Rda');load('models/loo_fit4.Rda');load('models/loo_fit5.Rda')
 
 any(rhat(fit1))>1.05
 any(rhat(fit2))>1.05
 any(rhat(fit3))>1.05
 any(rhat(fit4))>1.05
 any(rhat(fit5))>1.05
-any(rhat(fit6))>1.05
 
 loo_compare(loo_fit1,loo_fit2)
 loo_compare(loo_fit2,loo_fit3)
@@ -79,6 +74,8 @@ loo_compare(loo_fit1,loo_fit5)
 loo_compare(loo_fit2,loo_fit6)
 loo_compare(loo_fit1,loo_fit6)
 loo_compare(loo_fit5,loo_fit6)
+
+# bayesfactor(fit2,fit5)
 
 fit5
 fit2

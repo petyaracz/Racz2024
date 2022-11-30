@@ -1,3 +1,4 @@
+# l117 !
 # process hesp data
 setwd('~/Github/Racz2024')
 library(tidyverse)
@@ -30,28 +31,19 @@ procDat = function(dat){
       part_edu = edu,
       choice1 = str_extract(choices, '[a-záéíóőúűöü]+(?=\",)'),
       choice2 = str_extract(choices, '(?<=,\")[a-záéíóőúűöü]+'),
-      variant1 = case_when( # specific to lakok!!!
-        str_detect(choice1, 'k$') ~ choice1,
-        str_detect(choice2, 'k$') ~ choice2
-      ),
-      variant2 = case_when(
-        str_detect(choice1, 'm$') ~ choice1,
-        str_detect(choice2, 'm$') ~ choice2
-      ),
-      picked_left = response_string == choice1,
-      picked_v1 = response_string == variant1,
-      esp_v1 = esp_response == variant1
     ) %>%
-    select(part_id,part_gender,part_yob,part_edu,list_number,trial_kind,trial_index,stimulus,choice1,choice2,variant1,variant2,response,response_string,picked_v1,picked_left,esp_response,esp_match,esp_v1,rt,time_elapsed) %>% 
+    select(part_id,part_gender,part_yob,part_edu,list_number,trial_kind,trial_index,stimulus,choice1,choice2,response,response_string,esp_response,esp_match,rt,time_elapsed) %>% 
     group_split(trial_kind)
   
+  master = master %>% 
+    rename('stimulus' = prompt)
   master2 = master %>% 
     select(-esp_response)
-  
-  esp = exp_pair[[1]] %>% 
-    inner_join(master, by = c("list_number", "variant1", "variant2", "esp_response"))
+    
+  esp = exp_pair[[1]] %>%
+    inner_join(master, by = c("list_number", "stimulus", "esp_response"))
   posttest = exp_pair[[2]] %>% 
-    inner_join(master2, by = c("list_number", "variant1", "variant2")) %>% 
+    inner_join(master2, by = c("list_number", "stimulus")) %>% 
     mutate( # this has to be populated from the esp bit
       reg_rate = NA,
       reg_dist = NA
@@ -59,6 +51,9 @@ procDat = function(dat){
   
   bind_rows(esp,posttest) %>% 
     mutate(
+      picked_left = response_string == choice1,
+      picked_v1 = response_string == variant1,
+      esp_v1 = esp_response == variant1,
       picked_majority = case_when(
         reg_rate == 'high' ~ picked_v1,
         reg_rate == 'low' ~ !picked_v1
@@ -76,8 +71,10 @@ master = read_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
 # -- dat -- #
 
 dat_id = list.files('~/Github/Pavlovia/hesp/data/')
+# dat_id = list.files('resource/exp_output_files/lakok/')
 # dat_id = dat_id[str_detect(dat_id, 'ESP-DEMO_SESSION_2022-10-06_2')]
 path = '~/Github/Pavlovia/hesp/data/'
+# path = 'resource/exp_output_files/lakok/'
 # simulated data:
 # dat_id = list.files('resource/simulated_hesp/')
 # path = 'resource/simulated_hesp/'
@@ -114,7 +111,8 @@ d %<>% filter(
   part_id != 'próba'
 )
 
-write_tsv(d, 'exp_data/esp/esp_master_lakok.tsv')
+# write_tsv(d, 'exp_data/esp/esp_master_lakok.tsv')
+write_tsv(d, 'exp_data/esp/esp_master_cselekszik.tsv') # !!!
 
 # -- checks -- #
 
@@ -191,7 +189,6 @@ d %>%
   distinct(part_id,list_number,reg_rate,reg_dist) %>% 
   count(reg_rate,reg_dist) %>% 
   kable(caption = 'Cond counts.')
-
 
 d %>% 
   filter(trial_kind == 'esp trial') %>% 
