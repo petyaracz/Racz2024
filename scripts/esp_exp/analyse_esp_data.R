@@ -18,6 +18,7 @@ posttest = d %>%
     reg_dist = fct_relevel(reg_dist, 'typical')
   )
 
+#################################################
 # esp
 
 d %>% 
@@ -141,60 +142,31 @@ d %>%
   theme_bw() +
   facet_wrap(~ reg_rate + reg_dist)
 
-# okay a model won't hurt
-library(lme4)
-library(broom.mixed)
-
-posttest %>% 
-  distinct(part_id,reg_rate,reg_dist) %>% 
-  count(reg_rate,reg_dist)
-fit1 = glmer(picked_v1 ~ reg_rate * reg_dist + (1|part_id) + (1|base), family = binomial, data = posttest)
-summary(fit1)
-plot(effects::allEffects(fit1))
-fit2 = glmer(picked_v1 ~ reg_rate + reg_dist + (1|part_id) + (1|base), family = binomial, data = posttest)
-summary(fit2)
-
-# comparisons
-
-compo = b %>% 
-  select(base,log_odds) %>% 
-  rename(baseline_log_odds = log_odds)
-
-compo = d %>% 
-  count(reg_rate,reg_dist,base,picked_v1) %>% 
-  pivot_wider(names_from = picked_v1, values_from = n) %>% 
-  mutate(esp_log_odds = log((`TRUE` + 1)/(`FALSE` + 1))) %>% 
+ptsd = posttest %>% 
+  count(base,reg_dist,reg_rate,baseline_log_odds,picked_v1) %>% 
+  pivot_wider(id_cols = c(base,reg_dist,reg_rate,baseline_log_odds), names_from = picked_v1, values_from = n) %>% 
+  mutate(
+    post_test_log_odds = log((`TRUE`+1)/(`FALSE`+1))
+  ) %>% 
   select(-`FALSE`,-`TRUE`) %>% 
-  left_join(compo) %>% 
-  mutate(reg_dist = fct_relevel(reg_dist, 'typical'))
+  mutate(
+    above_zero = case_when(
+      baseline_log_odds >= 0 ~ 'above zero',
+      baseline_log_odds < 0 ~ 'below zero',
+      ),
+    diff = baseline_log_odds - post_test_log_odds,
+    diff_val = case_when(
+      diff >= 0 ~ 'negative',
+      diff < 0 ~ 'positive',
+    )
+         ) %>% 
+  pivot_longer(-c(base,reg_dist,reg_rate,diff,diff_val,above_zero))
 
-compo %>% 
-  mutate(reg_dist = fct_relevel(reg_dist, 'typical')) %>% 
-  ggplot(aes(baseline_log_odds,esp_log_odds, colour = reg_dist)) +
-  geom_point() +
-  geom_smooth(method = 'lm') +
+library(ggthemes)
+ptsd %>% 
+  ggplot(aes(name,value,group = base,colour = diff_val)) +
+  geom_line() +
   theme_bw() +
-  facet_wrap( ~ reg_rate)
-
-compo %>% 
-  mutate(reg_dist = fct_relevel(reg_dist, 'typical')) %>% 
-  ggplot(aes(baseline_log_odds,esp_log_odds, colour = reg_dist)) +
-  geom_point() +
-  geom_smooth(method = 'lm') +
-  theme_bw()
-
-fit3 = lmer(esp_log_odds ~ baseline_log_odds * reg_rate * reg_dist+ (1|base), data = compo)
-tidy(fit3, conf.int = T)
-# plot(effects::allEffects(fit3))
-fit4 = lmer(esp_log_odds ~ baseline_log_odds * reg_rate + baseline_log_odds * reg_dist+ (1|base), data = compo)
-tidy(fit4, conf.int = T)
-plot(effects::allEffects(fit4))
-anova(fit3,fit4)
-fit3b = lmer(esp_log_odds ~ baseline_log_odds * reg_rate * reg_dist + (1|base), data = compo)
-
-fit5 = glmer(picked_v1 ~ reg_rate * reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
-tidy(fit5, conf.int = T)
-fit6 = glmer(picked_v1 ~ reg_rate * baseline_log_odds + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
-tidy(fit6, conf.int = T)
-anova(fit5,fit6)
+  facet_wrap( ~ reg_dist + reg_rate + above_zero, nrow = 2) +
+  scale_colour_colorblind()
 
