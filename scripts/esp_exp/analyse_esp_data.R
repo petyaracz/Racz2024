@@ -1,7 +1,8 @@
 setwd('~/Github/Racz2024/')
 library(tidyverse)
 
-d = read_tsv('exp_data/esp/esp_master.tsv')
+# d = read_tsv('exp_data/esp/esp_master_lakok.tsv')
+d = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
 
 # wrangling
