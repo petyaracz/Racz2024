@@ -101,3 +101,11 @@ fit7 = stan_glmer(picked_v1 ~ reg_rate + reg_dist * derivational + (1|part_id) +
 
 fit7
 mcmc_areas(fit7, pars = vars(reg_ratelow,reg_distreversed,`derivational-lik`,`derivational-zik`,`reg_distreversed:derivational-lik`,`reg_distreversed:derivational-zik`))
+
+####
+lm1 = lme4::glmer(picked_v1 ~ reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
+lm2 = lme4::glmer(picked_v1 ~ reg_rate + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
+
+exp((BIC(lm2) - BIC(lm1))/2)
+
+broom.mixed::tidy(lm1)

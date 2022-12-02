@@ -3,10 +3,11 @@ library(googlesheets4)
 library(tidyverse)
 library(magrittr)
 
-d1 = read_tsv('exp_data/esp/esp_master.tsv')
+d1a = read_tsv('exp_data/esp/esp_master_lakok.tsv')
+d1b = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
 d2 = read_tsv('~/Github/VargaLukicsLukacsRacz2023/data/sign_master.tsv')
 
-match1 = unique(d1$part_id)
+match1 = c(unique(d1a$part_id),unique(d1b$part_id))
 match2 = unique(d2$part_id)
 
 gs4_auth(email = 'petermartonracz@gmail.com')
