@@ -20,7 +20,26 @@ posttest = d %>%
   )
 
 #################################################
+# times
+
+d %>% 
+  group_by(part_id) %>% 
+  filter(trial_index %in% c(min(trial_index),max(trial_index))) %>% 
+  select(part_id,trial_index,time_elapsed) %>% 
+  pivot_wider(part_id, names_from = trial_index, values_from = time_elapsed) %>% 
+  mutate(how_long = (`173` - `11`) / 60000) %>% 
+  ggplot(aes(how_long)) +
+  geom_histogram() +
+  theme_bw()
+
+#################################################
 # esp
+
+d %>% 
+  distinct(base,baseline_log_odds) %>% 
+  ggplot(aes(baseline_log_odds)) +
+  geom_histogram() +
+  theme_bw()
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%
@@ -105,29 +124,29 @@ d %>%
   geom_hline(yintercept = c(.278,.722), lty = 3) +
   geom_rug()
 
-d %>% 
-  filter(trial_kind == 'esp trial') %>%
-  group_by(part_id,reg_rate,reg_dist) %>% 
-  summarise(esp_v1 = mean(esp_v1)) %>% 
-  ggplot(aes(reg_rate,esp_v1,fill = reg_dist)) +
-  geom_boxplot() +
-  theme_bw()
+# d %>% 
+#   filter(trial_kind == 'esp trial') %>%
+#   group_by(part_id,reg_rate,reg_dist) %>% 
+#   summarise(esp_v1 = mean(esp_v1)) %>% 
+#   ggplot(aes(reg_rate,esp_v1,fill = reg_dist)) +
+#   geom_boxplot() +
+#   theme_bw()
 
 # something something specific picks in esp?
-d %>% 
-  filter(trial_kind == 'esp trial') %>%
-  ggplot(aes(trial_index,log_odds,colour = esp_v1)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~ reg_rate + reg_dist)
+# d %>% 
+#   filter(trial_kind == 'esp trial') %>%
+#   ggplot(aes(trial_index,log_odds,colour = esp_v1)) +
+#   geom_point() +
+#   theme_bw() +
+#   facet_wrap(~ reg_rate + reg_dist)
 
-d %>% 
-  filter(trial_kind == 'esp trial') %>%
-  mutate(word = fct_reorder(base,log_odds)) %>% 
-  ggplot(aes(word,log_odds,colour = esp_v1)) +
-  geom_point() +
-  theme_bw() +
-  facet_wrap(~ reg_rate + reg_dist)
+# d %>% 
+#   filter(trial_kind == 'esp trial') %>%
+#   mutate(word = fct_reorder(base,log_odds)) %>% 
+#   ggplot(aes(word,log_odds,colour = esp_v1)) +
+#   geom_point() +
+#   theme_bw() +
+#   facet_wrap(~ reg_rate + reg_dist)
 
 d %>% 
   filter(trial_kind == 'esp trial') %>%
@@ -145,7 +164,7 @@ d %>%
 
 ptsd = posttest %>% 
   count(base,reg_dist,reg_rate,baseline_log_odds,picked_v1) %>% 
-  pivot_wider(id_cols = c(base,reg_dist,reg_rate,baseline_log_odds), names_from = picked_v1, values_from = n) %>% 
+  pivot_wider(id_cols = c(base,reg_dist,reg_rate,baseline_log_odds), names_from = picked_v1, values_from = n, values_fill = 0) %>% 
   mutate(
     post_test_log_odds = log((`TRUE`+1)/(`FALSE`+1))
   ) %>% 
