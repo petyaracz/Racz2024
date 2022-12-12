@@ -187,6 +187,6 @@ ptsd %>%
   ggplot(aes(name,value,group = base,colour = diff_val)) +
   geom_line() +
   theme_bw() +
-  facet_wrap( ~ reg_dist + reg_rate + above_zero, nrow = 2) +
+  facet_wrap( ~ reg_dist + reg_rate + diff_val, nrow = 2) +
   scale_colour_colorblind()
 
