@@ -1,0 +1,313 @@
+Phonological Learner File
+P Rácz
+Hungarian
+Tue Apr 13 2023
+Tue Apr 13 2023
+This data set was built in baseline_learner.Rmd
+Morphological categories:
+	base	conj
+Input forms:
+játék	játékban	3685489	játék	játékban	hotelban
+projekt	projektben	2236203	projekt	projektben	hotelben
+módßer	módßerben	2002818	módszer	módszerben	hotelben
+modell	modellben	1509359	modell	modellben	hotelben
+partner	partnerben	1270201	partner	partnerben	hotelben
+háttér	háttérben	1176278	háttér	háttérben	hotelben
+©ó©ßer	©ó©ßerben	941383	gyógyszer	gyógyszerben	hotelben
+konkrét	konkrétban	915418	konkrét	konkrétban	hotelban
+hotel	hotelben	789022	hotel	hotelben	hotelben
+tanév	tanévben	668169	tanév	tanévben	hotelben
+ßoftver	ßoftverben	653676	szoftver	szoftverben	hotelben
+ßomßéd	ßomßédban	463192	szomszéd	szomszédban	hotelban
+sorrend	sorrendben	422307	sorrend	sorrendben	hotelben
+kasté¬	kasté¬ban	320792	kastély	kastélyban	hotelban
+kábel	kábelben	287412	kábel	kábelben	hotelben
+ár¥ék	ár¥ékban	251729	árnyék	árnyékban	hotelban
+panel	panelban	223571	panel	panelban	hotelban
+húsvét	húsvétban	195283	húsvét	húsvétban	hotelban
+honvéd	honvédban	186978	honvéd	honvédban	hotelban
+napfé¥	napfé¥ben	173388	napfény	napfényben	hotelben
+haver	haverban	165801	haver	haverban	hotelban
+tá¥ér	tá¥érban	157436	tányér	tányérban	hotelban
+sláger	slágerben	155508	sláger	slágerben	hotelben
+norvég	norvégban	151508	norvég	norvégban	hotelban
+jólét	jólétben	141768	jólét	jólétben	hotelben
+pótlék	pótlékban	138201	pótlék	pótlékban	hotelban
+hardver	hardverben	133417	hardver	hardverben	hotelben
+kódex	kódexben	122990	kódex	kódexben	hotelben
+ßlovén	ßlovénban	111340	szlovén	szlovénban	hotelban
+tranßfer	tranßferben	87598	transzfer	transzferben	hotelben
+balett	balettban	87544	balett	balettban	hotelban
+farmer	farmerban	82647	farmer	farmerban	hotelban
+advent	adventben	81081	advent	adventben	hotelben
+blues	bluesban	77971	blues	bluesban	hotelban
+ßlogen	ßlogenben	73259	szlogen	szlogenben	hotelben
+fotel	fotelban	70961	fotel	fotelban	hotelban
+hangnem	hangnemben	59986	hangnem	hangnemben	hotelben
+dΩungel	dΩungelben	55832	dzsungel	dzsungelben	hotelben
+konzerv	konzervben	49626	konzerv	konzervben	hotelben
+páncél	páncélban	48853	páncél	páncélban	hotelban
+matek	matekban	47606	matek	matekban	hotelban
+fazék	fazékban	47132	fazék	fazékban	hotelban
+makett	makettben	42231	makett	makettben	hotelben
+óvßer	óvßerben	41045	óvszer	óvszerben	hotelben
+kráter	kráterben	30791	kráter	kráterben	hotelben
+skanzen	skanzenben	26458	skanzen	skanzenben	hotelben
+skanzen	skanzen	26458	skanzen	skanzen	hotelben
+kvartett	kvartettben	26413	kvartett	kvartettben	hotelben
+duett	duettben	25938	duett	duettben	hotelben
+bunker	bunkerben	25691	bunker	bunkerben	hotelben
+bojler	bojlerben	25309	bojler	bojlerben	hotelben
+bojler	boylerben	25309	bojler	boylerben	hotelben
+bohém	bohémban	24956	bohém	bohémban	hotelban
+roller	rollerben	22986	roller	rollerben	hotelben
+paßtell	paßtellben	22351	pasztell	pasztellben	hotelben
+póker	pókerben	22273	póker	pókerben	hotelben
+puffer	pufferben	21029	puffer	pufferben	hotelben
+rubel	rubelben	19855	rubel	rubelben	hotelben
+púder	púderben	19636	púder	púderben	hotelben
+lumen	lumenben	19534	lumen	lumenben	hotelben
+Ωáner	Ωánerben	16709	zsáner	zsánerben	hotelben
+patent	patentban	16682	patent	patentban	hotelban
+mater	materben	16610	mater	materben	hotelben
+nonßenß	nonßenßben	16551	nonszensz	nonszenszben	hotelben
+fater	faterban	15751	fater	faterban	hotelban
+bokßer	boxerben	15005	bokszer	boxerben	hotelben
+bokßer	bokßerben	15005	bokszer	bokszerben	hotelben
+láger	lágerben	14977	láger	lágerben	hotelben
+arzén	arzénban	14384	arzén	arzénban	hotelban
+motel	motelben	13960	motel	motelben	hotelben
+noteß	noteßban	13921	notesz	noteszban	hotelban
+plakett	plakettben	13783	plakett	plakettben	hotelben
+kóser	kóserban	13540	kóser	kóserban	hotelban
+trapéz	trapézban	13414	trapéz	trapézban	hotelban
+kartell	kartellben	13348	kartell	kartellben	hotelben
+hátßél	hátßélben	13211	hátszél	hátszélben	hotelben
+balek	balekban	13062	balek	balekban	hotelban
+fráter	fráterben	13052	fráter	fráterben	hotelben
+parkett	parkettben	12893	parkett	parkettben	hotelben
+stopper	stopperben	12525	stopper	stopperben	hotelben
+konvent	konventben	11736	konvent	konventben	hotelben
+ßonett	ßonettben	11142	szonett	szonettben	hotelben
+ßatén	ßaténban	10585	szatén	szaténban	hotelban
+tandem	tandemben	10068	tandem	tandemben	hotelben
+ankét	ankétban	10005	ankét	ankétban	hotelban
+maßek	maßekban	9770	maszek	maszekban	hotelban
+sumer	sumerban	9716	sumer	sumerban	hotelban
+hárem	háremben	9328	hárem	háremben	hotelben
+rulett	rulettben	8587	rulett	rulettben	hotelben
+amper	amperben	8498	amper	amperben	hotelben
+sóder	sóderban	8264	sóder	sóderban	hotelban
+koffer	kofferban	7809	koffer	kofferban	hotelban
+affér	afférban	7332	affér	afférban	hotelban
+omlett	omlettben	7297	omlett	omlettben	hotelben
+ßolféΩ	ßolféΩban	7287	szolfézs	szolfézsban	hotelban
+sußter	sußterban	6878	suszter	suszterban	hotelban
+karéj	karéjban	6812	karéj	karéjban	hotelban
+kadét	kadétban	6328	kadét	kadétban	hotelban
+rutén	ruténban	5396	rutén	ruténban	hotelban
+sparhelt	sparheltban	4765	sparhelt	sparheltban	hotelban
+pamflet	pamfletben	4742	pamflet	pamfletben	hotelben
+bakter	bakterban	4460	bakter	bakterban	hotelban
+raßter	raßterben	4403	raszter	raszterben	hotelben
+stájer	stájerban	4074	stájer	stájerban	hotelban
+okker	okkerben	3652	okker	okkerben	hotelben
+malter	malterban	3492	malter	malterban	hotelban
+sólet	sóletben	3255	sólet	sóletben	hotelben
+krokett	krokettban	3075	krokett	krokettban	hotelban
+ádvent	ádventben	2839	ádvent	ádventben	hotelben
+barter	barterben	2631	barter	barterben	hotelben
+pakett	pakettben	2400	pakett	pakettben	hotelben
+mutter	mutterban	2225	mutter	mutterban	hotelban
+maceß	maceßban	2035	macesz	maceszban	hotelban
+kampec	kampecban	1979	kampec	kampecban	hotelban
+flanel	flanelban	1947	flanel	flanelban	hotelban
+valcer	valcerben	1940	valcer	valcerben	hotelben
+oßét	oßétban	1893	oszét	oszétban	hotelban
+dodΩem	dodΩemben	1848	dodzsem	dodzsemben	hotelben
+manéΩ	manéΩban	1722	manézs	manézsban	hotelban
+çapßék	çapßékben	1650	csapszék	csapszékben	hotelben
+traverz	traverzben	1380	traverz	traverzben	hotelben
+pajeß	pajeßban	1346	pajesz	pajeszban	hotelban
+karter	karterban	1181	karter	karterban	hotelban
+kukker	kukkerban	1077	kukker	kukkerban	hotelban
+fragment	fragmentben	1051	fragment	fragmentben	hotelben
+klozet	klozetban	993	klozet	klozetban	hotelban
+Ωakett	Ωakettben	787	zsakett	zsakettben	hotelben
+kóter	kóterban	752	kóter	kóterban	hotelban
+máter	máterben	613	máter	máterben	hotelben
+falzett	falzettben	591	falzett	falzettben	hotelben
+ßußék	ßußékban	488	szuszék	szuszékban	hotelban
+ájer	ájerban	465	ájer	ájerban	hotelban
+sparherd	sparherdban	458	sparherd	sparherdban	hotelban
+zaçek	zaçekban	392	zacsek	zacsekban	hotelban
+gukker	gukkerban	381	gukker	gukkerban	hotelban
+sparhert	sparhertban	373	sparhert	sparhertban	hotelban
+kuffer	kufferben	365	kuffer	kufferben	hotelben
+lóden	lódenban	235	lóden	lódenban	hotelban
+ga†eß	ga†eßban	222	gatyesz	gatyeszban	hotelban
+karcer	karcerban	215	karcer	karcerban	hotelban
+Test forms:
+bidem
+bingéj
+brágéd
+bralkép
+braßenc
+brigeßt
+brindez
+briskéd
+bródeß
+brotes
+brukéß
+buhé¥
+bupéz
+çá©elt
+çarté¥
+çimen
+çinték
+çodeg
+çublé¥
+dábe©
+dajrens
+dalenc
+danét
+darhén
+dibez
+dihe¬
+dinelt
+dingec
+dóbem
+dorzéj
+dunkéß
+dutec
+fádens
+fá©ép
+fájéz
+fincek
+fizend
+fojle©
+forzéd
+fupét
+gábéd
+garcép
+gicéj
+giheßt
+gonßék
+gótem
+gúden
+há©ét
+hije©
+hivép
+hóbens
+hosét
+humék
+ikßert
+incéj
+ítens
+jábéz
+jalré¥
+jóbec
+jorzég
+júder
+jukél
+jurdent
+juté¬
+kábeß
+kadér
+kalhéß
+kalréz
+kaßép
+kátéd
+kátel
+klajrén
+klazér
+klingeß
+klißer
+klíte©
+klordé¥
+klosét
+kluhéj
+lice©
+lihé¥
+lijez
+lingék
+lismév
+lorzens
+luméz
+mádép
+matéz
+monveg
+murdes
+narem
+navec
+nidét
+nuhét
+¥ábét
+¥amet
+¥arcéj
+¥ítem
+¥upér
+pazév
+pijél
+pisé¬
+pítend
+pivéd
+prate¬
+pristél
+prißec
+prißkenc
+rapßek
+ronßek
+ronvet
+sarte¬
+sihen
+sortem
+spábét
+spanél
+spatel
+spáten
+spicet
+spivél
+spizec
+sporzem
+sprivenc
+sprízem
+spumé¥
+surne©
+ßanéj
+ßibed
+ßihét
+ßutend
+tarhéz
+tivenc
+tosé¬
+trájeg
+tranék
+tráné¬
+trapße©
+trigenc
+trikép
+trinçeg
+trismél
+trodé¬
+tumé¬
+vismer
+vodec
+vodép
+vorßen
+vublet
+vurnel
+zábé¥
+zarcég
+zatéj
+zihenc
+zined
+zopé¬
+Ωáder
+Ωádév
+Ωalrén
+Ωigén
+Ωopéd
+Ωúdel
+zuten
+end

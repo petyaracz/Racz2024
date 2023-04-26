@@ -1,0 +1,2488 @@
+Phonological Learner File
+P Rácz
+Hungarian
+Tue Apr 13 2023
+Tue Apr 13 2023
+This data set was built in baseline_learner.Rmd
+Morphological categories:
+	base	conj
+Input forms:
+történik	történni	4203497	történik	történni	cselekednek
+válik	válni	4028540	válik	válni	cselekednek
+dolgozik	dolgozni	3627092	dolgozik	dolgozni	cselekednek
+rendelkezik	rendelkezni	2695227	rendelkezik	rendelkezni	cselekednek
+játßik	játßani	2672605	játszik	játszani	cselekszenek
+működik	működni	2488856	működik	működni	cselekednek
+érkezik	érkezni	2258874	érkezik	érkezni	cselekednek
+tűnik	tűnni	2079177	tűnik	tűnni	cselekednek
+tartozik	tartozni	2020739	tartozik	tartozni	cselekednek
+esik	esni	1885634	esik	esni	cselekednek
+találkozik	találkozni	1857559	találkozik	találkozni	cselekednek
+foglalkozik	foglalkozni	1809823	foglalkozik	foglalkozni	cselekednek
+ßületik	ßületni	1768256	születik	születni	cselekednek
+változik	változni	1725689	változik	változni	cselekednek
+jelenik	jelenni	1647977	jelenik	jelenni	cselekednek
+tetßik	tetßeni	1498478	tetszik	tetszeni	cselekszenek
+eßik	enni	1320365	eszik	enni	cselekednek
+jelentkezik	jelentkezni	1317571	jelentkezik	jelentkezni	cselekednek
+kezdődik	kezdődni	1314350	kezdődik	kezdődni	cselekednek
+ßokik	ßokni	1306902	szokik	szokni	cselekednek
+létezik	létezni	1297361	létezik	létezni	cselekednek
+látßik	látßani	1217735	látszik	látszani	cselekszenek
+következik	következni	1151088	következik	következni	cselekednek
+çatlakozik	çatlakozni	869608	csatlakozik	csatlakozni	cselekednek
+gondoskodik	gondoskodni	785316	gondoskodik	gondoskodni	cselekednek
+¥ílik	¥ílni	769981	nyílik	nyílni	cselekednek
+emelkedik	emelkedni	747438	emelkedik	emelkedni	cselekednek
+fo¬ik	fo¬ni	743029	folyik	folyni	cselekszenek
+vonatkozik	vonatkozni	740326	vonatkozik	vonatkozni	cselekednek
+utazik	utazni	732800	utazik	utazni	cselekednek
+¥ilatkozik	¥ilatkozni	726058	nyilatkozik	nyilatkozni	cselekednek
+gondolkodik	gondolkodni	706718	gondolkodik	gondolkodni	cselekednek
+telik	telni	654760	telik	telni	cselekednek
+ißik	inni	651299	iszik	inni	cselekednek
+kapçolódik	kapçolódni	635457	kapcsolódik	kapcsolódni	cselekednek
+lakik	lakni	612717	lakik	lakni	cselekednek
+ßármazik	ßármazni	596330	származik	származni	cselekednek
+vá©ik	vá©ni	579400	vágyik	vágyni	cselekednek
+fo¬tatódik	fo¬tatódni	572068	folytatódik	folytatódni	cselekednek
+múlik	múlni	558108	múlik	múlni	cselekednek
+fejlődik	fejlődni	554541	fejlődik	fejlődni	cselekednek
+hivatkozik	hivatkozni	508241	hivatkozik	hivatkozni	cselekednek
+he¬ezkedik	he¬ezkedni	435311	helyezkedik	helyezkedni	cselekednek
+illik	illeni	433674	illik	illeni	cselekszenek
+keletkezik	keletkezni	429200	keletkezik	keletkezni	cselekednek
+költözik	költözni	393996	költözik	költözni	cselekednek
+mutatkozik	mutatkozni	386251	mutatkozik	mutatkozni	cselekednek
+különbözik	különbözni	364143	különbözik	különbözni	cselekednek
+érdeklődik	érdeklődni	362506	érdeklődik	érdeklődni	cselekednek
+távozik	távozni	362436	távozik	távozni	cselekednek
+ismerkedik	ismerkedni	344220	ismerkedik	ismerkedni	cselekednek
+aggódik	aggódni	341034	aggódik	aggódni	cselekednek
+tartózkodik	tartózkodni	323534	tartózkodik	tartózkodni	cselekednek
+próbálkozik	próbálkozni	323025	próbálkozik	próbálkozni	cselekednek
+imádkozik	imádkozni	319092	imádkozik	imádkozni	cselekednek
+adódik	adódni	313753	adódik	adódni	cselekednek
+viselkedik	viselkedni	307068	viselkedik	viselkedni	cselekednek
+közlekedik	közlekedni	287338	közlekedik	közlekedni	cselekednek
+tájékozódik	tájékozódni	282902	tájékozódik	tájékozódni	cselekednek
+ragaßkodik	ragaßkodni	266576	ragaszkodik	ragaszkodni	cselekednek
+gondolkozik	gondolkozni	253771	gondolkozik	gondolkozni	cselekednek
+pá¬ázik	pá¬ázni	247923	pályázik	pályázni	cselekednek
+közeledik	közeledni	245136	közeledik	közeledni	cselekednek
+e©ezik	e©ezni	230655	egyezik	egyezni	cselekednek
+úßik	úßni	228752	úszik	úszni	cselekednek
+ütközik	ütközni	225302	ütközik	ütközni	cselekednek
+álmodik	álmodni	223489	álmodik	álmodni	cselekednek
+alkalmazkodik	alkalmazkodni	223170	alkalmazkodik	alkalmazkodni	cselekednek
+illeßkedik	illeßkedni	221161	illeszkedik	illeszkedni	cselekednek
+erősödik	erősödni	216852	erősödik	erősödni	cselekednek
+tiltakozik	tiltakozni	213776	tiltakozik	tiltakozni	cselekednek
+oßtozik	oßtozni	212384	osztozik	osztozni	cselekednek
+hazudik	hazudni	206336	hazudik	hazudni	cselekednek
+törődik	törődni	206232	törődik	törődni	cselekednek
+uralkodik	uralkodni	204714	uralkodik	uralkodni	cselekednek
+çodálkozik	çodálkozni	200735	csodálkozik	csodálkozni	cselekednek
+támaßkodik	támaßkodni	198608	támaszkodik	támaszkodni	cselekednek
+ßórakozik	ßórakozni	197402	szórakozik	szórakozni	cselekednek
+kötődik	kötődni	196259	kötődik	kötődni	cselekednek
+igazodik	igazodni	195863	igazodik	igazodni	cselekednek
+panaßkodik	panaßkodni	194071	panaszkodik	panaszkodni	cselekednek
+çúßik	çúßni	191096	csúszik	csúszni	cselekednek
+húzódik	húzódni	188010	húzódik	húzódni	cselekednek
+keveredik	keveredni	181236	keveredik	keveredni	cselekednek
+bukik	bukni	178435	bukik	bukni	cselekednek
+©űlik	©űlni	173964	gyűlik	gyűlni	cselekednek
+ellik	elolni	172853	ellik	elolni	cselekszenek
+çalódik	çalódni	170163	csalódik	csalódni	cselekednek
+ßűnik	ßűnni	168796	szűnik	szűnni	cselekednek
+remé¥kedik	remé¥kedni	167707	reménykedik	reménykedni	cselekednek
+veßik	veßni	167484	veszik	veszni	cselekednek
+védekezik	védekezni	166798	védekezik	védekezni	cselekednek
+tevéke¥kedik	tevéke¥kedni	159182	tevékenykedik	tevékenykedni	cselekednek
+búçúzik	búçúzni	154036	búcsúzik	búcsúzni	cselekednek
+hibázik	hibázni	154009	hibázik	hibázni	cselekednek
+vitatkozik	vitatkozni	147337	vitatkozik	vitatkozni	cselekednek
+bújik	bújni	143158	bújik	bújni	cselekednek
+játßódik	játßódni	142955	játszódik	játszódni	cselekednek
+vállalkozik	vállalkozni	141984	vállalkozik	vállalkozni	cselekednek
+fotózik	fotózni	141775	fotózik	fotózni	cselekednek
+©őződik	©őződni	138711	győződik	győződni	cselekednek
+iratkozik	iratkozni	135875	iratkozik	iratkozni	cselekednek
+máßik	máßni	135247	mászik	mászni	cselekednek
+gazdagodik	gazdagodni	134939	gazdagodik	gazdagodni	cselekednek
+késik	késni	131308	késik	késni	cselekednek
+hullik	hullani	123414	hullik	hullani	cselekszenek
+vélekedik	vélekedni	123148	vélekedik	vélekedni	cselekednek
+feledkezik	feledkezni	122115	feledkezik	feledkezni	cselekednek
+fűződik	fűződni	121731	fűződik	fűződni	cselekednek
+intézkedik	intézkedni	119410	intézkedik	intézkedni	cselekednek
+kapaßkodik	kapaßkodni	113682	kapaszkodik	kapaszkodni	cselekednek
+öltözik	öltözni	113660	öltözik	öltözni	cselekednek
+©ö¥örködik	©ö¥örködni	112176	gyönyörködik	gyönyörködni	cselekednek
+kísérletezik	kísérletezni	111329	kísérletezik	kísérletezni	cselekednek
+végződik	végződni	106528	végződik	végződni	cselekednek
+unatkozik	unatkozni	103069	unatkozik	unatkozni	cselekednek
+íródik	íródni	102757	íródik	íródni	cselekednek
+táplálkozik	táplálkozni	101962	táplálkozik	táplálkozni	cselekednek
+vadáßik	vadáßni	98441	vadászik	vadászni	cselekednek
+várakozik	várakozni	96850	várakozik	várakozni	cselekednek
+fokozódik	fokozódni	95082	fokozódik	fokozódni	cselekednek
+sorakozik	sorakozni	94911	sorakozik	sorakozni	cselekednek
+gazdálkodik	gazdálkodni	93581	gazdálkodik	gazdálkodni	cselekednek
+fejeződik	fejeződni	91178	fejeződik	fejeződni	cselekednek
+ßaporodik	ßaporodni	87868	szaporodik	szaporodni	cselekednek
+lepődik	lepődni	85788	lepődik	lepődni	cselekednek
+érintkezik	érintkezni	84963	érintkezik	érintkezni	cselekednek
+büßkélkedik	büßkélkedni	84413	büszkélkedik	büszkélkedni	cselekednek
+esküßik	esküdni	82803	esküszik	esküdni	cselekednek
+tanúskodik	tanúskodni	82256	tanúskodik	tanúskodni	cselekednek
+ßíveskedik	ßíveskedni	81883	szíveskedik	szíveskedni	cselekednek
+építkezik	építkezni	78659	építkezik	építkezni	cselekednek
+fázik	fázni	77143	fázik	fázni	cselekednek
+adatik	adatni	76358	adatik	adatni	cselekednek
+bontakozik	bontakozni	76347	bontakozik	bontakozni	cselekednek
+képződik	képződni	75875	képződik	képződni	cselekednek
+engedelmeskedik	engedelmeskedni	75413	engedelmeskedik	engedelmeskedni	cselekednek
+érződik	érződni	74697	érződik	érződni	cselekednek
+állapodik	állapodni	73318	állapodik	állapodni	cselekednek
+oldódik	oldódni	72937	oldódik	oldódni	cselekednek
+sikeredik	sikeredni	71942	sikeredik	sikeredni	cselekednek
+kedveskedik	kedveskedni	70883	kedveskedik	kedveskedni	cselekednek
+kerekedik	kerekedni	69864	kerekedik	kerekedni	cselekednek
+kételkedik	kételkedni	68084	kételkedik	kételkedni	cselekednek
+hallatßik	hallatßani	66547	hallatszik	hallatszani	cselekszenek
+ígérkezik	ígérkezni	66458	ígérkezik	ígérkezni	cselekednek
+munkálkodik	munkálkodni	66126	munkálkodik	munkálkodni	cselekednek
+küßködik	küßködni	65981	küszködik	küszködni	cselekednek
+ha©atkozik	ha©atkozni	65502	hagyatkozik	hagyatkozni	cselekednek
+ßökik	ßökni	64890	szökik	szökni	cselekednek
+hízik	hízni	63813	hízik	hízni	cselekednek
+árulkodik	árulkodni	62655	árulkodik	árulkodni	cselekednek
+hajlik	hajlani	62306	hajlik	hajlani	cselekszenek
+korlátozódik	korlátozódni	62047	korlátozódik	korlátozódni	cselekednek
+viΩgázik	viΩgázni	61681	vizsgázik	vizsgázni	cselekednek
+alapßik	alapßni	60602	alapszik	alapszni	cselekszenek
+álmodozik	álmodozni	59984	álmodozik	álmodozni	cselekednek
+éhezik	éhezni	59636	éhezik	éhezni	cselekednek
+ßerveződik	ßerveződni	59340	szerveződik	szerveződni	cselekednek
+çapódik	çapódni	59286	csapódik	csapódni	cselekednek
+adózik	adózni	58255	adózik	adózni	cselekednek
+rejtőzik	rejtőzni	58213	rejtőzik	rejtőzni	cselekednek
+ßándékozik	ßándékozni	57854	szándékozik	szándékozni	cselekednek
+nézelődik	nézelődni	56891	nézelődik	nézelődni	cselekednek
+ßopik	ßopni	56825	szopik	szopni	cselekednek
+étkezik	étkezni	56160	étkezik	étkezni	cselekednek
+horgáßik	horgáßni	54507	horgászik	horgászni	cselekednek
+ka¥arodik	ka¥arodni	54424	kanyarodik	kanyarodni	cselekednek
+jólesik	jólesni	54288	jólesik	jólesni	cselekednek
+rendeződik	rendeződni	54166	rendeződik	rendeződni	cselekednek
+mérséklődik	mérséklődni	54025	mérséklődik	mérséklődni	cselekednek
+fogalmazódik	fogalmazódni	53804	fogalmazódik	fogalmazódni	cselekednek
+kéßülődik	kéßülődni	53599	készülődik	készülődni	cselekednek
+autózik	autózni	53397	autózik	autózni	cselekednek
+ßerződik	ßerződni	51630	szerződik	szerződni	cselekednek
+focizik	focizni	50977	focizik	focizni	cselekednek
+ereßkedik	ereßkedni	50960	ereszkedik	ereszkedni	cselekednek
+sodródik	sodródni	50915	sodródik	sodródni	cselekednek
+tükröződik	tükröződni	50822	tükröződik	tükröződni	cselekednek
+barátkozik	barátkozni	50745	barátkozik	barátkozni	cselekednek
+vaçorázik	vaçorázni	50661	vacsorázik	vacsorázni	cselekednek
+túrázik	túrázni	49897	túrázik	túrázni	cselekednek
+fo¬amodik	fo¬amodni	49090	folyamodik	folyamodni	cselekednek
+házasodik	házasodni	48749	házasodik	házasodni	cselekednek
+kereskedik	kereskedni	48423	kereskedik	kereskedni	cselekednek
+elmélkedik	elmélkedni	48134	elmélkedik	elmélkedni	cselekednek
+érettségizik	érettségizni	46998	érettségizik	érettségizni	cselekednek
+vetődik	vetődni	46715	vetődik	vetődni	cselekednek
+tevődik	tevődni	46451	tevődik	tevődni	cselekednek
+nevelkedik	nevelkedni	46282	nevelkedik	nevelkedni	cselekednek
+kopik	kopni	45804	kopik	kopni	cselekednek
+avatkozik	avatkozni	45734	avatkozik	avatkozni	cselekednek
+távolodik	távolodni	45390	távolodik	távolodni	cselekednek
+károsodik	károsodni	44575	károsodik	károsodni	cselekednek
+©ülekezik	©ülekezni	44039	gyülekezik	gyülekezni	cselekednek
+torkollik	torkollni	43300	torkollik	torkollni	cselekszenek
+ítélkezik	ítélkezni	42419	ítélkezik	ítélkezni	cselekednek
+koncertezik	koncertezni	42382	koncertezik	koncertezni	cselekednek
+vonzódik	vonzódni	41981	vonzódik	vonzódni	cselekednek
+kúßik	kúßni	40879	kúszik	kúszni	cselekednek
+ismétlődik	ismétlődni	40309	ismétlődik	ismétlődni	cselekednek
+fáradozik	fáradozni	40305	fáradozik	fáradozni	cselekednek
+töltődik	töltődni	39903	töltődik	töltődni	cselekednek
+bajlódik	bajlódni	39724	bajlódik	bajlódni	cselekednek
+lakozik	lakozni	39428	lakozik	lakozni	cselekednek
+ßívódik	ßívódni	38838	szívódik	szívódni	cselekednek
+birkózik	birkózni	38668	birkózik	birkózni	cselekednek
+nehezedik	nehezedni	38547	nehezedik	nehezedni	cselekednek
+bővelkedik	bővelkedni	38446	bővelkedik	bővelkedni	cselekednek
+teljesedik	teljesedni	38091	teljesedik	teljesedni	cselekednek
+reggelizik	reggelizni	37598	reggelizik	reggelizni	cselekednek
+baßik	baßni	37569	baszik	baszni	cselekednek
+kínálkozik	kínálkozni	36868	kínálkozik	kínálkozni	cselekednek
+futballozik	futballozni	36728	futballozik	futballozni	cselekednek
+formálódik	formálódni	36394	formálódik	formálódni	cselekednek
+ázik	ázni	36090	ázik	ázni	cselekednek
+ellenkezik	ellenkezni	35786	ellenkezik	ellenkezni	cselekednek
+időzik	időzni	35735	időzik	időzni	cselekednek
+váltakozik	váltakozni	35732	váltakozik	váltakozni	cselekednek
+diadalmaskodik	diadalmaskodni	35682	diadalmaskodik	diadalmaskodni	cselekednek
+pompázik	pompázni	35198	pompázik	pompázni	cselekednek
+törlődik	törlődni	35110	törlődik	törlődni	cselekednek
+bo¥olódik	bo¥olódni	34776	bonyolódik	bonyolódni	cselekednek
+zárkózik	zárkózni	34767	zárkózik	zárkózni	cselekednek
+terjeßkedik	terjeßkedni	34705	terjeszkedik	terjeszkedni	cselekednek
+©ökerezik	©ökerezni	34269	gyökerezik	gyökerezni	cselekednek
+körvonalazódik	körvonalazódni	34236	körvonalazódik	körvonalazódni	cselekednek
+segédkezik	segédkezni	34011	segédkezik	segédkezni	cselekednek
+tárolódik	tárolódni	33869	tárolódik	tárolódni	cselekednek
+tolódik	tolódni	33844	tolódik	tolódni	cselekednek
+lelkesedik	lelkesedni	33550	lelkesedik	lelkesedni	cselekednek
+hajózik	hajózni	33540	hajózik	hajózni	cselekednek
+ingadozik	ingadozni	33254	ingadozik	ingadozni	cselekednek
+vá©akozik	vá©akozni	33026	vágyakozik	vágyakozni	cselekednek
+tornázik	tornázni	32996	tornázik	tornázni	cselekednek
+vétkezik	vétkezni	32653	vétkezik	vétkezni	cselekednek
+mérkőzik	mérkőzni	32614	mérkőzik	mérkőzni	cselekednek
+meréßkedik	meréßkedni	32469	merészkedik	merészkedni	cselekednek
+elevenedik	elevenedni	32455	elevenedik	elevenedni	cselekednek
+biciklizik	biciklizni	32166	biciklizik	biciklizni	cselekednek
+kamatozik	kamatozni	32078	kamatozik	kamatozni	cselekednek
+termelődik	termelődni	31918	termelődik	termelődni	cselekednek
+ßé©enkezik	ßé©enkezni	31859	szégyenkezik	szégyenkezni	cselekednek
+kockázik	kockázni	31690	kockázik	kockázni	cselekednek
+halmozódik	halmozódni	31519	halmozódik	halmozódni	cselekednek
+értekezik	értekezni	31517	értekezik	értekezni	cselekednek
+rajzolódik	rajzolódni	30853	rajzolódik	rajzolódni	cselekednek
+zongorázik	zongorázni	30452	zongorázik	zongorázni	cselekednek
+bizakodik	bizakodni	30323	bizakodik	bizakodni	cselekednek
+öltözködik	öltözködni	29838	öltözködik	öltözködni	cselekednek
+elbizo¥talanodik	elbizo¥talanodni	29628	elbizonytalanodik	elbizonytalanodni	cselekednek
+íratik	íratni	29583	íratik	íratni	cselekednek
+bizo¥osodik	bizo¥osodni	29527	bizonyosodik	bizonyosodni	cselekednek
+motorozik	motorozni	29136	motorozik	motorozni	cselekednek
+iri©kedik	iri©kedni	28990	irigykedik	irigykedni	cselekednek
+Ωugorodik	Ωugorodni	28285	zsugorodik	zsugorodni	cselekednek
+bosßankodik	bosßankodni	28274	bosszankodik	bosszankodni	cselekednek
+ßeretkezik	ßeretkezni	27905	szeretkezik	szeretkezni	cselekednek
+ülésezik	ülésezni	27682	ülésezik	ülésezni	cselekednek
+tűnődik	tűnődni	27257	tűnődik	tűnődni	cselekednek
+jóllakik	jóllakni	27189	jóllakik	jóllakni	cselekednek
+koncentrálódik	koncentrálódni	27148	koncentrálódik	koncentrálódni	cselekednek
+vergődik	vergődni	27087	vergődik	vergődni	cselekednek
+hangolódik	hangolódni	27076	hangolódik	hangolódni	cselekednek
+ßegődik	ßegődni	26862	szegődik	szegődni	cselekednek
+fe¥egetőzik	fe¥egetőzni	26787	fenyegetőzik	fenyegetőzni	cselekednek
+jeleskedik	jeleskedni	26740	jeleskedik	jeleskedni	cselekednek
+akadozik	akadozni	26700	akadozik	akadozni	cselekednek
+beigazolódik	beigazolódni	26520	beigazolódik	beigazolódni	cselekednek
+erőlködik	erőlködni	26402	erőlködik	erőlködni	cselekednek
+aktiválódik	aktiválódni	26386	aktiválódik	aktiválódni	cselekednek
+regenerálódik	regenerálódni	25980	regenerálódik	regenerálódni	cselekednek
+kutakodik	kutakodni	25692	kutakodik	kutakodni	cselekednek
+viccelődik	viccelődni	25234	viccelődik	viccelődni	cselekednek
+réßesedik	réßesedni	24890	részesedik	részesedni	cselekednek
+idegenkedik	idegenkedni	24833	idegenkedik	idegenkedni	cselekednek
+kalandozik	kalandozni	24738	kalandozik	kalandozni	cselekednek
+záródik	záródni	24424	záródik	záródni	cselekednek
+boçátkozik	boçátkozni	24331	bocsátkozik	bocsátkozni	cselekednek
+napozik	napozni	24323	napozik	napozni	cselekednek
+©őzedelmeskedik	©őzedelmeskedni	24170	győzedelmeskedik	győzedelmeskedni	cselekednek
+vetkőzik	vetkőzni	24148	vetkőzik	vetkőzni	cselekednek
+kávézik	kávézni	24144	kávézik	kávézni	cselekednek
+okoskodik	okoskodni	23651	okoskodik	okoskodni	cselekednek
+kínlódik	kínlódni	23589	kínlódik	kínlódni	cselekednek
+izzik	izzani	23399	izzik	izzani	cselekszenek
+káromkodik	káromkodni	23314	káromkodik	káromkodni	cselekednek
+ma©arázkodik	ma©arázkodni	23077	magyarázkodik	magyarázkodni	cselekednek
+viΩgálódik	viΩgálódni	22746	vizsgálódik	vizsgálódni	cselekednek
+vonakodik	vonakodni	22619	vonakodik	vonakodni	cselekednek
+ßomorkodik	ßomorkodni	22613	szomorkodik	szomorkodni	cselekednek
+keseredik	keseredni	22200	keseredik	keseredni	cselekednek
+ßellőzik	ßellőzni	22012	szellőzik	szellőzni	cselekednek
+vendégeskedik	vendégeskedni	21782	vendégeskedik	vendégeskedni	cselekednek
+ßorítkozik	ßorítkozni	21720	szorítkozik	szorítkozni	cselekednek
+ele©edik	ele©edni	21613	elegyedik	elegyedni	cselekednek
+sűrűsödik	sűrűsödni	21560	sűrűsödik	sűrűsödni	cselekednek
+rágódik	rágódni	21316	rágódik	rágódni	cselekednek
+ßövetkezik	ßövetkezni	21303	szövetkezik	szövetkezni	cselekednek
+takarékoskodik	takarékoskodni	21081	takarékoskodik	takarékoskodni	cselekednek
+tanáçkozik	tanáçkozni	21064	tanácskozik	tanácskozni	cselekednek
+realizálódik	realizálódni	20943	realizálódik	realizálódni	cselekednek
+tojik	tojni	20901	tojik	tojni	cselekednek
+igazolódik	igazolódni	20486	igazolódik	igazolódni	cselekednek
+integrálódik	integrálódni	20468	integrálódik	integrálódni	cselekednek
+informálódik	informálódni	20387	informálódik	informálódni	cselekednek
+ta¥ázik	ta¥ázni	20309	tanyázik	tanyázni	cselekednek
+randizik	randizni	20259	randizik	randizni	cselekednek
+stabilizálódik	stabilizálódni	20254	stabilizálódik	stabilizálódni	cselekednek
+játßadozik	játßadozni	20243	játszadozik	játszadozni	cselekednek
+zuha¥ozik	zuha¥ozni	20011	zuhanyozik	zuhanyozni	cselekednek
+táborozik	táborozni	19944	táborozik	táborozni	cselekednek
+kívánkozik	kívánkozni	19880	kívánkozik	kívánkozni	cselekednek
+elhatárolódik	elhatárolódni	19819	elhatárolódik	elhatárolódni	cselekednek
+hißtizik	hißtizni	19664	hisztizik	hisztizni	cselekednek
+vitorlázik	vitorlázni	19586	vitorlázik	vitorlázni	cselekednek
+kétségbeesik	kétségbeesni	19352	kétségbeesik	kétségbeesni	cselekednek
+leselkedik	leselkedni	19027	leselkedik	leselkedni	cselekednek
+sú¬osbodik	sú¬osbodni	18922	súlyosbodik	súlyosbodni	cselekednek
+késlekedik	késlekedni	18894	késlekedik	késlekedni	cselekednek
+fonódik	fonódni	18743	fonódik	fonódni	cselekednek
+őrködik	őrködni	18581	őrködik	őrködni	cselekednek
+sötétedik	sötétedni	18489	sötétedik	sötétedni	cselekednek
+ábrándozik	ábrándozni	18385	ábrándozik	ábrándozni	cselekednek
+internetezik	internetezni	18384	internetezik	internetezni	cselekednek
+rakódik	rakódni	18327	rakódik	rakódni	cselekednek
+çókolózik	çókolózni	18284	csókolózik	csókolózni	cselekednek
+férkőzik	férkőzni	18255	férkőzik	férkőzni	cselekednek
+óvakodik	óvakodni	18248	óvakodik	óvakodni	cselekednek
+forgolódik	forgolódni	18063	forgolódik	forgolódni	cselekednek
+adakozik	adakozni	17936	adakozik	adakozni	cselekednek
+érlelődik	érlelődni	17933	érlelődik	érlelődni	cselekednek
+alkudik	alkudni	17918	alkudik	alkudni	cselekednek
+bringázik	bringázni	17885	bringázik	bringázni	cselekednek
+ingázik	ingázni	17703	ingázik	ingázni	cselekednek
+terelődik	terelődni	17644	terelődik	terelődni	cselekednek
+háborodik	háborodni	17472	háborodik	háborodni	cselekednek
+állomásozik	állomásozni	17398	állomásozik	állomásozni	cselekednek
+rendezkedik	rendezkedni	17362	rendezkedik	rendezkedni	cselekednek
+lobbizik	lobbizni	17334	lobbizik	lobbizni	cselekednek
+idegeskedik	idegeskedni	17271	idegeskedik	idegeskedni	cselekednek
+ódzkodik	ódzkodni	17257	ódzkodik	ódzkodni	cselekednek
+ßövődik	ßövődni	17256	szövődik	szövődni	cselekednek
+çerélődik	çerélődni	17246	cserélődik	cserélődni	cselekednek
+öröklődik	öröklődni	17166	öröklődik	öröklődni	cselekednek
+verődik	verődni	17097	verődik	verődni	cselekednek
+cikázik	cikázni	17022	cikázik	cikázni	cselekednek
+he¬eződik	he¬eződni	16963	helyeződik	helyeződni	cselekednek
+foháßkodik	foháßkodni	16804	fohászkodik	fohászkodni	cselekednek
+bá¥áßik	bá¥áßni	16534	bányászik	bányászni	cselekednek
+havazik	havazni	16393	havazik	havazni	cselekednek
+takarodik	takarodni	16356	takarodik	takarodni	cselekednek
+fertőződik	fertőződni	16236	fertőződik	fertőződni	cselekednek
+ßáguldozik	ßáguldozni	16139	száguldozik	száguldozni	cselekednek
+sörözik	sörözni	16041	sörözik	sörözni	cselekednek
+foglaltatik	foglaltatni	16039	foglaltatik	foglaltatni	cselekednek
+tanakodik	tanakodni	16021	tanakodik	tanakodni	cselekednek
+kérdezősködik	kérdezősködni	15795	kérdezősködik	kérdezősködni	cselekednek
+falatozik	falatozni	15786	falatozik	falatozni	cselekednek
+öregedik	öregedni	15686	öregedik	öregedni	cselekednek
+irtózik	irtózni	15667	irtózik	irtózni	cselekednek
+ßóródik	ßóródni	15400	szóródik	szóródni	cselekednek
+ßocializálódik	ßocializálódni	15320	szocializálódik	szocializálódni	cselekednek
+vetemedik	vetemedni	15187	vetemedik	vetemedni	cselekednek
+porosodik	porosodni	15132	porosodik	porosodni	cselekednek
+tétlenkedik	tétlenkedni	15046	tétlenkedik	tétlenkedni	cselekednek
+tagolódik	tagolódni	14997	tagolódik	tagolódni	cselekednek
+kertéßkedik	kertéßkedni	14951	kertészkedik	kertészkedni	cselekednek
+rosßabbodik	rosßabbodni	14933	rosszabbodik	rosszabbodni	cselekednek
+bánkódik	bánkódni	14891	bánkódik	bánkódni	cselekednek
+¥újtózkodik	¥újtózkodni	14864	nyújtózkodik	nyújtózkodni	cselekednek
+hadakozik	hadakozni	14604	hadakozik	hadakozni	cselekednek
+sértődik	sértődni	14545	sértődik	sértődni	cselekednek
+alkudozik	alkudozni	14494	alkudozik	alkudozni	cselekednek
+tapogatózik	tapogatózni	14479	tapogatózik	tapogatózni	cselekednek
+tévézik	tévézni	14352	tévézik	tévézni	cselekednek
+bíbelődik	bíbelődni	14337	bíbelődik	bíbelődni	cselekednek
+undorodik	undorodni	14293	undorodik	undorodni	cselekednek
+vá©ódik	vá©ódni	14271	vágyódik	vágyódni	cselekednek
+ßélesedik	ßélesedni	14264	szélesedik	szélesedni	cselekednek
+sajnálkozik	sajnálkozni	14151	sajnálkozik	sajnálkozni	cselekednek
+siránkozik	siránkozni	14018	siránkozik	siránkozni	cselekednek
+sakkozik	sakkozni	14004	sakkozik	sakkozni	cselekednek
+kacérkodik	kacérkodni	13978	kacérkodik	kacérkodni	cselekednek
+e©ßerűsödik	e©ßerűsödni	13942	egyszerűsödik	egyszerűsödni	cselekednek
+iparkodik	iparkodni	13706	iparkodik	iparkodni	cselekednek
+telítődik	telítődni	13702	telítődik	telítődni	cselekednek
+betegedik	betegedni	13663	betegedik	betegedni	cselekednek
+harangozik	harangozni	13662	harangozik	harangozni	cselekednek
+burkolózik	burkolózni	13652	burkolózik	burkolózni	cselekednek
+rejtőzködik	rejtőzködni	13531	rejtőzködik	rejtőzködni	cselekednek
+hazudozik	hazudozni	13233	hazudozik	hazudozni	cselekednek
+videózik	videózni	13191	videózik	videózni	cselekednek
+bókláßik	bókláßni	13080	bóklászik	bóklászni	cselekednek
+çeperedik	çeperedni	13071	cseperedik	cseperedni	cselekednek
+çatázik	çatázni	12946	csatázik	csatázni	cselekednek
+gú¥olódik	gú¥olódni	12545	gúnyolódik	gúnyolódni	cselekednek
+sokasodik	sokasodni	12473	sokasodik	sokasodni	cselekednek
+éjßakázik	éjßakázni	12361	éjszakázik	éjszakázni	cselekednek
+dobálózik	dobálózni	12200	dobálózik	dobálózni	cselekednek
+specializálódik	specializálódni	12027	specializálódik	specializálódni	cselekednek
+tißtázódik	tißtázódni	11908	tisztázódik	tisztázódni	cselekednek
+ßikrázik	ßikrázni	11894	szikrázik	szikrázni	cselekednek
+ßűrődik	ßűrődni	11887	szűrődik	szűrődni	cselekednek
+háborúzik	háborúzni	11765	háborúzik	háborúzni	cselekednek
+tobzódik	tobzódni	11742	tobzódik	tobzódni	cselekednek
+ágazik	ágazni	11732	ágazik	ágazni	cselekednek
+vágódik	vágódni	11694	vágódik	vágódni	cselekednek
+hitetlenkedik	hitetlenkedni	11667	hitetlenkedik	hitetlenkedni	cselekednek
+çúçosodik	çúçosodni	11605	csúcsosodik	csúcsosodni	cselekednek
+cigizik	cigizni	11452	cigizik	cigizni	cselekednek
+deformálódik	deformálódni	11452	deformálódik	deformálódni	cselekednek
+sóhajtozik	sóhajtozni	11449	sóhajtozik	sóhajtozni	cselekednek
+moso¬odik	moso¬odni	11411	mosolyodik	mosolyodni	cselekednek
+vetkezik	vetkezni	11392	vetkezik	vetkezni	cselekednek
+foglalatoskodik	foglalatoskodni	11387	foglalatoskodik	foglalatoskodni	cselekednek
+áradozik	áradozni	11351	áradozik	áradozni	cselekednek
+tenißezik	tenißezni	11338	teniszezik	teniszezni	cselekednek
+veßődik	veßődni	11312	vesződik	vesződni	cselekednek
+ötvöződik	ötvöződni	11295	ötvöződik	ötvöződni	cselekednek
+zavarodik	zavarodni	11253	zavarodik	zavarodni	cselekednek
+ü©ködik	ü©ködni	11226	ügyködik	ügyködni	cselekednek
+értetlenkedik	értetlenkedni	11124	értetlenkedik	értetlenkedni	cselekednek
+roskadozik	roskadozni	11094	roskadozik	roskadozni	cselekednek
+ü©eskedik	ü©eskedni	11033	ügyeskedik	ügyeskedni	cselekednek
+viaskodik	viaskodni	10940	viaskodik	viaskodni	cselekednek
+garázdálkodik	garázdálkodni	10887	garázdálkodik	garázdálkodni	cselekednek
+megmártózik	megmártózni	10881	megmártózik	megmártózni	cselekednek
+kár†ázik	kár†ázni	10854	kártyázik	kártyázni	cselekednek
+normalizálódik	normalizálódni	10836	normalizálódik	normalizálódni	cselekednek
+ßigorodik	ßigorodni	10812	szigorodik	szigorodni	cselekednek
+ladik	ladni	10803	ladik	ladni	cselekednek
+kérkedik	kérkedni	10714	kérkedik	kérkedni	cselekednek
+bohóckodik	bohóckodni	10687	bohóckodik	bohóckodni	cselekednek
+ßervezkedik	ßervezkedni	10558	szervezkedik	szervezkedni	cselekednek
+tengődik	tengődni	10351	tengődik	tengődni	cselekednek
+hadonáßik	hadonáßni	10296	hadonászik	hadonászni	cselekednek
+¥újtózik	¥újtózni	10262	nyújtózik	nyújtózni	cselekednek
+taktikázik	taktikázni	10243	taktikázik	taktikázni	cselekednek
+ßűkölködik	ßűkölködni	10233	szűkölködik	szűkölködni	cselekednek
+vetélkedik	vetélkedni	10217	vetélkedik	vetélkedni	cselekednek
+manifeßtálódik	manifeßtálódni	10142	manifesztálódik	manifesztálódni	cselekednek
+különválik	különválni	10059	különválik	különválni	cselekednek
+búvárkodik	búvárkodni	10030	búvárkodik	búvárkodni	cselekednek
+oßtódik	oßtódni	9844	osztódik	osztódni	cselekednek
+esedezik	esedezni	9804	esedezik	esedezni	cselekednek
+böngéßik	böngéßeni	9773	böngészik	böngészeni	cselekednek
+bátorkodik	bátorkodni	9746	bátorkodik	bátorkodni	cselekednek
+világosodik	világosodni	9640	világosodik	világosodni	cselekednek
+méltatlankodik	méltatlankodni	9608	méltatlankodik	méltatlankodni	cselekednek
+kí©ózik	kí©ózni	9592	kígyózik	kígyózni	cselekednek
+méltóztatik	méltóztatni	9550	méltóztatik	méltóztatni	cselekednek
+kétkedik	kétkedni	9459	kétkedik	kétkedni	cselekednek
+e©ezkedik	e©ezkedni	9405	egyezkedik	egyezkedni	cselekednek
+élősködik	élősködni	9346	élősködik	élősködni	cselekednek
+hintázik	hintázni	9317	hintázik	hintázni	cselekednek
+kémkedik	kémkedni	9300	kémkedik	kémkedni	cselekednek
+futkározik	futkározni	9294	futkározik	futkározni	cselekednek
+heveréßik	heveréßni	9293	heverészik	heverészni	cselekednek
+çavarodik	çavarodni	9265	csavarodik	csavarodni	cselekednek
+áhítozik	áhítozni	9214	áhítozik	áhítozni	cselekednek
+betegeskedik	betegeskedni	9158	betegeskedik	betegeskedni	cselekednek
+fosik	fosni	9133	fosik	fosni	cselekednek
+dívik	dívni	9090	dívik	dívni	cselekednek
+bűnhődik	bűnhődni	9071	bűnhődik	bűnhődni	cselekednek
+túlórázik	túlórázni	9066	túlórázik	túlórázni	cselekednek
+akarózik	akaródzni	9063	akarózik	akaródzni	cselekednek
+felejtkezik	felejtkezni	9049	felejtkezik	felejtkezni	cselekednek
+aggodalmaskodik	aggodalmaskodni	9029	aggodalmaskodik	aggodalmaskodni	cselekednek
+te¥éßik	te¥éßni	8988	tenyészik	tenyészni	cselekednek
+fo©atkozik	fo©atkozni	8930	fogyatkozik	fogyatkozni	cselekednek
+kristá¬osodik	kristá¬osodni	8901	kristályosodik	kristályosodni	cselekednek
+ugrándozik	ugrándozni	8866	ugrándozik	ugrándozni	cselekednek
+parádézik	parádézni	8833	parádézik	parádézni	cselekednek
+botladozik	botladozni	8796	botladozik	botladozni	cselekednek
+ßabadkozik	ßabadkozni	8713	szabadkozik	szabadkozni	cselekednek
+ringatózik	ringatózni	8674	ringatózik	ringatózni	cselekednek
+temetkezik	temetkezni	8649	temetkezik	temetkezni	cselekednek
+hangoskodik	hangoskodni	8641	hangoskodik	hangoskodni	cselekednek
+hallgatózik	hallgatózni	8614	hallgatózik	hallgatózni	cselekednek
+mérgelődik	mérgelődni	8595	mérgelődik	mérgelődni	cselekednek
+hü¬éskedik	hü¬éskedni	8587	hülyéskedik	hülyéskedni	cselekednek
+ßen¥eződik	ßen¥eződni	8575	szennyeződik	szennyeződni	cselekednek
+élesedik	élesedni	8529	élesedik	élesedni	cselekednek
+visßakozik	visßakozni	8527	visszakozik	visszakozni	cselekednek
+tekeredik	tekeredni	8524	tekeredik	tekeredni	cselekednek
+bénázik	bénázni	8505	bénázik	bénázni	cselekednek
+megteremtődik	megteremtődni	8498	megteremtődik	megteremtődni	cselekednek
+fukarkodik	fukarkodni	8454	fukarkodik	fukarkodni	cselekednek
+fo©ókúrázik	fo©ókúrázni	8411	fogyókúrázik	fogyókúrázni	cselekednek
+kézilabdázik	kézilabdázni	8370	kézilabdázik	kézilabdázni	cselekednek
+leledzik	leledzeni	8370	leledzik	leledzeni	cselekszenek
+sikoltozik	sikoltozni	8245	sikoltozik	sikoltozni	cselekednek
+ßállingózik	ßállingózni	8178	szállingózik	szállingózni	cselekednek
+raboskodik	raboskodni	8171	raboskodik	raboskodni	cselekednek
+çajozik	çajozni	8156	csajozik	csajozni	cselekednek
+ßorgoskodik	ßorgoskodni	8106	szorgoskodik	szorgoskodni	cselekednek
+példálózik	példálózni	8093	példálózik	példálózni	cselekednek
+brillírozik	brillírozni	8089	brillírozik	brillírozni	cselekednek
+búslakodik	búslakodni	8087	búslakodik	búslakodni	cselekednek
+pofázik	pofázni	8073	pofázik	pofázni	cselekednek
+fogadkozik	fogadkozni	8046	fogadkozik	fogadkozni	cselekednek
+kemé¥edik	kemé¥edni	8028	keményedik	keményedni	cselekednek
+fúródik	fúródni	8002	fúródik	fúródni	cselekednek
+erősködik	erősködni	7991	erősködik	erősködni	cselekednek
+ßör¥ülködik	ßör¥ülködni	7983	szörnyülködik	szörnyülködni	cselekednek
+ékelődik	ékelődni	7970	ékelődik	ékelődni	cselekednek
+ismerßik	ismerßeni	7941	ismerszik	ismerszeni	cselekszenek
+tudatosodik	tudatosodni	7937	tudatosodik	tudatosodni	cselekednek
+poénkodik	poénkodni	7916	poénkodik	poénkodni	cselekednek
+rakodik	rakodni	7911	rakodik	rakodni	cselekednek
+ßemlélődik	ßemlélődni	7906	szemlélődik	szemlélődni	cselekednek
+©ötrődik	©ötrődni	7873	gyötrődik	gyötrődni	cselekednek
+kerekezik	kerekezni	7868	kerekezik	kerekezni	cselekednek
+teázik	teázni	7811	teázik	teázni	cselekednek
+ordítozik	ordítozni	7808	ordítozik	ordítozni	cselekednek
+cigarettázik	cigarettázni	7767	cigarettázik	cigarettázni	cselekednek
+rugózik	rugózni	7753	rugózik	rugózni	cselekednek
+kosarazik	kosarazni	7721	kosarazik	kosarazni	cselekednek
+értetődik	értetődni	7670	értetődik	értetődni	cselekednek
+sütkérezik	sütkérezni	7654	sütkérezik	sütkérezni	cselekednek
+lábadozik	lábadozni	7640	lábadozik	lábadozni	cselekednek
+borotválkozik	borotválkozni	7593	borotválkozik	borotválkozni	cselekednek
+té¥kedik	té¥kedni	7581	ténykedik	ténykedni	cselekednek
+tagozódik	tagozódni	7570	tagozódik	tagozódni	cselekednek
+finomodik	finomodni	7558	finomodik	finomodni	cselekednek
+pereskedik	pereskedni	7520	pereskedik	pereskedni	cselekednek
+jótéko¥kodik	jótéko¥kodni	7517	jótékonykodik	jótékonykodni	cselekednek
+ivódik	ivódni	7486	ivódik	ivódni	cselekednek
+töltekezik	töltekezni	7443	töltekezik	töltekezni	cselekednek
+©ön©özik	©ön©özni	7379	gyöngyözik	gyöngyözni	cselekednek
+ßínéßkedik	ßínéßkedni	7379	színészkedik	színészkedni	cselekednek
+ßíneződik	ßíneződni	7341	színeződik	színeződni	cselekednek
+bogaráßik	bogaráßni	7314	bogarászik	bogarászni	cselekednek
+vigaßtalódik	vigaßtalódni	7309	vigasztalódik	vigasztalódni	cselekednek
+labdázik	labdázni	7296	labdázik	labdázni	cselekednek
+rugaßkodik	rugaßkodni	7279	rugaszkodik	rugaszkodni	cselekednek
+ßegeződik	ßegeződni	7210	szegeződik	szegeződni	cselekednek
+káprázik	káprázni	7191	káprázik	káprázni	cselekednek
+meghajlik	meghajlani	7178	meghajlik	meghajlani	cselekszenek
+edződik	edződni	7138	edződik	edződni	cselekednek
+redukálódik	redukálódni	7123	redukálódik	redukálódni	cselekednek
+honosodik	honosodni	7111	honosodik	honosodni	cselekednek
+roΩdásodik	roΩdásodni	7072	rozsdásodik	rozsdásodni	cselekednek
+hosßabbodik	hosßabbodni	7064	hosszabbodik	hosszabbodni	cselekednek
+kötözködik	kötözködni	6981	kötözködik	kötözködni	cselekednek
+çírázik	çírázni	6977	csírázik	csírázni	cselekednek
+ßabá¬talankodik	ßabá¬talankodni	6970	szabálytalankodik	szabálytalankodni	cselekednek
+éktelenkedik	éktelenkedni	6966	éktelenkedik	éktelenkedni	cselekednek
+mozgolódik	mozgolódni	6963	mozgolódik	mozgolódni	cselekednek
+karambolozik	karambolozni	6946	karambolozik	karambolozni	cselekednek
+ßakadozik	ßakadozni	6941	szakadozik	szakadozni	cselekednek
+oxidálódik	oxidálódni	6931	oxidálódik	oxidálódni	cselekednek
+erőßakoskodik	erőßakoskodni	6921	erőszakoskodik	erőszakoskodni	cselekednek
+©engélkedik	©engélkedni	6911	gyengélkedik	gyengélkedni	cselekednek
+fiatalodik	fiatalodni	6846	fiatalodik	fiatalodni	cselekednek
+terpeßkedik	terpeßkedni	6802	terpeszkedik	terpeszkedni	cselekednek
+tornáßik	tornáßni	6772	tornászik	tornászni	cselekednek
+ßemé¬eskedik	ßemé¬eskedni	6741	személyeskedik	személyeskedni	cselekednek
+sopánkodik	sopánkodni	6686	sopánkodik	sopánkodni	cselekednek
+okosodik	okosodni	6651	okosodik	okosodni	cselekednek
+őrlődik	őrlődni	6626	őrlődik	őrlődni	cselekednek
+vonatozik	vonatozni	6608	vonatozik	vonatozni	cselekednek
+¥ugtalankodik	¥ugtalankodni	6592	nyugtalankodik	nyugtalankodni	cselekednek
+ßitkozódik	ßitkozódni	6590	szitkozódik	szitkozódni	cselekednek
+á©azódik	á©azódni	6589	ágyazódik	ágyazódni	cselekednek
+nekiveselkedik	nekiveselkedni	6567	nekiveselkedik	nekiveselkedni	cselekednek
+hibásodik	hibásodni	6561	hibásodik	hibásodni	cselekednek
+lustálkodik	lustálkodni	6541	lustálkodik	lustálkodni	cselekednek
+torlódik	torlódni	6519	torlódik	torlódni	cselekednek
+çendesedik	çendesedni	6494	csendesedik	csendesedni	cselekednek
+çónakázik	çónakázni	6485	csónakázik	csónakázni	cselekednek
+çißolódik	çißolódni	6459	csiszolódik	csiszolódni	cselekednek
+oßtozkodik	oßtozkodni	6441	osztozkodik	osztozkodni	cselekednek
+orientálódik	orientálódni	6365	orientálódik	orientálódni	cselekednek
+leáldozik	leáldozni	6342	leáldozik	leáldozni	cselekednek
+fa©izik	fa©izni	6324	fagyizik	fagyizni	cselekednek
+rázkódik	rázkódni	6310	rázkódik	rázkódni	cselekednek
+kardoskodik	kardoskodni	6275	kardoskodik	kardoskodni	cselekednek
+elégedetlenkedik	elégedetlenkedni	6274	elégedetlenkedik	elégedetlenkedni	cselekednek
+ölelkezik	ölelkezni	6267	ölelkezik	ölelkezni	cselekednek
+tegeződik	tegeződni	6254	tegeződik	tegeződni	cselekednek
+párolódik	párolódni	6253	párolódik	párolódni	cselekednek
+rosßalkodik	rosßalkodni	6227	rosszalkodik	rosszalkodni	cselekednek
+kotoráßik	kotoráßni	6224	kotorászik	kotorászni	cselekednek
+zúgolódik	zúgolódni	6221	zúgolódik	zúgolódni	cselekednek
+ólálkodik	ólálkodni	6185	ólálkodik	ólálkodni	cselekednek
+©űlölködik	©űlölködni	6178	gyűlölködik	gyűlölködni	cselekednek
+tißtálkodik	tißtálkodni	6177	tisztálkodik	tisztálkodni	cselekednek
+hozakodik	hozakodni	6156	hozakodik	hozakodni	cselekednek
+költekezik	költekezni	6117	költekezik	költekezni	cselekednek
+kapálózik	kapálózni	6110	kapálózik	kapálózni	cselekednek
+kiéleződik	kiéleződni	6075	kiéleződik	kiéleződni	cselekednek
+báméßkodik	báméßkodni	6070	bámészkodik	bámészkodni	cselekednek
+elfelejtődik	elfelejtődni	6065	elfelejtődik	elfelejtődni	cselekednek
+domborodik	domborodni	6046	domborodik	domborodni	cselekednek
+melózik	melózni	6036	melózik	melózni	cselekednek
+megőrződik	megőrződni	5984	megőrződik	megőrződni	cselekednek
+pecázik	pecázni	5981	pecázik	pecázni	cselekednek
+raktározódik	raktározódni	5977	raktározódik	raktározódni	cselekednek
+©űrődik	©űrődni	5974	gyűrődik	gyűrődni	cselekednek
+vívódik	vívódni	5972	vívódik	vívódni	cselekednek
+halvá¥odik	halvá¥odni	5957	halványodik	halványodni	cselekednek
+vajúdik	vajúdni	5934	vajúdik	vajúdni	cselekednek
+hálálkodik	hálálkodni	5921	hálálkodik	hálálkodni	cselekednek
+bűnözik	bűnözni	5915	bűnözik	bűnözni	cselekednek
+çukódik	çukódni	5898	csukódik	csukódni	cselekednek
+vedlik	vedleni	5893	vedlik	vedleni	cselekszenek
+függetlenedik	függetlenedni	5837	függetlenedik	függetlenedni	cselekednek
+randevúzik	randevúzni	5799	randevúzik	randevúzni	cselekednek
+hibádzik	hibádzani	5785	hibádzik	hibádzani	cselekszenek
+tépelődik	tépelődni	5780	tépelődik	tépelődni	cselekednek
+¥omódik	¥omódni	5776	nyomódik	nyomódni	cselekednek
+esteledik	esteledni	5772	esteledik	esteledni	cselekednek
+álmélkodik	álmélkodni	5761	álmélkodik	álmélkodni	cselekednek
+asßimilálódik	asßimilálódni	5757	asszimilálódik	asszimilálódni	cselekednek
+vádaskodik	vádaskodni	5755	vádaskodik	vádaskodni	cselekednek
+koçikázik	koçikázni	5753	kocsikázik	kocsikázni	cselekednek
+gaba¬odik	gaba¬odni	5752	gabalyodik	gabalyodni	cselekednek
+terebé¬esedik	terebé¬esedni	5751	terebélyesedik	terebélyesedni	cselekednek
+ágaskodik	ágaskodni	5740	ágaskodik	ágaskodni	cselekednek
+furikázik	furikázni	5701	furikázik	furikázni	cselekednek
+ßarakodik	ßarakodni	5699	szarakodik	szarakodni	cselekednek
+adósodik	adósodni	5682	adósodik	adósodni	cselekednek
+elhajlik	elhajolni	5678	elhajlik	elhajolni	cselekszenek
+kosárlabdázik	kosárlabdázni	5674	kosárlabdázik	kosárlabdázni	cselekednek
+há¥kolódik	há¥kolódni	5657	hánykolódik	hánykolódni	cselekednek
+mosódik	mosódni	5652	mosódik	mosódni	cselekednek
+aßik	aßni	5633	aszik	aszni	cselekednek
+lázadozik	lázadozni	5616	lázadozik	lázadozni	cselekednek
+ßánkózik	ßánkózni	5609	szánkózik	szánkózni	cselekednek
+megpeçételődik	megpeçételődni	5601	megpecsételődik	megpecsételődni	cselekednek
+merevedik	merevedni	5585	merevedik	merevedni	cselekednek
+tréfálkozik	tréfálkozni	5571	tréfálkozik	tréfálkozni	cselekednek
+ßínesedik	ßínesedni	5561	színesedik	színesedni	cselekednek
+rángatózik	rángatózni	5548	rángatózik	rángatózni	cselekednek
+ütődik	ütődni	5543	ütődik	ütődni	cselekednek
+bábáskodik	bábáskodni	5536	bábáskodik	bábáskodni	cselekednek
+©akorlatozik	©akorlatozni	5524	gyakorlatozik	gyakorlatozni	cselekednek
+ékeskedik	ékeskedni	5504	ékeskedik	ékeskedni	cselekednek
+duplázódik	duplázódni	5425	duplázódik	duplázódni	cselekednek
+çörgedezik	çörgedezni	5422	csörgedezik	csörgedezni	cselekednek
+kováçolódik	kováçolódni	5421	kovácsolódik	kovácsolódni	cselekednek
+féßkelődik	féßkelődni	5381	fészkelődik	fészkelődni	cselekednek
+töredezik	töredezni	5353	töredezik	töredezni	cselekednek
+mesterkedik	mesterkedni	5352	mesterkedik	mesterkedni	cselekednek
+haßnálódik	haßnálódni	5306	használódik	használódni	cselekednek
+babázik	babázni	5288	babázik	babázni	cselekednek
+levegőzik	levegőzni	5286	levegőzik	levegőzni	cselekednek
+elké¥elmesedik	elké¥elmesedni	5281	elkényelmesedik	elkényelmesedni	cselekednek
+értékelődik	értékelődni	5267	értékelődik	értékelődni	cselekednek
+vésődik	vésődni	5252	vésődik	vésődni	cselekednek
+képzelődik	képzelődni	5210	képzelődik	képzelődni	cselekednek
+kallódik	kallódni	5181	kallódik	kallódni	cselekednek
+kereßtelkedik	kereßtelkedni	5156	keresztelkedik	keresztelkedni	cselekednek
+finomkodik	finomkodni	5135	finomkodik	finomkodni	cselekednek
+epekedik	epekedni	5130	epekedik	epekedni	cselekednek
+Ωírosodik	Ωírosodni	5118	zsírosodik	zsírosodni	cselekednek
+lakmározik	lakmározni	5103	lakmározik	lakmározni	cselekednek
+kergetőzik	kergetőzni	5058	kergetőzik	kergetőzni	cselekednek
+fordítódik	fordítódni	5050	fordítódik	fordítódni	cselekednek
+fa©oskodik	fa©oskodni	5038	fagyoskodik	fagyoskodni	cselekednek
+rádiózik	rádiózni	5003	rádiózik	rádiózni	cselekednek
+sáfárkodik	sáfárkodni	4988	sáfárkodik	sáfárkodni	cselekednek
+leskelődik	leskelődni	4977	leskelődik	leskelődni	cselekednek
+bußozik	bußozni	4958	buszozik	buszozni	cselekednek
+bujdosik	bujdosni	4942	bujdosik	bujdosni	cselekednek
+hajókázik	hajókázni	4918	hajókázik	hajókázni	cselekednek
+sí¥lődik	sí¥lődni	4915	sínylődik	sínylődni	cselekednek
+tudakozódik	tudakozódni	4897	tudakozódik	tudakozódni	cselekednek
+idősödik	idősödni	4870	idősödik	idősödni	cselekednek
+oçúdik	oçúdni	4854	ocsúdik	ocsúdni	cselekednek
+önállósodik	önállósodni	4835	önállósodik	önállósodni	cselekednek
+kenődik	kenődni	4832	kenődik	kenődni	cselekednek
+ßiporkázik	ßiporkázni	4822	sziporkázik	sziporkázni	cselekednek
+vágtázik	vágtázni	4820	vágtázik	vágtázni	cselekednek
+párosodik	párosodni	4817	párosodik	párosodni	cselekednek
+pakoláßik	pakoláßni	4806	pakolászik	pakolászni	cselekednek
+kifizetődik	kifizetődni	4792	kifizetődik	kifizetődni	cselekednek
+çalatkozik	çalatkozni	4769	csalatkozik	csalatkozni	cselekednek
+nevelődik	nevelődni	4747	nevelődik	nevelődni	cselekednek
+izmosodik	izmosodni	4740	izmosodik	izmosodni	cselekednek
+problémázik	problémázni	4720	problémázik	problémázni	cselekednek
+paráználkodik	paráználkodni	4716	paráználkodik	paráználkodni	cselekednek
+Ωúfolódik	Ωúfolódni	4651	zsúfolódik	zsúfolódni	cselekednek
+hüledezik	hüledezni	4646	hüledezik	hüledezni	cselekednek
+hancúrozik	hancúrozni	4623	hancúrozik	hancúrozni	cselekednek
+kajakozik	kajakozni	4622	kajakozik	kajakozni	cselekednek
+ßerençétlenkedik	ßerençétlenkedni	4615	szerencsétlenkedik	szerencsétlenkedni	cselekednek
+ajánlkozik	ajánlkozni	4605	ajánlkozik	ajánlkozni	cselekednek
+penéßedik	penéßedni	4601	penészedik	penészedni	cselekednek
+kívánçiskodik	kívánçiskodni	4599	kíváncsiskodik	kíváncsiskodni	cselekednek
+rejtezik	rejtezni	4572	rejtezik	rejtezni	cselekednek
+kárhozik	kárhozni	4546	kárhozik	kárhozni	cselekednek
+differenciálódik	differenciálódni	4532	differenciálódik	differenciálódni	cselekednek
+élcelődik	élcelődni	4503	élcelődik	élcelődni	cselekednek
+puskázik	puskázni	4497	puskázik	puskázni	cselekednek
+vitézkedik	vitézkedni	4493	vitézkedik	vitézkedni	cselekednek
+Ωidózik	Ωidózni	4452	zsidózik	zsidózni	cselekednek
+mókázik	mókázni	4444	mókázik	mókázni	cselekednek
+morgolódik	morgolódni	4429	morgolódik	morgolódni	cselekednek
+mélázik	mélázni	4413	mélázik	mélázni	cselekednek
+iramodik	iramodni	4404	iramodik	iramodni	cselekednek
+véko¥odik	véko¥odni	4362	vékonyodik	vékonyodni	cselekednek
+vastagodik	vastagodni	4356	vastagodik	vastagodni	cselekednek
+çimpaßkodik	çimpaßkodni	4352	csimpaszkodik	csimpaszkodni	cselekednek
+datálódik	datálódni	4294	datálódik	datálódni	cselekednek
+rongálódik	rongálódni	4253	rongálódik	rongálódni	cselekednek
+fulladozik	fulladozni	4240	fulladozik	fulladozni	cselekednek
+cipekedik	cipekedni	4233	cipekedik	cipekedni	cselekednek
+ßeré¥kedik	ßeré¥kedni	4231	szerénykedik	szerénykedni	cselekednek
+forrósodik	forrósodni	4210	forrósodik	forrósodni	cselekednek
+kidomborodik	kidomborodni	4199	kidomborodik	kidomborodni	cselekednek
+teketóriázik	teketóriázni	4193	teketóriázik	teketóriázni	cselekednek
+bizo¥talankodik	bizo¥talankodni	4183	bizonytalankodik	bizonytalankodni	cselekednek
+élvezkedik	élvezkedni	4178	élvezkedik	élvezkedni	cselekednek
+művelődik	művelődni	4170	művelődik	művelődni	cselekednek
+rimánkodik	rimánkodni	4130	rimánkodik	rimánkodni	cselekednek
+fingik	fingani	4111	fingik	fingani	cselekszenek
+végrendelkezik	végrendelkezni	4099	végrendelkezik	végrendelkezni	cselekednek
+filmezik	filmezni	4060	filmezik	filmezni	cselekednek
+kitárulkozik	kitárulkozni	4038	kitárulkozik	kitárulkozni	cselekednek
+pironkodik	pironkodni	4029	pironkodik	pironkodni	cselekednek
+adaptálódik	adaptálódni	4014	adaptálódik	adaptálódni	cselekednek
+éledezik	éledezni	4011	éledezik	éledezni	cselekednek
+röplabdázik	röplabdázni	3986	röplabdázik	röplabdázni	cselekednek
+dulakodik	dulakodni	3982	dulakodik	dulakodni	cselekednek
+megfeneklik	megfenekleni	3977	megfeneklik	megfenekleni	cselekszenek
+rohangáßik	rohangáßni	3976	rohangászik	rohangászni	cselekednek
+rázódik	rázódni	3960	rázódik	rázódni	cselekednek
+Ωonglőrködik	Ωonglőrködni	3950	zsonglőrködik	zsonglőrködni	cselekednek
+bérmálkozik	bérmálkozni	3946	bérmálkozik	bérmálkozni	cselekednek
+kuporodik	kuporodni	3941	kuporodik	kuporodni	cselekednek
+leértékelődik	leértékelődni	3934	leértékelődik	leértékelődni	cselekednek
+kamuzik	kamuzni	3933	kamuzik	kamuzni	cselekednek
+kempingezik	kempingezni	3918	kempingezik	kempingezni	cselekednek
+komo¬odik	komo¬odni	3885	komolyodik	komolyodni	cselekednek
+alapozódik	alapozódni	3867	alapozódik	alapozódni	cselekednek
+bicajozik	bicajozni	3866	bicajozik	bicajozni	cselekednek
+©ökeredzik	©ökeredzeni	3833	gyökeredzik	gyökeredzeni	cselekszenek
+vakarózik	vakaródzni	3785	vakarózik	vakaródzni	cselekednek
+ráncosodik	ráncosodni	3780	ráncosodik	ráncosodni	cselekednek
+markoláßik	markoláßni	3773	markolászik	markolászni	cselekednek
+nedvesedik	nedvesedni	3755	nedvesedik	nedvesedni	cselekednek
+takarózik	takaródzni	3750	takarózik	takaródzni	cselekednek
+átkozódik	átkozódni	3739	átkozódik	átkozódni	cselekednek
+kozmetikázik	kozmetikázni	3731	kozmetikázik	kozmetikázni	cselekednek
+akadékoskodik	akadékoskodni	3726	akadékoskodik	akadékoskodni	cselekednek
+mállik	mállani	3720	mállik	mállani	cselekszenek
+verejtékezik	verejtékezni	3711	verejtékezik	verejtékezni	cselekednek
+morΩolódik	morΩolódni	3703	morzsolódik	morzsolódni	cselekednek
+hatódik	hatódni	3690	hatódik	hatódni	cselekednek
+mosdik	mosdani	3663	mosdik	mosdani	cselekszenek
+seré¥kedik	seré¥kedni	3658	serénykedik	serénykedni	cselekednek
+vagdalkozik	vagdalkozni	3657	vagdalkozik	vagdalkozni	cselekednek
+hu©ozik	hu©ozni	3653	hugyozik	hugyozni	cselekednek
+himbálózik	himbálózni	3641	himbálózik	himbálózni	cselekednek
+tökéletesedik	tökéletesedni	3633	tökéletesedik	tökéletesedni	cselekednek
+berzenkedik	berzenkedni	3632	berzenkedik	berzenkedni	cselekednek
+hajnalodik	hajnalodni	3624	hajnalodik	hajnalodni	cselekednek
+marakodik	marakodni	3621	marakodik	marakodni	cselekednek
+bíráskodik	bíráskodni	3616	bíráskodik	bíráskodni	cselekednek
+degradálódik	degradálódni	3616	degradálódik	degradálódni	cselekednek
+felidéződik	felidéződni	3614	felidéződik	felidéződni	cselekednek
+elharapózik	elharapódzni	3610	elharapózik	elharapódzni	cselekednek
+pipázik	pipázni	3608	pipázik	pipázni	cselekednek
+konßolidálódik	konßolidálódni	3601	konszolidálódik	konszolidálódni	cselekednek
+bűvéßkedik	bűvéßkedni	3597	bűvészkedik	bűvészkedni	cselekednek
+koßolódik	koßolódni	3595	koszolódik	koszolódni	cselekednek
+settenkedik	settenkedni	3595	settenkedik	settenkedni	cselekednek
+olvadozik	olvadozni	3573	olvadozik	olvadozni	cselekednek
+áçingózik	áçingózni	3563	ácsingózik	ácsingózni	cselekednek
+fe©verkezik	fe©verkezni	3563	fegyverkezik	fegyverkezni	cselekednek
+ßegé¥edik	ßegé¥edni	3561	szegényedik	szegényedni	cselekednek
+zö†kölődik	zö†kölődni	3556	zötykölődik	zötykölődni	cselekednek
+ásítozik	ásítozni	3555	ásítozik	ásítozni	cselekednek
+e¥éßik	e¥éßni	3553	enyészik	enyészni	cselekednek
+sikítozik	sikítozni	3535	sikítozik	sikítozni	cselekednek
+hahotázik	hahotázni	3528	hahotázik	hahotázni	cselekednek
+haverkodik	haverkodni	3524	haverkodik	haverkodni	cselekednek
+pingpongozik	pingpongozni	3522	pingpongozik	pingpongozni	cselekednek
+ronçolódik	ronçolódni	3517	roncsolódik	roncsolódni	cselekednek
+gömbö¬ödik	gömbö¬ödni	3513	gömbölyödik	gömbölyödni	cselekednek
+botránkozik	botránkozni	3482	botránkozik	botránkozni	cselekednek
+hivalkodik	hivalkodni	3478	hivalkodik	hivalkodni	cselekednek
+kezeskedik	kezeskedni	3469	kezeskedik	kezeskedni	cselekednek
+türelmetlenkedik	türelmetlenkedni	3453	türelmetlenkedik	türelmetlenkedni	cselekednek
+mulatozik	mulatozni	3429	mulatozik	mulatozni	cselekednek
+italozik	italozni	3410	italozik	italozni	cselekednek
+nemesedik	nemesedni	3366	nemesedik	nemesedni	cselekednek
+költözködik	költözködni	3358	költözködik	költözködni	cselekednek
+párbajozik	párbajozni	3357	párbajozik	párbajozni	cselekednek
+fűlik	fűlni	3353	fűlik	fűlni	cselekednek
+ißo¥odik	ißo¥odni	3335	iszonyodik	iszonyodni	cselekednek
+ámuldozik	ámuldozni	3333	ámuldozik	ámuldozni	cselekednek
+terhelődik	terhelődni	3333	terhelődik	terhelődni	cselekednek
+e©enesedik	e©enesedni	3332	egyenesedik	egyenesedni	cselekednek
+fehéredik	fehéredni	3331	fehéredik	fehéredni	cselekednek
+Ωörtölődik	Ωörtölődni	3330	zsörtölődik	zsörtölődni	cselekednek
+kekeckedik	kekeckedni	3302	kekeckedik	kekeckedni	cselekednek
+ösßegződik	ösßegződni	3298	összegződik	összegződni	cselekednek
+búçúzkodik	búçúzkodni	3282	búcsúzkodik	búcsúzkodni	cselekednek
+ßerelmeskedik	ßerelmeskedni	3264	szerelmeskedik	szerelmeskedni	cselekednek
+féltéke¥kedik	féltéke¥kedni	3256	féltékenykedik	féltékenykedni	cselekednek
+éleződik	éleződni	3239	éleződik	éleződni	cselekednek
+futamodik	futamodni	3227	futamodik	futamodni	cselekednek
+préselődik	préselődni	3193	préselődik	préselődni	cselekednek
+vizesedik	vizesedni	3171	vizesedik	vizesedni	cselekednek
+¥eréßkedik	¥eréßkedni	3169	nyerészkedik	nyerészkedni	cselekednek
+bújóçkázik	bújóçkázni	3164	bújócskázik	bújócskázni	cselekednek
+kamerázik	kamerázni	3140	kamerázik	kamerázni	cselekednek
+inçelkedik	inçelkedni	3134	incselkedik	incselkedni	cselekednek
+çomósodik	çomósodni	3129	csomósodik	csomósodni	cselekednek
+karikázik	karikázni	3124	karikázik	karikázni	cselekednek
+amortizálódik	amortizálódni	3122	amortizálódik	amortizálódni	cselekednek
+alko¥odik	alko¥odni	3108	alkonyodik	alkonyodni	cselekednek
+há¥ódik	há¥ódni	3101	hányódik	hányódni	cselekednek
+dudoráßik	dudoráßni	3096	dudorászik	dudorászni	cselekednek
+kopaßodik	kopaßodni	3051	kopaszodik	kopaszodni	cselekednek
+tipródik	tipródni	3039	tipródik	tipródni	cselekednek
+packázik	packázni	3038	packázik	packázni	cselekednek
+fogóçkázik	fogóçkázni	3014	fogócskázik	fogócskázni	cselekednek
+ßánakozik	ßánakozni	3014	szánakozik	szánakozni	cselekednek
+lökdösődik	lökdösődni	3007	lökdösődik	lökdösődni	cselekednek
+kavarodik	kavarodni	2978	kavarodik	kavarodni	cselekednek
+civakodik	civakodni	2972	civakodik	civakodni	cselekednek
+autókázik	autókázni	2943	autókázik	autókázni	cselekednek
+hajladozik	hajladozni	2936	hajladozik	hajladozni	cselekednek
+fésülködik	fésülködni	2935	fésülködik	fésülködni	cselekednek
+açarkodik	açarkodni	2934	acsarkodik	acsarkodni	cselekednek
+húzódozik	húzódozni	2929	húzódozik	húzódozni	cselekednek
+lopózik	lopózni	2918	lopózik	lopózni	cselekednek
+közösködik	közösködni	2915	közösködik	közösködni	cselekednek
+meztelenkedik	meztelenkedni	2915	meztelenkedik	meztelenkedni	cselekednek
+esküdözik	esküdözni	2908	esküdözik	esküdözni	cselekednek
+buzgólkodik	buzgólkodni	2888	buzgólkodik	buzgólkodni	cselekednek
+titkolózik	titkolódzni	2873	titkolózik	titkolódzni	cselekednek
+lepleződik	lepleződni	2867	lepleződik	lepleződni	cselekednek
+rendetlenkedik	rendetlenkedni	2865	rendetlenkedik	rendetlenkedni	cselekednek
+ßomjúhozik	ßomjúhozni	2852	szomjúhozik	szomjúhozni	cselekednek
+korizik	korizni	2844	korizik	korizni	cselekednek
+lottózik	lottózni	2828	lottózik	lottózni	cselekednek
+tempózik	tempózni	2816	tempózik	tempózni	cselekednek
+karatézik	karatézni	2810	karatézik	karatézni	cselekednek
+tusakodik	tusakodni	2786	tusakodik	tusakodni	cselekednek
+hajtódik	hajtódni	2782	hajtódik	hajtódni	cselekednek
+eméßtődik	eméßtődni	2749	emésztődik	emésztődni	cselekednek
+pirosodik	pirosodni	2743	pirosodik	pirosodni	cselekednek
+végrehajtódik	végrehajtódni	2726	végrehajtódik	végrehajtódni	cselekednek
+hatalmasodik	hatalmasodni	2725	hatalmasodik	hatalmasodni	cselekednek
+akaßkodik	akaßkodni	2721	akaszkodik	akaszkodni	cselekednek
+tüsténkedik	tüsténkedni	2685	tüsténkedik	tüsténkedni	cselekednek
+ke©eskedik	ke©eskedni	2677	kegyeskedik	kegyeskedni	cselekednek
+omladozik	omladozni	2673	omladozik	omladozni	cselekednek
+villózik	villódzni	2663	villózik	villódzni	cselekednek
+vörösödik	vörösödni	2652	vörösödik	vörösödni	cselekednek
+bagózik	bagózni	2647	bagózik	bagózni	cselekednek
+kereßteződik	kereßteződni	2641	kereszteződik	kereszteződni	cselekednek
+beleßerelmesedik	beleßerelmesedni	2629	beleszerelmesedik	beleszerelmesedni	cselekednek
+lilik	lilikni	2628	lilik	lilikni	cselekednek
+fontoskodik	fontoskodni	2612	fontoskodik	fontoskodni	cselekednek
+legózik	legózni	2608	legózik	legózni	cselekednek
+óvatoskodik	óvatoskodni	2608	óvatoskodik	óvatoskodni	cselekednek
+akklimatizálódik	akklimatizálódni	2558	akklimatizálódik	akklimatizálódni	cselekednek
+párásodik	párásodni	2554	párásodik	párásodni	cselekednek
+ßámítódik	ßámítódni	2554	számítódik	számítódni	cselekednek
+gonoßkodik	gonoßkodni	2552	gonoszkodik	gonoszkodni	cselekednek
+káßálódik	káßálódni	2552	kászálódik	kászálódni	cselekednek
+ü©esedik	ü©esedni	2539	ügyesedik	ügyesedni	cselekednek
+homokozik	homokozni	2536	homokozik	homokozni	cselekednek
+katonáskodik	katonáskodni	2521	katonáskodik	katonáskodni	cselekednek
+¥űglődik	¥űglődni	2514	nyűglődik	nyűglődni	cselekednek
+ívik	ívni	2496	ívik	ívni	cselekednek
+kéredzkedik	kéredzkedni	2470	kéredzkedik	kéredzkedni	cselekednek
+felejtődik	felejtődni	2457	felejtődik	felejtődni	cselekednek
+repedezik	repedezni	2432	repedezik	repedezni	cselekednek
+sürgölődik	sürgölődni	2392	sürgölődik	sürgölődni	cselekednek
+utálkozik	utálkozni	2391	utálkozik	utálkozni	cselekednek
+ßomorodik	ßomorodni	2368	szomorodik	szomorodni	cselekednek
+hatvá¥ozódik	hatvá¥ozódni	2358	hatványozódik	hatványozódni	cselekednek
+laposodik	laposodni	2357	laposodik	laposodni	cselekednek
+tömörödik	tömörödni	2357	tömörödik	tömörödni	cselekednek
+loçolkodik	loçolkodni	2356	locsolkodik	locsolkodni	cselekednek
+vízilabdázik	vízilabdázni	2345	vízilabdázik	vízilabdázni	cselekednek
+értelmeződik	értelmeződni	2339	értelmeződik	értelmeződni	cselekednek
+tavaßodik	tavaßodni	2315	tavaszodik	tavaszodni	cselekednek
+fé¥esedik	fé¥esedni	2301	fényesedik	fényesedni	cselekednek
+lármázik	lármázni	2298	lármázik	lármázni	cselekednek
+veselkedik	veselkedni	2295	veselkedik	veselkedni	cselekednek
+bepárásodik	bepárásodni	2293	bepárásodik	bepárásodni	cselekednek
+heveredik	heveredni	2283	heveredik	heveredni	cselekednek
+tántorodik	tántorodni	2273	tántorodik	tántorodni	cselekednek
+búvik	búvni	2269	búvik	búvni	cselekednek
+pöffeßkedik	pöffeßkedni	2267	pöffeszkedik	pöffeszkedni	cselekednek
+keringőzik	keringőzni	2256	keringőzik	keringőzni	cselekednek
+çúfolódik	çúfolódni	2254	csúfolódik	csúfolódni	cselekednek
+biliárdozik	biliárdozni	2246	biliárdozik	biliárdozni	cselekednek
+moçkolódik	moçkolódni	2235	mocskolódik	mocskolódni	cselekednek
+súrlódik	súrlódni	2226	súrlódik	súrlódni	cselekednek
+uΩonnázik	uΩonnázni	2222	uzsonnázik	uzsonnázni	cselekednek
+na©obbodik	na©obbodni	2221	nagyobbodik	nagyobbodni	cselekednek
+konzerválódik	konzerválódni	2208	konzerválódik	konzerválódni	cselekednek
+aßalódik	aßalódni	2207	aszalódik	aszalódni	cselekednek
+rakoncátlankodik	rakoncátlankodni	2200	rakoncátlankodik	rakoncátlankodni	cselekednek
+materializálódik	materializálódni	2188	materializálódik	materializálódni	cselekednek
+kenuzik	kenuzni	2172	kenuzik	kenuzni	cselekednek
+ösßehaverkodik	ösßehaverkodni	2170	összehaverkodik	összehaverkodni	cselekednek
+reinkarnálódik	reinkarnálódni	2162	reinkarnálódik	reinkarnálódni	cselekednek
+¥áladzik	¥áladzani	2158	nyáladzik	nyáladzani	cselekszenek
+dumçizik	dumçizni	2150	dumcsizik	dumcsizni	cselekednek
+sokßorozódik	sokßorozódni	2144	sokszorozódik	sokszorozódni	cselekednek
+ßießtázik	ßießtázni	2144	sziesztázik	sziesztázni	cselekednek
+pedálozik	pedálozni	2131	pedálozik	pedálozni	cselekednek
+bu¥ózik	bu¥ózni	2127	bunyózik	bunyózni	cselekednek
+vi©orodik	vi©orodni	2118	vigyorodik	vigyorodni	cselekednek
+fa¥alodik	fa¥alodni	2114	fanyalodik	fanyalodni	cselekednek
+döglődik	döglődni	2107	döglődik	döglődni	cselekednek
+makaçkodik	makaçkodni	2104	makacskodik	makacskodni	cselekednek
+avasodik	avasodni	2094	avasodik	avasodni	cselekednek
+követelőzik	követelődzni	2086	követelőzik	követelődzni	cselekednek
+kaparáßik	kaparáßni	2081	kaparászik	kaparászni	cselekednek
+feketedik	feketedni	2075	feketedik	feketedni	cselekednek
+rögződik	rögződni	2071	rögződik	rögződni	cselekednek
+dörgölőzik	dörgölődzni	2068	dörgölőzik	dörgölődzni	cselekednek
+kitüremkedik	kitüremkedni	2068	kitüremkedik	kitüremkedni	cselekednek
+lopódzik	lopódzni	2068	lopódzik	lopódzni	cselekszenek
+tömődik	tömődni	2061	tömődik	tömődni	cselekednek
+kunkorodik	kunkorodni	2038	kunkorodik	kunkorodni	cselekednek
+őrizkedik	őrizkedni	2033	őrizkedik	őrizkedni	cselekednek
+üresedik	üresedni	2026	üresedik	üresedni	cselekednek
+korrodálódik	korrodálódni	2025	korrodálódik	korrodálódni	cselekednek
+tápáßkodik	tápáßkodni	2018	tápászkodik	tápászkodni	cselekednek
+évődik	évődni	2007	évődik	évődni	cselekednek
+mentegetőzik	mentegetődzni	2003	mentegetőzik	mentegetődzni	cselekednek
+bakizik	bakizni	1995	bakizik	bakizni	cselekednek
+züllik	zülleni	1993	züllik	zülleni	cselekszenek
+kézimunkázik	kézimunkázni	1991	kézimunkázik	kézimunkázni	cselekednek
+perlekedik	perlekedni	1989	perlekedik	perlekedni	cselekednek
+ha©omá¥ozódik	ha©omá¥ozódni	1980	hagyományozódik	hagyományozódni	cselekednek
+keske¥edik	keske¥edni	1980	keskenyedik	keskenyedni	cselekednek
+sivalkodik	sivalkodni	1974	sivalkodik	sivalkodni	cselekednek
+ü©etlenkedik	ü©etlenkedni	1969	ügyetlenkedik	ügyetlenkedni	cselekednek
+áskálódik	áskálódni	1964	áskálódik	áskálódni	cselekednek
+kamaßodik	kamaßodni	1964	kamaszodik	kamaszodni	cselekednek
+illetődik	illetődni	1961	illetődik	illetődni	cselekednek
+kiérződik	kiérződni	1953	kiérződik	kiérződni	cselekednek
+kacaráßik	kacaráßni	1946	kacarászik	kacarászni	cselekednek
+fajtalankodik	fajtalankodni	1945	fajtalankodik	fajtalankodni	cselekednek
+ßedelőzködik	ßedelőzködni	1934	szedelőzködik	szedelőzködni	cselekednek
+tallózik	tallózni	1926	tallózik	tallózni	cselekednek
+visítozik	visítozni	1924	visítozik	visítozni	cselekednek
+ßólózik	ßólózni	1911	szólózik	szólózni	cselekednek
+állítódik	állítódni	1900	állítódik	állítódni	cselekednek
+ke©etlenkedik	ke©etlenkedni	1899	kegyetlenkedik	kegyetlenkedni	cselekednek
+taxizik	taxizni	1888	taxizik	taxizni	cselekednek
+halaßtódik	halaßtódni	1871	halasztódik	halasztódni	cselekednek
+alaço¥odik	alaço¥odni	1870	alacsonyodik	alacsonyodni	cselekednek
+dudorodik	dudorodni	1869	dudorodik	dudorodni	cselekednek
+borsódzik	borsódzni	1850	borsódzik	borsódzni	cselekszenek
+alázkodik	alázkodni	1842	alázkodik	alázkodni	cselekednek
+méhéßkedik	méhéßkedni	1838	méhészkedik	méhészkedni	cselekednek
+morΩálódik	morΩálódni	1836	morzsálódik	morzsálódni	cselekednek
+néptelenedik	néptelenedni	1824	néptelenedik	néptelenedni	cselekednek
+tranßformálódik	tranßformálódni	1810	transzformálódik	transzformálódni	cselekednek
+karçúsodik	karçúsodni	1804	karcsúsodik	karcsúsodni	cselekednek
+hokizik	hokizni	1800	hokizik	hokizni	cselekednek
+józanodik	józanodni	1799	józanodik	józanodni	cselekednek
+kellemetlenkedik	kellemetlenkedni	1776	kellemetlenkedik	kellemetlenkedni	cselekednek
+©ökeresedik	©ökeresedni	1771	gyökeresedik	gyökeresedni	cselekednek
+lefékeződik	lefékeződni	1771	lefékeződik	lefékeződni	cselekednek
+pácolódik	pácolódni	1769	pácolódik	pácolódni	cselekednek
+fickándozik	fickándozni	1768	fickándozik	fickándozni	cselekednek
+gokartozik	gokartozni	1768	gokartozik	gokartozni	cselekednek
+ökörködik	ökörködni	1755	ökörködik	ökörködni	cselekednek
+faggatózik	faggatózni	1750	faggatózik	faggatózni	cselekednek
+lelkizik	lelkizni	1747	lelkizik	lelkizni	cselekednek
+çeveréßik	çeveréßni	1745	cseverészik	cseverészni	cselekednek
+tollasozik	tollasozni	1732	tollasozik	tollasozni	cselekednek
+le©eskedik	le©eskedni	1730	legyeskedik	legyeskedni	cselekednek
+fodrozódik	fodrozódni	1727	fodrozódik	fodrozódni	cselekednek
+hősködik	hősködni	1727	hősködik	hősködni	cselekednek
+púposodik	púposodni	1726	púposodik	púposodni	cselekednek
+©ümölçözik	©ümölçözni	1724	gyümölcsözik	gyümölcsözni	cselekednek
+e©enlítődik	e©enlítődni	1713	egyenlítődik	egyenlítődni	cselekednek
+húzódzkodik	húzódzkodni	1709	húzódzkodik	húzódzkodni	cselekednek
+büfizik	büfizni	1700	büfizik	büfizni	cselekednek
+mérgesedik	mérgesedni	1700	mérgesedik	mérgesedni	cselekednek
+bölçelkedik	bölçelkedni	1698	bölcselkedik	bölcselkedni	cselekednek
+¥elődik	¥elődni	1698	nyelődik	nyelődni	cselekednek
+hatalmaskodik	hatalmaskodni	1696	hatalmaskodik	hatalmaskodni	cselekednek
+turistáskodik	turistáskodni	1689	turistáskodik	turistáskodni	cselekednek
+kukacoskodik	kukacoskodni	1681	kukacoskodik	kukacoskodni	cselekednek
+porlik	porlani	1648	porlik	porlani	cselekszenek
+sugdolózik	sugdolózni	1645	sugdolózik	sugdolózni	cselekednek
+gombáßik	gombáßni	1638	gombászik	gombászni	cselekednek
+çalizik	çalizni	1630	csalizik	csalizni	cselekednek
+rétegződik	rétegződni	1627	rétegződik	rétegződni	cselekednek
+©alázkodik	©alázkodni	1614	gyalázkodik	gyalázkodni	cselekednek
+fo©ózik	fo©ózni	1596	fogyózik	fogyózni	cselekednek
+korzózik	korzózni	1595	korzózik	korzózni	cselekednek
+pallérozódik	pallérozódni	1591	pallérozódik	pallérozódni	cselekednek
+udvariaskodik	udvariaskodni	1591	udvariaskodik	udvariaskodni	cselekednek
+lehajlik	lehajlani	1587	lehajlik	lehajlani	cselekszenek
+futkoráßik	futkoráßni	1585	futkorászik	futkorászni	cselekednek
+vigadozik	vigadozni	1583	vigadozik	vigadozni	cselekednek
+réßegedik	réßegedni	1562	részegedik	részegedni	cselekednek
+gubancolódik	gubancolódni	1547	gubancolódik	gubancolódni	cselekednek
+magázódik	magázódni	1546	magázódik	magázódni	cselekednek
+baßakodik	baßakodni	1540	baszakodik	baszakodni	cselekednek
+¥omakodik	¥omakodni	1539	nyomakodik	nyomakodni	cselekednek
+betlizik	betlizni	1535	betlizik	betlizni	cselekednek
+pótlódik	pótlódni	1531	pótlódik	pótlódni	cselekednek
+huncutkodik	huncutkodni	1518	huncutkodik	huncutkodni	cselekednek
+kucorodik	kucorodni	1517	kucorodik	kucorodni	cselekednek
+lökődik	lökődni	1503	lökődik	lökődni	cselekednek
+fé¥eskedik	fé¥eskedni	1486	fényeskedik	fényeskedni	cselekednek
+devalválódik	devalválódni	1482	devalválódik	devalválódni	cselekednek
+felßámolódik	felßámolódni	1482	felszámolódik	felszámolódni	cselekednek
+va©onosodik	va©onosodni	1482	vagyonosodik	vagyonosodni	cselekednek
+lábatlankodik	lábatlankodni	1479	lábatlankodik	lábatlankodni	cselekednek
+belevésődik	belevésődni	1475	belevésődik	belevésődni	cselekednek
+citerázik	citerázni	1464	citerázik	citerázni	cselekednek
+alakoskodik	alakoskodni	1461	alakoskodik	alakoskodni	cselekednek
+akik	akni	1454	akik	akni	cselekednek
+kérődzik	kérődzni	1448	kérődzik	kérődzni	cselekszenek
+ßarozik	ßarozni	1439	szarozik	szarozni	cselekednek
+elßör¥ülködik	elßör¥ülködni	1423	elszörnyülködik	elszörnyülködni	cselekednek
+sová¥odik	sová¥odni	1420	soványodik	soványodni	cselekednek
+zúzódik	zúzódni	1418	zúzódik	zúzódni	cselekednek
+jégkorongozik	jégkorongozni	1416	jégkorongozik	jégkorongozni	cselekednek
+dörΩölődik	dörΩölődni	1414	dörzsölődik	dörzsölődni	cselekednek
+függeßkedik	függeßkedni	1411	függeszkedik	függeszkedni	cselekednek
+tolláßkodik	tolláßkodni	1406	tollászkodik	tollászkodni	cselekednek
+replikázik	replikázni	1405	replikázik	replikázni	cselekednek
+çipkelődik	çipkelődni	1403	csipkelődik	csipkelődni	cselekednek
+tudódik	tudódni	1403	tudódik	tudódni	cselekednek
+rémüldözik	rémüldözni	1401	rémüldözik	rémüldözni	cselekednek
+kívántatik	kívántatni	1400	kívántatik	kívántatni	cselekednek
+bátorodik	bátorodni	1398	bátorodik	bátorodni	cselekednek
+bőgőzik	bőgőzni	1398	bőgőzik	bőgőzni	cselekednek
+halódik	halódni	1397	halódik	halódni	cselekednek
+ruházkodik	ruházkodni	1397	ruházkodik	ruházkodni	cselekednek
+másolódik	másolódni	1390	másolódik	másolódni	cselekednek
+büdösödik	büdösödni	1381	büdösödik	büdösödni	cselekednek
+puhatolózik	puhatolódzni	1377	puhatolózik	puhatolódzni	cselekednek
+kisebbedik	kisebbedni	1371	kisebbedik	kisebbedni	cselekednek
+ro©adozik	ro©adozni	1367	rogyadozik	rogyadozni	cselekednek
+ple†kálkodik	ple†kálkodni	1366	pletykálkodik	pletykálkodni	cselekednek
+©akornokoskodik	©akornokoskodni	1364	gyakornokoskodik	gyakornokoskodni	cselekednek
+ájuldozik	ájuldozni	1360	ájuldozik	ájuldozni	cselekednek
+sú¬zózik	sú¬zózni	1359	súlyzózik	súlyzózni	cselekednek
+álmosodik	álmosodni	1357	álmosodik	álmosodni	cselekednek
+ßemtelenkedik	ßemtelenkedni	1357	szemtelenkedik	szemtelenkedni	cselekednek
+fújódik	fújódni	1344	fújódik	fújódni	cselekednek
+művéßkedik	művéßkedni	1335	művészkedik	művészkedni	cselekednek
+bokrosodik	bokrosodni	1331	bokrosodik	bokrosodni	cselekednek
+táviratozik	táviratozni	1330	táviratozik	táviratozni	cselekednek
+elaprózódik	elaprózódni	1329	elaprózódik	elaprózódni	cselekednek
+elfintorodik	elfintorodni	1329	elfintorodik	elfintorodni	cselekednek
+habarodik	habarodni	1327	habarodik	habarodni	cselekednek
+elkeske¥edik	elkeske¥edni	1326	elkeskenyedik	elkeskenyedni	cselekednek
+rugdalózik	rugdalózni	1324	rugdalózik	rugdalózni	cselekednek
+kiçúçosodik	kiçúçosodni	1307	kicsúcsosodik	kicsúcsosodni	cselekednek
+kókadozik	kókadozni	1303	kókadozik	kókadozni	cselekednek
+korosodik	korosodni	1301	korosodik	korosodni	cselekednek
+törölközik	törölközni	1292	törölközik	törölközni	cselekednek
+Ωarnokoskodik	Ωarnokoskodni	1288	zsarnokoskodik	zsarnokoskodni	cselekednek
+sápítozik	sápítozni	1286	sápítozik	sápítozni	cselekednek
+sava¥odik	sava¥odni	1282	savanyodik	savanyodni	cselekednek
+go¬ózik	go¬ózni	1279	golyózik	golyózni	cselekednek
+lacafacázik	lacafacázni	1277	lacafacázik	lacafacázni	cselekednek
+ripakodik	ripakodni	1271	ripakodik	ripakodni	cselekednek
+fölé¥eskedik	fölé¥eskedni	1263	fölényeskedik	fölényeskedni	cselekednek
+huzakodik	huzakodni	1262	huzakodik	huzakodni	cselekednek
+feldobódik	feldobódni	1260	feldobódik	feldobódni	cselekednek
+hívódik	hívódni	1260	hívódik	hívódni	cselekednek
+¥iladozik	¥iladozni	1250	nyiladozik	nyiladozni	cselekednek
+vásik	vásni	1244	vásik	vásni	cselekednek
+fuvalkodik	fuvalkodni	1234	fuvalkodik	fuvalkodni	cselekednek
+harmonikázik	harmonikázni	1234	harmonikázik	harmonikázni	cselekednek
+maßatolódik	maßatolódni	1233	maszatolódik	maszatolódni	cselekednek
+ßánkázik	ßánkázni	1233	szánkázik	szánkázni	cselekednek
+ßobrozik	ßobrozni	1224	szobrozik	szobrozni	cselekednek
+kotródik	kotródni	1221	kotródik	kotródni	cselekednek
+degenerálódik	degenerálódni	1219	degenerálódik	degenerálódni	cselekednek
+hamarkodik	hamarkodni	1217	hamarkodik	hamarkodni	cselekednek
+bántódik	bántódni	1216	bántódik	bántódni	cselekednek
+feketéllik	feketélleni	1197	feketéllik	feketélleni	cselekszenek
+tangózik	tangózni	1190	tangózik	tangózni	cselekednek
+behajlik	behajlani	1189	behajlik	behajlani	cselekszenek
+fogózik	fogózni	1173	fogózik	fogózni	cselekednek
+hó¬agosodik	hó¬agosodni	1171	hólyagosodik	hólyagosodni	cselekednek
+fin¥áskodik	fin¥áskodni	1162	finnyáskodik	finnyáskodni	cselekednek
+téve¬edik	téve¬edni	1157	tévelyedik	tévelyedni	cselekednek
+remetéskedik	remetéskedni	1151	remetéskedik	remetéskedni	cselekednek
+¥alakodik	¥alakodni	1148	nyalakodik	nyalakodni	cselekednek
+há¥kódik	há¥kódni	1146	hánykódik	hánykódni	cselekednek
+©erekeskedik	©erekeskedni	1144	gyerekeskedik	gyerekeskedni	cselekednek
+ár¥alódik	ár¥alódni	1138	árnyalódik	árnyalódni	cselekednek
+tünedezik	tünedezni	1133	tünedezik	tünedezni	cselekednek
+toßik	toßni	1131	toszik	toszni	cselekednek
+kontárkodik	kontárkodni	1129	kontárkodik	kontárkodni	cselekednek
+pofozkodik	pofozkodni	1126	pofozkodik	pofozkodni	cselekednek
+kondizik	kondizni	1116	kondizik	kondizni	cselekednek
+akkumulálódik	akkumulálódni	1111	akkumulálódik	akkumulálódni	cselekednek
+bebábozódik	bebábozódni	1105	bebábozódik	bebábozódni	cselekednek
+borsózik	borsózni	1100	borsózik	borsózni	cselekednek
+alibizik	alibizni	1099	alibizik	alibizni	cselekednek
+páváskodik	páváskodni	1096	páváskodik	páváskodni	cselekednek
+ßépítkezik	ßépítkezni	1096	szépítkezik	szépítkezni	cselekednek
+ultizik	ultizni	1092	ultizik	ultizni	cselekednek
+foltosodik	foltosodni	1089	foltosodik	foltosodni	cselekednek
+mu†izik	mu†izni	1087	mutyizik	mutyizni	cselekednek
+kalózkodik	kalózkodni	1080	kalózkodik	kalózkodni	cselekednek
+rosßulesik	rosßulesni	1076	rosszulesik	rosszulesni	cselekednek
+ßobráßkodik	ßobráßkodni	1076	szobrászkodik	szobrászkodni	cselekednek
+ijedezik	ijedezni	1072	ijedezik	ijedezni	cselekednek
+pipiskedik	pipiskedni	1067	pipiskedik	pipiskedni	cselekednek
+kirekeßtődik	kirekeßtődni	1062	kirekesztődik	kirekesztődni	cselekednek
+madaráßik	madaráßni	1060	madarászik	madarászni	cselekednek
+fixálódik	fixálódni	1057	fixálódik	fixálódni	cselekednek
+rökö¥ödik	rökö¥ödni	1054	rökönyödik	rökönyödni	cselekednek
+koço¥ásodik	koço¥ásodni	1053	kocsonyásodik	kocsonyásodni	cselekednek
+harapózik	harapózni	1047	harapózik	harapózni	cselekednek
+határozódik	határozódni	1046	határozódik	határozódni	cselekednek
+pálinkázik	pálinkázni	1045	pálinkázik	pálinkázni	cselekednek
+ßigetelődik	ßigetelődni	1035	szigetelődik	szigetelődni	cselekednek
+homá¬osodik	homá¬osodni	1033	homályosodik	homályosodni	cselekednek
+intéződik	intéződni	1032	intéződik	intéződni	cselekednek
+a¥áskodik	a¥áskodni	1025	anyáskodik	anyáskodni	cselekednek
+fékeződik	fékeződni	1024	fékeződik	fékeződni	cselekednek
+mumifikálódik	mumifikálódni	1018	mumifikálódik	mumifikálódni	cselekednek
+blokkolódik	blokkolódni	1013	blokkolódik	blokkolódni	cselekednek
+¥argaláßik	¥argaláßni	1013	nyargalászik	nyargalászni	cselekednek
+inflálódik	inflálódni	1011	inflálódik	inflálódni	cselekednek
+ßétzilálódik	ßétzilálódni	1009	szétzilálódik	szétzilálódni	cselekednek
+pißkálódik	pißkálódni	1002	piszkálódik	piszkálódni	cselekednek
+ármá¥kodik	ármá¥kodni	992	ármánykodik	ármánykodni	cselekednek
+hervadozik	hervadozni	992	hervadozik	hervadozni	cselekednek
+cicizik	cicizni	988	cicizik	cicizni	cselekednek
+oßladozik	oßladozni	984	oszladozik	oszladozni	cselekednek
+engeßtelődik	engeßtelődni	982	engesztelődik	engesztelődni	cselekednek
+cicázik	cicázni	981	cicázik	cicázni	cselekednek
+kurválkodik	kurválkodni	978	kurválkodik	kurválkodni	cselekednek
+©ürkőzik	©ürkőzni	975	gyürkőzik	gyürkőzni	cselekednek
+gá¬ázik	gá¬ázni	972	gályázik	gályázni	cselekednek
+ravaßkodik	ravaßkodni	972	ravaszkodik	ravaszkodni	cselekednek
+malmozik	malmozni	969	malmozik	malmozni	cselekednek
+restelkedik	restelkedni	967	restelkedik	restelkedni	cselekednek
+pukizik	pukizni	966	pukizik	pukizni	cselekednek
+lázasodik	lázasodni	964	lázasodik	lázasodni	cselekednek
+tekergőzik	tekergődzni	959	tekergőzik	tekergődzni	cselekednek
+bálozik	bálozni	951	bálozik	bálozni	cselekednek
+ßőrösödik	ßőrösödni	950	szőrösödik	szőrösödni	cselekednek
+dekázik	dekázni	949	dekázik	dekázni	cselekednek
+ké¥eskedik	ké¥eskedni	949	kényeskedik	kényeskedni	cselekednek
+penéßesedik	penéßesedni	945	penészesedik	penészesedni	cselekednek
+ßóbelizik	ßóbelizni	942	szóbelizik	szóbelizni	cselekednek
+aßtalitenißezik	aßtalitenißezni	940	asztaliteniszezik	asztaliteniszezni	cselekednek
+törvé¥kezik	törvé¥kezni	940	törvénykezik	törvénykezni	cselekednek
+megidéződik	megidéződni	939	megidéződik	megidéződni	cselekednek
+aktualizálódik	aktualizálódni	937	aktualizálódik	aktualizálódni	cselekednek
+ßárítkozik	ßárítkozni	936	szárítkozik	szárítkozni	cselekednek
+kakaskodik	kakaskodni	935	kakaskodik	kakaskodni	cselekednek
+társalkodik	társalkodni	933	társalkodik	társalkodni	cselekednek
+ßabódik	ßabódni	925	szabódik	szabódni	cselekednek
+bőrösödik	bőrösödni	923	bőrösödik	bőrösödni	cselekednek
+népesedik	népesedni	923	népesedik	népesedni	cselekednek
+çellózik	çellózni	919	csellózik	csellózni	cselekednek
+értéktelenedik	értéktelenedni	919	értéktelenedik	értéktelenedni	cselekednek
+¥űgösködik	¥űgösködni	919	nyűgösködik	nyűgösködni	cselekednek
+alkalmatlankodik	alkalmatlankodni	918	alkalmatlankodik	alkalmatlankodni	cselekednek
+kajánkodik	kajánkodni	917	kajánkodik	kajánkodni	cselekednek
+töpörödik	töpörödni	909	töpörödik	töpörödni	cselekednek
+fa©laltozik	fa©laltozni	907	fagylaltozik	fagylaltozni	cselekednek
+kvaterkázik	kvaterkázni	902	kvaterkázik	kvaterkázni	cselekednek
+idétlenkedik	idétlenkedni	901	idétlenkedik	idétlenkedni	cselekednek
+elnőiesedik	elnőiesedni	887	elnőiesedik	elnőiesedni	cselekednek
+jogáßkodik	jogáßkodni	881	jogászkodik	jogászkodni	cselekednek
+demokratizálódik	demokratizálódni	880	demokratizálódik	demokratizálódni	cselekednek
+ßenderedik	ßenderedni	880	szenderedik	szenderedni	cselekednek
+torkoskodik	torkoskodni	880	torkoskodik	torkoskodni	cselekednek
+fenekedik	fenekedni	876	fenekedik	fenekedni	cselekednek
+izolálódik	izolálódni	876	izolálódik	izolálódni	cselekednek
+pöndörödik	pöndörödni	871	pöndörödik	pöndörödni	cselekednek
+ripaçkodik	ripaçkodni	871	ripacskodik	ripacskodni	cselekednek
+elßarusodik	elßarusodni	869	elszarusodik	elszarusodni	cselekednek
+halálozik	halálozni	868	halálozik	halálozni	cselekednek
+sarjadzik	sarjadzani	867	sarjadzik	sarjadzani	cselekszenek
+visßahajlik	visßahajlani	864	visszahajlik	visszahajlani	cselekszenek
+hegesedik	hegesedni	859	hegesedik	hegesedni	cselekednek
+na©képűsködik	na©képűsködni	859	nagyképűsködik	nagyképűsködni	cselekednek
+perΩelődik	perΩelődni	852	perzselődik	perzselődni	cselekednek
+kußálódik	kußálódni	847	kuszálódik	kuszálódni	cselekednek
+háborúskodik	háborúskodni	845	háborúskodik	háborúskodni	cselekednek
+korteskedik	korteskedni	844	korteskedik	korteskedni	cselekednek
+pólózik	pólózni	842	pólózik	pólózni	cselekednek
+taliçkázik	taliçkázni	840	talicskázik	talicskázni	cselekednek
+ellenségeskedik	ellenségeskedni	839	ellenségeskedik	ellenségeskedni	cselekednek
+pißkolódik	pißkolódni	839	piszkolódik	piszkolódni	cselekednek
+vihoráßik	vihoráßni	831	vihorászik	vihorászni	cselekednek
+totojázik	totojázni	825	totojázik	totojázni	cselekednek
+hajháßik	hajháßni	821	hajhászik	hajhászni	cselekednek
+ßuvasodik	ßuvasodni	821	szuvasodik	szuvasodni	cselekednek
+gorombáskodik	gorombáskodni	819	gorombáskodik	gorombáskodni	cselekednek
+töketlenkedik	töketlenkedni	819	töketlenkedik	töketlenkedni	cselekednek
+gátlódik	gátlódni	818	gátlódik	gátlódni	cselekednek
+bimbózik	bimbózni	814	bimbózik	bimbózni	cselekednek
+jegesedik	jegesedni	814	jegesedik	jegesedni	cselekednek
+çontosodik	çontosodni	810	csontosodik	csontosodni	cselekednek
+ßé©enlősködik	ßé©enlősködni	810	szégyenlősködik	szégyenlősködni	cselekednek
+komo¬kodik	komo¬kodni	809	komolykodik	komolykodni	cselekednek
+pörkölődik	pörkölődni	806	pörkölődik	pörkölődni	cselekednek
+dühödik	dühödni	804	dühödik	dühödni	cselekednek
+gör¥edezik	gör¥edezni	804	görnyedezik	görnyedezni	cselekednek
+röstelkedik	röstelkedni	803	röstelkedik	röstelkedni	cselekednek
+törleßkedik	törleßkedni	801	törleszkedik	törleszkedni	cselekednek
+strukturálódik	strukturálódni	796	strukturálódik	strukturálódni	cselekednek
+hógo¬ózik	hógo¬ózni	795	hógolyózik	hógolyózni	cselekednek
+bra†izik	bra†izni	792	bratyizik	bratyizni	cselekednek
+meßesedik	meßesedni	792	meszesedik	meszesedni	cselekednek
+kaçkaringózik	kaçkaringózni	790	kacskaringózik	kacskaringózni	cselekednek
+tamáskodik	tamáskodni	788	tamáskodik	tamáskodni	cselekednek
+çatolódik	çatolódni	780	csatolódik	csatolódni	cselekednek
+kulturálódik	kulturálódni	779	kulturálódik	kulturálódni	cselekednek
+duhajkodik	duhajkodni	777	duhajkodik	duhajkodni	cselekednek
+ké¥ßeredik	ké¥ßeredni	769	kényszeredik	kényszeredni	cselekednek
+foßladozik	foßladozni	768	foszladozik	foszladozni	cselekednek
+idegenedik	idegenedni	768	idegenedik	idegenedni	cselekednek
+ßilveßterezik	ßilveßterezni	767	szilveszterezik	szilveszterezni	cselekednek
+göndörödik	göndörödni	760	göndörödik	göndörödni	cselekednek
+düledezik	düledezni	758	düledezik	düledezni	cselekednek
+pitizik	pitizni	757	pitizik	pitizni	cselekednek
+ßólalkozik	ßólalkozni	757	szólalkozik	szólalkozni	cselekednek
+hetvenkedik	hetvenkedni	756	hetvenkedik	hetvenkedni	cselekednek
+korrumpálódik	korrumpálódni	749	korrumpálódik	korrumpálódni	cselekednek
+fúvódik	fúvódni	746	fúvódik	fúvódni	cselekednek
+hurcolkodik	hurcolkodni	745	hurcolkodik	hurcolkodni	cselekednek
+törülközik	törülközni	745	törülközik	törülközni	cselekednek
+¥omorodik	¥omorodni	743	nyomorodik	nyomorodni	cselekednek
+civódik	civódni	735	civódik	civódni	cselekednek
+egeréßik	egeréßni	733	egerészik	egerészni	cselekednek
+riadozik	riadozni	733	riadozik	riadozni	cselekednek
+kulçolódik	kulçolódni	727	kulcsolódik	kulcsolódni	cselekednek
+trágárkodik	trágárkodni	726	trágárkodik	trágárkodni	cselekednek
+megellik	megelleni	723	megellik	megelleni	cselekszenek
+hűvösödik	hűvösödni	721	hűvösödik	hűvösödni	cselekednek
+korongozik	korongozni	721	korongozik	korongozni	cselekednek
+kihajlik	kihajlani	720	kihajlik	kihajlani	cselekszenek
+vetítődik	vetítődni	711	vetítődik	vetítődni	cselekednek
+réßegeskedik	réßegeskedni	709	részegeskedik	részegeskedni	cselekednek
+buçkázik	buçkázni	706	bucskázik	bucskázni	cselekednek
+pofátlankodik	pofátlankodni	705	pofátlankodik	pofátlankodni	cselekednek
+bizalmaskodik	bizalmaskodni	700	bizalmaskodik	bizalmaskodni	cselekednek
+kufárkodik	kufárkodni	698	kufárkodik	kufárkodni	cselekednek
+ßolizik	ßolizni	696	szolizik	szolizni	cselekednek
+hízelkedik	hízelkedni	687	hízelkedik	hízelkedni	cselekednek
+maradozik	maradozni	687	maradozik	maradozni	cselekednek
+apostolkodik	apostolkodni	686	apostolkodik	apostolkodni	cselekednek
+fogódzkodik	fogódzkodni	685	fogódzkodik	fogódzkodni	cselekednek
+hu¥áßkodik	hu¥áßkodni	685	hunyászkodik	hunyászkodni	cselekednek
+aggá¬oskodik	aggá¬oskodni	683	aggályoskodik	aggályoskodni	cselekednek
+bridΩezik	bridΩezni	680	bridzsezik	bridzsezni	cselekednek
+sebesedik	sebesedni	680	sebesedik	sebesedni	cselekednek
+hárfázik	hárfázni	673	hárfázik	hárfázni	cselekednek
+vißá¬kodik	vißá¬kodni	672	viszálykodik	viszálykodni	cselekednek
+¥elvéßkedik	¥elvéßkedni	669	nyelvészkedik	nyelvészkedni	cselekednek
+inaskodik	inaskodni	668	inaskodik	inaskodni	cselekednek
+üzérkedik	üzérkedni	667	üzérkedik	üzérkedni	cselekednek
+formásodik	formásodni	664	formásodik	formásodni	cselekednek
+feketézik	feketézni	660	feketézik	feketézni	cselekednek
+különcködik	különcködni	660	különcködik	különcködni	cselekednek
+rizikózik	rizikózni	660	rizikózik	rizikózni	cselekednek
+hepciáskodik	hepciáskodni	659	hepciáskodik	hepciáskodni	cselekednek
+ma©arosodik	ma©arosodni	659	magyarosodik	magyarosodni	cselekednek
+tor¥osodik	tor¥osodni	659	tornyosodik	tornyosodni	cselekednek
+üzekedik	üzekedni	659	üzekedik	üzekedni	cselekednek
+tollasodik	tollasodni	652	tollasodik	tollasodni	cselekednek
+automatizálódik	automatizálódni	646	automatizálódik	automatizálódni	cselekednek
+lelombozódik	lelombozódni	646	lelombozódik	lelombozódni	cselekednek
+darabolódik	darabolódni	644	darabolódik	darabolódni	cselekednek
+kor¥adozik	kor¥adozni	644	kornyadozik	kornyadozni	cselekednek
+¥itódik	¥itódni	642	nyitódik	nyitódni	cselekednek
+kövesedik	kövesedni	641	kövesedik	kövesedni	cselekednek
+tarkállik	tarkállni	639	tarkállik	tarkállni	cselekszenek
+bedilizik	bedilizni	638	bedilizik	bedilizni	cselekednek
+marháskodik	marháskodni	635	marháskodik	marháskodni	cselekednek
+¥alizik	¥alizni	625	nyalizik	nyalizni	cselekednek
+sipítozik	sipítozni	625	sipítozik	sipítozni	cselekednek
+ßívózik	ßívózni	624	szívózik	szívózni	cselekednek
+töprenkedik	töprenkedni	623	töprenkedik	töprenkedni	cselekednek
+táltosodik	táltosodni	612	táltosodik	táltosodni	cselekednek
+verítékezik	verítékezni	612	verítékezik	verítékezni	cselekednek
+hűtlenkedik	hűtlenkedni	605	hűtlenkedik	hűtlenkedni	cselekednek
+komorodik	komorodni	605	komorodik	komorodni	cselekednek
+bundázik	bundázni	601	bundázik	bundázni	cselekednek
+asßociálódik	asßociálódni	600	asszociálódik	asszociálódni	cselekednek
+tarokkozik	tarokkozni	600	tarokkozik	tarokkozni	cselekednek
+ßedelődzködik	ßedelődzködni	599	szedelődzködik	szedelődzködni	cselekednek
+feltűnősködik	feltűnősködni	597	feltűnősködik	feltűnősködni	cselekednek
+¥omtatódik	¥omtatódni	597	nyomtatódik	nyomtatódni	cselekednek
+rókázik	rókázni	597	rókázik	rókázni	cselekednek
+listázódik	listázódni	593	listázódik	listázódni	cselekednek
+ßigorlatozik	ßigorlatozni	593	szigorlatozik	szigorlatozni	cselekednek
+pimaßkodik	pimaßkodni	588	pimaszkodik	pimaszkodni	cselekednek
+itatódik	itatódni	587	itatódik	itatódni	cselekednek
+butáskodik	butáskodni	585	butáskodik	butáskodni	cselekednek
+definiálódik	definiálódni	584	definiálódik	definiálódni	cselekednek
+erősbödik	erősbödni	584	erősbödik	erősbödni	cselekednek
+ßellemeskedik	ßellemeskedni	583	szellemeskedik	szellemeskedni	cselekednek
+titokzatoskodik	titokzatoskodni	581	titokzatoskodik	titokzatoskodni	cselekednek
+ingerkedik	ingerkedni	578	ingerkedik	ingerkedni	cselekednek
+elválaßtódik	elválaßtódni	577	elválasztódik	elválasztódni	cselekednek
+handabandázik	handabandázni	577	handabandázik	handabandázni	cselekednek
+vackolódik	vackolódni	577	vackolódik	vackolódni	cselekednek
+ficamodik	ficamodni	572	ficamodik	ficamodni	cselekednek
+ßon†olodik	ßon†olodni	566	szontyolodik	szontyolodni	cselekednek
+©űlésezik	©űlésezni	563	gyűlésezik	gyűlésezni	cselekednek
+majomkodik	majomkodni	559	majomkodik	majomkodni	cselekednek
+ßeparálódik	ßeparálódni	557	szeparálódik	szeparálódni	cselekednek
+virgonckodik	virgonckodni	557	virgonckodik	virgonckodni	cselekednek
+çökik	çökni	555	csökik	csökni	cselekednek
+gombázik	gombázni	554	gombázik	gombázni	cselekednek
+jojózik	jojózni	552	jojózik	jojózni	cselekednek
+felfüggeßtődik	felfüggeßtődni	549	felfüggesztődik	felfüggesztődni	cselekednek
+kevé¬kedik	kevé¬kedni	549	kevélykedik	kevélykedni	cselekednek
+páßtorkodik	páßtorkodni	549	pásztorkodik	pásztorkodni	cselekednek
+basáskodik	basáskodni	547	basáskodik	basáskodni	cselekednek
+pukkadozik	pukkadozni	544	pukkadozik	pukkadozni	cselekednek
+közvetítődik	közvetítődni	543	közvetítődik	közvetítődni	cselekednek
+façarodik	façarodni	541	facsarodik	facsarodni	cselekednek
+festődik	festődni	541	festődik	festődni	cselekednek
+ßaladozik	ßaladozni	540	szaladozik	szaladozni	cselekednek
+üvegesedik	üvegesedni	540	üvegesedik	üvegesedni	cselekednek
+sorvadozik	sorvadozni	534	sorvadozik	sorvadozni	cselekednek
+okvetetlenkedik	okvetetlenkedni	531	okvetetlenkedik	okvetetlenkedni	cselekednek
+dΩúdózik	dΩúdózni	530	dzsúdózik	dzsúdózni	cselekednek
+torΩalkodik	torΩalkodni	530	torzsalkodik	torzsalkodni	cselekednek
+lega†ásodik	lega†ásodni	529	legatyásodik	legatyásodni	cselekednek
+ájtatoskodik	ájtatoskodni	525	ájtatoskodik	ájtatoskodni	cselekednek
+a†áskodik	a†áskodni	525	atyáskodik	atyáskodni	cselekednek
+lelkéßkedik	lelkéßkedni	524	lelkészkedik	lelkészkedni	cselekednek
+elandalodik	elandalodni	522	elandalodik	elandalodni	cselekednek
+çinosodik	çinosodni	521	csinosodik	csinosodni	cselekednek
+beßüremkedik	beßüremkedni	520	beszüremkedik	beszüremkedni	cselekednek
+hoΩannázik	hoΩannázni	519	hozsannázik	hozsannázni	cselekednek
+bizo¥kodik	bizo¥kodni	518	bizonykodik	bizonykodni	cselekednek
+hangosodik	hangosodni	518	hangosodik	hangosodni	cselekednek
+lombosodik	lombosodni	512	lombosodik	lombosodni	cselekednek
+ßublimálódik	ßublimálódni	512	szublimálódik	szublimálódni	cselekednek
+álßenteskedik	álßenteskedni	511	álszenteskedik	álszenteskedni	cselekednek
+ßakáçkodik	ßakáçkodni	506	szakácskodik	szakácskodni	cselekednek
+durcáskodik	durcáskodni	505	durcáskodik	durcáskodni	cselekednek
+elhalaßtódik	elhalaßtódni	504	elhalasztódik	elhalasztódni	cselekednek
+atomizálódik	atomizálódni	495	atomizálódik	atomizálódni	cselekednek
+garasoskodik	garasoskodni	493	garasoskodik	garasoskodni	cselekednek
+polgárosodik	polgárosodni	493	polgárosodik	polgárosodni	cselekednek
+çintalankodik	çintalankodni	492	csintalankodik	csintalankodni	cselekednek
+komo¬talankodik	komo¬talankodni	492	komolytalankodik	komolytalankodni	cselekednek
+kedvetlenedik	kedvetlenedni	491	kedvetlenedik	kedvetlenedni	cselekednek
+sugárzódik	sugárzódni	488	sugárzódik	sugárzódni	cselekednek
+üßkösödik	üßkösödni	488	üszkösödik	üszkösödni	cselekednek
+bátortalanodik	bátortalanodni	479	bátortalanodik	bátortalanodni	cselekednek
+kot¥eleskedik	kot¥eleskedni	479	kotnyeleskedik	kotnyeleskedni	cselekednek
+pártoskodik	pártoskodni	478	pártoskodik	pártoskodni	cselekednek
+nőiesedik	nőiesedni	477	nőiesedik	nőiesedni	cselekednek
+fiadzik	fiadzani	476	fiadzik	fiadzani	cselekszenek
+ßúródik	ßúródni	475	szúródik	szúródni	cselekednek
+tanárkodik	tanárkodni	474	tanárkodik	tanárkodni	cselekednek
+çalinkázik	çalinkázni	473	csalinkázik	csalinkázni	cselekednek
+heveskedik	heveskedni	472	heveskedik	heveskedni	cselekednek
+előrehajlik	előrehajlani	471	előrehajlik	előrehajlani	cselekszenek
+rögbizik	rögbizni	471	rögbizik	rögbizni	cselekednek
+kukoricázik	kukoricázni	470	kukoricázik	kukoricázni	cselekednek
+pi†eredik	pi†eredni	469	pityeredik	pityeredni	cselekednek
+sú¬osodik	sú¬osodni	468	súlyosodik	súlyosodni	cselekednek
+tudakozik	tudakozni	468	tudakozik	tudakozni	cselekednek
+gecizik	gecizni	466	gecizik	gecizni	cselekednek
+cihelődik	cihelődni	461	cihelődik	cihelődni	cselekednek
+©ámkodik	©ámkodni	461	gyámkodik	gyámkodni	cselekednek
+ráncolódik	ráncolódni	459	ráncolódik	ráncolódni	cselekednek
+kompenzálódik	kompenzálódni	457	kompenzálódik	kompenzálódni	cselekednek
+e©ségesedik	e©ségesedni	455	egységesedik	egységesedni	cselekednek
+silá¥odik	silá¥odni	455	silányodik	silányodni	cselekednek
+kö¬kezik	kö¬kezni	454	kölykezik	kölykezni	cselekednek
+ßabá¬ozódik	ßabá¬ozódni	454	szabályozódik	szabályozódni	cselekednek
+önké¥eskedik	önké¥eskedni	449	önkényeskedik	önkényeskedni	cselekednek
+kuktáskodik	kuktáskodni	445	kuktáskodik	kuktáskodni	cselekednek
+hasadozik	hasadozni	443	hasadozik	hasadozni	cselekednek
+munkálódik	munkálódni	443	munkálódik	munkálódni	cselekednek
+ßun¥adozik	ßun¥adozni	443	szunnyadozik	szunnyadozni	cselekednek
+çelgánçozik	çelgánçozni	437	cselgáncsozik	cselgáncsozni	cselekednek
+ron©olódik	ron©olódni	434	rongyolódik	rongyolódni	cselekednek
+gánçoskodik	gánçoskodni	430	gáncsoskodik	gáncsoskodni	cselekednek
+kérgesedik	kérgesedni	430	kérgesedik	kérgesedni	cselekednek
+korrektúrázik	korrektúrázni	430	korrektúrázik	korrektúrázni	cselekednek
+ßélhámoskodik	ßélhámoskodni	428	szélhámoskodik	szélhámoskodni	cselekednek
+pörlekedik	pörlekedni	427	pörlekedik	pörlekedni	cselekednek
+bokázik	bokázni	426	bokázik	bokázni	cselekednek
+pußilkodik	pußilkodni	426	puszilkodik	puszilkodni	cselekednek
+kön¥elműsködik	kön¥elműsködni	425	könnyelműsködik	könnyelműsködni	cselekednek
+totózik	totózni	422	totózik	totózni	cselekednek
+pi†mallik	pi†mallani	421	pitymallik	pitymallani	cselekszenek
+tökölődik	tökölődni	421	tökölődik	tökölődni	cselekednek
+tanítóskodik	tanítóskodni	418	tanítóskodik	tanítóskodni	cselekednek
+rekrutálódik	rekrutálódni	416	rekrutálódik	rekrutálódni	cselekednek
+nevelősködik	nevelősködni	414	nevelősködik	nevelősködni	cselekednek
+hengeredik	hengeredni	413	hengeredik	hengeredni	cselekednek
+ßenesedik	ßenesedni	413	szenesedik	szenesedni	cselekednek
+dühösködik	dühösködni	411	dühösködik	dühösködni	cselekednek
+denaturálódik	denaturálódni	410	denaturálódik	denaturálódni	cselekednek
+tépődik	tépődni	410	tépődik	tépődni	cselekednek
+çöndesedik	çöndesedni	409	csöndesedik	csöndesedni	cselekednek
+urbanizálódik	urbanizálódni	409	urbanizálódik	urbanizálódni	cselekednek
+danoláßik	danoláßni	407	danolászik	danolászni	cselekednek
+çúfolkodik	çúfolkodni	406	csúfolkodik	csúfolkodni	cselekednek
+rulettezik	rulettezni	402	rulettezik	rulettezni	cselekednek
+ripoßtozik	ripoßtozni	401	riposztozik	riposztozni	cselekednek
+dagadozik	dagadozni	397	dagadozik	dagadozni	cselekednek
+©omosodik	©omosodni	396	gyomosodik	gyomosodni	cselekednek
+ku¥izik	ku¥izni	393	kunyizik	kunyizni	cselekednek
+kupálódik	kupálódni	393	kupálódik	kupálódni	cselekednek
+bujálkodik	bujálkodni	392	bujálkodik	bujálkodni	cselekednek
+deresedik	deresedni	388	deresedik	deresedni	cselekednek
+feçeréßik	feçeréßni	386	fecserészik	fecserészni	cselekednek
+kiküßöbölődik	kiküßöbölődni	386	kiküszöbölődik	kiküszöbölődni	cselekednek
+vagdalózik	vagdalódzni	386	vagdalózik	vagdalódzni	cselekednek
+hátrahajlik	hátrahajlani	383	hátrahajlik	hátrahajlani	cselekszenek
+bumlizik	bumlizni	381	bumlizik	bumlizni	cselekednek
+nedvedzik	nedvedzeni	381	nedvedzik	nedvedzeni	cselekszenek
+gémberedik	gémberedni	379	gémberedik	gémberedni	cselekednek
+fermentálódik	fermentálódni	378	fermentálódik	fermentálódni	cselekednek
+kétségeskedik	kétségeskedni	376	kétségeskedik	kétségeskedni	cselekednek
+çíkozódik	çíkozódni	375	csíkozódik	csíkozódni	cselekednek
+piruettezik	piruettezni	375	piruettezik	piruettezni	cselekednek
+çerepesedik	çerepesedni	372	cserepesedik	cserepesedni	cselekednek
+érzéke¥kedik	érzéke¥kedni	372	érzékenykedik	érzékenykedni	cselekednek
+rugdosódik	rugdosódni	369	rugdosódik	rugdosódni	cselekednek
+elérzéke¥edik	elérzéke¥edni	368	elérzékenyedik	elérzékenyedni	cselekednek
+aljasodik	aljasodni	367	aljasodik	aljasodni	cselekednek
+poharazik	poharazni	365	poharazik	poharazni	cselekednek
+kedé¬eskedik	kedé¬eskedni	364	kedélyeskedik	kedélyeskedni	cselekednek
+legé¥kedik	legé¥kedni	363	legénykedik	legénykedni	cselekednek
+ráhajlik	ráhajlani	361	ráhajlik	ráhajlani	cselekszenek
+ßemérmeskedik	ßemérmeskedni	360	szemérmeskedik	szemérmeskedni	cselekednek
+hajnallik	hajnallani	359	hajnallik	hajnallani	cselekszenek
+¥iratkozik	¥iratkozni	356	nyiratkozik	nyiratkozni	cselekednek
+kócolódik	kócolódni	355	kócolódik	kócolódni	cselekednek
+sápadozik	sápadozni	355	sápadozik	sápadozni	cselekednek
+vonßolódik	vonßolódni	354	vonszolódik	vonszolódni	cselekednek
+veßkődik	veßkődni	353	veszkődik	veszkődni	cselekednek
+felhősödik	felhősödni	352	felhősödik	felhősödni	cselekednek
+diákoskodik	diákoskodni	351	diákoskodik	diákoskodni	cselekednek
+beavatódik	beavatódni	350	beavatódik	beavatódni	cselekednek
+fondorkodik	fondorkodni	350	fondorkodik	fondorkodni	cselekednek
+lan©osodik	lan©osodni	348	langyosodik	langyosodni	cselekednek
+gen¥esedik	gen¥esedni	347	gennyesedik	gennyesedni	cselekednek
+jelölődik	jelölődni	347	jelölődik	jelölődni	cselekednek
+ösßefogózik	ösßefogózni	345	összefogózik	összefogózni	cselekednek
+megátalkodik	megátalkodni	342	megátalkodik	megátalkodni	cselekednek
+pukedlizik	pukedlizni	342	pukedlizik	pukedlizni	cselekednek
+regißtrálódik	regißtrálódni	341	regisztrálódik	regisztrálódni	cselekednek
+dohosodik	dohosodni	339	dohosodik	dohosodni	cselekednek
+férgesedik	férgesedni	339	férgesedik	férgesedni	cselekednek
+©úródik	©úródni	339	gyúródik	gyúródni	cselekednek
+kön¥ebbedik	kön¥ebbedni	337	könnyebbedik	könnyebbedni	cselekednek
+megemlítődik	megemlítődni	333	megemlítődik	megemlítődni	cselekednek
+meghatározódik	meghatározódni	331	meghatározódik	meghatározódni	cselekednek
+çokizik	çokizni	328	csokizik	csokizni	cselekednek
+cigá¥kodik	cigá¥kodni	325	cigánykodik	cigánykodni	cselekednek
+civilizálódik	civilizálódni	325	civilizálódik	civilizálódni	cselekednek
+çibéßkedik	çibéßkedni	324	csibészkedik	csibészkedni	cselekednek
+paprikázik	paprikázni	321	paprikázik	paprikázni	cselekednek
+háromßorozódik	háromßorozódni	320	háromszorozódik	háromszorozódni	cselekednek
+tehénkedik	tehénkedni	320	tehénkedik	tehénkedni	cselekednek
+¥ájaskodik	¥ájaskodni	319	nyájaskodik	nyájaskodni	cselekednek
+porladozik	porladozni	318	porladozik	porladozni	cselekednek
+centralizálódik	centralizálódni	317	centralizálódik	centralizálódni	cselekednek
+ßüremkedik	ßüremkedni	316	szüremkedik	szüremkedni	cselekednek
+he¬ettesítődik	he¬ettesítődni	315	helyettesítődik	helyettesítődni	cselekednek
+kéktúrázik	kéktúrázni	312	kéktúrázik	kéktúrázni	cselekednek
+kuglizik	kuglizni	312	kuglizik	kuglizni	cselekednek
+ßurkálódik	ßurkálódni	310	szurkálódik	szurkálódni	cselekednek
+kevesbedik	kevesbedni	309	kevesbedik	kevesbedni	cselekednek
+megcáfolódik	megcáfolódni	307	megcáfolódik	megcáfolódni	cselekednek
+felkorbáçolódik	felkorbáçolódni	306	felkorbácsolódik	felkorbácsolódni	cselekednek
+engedetlenkedik	engedetlenkedni	305	engedetlenkedik	engedetlenkedni	cselekednek
+lehorΩolódik	lehorΩolódni	305	lehorzsolódik	lehorzsolódni	cselekednek
+andalodik	andalodni	304	andalodik	andalodni	cselekednek
+patinásodik	patinásodni	303	patinásodik	patinásodni	cselekednek
+partizánkodik	partizánkodni	302	partizánkodik	partizánkodni	cselekednek
+békétlenkedik	békétlenkedni	301	békétlenkedik	békétlenkedni	cselekednek
+vakoskodik	vakoskodni	297	vakoskodik	vakoskodni	cselekednek
+krikettezik	krikettezni	296	krikettezik	krikettezni	cselekednek
+a¥agozik	a¥agozni	294	anyagozik	anyagozni	cselekednek
+çökevé¥esedik	çökevé¥esedni	294	csökevényesedik	csökevényesedni	cselekednek
+városiasodik	városiasodni	294	városiasodik	városiasodni	cselekednek
+malackodik	malackodni	293	malackodik	malackodni	cselekednek
+bajmolódik	bajmolódni	290	bajmolódik	bajmolódni	cselekednek
+çeppfo¬ósodik	çeppfo¬ósodni	288	cseppfolyósodik	cseppfolyósodni	cselekednek
+jódlizik	jódlizni	287	jódlizik	jódlizni	cselekednek
+elßlávosodik	elßlávosodni	286	elszlávosodik	elszlávosodni	cselekednek
+bizalmatlankodik	bizalmatlankodni	284	bizalmatlankodik	bizalmatlankodni	cselekednek
+bomladozik	bomladozni	281	bomladozik	bomladozni	cselekednek
+rákosodik	rákosodni	281	rákosodik	rákosodni	cselekednek
+pe¬hedzik	pe¬hedzeni	280	pelyhedzik	pelyhedzeni	cselekszenek
+málladozik	málladozni	277	málladozik	málladozni	cselekednek
+borzadozik	borzadozni	276	borzadozik	borzadozni	cselekednek
+kaßinózik	kaßinózni	274	kaszinózik	kaszinózni	cselekednek
+renitenskedik	renitenskedni	274	renitenskedik	renitenskedni	cselekednek
+füstölődik	füstölődni	272	füstölődik	füstölődni	cselekednek
+felhangosodik	felhangosodni	271	felhangosodik	felhangosodni	cselekednek
+amerikanizálódik	amerikanizálódni	270	amerikanizálódik	amerikanizálódni	cselekednek
+dilizik	dilizni	269	dilizik	dilizni	cselekednek
+lelkipáßtorkodik	lelkipáßtorkodni	267	lelkipásztorkodik	lelkipásztorkodni	cselekednek
+vigéckedik	vigéckedni	265	vigéckedik	vigéckedni	cselekednek
+hirtelenkedik	hirtelenkedni	264	hirtelenkedik	hirtelenkedni	cselekednek
+ü©védkedik	ü©védkedni	263	ügyvédkedik	ügyvédkedni	cselekednek
+levezetődik	levezetődni	262	levezetődik	levezetődni	cselekednek
+gombolkozik	gombolkozni	261	gombolkozik	gombolkozni	cselekednek
+elßemé¬telenedik	elßemé¬telenedni	260	elszemélytelenedik	elszemélytelenedni	cselekednek
+édesedik	édesedni	258	édesedik	édesedni	cselekednek
+dörgölődik	dörgölődni	254	dörgölődik	dörgölődni	cselekednek
+gordonkázik	gordonkázni	254	gordonkázik	gordonkázni	cselekednek
+kántorkodik	kántorkodni	254	kántorkodik	kántorkodni	cselekednek
+kiçi¥eskedik	kiçi¥eskedni	254	kicsinyeskedik	kicsinyeskedni	cselekednek
+körülmé¥eskedik	körülmé¥eskedni	254	körülményeskedik	körülményeskedni	cselekednek
+gazosodik	gazosodni	253	gazosodik	gazosodni	cselekednek
+gombfocizik	gombfocizni	253	gombfocizik	gombfocizni	cselekednek
+sivatagosodik	sivatagosodni	252	sivatagosodik	sivatagosodni	cselekednek
+lepadlózik	lepadlózni	251	lepadlózik	lepadlózni	cselekednek
+©őzelmeskedik	©őzelmeskedni	249	győzelmeskedik	győzelmeskedni	cselekednek
+elpofátlanodik	elpofátlanodni	248	elpofátlanodik	elpofátlanodni	cselekednek
+be†árkodik	be†árkodni	246	betyárkodik	betyárkodni	cselekednek
+dißnólkodik	dißnólkodni	243	disznólkodik	disznólkodni	cselekednek
+férfiasodik	férfiasodni	243	férfiasodik	férfiasodni	cselekednek
+nehézkedik	nehézkedni	243	nehézkedik	nehézkedni	cselekednek
+karßtosodik	karßtosodni	242	karsztosodik	karsztosodni	cselekednek
+tüzeskedik	tüzeskedni	242	tüzeskedik	tüzeskedni	cselekednek
+pendlizik	pendlizni	241	pendlizik	pendlizni	cselekednek
+rétegeződik	rétegeződni	241	rétegeződik	rétegeződni	cselekednek
+galambáßik	galambáßni	240	galambászik	galambászni	cselekednek
+ßétdarabolódik	ßétdarabolódni	240	szétdarabolódik	szétdarabolódni	cselekednek
+dacoskodik	dacoskodni	237	dacoskodik	dacoskodni	cselekednek
+elodázódik	elodázódni	237	elodázódik	elodázódni	cselekednek
+narkózik	narkózni	236	narkózik	narkózni	cselekednek
+palizik	palizni	236	palizik	palizni	cselekednek
+tüzesedik	tüzesedni	236	tüzesedik	tüzesedni	cselekednek
+késedelmeskedik	késedelmeskedni	235	késedelmeskedik	késedelmeskedni	cselekednek
+kettőződik	kettőződni	235	kettőződik	kettőződni	cselekednek
+tanonckodik	tanonckodni	234	tanonckodik	tanonckodni	cselekednek
+pillangózik	pillangózni	232	pillangózik	pillangózni	cselekednek
+he©esedik	he©esedni	230	hegyesedik	hegyesedni	cselekednek
+dáridózik	dáridózni	229	dáridózik	dáridózni	cselekednek
+érzelgősködik	érzelgősködni	229	érzelgősködik	érzelgősködni	cselekednek
+feké¬esedik	feké¬esedni	228	fekélyesedik	fekélyesedni	cselekednek
+megfogózik	megfogózni	227	megfogózik	megfogózni	cselekednek
+vezérkedik	vezérkedni	227	vezérkedik	vezérkedni	cselekednek
+párállik	párállani	226	párállik	párállani	cselekszenek
+çámpázik	çámpázni	225	csámpázik	csámpázni	cselekednek
+erőtlenedik	erőtlenedni	223	erőtlenedik	erőtlenedni	cselekednek
+hamvazkodik	hamvazkodni	223	hamvazkodik	hamvazkodni	cselekednek
+ösßevonódik	ösßevonódni	223	összevonódik	összevonódni	cselekednek
+hapcizik	hapcizni	222	hapcizik	hapcizni	cselekednek
+tudálékoskodik	tudálékoskodni	222	tudálékoskodik	tudálékoskodni	cselekednek
+zavarosodik	zavarosodni	221	zavarosodik	zavarosodni	cselekednek
+átha©omá¥ozódik	átha©omá¥ozódni	220	áthagyományozódik	áthagyományozódni	cselekednek
+horΩolódik	horΩolódni	219	horzsolódik	horzsolódni	cselekednek
+so¬máßik	so¬máßni	218	solymászik	solymászni	cselekednek
+tekerőzik	tekerődzni	218	tekerőzik	tekerődzni	cselekednek
+meakulpázik	meakulpázni	217	meakulpázik	meakulpázni	cselekednek
+mérgeskedik	mérgeskedni	217	mérgeskedik	mérgeskedni	cselekednek
+idegződik	idegződni	216	idegződik	idegződni	cselekednek
+gubbaßkodik	gubbaßkodni	215	gubbaszkodik	gubbaszkodni	cselekednek
+öblösödik	öblösödni	214	öblösödik	öblösödni	cselekednek
+ple†kázik	ple†kázni	214	pletykázik	pletykázni	cselekednek
+rojtosodik	rojtosodni	214	rojtosodik	rojtosodni	cselekednek
+dominózik	dominózni	213	dominózik	dominózni	cselekednek
+gombo¬odik	gombo¬odni	213	gombolyodik	gombolyodni	cselekednek
+lovaçkázik	lovaçkázni	213	lovacskázik	lovacskázni	cselekednek
+istenkedik	istenkedni	212	istenkedik	istenkedni	cselekednek
+ßürkéllik	ßürkélleni	211	szürkéllik	szürkélleni	cselekszenek
+uraskodik	uraskodni	211	uraskodik	uraskodni	cselekednek
+©őzködik	©őzködni	210	győzködik	győzködni	cselekednek
+riçajozik	riçajozni	209	ricsajozik	ricsajozni	cselekednek
+çupaßodik	çupaßodni	208	csupaszodik	csupaszodni	cselekednek
+hurkolódik	hurkolódni	208	hurkolódik	hurkolódni	cselekednek
+¥álkásodik	¥álkásodni	208	nyálkásodik	nyálkásodni	cselekednek
+pajtáskodik	pajtáskodni	208	pajtáskodik	pajtáskodni	cselekednek
+ßenteskedik	ßenteskedni	208	szenteskedik	szenteskedni	cselekednek
+gőgösködik	gőgösködni	206	gőgösködik	gőgösködni	cselekednek
+virtuskodik	virtuskodni	206	virtuskodik	virtuskodni	cselekednek
+koßosodik	koßosodni	205	koszosodik	koszosodni	cselekednek
+pajzánkodik	pajzánkodni	203	pajzánkodik	pajzánkodni	cselekednek
+kámpiçorodik	kámpiçorodni	202	kámpicsorodik	kámpicsorodni	cselekednek
+káplánkodik	káplánkodni	201	káplánkodik	káplánkodni	cselekednek
+évelődik	évelődni	200	évelődik	évelődni	cselekednek
+kásásodik	kásásodni	200	kásásodik	kásásodni	cselekednek
+¥uláßik	¥uláßni	200	nyulászik	nyulászni	cselekednek
+akaratoskodik	akaratoskodni	199	akaratoskodik	akaratoskodni	cselekednek
+©öngélkedik	©öngélkedni	198	gyöngélkedik	gyöngélkedni	cselekednek
+felpaprikázódik	felpaprikázódni	197	felpaprikázódik	felpaprikázódni	cselekednek
+jegecesedik	jegecesedni	197	jegecesedik	jegecesedni	cselekednek
+durváskodik	durváskodni	196	durváskodik	durváskodni	cselekednek
+indignálódik	indignálódni	195	indignálódik	indignálódni	cselekednek
+tárogatózik	tárogatózni	195	tárogatózik	tárogatózni	cselekednek
+gön©ölődik	gön©ölődni	194	göngyölődik	göngyölődni	cselekednek
+generalizálódik	generalizálódni	193	generalizálódik	generalizálódni	cselekednek
+levedzik	levedzeni	191	levedzik	levedzeni	cselekszenek
+pajkoskodik	pajkoskodni	190	pajkoskodik	pajkoskodni	cselekednek
+çinálódik	çinálódni	189	csinálódik	csinálódni	cselekednek
+darvadozik	darvadozni	188	darvadozik	darvadozni	cselekednek
+ßálasodik	ßálasodni	188	szálasodik	szálasodni	cselekednek
+heccelődik	heccelődni	187	heccelődik	heccelődni	cselekednek
+iparosodik	iparosodni	186	iparosodik	iparosodni	cselekednek
+í¥enckedik	í¥enckedni	185	ínyenckedik	ínyenckedni	cselekednek
+ßétválaßtódik	ßétválaßtódni	184	szétválasztódik	szétválasztódni	cselekednek
+gombolódik	gombolódni	183	gombolódik	gombolódni	cselekednek
+írásbelizik	írásbelizni	183	írásbelizik	írásbelizni	cselekednek
+kémlelődik	kémlelődni	183	kémlelődik	kémlelődni	cselekednek
+ü©nökösködik	ü©nökösködni	182	ügynökösködik	ügynökösködni	cselekednek
+bodorodik	bodorodni	181	bodorodik	bodorodni	cselekednek
+danáßik	danáßni	181	danászik	danászni	cselekednek
+köçögösködik	köçögösködni	179	köcsögösködik	köcsögösködni	cselekednek
+sározódik	sározódni	179	sározódik	sározódni	cselekednek
+tízßereződik	tízßereződni	179	tízszereződik	tízszereződni	cselekednek
+dévajkodik	dévajkodni	178	dévajkodik	dévajkodni	cselekednek
+varasodik	varasodni	176	varasodik	varasodni	cselekednek
+fasizálódik	fasizálódni	175	fasizálódik	fasizálódni	cselekednek
+decentralizálódik	decentralizálódni	174	decentralizálódik	decentralizálódni	cselekednek
+hengergőzik	hengergőzni	174	hengergőzik	hengergőzni	cselekednek
+pißkoskodik	pißkoskodni	173	piszkoskodik	piszkoskodni	cselekednek
+indulatoskodik	indulatoskodni	171	indulatoskodik	indulatoskodni	cselekednek
+bogozódik	bogozódni	170	bogozódik	bogozódni	cselekednek
+ßemtelenedik	ßemtelenedni	170	szemtelenedik	szemtelenedni	cselekednek
+fogózkodik	fogózkodni	169	fogózkodik	fogózkodni	cselekednek
+ißaposodik	ißaposodni	168	iszaposodik	iszaposodni	cselekednek
+ké¥elmeskedik	ké¥elmeskedni	168	kényelmeskedik	kényelmeskedni	cselekednek
+kormozódik	kormozódni	168	kormozódik	kormozódni	cselekednek
+smacizik	smacizni	168	smacizik	smacizni	cselekednek
+kopírozódik	kopírozódni	167	kopírozódik	kopírozódni	cselekednek
+méredzkedik	méredzkedni	167	méredzkedik	méredzkedni	cselekednek
+alázatoskodik	alázatoskodni	165	alázatoskodik	alázatoskodni	cselekednek
+reggeledik	reggeledni	165	reggeledik	reggeledni	cselekednek
+tébo¬odik	tébo¬odni	164	tébolyodik	tébolyodni	cselekednek
+cangázik	cangázni	163	cangázik	cangázni	cselekednek
+dobálódik	dobálódni	163	dobálódik	dobálódni	cselekednek
+hallózik	hallózni	163	hallózik	hallózni	cselekednek
+vasutazik	vasutazni	163	vasutazik	vasutazni	cselekednek
+kövéredik	kövéredni	162	kövéredik	kövéredni	cselekednek
+komplikálódik	komplikálódni	161	komplikálódik	komplikálódni	cselekednek
+foglalkodik	foglalkodni	160	foglalkodik	foglalkodni	cselekednek
+ittasodik	ittasodni	160	ittasodik	ittasodni	cselekednek
+testesedik	testesedni	160	testesedik	testesedni	cselekednek
+lopózkodik	lopózkodni	159	lopózkodik	lopózkodni	cselekednek
+pocakosodik	pocakosodni	159	pocakosodik	pocakosodni	cselekednek
+dúslakodik	dúslakodni	157	dúslakodik	dúslakodni	cselekednek
+makrancoskodik	makrancoskodni	157	makrancoskodik	makrancoskodni	cselekednek
+lopódzkodik	lopódzkodni	156	lopódzkodik	lopódzkodni	cselekednek
+tokosodik	tokosodni	156	tokosodik	tokosodni	cselekednek
+bravúroskodik	bravúroskodni	155	bravúroskodik	bravúroskodni	cselekednek
+hidegedik	hidegedni	155	hidegedik	hidegedni	cselekednek
+villa¥ozódik	villa¥ozódni	154	villanyozódik	villanyozódni	cselekednek
+boltozódik	boltozódni	153	boltozódik	boltozódni	cselekednek
+gen¥edzik	gen¥edzeni	153	gennyedzik	gennyedzeni	cselekszenek
+önérzeteskedik	önérzeteskedni	153	önérzeteskedik	önérzeteskedni	cselekednek
+kéredzik	kéredzni	152	kéredzik	kéredzni	cselekszenek
+vidámodik	vidámodni	151	vidámodik	vidámodni	cselekednek
+acélosodik	acélosodni	150	acélosodik	acélosodni	cselekednek
+aljaskodik	aljaskodni	150	aljaskodik	aljaskodni	cselekednek
+fo¬ósodik	fo¬ósodni	150	folyósodik	folyósodni	cselekednek
+fon¥adozik	fon¥adozni	150	fonnyadozik	fonnyadozni	cselekednek
+alamiΩnálkodik	alamiΩnálkodni	148	alamizsnálkodik	alamizsnálkodni	cselekednek
+kijegecesedik	kijegecesedni	148	kijegecesedik	kijegecesedni	cselekednek
+ßorgalmatoskodik	ßorgalmatoskodni	148	szorgalmatoskodik	szorgalmatoskodni	cselekednek
+méretkezik	méretkezni	147	méretkezik	méretkezni	cselekednek
+seké¬esedik	seké¬esedni	147	sekélyesedik	sekélyesedni	cselekednek
+hivatalnokoskodik	hivatalnokoskodni	145	hivatalnokoskodik	hivatalnokoskodni	cselekednek
+óhajtozik	óhajtozni	144	óhajtozik	óhajtozni	cselekednek
+ßájhősködik	ßájhősködni	144	szájhősködik	szájhősködni	cselekednek
+tetvesedik	tetvesedni	144	tetvesedik	tetvesedni	cselekednek
+ßör¥űködik	ßör¥űködni	143	szörnyűködik	szörnyűködni	cselekednek
+villásreggelizik	villásreggelizni	143	villásreggelizik	villásreggelizni	cselekednek
+beiktatódik	beiktatódni	141	beiktatódik	beiktatódni	cselekednek
+illetlenkedik	illetlenkedni	141	illetlenkedik	illetlenkedni	cselekednek
+kenekedik	kenekedni	141	kenekedik	kenekedni	cselekednek
+kékellik	kékelleni	139	kékellik	kékelleni	cselekszenek
+nivellálódik	nivellálódni	138	nivellálódik	nivellálódni	cselekednek
+huligánkodik	huligánkodni	137	huligánkodik	huligánkodni	cselekednek
+kárörvendezik	kárörvendezni	137	kárörvendezik	kárörvendezni	cselekednek
+táplálódik	táplálódni	137	táplálódik	táplálódni	cselekednek
+Ωémbeskedik	Ωémbeskedni	135	zsémbeskedik	zsémbeskedni	cselekednek
+komißkodik	komißkodni	134	komiszkodik	komiszkodni	cselekednek
+rákáßik	rákáßni	134	rákászik	rákászni	cselekednek
+borjadzik	borjadzani	132	borjadzik	borjadzani	cselekszenek
+¥akaskodik	¥akaskodni	132	nyakaskodik	nyakaskodni	cselekednek
+ßagosodik	ßagosodni	132	szagosodik	szagosodni	cselekednek
+he¬telenkedik	he¬telenkedni	131	helytelenkedik	helytelenkedni	cselekednek
+kalmárkodik	kalmárkodni	131	kalmárkodik	kalmárkodni	cselekednek
+©epesedik	©epesedni	130	gyepesedik	gyepesedni	cselekednek
+ösßeku†ulódik	ösßeku†ulódni	130	összekutyulódik	összekutyulódni	cselekednek
+fölidéződik	fölidéződni	129	fölidéződik	fölidéződni	cselekednek
+cifrálkodik	cifrálkodni	127	cifrálkodik	cifrálkodni	cselekednek
+korçosodik	korçosodni	127	korcsosodik	korcsosodni	cselekednek
+tolvajkodik	tolvajkodni	126	tolvajkodik	tolvajkodni	cselekednek
+elißapolódik	elißapolódni	123	eliszapolódik	eliszapolódni	cselekednek
+deklasßálódik	deklasßálódni	122	deklasszálódik	deklasszálódni	cselekednek
+ecetesedik	ecetesedni	121	ecetesedik	ecetesedni	cselekednek
+a¥átlanodik	a¥átlanodni	120	anyátlanodik	anyátlanodni	cselekednek
+balettezik	balettezni	120	balettezik	balettezni	cselekednek
+domeßtikálódik	domeßtikálódni	119	domesztikálódik	domesztikálódni	cselekednek
+kuruckodik	kuruckodni	119	kuruckodik	kuruckodni	cselekednek
+pe†hüdik	pe†hüdni	119	petyhüdik	petyhüdni	cselekednek
+kanáßodik	kanáßodni	117	kanászodik	kanászodni	cselekednek
+öregbedik	öregbedni	117	öregbedik	öregbedni	cselekednek
+dermedezik	dermedezni	116	dermedezik	dermedezni	cselekednek
+ha©akozik	ha©akozni	116	hagyakozik	hagyakozni	cselekednek
+méreteződik	méreteződni	116	méreteződik	méreteződni	cselekednek
+vénhedik	vénhedni	116	vénhedik	vénhedni	cselekednek
+bendΩózik	bendΩózni	115	bendzsózik	bendzsózni	cselekednek
+ezermesterkedik	ezermesterkedni	115	ezermesterkedik	ezermesterkedni	cselekednek
+illeßtődik	illeßtődni	115	illesztődik	illesztődni	cselekednek
+redőződik	redőződni	114	redőződik	redőződni	cselekednek
+olçóbbodik	olçóbbodni	113	olcsóbbodik	olcsóbbodni	cselekednek
+bimbódzik	bimbódzni	111	bimbódzik	bimbódzni	cselekszenek
+spicliskedik	spicliskedni	111	spicliskedik	spicliskedni	cselekednek
+tudakolózik	tudakolódzni	110	tudakolózik	tudakolódzni	cselekednek
+çelédkedik	çelédkedni	109	cselédkedik	cselédkedni	cselekednek
+ßögellik	ßögellni	109	szögellik	szögellni	cselekszenek
+hasasodik	hasasodni	108	hasasodik	hasasodni	cselekednek
+lúgozódik	lúgozódni	108	lúgozódik	lúgozódni	cselekednek
+Ωivá¥kodik	Ωivá¥kodni	108	zsiványkodik	zsiványkodni	cselekednek
+simlizik	simlizni	107	simlizik	simlizni	cselekednek
+darálódik	darálódni	106	darálódik	darálódni	cselekednek
+fojtódik	fojtódni	106	fojtódik	fojtódni	cselekednek
+çomózódik	çomózódni	105	csomózódik	csomózódni	cselekednek
+írnokoskodik	írnokoskodni	105	írnokoskodik	írnokoskodni	cselekednek
+juháßkodik	juháßkodni	105	juhászkodik	juhászkodni	cselekednek
+kelletlenkedik	kelletlenkedni	105	kelletlenkedik	kelletlenkedni	cselekednek
+ßájaskodik	ßájaskodni	105	szájaskodik	szájaskodni	cselekednek
+gomo¬odik	gomo¬odni	104	gomolyodik	gomolyodni	cselekednek
+levelesedik	levelesedni	104	levelesedik	levelesedni	cselekednek
+megmaçkásodik	megmaçkásodni	104	megmacskásodik	megmacskásodni	cselekednek
+izgágáskodik	izgágáskodni	102	izgágáskodik	izgágáskodni	cselekednek
+bajoskodik	bajoskodni	101	bajoskodik	bajoskodni	cselekednek
+tilinkózik	tilinkózni	101	tilinkózik	tilinkózni	cselekednek
+uΩoráskodik	uΩoráskodni	101	uzsoráskodik	uzsoráskodni	cselekednek
+fondorlatoskodik	fondorlatoskodni	100	fondorlatoskodik	fondorlatoskodni	cselekednek
+pörösködik	pörösködni	100	pörösködik	pörösködni	cselekednek
+bojtárkodik	bojtárkodni	99	bojtárkodik	bojtárkodni	cselekednek
+jégkrémezik	jégkrémezni	99	jégkrémezik	jégkrémezni	cselekednek
+mámorosodik	mámorosodni	99	mámorosodik	mámorosodni	cselekednek
+bukdosik	bukdosni	98	bukdosik	bukdosni	cselekednek
+determinálódik	determinálódni	98	determinálódik	determinálódni	cselekednek
+tetvéßkedik	tetvéßkedni	98	tetvészkedik	tetvészkedni	cselekednek
+ka©lózik	ka©lózni	96	kagylózik	kagylózni	cselekednek
+felmagaßtalódik	felmagaßtalódni	94	felmagasztalódik	felmagasztalódni	cselekednek
+kúrázik	kúrázni	94	kúrázik	kúrázni	cselekednek
+botorkázik	botorkázni	93	botorkázik	botorkázni	cselekednek
+fogódik	fogódni	93	fogódik	fogódni	cselekednek
+kupeckedik	kupeckedni	93	kupeckedik	kupeckedni	cselekednek
+çévélődik	çévélődni	92	csévélődik	csévélődni	cselekednek
+çőßködik	çőßködni	91	csőszködik	csőszködni	cselekednek
+hájasodik	hájasodni	91	hájasodik	hájasodni	cselekednek
+elkérezkedik	elkérezkedni	90	elkérezkedik	elkérezkedni	cselekednek
+evődik	evődni	90	evődik	evődni	cselekednek
+fodrosodik	fodrosodni	90	fodrosodik	fodrosodni	cselekednek
+hár†ásodik	hár†ásodni	90	hártyásodik	hártyásodni	cselekednek
+kifejtődik	kifejtődni	89	kifejtődik	kifejtődni	cselekednek
+lemeózik	lemeózni	89	lemeózik	lemeózni	cselekednek
+bürokratizálódik	bürokratizálódni	88	bürokratizálódik	bürokratizálódni	cselekednek
+elforgáçolódik	elforgáçolódni	88	elforgácsolódik	elforgácsolódni	cselekednek
+emberesedik	emberesedni	88	emberesedik	emberesedni	cselekednek
+mérsékelődik	mérsékelődni	88	mérsékelődik	mérsékelődni	cselekednek
+na©dolgozik	na©dolgozni	88	nagydolgozik	nagydolgozni	cselekednek
+hamiskodik	hamiskodni	87	hamiskodik	hamiskodni	cselekednek
+raplizik	raplizni	87	raplizik	raplizni	cselekednek
+stréberkedik	stréberkedni	87	stréberkedik	stréberkedni	cselekednek
+çárdásozik	çárdásozni	86	csárdásozik	csárdásozni	cselekednek
+epréßik	epréßni	86	eprészik	eprészni	cselekednek
+¥irkosodik	¥irkosodni	86	nyirkosodik	nyirkosodni	cselekednek
+ßellőzködik	ßellőzködni	86	szellőzködik	szellőzködni	cselekednek
+çibukozik	çibukozni	85	csibukozik	csibukozni	cselekednek
+proletarizálódik	proletarizálódni	85	proletarizálódik	proletarizálódni	cselekednek
+kicombosodik	kicombosodni	84	kicombosodik	kicombosodni	cselekednek
+penderedik	penderedni	84	penderedik	penderedni	cselekednek
+betak¥osodik	betak¥osodni	83	betaknyosodik	betaknyosodni	cselekednek
+híresedik	híresedni	83	híresedik	híresedni	cselekednek
+ßeßé¬eskedik	ßeßé¬eskedni	83	szeszélyeskedik	szeszélyeskedni	cselekednek
+bá©adozik	bá©adozni	82	bágyadozik	bágyadozni	cselekednek
+Ωémbelődik	Ωémbelődni	82	zsémbelődik	zsémbelődni	cselekednek
+kéßségeskedik	kéßségeskedni	81	készségeskedik	készségeskedni	cselekednek
+lassúdik	lassúdni	81	lassúdik	lassúdni	cselekednek
+lestrapálódik	lestrapálódni	81	lestrapálódik	lestrapálódni	cselekednek
+¥ughatatlankodik	¥ughatatlankodni	81	nyughatatlankodik	nyughatatlankodni	cselekednek
+tokozódik	tokozódni	81	tokozódik	tokozódni	cselekednek
+újhodik	újhodni	81	újhodik	újhodni	cselekednek
+eltájolódik	eltájolódni	80	eltájolódik	eltájolódni	cselekednek
+svindlizik	svindlizni	80	svindlizik	svindlizni	cselekednek
+ßarusodik	ßarusodni	80	szarusodik	szarusodni	cselekednek
+vízipólózik	vízipólózni	80	vízipólózik	vízipólózni	cselekednek
+undokoskodik	undokoskodni	79	undokoskodik	undokoskodni	cselekednek
+ízetlenkedik	ízetlenkedni	78	ízetlenkedik	ízetlenkedni	cselekednek
+ßóßá†árkodik	ßóßá†árkodni	78	szószátyárkodik	szószátyárkodni	cselekednek
+ßűkösködik	ßűkösködni	78	szűkösködik	szűkösködni	cselekednek
+alußik	alußni	77	aluszik	aluszni	cselekednek
+ízesedik	ízesedni	77	ízesedik	ízesedni	cselekednek
+nőßik	nőßni	77	nőszik	nőszni	cselekednek
+ßaglálódik	ßaglálódni	77	szaglálódik	szaglálódni	cselekednek
+érzelmeskedik	érzelmeskedni	76	érzelmeskedik	érzelmeskedni	cselekednek
+kulizik	kulizni	75	kulizik	kulizni	cselekednek
+belemártózik	belemártózni	74	belemártózik	belemártózni	cselekednek
+örökösödik	örökösödni	74	örökösödik	örökösödni	cselekednek
+palatalizálódik	palatalizálódni	74	palatalizálódik	palatalizálódni	cselekednek
+világiasodik	világiasodni	74	világiasodik	világiasodni	cselekednek
+dö¬fösködik	dö¬fösködni	73	dölyfösködik	dölyfösködni	cselekednek
+ku†álkodik	ku†álkodni	73	kutyálkodik	kutyálkodni	cselekednek
+megacélozódik	megacélozódni	73	megacélozódik	megacélozódni	cselekednek
+ßíntelenedik	ßíntelenedni	73	színtelenedik	színtelenedni	cselekednek
+prolongálódik	prolongálódni	72	prolongálódik	prolongálódni	cselekednek
+dülleßkedik	dülleßkedni	71	dülleszkedik	dülleszkedni	cselekednek
+hamukázik	hamukázni	71	hamukázik	hamukázni	cselekednek
+lasßózik	lasßózni	71	lasszózik	lasszózni	cselekednek
+meg©ökeredzik	meg©ökeredzni	71	meggyökeredzik	meggyökeredzni	cselekszenek
+átßüremkedik	átßüremkedni	70	átszüremkedik	átszüremkedni	cselekednek
+felhergelődik	felhergelődni	70	felhergelődik	felhergelődni	cselekednek
+korhe¬kedik	korhe¬kedni	70	korhelykedik	korhelykedni	cselekednek
+lóbálózik	lóbálózni	70	lóbálózik	lóbálózni	cselekednek
+revelálódik	revelálódni	70	revelálódik	revelálódni	cselekednek
+édeskedik	édeskedni	69	édeskedik	édeskedni	cselekednek
+fösvé¥kedik	fösvé¥kedni	69	fösvénykedik	fösvénykedni	cselekednek
+elçigázódik	elçigázódni	68	elcsigázódik	elcsigázódni	cselekednek
+elrejtődik	elrejtődni	68	elrejtődik	elrejtődni	cselekednek
+kóklerkedik	kóklerkedni	68	kóklerkedik	kóklerkedni	cselekednek
+ömledezik	ömledezni	68	ömledezik	ömledezni	cselekednek
+patvarkodik	patvarkodni	68	patvarkodik	patvarkodni	cselekednek
+felçévélődik	felçévélődni	67	felcsévélődik	felcsévélődni	cselekednek
+feltáskásodik	feltáskásodni	67	feltáskásodik	feltáskásodni	cselekednek
+horpadozik	horpadozni	67	horpadozik	horpadozni	cselekednek
+lejtősödik	lejtősödni	67	lejtősödik	lejtősödni	cselekednek
+mo†oráßik	mo†oráßni	67	motyorászik	motyorászni	cselekednek
+behegesedik	behegesedni	66	behegesedik	behegesedni	cselekednek
+epéskedik	epéskedni	66	epéskedik	epéskedni	cselekednek
+lankadozik	lankadozni	66	lankadozik	lankadozni	cselekednek
+villantózik	villantózni	66	villantózik	villantózni	cselekednek
+haßontalankodik	haßontalankodni	65	haszontalankodik	haszontalankodni	cselekednek
+náthásodik	náthásodni	65	náthásodik	náthásodni	cselekednek
+románosodik	románosodni	65	románosodik	románosodni	cselekednek
+féktelenkedik	féktelenkedni	64	féktelenkedik	féktelenkedni	cselekednek
+©ulladozik	©ulladozni	64	gyulladozik	gyulladozni	cselekednek
+ku†ulódik	ku†ulódni	64	kutyulódik	kutyulódni	cselekednek
+agaráßik	agaráßni	63	agarászik	agarászni	cselekednek
+ellenzékieskedik	ellenzékieskedni	63	ellenzékieskedik	ellenzékieskedni	cselekednek
+polkázik	polkázni	63	polkázik	polkázni	cselekednek
+hazakéredzkedik	hazakéredzkedni	62	hazakéredzkedik	hazakéredzkedni	cselekednek
+he†kélkedik	he†kélkedni	62	hetykélkedik	hetykélkedni	cselekednek
+kellemkedik	kellemkedni	62	kellemkedik	kellemkedni	cselekednek
+pe¬hesedik	pe¬hesedni	62	pelyhesedik	pelyhesedni	cselekednek
+kormosodik	kormosodni	61	kormosodik	kormosodni	cselekednek
+negédeskedik	negédeskedni	61	negédeskedik	negédeskedni	cselekednek
+¥űgölődik	¥űgölődni	61	nyűgölődik	nyűgölődni	cselekednek
+ródlizik	ródlizni	61	ródlizik	ródlizni	cselekednek
+snóblizik	snóblizni	61	snóblizik	snóblizni	cselekednek
+spanglizik	spanglizni	61	spanglizik	spanglizni	cselekednek
+húsosodik	húsosodni	60	húsosodik	húsosodni	cselekednek
+juháßodik	juháßodni	60	juhászodik	juhászodni	cselekednek
+leveledzik	leveledzeni	60	leveledzik	leveledzeni	cselekszenek
+na©ßájúskodik	na©ßájúskodni	60	nagyszájúskodik	nagyszájúskodni	cselekednek
+ösßeötvöződik	ösßeötvöződni	60	összeötvöződik	összeötvöződni	cselekednek
+amerikázik	amerikázni	59	amerikázik	amerikázni	cselekednek
+çúfondároskodik	çúfondároskodni	59	csúfondároskodik	csúfondároskodni	cselekednek
+lepkéßik	lepkéßni	59	lepkészik	lepkészni	cselekednek
+çökö¥ösködik	çökö¥ösködni	58	csökönyösködik	csökönyösködni	cselekednek
+taßítódik	taßítódni	58	taszítódik	taszítódni	cselekednek
+alattomoskodik	alattomoskodni	57	alattomoskodik	alattomoskodni	cselekednek
+posvá¥osodik	posvá¥osodni	57	posványosodik	posványosodni	cselekednek
+fellengzősködik	fellengzősködni	56	fellengzősködik	fellengzősködni	cselekednek
+na©lelkűsködik	na©lelkűsködni	56	nagylelkűsködik	nagylelkűsködni	cselekednek
+aláhajlik	aláhajlani	55	aláhajlik	aláhajlani	cselekszenek
+dúskálkodik	dúskálkodni	54	dúskálkodik	dúskálkodni	cselekednek
+elménckedik	elménckedni	54	elménckedik	elménckedni	cselekednek
+ifjodik	ifjodni	54	ifjodik	ifjodni	cselekednek
+nemzetieskedik	nemzetieskedni	54	nemzetieskedik	nemzetieskedni	cselekednek
+pudvásodik	pudvásodni	54	pudvásodik	pudvásodni	cselekednek
+ßé©enkedik	ßé©enkedni	53	szégyenkedik	szégyenkedni	cselekednek
+çaçiskodik	çaçiskodni	52	csacsiskodik	csacsiskodni	cselekednek
+cimboráskodik	cimboráskodni	51	cimboráskodik	cimboráskodni	cselekednek
+németesedik	németesedni	51	németesedik	németesedni	cselekednek
+öklelőzik	öklelődzni	51	öklelőzik	öklelődzni	cselekednek
+öntözködik	öntözködni	51	öntözködik	öntözködni	cselekednek
+elkanáßosodik	elkanáßosodni	50	elkanászosodik	elkanászosodni	cselekednek
+elpimaßodik	elpimaßodni	50	elpimaszodik	elpimaszodni	cselekednek
+éßrevevődik	éßrevevődni	50	észrevevődik	észrevevődni	cselekednek
+hajçárkodik	hajçárkodni	50	hajcsárkodik	hajcsárkodni	cselekednek
+megtúrósodik	megtúrósodni	50	megtúrósodik	megtúrósodni	cselekednek
+odázódik	odázódni	50	odázódik	odázódni	cselekednek
+állatiasodik	állatiasodni	49	állatiasodik	állatiasodni	cselekednek
+éjjeledik	éjjeledni	49	éjjeledik	éjjeledni	cselekednek
+felfedődik	felfedődni	49	felfedődik	felfedődni	cselekednek
+kétßínűsködik	kétßínűsködni	49	kétszínűsködik	kétszínűsködni	cselekednek
+polgáriasodik	polgáriasodni	49	polgáriasodik	polgáriasodni	cselekednek
+ßertelenkedik	ßertelenkedni	49	szertelenkedik	szertelenkedni	cselekednek
+vállasodik	vállasodni	49	vállasodik	vállasodni	cselekednek
+ba†uzik	ba†uzni	48	batyuzik	batyuzni	cselekednek
+fókázik	fókázni	48	fókázik	fókázni	cselekednek
+¥egléskedik	¥egléskedni	48	nyegléskedik	nyegléskedni	cselekednek
+róΩállik	róΩállani	48	rózsállik	rózsállani	cselekszenek
+orvhaláßik	orvhaláßni	47	orvhalászik	orvhalászni	cselekednek
+ßinteződik	ßinteződni	47	szinteződik	szinteződni	cselekednek
+általánosodik	általánosodni	46	általánosodik	általánosodni	cselekednek
+befüvesedik	befüvesedni	46	befüvesedik	befüvesedni	cselekednek
+ßeleskedik	ßeleskedni	46	szeleskedik	szeleskedni	cselekednek
+odvasodik	odvasodni	45	odvasodik	odvasodni	cselekednek
+áhítatoskodik	áhítatoskodni	44	áhítatoskodik	áhítatoskodni	cselekednek
+kihajnalodik	kihajnalodni	44	kihajnalodik	kihajnalodni	cselekednek
+éme¬edik	éme¬edni	43	émelyedik	émelyedni	cselekednek
+öntudatosodik	öntudatosodni	43	öntudatosodik	öntudatosodni	cselekednek
+ßemesedik	ßemesedni	43	szemesedik	szemesedni	cselekednek
+tö†öréßik	tö†öréßni	43	tötyörészik	tötyörészni	cselekednek
+aduzik	aduzni	42	aduzik	aduzni	cselekednek
+cuclizik	cuclizni	42	cuclizik	cuclizni	cselekednek
+¥erekedik	¥erekedni	42	nyerekedik	nyerekedni	cselekednek
+pißkosodik	pißkosodni	42	piszkosodik	piszkosodni	cselekednek
+sül¬edezik	sül¬edezni	42	süllyedezik	süllyedezni	cselekednek
+çikózik	çikózni	41	csikózik	csikózni	cselekednek
+elméskedik	elméskedni	41	elméskedik	elméskedni	cselekednek
+indigózik	indigózni	41	indigózik	indigózni	cselekednek
+nappalodik	nappalodni	41	nappalodik	nappalodni	cselekednek
+áporodik	áporodni	40	áporodik	áporodni	cselekednek
+ron©oskodik	ron©oskodni	40	rongyoskodik	rongyoskodni	cselekednek
+rugódik	rugódni	40	rugódik	rugódni	cselekednek
+hazafiaskodik	hazafiaskodni	39	hazafiaskodik	hazafiaskodni	cselekednek
+hízókúrázik	hízókúrázni	39	hízókúrázik	hízókúrázni	cselekednek
+ízléstelenkedik	ízléstelenkedni	39	ízléstelenkedik	ízléstelenkedni	cselekednek
+zajoskodik	zajoskodni	39	zajoskodik	zajoskodni	cselekednek
+kisdolgozik	kisdolgozni	38	kisdolgozik	kisdolgozni	cselekednek
+deriválódik	deriválódni	37	deriválódik	deriválódni	cselekednek
+előkelősködik	előkelősködni	37	előkelősködik	előkelősködni	cselekednek
+háΩártoskodik	háΩártoskodni	37	házsártoskodik	házsártoskodni	cselekednek
+megjámborodik	megjámborodni	37	megjámborodik	megjámborodni	cselekednek
+bolháßkodik	bolháßkodni	36	bolhászkodik	bolhászkodni	cselekednek
+elçenevéßesedik	elçenevéßesedni	36	elcsenevészesedik	elcsenevészesedni	cselekednek
+eßtelenkedik	eßtelenkedni	36	esztelenkedik	esztelenkedni	cselekednek
+felfejtődik	felfejtődni	36	felfejtődik	felfejtődni	cselekednek
+vakmerősködik	vakmerősködni	36	vakmerősködik	vakmerősködni	cselekednek
+Ωidósodik	Ωidósodni	36	zsidósodik	zsidósodni	cselekednek
+be©eskedik	be©eskedni	35	begyeskedik	begyeskedni	cselekednek
+cinkoskodik	cinkoskodni	35	cinkoskodik	cinkoskodni	cselekednek
+félrehajlik	félrehajlani	35	félrehajlik	félrehajlani	cselekszenek
+henteredik	henteredni	35	henteredik	henteredni	cselekednek
+kuktálkodik	kuktálkodni	35	kuktálkodik	kuktálkodni	cselekednek
+organizálódik	organizálódni	35	organizálódik	organizálódni	cselekednek
+eredetieskedik	eredetieskedni	34	eredetieskedik	eredetieskedni	cselekednek
+gazdasßo¥kodik	gazdasßo¥kodni	34	gazdasszonykodik	gazdasszonykodni	cselekednek
+©eplabdázik	©eplabdázni	33	gyeplabdázik	gyeplabdázni	cselekednek
+hámozódik	hámozódni	33	hámozódik	hámozódni	cselekednek
+népieskedik	népieskedni	33	népieskedik	népieskedni	cselekednek
+ßélesbedik	ßélesbedni	33	szélesbedik	szélesbedni	cselekednek
+farizeuskodik	farizeuskodni	32	farizeuskodik	farizeuskodni	cselekednek
+önfejűsködik	önfejűsködni	32	önfejűsködik	önfejűsködni	cselekednek
+ösßerántódik	ösßerántódni	32	összerántódik	összerántódni	cselekednek
+silózik	silózni	32	silózik	silózni	cselekednek
+arcátlankodik	arcátlankodni	31	arcátlankodik	arcátlankodni	cselekednek
+beporzódik	beporzódni	31	beporzódik	beporzódni	cselekednek
+megjuházik	megjuházni	31	megjuházik	megjuházni	cselekednek
+ökrendezik	ökrendezni	31	ökrendezik	ökrendezni	cselekednek
+embertelenedik	embertelenedni	30	embertelenedik	embertelenedni	cselekednek
+feslődik	feslődni	30	feslődik	feslődni	cselekednek
+forté¬oskodik	forté¬oskodni	30	fortélyoskodik	fortélyoskodni	cselekednek
+ißákoskodik	ißákoskodni	29	iszákoskodik	iszákoskodni	cselekednek
+latorkodik	latorkodni	29	latorkodik	latorkodni	cselekednek
+e©enetlenkedik	e©enetlenkedni	28	egyenetlenkedik	egyenetlenkedni	cselekednek
+megtak¥osodik	megtak¥osodni	28	megtaknyosodik	megtaknyosodni	cselekednek
+bohóskodik	bohóskodni	27	bohóskodik	bohóskodni	cselekednek
+dombosodik	dombosodni	27	dombosodik	dombosodni	cselekednek
+füvéßkedik	füvéßkedni	27	füvészkedik	füvészkedni	cselekednek
+kitűrődik	kitűrődni	27	kitűrődik	kitűrődni	cselekednek
+kupeckodik	kupeckodni	27	kupeckodik	kupeckodni	cselekednek
+legátlódik	legátlódni	27	legátlódik	legátlódni	cselekednek
+çüçörödik	çüçörödni	26	csücsörödik	csücsörödni	cselekednek
+mecénáskodik	mecénáskodni	26	mecénáskodik	mecénáskodni	cselekednek
+¥úzódik	¥úzódni	26	nyúzódik	nyúzódni	cselekednek
+unalmaskodik	unalmaskodni	26	unalmaskodik	unalmaskodni	cselekednek
+bakafántoskodik	bakafántoskodni	25	bakafántoskodik	bakafántoskodni	cselekednek
+brutalizálódik	brutalizálódni	25	brutalizálódik	brutalizálódni	cselekednek
+©áváskodik	©áváskodni	25	gyáváskodik	gyáváskodni	cselekednek
+határozatlankodik	határozatlankodni	25	határozatlankodik	határozatlankodni	cselekednek
+ösßeßerelődik	ösßeßerelődni	25	összeszerelődik	összeszerelődni	cselekednek
+ßalonkázik	ßalonkázni	25	szalonkázik	szalonkázni	cselekednek
+ßemérmetlenkedik	ßemérmetlenkedni	25	szemérmetlenkedik	szemérmetlenkedni	cselekednek
+ßeplősödik	ßeplősödni	25	szeplősödik	szeplősödni	cselekednek
+utálatoskodik	utálatoskodni	25	utálatoskodik	utálatoskodni	cselekednek
+asßo¥osodik	asßo¥osodni	24	asszonyosodik	asszonyosodni	cselekednek
+hatodik	hatodni	24	hatodik	hatodni	cselekednek
+krokettezik	krokettezni	24	krokettezik	krokettezni	cselekednek
+ßlovákosodik	ßlovákosodni	24	szlovákosodik	szlovákosodni	cselekednek
+valakik	valakni	24	valakik	valakni	cselekednek
+el¥űvődik	el¥űvődni	23	elnyűvődik	elnyűvődni	cselekednek
+furfangoskodik	furfangoskodni	23	furfangoskodik	furfangoskodni	cselekednek
+gó©izik	gó©izni	23	gógyizik	gógyizni	cselekednek
+léháskodik	léháskodni	23	léháskodik	léháskodni	cselekednek
+rovátkázik	rovátkázni	23	rovátkázik	rovátkázni	cselekednek
+bankettezik	bankettezni	22	bankettezik	bankettezni	cselekednek
+elérdektelenedik	elérdektelenedni	22	elérdektelenedik	elérdektelenedni	cselekednek
+elfeçeréßik	elfeçeréßni	22	elfecserészik	elfecserészni	cselekednek
+hólabdázik	hólabdázni	22	hólabdázik	hólabdázni	cselekednek
+kirugódik	kirugódni	22	kirugódik	kirugódni	cselekednek
+kofáskodik	kofáskodni	22	kofáskodik	kofáskodni	cselekednek
+laßtizik	laßtizni	22	lasztizik	lasztizni	cselekednek
+lováßkodik	lováßkodni	22	lovászkodik	lovászkodni	cselekednek
+sokadozik	sokadozni	22	sokadozik	sokadozni	cselekednek
+çíkáßik	çíkáßni	21	csíkászik	csíkászni	cselekednek
+©apjasodik	©apjasodni	21	gyapjasodik	gyapjasodni	cselekednek
+lovagiaskodik	lovagiaskodni	21	lovagiaskodik	lovagiaskodni	cselekednek
+¥ava¬áskodik	¥ava¬áskodni	21	nyavalyáskodik	nyavalyáskodni	cselekednek
+¥úlósodik	¥úlósodni	21	nyúlósodik	nyúlósodni	cselekednek
+akkomodálódik	akkomodálódni	20	akkomodálódik	akkomodálódni	cselekednek
+aprólékoskodik	aprólékoskodni	20	aprólékoskodik	aprólékoskodni	cselekednek
+çalárdkodik	çalárdkodni	20	csalárdkodik	csalárdkodni	cselekednek
+çenevéßedik	çenevéßedni	20	csenevészedik	csenevészedni	cselekednek
+fölémagasodik	fölémagasodni	20	fölémagasodik	fölémagasodni	cselekednek
+kaláßosodik	kaláßosodni	20	kalászosodik	kalászosodni	cselekednek
+kitaposódik	kitaposódni	20	kitaposódik	kitaposódni	cselekednek
+¥üΩgölődik	¥üΩgölődni	20	nyüzsgölődik	nyüzsgölődni	cselekednek
+otrombáskodik	otrombáskodni	20	otrombáskodik	otrombáskodni	cselekednek
+Ωugoriskodik	Ωugoriskodni	20	zsugoriskodik	zsugoriskodni	cselekednek
+hóhérkodik	hóhérkodni	19	hóhérkodik	hóhérkodni	cselekednek
+eré¬eskedik	eré¬eskedni	18	erélyeskedik	erélyeskedni	cselekednek
+éretlenkedik	éretlenkedni	18	éretlenkedik	éretlenkedni	cselekednek
+hepajozik	hepajozni	18	hepajozik	hepajozni	cselekednek
+Ωebhokizik	Ωebhokizni	18	zsebhokizik	zsebhokizni	cselekednek
+ágasodik	ágasodni	17	ágasodik	ágasodni	cselekednek
+kapcáskodik	kapcáskodni	17	kapcáskodik	kapcáskodni	cselekednek
+konfundálódik	konfundálódni	17	konfundálódik	konfundálódni	cselekednek
+mezítelenkedik	mezítelenkedni	17	mezítelenkedik	mezítelenkedni	cselekednek
+sarjasodik	sarjasodni	17	sarjasodik	sarjasodni	cselekednek
+çáßárkodik	çáßárkodni	16	császárkodik	császárkodni	cselekednek
+érdektelenedik	érdektelenedni	16	érdektelenedik	érdektelenedni	cselekednek
+kamaßkodik	kamaßkodni	16	kamaszkodik	kamaszkodni	cselekednek
+mentekezik	mentekezni	16	mentekezik	mentekezni	cselekednek
+neveletlenkedik	neveletlenkedni	16	neveletlenkedik	neveletlenkedni	cselekednek
+pilinckézik	pilinckézni	16	pilinckézik	pilinckézni	cselekednek
+pontoskodik	pontoskodni	16	pontoskodik	pontoskodni	cselekednek
+berekeßtődik	berekeßtődni	15	berekesztődik	berekesztődni	cselekednek
+bü†kösödik	bü†kösödni	15	bütykösödik	bütykösödni	cselekednek
+çußamodik	çußamodni	15	csuszamodik	csuszamodni	cselekednek
+háryjánoskodik	háryjánoskodni	15	háryjánoskodik	háryjánoskodni	cselekednek
+kofálkodik	kofálkodni	15	kofálkodik	kofálkodni	cselekednek
+kó†agosodik	kó†agosodni	15	kótyagosodik	kótyagosodni	cselekednek
+mafláskodik	mafláskodni	15	mafláskodik	mafláskodni	cselekednek
+tokásodik	tokásodni	15	tokásodik	tokásodni	cselekednek
+kallózik	kallózni	14	kallózik	kallózni	cselekednek
+krajcároskodik	krajcároskodni	14	krajcároskodik	krajcároskodni	cselekednek
+megßagosodik	megßagosodni	14	megszagosodik	megszagosodni	cselekednek
+különködik	különködni	13	különködik	különködni	cselekednek
+orcátlankodik	orcátlankodni	13	orcátlankodik	orcátlankodni	cselekednek
+paklizik	paklizni	13	paklizik	paklizni	cselekednek
+napkúrázik	napkúrázni	12	napkúrázik	napkúrázni	cselekednek
+peßterkedik	peßterkedni	12	peszterkedik	peszterkedni	cselekednek
+dajkálkodik	dajkálkodni	11	dajkálkodik	dajkálkodni	cselekednek
+értekeződik	értekeződni	11	értekeződik	értekeződni	cselekednek
+¥elveskedik	¥elveskedni	11	nyelveskedik	nyelveskedni	cselekednek
+pákáßkodik	pákáßkodni	11	pákászkodik	pákászkodni	cselekednek
+ßatóçkodik	ßatóçkodni	11	szatócskodik	szatócskodni	cselekednek
+ßorítózik	ßorítózni	11	szorítózik	szorítózni	cselekednek
+titánkodik	titánkodni	11	titánkodik	titánkodni	cselekednek
+fog¬áßik	fog¬áßni	10	foglyászik	foglyászni	cselekednek
+kishitűsködik	kishitűsködni	10	kishitűsködik	kishitűsködni	cselekednek
+koçmároskodik	koçmároskodni	10	kocsmároskodik	kocsmároskodni	cselekednek
+máriásozik	máriásozni	10	máriásozik	máriásozni	cselekednek
+beßekundázik	beßekundázni	9	beszekundázik	beszekundázni	cselekednek
+eloldózik	eloldózni	9	eloldózik	eloldózni	cselekednek
+kileveledzik	kileveledzeni	9	kileveledzik	kileveledzeni	cselekszenek
+konfidenskedik	konfidenskedni	9	konfidenskedik	konfidenskedni	cselekednek
+lassabbodik	lassabbodni	9	lassabbodik	lassabbodni	cselekednek
+ßeleburdiskodik	ßeleburdiskodni	9	szeleburdiskodik	szeleburdiskodni	cselekednek
+utálkodik	utálkodni	9	utálkodik	utálkodni	cselekednek
+ßámosodik	ßámosodni	8	számosodik	számosodni	cselekednek
+ßűkmarkúskodik	ßűkmarkúskodni	8	szűkmarkúskodik	szűkmarkúskodni	cselekednek
+†úkáßik	†úkáßni	8	tyúkászik	tyúkászni	cselekednek
+elbarbárosodik	elbarbárosodni	7	elbarbárosodik	elbarbárosodni	cselekednek
+élceskedik	élceskedni	7	élceskedik	élceskedni	cselekednek
+fölhangosodik	fölhangosodni	7	fölhangosodik	fölhangosodni	cselekednek
+hóbortoskodik	hóbortoskodni	7	hóbortoskodik	hóbortoskodni	cselekednek
+redvesedik	redvesedni	7	redvesedik	redvesedni	cselekednek
+tóßtozik	tóßtozni	7	tósztozik	tósztozni	cselekednek
+lajhárkodik	lajhárkodni	6	lajhárkodik	lajhárkodni	cselekednek
+parlagiasodik	parlagiasodni	6	parlagiasodik	parlagiasodni	cselekednek
+tőΩérkedik	tőΩérkedni	6	tőzsérkedik	tőzsérkedni	cselekednek
+illuminálódik	illuminálódni	5	illuminálódik	illuminálódni	cselekednek
+kéglizik	kéglizni	5	kéglizik	kéglizni	cselekednek
+kétkulaçoskodik	kétkulaçoskodni	5	kétkulacsoskodik	kétkulacsoskodni	cselekednek
+bajußosodik	bajußosodni	4	bajuszosodik	bajuszosodni	cselekednek
+kipurgálódik	kipurgálódni	4	kipurgálódik	kipurgálódni	cselekednek
+na©hangúskodik	na©hangúskodni	4	nagyhangúskodik	nagyhangúskodni	cselekednek
+dátumozódik	dátumozódni	3	dátumozódik	dátumozódni	cselekednek
+fölhergelődik	fölhergelődni	3	fölhergelődik	fölhergelődni	cselekednek
+fürjéßik	fürjéßni	3	fürjészik	fürjészni	cselekednek
+göthösködik	göthösködni	3	göthösködik	göthösködni	cselekednek
+krakélereskedik	krakélereskedni	3	krakélereskedik	krakélereskedni	cselekednek
+makizik	makizni	3	makizik	makizni	cselekednek
+ßajháskodik	ßajháskodni	3	szajháskodik	szajháskodni	cselekednek
+¥ápickodik	¥ápickodni	2	nyápickodik	nyápickodni	cselekednek
+rókáßik	rókáßni	2	rókászik	rókászni	cselekednek
+tapintatlankodik	tapintatlankodni	2	tapintatlankodik	tapintatlankodni	cselekednek
+legidázik	legidázni	1	legidázik	legidázni	cselekednek
+Test forms:
+bejezik
+bötőrözik
+brálamozik
+bra¥ozik
+brározik
+bratározik
+bregezik
+bresezik
+bribasozik
+bribékedik
+brilegezik
+brivágozik
+brivakozik
+brivepedik
+brözözik
+brűközik
+brülösözik
+brürözik
+brüßözik
+bügözik
+çibagozik
+çubozik
+dabozik
+dárakodik
+dibágozik
+dilakozik
+dirá¥ozik
+dirozik
+döjözik
+dralágozik
+drilarozik
+drivegezik
+drojozik
+drűrözik
+dujozik
+filá¥ozik
+flátozik
+flemezik
+flerékedik
+flézezik
+flivegezik
+flodozik
+flöközik
+flubokozik
+flugo¥ozik
+flűgözik
+flüröközik
+föködik
+frakozik
+frálapodik
+frálasozik
+frélegezik
+frésezik
+frihegezik
+fri¥ozik
+frirozik
+frivamozik
+fröjözik
+fröjözik
+frorozik
+galározik
+gatágozik
+géregezik
+gibemezik
+gihamozik
+gihejezik
+©ihegezik
+©ivepedik
+hákodik
+hiragozik
+hubo¥ozik
+játozik
+jurozik
+kláragodik
+klarágozik
+klégezik
+klehé¥ezik
+klihasozik
+klűmözik
+kluzozik
+kößözik
+kűdözik
+küsözik
+lájozik
+lírozik
+livé¥ezik
+lűközik
+lumozik
+mágamozik
+metégedik
+mihágozik
+míjozik
+mísozik
+molodik
+mülőrözik
+nágapodik
+nivározik
+nurokozik
+¥ádozik
+¥ivágozik
+¥izozik
+¥öbözik
+¥ülöközik
+¥ürözik
+pehégedik
+pekedik
+pibegezik
+pilégedik
+plibozik
+pörözik
+posozik
+pragá¥ozik
+prazozik
+prélemezik
+prihegedik
+prilepedik
+privékedik
+prögözik
+prugorozik
+püzözik
+ribegedik
+rivá¥ozik
+spalározik
+spibamozik
+spibegezik
+spiharozik
+spirágozik
+spivejezik
+spöközik
+spo¥ozik
+sprebezik
+sprigozik
+sprimozik
+sprozozik
+sprudozik
+sprűrözik
+spuborozik
+spügözik
+sűjözik
+ßtrajozik
+ßtredezik
+ßtritozik
+tágarozik
+tibarozik
+tögözik
+trálakozik
+trálodik
+tribejezik
+trikozik
+trilekedik
+trírozik
+trivakodik
+trugokozik
+trugozik
+trukodik
+trű¥özik
+tűgözik
+vehékedik
+vihapodik
+vilesezik
+virozik
+vobozik
+Illicit sequences:
+aa
+aá
+ae
+aé
+ai
+aí
+ao
+aó
+aö
+aő
+au
+aú
+aü
+aű
+áa
+áá
+áe
+áé
+ái
+áí
+áo
+áó
+áö
+áő
+áu
+áú
+áü
+áű
+ea
+eá
+ee
+eé
+ei
+eí
+eo
+eó
+eö
+eő
+eu
+eú
+eü
+eű
+éa
+éá
+ée
+éé
+éi
+éí
+éo
+éó
+éö
+éő
+éu
+éú
+éü
+éű
+ia
+iá
+ie
+ié
+ii
+ií
+io
+ió
+iö
+iő
+iu
+iú
+iü
+iű
+ía
+íá
+íe
+íé
+íi
+íí
+ío
+íó
+íö
+íő
+íu
+íú
+íü
+íű
+oa
+oá
+oe
+oé
+oi
+oí
+oo
+oó
+oö
+oő
+ou
+oú
+oü
+oű
+óa
+óá
+óe
+óé
+ói
+óí
+óo
+óó
+óö
+óő
+óu
+óú
+óü
+óű
+öa
+öá
+öe
+öé
+öi
+öí
+öo
+öó
+öö
+öő
+öu
+öú
+öü
+öű
+őa
+őá
+őe
+őé
+ői
+őí
+őo
+őó
+őö
+őő
+őu
+őú
+őü
+őű
+ua
+uá
+ue
+ué
+ui
+uí
+uo
+uó
+uö
+uő
+uu
+uú
+uü
+uű
+úa
+úá
+úe
+úé
+úi
+úí
+úo
+úó
+úö
+úő
+úu
+úú
+úü
+úű
+üa
+üá
+üe
+üé
+üi
+üí
+üo
+üó
+üö
+üő
+üu
+üú
+üü
+üű
+űa
+űá
+űe
+űé
+űi
+űí
+űo
+űó
+űö
+űő
+űu
+űú
+űü
+űű
+oze
+oza
+öze
+öza
+eze
+eza
+ode
+oda
+öde
+öda
+ede
+eda
+end

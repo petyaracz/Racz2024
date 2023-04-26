@@ -1,0 +1,77 @@
+Phonological rules discovered: 
+	oo -> o
+	ooz -> oz
+	ee -> e
+	eez -> ez
+	áo -> á
+	áol -> ál
+	áu -> á
+	ául -> ál
+	ío -> í
+	íol -> íl
+	íu -> í
+	íul -> íl
+	ao -> a
+	aoz -> az
+	eö -> e
+	eöl -> el
+	iuß -> iß
+	úo -> ú
+	úol -> úl
+	úu -> ú
+	úul -> úl
+	öe -> ö
+	öez -> öz
+	űe -> ű
+	űel -> űl
+	űö -> ű
+	űöl -> űl
+	óo -> ó
+	óoz -> óz
+	őe -> ő
+	őez -> őz
+	io -> i
+	ioz -> iz
+	ie -> i
+	iez -> iz
+	au -> a
+	auß -> aß
+	éo -> é
+	éoz -> éz
+	öö -> ö
+	ööz -> öz
+	őö -> ő
+	őöz -> őz
+	iö -> i
+	iöz -> iz
+	ée -> é
+	éez -> éz
+	éö -> é
+	éöz -> éz
+	uo -> u
+	uoz -> uz
+	ou -> o
+	ouß -> oß
+
+Morphological changes:
+	[ßi] -> [sezne]	infix
+	[li] -> [ölne]	infix
+	[zi] -> [dzne]	infix
+	[zi] -> [dzna]	infix
+	[ßi] -> [ezne]	infix
+	[ßi] -> [ußna]	infix
+	[i] -> [ne]	infix
+	[zi] -> [ozna]	infix
+	[i] -> [ene]	infix
+	[i] -> [na]	infix
+	[li] -> [ulna]	infix
+	[ßi] -> [odna]	infix
+	[zi] -> [ezne]	infix
+	[li] -> [olna]	infix
+	[i] -> [ana]	infix
+	[di] -> [ßna]	infix
+	[ßi] -> [edne]	infix
+	[li] -> [elne]	infix
+	[li] -> [odna]	infix
+	[zi] -> [özne]	infix
+

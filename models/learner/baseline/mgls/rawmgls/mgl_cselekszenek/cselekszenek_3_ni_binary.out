@@ -1,0 +1,117 @@
+Phonological rules discovered: 
+	oo -> o
+	ooz -> oz
+	oe -> o
+	oez -> oz
+	eo -> e
+	eoz -> ez
+	ee -> e
+	eez -> ez
+	áo -> á
+	áol -> ál
+	áe -> á
+	áel -> ál
+	áö -> á
+	áöl -> ál
+	áu -> á
+	ául -> ál
+	ío -> í
+	íol -> íl
+	íe -> í
+	íel -> íl
+	íö -> í
+	íöl -> íl
+	íu -> í
+	íul -> íl
+	ao -> a
+	aoz -> az
+	ae -> a
+	aez -> az
+	eö -> e
+	eöl -> el
+	eu -> e
+	eul -> el
+	úo -> ú
+	úol -> úl
+	úe -> ú
+	úel -> úl
+	úö -> ú
+	úöl -> úl
+	úu -> ú
+	úul -> úl
+	öo -> ö
+	öoz -> öz
+	öe -> ö
+	öez -> öz
+	űo -> ű
+	űol -> űl
+	űe -> ű
+	űel -> űl
+	űö -> ű
+	űöl -> űl
+	űu -> ű
+	űul -> űl
+	óo -> ó
+	óoz -> óz
+	óe -> ó
+	óez -> óz
+	üo -> ü
+	üod -> üd
+	üu -> ü
+	üud -> üd
+	üe -> ü
+	üed -> üd
+	őo -> ő
+	őoz -> őz
+	őe -> ő
+	őez -> őz
+	io -> i
+	ioz -> iz
+	ie -> i
+	iez -> iz
+	éo -> é
+	éoz -> éz
+	ée -> é
+	éez -> éz
+	oö -> o
+	oöz -> oz
+	aö -> a
+	aöz -> az
+	öö -> ö
+	ööz -> öz
+	óö -> ó
+	óöz -> óz
+	őö -> ő
+	őöz -> őz
+	iö -> i
+	iöz -> iz
+	éö -> é
+	éöz -> éz
+	uo -> u
+	uoz -> uz
+	ue -> u
+	uez -> uz
+	uö -> u
+	uöz -> uz
+
+Morphological changes:
+	[ßik] -> [udni]	suffix
+	[zik] -> [özni]	suffix
+	[ßik] -> [odni]	suffix
+	[ßik] -> [edni]	suffix
+	[zik] -> [dzni]	suffix
+	[lik] -> [ölni]	suffix
+	[ik] -> [ni]	suffix
+	[] -> [ni]	suffix
+	[zik] -> [ozni]	suffix
+	[ßik] -> [nni]	suffix
+	[lik] -> [ulni]	suffix
+	[ik] -> [eni]	suffix
+	[zik] -> [ezni]	suffix
+	[ik] -> [ani]	suffix
+	[ßik] -> [dni]	suffix
+	[lik] -> [olni]	suffix
+	[ßik] -> [ezni]	suffix
+	[lik] -> [odni]	suffix
+	[lik] -> [elni]	suffix
+
