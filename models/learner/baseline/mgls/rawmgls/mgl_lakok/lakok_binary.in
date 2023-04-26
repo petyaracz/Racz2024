@@ -1,0 +1,1149 @@
+Phonological Learner File
+P Rácz
+Hungarian
+Tue Apr 13 2023
+Tue Apr 13 2023
+This data set was built in baseline_learner.Rmd
+Morphological categories:
+	third_person	first_person
+Input forms:
+teßik	teßök	13867767	teszik	teszök	lakok
+veßik	veßök	11594685	veszik	veszök	lakok
+dolgozik	dolgozom	3627092	dolgozik	dolgozom	lakom
+hißik	hißok	3584445	hiszik	hiszok	lakok
+hißik	hißök	3584445	hiszik	hiszök	lakok
+rendelkezik	rendelkezem	2695227	rendelkezik	rendelkezem	lakom
+játßik	játßom	2672605	játszik	játszom	lakom
+működik	működöm	2493517	működik	működöm	lakom
+érkezik	érkezem	2258874	érkezik	érkezem	lakom
+vißik	vißok	2117715	viszik	viszok	lakok
+vißik	vißök	2117715	viszik	viszök	lakok
+tartozik	tartozok	2020739	tartozik	tartozok	lakok
+esik	esem	1885634	esik	esem	lakom
+találkozik	találkozom	1857559	találkozik	találkozom	lakom
+foglalkozik	foglalkozom	1809823	foglalkozik	foglalkozom	lakom
+változik	változom	1725689	változik	változom	lakom
+tetßik	tetßem	1498478	tetszik	tetszem	lakom
+i©ekßik	i©ekßem	1372052	igyekszik	igyekszem	lakom
+eßik	eßek	1320372	eszik	eszek	lakok
+eßik	eßök	1320365	eszik	eszök	lakok
+jelentkezik	jelentkezem	1317571	jelentkezik	jelentkezem	lakom
+kezdődik	kezdődök	1316010	kezdődik	kezdődök	lakok
+létezik	létezem	1297361	létezik	létezem	lakom
+látßik	látßom	1217735	látszik	látszom	lakom
+emlékezik	emlékezek	1190771	emlékezik	emlékezek	lakok
+következik	következem	1151088	következik	következem	lakom
+bízik	bízom	1037991	bízik	bízom	lakom
+çatlakozik	çatlakozom	869608	csatlakozik	csatlakozom	lakom
+gondoskodik	gondoskodom	785316	gondoskodik	gondoskodom	lakom
+utazik	utazom	732800	utazik	utazom	lakom
+¥ilatkozik	¥ilatkozom	726058	nyilatkozik	nyilatkozom	lakom
+gondolkodik	gondolkodom	706718	gondolkodik	gondolkodom	lakom
+hiá¥zik	hiá¥zom	686890	hiányzik	hiányzom	lakom
+alßik	alßom	668614	alszik	alszom	lakom
+alußik	alußom	668614	aluszik	aluszom	lakom
+telik	telok	654760	telik	telok	lakok
+ißik	ißom	651311	iszik	iszom	lakom
+ißik	ißek	651299	iszik	iszek	lakok
+törekßik	törekßem	642126	törekszik	törekszem	lakom
+kapçolódik	kapçolódom	635457	kapcsolódik	kapcsolódom	lakom
+lakik	lakom	612717	lakik	lakom	lakom
+emlékezik	emlékezök	607896	emlékezik	emlékezök	lakok
+fekßik	fekßem	604506	fekszik	fekszem	lakom
+fekßik	fekßök	604506	fekszik	fekszök	lakok
+feküdik	feküdöm	604506	feküdik	feküdöm	lakom
+feküßik	feküßöm	604506	feküszik	feküszöm	lakom
+ßármazik	ßármazom	596330	származik	származom	lakom
+emlékßik	emlékßem	582900	emlékszik	emlékszem	lakom
+emlékßik	emlékßök	582875	emlékszik	emlékszök	lakok
+vá©ik	vá©om	579400	vágyik	vágyom	lakom
+fo¬tatódik	fo¬tatódom	572068	folytatódik	folytatódom	lakom
+fejlődik	fejlődök	556362	fejlődik	fejlődök	lakok
+növekßik	növekßem	520866	növekszik	növekszem	lakom
+hivatkozik	hivatkozom	508241	hivatkozik	hivatkozom	lakom
+he¬ezkedik	he¬ezkedem	435311	helyezkedik	helyezkedem	lakom
+költözik	költözek	393996	költözik	költözek	lakok
+költözik	költözöm	393996	költözik	költözöm	lakom
+mutatkozik	mutatkozom	386251	mutatkozik	mutatkozom	lakom
+érdeklődik	érdeklődök	365910	érdeklődik	érdeklődök	lakok
+távozik	távozok	362436	távozik	távozok	lakok
+ismerkedik	ismerkedek	344220	ismerkedik	ismerkedek	lakok
+aggódik	aggódom	341034	aggódik	aggódom	lakom
+tartózkodik	tartózkodom	323534	tartózkodik	tartózkodom	lakom
+próbálkozik	próbálkozom	323025	próbálkozik	próbálkozom	lakom
+imádkozik	imádkozom	319092	imádkozik	imádkozom	lakom
+adódik	adódok	313753	adódik	adódok	lakok
+viselkedik	viselkedem	307068	viselkedik	viselkedem	lakom
+közlekedik	közlekedek	287338	közlekedik	közlekedek	lakok
+tájékozódik	tájékozódom	282902	tájékozódik	tájékozódom	lakom
+çelekßik	çelekßem	280658	cselekszik	cselekszem	lakom
+ragaßkodik	ragaßkodom	266576	ragaszkodik	ragaszkodom	lakom
+gondolkozik	gondolkozom	253771	gondolkozik	gondolkozom	lakom
+pá¬ázik	pá¬ázok	247923	pályázik	pályázok	lakok
+közeledik	közeledek	245136	közeledik	közeledek	lakok
+e©ezik	e©ezek	230655	egyezik	egyezek	lakok
+úßik	úßom	228752	úszik	úszom	lakom
+ütközik	ütközöm	225302	ütközik	ütközöm	lakom
+álmodik	álmodom	223489	álmodik	álmodom	lakom
+alkalmazkodik	alkalmazkodom	223170	alkalmazkodik	alkalmazkodom	lakom
+erősödik	erősödöm	216852	erősödik	erősödöm	lakom
+tiltakozik	tiltakozom	213776	tiltakozik	tiltakozom	lakom
+oßtozik	oßtozom	212384	osztozik	osztozom	lakom
+törődik	törődöm	207517	törődik	törődöm	lakom
+uralkodik	uralkodom	204714	uralkodik	uralkodom	lakom
+çodálkozik	çodálkozom	200735	csodálkozik	csodálkozom	lakom
+¥ugodik	¥ugodok	200200	nyugodik	nyugodok	lakok
+¥ugßik	¥ugßom	200200	nyugszik	nyugszom	lakom
+támaßkodik	támaßkodom	198608	támaszkodik	támaszkodom	lakom
+ßórakozik	ßórakozom	197402	szórakozik	szórakozom	lakom
+kötődik	kötődöm	196712	kötődik	kötődöm	lakom
+igazodik	igazodok	195863	igazodik	igazodok	lakok
+panaßkodik	panaßkodom	194071	panaszkodik	panaszkodom	lakom
+çúßik	çúßok	191096	csúszik	csúszok	lakok
+húzódik	húzódok	188010	húzódik	húzódok	lakok
+elégßik	elégßem	184225	elégszik	elégszem	lakom
+edzik	edzok	183810	edzik	edzok	lakok
+ßűnik	ßűnök	172200	szűnik	szűnök	lakok
+çalódik	çalódok	170163	csalódik	csalódok	lakok
+remé¥kedik	remé¥kedem	167707	reménykedik	reménykedem	lakom
+védekezik	védekezek	166798	védekezik	védekezek	lakok
+tevéke¥kedik	tevéke¥kedem	159182	tevékenykedik	tevékenykedem	lakom
+búçúzik	búçúzom	154036	búcsúzik	búcsúzom	lakom
+hibázik	hibázok	154009	hibázik	hibázok	lakok
+vitatkozik	vitatkozom	147337	vitatkozik	vitatkozom	lakom
+játßódik	játßódok	142955	játszódik	játszódok	lakok
+vállalkozik	vállalkozom	141984	vállalkozik	vállalkozom	lakom
+©őződik	©őződöm	138711	győződik	győződöm	lakom
+gazdagodik	gazdagodom	134939	gazdagodik	gazdagodom	lakom
+gazdagßik	gazdagßom	134939	gazdagszik	gazdagszom	lakom
+haragßik	haragßom	129179	haragszik	haragszom	lakom
+vélekedik	vélekedek	123148	vélekedik	vélekedek	lakok
+vélekßik	vélekßem	123148	vélekszik	vélekszem	lakom
+böngéßik	böngéßöm	122712	böngészik	böngészöm	lakom
+feledkezik	feledkezem	122115	feledkezik	feledkezem	lakom
+fűződik	fűződök	121731	fűződik	fűződök	lakok
+kapaßkodik	kapaßkodom	113682	kapaszkodik	kapaszkodom	lakom
+öltözik	öltözöm	113660	öltözik	öltözöm	lakom
+©ö¥örködik	©ö¥örködöm	112176	gyönyörködik	gyönyörködöm	lakom
+végződik	végződöm	106685	végződik	végződöm	lakom
+unatkozik	unatkozom	103069	unatkozik	unatkozom	lakom
+táplálkozik	táplálkozom	101962	táplálkozik	táplálkozom	lakom
+vadáßik	vadáßom	98441	vadászik	vadászom	lakom
+várakozik	várakozom	96850	várakozik	várakozom	lakom
+gazdálkodik	gazdálkodom	93581	gazdálkodik	gazdálkodom	lakom
+telepßik	telepßek	93057	telepszik	telepszek	lakok
+fejeződik	fejeződök	91178	fejeződik	fejeződök	lakok
+ßaporodik	ßaporodok	87868	szaporodik	szaporodok	lakok
+©arapßik	©arapßom	86849	gyarapszik	gyarapszom	lakom
+lepődik	lepődök	86473	lepődik	lepődök	lakok
+érintkezik	érintkezem	84963	érintkezik	érintkezem	lakom
+büßkélkedik	büßkélkedem	84413	büszkélkedik	büszkélkedem	lakom
+virágzik	virágzom	83044	virágzik	virágzom	lakom
+esküßik	esküßöm	82803	esküszik	esküszöm	lakom
+lélegzik	lélegzek	82329	lélegzik	lélegzek	lakok
+tanúskodik	tanúskodom	82256	tanúskodik	tanúskodom	lakom
+ßíveskedik	ßíveskedek	81883	szíveskedik	szíveskedek	lakok
+építkezik	építkezek	78659	építkezik	építkezek	lakok
+fázik	fázom	77143	fázik	fázom	lakom
+képződik	képződöm	75875	képződik	képződöm	lakom
+engedelmeskedik	engedelmeskedek	75413	engedelmeskedik	engedelmeskedek	lakok
+oldódik	oldódok	72937	oldódik	oldódok	lakok
+kedveskedik	kedveskedek	70883	kedveskedik	kedveskedek	lakok
+kerekedik	kerekedek	69864	kerekedik	kerekedek	lakok
+©anakßik	©anakßom	68227	gyanakszik	gyanakszom	lakom
+kételkedik	kételkedem	68084	kételkedik	kételkedem	lakom
+dohá¥zik	dohá¥zom	67978	dohányzik	dohányzom	lakom
+ígérkezik	ígérkezek	66458	ígérkezik	ígérkezek	lakok
+munkálkodik	munkálkodom	66126	munkálkodik	munkálkodom	lakom
+küßködik	küßködök	65981	küszködik	küszködök	lakok
+ha©atkozik	ha©atkozom	65502	hagyatkozik	hagyatkozom	lakom
+ßökik	ßökök	64890	szökik	szökök	lakok
+hízik	hízok	63813	hízik	hízok	lakok
+árulkodik	árulkodok	62655	árulkodik	árulkodok	lakok
+korlátozódik	korlátozódom	62047	korlátozódik	korlátozódom	lakom
+viΩgázik	viΩgázom	61681	vizsgázik	vizsgázom	lakom
+álmodozik	álmodozom	59984	álmodozik	álmodozom	lakom
+éhezik	éhezek	59636	éhezik	éhezek	lakok
+ßerveződik	ßerveződök	59340	szerveződik	szerveződök	lakok
+çapódik	çapódok	59286	csapódik	csapódok	lakok
+rejtőzik	rejtőzöm	58821	rejtőzik	rejtőzöm	lakom
+ßándékozik	ßándékozom	57854	szándékozik	szándékozom	lakom
+ßándékßik	ßándékßom	57854	szándékszik	szándékszom	lakom
+nézelődik	nézelődök	57827	nézelődik	nézelődök	lakok
+étkezik	étkezem	56160	étkezik	étkezem	lakom
+rendeződik	rendeződök	54166	rendeződik	rendeződök	lakok
+kéßülődik	kéßülődök	54120	készülődik	készülődök	lakok
+fogalmazódik	fogalmazódok	53804	fogalmazódik	fogalmazódok	lakok
+autózik	autózom	53397	autózik	autózom	lakom
+ßerződik	ßerződök	51881	szerződik	szerződök	lakok
+ereßkedik	ereßkedek	50960	ereszkedik	ereszkedek	lakok
+sodródik	sodródom	50915	sodródik	sodródom	lakom
+tükröződik	tükröződöm	50822	tükröződik	tükröződöm	lakom
+örvendezik	örvendezek	50814	örvendezik	örvendezek	lakok
+barátkozik	barátkozom	50745	barátkozik	barátkozom	lakom
+vaçorázik	vaçorázom	50661	vacsorázik	vacsorázom	lakom
+túrázik	túrázok	49897	túrázik	túrázok	lakok
+házasodik	házasodom	48749	házasodik	házasodom	lakom
+kereskedik	kereskedek	48423	kereskedik	kereskedek	lakok
+elmélkedik	elmélkedem	48134	elmélkedik	elmélkedem	lakom
+érettségizik	érettségizem	46998	érettségizik	érettségizem	lakom
+vetődik	vetődöm	46975	vetődik	vetődöm	lakom
+vitázik	vitázok	46729	vitázik	vitázok	lakok
+tevődik	tevődök	46451	tevődik	tevődök	lakok
+diçekßik	diçekßem	46395	dicsekszik	dicsekszem	lakom
+nevelkedik	nevelkedem	46282	nevelkedik	nevelkedem	lakom
+avatkozik	avatkozom	45734	avatkozik	avatkozom	lakom
+távolodik	távolodok	45390	távolodik	távolodok	lakok
+melegßik	melegßem	43511	melegszik	melegszem	lakom
+ítélkezik	ítélkezem	42419	ítélkezik	ítélkezem	lakom
+vonzódik	vonzódom	41981	vonzódik	vonzódom	lakom
+botlik	botlok	41912	botlik	botlok	lakok
+fáradozik	fáradozom	40305	fáradozik	fáradozom	lakom
+töltődik	töltődöm	40092	töltődik	töltődöm	lakom
+bajlódik	bajlódok	39724	bajlódik	bajlódok	lakok
+veßekßik	veßekßem	39570	veszekszik	veszekszem	lakom
+lakozik	lakozom	39428	lakozik	lakozom	lakom
+ßívódik	ßívódok	38838	szívódik	szívódok	lakok
+birkózik	birkózom	38668	birkózik	birkózom	lakom
+nehezedik	nehezedek	38547	nehezedik	nehezedek	lakok
+bővelkedik	bővelkedem	38446	bővelkedik	bővelkedem	lakom
+időzik	időzök	38358	időzik	időzök	lakok
+teljesedik	teljesedek	38091	teljesedik	teljesedek	lakok
+reggelizik	reggelizek	37598	reggelizik	reggelizek	lakok
+futballozik	futballozom	36728	futballozik	futballozom	lakom
+formálódik	formálódom	36394	formálódik	formálódom	lakom
+ellenkezik	ellenkezek	35786	ellenkezik	ellenkezek	lakok
+diadalmaskodik	diadalmaskodom	35682	diadalmaskodik	diadalmaskodom	lakom
+melegedik	melegedek	35425	melegedik	melegedek	lakok
+pompázik	pompázok	35198	pompázik	pompázok	lakok
+törlődik	törlődök	35110	törlődik	törlődök	lakok
+bo¥olódik	bo¥olódom	34776	bonyolódik	bonyolódom	lakom
+zárkózik	zárkózom	34767	zárkózik	zárkózom	lakom
+terjeßkedik	terjeßkedem	34705	terjeszkedik	terjeszkedem	lakom
+segédkezik	segédkezem	34011	segédkezik	segédkezem	lakom
+tolódik	tolódok	33844	tolódik	tolódok	lakok
+lelkesedik	lelkesedem	33550	lelkesedik	lelkesedem	lakom
+hajózik	hajózok	33540	hajózik	hajózok	lakok
+ingadozik	ingadozom	33254	ingadozik	ingadozom	lakom
+vá©akozik	vá©akozom	33026	vágyakozik	vágyakozom	lakom
+tornázik	tornázom	32996	tornázik	tornázom	lakom
+vétkezik	vétkezem	32653	vétkezik	vétkezem	lakom
+mérkőzik	mérkőzök	32614	mérkőzik	mérkőzök	lakok
+meréßkedik	meréßkedek	32469	merészkedik	merészkedek	lakok
+öregßik	öregßem	32240	öregszik	öregszem	lakom
+verekßik	verekßem	32024	verekszik	verekszem	lakom
+ßé©enkezik	ßé©enkezem	31859	szégyenkezik	szégyenkezem	lakom
+halmozódik	halmozódok	31519	halmozódik	halmozódok	lakok
+értekezik	értekezek	31517	értekezik	értekezek	lakok
+rajzolódik	rajzolódok	30853	rajzolódik	rajzolódok	lakok
+zongorázik	zongorázom	30452	zongorázik	zongorázom	lakom
+bizakodik	bizakodom	30323	bizakodik	bizakodom	lakom
+öltözködik	öltözködöm	29838	öltözködik	öltözködöm	lakom
+elbizo¥talanodik	elbizo¥talanodom	29628	elbizonytalanodik	elbizonytalanodom	lakom
+bizo¥osodik	bizo¥osodok	29527	bizonyosodik	bizonyosodok	lakok
+iri©kedik	iri©kedem	28990	irigykedik	irigykedem	lakom
+vetekßik	vetekßem	28843	vetekszik	vetekszem	lakom
+bosßankodik	bosßankodom	28274	bosszankodik	bosszankodom	lakom
+ßeretkezik	ßeretkezek	27905	szeretkezik	szeretkezek	lakok
+tűnődik	tűnődöm	27459	tűnődik	tűnődöm	lakom
+vergődik	vergődök	27292	vergődik	vergődök	lakok
+jóllakik	jóllakok	27189	jóllakik	jóllakok	lakok
+hangolódik	hangolódok	27076	hangolódik	hangolódok	lakok
+ßegődik	ßegődöm	26979	szegődik	szegődöm	lakom
+jeleskedik	jeleskedek	26740	jeleskedik	jeleskedek	lakok
+erőlködik	erőlködöm	26473	erőlködik	erőlködöm	lakom
+aktiválódik	aktiválódok	26386	aktiválódik	aktiválódok	lakok
+regenerálódik	regenerálódok	25980	regenerálódik	regenerálódok	lakok
+kutakodik	kutakodok	25692	kutakodik	kutakodok	lakok
+viccelődik	viccelődök	25569	viccelődik	viccelődök	lakok
+réßesedik	réßesedek	24890	részesedik	részesedek	lakok
+idegenkedik	idegenkedem	24833	idegenkedik	idegenkedem	lakom
+vetkőzik	vetkőzök	24481	vetkőzik	vetkőzök	lakok
+záródik	záródok	24424	záródik	záródok	lakok
+kerékpározik	kerékpározok	24358	kerékpározik	kerékpározok	lakok
+boçátkozik	boçátkozom	24331	bocsátkozik	bocsátkozom	lakom
+napozik	napozok	24323	napozik	napozok	lakok
+©őzedelmeskedik	©őzedelmeskedek	24170	győzedelmeskedik	győzedelmeskedek	lakok
+kávézik	kávézok	24144	kávézik	kávézok	lakok
+okoskodik	okoskodok	23651	okoskodik	okoskodok	lakok
+kínlódik	kínlódok	23589	kínlódik	kínlódok	lakok
+káromkodik	káromkodok	23314	káromkodik	káromkodok	lakok
+ma©arázkodik	ma©arázkodom	23077	magyarázkodik	magyarázkodom	lakom
+viΩgálódik	viΩgálódom	22746	vizsgálódik	vizsgálódom	lakom
+vonakodik	vonakodom	22619	vonakodik	vonakodom	lakom
+ßomorkodik	ßomorkodom	22613	szomorkodik	szomorkodom	lakom
+magasodik	magasodok	22549	magasodik	magasodok	lakok
+keseredik	keseredek	22200	keseredik	keseredek	lakok
+©őzködik	©őzködök	22154	győzködik	győzködök	lakok
+ßomjazik	ßomjazom	21901	szomjazik	szomjazom	lakom
+haldoklik	haldoklok	21831	haldoklik	haldoklok	lakok
+vendégeskedik	vendégeskedem	21782	vendégeskedik	vendégeskedem	lakom
+ßorítkozik	ßorítkozom	21720	szorítkozik	szorítkozom	lakom
+ele©edik	ele©edek	21613	elegyedik	elegyedek	lakok
+rágódik	rágódom	21316	rágódik	rágódom	lakom
+ßövetkezik	ßövetkezem	21303	szövetkezik	szövetkezem	lakom
+takarékoskodik	takarékoskodom	21081	takarékoskodik	takarékoskodom	lakom
+tanáçkozik	tanáçkozom	21064	tanácskozik	tanácskozom	lakom
+trafik	trafok	20593	trafik	trafok	lakok
+integrálódik	integrálódok	20468	integrálódik	integrálódok	lakok
+informálódik	informálódok	20387	informálódik	informálódok	lakok
+ta¥ázik	ta¥ázok	20309	tanyázik	tanyázok	lakok
+randizik	randizok	20259	randizik	randizok	lakok
+játßadozik	játßadozom	20243	játszadozik	játszadozom	lakom
+zuha¥ozik	zuha¥ozok	20011	zuhanyozik	zuhanyozok	lakok
+táborozik	táborozok	19944	táborozik	táborozok	lakok
+kívánkozik	kívánkozom	19880	kívánkozik	kívánkozom	lakom
+elhatárolódik	elhatárolódom	19819	elhatárolódik	elhatárolódom	lakom
+kön¥ezik	kön¥ezek	19660	könnyezik	könnyezek	lakok
+vitorlázik	vitorlázok	19586	vitorlázik	vitorlázok	lakok
+kétségbeesik	kétségbeesek	19352	kétségbeesik	kétségbeesek	lakok
+leselkedik	leselkedek	19027	leselkedik	leselkedek	lakok
+késlekedik	késlekedem	18894	késlekedik	késlekedem	lakom
+fonódik	fonódom	18743	fonódik	fonódom	lakom
+őrködik	őrködöm	18581	őrködik	őrködöm	lakom
+sötétedik	sötétedem	18489	sötétedik	sötétedem	lakom
+diétázik	diétázom	18417	diétázik	diétázom	lakom
+ábrándozik	ábrándozom	18385	ábrándozik	ábrándozom	lakom
+rakódik	rakódok	18327	rakódik	rakódok	lakok
+çókolózik	çókolózom	18284	csókolózik	csókolózom	lakom
+férkőzik	férkőzöm	18255	férkőzik	férkőzöm	lakom
+óvakodik	óvakodom	18248	óvakodik	óvakodom	lakom
+forgolódik	forgolódok	18063	forgolódik	forgolódok	lakok
+adakozik	adakozok	17936	adakozik	adakozok	lakok
+érlelődik	érlelődök	17933	érlelődik	érlelődök	lakok
+alkudik	alkudok	17918	alkudik	alkudok	lakok
+alkußik	alkußom	17918	alkuszik	alkuszom	lakom
+jógázik	jógázom	17732	jógázik	jógázom	lakom
+terelődik	terelődök	17677	terelődik	terelődök	lakok
+háborodik	háborodok	17472	háborodik	háborodok	lakok
+állomásozik	állomásozom	17398	állomásozik	állomásozom	lakom
+rendezkedik	rendezkedek	17362	rendezkedik	rendezkedek	lakok
+idegeskedik	idegeskedek	17271	idegeskedik	idegeskedek	lakok
+ódzkodik	ódzkodom	17257	ódzkodik	ódzkodom	lakom
+öröklődik	öröklődök	17166	öröklődik	öröklődök	lakok
+verődik	verődök	17097	verődik	verődök	lakok
+foháßkodik	foháßkodom	16804	fohászkodik	fohászkodom	lakom
+takarodik	takarodok	16356	takarodik	takarodok	lakok
+fertőződik	fertőződöm	16236	fertőződik	fertőződöm	lakom
+ßáguldozik	ßáguldozok	16139	száguldozik	száguldozok	lakok
+tanakodik	tanakodom	16021	tanakodik	tanakodom	lakom
+kérdezősködik	kérdezősködöm	15871	kérdezősködik	kérdezősködöm	lakom
+falatozik	falatozok	15786	falatozik	falatozok	lakok
+irtózik	irtózom	15667	irtózik	irtózom	lakom
+ßóródik	ßóródok	15400	szóródik	szóródok	lakok
+ha¥atlik	ha¥atlok	15385	hanyatlik	hanyatlok	lakok
+ßocializálódik	ßocializálódok	15320	szocializálódik	szocializálódok	lakok
+vetemedik	vetemedek	15187	vetemedik	vetemedek	lakok
+porosodik	porosodom	15132	porosodik	porosodom	lakom
+tétlenkedik	tétlenkedek	15046	tétlenkedik	tétlenkedek	lakok
+kertéßkedik	kertéßkedek	14951	kertészkedik	kertészkedek	lakok
+bánkódik	bánkódom	14891	bánkódik	bánkódom	lakom
+¥újtózkodik	¥újtózkodom	14864	nyújtózkodik	nyújtózkodom	lakom
+sértődik	sértődöm	14646	sértődik	sértődöm	lakom
+karikázik	karikázok	14609	karikázik	karikázok	lakok
+hadakozik	hadakozom	14604	hadakozik	hadakozom	lakom
+alkudozik	alkudozom	14494	alkudozik	alkudozom	lakom
+tapogatódzik	tapogatódzom	14479	tapogatódzik	tapogatódzom	lakom
+bíbelődik	bíbelődök	14471	bíbelődik	bíbelődök	lakok
+undorodik	undorodom	14293	undorodik	undorodom	lakom
+vá©ódik	vá©ódom	14271	vágyódik	vágyódom	lakom
+ßélesedik	ßélesedek	14264	szélesedik	szélesedek	lakok
+cikkezik	cikkezek	14162	cikkezik	cikkezek	lakok
+sajnálkozik	sajnálkozom	14151	sajnálkozik	sajnálkozom	lakom
+siránkozik	siránkozok	14018	siránkozik	siránkozok	lakok
+kacérkodik	kacérkodom	13978	kacérkodik	kacérkodom	lakom
+e©ßerűsödik	e©ßerűsödöm	13942	egyszerűsödik	egyszerűsödöm	lakom
+iparkodik	iparkodom	13706	iparkodik	iparkodom	lakom
+telítődik	telítődök	13702	telítődik	telítődök	lakok
+harangozik	harangozok	13662	harangozik	harangozok	lakok
+burkolódzik	burkolódzom	13652	burkolódzik	burkolódzom	lakom
+korço¬ázik	korço¬ázom	13624	korcsolyázik	korcsolyázom	lakom
+rejtőzködik	rejtőzködöm	13531	rejtőzködik	rejtőzködöm	lakom
+kiáltozik	kiáltozom	13243	kiáltozik	kiáltozom	lakom
+hazudozik	hazudozok	13233	hazudozik	hazudozok	lakok
+morfondírozik	morfondírozok	13225	morfondírozik	morfondírozok	lakok
+bókláßik	bókláßok	13080	bóklászik	bóklászok	lakok
+gú¥olódik	gú¥olódok	12545	gúnyolódik	gúnyolódok	lakok
+tétovázik	tétovázok	12509	tétovázik	tétovázok	lakok
+fürdőzik	fürdőzök	12429	fürdőzik	fürdőzök	lakok
+éjßakázik	éjßakázom	12361	éjszakázik	éjszakázom	lakom
+dobálódzik	dobálódzok	12200	dobálódzik	dobálódzok	lakok
+páßtázik	páßtázom	12172	pásztázik	pásztázom	lakom
+specializálódik	specializálódom	12027	specializálódik	specializálódom	lakom
+háborúzik	háborúzok	11765	háborúzik	háborúzok	lakok
+tobzódik	tobzódom	11742	tobzódik	tobzódom	lakom
+vágódik	vágódok	11694	vágódik	vágódok	lakok
+hitetlenkedik	hitetlenkedek	11667	hitetlenkedik	hitetlenkedek	lakok
+mosakßik	mosakßom	11483	mosakszik	mosakszom	lakom
+deformálódik	deformálódok	11452	deformálódik	deformálódok	lakok
+sóhajtozik	sóhajtozom	11449	sóhajtozik	sóhajtozom	lakom
+veßődik	veßődöm	11429	vesződik	vesződöm	lakom
+moso¬odik	moso¬odom	11411	mosolyodik	mosolyodom	lakom
+vetkezik	vetkezem	11392	vetkezik	vetkezem	lakom
+foglalatoskodik	foglalatoskodom	11387	foglalatoskodik	foglalatoskodom	lakom
+tenißezik	tenißezek	11338	teniszezik	teniszezek	lakok
+ü©ködik	ü©ködöm	11226	ügyködik	ügyködöm	lakom
+értetlenkedik	értetlenkedek	11124	értetlenkedik	értetlenkedek	lakok
+roskadozik	roskadozom	11094	roskadozik	roskadozom	lakom
+ü©eskedik	ü©eskedek	11033	ügyeskedik	ügyeskedek	lakok
+viaskodik	viaskodom	10940	viaskodik	viaskodom	lakom
+garázdálkodik	garázdálkodok	10887	garázdálkodik	garázdálkodok	lakok
+kár†ázik	kár†ázok	10854	kártyázik	kártyázok	lakok
+normalizálódik	normalizálódok	10836	normalizálódik	normalizálódok	lakok
+kérkedik	kérkedek	10714	kérkedik	kérkedek	lakok
+bohóckodik	bohóckodok	10687	bohóckodik	bohóckodok	lakok
+tengődik	tengődöm	10351	tengődik	tengődöm	lakom
+¥újtózik	¥újtózom	10262	nyújtózik	nyújtózom	lakom
+fo©ókúrázik	fo©ókúrázok	10254	fogyókúrázik	fogyókúrázok	lakok
+taktikázik	taktikázok	10243	taktikázik	taktikázok	lakok
+ßűkölködik	ßűkölködöm	10233	szűkölködik	szűkölködöm	lakom
+vetélkedik	vetélkedek	10217	vetélkedik	vetélkedek	lakok
+ébredezik	ébredezek	10153	ébredezik	ébredezek	lakok
+tolakßik	tolakßom	10114	tolakszik	tolakszom	lakom
+vonatozik	vonatozok	10066	vonatozik	vonatozok	lakok
+búvárkodik	búvárkodom	10030	búvárkodik	búvárkodom	lakom
+oßtódik	oßtódok	9844	osztódik	osztódok	lakok
+esedezik	esedezem	9804	esedezik	esedezem	lakom
+bátorkodik	bátorkodom	9746	bátorkodik	bátorkodom	lakom
+mentegetőzik	mentegetőzök	9683	mentegetőzik	mentegetőzök	lakok
+titkolózik	titkolózom	9664	titkolózik	titkolózom	lakom
+világosodik	világosodok	9640	világosodik	világosodok	lakok
+méltatlankodik	méltatlankodom	9608	méltatlankodik	méltatlankodom	lakom
+lelkendezik	lelkendezek	9487	lelkendezik	lelkendezek	lakok
+kétkedik	kétkedem	9459	kétkedik	kétkedem	lakom
+sorjázik	sorjázom	9441	sorjázik	sorjázom	lakom
+élősködik	élősködök	9380	élősködik	élősködök	lakok
+hintázik	hintázok	9317	hintázik	hintázok	lakok
+futkározik	futkározok	9294	futkározik	futkározok	lakok
+çavarodik	çavarodok	9265	csavarodik	csavarodok	lakok
+bogaráßik	bogaráßok	9264	bogarászik	bogarászok	lakok
+betegßik	betegßem	9223	betegszik	betegszem	lakom
+áhítozik	áhítozom	9214	áhítozik	áhítozom	lakom
+bűnhődik	bűnhődöm	9169	bűnhődik	bűnhődöm	lakom
+betegeskedik	betegeskedem	9158	betegeskedik	betegeskedem	lakom
+túlórázik	túlórázok	9066	túlórázik	túlórázok	lakok
+felejtkezik	felejtkezem	9049	felejtkezik	felejtkezem	lakom
+aggodalmaskodik	aggodalmaskodom	9029	aggodalmaskodik	aggodalmaskodom	lakom
+fo©atkozik	fo©atkozom	8930	fogyatkozik	fogyatkozom	lakom
+ugrándozik	ugrándozom	8866	ugrándozik	ugrándozom	lakom
+botladozik	botladozom	8796	botladozik	botladozom	lakom
+ßabadkozik	ßabadkozom	8713	szabadkozik	szabadkozom	lakom
+ringatódzik	ringatódzom	8674	ringatódzik	ringatódzom	lakom
+ringatózik	ringatózom	8674	ringatózik	ringatózom	lakom
+mérgelődik	mérgelődök	8669	mérgelődik	mérgelődök	lakok
+temetkezik	temetkezem	8649	temetkezik	temetkezem	lakom
+hangoskodik	hangoskodok	8641	hangoskodik	hangoskodok	lakok
+hallgatódzik	hallgatódzok	8614	hallgatódzik	hallgatódzok	lakok
+hü¬éskedik	hü¬éskedek	8587	hülyéskedik	hülyéskedek	lakok
+ßen¥eződik	ßen¥eződöm	8575	szennyeződik	szennyeződöm	lakom
+visßakozik	visßakozok	8527	visszakozik	visszakozok	lakok
+fukarkodik	fukarkodom	8454	fukarkodik	fukarkodom	lakom
+kézilabdázik	kézilabdázok	8370	kézilabdázik	kézilabdázok	lakok
+leledzik	leledzek	8370	leledzik	leledzek	lakok
+sikoltozik	sikoltozom	8245	sikoltozik	sikoltozom	lakom
+raboskodik	raboskodom	8171	raboskodik	raboskodom	lakom
+ßorgoskodik	ßorgoskodom	8106	szorgoskodik	szorgoskodom	lakom
+példálódzik	példálódzok	8093	példálódzik	példálódzok	lakok
+példálózik	példálózom	8093	példálózik	példálózom	lakom
+búslakodik	búslakodom	8087	búslakodik	búslakodom	lakom
+fogadkozik	fogadkozom	8046	fogadkozik	fogadkozom	lakom
+kemé¥edik	kemé¥edek	8028	keményedik	keményedek	lakok
+erősködik	erősködöm	8007	erősködik	erősködöm	lakom
+fúródik	fúródok	8002	fúródik	fúródok	lakok
+ßemlélődik	ßemlélődök	7997	szemlélődik	szemlélődök	lakok
+ismerßik	ismerßek	7941	ismerszik	ismerszek	lakok
+tudatosodik	tudatosodok	7937	tudatosodik	tudatosodok	lakok
+poénkodik	poénkodok	7916	poénkodik	poénkodok	lakok
+©ötrődik	©ötrődöm	7873	gyötrődik	gyötrődöm	lakom
+kerekezik	kerekezek	7868	kerekezik	kerekezek	lakok
+teázik	teázom	7811	teázik	teázom	lakom
+ordítozik	ordítozok	7808	ordítozik	ordítozok	lakok
+cigarettázik	cigarettázom	7767	cigarettázik	cigarettázom	lakom
+kosarazik	kosarazok	7721	kosarazik	kosarazok	lakok
+kotoráßik	kotoráßok	7658	kotorászik	kotorászok	lakok
+sütkérezik	sütkérezek	7654	sütkérezik	sütkérezek	lakok
+lábadozik	lábadozom	7640	lábadozik	lábadozom	lakom
+borotválkozik	borotválkozom	7593	borotválkozik	borotválkozom	lakom
+té¥kedik	té¥kedem	7581	ténykedik	ténykedem	lakom
+tagozódik	tagozódom	7570	tagozódik	tagozódom	lakom
+finomodik	finomodok	7558	finomodik	finomodok	lakok
+pereskedik	pereskedek	7520	pereskedik	pereskedek	lakok
+töltekezik	töltekezem	7443	töltekezik	töltekezem	lakom
+©ön©özik	©ön©özök	7379	gyöngyözik	gyöngyözök	lakok
+ßínéßkedik	ßínéßkedem	7379	színészkedik	színészkedem	lakom
+ßíneződik	ßíneződöm	7341	színeződik	színeződöm	lakom
+vigaßtalódik	vigaßtalódom	7309	vigasztalódik	vigasztalódom	lakom
+rugaßkodik	rugaßkodom	7279	rugaszkodik	rugaszkodom	lakom
+ßegeződik	ßegeződök	7210	szegeződik	szegeződök	lakok
+edződik	edződöm	7138	edződik	edződöm	lakom
+roΩdásodik	roΩdásodok	7072	rozsdásodik	rozsdásodok	lakok
+kötözködik	kötözködöm	6981	kötözködik	kötözködöm	lakom
+ßabá¬talankodik	ßabá¬talankodok	6970	szabálytalankodik	szabálytalankodok	lakok
+mozgolódik	mozgolódok	6963	mozgolódik	mozgolódok	lakok
+erőßakoskodik	erőßakoskodom	6921	erőszakoskodik	erőszakoskodom	lakom
+©engélkedik	©engélkedem	6911	gyengélkedik	gyengélkedem	lakom
+fiatalodik	fiatalodom	6846	fiatalodik	fiatalodom	lakom
+terpeßkedik	terpeßkedek	6802	terpeszkedik	terpeszkedek	lakok
+tornáßik	tornáßom	6772	tornászik	tornászom	lakom
+ßemé¬eskedik	ßemé¬eskedek	6741	személyeskedik	személyeskedek	lakok
+sopánkodik	sopánkodok	6686	sopánkodik	sopánkodok	lakok
+okosodik	okosodok	6651	okosodik	okosodok	lakok
+elmélázik	elmélázok	6646	elmélázik	elmélázok	lakok
+őrlődik	őrlődöm	6626	őrlődik	őrlődöm	lakom
+¥ugtalankodik	¥ugtalankodom	6592	nyugtalankodik	nyugtalankodom	lakom
+ßitkozódik	ßitkozódom	6590	szitkozódik	szitkozódom	lakom
+nekiveselkedik	nekiveselkedek	6567	nekiveselkedik	nekiveselkedek	lakok
+lustálkodik	lustálkodom	6541	lustálkodik	lustálkodom	lakom
+çuklik	çuklok	6520	csuklik	csuklok	lakok
+çendesedik	çendesedek	6494	csendesedik	csendesedek	lakok
+çónakázik	çónakázok	6485	csónakázik	csónakázok	lakok
+çißolódik	çißolódom	6459	csiszolódik	csiszolódom	lakom
+misézik	misézek	6450	misézik	misézek	lakok
+oßtozkodik	oßtozkodom	6441	osztozkodik	osztozkodom	lakom
+orientálódik	orientálódok	6365	orientálódik	orientálódok	lakok
+rázkódik	rázkódom	6310	rázkódik	rázkódom	lakom
+tegeződik	tegeződöm	6296	tegeződik	tegeződöm	lakom
+kardoskodik	kardoskodom	6275	kardoskodik	kardoskodom	lakom
+elégedetlenkedik	elégedetlenkedek	6274	elégedetlenkedik	elégedetlenkedek	lakok
+ölelkezik	ölelkezem	6267	ölelkezik	ölelkezem	lakom
+rosßalkodik	rosßalkodom	6227	rosszalkodik	rosszalkodom	lakom
+zúgolódik	zúgolódom	6221	zúgolódik	zúgolódom	lakom
+ólálkodik	ólálkodom	6185	ólálkodik	ólálkodom	lakom
+©űlölködik	©űlölködöm	6178	gyűlölködik	gyűlölködöm	lakom
+tißtálkodik	tißtálkodom	6177	tisztálkodik	tisztálkodom	lakom
+hozakodik	hozakodom	6156	hozakodik	hozakodom	lakom
+balhézik	balhézok	6131	balhézik	balhézok	lakok
+bűnözik	bűnözök	6131	bűnözik	bűnözök	lakok
+költekezik	költekezek	6117	költekezik	költekezek	lakok
+kapálódzik	kapálódzok	6110	kapálódzik	kapálódzok	lakok
+kiéleződik	kiéleződöm	6075	kiéleződik	kiéleződöm	lakom
+báméßkodik	báméßkodok	6070	bámészkodik	bámészkodok	lakok
+ßagláßik	ßagláßok	6069	szaglászik	szaglászok	lakok
+pecázik	pecázok	5981	pecázik	pecázok	lakok
+©űrődik	©űrődöm	5974	gyűrődik	gyűrődöm	lakom
+vívódik	vívódok	5972	vívódik	vívódok	lakok
+halvá¥odik	halvá¥odom	5957	halványodik	halványodom	lakom
+hálálkodik	hálálkodom	5921	hálálkodik	hálálkodom	lakom
+tépelődik	tépelődöm	5841	tépelődik	tépelődöm	lakom
+függetlenedik	függetlenedem	5837	függetlenedik	függetlenedem	lakom
+¥omódik	¥omódok	5776	nyomódik	nyomódok	lakok
+álmélkodik	álmélkodom	5761	álmélkodik	álmélkodom	lakom
+asßimilálódik	asßimilálódok	5757	asszimilálódik	asszimilálódok	lakok
+vádaskodik	vádaskodom	5755	vádaskodik	vádaskodom	lakom
+koçikázik	koçikázok	5753	kocsikázik	kocsikázok	lakok
+terebé¬esedik	terebé¬esedek	5751	terebélyesedik	terebélyesedek	lakok
+ágaskodik	ágaskodom	5740	ágaskodik	ágaskodom	lakom
+ßarakodik	ßarakodok	5699	szarakodik	szarakodok	lakok
+ßarakßik	ßarakßom	5699	szarakszik	szarakszom	lakom
+adósodik	adósodok	5682	adósodik	adósodok	lakok
+kosárlabdázik	kosárlabdázok	5674	kosárlabdázik	kosárlabdázok	lakok
+há¥kolódik	há¥kolódom	5657	hánykolódik	hánykolódom	lakom
+mosódik	mosódom	5652	mosódik	mosódom	lakom
+aßik	aßok	5633	aszik	aszok	lakok
+lázadozik	lázadozom	5616	lázadozik	lázadozom	lakom
+merevedik	merevedek	5585	merevedik	merevedek	lakok
+tréfálkozik	tréfálkozom	5571	tréfálkozik	tréfálkozom	lakom
+ßínesedik	ßínesedek	5561	színesedik	színesedek	lakok
+rángatózik	rángatózom	5548	rángatózik	rángatózom	lakom
+ütődik	ütődöm	5543	ütődik	ütődöm	lakom
+bábáskodik	bábáskodom	5536	bábáskodik	bábáskodom	lakom
+ékeskedik	ékeskedem	5504	ékeskedik	ékeskedem	lakom
+féßkelődik	féßkelődöm	5381	fészkelődik	fészkelődöm	lakom
+levegőzik	levegőzök	5361	levegőzik	levegőzök	lakok
+mesterkedik	mesterkedem	5352	mesterkedik	mesterkedem	lakom
+elké¥elmesedik	elké¥elmesedek	5281	elkényelmesedik	elkényelmesedek	lakok
+képzelődik	képzelődöm	5260	képzelődik	képzelődöm	lakom
+kallódik	kallódok	5181	kallódik	kallódok	lakok
+finomkodik	finomkodok	5135	finomkodik	finomkodok	lakok
+epekedik	epekedek	5130	epekedik	epekedek	lakok
+Ωírosodik	Ωírosodok	5118	zsírosodik	zsírosodok	lakok
+kergetőzik	kergetőzök	5058	kergetőzik	kergetőzök	lakok
+fa©oskodik	fa©oskodom	5038	fagyoskodik	fagyoskodom	lakom
+leskelődik	leskelődök	5010	leskelődik	leskelődök	lakok
+rádiózik	rádiózok	5003	rádiózik	rádiózok	lakok
+sáfárkodik	sáfárkodok	4988	sáfárkodik	sáfárkodok	lakok
+furakßik	furakßom	4959	furakszik	furakszom	lakom
+bujdosik	bujdosok	4942	bujdosik	bujdosok	lakok
+sí¥lődik	sí¥lődöm	4938	sínylődik	sínylődöm	lakom
+hajókázik	hajókázok	4918	hajókázik	hajókázok	lakok
+tudakozódik	tudakozódom	4897	tudakozódik	tudakozódom	lakom
+idősödik	idősödöm	4870	idősödik	idősödöm	lakom
+önállósodik	önállósodom	4835	önállósodik	önállósodom	lakom
+kenődik	kenődök	4832	kenődik	kenődök	lakok
+ßiporkázik	ßiporkázok	4822	sziporkázik	sziporkázok	lakok
+párosodik	párosodok	4817	párosodik	párosodok	lakok
+főzőçkézik	főzőçkézek	4801	főzőcskézik	főzőcskézek	lakok
+çalatkozik	çalatkozom	4769	csalatkozik	csalatkozom	lakom
+nevelődik	nevelődöm	4747	nevelődik	nevelődöm	lakom
+izmosodik	izmosodom	4740	izmosodik	izmosodom	lakom
+paráználkodik	paráználkodok	4716	paráználkodik	paráználkodok	lakok
+Ωúfolódik	Ωúfolódok	4651	zsúfolódik	zsúfolódok	lakok
+követelőzik	követelőzök	4650	követelőzik	követelőzök	lakok
+hüledezik	hüledezek	4646	hüledezik	hüledezek	lakok
+kajakozik	kajakozom	4622	kajakozik	kajakozom	lakom
+ßerençétlenkedik	ßerençétlenkedek	4615	szerencsétlenkedik	szerencsétlenkedek	lakok
+ajánlkozik	ajánlkozom	4605	ajánlkozik	ajánlkozom	lakom
+kívánçiskodik	kívánçiskodom	4599	kíváncsiskodik	kíváncsiskodom	lakom
+rejtezik	rejtezek	4572	rejtezik	rejtezek	lakok
+kárhozik	kárhozom	4546	kárhozik	kárhozom	lakom
+élcelődik	élcelődöm	4503	élcelődik	élcelődöm	lakom
+vitézkedik	vitézkedem	4493	vitézkedik	vitézkedem	lakom
+mókázik	mókázok	4444	mókázik	mókázok	lakok
+morgolódik	morgolódok	4429	morgolódik	morgolódok	lakok
+mélázik	mélázok	4413	mélázik	mélázok	lakok
+véko¥odik	véko¥odom	4362	vékonyodik	vékonyodom	lakom
+vastagßik	vastagßok	4356	vastagszik	vastagszok	lakok
+çimpaßkodik	çimpaßkodom	4352	csimpaszkodik	csimpaszkodom	lakom
+öklendezik	öklendezek	4342	öklendezik	öklendezek	lakok
+fulladozik	fulladozom	4240	fulladozik	fulladozom	lakom
+cipekedik	cipekedek	4233	cipekedik	cipekedek	lakok
+cipekßik	cipekßem	4233	cipekszik	cipekszem	lakom
+ßeré¥kedik	ßeré¥kedem	4231	szerénykedik	szerénykedem	lakom
+forrósodik	forrósodok	4210	forrósodik	forrósodok	lakok
+bizo¥talankodik	bizo¥talankodom	4183	bizonytalankodik	bizonytalankodom	lakom
+élvezkedik	élvezkedek	4178	élvezkedik	élvezkedek	lakok
+művelődik	művelődöm	4170	művelődik	művelődöm	lakom
+rimánkodik	rimánkodok	4130	rimánkodik	rimánkodok	lakok
+végrendelkezik	végrendelkezem	4099	végrendelkezik	végrendelkezem	lakom
+çigázik	çigázok	4081	csigázik	csigázok	lakok
+por†ázik	por†ázok	4052	portyázik	portyázok	lakok
+kitárulkozik	kitárulkozom	4038	kitárulkozik	kitárulkozom	lakom
+pironkodik	pironkodom	4029	pironkodik	pironkodom	lakom
+adaptálódik	adaptálódok	4014	adaptálódik	adaptálódok	lakok
+röplabdázik	röplabdázom	3986	röplabdázik	röplabdázom	lakom
+rohangáßik	rohangáßok	3976	rohangászik	rohangászok	lakok
+rázódik	rázódom	3960	rázódik	rázódom	lakom
+Ωonglőrködik	Ωonglőrködöm	3950	zsonglőrködik	zsonglőrködöm	lakom
+kuporodik	kuporodok	3941	kuporodik	kuporodok	lakok
+dörgölőzik	dörgölőzök	3938	dörgölőzik	dörgölőzök	lakok
+hajladozik	hajladozok	3901	hajladozik	hajladozok	lakok
+komo¬odik	komo¬odom	3885	komolyodik	komolyodom	lakom
+©ökeredzik	©ökeredzek	3833	gyökeredzik	gyökeredzek	lakok
+vakaródzik	vakaródzom	3785	vakaródzik	vakaródzom	lakom
+bújóçkázik	bújóçkázok	3783	bújócskázik	bújócskázok	lakok
+ráncosodik	ráncosodom	3780	ráncosodik	ráncosodom	lakom
+markoláßik	markoláßom	3773	markolászik	markolászom	lakom
+nedvesedik	nedvesedek	3755	nedvesedik	nedvesedek	lakok
+átkozódik	átkozódom	3739	átkozódik	átkozódom	lakom
+akadékoskodik	akadékoskodok	3726	akadékoskodik	akadékoskodok	lakok
+verejtékezik	verejtékezek	3711	verejtékezik	verejtékezek	lakok
+morΩolódik	morΩolódok	3703	morzsolódik	morzsolódok	lakok
+hatódik	hatódok	3690	hatódik	hatódok	lakok
+mosdik	mosdok	3663	mosdik	mosdok	lakok
+seré¥kedik	seré¥kedem	3658	serénykedik	serénykedem	lakom
+vagdalkozik	vagdalkozom	3657	vagdalkozik	vagdalkozom	lakom
+himbálódzik	himbálódzom	3641	himbálódzik	himbálódzom	lakom
+tökéletesedik	tökéletesedem	3633	tökéletesedik	tökéletesedem	lakom
+berzenkedik	berzenkedem	3632	berzenkedik	berzenkedem	lakom
+bíráskodik	bíráskodom	3616	bíráskodik	bíráskodom	lakom
+degradálódik	degradálódok	3616	degradálódik	degradálódok	lakok
+pipázik	pipázok	3608	pipázik	pipázok	lakok
+konßolidálódik	konßolidálódok	3601	konszolidálódik	konszolidálódok	lakok
+bűvéßkedik	bűvéßkedek	3597	bűvészkedik	bűvészkedek	lakok
+zö†kölődik	zö†kölődöm	3597	zötykölődik	zötykölődöm	lakom
+settenkedik	settenkedem	3595	settenkedik	settenkedem	lakom
+olvadozik	olvadozok	3573	olvadozik	olvadozok	lakok
+fe©verkezik	fe©verkezek	3563	fegyverkezik	fegyverkezek	lakok
+ßegé¥edik	ßegé¥edek	3561	szegényedik	szegényedek	lakok
+ásítozik	ásítozok	3555	ásítozik	ásítozok	lakok
+haverkodik	haverkodok	3524	haverkodik	haverkodok	lakok
+pingpongozik	pingpongozok	3522	pingpongozik	pingpongozok	lakok
+gömbö¬ödik	gömbö¬ödök	3513	gömbölyödik	gömbölyödök	lakok
+botránkozik	botránkozom	3482	botránkozik	botránkozom	lakom
+hivalkodik	hivalkodom	3478	hivalkodik	hivalkodom	lakom
+kezeskedik	kezeskedem	3469	kezeskedik	kezeskedem	lakom
+türelmetlenkedik	türelmetlenkedek	3453	türelmetlenkedik	türelmetlenkedek	lakok
+nemesedik	nemesedek	3366	nemesedik	nemesedek	lakok
+költözködik	költözködöm	3358	költözködik	költözködöm	lakom
+furu¬ázik	furu¬ázok	3355	furulyázik	furulyázok	lakok
+ißo¥odik	ißo¥odom	3335	iszonyodik	iszonyodom	lakom
+ámuldozik	ámuldozok	3333	ámuldozik	ámuldozok	lakok
+terhelődik	terhelődöm	3333	terhelődik	terhelődöm	lakom
+e©enesedik	e©enesedek	3332	egyenesedik	egyenesedek	lakok
+Ωörtölődik	Ωörtölődöm	3330	zsörtölődik	zsörtölődöm	lakom
+ejtőzik	ejtőzök	3317	ejtőzik	ejtőzök	lakok
+kekeckedik	kekeckedek	3302	kekeckedik	kekeckedek	lakok
+búçúzkodik	búçúzkodom	3282	búcsúzkodik	búcsúzkodom	lakom
+ßerelmeskedik	ßerelmeskedek	3264	szerelmeskedik	szerelmeskedek	lakok
+féltéke¥kedik	féltéke¥kedek	3256	féltékenykedik	féltékenykedek	lakok
+futamodik	futamodok	3227	futamodik	futamodok	lakok
+préselődik	préselődöm	3221	préselődik	préselődöm	lakom
+vizesedik	vizesedek	3171	vizesedik	vizesedek	lakok
+amortizálódik	amortizálódok	3122	amortizálódik	amortizálódok	lakok
+há¥ódik	há¥ódom	3101	hányódik	hányódom	lakom
+dudoráßik	dudoráßok	3096	dudorászik	dudorászok	lakok
+vízilabdázik	vízilabdázom	3094	vízilabdázik	vízilabdázom	lakom
+tündöklik	tündöklök	3078	tündöklik	tündöklök	lakok
+kopaßodik	kopaßodom	3051	kopaszodik	kopaszodom	lakom
+bukfencezik	bukfencezek	3043	bukfencezik	bukfencezek	lakok
+tipródik	tipródom	3039	tipródik	tipródom	lakom
+ßánakozik	ßánakozom	3014	szánakozik	szánakozom	lakom
+lökdösődik	lökdösődök	3007	lökdösődik	lökdösődök	lakok
+autókázik	autókázok	2943	autókázik	autókázok	lakok
+fésülködik	fésülködöm	2935	fésülködik	fésülködöm	lakom
+húzódozik	húzódozom	2929	húzódozik	húzódozom	lakom
+közösködik	közösködöm	2915	közösködik	közösködöm	lakom
+meztelenkedik	meztelenkedek	2915	meztelenkedik	meztelenkedek	lakok
+esküdözik	esküdözök	2908	esküdözik	esküdözök	lakok
+buzgólkodik	buzgólkodom	2888	buzgólkodik	buzgólkodom	lakom
+lepleződik	lepleződöm	2867	lepleződik	lepleződöm	lakom
+rendetlenkedik	rendetlenkedek	2865	rendetlenkedik	rendetlenkedek	lakok
+ßomjúhozik	ßomjúhozom	2852	szomjúhozik	szomjúhozom	lakom
+lottózik	lottózom	2828	lottózik	lottózom	lakom
+tempózik	tempózok	2816	tempózik	tempózok	lakok
+pirosodik	pirosodok	2743	pirosodik	pirosodok	lakok
+akaßkodik	akaßkodom	2721	akaszkodik	akaszkodom	lakom
+tüsténkedik	tüsténkedem	2685	tüsténkedik	tüsténkedem	lakom
+ke©eskedik	ke©eskedek	2677	kegyeskedik	kegyeskedek	lakok
+vörösödik	vörösödöm	2652	vörösödik	vörösödöm	lakom
+beleßerelmesedik	beleßerelmesedek	2629	beleszerelmesedik	beleszerelmesedek	lakok
+fontoskodik	fontoskodom	2612	fontoskodik	fontoskodom	lakom
+óvatoskodik	óvatoskodok	2608	óvatoskodik	óvatoskodok	lakok
+¥álazik	¥álazom	2577	nyálazik	nyálazom	lakom
+akklimatizálódik	akklimatizálódom	2558	akklimatizálódik	akklimatizálódom	lakom
+párásodik	párásodok	2554	párásodik	párásodok	lakok
+ßámítódik	ßámítódok	2554	számítódik	számítódok	lakok
+gonoßkodik	gonoßkodom	2552	gonoszkodik	gonoszkodom	lakom
+káßálódik	káßálódok	2552	kászálódik	kászálódok	lakok
+ßivarozik	ßivarozok	2542	szivarozik	szivarozok	lakok
+ü©esedik	ü©esedek	2539	ügyesedik	ügyesedek	lakok
+¥űglődik	¥űglődök	2530	nyűglődik	nyűglődök	lakok
+tőΩdézik	tőΩdézek	2523	tőzsdézik	tőzsdézek	lakok
+katonáskodik	katonáskodom	2521	katonáskodik	katonáskodom	lakom
+fuvolázik	fuvolázom	2514	fuvolázik	fuvolázom	lakom
+kéredzkedik	kéredzkedek	2470	kéredzkedik	kéredzkedek	lakok
+puhatolózik	puhatolózom	2438	puhatolózik	puhatolózom	lakom
+sürgölődik	sürgölődök	2392	sürgölődik	sürgölődök	lakok
+utálkozik	utálkozom	2391	utálkozik	utálkozom	lakom
+ßomorodik	ßomorodok	2368	szomorodik	szomorodok	lakok
+fé¥esedik	fé¥esedek	2301	fényesedik	fényesedek	lakok
+veselkedik	veselkedek	2295	veselkedik	veselkedek	lakok
+keringőzik	keringőzök	2274	keringőzik	keringőzök	lakok
+tántorodik	tántorodok	2273	tántorodik	tántorodok	lakok
+korzózik	korzózok	2269	korzózik	korzózok	lakok
+moçkolódik	moçkolódok	2235	mocskolódik	mocskolódok	lakok
+aßalódik	aßalódok	2207	aszalódik	aszalódok	lakok
+kézimunkázik	kézimunkázok	2207	kézimunkázik	kézimunkázok	lakok
+rakoncátlankodik	rakoncátlankodok	2200	rakoncátlankodik	rakoncátlankodok	lakok
+materializálódik	materializálódom	2188	materializálódik	materializálódom	lakom
+ösßehaverkodik	ösßehaverkodok	2170	összehaverkodik	összehaverkodok	lakok
+reinkarnálódik	reinkarnálódok	2162	reinkarnálódik	reinkarnálódok	lakok
+¥áladzik	¥áladzok	2158	nyáladzik	nyáladzok	lakok
+fa¥alodik	fa¥alodok	2114	fanyalodik	fanyalodok	lakok
+döglődik	döglődök	2107	döglődik	döglődök	lakok
+makaçkodik	makaçkodom	2104	makacskodik	makacskodom	lakom
+kaparáßik	kaparáßom	2081	kaparászik	kaparászom	lakom
+dörgölődzik	dörgölődzöm	2068	dörgölődzik	dörgölődzöm	lakom
+őrizkedik	őrizkedem	2033	őrizkedik	őrizkedem	lakom
+évődik	évődöm	2026	évődik	évődöm	lakom
+tápáßkodik	tápáßkodok	2018	tápászkodik	tápászkodok	lakok
+faggatózik	faggatózom	2014	faggatózik	faggatózom	lakom
+bakizik	bakizok	1995	bakizik	bakizok	lakok
+perlekedik	perlekedek	1989	perlekedik	perlekedek	lakok
+sivalkodik	sivalkodom	1974	sivalkodik	sivalkodom	lakom
+anekdotázik	anekdotázok	1972	anekdotázik	anekdotázok	lakok
+ü©etlenkedik	ü©etlenkedek	1969	ügyetlenkedik	ügyetlenkedek	lakok
+áskálódik	áskálódok	1964	áskálódik	áskálódok	lakok
+kamaßodik	kamaßodom	1964	kamaszodik	kamaszodom	lakom
+illetődik	illetődöm	1961	illetődik	illetődöm	lakom
+fajtalankodik	fajtalankodok	1945	fajtalankodik	fajtalankodok	lakok
+ßedelőzködik	ßedelőzködök	1934	szedelőzködik	szedelőzködök	lakok
+tajtékzik	tajtékzom	1903	tajtékzik	tajtékzom	lakom
+ke©etlenkedik	ke©etlenkedek	1899	kegyetlenkedik	kegyetlenkedek	lakok
+kaçázik	kaçázok	1895	kacsázik	kacsázok	lakok
+alaço¥odik	alaço¥odok	1870	alacsonyodik	alacsonyodok	lakok
+alázkodik	alázkodom	1842	alázkodik	alázkodom	lakom
+méhéßkedik	méhéßkedem	1838	méhészkedik	méhészkedem	lakom
+morΩálódik	morΩálódok	1836	morzsálódik	morzsálódok	lakok
+kettőzik	kettőzök	1835	kettőzik	kettőzök	lakok
+karçúsodik	karçúsodom	1804	karcsúsodik	karcsúsodom	lakom
+józanodik	józanodok	1799	józanodik	józanodok	lakok
+çellózik	çellózom	1782	csellózik	csellózom	lakom
+kellemetlenkedik	kellemetlenkedek	1776	kellemetlenkedik	kellemetlenkedek	lakok
+pácolódik	pácolódom	1769	pácolódik	pácolódom	lakom
+ökörködik	ökörködök	1755	ökörködik	ökörködök	lakok
+komédiázik	komédiázok	1738	komédiázik	komédiázok	lakok
+le©eskedik	le©eskedek	1730	legyeskedik	legyeskedek	lakok
+hősködik	hősködöm	1727	hősködik	hősködöm	lakom
+húzódzkodik	húzódzkodok	1709	húzódzkodik	húzódzkodok	lakok
+bölçelkedik	bölçelkedem	1698	bölcselkedik	bölcselkedem	lakom
+hatalmaskodik	hatalmaskodok	1696	hatalmaskodik	hatalmaskodok	lakok
+turistáskodik	turistáskodom	1689	turistáskodik	turistáskodom	lakom
+kukacoskodik	kukacoskodok	1681	kukacoskodik	kukacoskodok	lakok
+ku†ázik	ku†ázom	1659	kutyázik	kutyázom	lakom
+udvariaskodik	udvariaskodom	1591	udvariaskodik	udvariaskodom	lakom
+vigadozik	vigadozok	1583	vigadozik	vigadozok	lakok
+réßegedik	réßegedek	1562	részegedik	részegedek	lakok
+magázódik	magázódom	1546	magázódik	magázódom	lakom
+¥omakßik	¥omakßom	1539	nyomakszik	nyomakszom	lakom
+kérődzik	kérődzök	1494	kérődzik	kérődzök	lakok
+lábatlankodik	lábatlankodok	1479	lábatlankodik	lábatlankodok	lakok
+pólózik	pólózom	1468	pólózik	pólózom	lakom
+citerázik	citerázok	1464	citerázik	citerázok	lakok
+alakoskodik	alakoskodok	1461	alakoskodik	alakoskodok	lakok
+sová¥odik	sová¥odok	1420	soványodik	soványodok	lakok
+függeßkedik	függeßkedek	1411	függeszkedik	függeszkedek	lakok
+tudódik	tudódok	1403	tudódik	tudódok	lakok
+bátorodik	bátorodom	1398	bátorodik	bátorodom	lakom
+halódik	halódom	1397	halódik	halódom	lakom
+büdösödik	büdösödök	1381	büdösödik	büdösödök	lakok
+kisebbedik	kisebbedek	1371	kisebbedik	kisebbedek	lakok
+©akornokoskodik	©akornokoskodom	1364	gyakornokoskodik	gyakornokoskodom	lakom
+álmosodik	álmosodom	1357	álmosodik	álmosodom	lakom
+ßemtelenkedik	ßemtelenkedek	1357	szemtelenkedik	szemtelenkedek	lakok
+fújódik	fújódok	1344	fújódik	fújódok	lakok
+művéßkedik	művéßkedek	1335	művészkedik	művészkedek	lakok
+táviratozik	táviratozok	1330	táviratozik	táviratozok	lakok
+korosodik	korosodom	1301	korosodik	korosodom	lakom
+törölközik	törölközök	1292	törölközik	törölközök	lakok
+Ωarnokoskodik	Ωarnokoskodom	1288	zsarnokoskodik	zsarnokoskodom	lakom
+fölé¥eskedik	fölé¥eskedek	1263	fölényeskedik	fölényeskedek	lakok
+huzakodik	huzakodok	1262	huzakodik	huzakodok	lakok
+feldobódik	feldobódok	1260	feldobódik	feldobódok	lakok
+harmonikázik	harmonikázok	1234	harmonikázik	harmonikázok	lakok
+kotródik	kotródok	1221	kotródik	kotródok	lakok
+hamarkodik	hamarkodok	1217	hamarkodik	hamarkodok	lakok
+bántódik	bántódok	1216	bántódik	bántódok	lakok
+fogódzik	fogódzom	1173	fogódzik	fogódzom	lakom
+há¥kódik	há¥kódom	1146	hánykódik	hánykódom	lakom
+kontárkodik	kontárkodom	1129	kontárkodik	kontárkodom	lakom
+páváskodik	páváskodom	1096	páváskodik	páváskodom	lakom
+ßépítkezik	ßépítkezem	1096	szépítkezik	szépítkezem	lakom
+ultizik	ultizok	1092	ultizik	ultizok	lakok
+foltosodik	foltosodok	1089	foltosodik	foltosodok	lakok
+révedezik	révedezek	1088	révedezik	révedezek	lakok
+kalózkodik	kalózkodom	1080	kalózkodik	kalózkodom	lakom
+ßobráßkodik	ßobráßkodom	1076	szobrászkodik	szobrászkodom	lakom
+pipiskedik	pipiskedek	1067	pipiskedik	pipiskedek	lakok
+cicózik	cicózok	1046	cicózik	cicózok	lakok
+ßigetelődik	ßigetelődök	1035	szigetelődik	szigetelődök	lakok
+homá¬osodik	homá¬osodok	1033	homályosodik	homályosodok	lakok
+a¥áskodik	a¥áskodom	1025	anyáskodik	anyáskodom	lakom
+pißkálódik	pißkálódok	1002	piszkálódik	piszkálódok	lakok
+pihizik	pihizek	994	pihizik	pihizek	lakok
+ármá¥kodik	ármá¥kodok	992	ármánykodik	ármánykodok	lakok
+engeßtelődik	engeßtelődöm	982	engesztelődik	engesztelődöm	lakom
+ravaßkodik	ravaßkodok	972	ravaszkodik	ravaszkodok	lakok
+restelkedik	restelkedem	967	restelkedik	restelkedem	lakom
+lázasodik	lázasodok	964	lázasodik	lázasodok	lakok
+ßőrösödik	ßőrösödöm	950	szőrösödik	szőrösödöm	lakom
+ké¥eskedik	ké¥eskedek	949	kényeskedik	kényeskedek	lakok
+társalkodik	társalkodom	933	társalkodik	társalkodom	lakom
+ßabódik	ßabódom	925	szabódik	szabódom	lakom
+¥űgösködik	¥űgösködöm	919	nyűgösködik	nyűgösködöm	lakom
+alkalmatlankodik	alkalmatlankodom	918	alkalmatlankodik	alkalmatlankodom	lakom
+kajánkodik	kajánkodok	917	kajánkodik	kajánkodok	lakok
+lélegezik	lélegezek	903	lélegezik	lélegezek	lakok
+idétlenkedik	idétlenkedek	901	idétlenkedik	idétlenkedek	lakok
+jogáßkodik	jogáßkodom	881	jogászkodik	jogászkodom	lakom
+izolálódik	izolálódok	876	izolálódik	izolálódok	lakok
+ripaçkodik	ripaçkodok	871	ripacskodik	ripacskodok	lakok
+na©képűsködik	na©képűsködöm	859	nagyképűsködik	nagyképűsködöm	lakom
+perΩelődik	perΩelődök	856	perzselődik	perzselődök	lakok
+korteskedik	korteskedek	844	korteskedik	korteskedek	lakok
+ellenségeskedik	ellenségeskedek	839	ellenségeskedik	ellenségeskedek	lakok
+gorombáskodik	gorombáskodom	819	gorombáskodik	gorombáskodom	lakom
+töketlenkedik	töketlenkedek	819	töketlenkedik	töketlenkedek	lakok
+pörkölődik	pörkölődök	806	pörkölődik	pörkölődök	lakok
+gör¥edezik	gör¥edezek	804	görnyedezik	görnyedezek	lakok
+röstelkedik	röstelkedem	803	röstelkedik	röstelkedem	lakom
+meßesedik	meßesedek	792	meszesedik	meszesedek	lakok
+tamáskodik	tamáskodom	788	tamáskodik	tamáskodom	lakom
+duhajkodik	duhajkodok	777	duhajkodik	duhajkodok	lakok
+idegenedik	idegenedek	768	idegenedik	idegenedek	lakok
+hurcolkodik	hurcolkodom	745	hurcolkodik	hurcolkodom	lakom
+civódik	civódok	735	civódik	civódok	lakok
+réßegeskedik	réßegeskedek	709	részegeskedik	részegeskedek	lakok
+pofátlankodik	pofátlankodok	705	pofátlankodik	pofátlankodok	lakok
+bizalmaskodik	bizalmaskodom	700	bizalmaskodik	bizalmaskodom	lakom
+kufárkodik	kufárkodok	698	kufárkodik	kufárkodok	lakok
+apostolkodik	apostolkodok	686	apostolkodik	apostolkodok	lakok
+fogódzkodik	fogódzkodom	685	fogódzkodik	fogódzkodom	lakom
+hu¥áßkodik	hu¥áßkodom	685	hunyászkodik	hunyászkodom	lakom
+aggá¬oskodik	aggá¬oskodom	683	aggályoskodik	aggályoskodom	lakom
+vißá¬kodik	vißá¬kodok	672	viszálykodik	viszálykodok	lakok
+¥elvéßkedik	¥elvéßkedem	669	nyelvészkedik	nyelvészkedem	lakom
+formásodik	formásodok	664	formásodik	formásodok	lakok
+különcködik	különcködöm	660	különcködik	különcködöm	lakom
+ma©arosodik	ma©arosodok	659	magyarosodik	magyarosodok	lakok
+tollasodik	tollasodok	652	tollasodik	tollasodok	lakok
+lelombozódik	lelombozódom	646	lelombozódik	lelombozódom	lakom
+marháskodik	marháskodok	635	marháskodik	marháskodok	lakok
+töprenkedik	töprenkedem	623	töprenkedik	töprenkedem	lakom
+hűtlenkedik	hűtlenkedem	605	hűtlenkedik	hűtlenkedem	lakom
+komorodik	komorodok	605	komorodik	komorodok	lakok
+ßedelődzködik	ßedelődzködöm	599	szedelődzködik	szedelődzködöm	lakom
+feltűnősködik	feltűnősködöm	597	feltűnősködik	feltűnősködöm	lakom
+ßigorlatozik	ßigorlatozom	593	szigorlatozik	szigorlatozom	lakom
+pimaßkodik	pimaßkodok	588	pimaszkodik	pimaszkodok	lakok
+itatódik	itatódom	587	itatódik	itatódom	lakom
+butáskodik	butáskodom	585	butáskodik	butáskodom	lakom
+ßellemeskedik	ßellemeskedek	583	szellemeskedik	szellemeskedek	lakok
+titokzatoskodik	titokzatoskodom	581	titokzatoskodik	titokzatoskodom	lakom
+ingerkedik	ingerkedem	578	ingerkedik	ingerkedem	lakom
+vackolódik	vackolódom	577	vackolódik	vackolódom	lakom
+majomkodik	majomkodok	559	majomkodik	majomkodok	lakok
+virgonckodik	virgonckodok	557	virgonckodik	virgonckodok	lakok
+basáskodik	basáskodom	547	basáskodik	basáskodom	lakom
+okvetetlenkedik	okvetetlenkedek	531	okvetetlenkedik	okvetetlenkedek	lakok
+ájtatoskodik	ájtatoskodok	525	ájtatoskodik	ájtatoskodok	lakok
+elandalodik	elandalodom	522	elandalodik	elandalodom	lakom
+çinosodik	çinosodok	521	csinosodik	csinosodok	lakok
+álßenteskedik	álßenteskedek	511	álszenteskedik	álszenteskedek	lakok
+ßakáçkodik	ßakáçkodom	506	szakácskodik	szakácskodom	lakom
+durcáskodik	durcáskodom	505	durcáskodik	durcáskodom	lakom
+garasoskodik	garasoskodom	493	garasoskodik	garasoskodom	lakom
+çintalankodik	çintalankodok	492	csintalankodik	csintalankodok	lakok
+komo¬talankodik	komo¬talankodok	492	komolytalankodik	komolytalankodok	lakok
+kedvetlenedik	kedvetlenedek	491	kedvetlenedik	kedvetlenedek	lakok
+bátortalanodik	bátortalanodok	479	bátortalanodik	bátortalanodok	lakok
+kot¥eleskedik	kot¥eleskedek	479	kotnyeleskedik	kotnyeleskedek	lakok
+pártoskodik	pártoskodom	478	pártoskodik	pártoskodom	lakom
+nőiesedik	nőiesedek	477	nőiesedik	nőiesedek	lakok
+heveskedik	heveskedek	472	heveskedik	heveskedek	lakok
+önké¥eskedik	önké¥eskedek	449	önkényeskedik	önkényeskedek	lakok
+kuktáskodik	kuktáskodom	445	kuktáskodik	kuktáskodom	lakom
+tökölődik	tökölődök	431	tökölődik	tökölődök	lakok
+gánçoskodik	gánçoskodok	430	gáncsoskodik	gáncsoskodok	lakok
+ßélhámoskodik	ßélhámoskodom	428	szélhámoskodik	szélhámoskodom	lakom
+lúdbőrzik	lúdbőrzök	416	lúdbőrzik	lúdbőrzök	lakok
+dühösködik	dühösködöm	411	dühösködik	dühösködöm	lakom
+tépődik	tépődöm	410	tépődik	tépődöm	lakom
+ku¥izik	ku¥izok	393	kunyizik	kunyizok	lakok
+kupálódik	kupálódok	393	kupálódik	kupálódok	lakok
+deresedik	deresedem	388	deresedik	deresedem	lakom
+érzéke¥kedik	érzéke¥kedem	372	érzékenykedik	érzékenykedem	lakom
+rugdosódik	rugdosódok	369	rugdosódik	rugdosódok	lakok
+aljasodik	aljasodok	367	aljasodik	aljasodok	lakok
+kedé¬eskedik	kedé¬eskedem	364	kedélyeskedik	kedélyeskedem	lakom
+legé¥kedik	legé¥kedek	363	legénykedik	legénykedek	lakok
+ßemérmeskedik	ßemérmeskedek	360	szemérmeskedik	szemérmeskedek	lakok
+sápadozik	sápadozok	355	sápadozik	sápadozok	lakok
+vonßolódik	vonßolódom	354	vonszolódik	vonszolódom	lakom
+veßkődik	veßkődöm	353	veszkődik	veszkődöm	lakom
+©úródik	©úródom	339	gyúródik	gyúródom	lakom
+megemlítődik	megemlítődök	333	megemlítődik	megemlítődök	lakok
+cigá¥kodik	cigá¥kodok	325	cigánykodik	cigánykodok	lakok
+¥ájaskodik	¥ájaskodom	319	nyájaskodik	nyájaskodom	lakom
+ßurkálódik	ßurkálódok	310	szurkálódik	szurkálódok	lakok
+andalodik	andalodok	304	andalodik	andalodok	lakok
+partizánkodik	partizánkodom	302	partizánkodik	partizánkodom	lakom
+békétlenkedik	békétlenkedek	301	békétlenkedik	békétlenkedek	lakok
+vakoskodik	vakoskodom	297	vakoskodik	vakoskodom	lakom
+malackodik	malackodok	293	malackodik	malackodok	lakok
+bizalmatlankodik	bizalmatlankodok	284	bizalmatlankodik	bizalmatlankodok	lakok
+renitenskedik	renitenskedek	274	renitenskedik	renitenskedek	lakok
+amerikanizálódik	amerikanizálódok	270	amerikanizálódik	amerikanizálódok	lakok
+lovaçkázik	lovaçkázom	264	lovacskázik	lovacskázom	lakom
+ü©védkedik	ü©védkedek	263	ügyvédkedik	ügyvédkedek	lakok
+kántorkodik	kántorkodom	254	kántorkodik	kántorkodom	lakom
+körülmé¥eskedik	körülmé¥eskedek	254	körülményeskedik	körülményeskedek	lakok
+be†árkodik	be†árkodok	246	betyárkodik	betyárkodok	lakok
+tüzeskedik	tüzeskedem	242	tüzeskedik	tüzeskedem	lakom
+dacoskodik	dacoskodok	237	dacoskodik	dacoskodok	lakok
+érzelgősködik	érzelgősködöm	229	érzelgősködik	érzelgősködöm	lakom
+erőtlenedik	erőtlenedek	223	erőtlenedik	erőtlenedek	lakok
+mérgeskedik	mérgeskedek	217	mérgeskedik	mérgeskedek	lakok
+istenkedik	istenkedek	212	istenkedik	istenkedek	lakok
+gőgösködik	gőgösködök	206	gőgösködik	gőgösködök	lakok
+virtuskodik	virtuskodom	206	virtuskodik	virtuskodom	lakom
+akaratoskodik	akaratoskodom	199	akaratoskodik	akaratoskodom	lakom
+felpaprikázódik	felpaprikázódom	197	felpaprikázódik	felpaprikázódom	lakom
+tudakolózik	tudakolózom	189	tudakolózik	tudakolózom	lakom
+heccelődik	heccelődök	187	heccelődik	heccelődök	lakok
+í¥enckedik	í¥enckedek	185	ínyenckedik	ínyenckedek	lakok
+pißkoskodik	pißkoskodok	173	piszkoskodik	piszkoskodok	lakok
+indulatoskodik	indulatoskodom	171	indulatoskodik	indulatoskodom	lakom
+rugódozik	rugódozom	169	rugódozik	rugódozom	lakom
+cangázik	cangázok	163	cangázik	cangázok	lakok
+vasutazik	vasutazok	163	vasutazik	vasutazok	lakok
+pocakosodik	pocakosodom	159	pocakosodik	pocakosodom	lakom
+villa¥ozódik	villa¥ozódom	154	villanyozódik	villanyozódom	lakom
+aljaskodik	aljaskodok	150	aljaskodik	aljaskodok	lakok
+óhajtozik	óhajtozom	144	óhajtozik	óhajtozom	lakom
+ßájhősködik	ßájhősködöm	144	szájhősködik	szájhősködöm	lakom
+illetlenkedik	illetlenkedek	141	illetlenkedik	illetlenkedek	lakok
+huligánkodik	huligánkodok	137	huligánkodik	huligánkodok	lakok
+ha©akozik	ha©akozom	116	hagyakozik	hagyakozom	lakom
+juháßkodik	juháßkodom	105	juhászkodik	juhászkodom	lakom
+kelletlenkedik	kelletlenkedek	105	kelletlenkedik	kelletlenkedek	lakok
+izgágáskodik	izgágáskodok	102	izgágáskodik	izgágáskodok	lakok
+bajoskodik	bajoskodom	101	bajoskodik	bajoskodom	lakom
+hájasodik	hájasodok	91	hájasodik	hájasodok	lakok
+elkérezkedik	elkérezkedek	90	elkérezkedik	elkérezkedek	lakok
+betak¥osodik	betak¥osodok	83	betaknyosodik	betaknyosodok	lakok
+¥ughatatlankodik	¥ughatatlankodok	81	nyughatatlankodik	nyughatatlankodok	lakok
+undokoskodik	undokoskodom	79	undokoskodik	undokoskodom	lakom
+ízetlenkedik	ízetlenkedek	78	ízetlenkedik	ízetlenkedek	lakok
+ßaglálódik	ßaglálódom	77	szaglálódik	szaglálódom	lakom
+haßontalankodik	haßontalankodom	65	haszontalankodik	haszontalankodom	lakom
+náthásodik	náthásodok	65	náthásodik	náthásodok	lakok
+fellengzősködik	fellengzősködöm	56	fellengzősködik	fellengzősködöm	lakom
+kétßínűsködik	kétßínűsködök	49	kétszínűsködik	kétszínűsködök	lakok
+vállasodik	vállasodom	49	vállasodik	vállasodom	lakom
+¥ava¬áskodik	¥ava¬áskodom	21	nyavalyáskodik	nyavalyáskodom	lakom
+dévánkozik	dévánkozom	18	dévánkozik	dévánkozom	lakom
+Test forms:
+aglik
+bihá¥lik
+bivégßik
+bivejlik
+böjzik
+bölßik
+brágaklik
+brarlik
+brivegzik
+brobódzik
+brubzik
+brüjlik
+büglik
+bűtßik
+çíßlik
+çólorzik
+driládzik
+drubódzik
+drügzik
+düjzik
+féjzik
+femlik
+feté¥lik
+fibamlik
+figlik
+filágzik
+fivé¥lik
+flagá¥lik
+flagárzik
+flátßik
+flehékßik
+flehé¥lik
+flérlik
+flibekßik
+fligzik
+fliraklik
+flitlik
+floglik
+flözlik
+flűmlik
+flűröklik
+flüröslik
+frágapßik
+fretßik
+frilegßik
+frißlik
+frivajlik
+frodlik
+geré¥lik
+gilárzik
+©ibakßik
+©ibeslik
+©ivádzik
+herégßik
+hilarzik
+hűgzik
+huklik
+hurjorzik
+huroslik
+ibáglik
+ibékßik
+jo¥lik
+jüslik
+jußlik
+klaráglik
+klárzik
+klétßik
+klibamlik
+klidlik
+klivaslik
+klörlik
+kumlik
+lihadzik
+livaklik
+lorjódzik
+lörűdzik
+málapßik
+marzik
+mékßik
+narádzik
+narjárzik
+nűröklik
+¥áslik
+pebzik
+péleslik
+píjlik
+piragßik
+pítßik
+pivegßik
+plágadzik
+plövőrzik
+plűbzik
+plugzik
+praslik
+pratá¥lik
+préleglik
+prezlik
+pribagßik
+pribemlik
+prihekßik
+prilegzik
+prí¥lik
+prohódzik
+prűrlik
+pugoslik
+rájzik
+ribegzik
+ribzik
+rokßik
+ruslik
+salárzik
+siladzik
+sojzik
+spáraklik
+spatárzik
+spatßik
+spélßik
+spéslik
+spibádzik
+spibaklik
+spihegzik
+spihemlik
+spilágzik
+spírzik
+sprálßik
+sprédlik
+spröbzik
+sprogzik
+sprökßik
+spubo¥lik
+spüjzik
+spülöklik
+spülőrzik
+spülűdzik
+spűmlik
+spüßlik
+sűzlik
+ßibá¥lik
+ßirlik
+ßtremlik
+ßtrijzik
+ßtrozlik
+ßtruglik
+ßtrűkßik
+ßűslik
+táklik
+tí¥lik
+tiregzik
+tomlik
+trádlik
+tragzik
+treglik
+trehégßik
+trihagzik
+trilßik
+tuboklik
+va¥lik
+vihepßik
+vilakßik
+vűjlik
+vülődzik
+zödlik
+end

@@ -1,0 +1,438 @@
+Phonological Learner File
+P Rácz
+Hungarian
+Tue Apr 13 2023
+Tue Apr 13 2023
+This data set was built in baseline_learner.Rmd
+Morphological categories:
+	base	conj
+Input forms:
+alßik	alußunk	221313766	alszik	aluszunk	cselekednek
+i©ekßik	i©ekezünk	163294398	igyekszik	igyekezünk	cselekednek
+fekßik	fekßünk	141455438	fekszik	fekszünk	cselekszenek
+emlékßik	emlékezünk	100073966	emlékszik	emlékezünk	cselekednek
+törekßik	törekedünk	71276285	törekszik	törekedünk	cselekednek
+növekßik	növekedünk	58348947	növekszik	növekedünk	cselekednek
+çelekßik	çelekedünk	48009401	cselekszik	cselekedünk	cselekednek
+¥ugßik	¥ugodunk	45649875	nyugszik	nyugodunk	cselekednek
+zajlik	zajlunk	38097011	zajlik	zajlunk	cselekszenek
+hangzik	hangzunk	37084641	hangzik	hangzunk	cselekszenek
+romlik	romlunk	19020414	romlik	romlunk	cselekszenek
+elégßik	elégedünk	17691020	elégszik	elégedünk	cselekednek
+sugárzik	sugározunk	15892943	sugárzik	sugározunk	cselekednek
+lélegzik	lélegezünk	15485442	lélegzik	lélegezünk	cselekednek
+áramlik	áramlunk	13515798	áramlik	áramlunk	cselekszenek
+virágzik	virágozunk	13288214	virágzik	virágozunk	cselekednek
+fürdik	fürdünk	12697712	fürdik	fürdünk	cselekszenek
+haragßik	haragßunk	12272826	haragszik	haragszunk	cselekszenek
+vérzik	vérezünk	9327333	vérzik	vérezünk	cselekednek
+telepßik	telepedünk	9119819	telepszik	telepedünk	cselekednek
+oßlik	oßlunk	8076952	oszlik	oszlunk	cselekszenek
+©arapßik	©arapodunk	7383526	gyarapszik	gyarapodunk	cselekednek
+©anakßik	©anakodunk	6072457	gyanakszik	gyanakodunk	cselekednek
+fejlik	fejelünk	6037149	fejlik	fejelünk	cselekednek
+diçekßik	diçekedünk	5150715	dicsekszik	dicsekedünk	cselekednek
+ßaglik	ßagolunk	4618028	szaglik	szagolunk	cselekednek
+verekßik	verekedünk	3943354	verekszik	verekedünk	cselekednek
+habzik	habozunk	3918266	habzik	habozunk	cselekednek
+veßekßik	veßekedünk	3763729	veszekszik	veszekedünk	cselekednek
+melegßik	melegedünk	3625379	melegszik	melegedünk	cselekednek
+dohá¥zik	dohá¥ozunk	3237991	dohányzik	dohányozunk	cselekednek
+bomlik	bomlunk	3187048	bomlik	bomlunk	cselekszenek
+tündöklik	tündökölünk	2879564	tündöklik	tündökölünk	cselekednek
+botlik	botlunk	2436908	botlik	botlunk	cselekszenek
+vetekßik	vetekedünk	2279057	vetekszik	vetekedünk	cselekednek
+ízlik	ízlünk	2195683	ízlik	ízlünk	cselekszenek
+haldoklik	haldokolunk	1552626	haldoklik	haldokolunk	cselekednek
+hullámzik	hullámzunk	1329613	hullámzik	hullámzunk	cselekszenek
+siklik	siklunk	1308087	siklik	siklunk	cselekszenek
+visßhangzik	visßhangozunk	1228783	visszhangzik	visszhangozunk	cselekednek
+fé¥lik	fé¥lünk	960464	fénylik	fénylünk	cselekszenek
+mosakßik	mosakodunk	872844	mosakszik	mosakodunk	cselekednek
+hasonlik	hasonulunk	831860	hasonlik	hasonulunk	cselekednek
+tolakßik	tolakodunk	678108	tolakszik	tolakodunk	cselekednek
+fuldoklik	fuldokolunk	514572	fuldoklik	fuldokolunk	cselekednek
+bűzlik	bűzlünk	399643	bűzlik	bűzlünk	cselekszenek
+furakßik	furakodunk	317388	furakszik	furakodunk	cselekednek
+porzik	porozunk	220543	porzik	porozunk	cselekednek
+tülekßik	tülekedünk	203690	tülekszik	tülekedünk	cselekednek
+magzik	magozunk	132765	magzik	magozunk	cselekednek
+fogzik	fogzunk	104812	fogzik	fogzunk	cselekszenek
+párzik	párzunk	66915	párzik	párzunk	cselekszenek
+sötétlik	sötételünk	27541	sötétlik	sötételünk	cselekednek
+lúdbőrzik	lúdbőrözünk	16048	lúdbőrzik	lúdbőrözünk	cselekednek
+bagzik	bagzunk	7065	bagzik	bagzunk	cselekszenek
+çetlik	çetelunk	6281	csetlik	csetelunk	cselekednek
+Test forms:
+bejezik
+bötőrözik
+brálamozik
+bra¥ozik
+brározik
+bratározik
+bregezik
+bresezik
+bribasozik
+bribékedik
+brilegezik
+brivágozik
+brivakozik
+brivepedik
+brözözik
+brűközik
+brülösözik
+brürözik
+brüßözik
+bügözik
+çibagozik
+çubozik
+dabozik
+dárakodik
+dibágozik
+dilakozik
+dirá¥ozik
+dirozik
+döjözik
+dralágozik
+drilarozik
+drivegezik
+drojozik
+drűrözik
+dujozik
+filá¥ozik
+flátozik
+flemezik
+flerékedik
+flézezik
+flivegezik
+flodozik
+flöközik
+flubokozik
+flugo¥ozik
+flűgözik
+flüröközik
+föködik
+frakozik
+frálapodik
+frálasozik
+frélegezik
+frésezik
+frihegezik
+fri¥ozik
+frirozik
+frivamozik
+fröjözik
+fröjözik
+frorozik
+galározik
+gatágozik
+géregezik
+gibemezik
+gihamozik
+gihejezik
+©ihegezik
+©ivepedik
+hákodik
+hiragozik
+hubo¥ozik
+játozik
+jurozik
+kláragodik
+klarágozik
+klégezik
+klehé¥ezik
+klihasozik
+klűmözik
+kluzozik
+kößözik
+kűdözik
+küsözik
+lájozik
+lírozik
+livé¥ezik
+lűközik
+lumozik
+mágamozik
+metégedik
+mihágozik
+míjozik
+mísozik
+molodik
+mülőrözik
+nágapodik
+nivározik
+nurokozik
+¥ádozik
+¥ivágozik
+¥izozik
+¥öbözik
+¥ülöközik
+¥ürözik
+pehégedik
+pekedik
+pibegezik
+pilégedik
+plibozik
+pörözik
+posozik
+pragá¥ozik
+prazozik
+prélemezik
+prihegedik
+prilepedik
+privékedik
+prögözik
+prugorozik
+püzözik
+ribegedik
+rivá¥ozik
+spalározik
+spibamozik
+spibegezik
+spiharozik
+spirágozik
+spivejezik
+spöközik
+spo¥ozik
+sprebezik
+sprigozik
+sprimozik
+sprozozik
+sprudozik
+sprűrözik
+spuborozik
+spügözik
+sűjözik
+ßtrajozik
+ßtredezik
+ßtritozik
+tágarozik
+tibarozik
+tögözik
+trálakozik
+trálodik
+tribejezik
+trikozik
+trilekedik
+trírozik
+trivakodik
+trugokozik
+trugozik
+trukodik
+trű¥özik
+tűgözik
+vehékedik
+vihapodik
+vilesezik
+virozik
+vobozik
+Illicit sequences:
+aa
+aá
+ae
+aé
+ai
+aí
+ao
+aó
+aö
+aő
+au
+aú
+aü
+aű
+áa
+áá
+áe
+áé
+ái
+áí
+áo
+áó
+áö
+áő
+áu
+áú
+áü
+áű
+ea
+eá
+ee
+eé
+ei
+eí
+eo
+eó
+eö
+eő
+eu
+eú
+eü
+eű
+éa
+éá
+ée
+éé
+éi
+éí
+éo
+éó
+éö
+éő
+éu
+éú
+éü
+éű
+ia
+iá
+ie
+ié
+ii
+ií
+io
+ió
+iö
+iő
+iu
+iú
+iü
+iű
+ía
+íá
+íe
+íé
+íi
+íí
+ío
+íó
+íö
+íő
+íu
+íú
+íü
+íű
+oa
+oá
+oe
+oé
+oi
+oí
+oo
+oó
+oö
+oő
+ou
+oú
+oü
+oű
+óa
+óá
+óe
+óé
+ói
+óí
+óo
+óó
+óö
+óő
+óu
+óú
+óü
+óű
+öa
+öá
+öe
+öé
+öi
+öí
+öo
+öó
+öö
+öő
+öu
+öú
+öü
+öű
+őa
+őá
+őe
+őé
+ői
+őí
+őo
+őó
+őö
+őő
+őu
+őú
+őü
+őű
+ua
+uá
+ue
+ué
+ui
+uí
+uo
+uó
+uö
+uő
+uu
+uú
+uü
+uű
+úa
+úá
+úe
+úé
+úi
+úí
+úo
+úó
+úö
+úő
+úu
+úú
+úü
+úű
+üa
+üá
+üe
+üé
+üi
+üí
+üo
+üó
+üö
+üő
+üu
+üú
+üü
+üű
+űa
+űá
+űe
+űé
+űi
+űí
+űo
+űó
+űö
+űő
+űu
+űú
+űü
+űű
+oze
+oza
+öze
+öza
+eze
+eza
+ode
+oda
+öde
+öda
+ede
+eda
+end

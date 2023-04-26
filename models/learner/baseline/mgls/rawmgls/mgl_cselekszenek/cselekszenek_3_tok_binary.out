@@ -1,0 +1,62 @@
+Phonological rules discovered: 
+	oo -> o
+	ooz -> oz
+	ee -> e
+	eez -> ez
+	ao -> a
+	aoz -> az
+	iuß -> iß
+	áo -> á
+	áoz -> áz
+	úuß -> úß
+	úo -> ú
+	úoz -> úz
+	óo -> ó
+	óoz -> óz
+	áu -> á
+	áuß -> áß
+	ío -> í
+	íoz -> íz
+	őe -> ő
+	őez -> őz
+	io -> i
+	ioz -> iz
+	ie -> i
+	iez -> iz
+	au -> a
+	auß -> aß
+	éo -> é
+	éoz -> éz
+	ée -> é
+	éez -> éz
+	űe -> ű
+	űel -> űl
+	íu -> í
+	íul -> íl
+	úu -> ú
+	úul -> úl
+	uo -> u
+	uoz -> uz
+	ou -> o
+	ouß -> oß
+
+Morphological changes:
+	[i] -> [oto]	infix
+	[ßi] -> [ußto]	infix
+	[zi] -> [ozto]	infix
+	[i] -> [to]	infix
+	[li] -> [ulto]	infix
+	[ßi] -> [ezte]	infix
+	[ßi] -> [odto]	infix
+	[li] -> [olto]	infix
+	[i] -> [te]	infix
+	[i] -> [ete]	infix
+	[zi] -> [ezte]	infix
+	[li] -> [öltö]	infix
+	[i] -> [ötö]	infix
+	[ßi] -> [edte]	infix
+	[li] -> [elte]	infix
+	[zi] -> [dzto]	infix
+	[ßi] -> [sezte]	infix
+	[i] -> [tö]	infix
+

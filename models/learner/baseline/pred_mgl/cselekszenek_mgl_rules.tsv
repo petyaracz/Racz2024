@@ -1,0 +1,1096 @@
+training_type	base_tr	variant_number	variant	confidence	rule
+1	bejezik	variant1	bejzünk	NA	NA
+1	bejezik	variant2	bejezünk	0.06966096056074128	i -> ün / _
+1	bötőrözik	variant1	bötőrzünk	NA	NA
+1	bötőrözik	variant2	bötőrözünk	0.06966096056074128	i -> ün / _
+1	brálamozik	variant1	brálamlanak	NA	NA
+1	brálamozik	variant2	brálamoznak	NA	NA
+1	bra¥ozik	variant1	bra¥lanak	NA	NA
+1	bra¥ozik	variant2	bra¥oznak	NA	NA
+1	brározik	variant1	brárlanak	NA	NA
+1	brározik	variant2	brároznak	NA	NA
+1	bratározik	variant1	bratárzanak	NA	NA
+1	bratározik	variant2	bratároznak	NA	NA
+1	bregezik	variant1	bregzünk	NA	NA
+1	bregezik	variant2	bregezünk	0.06966096056074128	i -> ün / _
+1	bresezik	variant1	breslenek	NA	NA
+1	bresezik	variant2	breseznek	NA	NA
+1	bribasozik	variant1	bribaslanak	NA	NA
+1	bribasozik	variant2	bribasoznak	NA	NA
+1	bribékedik	variant1	bribékßetek	NA	NA
+1	bribékedik	variant2	bribékedtek	NA	NA
+1	brilegezik	variant1	brilegzünk	NA	NA
+1	brilegezik	variant2	brilegezünk	0.06966096056074128	i -> ün / _
+1	brivágozik	variant1	briváglanak	NA	NA
+1	brivágozik	variant2	brivágoznak	NA	NA
+1	brivakozik	variant1	brivaklotok	NA	NA
+1	brivakozik	variant2	brivakoztok	NA	NA
+1	brivepedik	variant1	brivepßünk	NA	NA
+1	brivepedik	variant2	brivepedünk	0.06966096056074128	i -> ün / _
+1	brözözik	variant1	brözlötök	NA	NA
+1	brözözik	variant2	brözöztök	NA	NA
+1	brűközik	variant1	brűklötök	NA	NA
+1	brűközik	variant2	brűköztök	NA	NA
+1	brülösözik	variant1	brülöslünk	NA	NA
+1	brülösözik	variant2	brülösözünk	0.06966096056074128	i -> ün / _
+1	brürözik	variant1	brürzenek	NA	NA
+1	brürözik	variant2	brüröznek	NA	NA
+1	brüßözik	variant1	brüßlötök	NA	NA
+1	brüßözik	variant2	brüßöztök	NA	NA
+1	bügözik	variant1	bügzenek	NA	NA
+1	bügözik	variant2	bügöznek	NA	NA
+1	çibagozik	variant1	çibagzotok	NA	NA
+1	çibagozik	variant2	çibagoztok	NA	NA
+1	çubozik	variant1	çubzunk	NA	NA
+1	çubozik	variant2	çubozunk	0.2591326397466217	i -> un / z
+1	dabozik	variant1	dabzotok	NA	NA
+1	dabozik	variant2	daboztok	NA	NA
+1	dárakodik	variant1	dárakßunk	NA	NA
+1	dárakodik	variant2	dárakodunk	0.1982097170804472	i -> un / _
+1	dibágozik	variant1	dibáglotok	NA	NA
+1	dibágozik	variant2	dibágoztok	NA	NA
+1	dilakozik	variant1	dilaklotok	NA	NA
+1	dilakozik	variant2	dilakoztok	NA	NA
+1	dirá¥ozik	variant1	dirá¥lanak	NA	NA
+1	dirá¥ozik	variant2	dirá¥oznak	NA	NA
+1	dirozik	variant1	dirlotok	NA	NA
+1	dirozik	variant2	diroztok	NA	NA
+1	döjözik	variant1	döjlenek	NA	NA
+1	döjözik	variant2	döjöznek	NA	NA
+1	dralágozik	variant1	dralágzunk	NA	NA
+1	dralágozik	variant2	dralágozunk	0.2591326397466217	i -> un / z
+1	drilarozik	variant1	drilarzunk	NA	NA
+1	drilarozik	variant2	drilarozunk	0.2591326397466217	i -> un / z
+1	drivegezik	variant1	drivegzetek	NA	NA
+1	drivegezik	variant2	drivegeztek	NA	NA
+1	drojozik	variant1	drojzunk	NA	NA
+1	drojozik	variant2	drojozunk	0.2591326397466217	i -> un / z
+1	drűrözik	variant1	drűrzenek	NA	NA
+1	drűrözik	variant2	drűröznek	NA	NA
+1	dujozik	variant1	dujzanak	NA	NA
+1	dujozik	variant2	dujoznak	NA	NA
+1	filá¥ozik	variant1	filá¥lunk	NA	NA
+1	filá¥ozik	variant2	filá¥ozunk	0.2591326397466217	i -> un / z
+1	flátozik	variant1	flátlotok	NA	NA
+1	flátozik	variant2	flátoztok	NA	NA
+1	flemezik	variant1	flemlünk	NA	NA
+1	flemezik	variant2	flemezünk	0.06966096056074128	i -> ün / _
+1	flerékedik	variant1	flerékßünk	NA	NA
+1	flerékedik	variant2	flerékedünk	0.06966096056074128	i -> ün / _
+1	flézezik	variant1	flézletek	NA	NA
+1	flézezik	variant2	flézeztek	NA	NA
+1	flivegezik	variant1	flivegzenek	NA	NA
+1	flivegezik	variant2	flivegeznek	NA	NA
+1	flodozik	variant1	flodlotok	NA	NA
+1	flodozik	variant2	flodoztok	NA	NA
+1	flöközik	variant1	flöklötök	NA	NA
+1	flöközik	variant2	flököztök	NA	NA
+1	flubokozik	variant1	fluboklotok	NA	NA
+1	flubokozik	variant2	flubokoztok	NA	NA
+1	flugo¥ozik	variant1	flugo¥lanak	NA	NA
+1	flugo¥ozik	variant2	flugo¥oznak	NA	NA
+1	flűgözik	variant1	flűgzünk	NA	NA
+1	flűgözik	variant2	flűgözünk	0.06966096056074128	i -> ün / _
+1	flüröközik	variant1	flüröklötök	NA	NA
+1	flüröközik	variant2	flürököztök	NA	NA
+1	föködik	variant1	fökßenek	NA	NA
+1	föködik	variant2	föködnek	NA	NA
+1	frakozik	variant1	fraklunk	NA	NA
+1	frakozik	variant2	frakozunk	0.2591326397466217	i -> un / z
+1	frálapodik	variant1	frálapßotok	NA	NA
+1	frálapodik	variant2	frálapodtok	NA	NA
+1	frálasozik	variant1	frálaslanak	NA	NA
+1	frálasozik	variant2	frálasoznak	NA	NA
+1	frélegezik	variant1	frélegzünk	NA	NA
+1	frélegezik	variant2	frélegezünk	0.06966096056074128	i -> ün / _
+1	frésezik	variant1	fréslünk	NA	NA
+1	frésezik	variant2	frésezünk	0.06966096056074128	i -> ün / _
+1	frihegezik	variant1	friheglünk	NA	NA
+1	frihegezik	variant2	frihegezünk	0.06966096056074128	i -> ün / _
+1	fri¥ozik	variant1	fri¥lunk	NA	NA
+1	fri¥ozik	variant2	fri¥ozunk	0.2591326397466217	i -> un / z
+1	frirozik	variant1	frirzunk	NA	NA
+1	frirozik	variant2	frirozunk	0.2591326397466217	i -> un / z
+1	frivamozik	variant1	frivamlunk	NA	NA
+1	frivamozik	variant2	frivamozunk	0.2591326397466217	i -> un / z
+1	frorozik	variant1	frorlanak	NA	NA
+1	frorozik	variant2	froroznak	NA	NA
+1	galározik	variant1	galárzanak	NA	NA
+1	galározik	variant2	galároznak	NA	NA
+1	gatágozik	variant1	gatáglunk	NA	NA
+1	gatágozik	variant2	gatágozunk	0.2591326397466217	i -> un / z
+1	géregezik	variant1	géregletek	NA	NA
+1	géregezik	variant2	géregeztek	NA	NA
+1	gibemezik	variant1	gibemlünk	NA	NA
+1	gibemezik	variant2	gibemezünk	0.06966096056074128	i -> ün / _
+1	gihamozik	variant1	gihamlanak	NA	NA
+1	gihamozik	variant2	gihamoznak	NA	NA
+1	gihejezik	variant1	gihejlünk	NA	NA
+1	gihejezik	variant2	gihejezünk	0.06966096056074128	i -> ün / _
+1	©ihegezik	variant1	©ihegzetek	NA	NA
+1	©ihegezik	variant2	©ihegeztek	NA	NA
+1	©ivepedik	variant1	©ivepßenek	NA	NA
+1	©ivepedik	variant2	©ivepednek	NA	NA
+1	hákodik	variant1	hákßanak	NA	NA
+1	hákodik	variant2	hákodnak	NA	NA
+1	hiragozik	variant1	hiragzanak	NA	NA
+1	hiragozik	variant2	hiragoznak	NA	NA
+1	hubo¥ozik	variant1	hubo¥lotok	NA	NA
+1	hubo¥ozik	variant2	hubo¥oztok	NA	NA
+1	játozik	variant1	játlunk	NA	NA
+1	játozik	variant2	játozunk	0.2591326397466217	i -> un / z
+1	jurozik	variant1	jurlunk	NA	NA
+1	jurozik	variant2	jurozunk	0.2591326397466217	i -> un / z
+1	kláragodik	variant1	kláragßotok	NA	NA
+1	kláragodik	variant2	kláragodtok	NA	NA
+1	klarágozik	variant1	klarágzotok	NA	NA
+1	klarágozik	variant2	klarágoztok	NA	NA
+1	klégezik	variant1	kléglünk	NA	NA
+1	klégezik	variant2	klégezünk	0.06966096056074128	i -> ün / _
+1	klehé¥ezik	variant1	klehé¥letek	NA	NA
+1	klehé¥ezik	variant2	klehé¥eztek	NA	NA
+1	klihasozik	variant1	klihaslotok	NA	NA
+1	klihasozik	variant2	klihasoztok	NA	NA
+1	klűmözik	variant1	klűmlötök	NA	NA
+1	klűmözik	variant2	klűmöztök	NA	NA
+1	kluzozik	variant1	kluzlotok	NA	NA
+1	kluzozik	variant2	kluzoztok	NA	NA
+1	kößözik	variant1	kößlötök	NA	NA
+1	kößözik	variant2	kößöztök	NA	NA
+1	kűdözik	variant1	kűdlenek	NA	NA
+1	kűdözik	variant2	kűdöznek	NA	NA
+1	küsözik	variant1	küslünk	NA	NA
+1	küsözik	variant2	küsözünk	0.06966096056074128	i -> ün / _
+1	lájozik	variant1	lájzotok	NA	NA
+1	lájozik	variant2	lájoztok	NA	NA
+1	lírozik	variant1	lírlanak	NA	NA
+1	lírozik	variant2	líroznak	NA	NA
+1	livé¥ezik	variant1	livé¥lünk	NA	NA
+1	livé¥ezik	variant2	livé¥ezünk	0.06966096056074128	i -> ün / _
+1	lűközik	variant1	lűklenek	NA	NA
+1	lűközik	variant2	lűköznek	NA	NA
+1	lumozik	variant1	lumlotok	NA	NA
+1	lumozik	variant2	lumoztok	NA	NA
+1	mágamozik	variant1	mágamlunk	NA	NA
+1	mágamozik	variant2	mágamozunk	0.2591326397466217	i -> un / z
+1	metégedik	variant1	metégßenek	NA	NA
+1	metégedik	variant2	metégednek	NA	NA
+1	mihágozik	variant1	mihágzotok	NA	NA
+1	mihágozik	variant2	mihágoztok	NA	NA
+1	míjozik	variant1	míjzunk	NA	NA
+1	míjozik	variant2	míjozunk	0.2591326397466217	i -> un / z
+1	mísozik	variant1	míslunk	NA	NA
+1	mísozik	variant2	mísozunk	0.2591326397466217	i -> un / z
+1	molodik	variant1	molßotok	NA	NA
+1	molodik	variant2	molodtok	NA	NA
+1	mülőrözik	variant1	mülőrzünk	NA	NA
+1	mülőrözik	variant2	mülőrözünk	0.06966096056074128	i -> ün / _
+1	nágapodik	variant1	nágapßanak	NA	NA
+1	nágapodik	variant2	nágapodnak	NA	NA
+1	nivározik	variant1	nivárzotok	NA	NA
+1	nivározik	variant2	nivároztok	NA	NA
+1	nurokozik	variant1	nuroklunk	NA	NA
+1	nurokozik	variant2	nurokozunk	0.2591326397466217	i -> un / z
+1	¥ádozik	variant1	¥ádlanak	NA	NA
+1	¥ádozik	variant2	¥ádoznak	NA	NA
+1	¥ivágozik	variant1	¥ivágzunk	NA	NA
+1	¥ivágozik	variant2	¥ivágozunk	0.2591326397466217	i -> un / z
+1	¥izozik	variant1	¥izlunk	NA	NA
+1	¥izozik	variant2	¥izozunk	0.2591326397466217	i -> un / z
+1	¥öbözik	variant1	¥öbzenek	NA	NA
+1	¥öbözik	variant2	¥öböznek	NA	NA
+1	¥ülöközik	variant1	¥ülöklenek	NA	NA
+1	¥ülöközik	variant2	¥ülököznek	NA	NA
+1	¥ürözik	variant1	¥ürzenek	NA	NA
+1	¥ürözik	variant2	¥üröznek	NA	NA
+1	pehégedik	variant1	pehégßetek	NA	NA
+1	pehégedik	variant2	pehégedtek	NA	NA
+1	pekedik	variant1	pekßünk	NA	NA
+1	pekedik	variant2	pekedünk	0.06966096056074128	i -> ün / _
+1	pibegezik	variant1	pibegzenek	NA	NA
+1	pibegezik	variant2	pibegeznek	NA	NA
+1	pilégedik	variant1	pilégßenek	NA	NA
+1	pilégedik	variant2	pilégednek	NA	NA
+1	plibozik	variant1	plibzotok	NA	NA
+1	plibozik	variant2	pliboztok	NA	NA
+1	pörözik	variant1	pörzötök	NA	NA
+1	pörözik	variant2	pöröztök	NA	NA
+1	posozik	variant1	poslotok	NA	NA
+1	posozik	variant2	posoztok	NA	NA
+1	pragá¥ozik	variant1	pragá¥lotok	NA	NA
+1	pragá¥ozik	variant2	pragá¥oztok	NA	NA
+1	prazozik	variant1	prazlunk	NA	NA
+1	prazozik	variant2	prazozunk	0.2591326397466217	i -> un / z
+1	prélemezik	variant1	prélemlenek	NA	NA
+1	prélemezik	variant2	prélemeznek	NA	NA
+1	prihegedik	variant1	prihegßenek	NA	NA
+1	prihegedik	variant2	prihegednek	NA	NA
+1	prilepedik	variant1	prilepßünk	NA	NA
+1	prilepedik	variant2	prilepedünk	0.06966096056074128	i -> ün / _
+1	privékedik	variant1	privékßenek	NA	NA
+1	privékedik	variant2	privékednek	NA	NA
+1	prögözik	variant1	prögzötök	NA	NA
+1	prögözik	variant2	prögöztök	NA	NA
+1	prugorozik	variant1	prugorzotok	NA	NA
+1	prugorozik	variant2	prugoroztok	NA	NA
+1	püzözik	variant1	püzlötök	NA	NA
+1	püzözik	variant2	püzöztök	NA	NA
+1	ribegedik	variant1	ribegßetek	NA	NA
+1	ribegedik	variant2	ribegedtek	NA	NA
+1	rivá¥ozik	variant1	rivá¥lotok	NA	NA
+1	rivá¥ozik	variant2	rivá¥oztok	NA	NA
+1	spalározik	variant1	spalárzanak	NA	NA
+1	spalározik	variant2	spalároznak	NA	NA
+1	spibamozik	variant1	spibamlanak	NA	NA
+1	spibamozik	variant2	spibamoznak	NA	NA
+1	spibegezik	variant1	spibeglünk	NA	NA
+1	spibegezik	variant2	spibegezünk	0.06966096056074128	i -> ün / _
+1	spiharozik	variant1	spiharzotok	NA	NA
+1	spiharozik	variant2	spiharoztok	NA	NA
+1	spirágozik	variant1	spiráglotok	NA	NA
+1	spirágozik	variant2	spirágoztok	NA	NA
+1	spivejezik	variant1	spivejlenek	NA	NA
+1	spivejezik	variant2	spivejeznek	NA	NA
+1	spöközik	variant1	spöklünk	NA	NA
+1	spöközik	variant2	spöközünk	0.06966096056074128	i -> ün / _
+1	spo¥ozik	variant1	spo¥lanak	NA	NA
+1	spo¥ozik	variant2	spo¥oznak	NA	NA
+1	sprebezik	variant1	sprebzenek	NA	NA
+1	sprebezik	variant2	sprebeznek	NA	NA
+1	sprigozik	variant1	sprigzotok	NA	NA
+1	sprigozik	variant2	sprigoztok	NA	NA
+1	sprimozik	variant1	sprimlunk	NA	NA
+1	sprimozik	variant2	sprimozunk	0.2591326397466217	i -> un / z
+1	sprozozik	variant1	sprozlanak	NA	NA
+1	sprozozik	variant2	sprozoznak	NA	NA
+1	sprudozik	variant1	sprudlunk	NA	NA
+1	sprudozik	variant2	sprudozunk	0.2591326397466217	i -> un / z
+1	sprűrözik	variant1	sprűrlenek	NA	NA
+1	sprűrözik	variant2	sprűröznek	NA	NA
+1	spuborozik	variant1	spuborzanak	NA	NA
+1	spuborozik	variant2	spuboroznak	NA	NA
+1	spügözik	variant1	spügzünk	NA	NA
+1	spügözik	variant2	spügözünk	0.06966096056074128	i -> ün / _
+1	sűjözik	variant1	sűjlünk	NA	NA
+1	sűjözik	variant2	sűjözünk	0.06966096056074128	i -> ün / _
+1	ßtrajozik	variant1	ßtrajlanak	NA	NA
+1	ßtrajozik	variant2	ßtrajoznak	NA	NA
+1	ßtredezik	variant1	ßtredletek	NA	NA
+1	ßtredezik	variant2	ßtredeztek	NA	NA
+1	ßtritozik	variant1	ßtritlanak	NA	NA
+1	ßtritozik	variant2	ßtritoznak	NA	NA
+1	tágarozik	variant1	tágarzunk	NA	NA
+1	tágarozik	variant2	tágarozunk	0.2591326397466217	i -> un / z
+1	tibarozik	variant1	tibarzanak	NA	NA
+1	tibarozik	variant2	tibaroznak	NA	NA
+1	tögözik	variant1	töglenek	NA	NA
+1	tögözik	variant2	tögöznek	NA	NA
+1	trálakozik	variant1	trálaklanak	NA	NA
+1	trálakozik	variant2	trálakoznak	NA	NA
+1	trálodik	variant1	trálßunk	NA	NA
+1	trálodik	variant2	trálodunk	0.1982097170804472	i -> un / _
+1	tribejezik	variant1	tribejletek	NA	NA
+1	tribejezik	variant2	tribejeztek	NA	NA
+1	trikozik	variant1	triklotok	NA	NA
+1	trikozik	variant2	trikoztok	NA	NA
+1	trilekedik	variant1	trilekßetek	NA	NA
+1	trilekedik	variant2	trilekedtek	NA	NA
+1	trírozik	variant1	trírzunk	NA	NA
+1	trírozik	variant2	trírozunk	0.2591326397466217	i -> un / z
+1	trivakodik	variant1	trivakßunk	NA	NA
+1	trivakodik	variant2	trivakodunk	0.1982097170804472	i -> un / _
+1	trugokozik	variant1	trugoklanak	NA	NA
+1	trugokozik	variant2	trugokoznak	NA	NA
+1	trugozik	variant1	trugzanak	NA	NA
+1	trugozik	variant2	trugoznak	NA	NA
+1	trukodik	variant1	trukßotok	NA	NA
+1	trukodik	variant2	trukodtok	NA	NA
+1	trű¥özik	variant1	trű¥lenek	NA	NA
+1	trű¥özik	variant2	trű¥öznek	NA	NA
+1	tűgözik	variant1	tűgzötök	NA	NA
+1	tűgözik	variant2	tűgöztök	NA	NA
+1	vehékedik	variant1	vehékßünk	NA	NA
+1	vehékedik	variant2	vehékedünk	0.06966096056074128	i -> ün / _
+1	vihapodik	variant1	vihapßunk	NA	NA
+1	vihapodik	variant2	vihapodunk	0.1982097170804472	i -> un / _
+1	vilesezik	variant1	vileslünk	NA	NA
+1	vilesezik	variant2	vilesezünk	0.06966096056074128	i -> ün / _
+1	virozik	variant1	virzanak	NA	NA
+1	virozik	variant2	viroznak	NA	NA
+1	vobozik	variant1	vobzotok	NA	NA
+1	vobozik	variant2	voboztok	NA	NA
+2	bejezik	variant1	bejzünk	NA	NA
+2	bejezik	variant2	bejezünk	NA	NA
+2	bötőrözik	variant1	bötőrzünk	NA	NA
+2	bötőrözik	variant2	bötőrözünk	NA	NA
+2	brálamozik	variant1	brálamlanak	NA	NA
+2	brálamozik	variant2	brálamoznak	0.9945865402216294	i -> na / oz
+2	bra¥ozik	variant1	bra¥lanak	NA	NA
+2	bra¥ozik	variant2	bra¥oznak	0.9945865402216294	i -> na / oz
+2	brározik	variant1	brárlanak	NA	NA
+2	brározik	variant2	brároznak	0.9945865402216294	i -> na / oz
+2	bratározik	variant1	bratárzanak	NA	NA
+2	bratározik	variant2	bratároznak	0.9945865402216294	i -> na / oz
+2	bregezik	variant1	bregzünk	NA	NA
+2	bregezik	variant2	bregezünk	NA	NA
+2	bresezik	variant1	breslenek	NA	NA
+2	bresezik	variant2	breseznek	0.9865411057483848	i -> ne / ez
+2	bribasozik	variant1	bribaslanak	NA	NA
+2	bribasozik	variant2	bribasoznak	0.9945865402216294	i -> na / oz
+2	bribékedik	variant1	bribékßetek	NA	NA
+2	bribékedik	variant2	bribékedtek	NA	NA
+2	brilegezik	variant1	brilegzünk	NA	NA
+2	brilegezik	variant2	brilegezünk	NA	NA
+2	brivágozik	variant1	briváglanak	NA	NA
+2	brivágozik	variant2	brivágoznak	0.9945865402216294	i -> na / oz
+2	brivakozik	variant1	brivaklotok	NA	NA
+2	brivakozik	variant2	brivakoztok	NA	NA
+2	brivepedik	variant1	brivepßünk	NA	NA
+2	brivepedik	variant2	brivepedünk	NA	NA
+2	brözözik	variant1	brözlötök	NA	NA
+2	brözözik	variant2	brözöztök	NA	NA
+2	brűközik	variant1	brűklötök	NA	NA
+2	brűközik	variant2	brűköztök	NA	NA
+2	brülösözik	variant1	brülöslünk	NA	NA
+2	brülösözik	variant2	brülösözünk	NA	NA
+2	brürözik	variant1	brürzenek	NA	NA
+2	brürözik	variant2	brüröznek	0.9226783472660828	i -> ne / öz
+2	brüßözik	variant1	brüßlötök	NA	NA
+2	brüßözik	variant2	brüßöztök	NA	NA
+2	bügözik	variant1	bügzenek	NA	NA
+2	bügözik	variant2	bügöznek	0.9226783472660828	i -> ne / öz
+2	çibagozik	variant1	çibagzotok	NA	NA
+2	çibagozik	variant2	çibagoztok	NA	NA
+2	çubozik	variant1	çubzunk	NA	NA
+2	çubozik	variant2	çubozunk	NA	NA
+2	dabozik	variant1	dabzotok	NA	NA
+2	dabozik	variant2	daboztok	NA	NA
+2	dárakodik	variant1	dárakßunk	NA	NA
+2	dárakodik	variant2	dárakodunk	NA	NA
+2	dibágozik	variant1	dibáglotok	NA	NA
+2	dibágozik	variant2	dibágoztok	NA	NA
+2	dilakozik	variant1	dilaklotok	NA	NA
+2	dilakozik	variant2	dilakoztok	NA	NA
+2	dirá¥ozik	variant1	dirá¥lanak	NA	NA
+2	dirá¥ozik	variant2	dirá¥oznak	0.9945865402216294	i -> na / oz
+2	dirozik	variant1	dirlotok	NA	NA
+2	dirozik	variant2	diroztok	NA	NA
+2	döjözik	variant1	döjlenek	NA	NA
+2	döjözik	variant2	döjöznek	0.9226783472660828	i -> ne / öz
+2	dralágozik	variant1	dralágzunk	NA	NA
+2	dralágozik	variant2	dralágozunk	NA	NA
+2	drilarozik	variant1	drilarzunk	NA	NA
+2	drilarozik	variant2	drilarozunk	NA	NA
+2	drivegezik	variant1	drivegzetek	NA	NA
+2	drivegezik	variant2	drivegeztek	NA	NA
+2	drojozik	variant1	drojzunk	NA	NA
+2	drojozik	variant2	drojozunk	NA	NA
+2	drűrözik	variant1	drűrzenek	NA	NA
+2	drűrözik	variant2	drűröznek	0.9226783472660828	i -> ne / öz
+2	dujozik	variant1	dujzanak	NA	NA
+2	dujozik	variant2	dujoznak	0.9945865402216294	i -> na / oz
+2	filá¥ozik	variant1	filá¥lunk	NA	NA
+2	filá¥ozik	variant2	filá¥ozunk	NA	NA
+2	flátozik	variant1	flátlotok	NA	NA
+2	flátozik	variant2	flátoztok	NA	NA
+2	flemezik	variant1	flemlünk	NA	NA
+2	flemezik	variant2	flemezünk	NA	NA
+2	flerékedik	variant1	flerékßünk	NA	NA
+2	flerékedik	variant2	flerékedünk	NA	NA
+2	flézezik	variant1	flézletek	NA	NA
+2	flézezik	variant2	flézeztek	NA	NA
+2	flivegezik	variant1	flivegzenek	NA	NA
+2	flivegezik	variant2	flivegeznek	0.9865411057483848	i -> ne / ez
+2	flodozik	variant1	flodlotok	NA	NA
+2	flodozik	variant2	flodoztok	NA	NA
+2	flöközik	variant1	flöklötök	NA	NA
+2	flöközik	variant2	flököztök	NA	NA
+2	flubokozik	variant1	fluboklotok	NA	NA
+2	flubokozik	variant2	flubokoztok	NA	NA
+2	flugo¥ozik	variant1	flugo¥lanak	NA	NA
+2	flugo¥ozik	variant2	flugo¥oznak	0.9945865402216294	i -> na / oz
+2	flűgözik	variant1	flűgzünk	NA	NA
+2	flűgözik	variant2	flűgözünk	NA	NA
+2	flüröközik	variant1	flüröklötök	NA	NA
+2	flüröközik	variant2	flürököztök	NA	NA
+2	föködik	variant1	fökßenek	NA	NA
+2	föködik	variant2	föködnek	0.9870732536295708	i -> ne / öd
+2	frakozik	variant1	fraklunk	NA	NA
+2	frakozik	variant2	frakozunk	NA	NA
+2	frálapodik	variant1	frálapßotok	NA	NA
+2	frálapodik	variant2	frálapodtok	NA	NA
+2	frálasozik	variant1	frálaslanak	NA	NA
+2	frálasozik	variant2	frálasoznak	0.9945865402216294	i -> na / oz
+2	frélegezik	variant1	frélegzünk	NA	NA
+2	frélegezik	variant2	frélegezünk	NA	NA
+2	frésezik	variant1	fréslünk	NA	NA
+2	frésezik	variant2	frésezünk	NA	NA
+2	frihegezik	variant1	friheglünk	NA	NA
+2	frihegezik	variant2	frihegezünk	NA	NA
+2	fri¥ozik	variant1	fri¥lunk	NA	NA
+2	fri¥ozik	variant2	fri¥ozunk	NA	NA
+2	frirozik	variant1	frirzunk	NA	NA
+2	frirozik	variant2	frirozunk	NA	NA
+2	frivamozik	variant1	frivamlunk	NA	NA
+2	frivamozik	variant2	frivamozunk	NA	NA
+2	frorozik	variant1	frorlanak	NA	NA
+2	frorozik	variant2	froroznak	0.9945865402216294	i -> na / oz
+2	galározik	variant1	galárzanak	NA	NA
+2	galározik	variant2	galároznak	0.9945865402216294	i -> na / oz
+2	gatágozik	variant1	gatáglunk	NA	NA
+2	gatágozik	variant2	gatágozunk	NA	NA
+2	géregezik	variant1	géregletek	NA	NA
+2	géregezik	variant2	géregeztek	NA	NA
+2	gibemezik	variant1	gibemlünk	NA	NA
+2	gibemezik	variant2	gibemezünk	NA	NA
+2	gihamozik	variant1	gihamlanak	NA	NA
+2	gihamozik	variant2	gihamoznak	0.9945865402216294	i -> na / oz
+2	gihejezik	variant1	gihejlünk	NA	NA
+2	gihejezik	variant2	gihejezünk	NA	NA
+2	©ihegezik	variant1	©ihegzetek	NA	NA
+2	©ihegezik	variant2	©ihegeztek	NA	NA
+2	©ivepedik	variant1	©ivepßenek	NA	NA
+2	©ivepedik	variant2	©ivepednek	0.9969366823108224	i -> ne / ed
+2	hákodik	variant1	hákßanak	NA	NA
+2	hákodik	variant2	hákodnak	0.9979875894666204	i -> na / od
+2	hiragozik	variant1	hiragzanak	NA	NA
+2	hiragozik	variant2	hiragoznak	0.9945865402216294	i -> na / oz
+2	hubo¥ozik	variant1	hubo¥lotok	NA	NA
+2	hubo¥ozik	variant2	hubo¥oztok	NA	NA
+2	játozik	variant1	játlunk	NA	NA
+2	játozik	variant2	játozunk	NA	NA
+2	jurozik	variant1	jurlunk	NA	NA
+2	jurozik	variant2	jurozunk	NA	NA
+2	kláragodik	variant1	kláragßotok	NA	NA
+2	kláragodik	variant2	kláragodtok	NA	NA
+2	klarágozik	variant1	klarágzotok	NA	NA
+2	klarágozik	variant2	klarágoztok	NA	NA
+2	klégezik	variant1	kléglünk	NA	NA
+2	klégezik	variant2	klégezünk	NA	NA
+2	klehé¥ezik	variant1	klehé¥letek	NA	NA
+2	klehé¥ezik	variant2	klehé¥eztek	NA	NA
+2	klihasozik	variant1	klihaslotok	NA	NA
+2	klihasozik	variant2	klihasoztok	NA	NA
+2	klűmözik	variant1	klűmlötök	NA	NA
+2	klűmözik	variant2	klűmöztök	NA	NA
+2	kluzozik	variant1	kluzlotok	NA	NA
+2	kluzozik	variant2	kluzoztok	NA	NA
+2	kößözik	variant1	kößlötök	NA	NA
+2	kößözik	variant2	kößöztök	NA	NA
+2	kűdözik	variant1	kűdlenek	NA	NA
+2	kűdözik	variant2	kűdöznek	0.9226783472660828	i -> ne / öz
+2	küsözik	variant1	küslünk	NA	NA
+2	küsözik	variant2	küsözünk	NA	NA
+2	lájozik	variant1	lájzotok	NA	NA
+2	lájozik	variant2	lájoztok	NA	NA
+2	lírozik	variant1	lírlanak	NA	NA
+2	lírozik	variant2	líroznak	0.9945865402216294	i -> na / oz
+2	livé¥ezik	variant1	livé¥lünk	NA	NA
+2	livé¥ezik	variant2	livé¥ezünk	NA	NA
+2	lűközik	variant1	lűklenek	NA	NA
+2	lűközik	variant2	lűköznek	0.9226783472660828	i -> ne / öz
+2	lumozik	variant1	lumlotok	NA	NA
+2	lumozik	variant2	lumoztok	NA	NA
+2	mágamozik	variant1	mágamlunk	NA	NA
+2	mágamozik	variant2	mágamozunk	NA	NA
+2	metégedik	variant1	metégßenek	NA	NA
+2	metégedik	variant2	metégednek	0.9969366823108224	i -> ne / ed
+2	mihágozik	variant1	mihágzotok	NA	NA
+2	mihágozik	variant2	mihágoztok	NA	NA
+2	míjozik	variant1	míjzunk	NA	NA
+2	míjozik	variant2	míjozunk	NA	NA
+2	mísozik	variant1	míslunk	NA	NA
+2	mísozik	variant2	mísozunk	NA	NA
+2	molodik	variant1	molßotok	NA	NA
+2	molodik	variant2	molodtok	NA	NA
+2	mülőrözik	variant1	mülőrzünk	NA	NA
+2	mülőrözik	variant2	mülőrözünk	NA	NA
+2	nágapodik	variant1	nágapßanak	NA	NA
+2	nágapodik	variant2	nágapodnak	0.9979875894666204	i -> na / od
+2	nivározik	variant1	nivárzotok	NA	NA
+2	nivározik	variant2	nivároztok	NA	NA
+2	nurokozik	variant1	nuroklunk	NA	NA
+2	nurokozik	variant2	nurokozunk	NA	NA
+2	¥ádozik	variant1	¥ádlanak	NA	NA
+2	¥ádozik	variant2	¥ádoznak	0.9945865402216294	i -> na / oz
+2	¥ivágozik	variant1	¥ivágzunk	NA	NA
+2	¥ivágozik	variant2	¥ivágozunk	NA	NA
+2	¥izozik	variant1	¥izlunk	NA	NA
+2	¥izozik	variant2	¥izozunk	NA	NA
+2	¥öbözik	variant1	¥öbzenek	NA	NA
+2	¥öbözik	variant2	¥öböznek	0.9226783472660828	i -> ne / öz
+2	¥ülöközik	variant1	¥ülöklenek	NA	NA
+2	¥ülöközik	variant2	¥ülököznek	0.9226783472660828	i -> ne / öz
+2	¥ürözik	variant1	¥ürzenek	NA	NA
+2	¥ürözik	variant2	¥üröznek	0.9226783472660828	i -> ne / öz
+2	pehégedik	variant1	pehégßetek	NA	NA
+2	pehégedik	variant2	pehégedtek	NA	NA
+2	pekedik	variant1	pekßünk	NA	NA
+2	pekedik	variant2	pekedünk	NA	NA
+2	pibegezik	variant1	pibegzenek	NA	NA
+2	pibegezik	variant2	pibegeznek	0.9865411057483848	i -> ne / ez
+2	pilégedik	variant1	pilégßenek	NA	NA
+2	pilégedik	variant2	pilégednek	0.9969366823108224	i -> ne / ed
+2	plibozik	variant1	plibzotok	NA	NA
+2	plibozik	variant2	pliboztok	NA	NA
+2	pörözik	variant1	pörzötök	NA	NA
+2	pörözik	variant2	pöröztök	NA	NA
+2	posozik	variant1	poslotok	NA	NA
+2	posozik	variant2	posoztok	NA	NA
+2	pragá¥ozik	variant1	pragá¥lotok	NA	NA
+2	pragá¥ozik	variant2	pragá¥oztok	NA	NA
+2	prazozik	variant1	prazlunk	NA	NA
+2	prazozik	variant2	prazozunk	NA	NA
+2	prélemezik	variant1	prélemlenek	NA	NA
+2	prélemezik	variant2	prélemeznek	0.9865411057483848	i -> ne / ez
+2	prihegedik	variant1	prihegßenek	NA	NA
+2	prihegedik	variant2	prihegednek	0.9969366823108224	i -> ne / ed
+2	prilepedik	variant1	prilepßünk	NA	NA
+2	prilepedik	variant2	prilepedünk	NA	NA
+2	privékedik	variant1	privékßenek	NA	NA
+2	privékedik	variant2	privékednek	0.9969366823108224	i -> ne / ed
+2	prögözik	variant1	prögzötök	NA	NA
+2	prögözik	variant2	prögöztök	NA	NA
+2	prugorozik	variant1	prugorzotok	NA	NA
+2	prugorozik	variant2	prugoroztok	NA	NA
+2	püzözik	variant1	püzlötök	NA	NA
+2	püzözik	variant2	püzöztök	NA	NA
+2	ribegedik	variant1	ribegßetek	NA	NA
+2	ribegedik	variant2	ribegedtek	NA	NA
+2	rivá¥ozik	variant1	rivá¥lotok	NA	NA
+2	rivá¥ozik	variant2	rivá¥oztok	NA	NA
+2	spalározik	variant1	spalárzanak	NA	NA
+2	spalározik	variant2	spalároznak	0.9945865402216294	i -> na / oz
+2	spibamozik	variant1	spibamlanak	NA	NA
+2	spibamozik	variant2	spibamoznak	0.9945865402216294	i -> na / oz
+2	spibegezik	variant1	spibeglünk	NA	NA
+2	spibegezik	variant2	spibegezünk	NA	NA
+2	spiharozik	variant1	spiharzotok	NA	NA
+2	spiharozik	variant2	spiharoztok	NA	NA
+2	spirágozik	variant1	spiráglotok	NA	NA
+2	spirágozik	variant2	spirágoztok	NA	NA
+2	spivejezik	variant1	spivejlenek	NA	NA
+2	spivejezik	variant2	spivejeznek	0.9865411057483848	i -> ne / ez
+2	spöközik	variant1	spöklünk	NA	NA
+2	spöközik	variant2	spöközünk	NA	NA
+2	spo¥ozik	variant1	spo¥lanak	NA	NA
+2	spo¥ozik	variant2	spo¥oznak	0.9945865402216294	i -> na / oz
+2	sprebezik	variant1	sprebzenek	NA	NA
+2	sprebezik	variant2	sprebeznek	0.9865411057483848	i -> ne / ez
+2	sprigozik	variant1	sprigzotok	NA	NA
+2	sprigozik	variant2	sprigoztok	NA	NA
+2	sprimozik	variant1	sprimlunk	NA	NA
+2	sprimozik	variant2	sprimozunk	NA	NA
+2	sprozozik	variant1	sprozlanak	NA	NA
+2	sprozozik	variant2	sprozoznak	0.9945865402216294	i -> na / oz
+2	sprudozik	variant1	sprudlunk	NA	NA
+2	sprudozik	variant2	sprudozunk	NA	NA
+2	sprűrözik	variant1	sprűrlenek	NA	NA
+2	sprűrözik	variant2	sprűröznek	0.9226783472660828	i -> ne / öz
+2	spuborozik	variant1	spuborzanak	NA	NA
+2	spuborozik	variant2	spuboroznak	0.9945865402216294	i -> na / oz
+2	spügözik	variant1	spügzünk	NA	NA
+2	spügözik	variant2	spügözünk	NA	NA
+2	sűjözik	variant1	sűjlünk	NA	NA
+2	sűjözik	variant2	sűjözünk	NA	NA
+2	ßtrajozik	variant1	ßtrajlanak	NA	NA
+2	ßtrajozik	variant2	ßtrajoznak	0.9945865402216294	i -> na / oz
+2	ßtredezik	variant1	ßtredletek	NA	NA
+2	ßtredezik	variant2	ßtredeztek	NA	NA
+2	ßtritozik	variant1	ßtritlanak	NA	NA
+2	ßtritozik	variant2	ßtritoznak	0.9945865402216294	i -> na / oz
+2	tágarozik	variant1	tágarzunk	NA	NA
+2	tágarozik	variant2	tágarozunk	NA	NA
+2	tibarozik	variant1	tibarzanak	NA	NA
+2	tibarozik	variant2	tibaroznak	0.9945865402216294	i -> na / oz
+2	tögözik	variant1	töglenek	NA	NA
+2	tögözik	variant2	tögöznek	0.9226783472660828	i -> ne / öz
+2	trálakozik	variant1	trálaklanak	NA	NA
+2	trálakozik	variant2	trálakoznak	0.9945865402216294	i -> na / oz
+2	trálodik	variant1	trálßunk	NA	NA
+2	trálodik	variant2	trálodunk	NA	NA
+2	tribejezik	variant1	tribejletek	NA	NA
+2	tribejezik	variant2	tribejeztek	NA	NA
+2	trikozik	variant1	triklotok	NA	NA
+2	trikozik	variant2	trikoztok	NA	NA
+2	trilekedik	variant1	trilekßetek	NA	NA
+2	trilekedik	variant2	trilekedtek	NA	NA
+2	trírozik	variant1	trírzunk	NA	NA
+2	trírozik	variant2	trírozunk	NA	NA
+2	trivakodik	variant1	trivakßunk	NA	NA
+2	trivakodik	variant2	trivakodunk	NA	NA
+2	trugokozik	variant1	trugoklanak	NA	NA
+2	trugokozik	variant2	trugokoznak	0.9945865402216294	i -> na / oz
+2	trugozik	variant1	trugzanak	NA	NA
+2	trugozik	variant2	trugoznak	0.9945865402216294	i -> na / oz
+2	trukodik	variant1	trukßotok	NA	NA
+2	trukodik	variant2	trukodtok	NA	NA
+2	trű¥özik	variant1	trű¥lenek	NA	NA
+2	trű¥özik	variant2	trű¥öznek	0.9226783472660828	i -> ne / öz
+2	tűgözik	variant1	tűgzötök	NA	NA
+2	tűgözik	variant2	tűgöztök	NA	NA
+2	vehékedik	variant1	vehékßünk	NA	NA
+2	vehékedik	variant2	vehékedünk	NA	NA
+2	vihapodik	variant1	vihapßunk	NA	NA
+2	vihapodik	variant2	vihapodunk	NA	NA
+2	vilesezik	variant1	vileslünk	NA	NA
+2	vilesezik	variant2	vilesezünk	NA	NA
+2	virozik	variant1	virzanak	NA	NA
+2	virozik	variant2	viroznak	0.9945865402216294	i -> na / oz
+2	vobozik	variant1	vobzotok	NA	NA
+2	vobozik	variant2	voboztok	NA	NA
+3	bejezik	variant1	bejzünk	NA	NA
+3	bejezik	variant2	bejezünk	0.19514897255107153	zi -> ezün / _
+3	bejezik	variant2	bejezünk	0.9468225926356124	i -> ün / ez
+3	bötőrözik	variant1	bötőrzünk	NA	NA
+3	bötőrözik	variant2	bötőrözünk	0.19514897255107153	zi -> ezün / _
+3	bötőrözik	variant2	bötőrözünk	0.9226783472660828	i -> ün / öz
+3	brálamozik	variant1	brálamlanak	NA	NA
+3	brálamozik	variant2	brálamoznak	0.6946046547216574	zi -> ozna / _
+3	brálamozik	variant2	brálamoznak	0.9945865402216294	i -> na / oz
+3	bra¥ozik	variant1	bra¥lanak	NA	NA
+3	bra¥ozik	variant2	bra¥oznak	0.6946046547216574	zi -> ozna / _
+3	bra¥ozik	variant2	bra¥oznak	0.9945865402216294	i -> na / oz
+3	brározik	variant1	brárlanak	NA	NA
+3	brározik	variant2	brároznak	0.6946046547216574	zi -> ozna / _
+3	brározik	variant2	brároznak	0.9945865402216294	i -> na / oz
+3	bratározik	variant1	bratárzanak	NA	NA
+3	bratározik	variant2	bratároznak	0.6946046547216574	zi -> ozna / _
+3	bratározik	variant2	bratároznak	0.9945865402216294	i -> na / oz
+3	bregezik	variant1	bregzünk	NA	NA
+3	bregezik	variant2	bregezünk	0.19514897255107153	zi -> ezün / _
+3	bregezik	variant2	bregezünk	0.9468225926356124	i -> ün / ez
+3	bresezik	variant1	breslenek	NA	NA
+3	bresezik	variant2	breseznek	0.9865411057483848	i -> ne / ez
+3	bresezik	variant2	breseznek	0.2072504743923226	zi -> ezne / _
+3	bribasozik	variant1	bribaslanak	NA	NA
+3	bribasozik	variant2	bribasoznak	0.6946046547216574	zi -> ozna / _
+3	bribasozik	variant2	bribasoznak	0.9945865402216294	i -> na / oz
+3	bribékedik	variant1	bribékßetek	NA	NA
+3	bribékedik	variant2	bribékedtek	0.9930878950912247	i -> te / ked
+3	bribékedik	variant2	bribékedtek	0.9817678995214736	i -> te / ked
+3	brilegezik	variant1	brilegzünk	NA	NA
+3	brilegezik	variant2	brilegezünk	0.19514897255107153	zi -> ezün / _
+3	brilegezik	variant2	brilegezünk	0.9468225926356124	i -> ün / ez
+3	brivágozik	variant1	briváglanak	NA	NA
+3	brivágozik	variant2	brivágoznak	0.6946046547216574	zi -> ozna / _
+3	brivágozik	variant2	brivágoznak	0.9945865402216294	i -> na / oz
+3	brivakozik	variant1	brivaklotok	NA	NA
+3	brivakozik	variant2	brivakoztok	0.6548517724312526	zi -> ozto / _
+3	brivakozik	variant2	brivakoztok	0.9929374979391904	i -> to / oz
+3	brivepedik	variant1	brivepßünk	NA	NA
+3	brivepedik	variant2	brivepedünk	0.9769082147849134	i -> ün / ed
+3	brözözik	variant1	brözlötök	NA	NA
+3	brözözik	variant2	brözöztök	0.908436528534852	i -> tö / öz
+3	brűközik	variant1	brűklötök	NA	NA
+3	brűközik	variant2	brűköztök	0.908436528534852	i -> tö / öz
+3	brülösözik	variant1	brülöslünk	NA	NA
+3	brülösözik	variant2	brülösözünk	0.19514897255107153	zi -> ezün / _
+3	brülösözik	variant2	brülösözünk	0.9226783472660828	i -> ün / öz
+3	brürözik	variant1	brürzenek	NA	NA
+3	brürözik	variant2	brüröznek	0.9226783472660828	i -> ne / öz
+3	brürözik	variant2	brüröznek	0.2072504743923226	zi -> ezne / _
+3	brüßözik	variant1	brüßlötök	NA	NA
+3	brüßözik	variant2	brüßöztök	0.908436528534852	i -> tö / öz
+3	bügözik	variant1	bügzenek	NA	NA
+3	bügözik	variant2	bügöznek	0.9226783472660828	i -> ne / öz
+3	bügözik	variant2	bügöznek	0.2072504743923226	zi -> ezne / _
+3	çibagozik	variant1	çibagzotok	NA	NA
+3	çibagozik	variant2	çibagoztok	0.6548517724312526	zi -> ozto / _
+3	çibagozik	variant2	çibagoztok	0.9929374979391904	i -> to / oz
+3	çubozik	variant1	çubzunk	NA	NA
+3	çubozik	variant2	çubozunk	0.7269748833963936	zi -> ozun / _
+3	çubozik	variant2	çubozunk	0.9943997374945748	i -> un / oz
+3	dabozik	variant1	dabzotok	NA	NA
+3	dabozik	variant2	daboztok	0.6548517724312526	zi -> ozto / _
+3	dabozik	variant2	daboztok	0.9929374979391904	i -> to / oz
+3	dárakodik	variant1	dárakßunk	NA	NA
+3	dárakodik	variant2	dárakodunk	0.9973744432763506	i -> un / od
+3	dibágozik	variant1	dibáglotok	NA	NA
+3	dibágozik	variant2	dibágoztok	0.6548517724312526	zi -> ozto / _
+3	dibágozik	variant2	dibágoztok	0.9929374979391904	i -> to / oz
+3	dilakozik	variant1	dilaklotok	NA	NA
+3	dilakozik	variant2	dilakoztok	0.6548517724312526	zi -> ozto / _
+3	dilakozik	variant2	dilakoztok	0.9929374979391904	i -> to / oz
+3	dirá¥ozik	variant1	dirá¥lanak	NA	NA
+3	dirá¥ozik	variant2	dirá¥oznak	0.6946046547216574	zi -> ozna / _
+3	dirá¥ozik	variant2	dirá¥oznak	0.9945865402216294	i -> na / oz
+3	dirozik	variant1	dirlotok	NA	NA
+3	dirozik	variant2	diroztok	0.6548517724312526	zi -> ozto / _
+3	dirozik	variant2	diroztok	0.9929374979391904	i -> to / oz
+3	döjözik	variant1	döjlenek	NA	NA
+3	döjözik	variant2	döjöznek	0.9226783472660828	i -> ne / öz
+3	döjözik	variant2	döjöznek	0.2072504743923226	zi -> ezne / _
+3	dralágozik	variant1	dralágzunk	NA	NA
+3	dralágozik	variant2	dralágozunk	0.7269748833963936	zi -> ozun / _
+3	dralágozik	variant2	dralágozunk	0.9943997374945748	i -> un / oz
+3	drilarozik	variant1	drilarzunk	NA	NA
+3	drilarozik	variant2	drilarozunk	0.7269748833963936	zi -> ozun / _
+3	drilarozik	variant2	drilarozunk	0.9943997374945748	i -> un / oz
+3	drivegezik	variant1	drivegzetek	NA	NA
+3	drivegezik	variant2	drivegeztek	0.9833406657965512	i -> te / ez
+3	drivegezik	variant2	drivegeztek	0.9869006091872238	i -> te / ez
+3	drivegezik	variant2	drivegeztek	0.2356465346565429	zi -> ezte / _
+3	drojozik	variant1	drojzunk	NA	NA
+3	drojozik	variant2	drojozunk	0.7269748833963936	zi -> ozun / _
+3	drojozik	variant2	drojozunk	0.9943997374945748	i -> un / oz
+3	drűrözik	variant1	drűrzenek	NA	NA
+3	drűrözik	variant2	drűröznek	0.9226783472660828	i -> ne / öz
+3	drűrözik	variant2	drűröznek	0.2072504743923226	zi -> ezne / _
+3	dujozik	variant1	dujzanak	NA	NA
+3	dujozik	variant2	dujoznak	0.6946046547216574	zi -> ozna / _
+3	dujozik	variant2	dujoznak	0.9945865402216294	i -> na / oz
+3	filá¥ozik	variant1	filá¥lunk	NA	NA
+3	filá¥ozik	variant2	filá¥ozunk	0.7269748833963936	zi -> ozun / _
+3	filá¥ozik	variant2	filá¥ozunk	0.9943997374945748	i -> un / oz
+3	flátozik	variant1	flátlotok	NA	NA
+3	flátozik	variant2	flátoztok	0.6548517724312526	zi -> ozto / _
+3	flátozik	variant2	flátoztok	0.9929374979391904	i -> to / oz
+3	flemezik	variant1	flemlünk	NA	NA
+3	flemezik	variant2	flemezünk	0.19514897255107153	zi -> ezün / _
+3	flemezik	variant2	flemezünk	0.9468225926356124	i -> ün / ez
+3	flerékedik	variant1	flerékßünk	NA	NA
+3	flerékedik	variant2	flerékedünk	0.9769082147849134	i -> ün / ed
+3	flézezik	variant1	flézletek	NA	NA
+3	flézezik	variant2	flézeztek	0.9833406657965512	i -> te / ez
+3	flézezik	variant2	flézeztek	0.9869006091872238	i -> te / ez
+3	flézezik	variant2	flézeztek	0.2356465346565429	zi -> ezte / _
+3	flivegezik	variant1	flivegzenek	NA	NA
+3	flivegezik	variant2	flivegeznek	0.9865411057483848	i -> ne / ez
+3	flivegezik	variant2	flivegeznek	0.2072504743923226	zi -> ezne / _
+3	flodozik	variant1	flodlotok	NA	NA
+3	flodozik	variant2	flodoztok	0.6548517724312526	zi -> ozto / _
+3	flodozik	variant2	flodoztok	0.9929374979391904	i -> to / oz
+3	flöközik	variant1	flöklötök	NA	NA
+3	flöközik	variant2	flököztök	0.908436528534852	i -> tö / öz
+3	flubokozik	variant1	fluboklotok	NA	NA
+3	flubokozik	variant2	flubokoztok	0.6548517724312526	zi -> ozto / _
+3	flubokozik	variant2	flubokoztok	0.9929374979391904	i -> to / oz
+3	flugo¥ozik	variant1	flugo¥lanak	NA	NA
+3	flugo¥ozik	variant2	flugo¥oznak	0.6946046547216574	zi -> ozna / _
+3	flugo¥ozik	variant2	flugo¥oznak	0.9945865402216294	i -> na / oz
+3	flűgözik	variant1	flűgzünk	NA	NA
+3	flűgözik	variant2	flűgözünk	0.19514897255107153	zi -> ezün / _
+3	flűgözik	variant2	flűgözünk	0.9226783472660828	i -> ün / öz
+3	flüröközik	variant1	flüröklötök	NA	NA
+3	flüröközik	variant2	flürököztök	0.908436528534852	i -> tö / öz
+3	föködik	variant1	fökßenek	NA	NA
+3	föködik	variant2	föködnek	0.9870732536295708	i -> ne / öd
+3	frakozik	variant1	fraklunk	NA	NA
+3	frakozik	variant2	frakozunk	0.7269748833963936	zi -> ozun / _
+3	frakozik	variant2	frakozunk	0.9943997374945748	i -> un / oz
+3	frálapodik	variant1	frálapßotok	NA	NA
+3	frálapodik	variant2	frálapodtok	0.989183972032436	i -> to / od
+3	frálasozik	variant1	frálaslanak	NA	NA
+3	frálasozik	variant2	frálasoznak	0.6946046547216574	zi -> ozna / _
+3	frálasozik	variant2	frálasoznak	0.9945865402216294	i -> na / oz
+3	frélegezik	variant1	frélegzünk	NA	NA
+3	frélegezik	variant2	frélegezünk	0.19514897255107153	zi -> ezün / _
+3	frélegezik	variant2	frélegezünk	0.9468225926356124	i -> ün / ez
+3	frésezik	variant1	fréslünk	NA	NA
+3	frésezik	variant2	frésezünk	0.19514897255107153	zi -> ezün / _
+3	frésezik	variant2	frésezünk	0.9468225926356124	i -> ün / ez
+3	frihegezik	variant1	friheglünk	NA	NA
+3	frihegezik	variant2	frihegezünk	0.19514897255107153	zi -> ezün / _
+3	frihegezik	variant2	frihegezünk	0.9468225926356124	i -> ün / ez
+3	fri¥ozik	variant1	fri¥lunk	NA	NA
+3	fri¥ozik	variant2	fri¥ozunk	0.7269748833963936	zi -> ozun / _
+3	fri¥ozik	variant2	fri¥ozunk	0.9943997374945748	i -> un / oz
+3	frirozik	variant1	frirzunk	NA	NA
+3	frirozik	variant2	frirozunk	0.7269748833963936	zi -> ozun / _
+3	frirozik	variant2	frirozunk	0.9943997374945748	i -> un / oz
+3	frivamozik	variant1	frivamlunk	NA	NA
+3	frivamozik	variant2	frivamozunk	0.7269748833963936	zi -> ozun / _
+3	frivamozik	variant2	frivamozunk	0.9943997374945748	i -> un / oz
+3	frorozik	variant1	frorlanak	NA	NA
+3	frorozik	variant2	froroznak	0.6946046547216574	zi -> ozna / _
+3	frorozik	variant2	froroznak	0.9945865402216294	i -> na / oz
+3	galározik	variant1	galárzanak	NA	NA
+3	galározik	variant2	galároznak	0.6946046547216574	zi -> ozna / _
+3	galározik	variant2	galároznak	0.9945865402216294	i -> na / oz
+3	gatágozik	variant1	gatáglunk	NA	NA
+3	gatágozik	variant2	gatágozunk	0.7269748833963936	zi -> ozun / _
+3	gatágozik	variant2	gatágozunk	0.9943997374945748	i -> un / oz
+3	géregezik	variant1	géregletek	NA	NA
+3	géregezik	variant2	géregeztek	0.9833406657965512	i -> te / ez
+3	géregezik	variant2	géregeztek	0.9869006091872238	i -> te / ez
+3	géregezik	variant2	géregeztek	0.2356465346565429	zi -> ezte / _
+3	gibemezik	variant1	gibemlünk	NA	NA
+3	gibemezik	variant2	gibemezünk	0.19514897255107153	zi -> ezün / _
+3	gibemezik	variant2	gibemezünk	0.9468225926356124	i -> ün / ez
+3	gihamozik	variant1	gihamlanak	NA	NA
+3	gihamozik	variant2	gihamoznak	0.6946046547216574	zi -> ozna / _
+3	gihamozik	variant2	gihamoznak	0.9945865402216294	i -> na / oz
+3	gihejezik	variant1	gihejlünk	NA	NA
+3	gihejezik	variant2	gihejezünk	0.19514897255107153	zi -> ezün / _
+3	gihejezik	variant2	gihejezünk	0.9468225926356124	i -> ün / ez
+3	©ihegezik	variant1	©ihegzetek	NA	NA
+3	©ihegezik	variant2	©ihegeztek	0.9833406657965512	i -> te / ez
+3	©ihegezik	variant2	©ihegeztek	0.9869006091872238	i -> te / ez
+3	©ihegezik	variant2	©ihegeztek	0.2356465346565429	zi -> ezte / _
+3	©ivepedik	variant1	©ivepßenek	NA	NA
+3	©ivepedik	variant2	©ivepednek	0.9742349428471409	i -> ne / ed
+3	hákodik	variant1	hákßanak	NA	NA
+3	hákodik	variant2	hákodnak	0.9979875894666204	i -> na / od
+3	hiragozik	variant1	hiragzanak	NA	NA
+3	hiragozik	variant2	hiragoznak	0.6946046547216574	zi -> ozna / _
+3	hiragozik	variant2	hiragoznak	0.9945865402216294	i -> na / oz
+3	hubo¥ozik	variant1	hubo¥lotok	NA	NA
+3	hubo¥ozik	variant2	hubo¥oztok	0.6548517724312526	zi -> ozto / _
+3	hubo¥ozik	variant2	hubo¥oztok	0.9929374979391904	i -> to / oz
+3	játozik	variant1	játlunk	NA	NA
+3	játozik	variant2	játozunk	0.7269748833963936	zi -> ozun / _
+3	játozik	variant2	játozunk	0.9943997374945748	i -> un / oz
+3	jurozik	variant1	jurlunk	NA	NA
+3	jurozik	variant2	jurozunk	0.7269748833963936	zi -> ozun / _
+3	jurozik	variant2	jurozunk	0.9943997374945748	i -> un / oz
+3	kláragodik	variant1	kláragßotok	NA	NA
+3	kláragodik	variant2	kláragodtok	0.989183972032436	i -> to / od
+3	klarágozik	variant1	klarágzotok	NA	NA
+3	klarágozik	variant2	klarágoztok	0.6548517724312526	zi -> ozto / _
+3	klarágozik	variant2	klarágoztok	0.9929374979391904	i -> to / oz
+3	klégezik	variant1	kléglünk	NA	NA
+3	klégezik	variant2	klégezünk	0.19514897255107153	zi -> ezün / _
+3	klégezik	variant2	klégezünk	0.9468225926356124	i -> ün / ez
+3	klehé¥ezik	variant1	klehé¥letek	NA	NA
+3	klehé¥ezik	variant2	klehé¥eztek	0.9833406657965512	i -> te / ez
+3	klehé¥ezik	variant2	klehé¥eztek	0.9869006091872238	i -> te / ez
+3	klehé¥ezik	variant2	klehé¥eztek	0.2356465346565429	zi -> ezte / _
+3	klihasozik	variant1	klihaslotok	NA	NA
+3	klihasozik	variant2	klihasoztok	0.6548517724312526	zi -> ozto / _
+3	klihasozik	variant2	klihasoztok	0.9929374979391904	i -> to / oz
+3	klűmözik	variant1	klűmlötök	NA	NA
+3	klűmözik	variant2	klűmöztök	0.908436528534852	i -> tö / öz
+3	kluzozik	variant1	kluzlotok	NA	NA
+3	kluzozik	variant2	kluzoztok	0.6548517724312526	zi -> ozto / _
+3	kluzozik	variant2	kluzoztok	0.9929374979391904	i -> to / oz
+3	kößözik	variant1	kößlötök	NA	NA
+3	kößözik	variant2	kößöztök	0.908436528534852	i -> tö / öz
+3	kűdözik	variant1	kűdlenek	NA	NA
+3	kűdözik	variant2	kűdöznek	0.9226783472660828	i -> ne / öz
+3	kűdözik	variant2	kűdöznek	0.2072504743923226	zi -> ezne / _
+3	küsözik	variant1	küslünk	NA	NA
+3	küsözik	variant2	küsözünk	0.19514897255107153	zi -> ezün / _
+3	küsözik	variant2	küsözünk	0.9226783472660828	i -> ün / öz
+3	lájozik	variant1	lájzotok	NA	NA
+3	lájozik	variant2	lájoztok	0.6548517724312526	zi -> ozto / _
+3	lájozik	variant2	lájoztok	0.9929374979391904	i -> to / oz
+3	lírozik	variant1	lírlanak	NA	NA
+3	lírozik	variant2	líroznak	0.6946046547216574	zi -> ozna / _
+3	lírozik	variant2	líroznak	0.9945865402216294	i -> na / oz
+3	livé¥ezik	variant1	livé¥lünk	NA	NA
+3	livé¥ezik	variant2	livé¥ezünk	0.19514897255107153	zi -> ezün / _
+3	livé¥ezik	variant2	livé¥ezünk	0.9468225926356124	i -> ün / ez
+3	lűközik	variant1	lűklenek	NA	NA
+3	lűközik	variant2	lűköznek	0.9226783472660828	i -> ne / öz
+3	lűközik	variant2	lűköznek	0.2072504743923226	zi -> ezne / _
+3	lumozik	variant1	lumlotok	NA	NA
+3	lumozik	variant2	lumoztok	0.6548517724312526	zi -> ozto / _
+3	lumozik	variant2	lumoztok	0.9929374979391904	i -> to / oz
+3	mágamozik	variant1	mágamlunk	NA	NA
+3	mágamozik	variant2	mágamozunk	0.7269748833963936	zi -> ozun / _
+3	mágamozik	variant2	mágamozunk	0.9943997374945748	i -> un / oz
+3	metégedik	variant1	metégßenek	NA	NA
+3	metégedik	variant2	metégednek	0.9742349428471409	i -> ne / ed
+3	mihágozik	variant1	mihágzotok	NA	NA
+3	mihágozik	variant2	mihágoztok	0.6548517724312526	zi -> ozto / _
+3	mihágozik	variant2	mihágoztok	0.9929374979391904	i -> to / oz
+3	míjozik	variant1	míjzunk	NA	NA
+3	míjozik	variant2	míjozunk	0.7269748833963936	zi -> ozun / _
+3	míjozik	variant2	míjozunk	0.9943997374945748	i -> un / oz
+3	mísozik	variant1	míslunk	NA	NA
+3	mísozik	variant2	mísozunk	0.7269748833963936	zi -> ozun / _
+3	mísozik	variant2	mísozunk	0.9943997374945748	i -> un / oz
+3	molodik	variant1	molßotok	NA	NA
+3	molodik	variant2	molodtok	0.989183972032436	i -> to / od
+3	mülőrözik	variant1	mülőrzünk	NA	NA
+3	mülőrözik	variant2	mülőrözünk	0.19514897255107153	zi -> ezün / _
+3	mülőrözik	variant2	mülőrözünk	0.9226783472660828	i -> ün / öz
+3	nágapodik	variant1	nágapßanak	NA	NA
+3	nágapodik	variant2	nágapodnak	0.9979875894666204	i -> na / od
+3	nivározik	variant1	nivárzotok	NA	NA
+3	nivározik	variant2	nivároztok	0.6548517724312526	zi -> ozto / _
+3	nivározik	variant2	nivároztok	0.9929374979391904	i -> to / oz
+3	nurokozik	variant1	nuroklunk	NA	NA
+3	nurokozik	variant2	nurokozunk	0.7269748833963936	zi -> ozun / _
+3	nurokozik	variant2	nurokozunk	0.9943997374945748	i -> un / oz
+3	¥ádozik	variant1	¥ádlanak	NA	NA
+3	¥ádozik	variant2	¥ádoznak	0.6946046547216574	zi -> ozna / _
+3	¥ádozik	variant2	¥ádoznak	0.9945865402216294	i -> na / oz
+3	¥ivágozik	variant1	¥ivágzunk	NA	NA
+3	¥ivágozik	variant2	¥ivágozunk	0.7269748833963936	zi -> ozun / _
+3	¥ivágozik	variant2	¥ivágozunk	0.9943997374945748	i -> un / oz
+3	¥izozik	variant1	¥izlunk	NA	NA
+3	¥izozik	variant2	¥izozunk	0.7269748833963936	zi -> ozun / _
+3	¥izozik	variant2	¥izozunk	0.9943997374945748	i -> un / oz
+3	¥öbözik	variant1	¥öbzenek	NA	NA
+3	¥öbözik	variant2	¥öböznek	0.9226783472660828	i -> ne / öz
+3	¥öbözik	variant2	¥öböznek	0.2072504743923226	zi -> ezne / _
+3	¥ülöközik	variant1	¥ülöklenek	NA	NA
+3	¥ülöközik	variant2	¥ülököznek	0.9226783472660828	i -> ne / öz
+3	¥ülöközik	variant2	¥ülököznek	0.2072504743923226	zi -> ezne / _
+3	¥ürözik	variant1	¥ürzenek	NA	NA
+3	¥ürözik	variant2	¥üröznek	0.9226783472660828	i -> ne / öz
+3	¥ürözik	variant2	¥üröznek	0.2072504743923226	zi -> ezne / _
+3	pehégedik	variant1	pehégßetek	NA	NA
+3	pehégedik	variant2	pehégedtek	0.9822845302138524	i -> te / ed
+3	pehégedik	variant2	pehégedtek	0.9806761235688624	i -> te / ed
+3	pekedik	variant1	pekßünk	NA	NA
+3	pekedik	variant2	pekedünk	0.9769082147849134	i -> ün / ed
+3	pibegezik	variant1	pibegzenek	NA	NA
+3	pibegezik	variant2	pibegeznek	0.9865411057483848	i -> ne / ez
+3	pibegezik	variant2	pibegeznek	0.2072504743923226	zi -> ezne / _
+3	pilégedik	variant1	pilégßenek	NA	NA
+3	pilégedik	variant2	pilégednek	0.9742349428471409	i -> ne / ed
+3	plibozik	variant1	plibzotok	NA	NA
+3	plibozik	variant2	pliboztok	0.6548517724312526	zi -> ozto / _
+3	plibozik	variant2	pliboztok	0.9929374979391904	i -> to / oz
+3	pörözik	variant1	pörzötök	NA	NA
+3	pörözik	variant2	pöröztök	0.908436528534852	i -> tö / öz
+3	posozik	variant1	poslotok	NA	NA
+3	posozik	variant2	posoztok	0.6548517724312526	zi -> ozto / _
+3	posozik	variant2	posoztok	0.9929374979391904	i -> to / oz
+3	pragá¥ozik	variant1	pragá¥lotok	NA	NA
+3	pragá¥ozik	variant2	pragá¥oztok	0.6548517724312526	zi -> ozto / _
+3	pragá¥ozik	variant2	pragá¥oztok	0.9929374979391904	i -> to / oz
+3	prazozik	variant1	prazlunk	NA	NA
+3	prazozik	variant2	prazozunk	0.7269748833963936	zi -> ozun / _
+3	prazozik	variant2	prazozunk	0.9943997374945748	i -> un / oz
+3	prélemezik	variant1	prélemlenek	NA	NA
+3	prélemezik	variant2	prélemeznek	0.9865411057483848	i -> ne / ez
+3	prélemezik	variant2	prélemeznek	0.2072504743923226	zi -> ezne / _
+3	prihegedik	variant1	prihegßenek	NA	NA
+3	prihegedik	variant2	prihegednek	0.9742349428471409	i -> ne / ed
+3	prilepedik	variant1	prilepßünk	NA	NA
+3	prilepedik	variant2	prilepedünk	0.9769082147849134	i -> ün / ed
+3	privékedik	variant1	privékßenek	NA	NA
+3	privékedik	variant2	privékednek	0.9742349428471409	i -> ne / ed
+3	prögözik	variant1	prögzötök	NA	NA
+3	prögözik	variant2	prögöztök	0.908436528534852	i -> tö / öz
+3	prugorozik	variant1	prugorzotok	NA	NA
+3	prugorozik	variant2	prugoroztok	0.6548517724312526	zi -> ozto / _
+3	prugorozik	variant2	prugoroztok	0.9929374979391904	i -> to / oz
+3	püzözik	variant1	püzlötök	NA	NA
+3	püzözik	variant2	püzöztök	0.908436528534852	i -> tö / öz
+3	ribegedik	variant1	ribegßetek	NA	NA
+3	ribegedik	variant2	ribegedtek	0.9822845302138524	i -> te / ed
+3	ribegedik	variant2	ribegedtek	0.9806761235688624	i -> te / ed
+3	rivá¥ozik	variant1	rivá¥lotok	NA	NA
+3	rivá¥ozik	variant2	rivá¥oztok	0.6548517724312526	zi -> ozto / _
+3	rivá¥ozik	variant2	rivá¥oztok	0.9929374979391904	i -> to / oz
+3	spalározik	variant1	spalárzanak	NA	NA
+3	spalározik	variant2	spalároznak	0.6946046547216574	zi -> ozna / _
+3	spalározik	variant2	spalároznak	0.9945865402216294	i -> na / oz
+3	spibamozik	variant1	spibamlanak	NA	NA
+3	spibamozik	variant2	spibamoznak	0.6946046547216574	zi -> ozna / _
+3	spibamozik	variant2	spibamoznak	0.9945865402216294	i -> na / oz
+3	spibegezik	variant1	spibeglünk	NA	NA
+3	spibegezik	variant2	spibegezünk	0.19514897255107153	zi -> ezün / _
+3	spibegezik	variant2	spibegezünk	0.9468225926356124	i -> ün / ez
+3	spiharozik	variant1	spiharzotok	NA	NA
+3	spiharozik	variant2	spiharoztok	0.6548517724312526	zi -> ozto / _
+3	spiharozik	variant2	spiharoztok	0.9929374979391904	i -> to / oz
+3	spirágozik	variant1	spiráglotok	NA	NA
+3	spirágozik	variant2	spirágoztok	0.6548517724312526	zi -> ozto / _
+3	spirágozik	variant2	spirágoztok	0.9929374979391904	i -> to / oz
+3	spivejezik	variant1	spivejlenek	NA	NA
+3	spivejezik	variant2	spivejeznek	0.9865411057483848	i -> ne / ez
+3	spivejezik	variant2	spivejeznek	0.2072504743923226	zi -> ezne / _
+3	spöközik	variant1	spöklünk	NA	NA
+3	spöközik	variant2	spöközünk	0.19514897255107153	zi -> ezün / _
+3	spöközik	variant2	spöközünk	0.9226783472660828	i -> ün / öz
+3	spo¥ozik	variant1	spo¥lanak	NA	NA
+3	spo¥ozik	variant2	spo¥oznak	0.6946046547216574	zi -> ozna / _
+3	spo¥ozik	variant2	spo¥oznak	0.9945865402216294	i -> na / oz
+3	sprebezik	variant1	sprebzenek	NA	NA
+3	sprebezik	variant2	sprebeznek	0.9865411057483848	i -> ne / ez
+3	sprebezik	variant2	sprebeznek	0.2072504743923226	zi -> ezne / _
+3	sprigozik	variant1	sprigzotok	NA	NA
+3	sprigozik	variant2	sprigoztok	0.6548517724312526	zi -> ozto / _
+3	sprigozik	variant2	sprigoztok	0.9929374979391904	i -> to / oz
+3	sprimozik	variant1	sprimlunk	NA	NA
+3	sprimozik	variant2	sprimozunk	0.7269748833963936	zi -> ozun / _
+3	sprimozik	variant2	sprimozunk	0.9943997374945748	i -> un / oz
+3	sprozozik	variant1	sprozlanak	NA	NA
+3	sprozozik	variant2	sprozoznak	0.6946046547216574	zi -> ozna / _
+3	sprozozik	variant2	sprozoznak	0.9945865402216294	i -> na / oz
+3	sprudozik	variant1	sprudlunk	NA	NA
+3	sprudozik	variant2	sprudozunk	0.7269748833963936	zi -> ozun / _
+3	sprudozik	variant2	sprudozunk	0.9943997374945748	i -> un / oz
+3	sprűrözik	variant1	sprűrlenek	NA	NA
+3	sprűrözik	variant2	sprűröznek	0.9226783472660828	i -> ne / öz
+3	sprűrözik	variant2	sprűröznek	0.2072504743923226	zi -> ezne / _
+3	spuborozik	variant1	spuborzanak	NA	NA
+3	spuborozik	variant2	spuboroznak	0.6946046547216574	zi -> ozna / _
+3	spuborozik	variant2	spuboroznak	0.9945865402216294	i -> na / oz
+3	spügözik	variant1	spügzünk	NA	NA
+3	spügözik	variant2	spügözünk	0.19514897255107153	zi -> ezün / _
+3	spügözik	variant2	spügözünk	0.9226783472660828	i -> ün / öz
+3	sűjözik	variant1	sűjlünk	NA	NA
+3	sűjözik	variant2	sűjözünk	0.19514897255107153	zi -> ezün / _
+3	sűjözik	variant2	sűjözünk	0.9226783472660828	i -> ün / öz
+3	ßtrajozik	variant1	ßtrajlanak	NA	NA
+3	ßtrajozik	variant2	ßtrajoznak	0.6946046547216574	zi -> ozna / _
+3	ßtrajozik	variant2	ßtrajoznak	0.9945865402216294	i -> na / oz
+3	ßtredezik	variant1	ßtredletek	NA	NA
+3	ßtredezik	variant2	ßtredeztek	0.9833406657965512	i -> te / ez
+3	ßtredezik	variant2	ßtredeztek	0.9869006091872238	i -> te / ez
+3	ßtredezik	variant2	ßtredeztek	0.2356465346565429	zi -> ezte / _
+3	ßtritozik	variant1	ßtritlanak	NA	NA
+3	ßtritozik	variant2	ßtritoznak	0.6946046547216574	zi -> ozna / _
+3	ßtritozik	variant2	ßtritoznak	0.9945865402216294	i -> na / oz
+3	tágarozik	variant1	tágarzunk	NA	NA
+3	tágarozik	variant2	tágarozunk	0.7269748833963936	zi -> ozun / _
+3	tágarozik	variant2	tágarozunk	0.9943997374945748	i -> un / oz
+3	tibarozik	variant1	tibarzanak	NA	NA
+3	tibarozik	variant2	tibaroznak	0.6946046547216574	zi -> ozna / _
+3	tibarozik	variant2	tibaroznak	0.9945865402216294	i -> na / oz
+3	tögözik	variant1	töglenek	NA	NA
+3	tögözik	variant2	tögöznek	0.9226783472660828	i -> ne / öz
+3	tögözik	variant2	tögöznek	0.2072504743923226	zi -> ezne / _
+3	trálakozik	variant1	trálaklanak	NA	NA
+3	trálakozik	variant2	trálakoznak	0.6946046547216574	zi -> ozna / _
+3	trálakozik	variant2	trálakoznak	0.9945865402216294	i -> na / oz
+3	trálodik	variant1	trálßunk	NA	NA
+3	trálodik	variant2	trálodunk	0.9973744432763506	i -> un / od
+3	tribejezik	variant1	tribejletek	NA	NA
+3	tribejezik	variant2	tribejeztek	0.9833406657965512	i -> te / ez
+3	tribejezik	variant2	tribejeztek	0.9869006091872238	i -> te / ez
+3	tribejezik	variant2	tribejeztek	0.2356465346565429	zi -> ezte / _
+3	trikozik	variant1	triklotok	NA	NA
+3	trikozik	variant2	trikoztok	0.6548517724312526	zi -> ozto / _
+3	trikozik	variant2	trikoztok	0.9929374979391904	i -> to / oz
+3	trilekedik	variant1	trilekßetek	NA	NA
+3	trilekedik	variant2	trilekedtek	0.9930878950912247	i -> te / ked
+3	trilekedik	variant2	trilekedtek	0.9817678995214736	i -> te / ked
+3	trírozik	variant1	trírzunk	NA	NA
+3	trírozik	variant2	trírozunk	0.7269748833963936	zi -> ozun / _
+3	trírozik	variant2	trírozunk	0.9943997374945748	i -> un / oz
+3	trivakodik	variant1	trivakßunk	NA	NA
+3	trivakodik	variant2	trivakodunk	0.9973744432763506	i -> un / od
+3	trugokozik	variant1	trugoklanak	NA	NA
+3	trugokozik	variant2	trugokoznak	0.6946046547216574	zi -> ozna / _
+3	trugokozik	variant2	trugokoznak	0.9945865402216294	i -> na / oz
+3	trugozik	variant1	trugzanak	NA	NA
+3	trugozik	variant2	trugoznak	0.6946046547216574	zi -> ozna / _
+3	trugozik	variant2	trugoznak	0.9945865402216294	i -> na / oz
+3	trukodik	variant1	trukßotok	NA	NA
+3	trukodik	variant2	trukodtok	0.9947329470030128	i -> to / kod
+3	trű¥özik	variant1	trű¥lenek	NA	NA
+3	trű¥özik	variant2	trű¥öznek	0.9226783472660828	i -> ne / öz
+3	trű¥özik	variant2	trű¥öznek	0.2072504743923226	zi -> ezne / _
+3	tűgözik	variant1	tűgzötök	NA	NA
+3	tűgözik	variant2	tűgöztök	0.908436528534852	i -> tö / öz
+3	vehékedik	variant1	vehékßünk	NA	NA
+3	vehékedik	variant2	vehékedünk	0.9769082147849134	i -> ün / ed
+3	vihapodik	variant1	vihapßunk	NA	NA
+3	vihapodik	variant2	vihapodunk	0.9973744432763506	i -> un / od
+3	vilesezik	variant1	vileslünk	NA	NA
+3	vilesezik	variant2	vilesezünk	0.19514897255107153	zi -> ezün / _
+3	vilesezik	variant2	vilesezünk	0.9468225926356124	i -> ün / ez
+3	virozik	variant1	virzanak	NA	NA
+3	virozik	variant2	viroznak	0.6946046547216574	zi -> ozna / _
+3	virozik	variant2	viroznak	0.9945865402216294	i -> na / oz
+3	vobozik	variant1	vobzotok	NA	NA
+3	vobozik	variant2	voboztok	0.6548517724312526	zi -> ozto / _
+3	vobozik	variant2	voboztok	0.9929374979391904	i -> to / oz

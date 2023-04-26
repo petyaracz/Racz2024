@@ -1,0 +1,257 @@
+Phonological Learner File
+P Rácz
+Hungarian
+Tue Apr 13 2023
+Tue Apr 13 2023
+This data set was built in baseline_learner.Rmd
+Morphological categories:
+	base	conj
+Input forms:
+játék	játéknál	3685489	játék	játéknál	hotelban
+projekt	projektnél	2236203	projekt	projektnél	hotelben
+módßer	módßernél	2002818	módszer	módszernél	hotelben
+modell	modellnél	1509359	modell	modellnél	hotelben
+partner	partnernél	1270201	partner	partnernél	hotelben
+háttér	háttérnél	1176278	háttér	háttérnél	hotelben
+©ó©ßer	©ó©ßernél	941383	gyógyszer	gyógyszernél	hotelben
+hotel	hotelnél	789022	hotel	hotelnél	hotelben
+ßoftver	ßoftvernél	653676	szoftver	szoftvernél	hotelben
+ßomßéd	ßomßédnál	463192	szomszéd	szomszédnál	hotelban
+kábel	kábelnél	287412	kábel	kábelnél	hotelben
+korrekt	korrektnél	280874	korrekt	korrektnél	hotelben
+ár¥ék	ár¥éknál	251729	árnyék	árnyéknál	hotelban
+panel	panelnál	223571	panel	panelnál	hotelban
+húsvét	húsvétnál	195283	húsvét	húsvétnál	hotelban
+honvéd	honvédnál	186978	honvéd	honvédnál	hotelban
+acél	acélnál	172196	acél	acélnál	hotelban
+haver	havernál	165801	haver	havernál	hotelban
+sláger	slágernél	155508	sláger	slágernél	hotelben
+norvég	norvégnál	151508	norvég	norvégnál	hotelban
+ßlovén	ßlovénnál	111340	szlovén	szlovénnál	hotelban
+tranßfer	tranßfernél	87598	transzfer	transzfernél	hotelben
+balett	balettnál	87544	balett	balettnál	hotelban
+farmer	farmernál	82647	farmer	farmernál	hotelban
+fotel	fotelnál	70961	fotel	fotelnál	hotelban
+koktél	koktélnál	70915	koktél	koktélnál	hotelban
+koktél	cocktailnál	70915	koktél	cocktailnál	hotelban
+mágnes	mágnesnél	59860	mágnes	mágnesnél	hotelben
+borbé¬	borbé¬nál	59299	borbély	borbélynál	hotelban
+dΩungel	dΩungelnél	55832	dzsungel	dzsungelnél	hotelben
+matek	mateknál	47606	matek	mateknál	hotelban
+makett	makettnél	42231	makett	makettnél	hotelben
+kráter	kráternél	30791	kráter	kráternél	hotelben
+bróker	brókernél	27705	bróker	brókernél	hotelben
+skanzen	skanzennél	26458	skanzen	skanzennél	hotelben
+kvartett	kvartettnél	26413	kvartett	kvartettnél	hotelben
+bunker	bunkernél	25691	bunker	bunkernél	hotelben
+bojler	bojlernél	25309	bojler	bojlernél	hotelben
+bojler	boylernél	25309	bojler	boylernél	hotelben
+hátvéd	hátvédnél	23893	hátvéd	hátvédnél	hotelben
+roller	rollernél	22986	roller	rollernél	hotelben
+paßtell	paßtellnél	22351	pasztell	pasztellnél	hotelben
+póker	pókernél	22273	póker	pókernél	hotelben
+puffer	puffernél	21029	puffer	puffernél	hotelben
+rubel	rubelnél	19855	rubel	rubelnél	hotelben
+ágens	ágensnél	17621	ágens	ágensnél	hotelben
+Ωáner	Ωánernél	16709	zsáner	zsánernél	hotelben
+patent	patentnál	16682	patent	patentnál	hotelban
+mater	maternél	16610	mater	maternél	hotelben
+fater	faternál	15751	fater	faternál	hotelban
+arzén	arzénnál	14384	arzén	arzénnál	hotelban
+motel	motelnél	13960	motel	motelnél	hotelben
+noteß	noteßnál	13921	notesz	notesznál	hotelban
+fráter	fráternél	13052	fráter	fráternél	hotelben
+parkett	parkettnél	12893	parkett	parkettnél	hotelben
+á©ék	á©éknál	11658	ágyék	ágyéknál	hotelban
+bankett	bankettnél	10704	bankett	bankettnél	hotelben
+tandem	tandemnél	10068	tandem	tandemnél	hotelben
+ankét	ankétnál	10005	ankét	ankétnál	hotelban
+páter	páternél	9880	páter	páternél	hotelben
+maßek	maßeknál	9770	maszek	maszeknál	hotelban
+káder	kádernál	8956	káder	kádernál	hotelban
+amper	ampernél	8498	amper	ampernél	hotelben
+sóder	sódernál	8264	sóder	sódernál	hotelban
+sußter	sußternál	6878	suszter	suszternál	hotelban
+pançer	pançernál	5888	pancser	pancsernál	hotelban
+sparhelt	sparheltnál	4765	sparhelt	sparheltnál	hotelban
+bakter	bakternál	4460	bakter	bakternál	hotelban
+malter	malternál	3492	malter	malternál	hotelban
+sólet	sóletnél	3255	sólet	sóletnél	hotelben
+muter	muternál	2713	muter	muternál	hotelban
+dózer	dózernál	2635	dózer	dózernál	hotelban
+sameß	sameßnál	2511	samesz	samesznál	hotelban
+kupec	kupecnél	2393	kupec	kupecnél	hotelben
+mutter	mutternál	2225	mutter	mutternál	hotelban
+maceß	maceßnál	2035	macesz	macesznál	hotelban
+dodΩem	dodΩemnél	1848	dodzsem	dodzsemnél	hotelben
+brojler	brojlernál	1774	brojler	brojlernál	hotelban
+smasßer	smasßernál	1467	smasszer	smasszernál	hotelban
+pajeß	pajeßnál	1346	pajesz	pajesznál	hotelban
+karter	karternál	1181	karter	karternál	hotelban
+klozet	klozetnál	993	klozet	klozetnál	hotelban
+sakter	sakternál	814	sakter	sakternál	hotelban
+sparhert	sparhertnál	373	sparhert	sparhertnál	hotelban
+Test forms:
+bidem
+bingéj
+brágéd
+bralkép
+braßenc
+brigeßt
+brindez
+briskéd
+bródeß
+brotes
+brukéß
+buhé¥
+bupéz
+çá©elt
+çarté¥
+çimen
+çinték
+çodeg
+çublé¥
+dábe©
+dajrens
+dalenc
+danét
+darhén
+dibez
+dihe¬
+dinelt
+dingec
+dóbem
+dorzéj
+dunkéß
+dutec
+fádens
+fá©ép
+fájéz
+fincek
+fizend
+fojle©
+forzéd
+fupét
+gábéd
+garcép
+gicéj
+giheßt
+gonßék
+gótem
+gúden
+há©ét
+hije©
+hivép
+hóbens
+hosét
+humék
+ikßert
+incéj
+ítens
+jábéz
+jalré¥
+jóbec
+jorzég
+júder
+jukél
+jurdent
+juté¬
+kábeß
+kadér
+kalhéß
+kalréz
+kaßép
+kátéd
+kátel
+klajrén
+klazér
+klingeß
+klißer
+klíte©
+klordé¥
+klosét
+kluhéj
+lice©
+lihé¥
+lijez
+lingék
+lismév
+lorzens
+luméz
+mádép
+matéz
+monveg
+murdes
+narem
+navec
+nidét
+nuhét
+¥ábét
+¥amet
+¥arcéj
+¥ítem
+¥upér
+pazév
+pijél
+pisé¬
+pítend
+pivéd
+prate¬
+pristél
+prißec
+prißkenc
+rapßek
+ronßek
+ronvet
+sarte¬
+sihen
+sortem
+spábét
+spanél
+spatel
+spáten
+spicet
+spivél
+spizec
+sporzem
+sprivenc
+sprízem
+spumé¥
+surne©
+ßanéj
+ßibed
+ßihét
+ßutend
+tarhéz
+tivenc
+tosé¬
+trájeg
+tranék
+tráné¬
+trapße©
+trigenc
+trikép
+trinçeg
+trismél
+trodé¬
+tumé¬
+vismer
+vodec
+vodép
+vorßen
+vublet
+vurnel
+zábé¥
+zarcég
+zatéj
+zihenc
+zined
+zopé¬
+Ωáder
+Ωádév
+Ωalrén
+Ωigén
+Ωopéd
+Ωúdel
+zuten
+end
