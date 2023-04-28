@@ -1,0 +1,13 @@
+dim 1000
+ws 5
+epoch 1
+minCount 1
+neg 5
+wordNgrams 5
+loss softmax
+model sup
+bucket 10000
+minn 3
+maxn 6
+lrUpdateRate 100
+t 0.0001

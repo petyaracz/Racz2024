@@ -1,3 +1,5 @@
+## ADD TRIANGLES
+
 ---
 title: "Baseline learners"
 author: "Rácz, Péter"
@@ -53,6 +55,7 @@ h = read_tsv('~/Github/Racz2024/resource/hu_list.txt') %>%
 
 v = read_tsv('~/Github/Racz2024/resource/real_words/verb_bag.tsv')
 b = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy_proc.tsv')
+# get triangles in here
 
 ## gcm pred
 
