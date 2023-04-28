@@ -1,7 +1,9 @@
 # helper files for the baseline learner paper
 # pracz
 
+#######################################################
 # -- header -- #
+#######################################################
 
 # setwd('~/Github/Racz2024') # the Rmd does this
 
@@ -18,6 +20,8 @@ library(ggthemes)
 library(lme4)
 library(knitr)
 
+library(fastrtext)
+
 # -- data -- #
 
 lakok = read_tsv('~/Github/Racz2024/resource/real_words/ik_verbs/ikes_pairs_webcorpus2.tsv')
@@ -32,14 +36,75 @@ h = read_tsv('~/Github/Racz2024/resource/hu_list.txt') %>%
 
 v = read_tsv('~/Github/Racz2024/resource/real_words/verb_bag.tsv')
 b = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy_proc.tsv')
+bl = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy.tsv')
 
+#######################################################
 # -- functions -- #
+#######################################################
 
+# triangle functions
+
+# takes a single variation type from a single exp list, sorts participants across propensity to pick var 1, sorts var across propensity to pick var 1, combines them in this order, calculates ideal answer based on propensity of part and propensity of word
+makeTriangle = function(dat){
+  
+  dat2 = dat %>% 
+    select(file_name,word,resp_is_first_variant)
+  
+  dat_w = dat2 %>% 
+    count(word,resp_is_first_variant) %>% 
+    pivot_wider(word, names_from = resp_is_first_variant, values_from = n) %>% 
+    mutate(p_word = `TRUE`/(`TRUE`+`FALSE`)) %>% 
+    select(word,p_word)
+  
+  dat_p = dat2 %>% 
+    count(file_name,resp_is_first_variant) %>% 
+    pivot_wider(file_name, names_from = resp_is_first_variant, values_from = n, values_fill = 0) %>%
+    mutate(p_id = `TRUE`/(`TRUE`+`FALSE`)) %>% 
+    select(file_name,p_id)
+  
+  dat2 %>% 
+    inner_join(dat_w, by = 'word') %>% 
+    inner_join(dat_p, by = 'file_name') %>% 
+    filter(!is.na(p_word),!is.na(p_id)) %>% 
+    mutate(
+      word = fct_reorder(word, p_word),
+      file_name = fct_reorder(file_name, p_id),
+      ideal_model = p_word * p_id,
+      resp_ideal_model = ideal_model > mean(ideal_model)
+    )
+}
+
+# takes output of makeTriangle and a good-looking name and draws a triangle plot for either real answer or ideal answer
+drawTriangle = function(dat,name,var){
+  dat %>% 
+    ggplot(aes(file_name,word,fill = {{var}})) +
+    geom_tile() +
+    theme_few() +
+    scale_fill_colorblind() +
+    ggtitle(name) +
+    guides(fill = 'none') +
+    theme(axis.text = element_blank()) +
+    xlab('participant (low -> high)') +
+    ylab('word (low -> high)')
+}  
+
+# builds a confusion matrix of ideal answer / real answer for each output of makeTriangle and pulls accuracy dat
+getTriangleMatrix = function(dat){
+  caret::confusionMatrix(
+    as.factor(dat$resp_ideal_model),
+    as.factor(dat$resp_is_first_variant)
+  ) %>% 
+    broom::tidy() %>% 
+    slice(1)
+}
+
+#######################################################
 # GCM code. see there for comments
 source('~/Github/Racz2024/models/learner/baseline/purrrgcm.R')
 # code to transcribe Hungarian digraphs to single char. see there for comments
 source('~/Github/Racz2024/models/learner/baseline/transcribe.R')
 
+#######################################################
 # take real lang dat, postag list, keep more frequent form per each postag.
 filterPlus = function(dat,postag_list){
   dat %>% 
@@ -52,6 +117,7 @@ filterPlus = function(dat,postag_list){
     ungroup()
 }
 
+#######################################################
 # take dat, two variables, return nice cloud plot
 cloudPlot = function(dat,a,b){
   dat %>% 
@@ -66,6 +132,46 @@ cloudPlot = function(dat,a,b){
   coord_flip()
 }
 
+#######################################################
+# take baseline, build triangle across list and variation type (so for people who saw the same forms in the same category) save files to disc
+triangleFun = function(bl){
+  triangles = bl %>% 
+    group_by(my_list,category) %>% 
+    nest() %>% 
+    mutate(
+      set_name = glue('{category} {str_extract(my_list, "[123]")}'),
+      set_triangle = map(data, ~ makeTriangle(.)),
+      graph_triangle = map2(set_triangle, set_name, ~ drawTriangle(.x,.y,resp_is_first_variant)),
+      graph_ideal = map2(set_triangle, set_name, ~ drawTriangle(.x,.y,resp_ideal_model)),
+      test = map(set_triangle, ~ getMatrix(.))
+    )
+  
+  triangles_plots = triangles %>% 
+    arrange(set_name) %>% 
+    pull(graph_triangle)
+  
+  wrap_plots(triangles_plots, ncol = 3)
+  ggsave('figures/triangle1.pdf', width = 8, height = 8)
+  
+  ideal_plots = triangles %>% 
+    arrange(set_name) %>% 
+    pull(graph_ideal)
+  
+  wrap_plots(ideal_plots, ncol = 3)
+  ggsave('figures/triangle2.pdf', width = 8, height = 8)
+  
+  # we can express the orderliness of triangles in triangles1 by comparing them to the ideal model and calculating the divergence using auc.
+  
+  triangles %>% 
+    select(set_name,test) %>% 
+    unnest(test) %>% 
+    ungroup() %>% 
+    select(set_name,estimate,conf.low,conf.high) %>% 
+    write_tsv('baseline_triangle_acc.tsv')  
+}
+
+
+#######################################################
 # take list of gcms, test file w/ log odds from real data, name of column, return gcm with highest r2
 getBestGCM = function(gcms, test, colname){
   map_dfr(gcms, ~ 
@@ -76,6 +182,7 @@ getBestGCM = function(gcms, test, colname){
   slice_max(r2)
 }
 
+#######################################################
 # take training data, category names, test data, write an mgl in file that has each form with token frequency
 buildMglInWeighted = function(train,cat_name_1,cat_name_2,test){
   
@@ -123,6 +230,7 @@ buildMglInWeighted = function(train,cat_name_1,cat_name_2,test){
   c(header_1,header_2,header_3,body,'Test forms:',test_forms,'end')
 }
 
+#######################################################
 # create a version of the gcm in file that's like the form is either form1 or form2
 buildMglInBinary = function(train,cat_name_1,cat_name_2,test,cselekszenek = F){
   
@@ -159,6 +267,7 @@ buildMglInBinary = function(train,cat_name_1,cat_name_2,test,cselekszenek = F){
   
 }
 
+#######################################################
 # csel has specific postags that we need to nest by. because separate mgl for each!
 nestCselekszenek = function(dat){
   dat %>% 
@@ -177,6 +286,7 @@ nestCselekszenek = function(dat){
     nest()
 }
 
+#######################################################
 # same here.
 nestHotelban = function(dat){
   dat %>% 
@@ -188,6 +298,7 @@ nestHotelban = function(dat){
     nest()
 }
 
+#######################################################
 # find names of sum files for vectorised read tsv return master w/ labels
 getMGLmaster = function(my_dir){
   main_path = '~/Github/Racz2024/models/learner/baseline/mgls/rawmgls/'
@@ -210,6 +321,7 @@ getMGLmaster = function(my_dir){
   
 }
 
+#######################################################
 # take data file, test file, name of variation, spit out rules for the two variants
 getMGLrules = function(dat,test,my_variation){
   
@@ -243,6 +355,7 @@ getMGLrules = function(dat,test,my_variation){
   # sometimes the mgl doesn't find a rule for form1 or form2. in those cases, I take the category weight for the other form as 1. in some cases it finds neither rules. in that case the weight is NA.
 }
 
+#######################################################
 # take output of mglrules and cross it with test. the fun is split into two so you can see how rules are missing in the output before it gets crossed with test.
 getMGLrules2 = function(dat,test){
   dat %>% 
@@ -258,6 +371,7 @@ getMGLrules2 = function(dat,test){
     left_join(test)
 }
 
+#######################################################
 # fit and tune the GCMs and save predictions from best model to disc. this horrible wrapper function exists because this takes a while.
 fitGCMs = function(){
 
@@ -330,6 +444,7 @@ fitGCMs = function(){
     write_tsv('~/Github/Racz2024/models/learner/baseline/pred_gcm/hotelban_gcm_baseline_pred.tsv')  
 }
 
+#######################################################
 # set up training files for MGL and save them to disc. this horrible wrapper function exists because (a) takes a while (b) I have to fit the mgl-s by hand. not tuning here just playing around with training sets.
 fitMGL = function(){
 
@@ -405,7 +520,125 @@ fitMGL = function(){
   ##########################################
 }
 
+#######################################################
+# for each list, we have participants responding to words in the same category
+# do they show patterns or answer at random?
+
+#######################################################
+# take file outputs from MGL and tidy them up and match rules for forms in real data and calculate adjusted conf and write everything to disc
+mineMGL = function(){
+  # lakok
+  lakok_master = read_tsv('~/Github/Racz2024/models/learner/baseline/mgls/rawmgls/mgl_lakok/lakok_binary.sum') # parsing issues expected
+  lakok_mgl = lakok_master %>% 
+    getMGLrules(lakok_test, 'lakok/lakom')
+  lakok_mgl_2 = getMGLrules2(lakok_mgl,lakok_test)
+  
+  # cselekszenek
+  cselekszenek_master = getMGLmaster('mgl_cselekszenek')
+  
+  cselekszenek_master %<>% 
+    group_by(training_type) %>% 
+    nest() %>% 
+    mutate(
+      rules = map(data, ~ getMGLrules(.,cselekszenek_test,'cselekszenek/cselekednek')),
+      test_rules = map(rules, ~ getMGLrules2(.,cselekszenek_test))
+    )
+  
+  cselekszenek_mgl = cselekszenek_master %>% 
+    select(training_type,rules) %>% 
+    unnest(cols = rules)
+  
+  cselekszenek_mgl_2 = cselekszenek_master %>% 
+    select(training_type,test_rules) %>% 
+    unnest(cols = test_rules)
+  
+  # hotelban
+  hotelban_master = getMGLmaster('mgl_hotelban')
+  
+  hotelban_master %<>% 
+    group_by(training_type) %>% 
+    nest() %>% 
+    mutate(
+      rules = map(data, ~ getMGLrules(.,hotelban_test,'hotelban/hotelben')),
+      test_rules = map(rules, ~ getMGLrules2(.,hotelban_test))
+    )
+  
+  hotelban_mgl = hotelban_master %>% 
+    select(training_type,rules) %>% 
+    unnest(cols = rules)
+  
+  hotelban_mgl_2 = hotelban_master %>% 
+    select(training_type,test_rules) %>% 
+    unnest(cols = test_rules)
+  
+  ## save output form
+  
+  write_tsv(lakok_mgl, 'pred_mgl/lakok_mgl_rules.tsv')
+  write_tsv(cselekszenek_mgl, 'pred_mgl/cselekszenek_mgl_rules.tsv')
+  write_tsv(hotelban_mgl, 'pred_mgl/hotelban_mgl_rules.tsv')
+  
+  write_tsv(lakok_mgl_2, 'pred_mgl/lakok_mgl_baseline.tsv')
+  write_tsv(cselekszenek_mgl_2, 'pred_mgl/cselekszenek_mgl_baseline.tsv')
+  write_tsv(hotelban_mgl_2, 'pred_mgl/hotelban_mgl_baseline.tsv')
+}
+
+#######################################################
+# take training and test set, format into what fasttext likes, write into file
+writeFastText = function(train,test,id){
+  # training
+  lines = train %>% 
+    sample_n(n()) %>%
+    rowwise() %>%
+    mutate(
+      label = glue('__label__{category}'),
+      base_tr = transcribe(base, 'single'),
+      line = glue('{label} {base_tr}')
+    ) %>%
+    pull(line)
+  
+  # validation
+  train_length = round(length(lines) * .7)
+  
+  train_lines = lines[1:train_length]
+  valid_lines = lines[train_length+1:length(lines)]
+  
+  # test
+  test_lines =  test %>%
+    pull(base_tr)
+  
+  # write to disc
+  write_lines(train_lines, glue('~/Github/Racz2024/models/learner/baseline/fasttext/train_{id}.txt'))
+  write_lines(valid_lines, glue('~/Github/Racz2024/models/learner/baseline/fasttext/valid_{id}.txt'))
+  write_lines(test_lines, glue('~/Github/Racz2024/models/learner/baseline/fasttext/test_{id}.txt'))
+}
+
+#######################################################
+# write a shell script that runs fasttext for the output of writefasttext. shell script has to be run separately.
+writeRunFastText = function(id){
+  path = '~/Github/Racz2024/models/learner/baseline/fasttext'
+  cmd1 = glue('./fasttext supervised -input train_{id}.txt -output model_{id} -autotune-validation valid_{id}.txt')
+  cmd2 = glue('./fasttext predict-prob model_{id}.bin test_{id}.txt > pred_{id}.txt')
+  cmd3 = glue('./fasttext dump model_{id}.bin args > args_{id}.txt')
+  cmd4 = glue('rm model_{id}.bin')
+  
+  write_lines(c(cmd1,cmd2,cmd3,cmd4), glue('{path}/shell_script_{id}.sh'))
+}
+
+#######################################################
+# get rez from fasttext model set up and run by writefasttext writeRunFasttext and shell script
+mineFastText = function(id,test){
+  lines = read_lines(glue('~/Github/Racz2024/models/learner/baseline/fasttext/pred_{id}.txt'))
+  tibble(line = lines) %>% 
+    mutate(
+      line = str_replace(line, '\\_\\_label\\_\\_', ''),
+      label = str_extract(line, '^[^ ]*(?= )'),
+      weight = as.double(str_extract(line, '(?<= )[^ ]*$')),
+      weight_1 = ifelse(label == 'lakok', weight, 1-weight)
+    ) %>% 
+    bind_cols(test)
+}
 # -- wrangling -- #
+#######################################################
 
 dik = bind_rows(lakok,cselekszenek)
 ik = filter(v, str_detect(lemma, 'ik$'))
@@ -448,7 +681,9 @@ for (i in vowels) {
 # Some more illicit sequences. These might not be justified.
 illicit_sequences = c(illicit_sequences, "oze", "oza", "öze", "öza", "eze", "eza", "ode", "oda", "öde", "öda", "ede", "eda")
 
+#######################################################
 # -- training files -- #
+#######################################################
 
 ## lakok
 # it's one pair per verb stem. easy. lakok/lakom. 
@@ -536,7 +771,9 @@ hotelban_training_2 = hotelban_plus %>%
 hotelban_training_3 = 
   bind_rows(hotelban_training_1,hotelban_training_2)
 
+#######################################################
 # -- test files -- #
+#######################################################
 
 ## lakok
 
@@ -565,6 +802,10 @@ hotelban_test = b %>%
   ) %>% 
   select(base_tr,category,log_odds)  
 
+#######################################################
+# model fitting
+#######################################################
+
 # -- fitting GCM -- #
 
 # This takes a while.
@@ -574,63 +815,65 @@ lakok_gcm = read_tsv('~/Github/Racz2024/models/learner/baseline/pred_gcm/lakok_g
 cselekszenek_gcm = read_tsv('~/Github/Racz2024/models/learner/baseline/pred_gcm/cselekszenek_gcm_baseline_pred.tsv')
 hotelban_gcm = read_tsv('~/Github/Racz2024/models/learner/baseline/pred_gcm/hotelban_gcm_baseline_pred.tsv')
 
-# -- fitting the MGL -- #
+# -- fitting MGL -- #
 
 # This has to be done by hand.
 # fitMGL()
 
-# get output from 
+# get output froms
+# mineMGL()
 
-# lakok
-lakok_master = read_tsv('~/Github/Racz2024/models/learner/baseline/mgls/rawmgls/mgl_lakok/lakok_binary.sum') # parsing issues expected
-lakok_mgl = lakok_master %>% 
-  getMGLrules(lakok_test, 'lakok/lakom')
-lakok_mgl_2 = getMGLrules2(lakok_mgl,lakok_test)
+lakok_mgl = read_tsv('~/Github/Racz2024/models/learner/baseline/pred_mgl/lakok_mgl_baseline.tsv')
+cselekszenek_mgl = read_tsv('~/Github/Racz2024/models/learner/baseline/pred_mgl/cselekszenek_mgl_baseline.tsv')
+hotelban_mgl = read_tsv('~/Github/Racz2024/models/learner/baseline/pred_mgl/hotelban_mgl_baseline.tsv')
 
-# cselekszenek
-cselekszenek_master = getMGLmaster('mgl_cselekszenek')
+# -- fitting fasttext -- #
 
-cselekszenek_master %<>% 
-  group_by(training_type) %>% 
-  nest() %>% 
-  mutate(
-    rules = map(data, ~ getMGLrules(.,cselekszenek_test,'cselekszenek/cselekednek')),
-    test_rules = map(rules, ~ getMGLrules2(.,cselekszenek_test))
-    )
+## lakok
+writeFastText(lakok_training,lakok_test,'lakok_1')
+writeRunFastText('lakok_1')
+system('zsh ~/Github/Racz2024/models/learner/baseline/fasttext/shell_script_lakok_1.sh') # if it complains about not finding the file run the shell script directly in terminal
+lakok_ft = mineFastText('lakok_1',lakok_test)
 
-cselekszenek_mgl = cselekszenek_master %>% 
-  select(training_type,rules) %>% 
-  unnest(cols = rules)
+## cselekszenek
+# variable and stable
+# first we do everyone together
+writeFastText(cselekszenek_training_3,cselekszenek_test,'cselekszenek_3')
+writeRunFastText('cselekszenek_3')
+system('zsh ~/Github/Racz2024/models/learner/baseline/fasttext/shell_script_cselekszenek_3.sh') # if it complains about not finding the file run the shell script directly in terminal # it might be worth it to autotune this more since the file's larger. ah well
+cselekszenek_3_ft = mineFastText('cselekszenek_3',cselekszenek_test)
 
-cselekszenek_mgl_2 = cselekszenek_master %>% 
-  select(training_type,test_rules) %>% 
-  unnest(cols = test_rules)
+# cselekszenek_ft %>% 
+  # summarise(cor = cor(weight_1,log_odds))
+# oops
+# variable only
+writeFastText(cselekszenek_training_1,cselekszenek_test,'cselekszenek_1')
+writeRunFastText('cselekszenek_1')
+system('zsh ~/Github/Racz2024/models/learner/baseline/fasttext/shell_script_cselekszenek_1.sh') # if it complains about not finding the file run the shell script directly in terminal
+cselekszenek_1_ft = mineFastText('cselekszenek_1',cselekszenek_test)
+# cselekszenek_1_ft %>%
+# summarise(cor = cor(weight_1,log_odds))
+# double whoops
 
-# hotelban
-hotelban_master = getMGLmaster('mgl_hotelban')
+## hotelban
 
-hotelban_master %<>% 
-  group_by(training_type) %>% 
-  nest() %>% 
-  mutate(
-    rules = map(data, ~ getMGLrules(.,hotelban_test,'hotelban/hotelben')),
-    test_rules = map(rules, ~ getMGLrules2(.,hotelban_test))
-  )
+# variable and stable
+writeFastText(hotelban_training_3,hotelban_test,'hotelban_3')
+writeRunFastText('hotelban_3')
+system('zsh ~/Github/Racz2024/models/learner/baseline/fasttext/shell_script_hotelban_3.sh') # if it complains about not finding the file run the shell script directly in terminal # it might be worth it to autotune this more since the file's larger. ah well
+hotelban_3_ft = mineFastText('hotelban_3',hotelban_test)
+# hotelban_3_ft %>%
+# summarise(cor = cor(weight_1,log_odds))
+# tripe whoops on a bun
 
-hotelban_mgl = hotelban_master %>% 
-  select(training_type,rules) %>% 
-  unnest(cols = rules)
+writeFastText(hotelban_training_1,hotelban_test,'hotelban_1')
+writeRunFastText('hotelban_1')
+system('zsh ~/Github/Racz2024/models/learner/baseline/fasttext/shell_script_hotelban_1.sh') # if it complains about not finding the file run the shell script directly in terminal # it might be worth it to autotune this more since the file's larger. ah well
+hotelban_1_ft = mineFastText('hotelban_1',hotelban_test)
+# hotelban_1_ft %>%
+  # summarise(cor = cor(weight_1,log_odds))
+# hm
 
-hotelban_mgl_2 = hotelban_master %>% 
-  select(training_type,test_rules) %>% 
-  unnest(cols = test_rules)
-
-# -- save mgl -- #
-
-write_tsv(lakok_mgl, 'pred_mgl/lakok_mgl_rules.tsv')
-write_tsv(cselekszenek_mgl, 'pred_mgl/cselekszenek_mgl_rules.tsv')
-write_tsv(hotelban_mgl, 'pred_mgl/hotelban_mgl_rules.tsv')
-
-write_tsv(lakok_mgl_2, 'pred_mgl/lakok_mgl_baseline.tsv')
-write_tsv(cselekszenek_mgl_2, 'pred_mgl/cselekszenek_mgl_baseline.tsv')
-write_tsv(hotelban_mgl_2, 'pred_mgl/hotelban_mgl_baseline.tsv')
+# fasttext notes
+# lakok is reasonable though not very good, probs not enough to use on esp answers
+# cselekszenek / hotelban are awful. why? option 1: gets confused by all the various suffixes. option 2: training data are insufficient. note that baseline responses are themselves noisy and, especially for cselekszenek, seem insufficient to capture what actually is going on. # argument against 1: gcm does fine with hotelban. but it's still probably option 1 and 2. solution? large language model that knows more about the language...
