@@ -81,7 +81,7 @@ path = '~/Github/Pavlovia/hesp/data/'
 
 d = tibble(
     dat_id = dat_id,
-    record_date = str_extract(dat_id, '2022-[0-9]{2}-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% 
+    record_date = str_extract(dat_id, '202[234]-[0-9]{2}-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% # aah it's another year
       lubridate::ymd_hm()
   ) %>% 
   mutate(
@@ -183,6 +183,11 @@ nslow = d %>%
 if(nslow == 0){print('No participants over 25min.')}else{print('Some participants over 25min.')}
 
 # totals
+
+d %>% 
+  filter(str_detect(dat_id, 'SESSION\\_2023')) %>% 
+  distinct(dat_id,part_id) %>% 
+  kable()
 
 d %>% 
   filter(trial_kind == 'esp trial') %>% 
