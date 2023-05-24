@@ -3,18 +3,34 @@
 setwd('~/Github/Racz2024/')
 library(tidyverse)
 library(rstanarm)
-library(bayesplot)
-library(bayestestR)
+library(lme4)
+library(ggthemes)
+library(broom.mixed)
+library(patchwork)
+library(tictoc)
 
-d = read_tsv('exp_data/esp/esp_master_lakok.tsv')
+d1 = read_tsv('exp_data/esp/esp_master_lakok.tsv')
+d2 = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
 
 # -- wrangling -- #
+d1$part_yob = as.double(d1$part_yob)
+
+d = bind_rows(d1,d2)
 
 d = b %>% 
   select(base,log_odds,derivational,nsyl) %>% 
   rename(baseline_log_odds = log_odds) %>% 
   right_join(d)
+
+esp = d %>% 
+  filter(trial_kind == 'esp trial') %>% 
+  mutate(
+    derivational = fct_relevel(derivational, '-szik'),
+    two_syl = nsyl == 2,
+    reg_rate = fct_relevel(reg_rate, 'high'),
+    reg_dist = fct_relevel(reg_dist, 'typical')
+  )
 
 posttest = d %>% 
   filter(trial_kind == 'posttest trial') %>% 
@@ -25,87 +41,85 @@ posttest = d %>%
     reg_dist = fct_relevel(reg_dist, 'typical')
   )
 
+# -- viz -- #
+
+posttest_viz_1 = posttest %>% 
+  count(baseline_log_odds,variation,reg_dist,picked_v1) %>% 
+  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
+  mutate(posttest_log_odds = log((`TRUE` + 1)/(`FALSE`+1)))
+
+posttest_viz_2 = posttest %>% 
+  count(baseline_log_odds,variation,reg_rate,picked_v1) %>% 
+  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
+  mutate(posttest_log_odds = log((`TRUE` + 1)/(`FALSE`+1)))
+
+posttest_viz_3 = posttest %>% 
+  count(baseline_log_odds,variation,reg_rate,reg_dist,picked_v1) %>% 
+  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
+  mutate(posttest_log_odds = log((`TRUE` + 1)/(`FALSE`+1)))
+
+posttest_viz_1 %>% 
+  ggplot(aes(baseline_log_odds,posttest_log_odds,colour = reg_dist)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw() +
+  facet_wrap( ~ variation) +
+  geom_hline(yintercept = 0, lty = 1) +
+  scale_colour_colorblind()
+
+posttest_viz_2 %>% 
+  ggplot(aes(baseline_log_odds,posttest_log_odds,colour = reg_rate)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw() +
+  facet_wrap( ~ variation) +
+  geom_hline(yintercept = 0, lty = 1) +
+  scale_colour_colorblind()
+
+posttest_viz_2 %>% 
+  ggplot(aes(baseline_log_odds,posttest_log_odds,colour = reg_dist)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw() +
+  facet_wrap( ~ variation) +
+  geom_hline(yintercept = 0, lty = 1) +
+  scale_colour_colorblind()
+posttest_viz_3 %>% 
+  ggplot(aes(baseline_log_odds,posttest_log_odds,colour = reg_dist)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw() +
+  facet_wrap( ~ variation + reg_rate) +
+  geom_hline(yintercept = 0, lty = 1) +
+  scale_colour_colorblind()
+  
 # -- model -- #
 
-# fit1 = stan_glmer(picked_v1 ~ reg_rate * reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-# 
-# fit2 = stan_glmer(picked_v1 ~ reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-# 
-# fit3 = stan_glmer(picked_v1 ~ reg_rate + reg_dist + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-# 
-# fit4 = stan_glmer(picked_v1 ~ reg_dist * reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-# 
-# fit5 = stan_glmer(picked_v1 ~ reg_rate + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
+fit1 = glmer(picked_v1 ~ 1 + reg_rate * reg_dist * baseline_log_odds * variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-# save(fit1, file = 'models/fit1.Rda')
-# save(fit2, file = 'models/fit2.Rda')
-# save(fit3, file = 'models/fit3.Rda')
-# save(fit4, file = 'models/fit4.Rda')
-# save(fit5, file = 'models/fit5.Rda')
+fit2 = glmer(picked_v1 ~ 1 + reg_rate * reg_dist * baseline_log_odds + baseline_log_odds * variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-# loo_fit1 = loo(fit1)
-# loo_fit2 = loo(fit2)
-# loo_fit3 = loo(fit3)
-# loo_fit4 = loo(fit4)
-# loo_fit5 = loo(fit5)
-# 
-# save(loo_fit1, file = 'models/loo_fit1.Rda')
-# save(loo_fit2, file = 'models/loo_fit2.Rda')
-# save(loo_fit3, file = 'models/loo_fit3.Rda')
-# save(loo_fit4, file = 'models/loo_fit4.Rda')
-# save(loo_fit5, file = 'models/loo_fit5.Rda')
+fit3 = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds + baseline_log_odds * variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-load('models/fit1.Rda');load('models/fit2.Rda');load('models/fit3.Rda');load('models/fit4.Rda');load('models/fit5.Rda')
-load('models/loo_fit1.Rda');load('models/loo_fit2.Rda');load('models/loo_fit3.Rda');load('models/loo_fit4.Rda');load('models/loo_fit5.Rda')
+fit3a = glmer(picked_v1 ~ 1 + reg_rate + reg_dist + baseline_log_odds * variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-any(rhat(fit1))>1.05
-any(rhat(fit2))>1.05
-any(rhat(fit3))>1.05
-any(rhat(fit4))>1.05
-any(rhat(fit5))>1.05
+fit3b = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds + variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-loo_compare(loo_fit1,loo_fit2)
-loo_compare(loo_fit2,loo_fit3)
-loo_compare(loo_fit1,loo_fit3)
-loo_compare(loo_fit2,loo_fit4)
-loo_compare(loo_fit1,loo_fit4)
-loo_compare(loo_fit2,loo_fit5) # !
-loo_compare(loo_fit1,loo_fit5)
-loo_compare(loo_fit2,loo_fit6)
-loo_compare(loo_fit1,loo_fit6)
-loo_compare(loo_fit5,loo_fit6)
+fit4 = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds * variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-# bayesfactor(fit2,fit5)
+fit5 = glmer(picked_v1 ~ 1 + reg_rate + reg_dist + baseline_log_odds + variation + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'))
 
-fit5
-fit2
+anova(fit3,fit3a)
+anova(fit3,fit3b)
+anova(fit3,fit4)
+anova(fit3,fit5)
 
-# waic(fit5) # We recommend trying loo instead. 
-# waic(fit2) # We recommend trying loo instead. 
+exp((BIC(fit3) - BIC(fit3a))/2)
+exp((BIC(fit3) - BIC(fit3b))/2)
+exp((BIC(fit3) - BIC(fit4))/2)
+exp((BIC(fit3) - BIC(fit5))/2)
 
-# - -viz -- #
-mcmc_areas(fit2, pars = vars(reg_ratelow,reg_distreversed,baseline_log_odds,`reg_distreversed:baseline_log_odds`))
-brms::hypothesis(fit2, 'reg_distreversed:baseline_log_odds < 0')
-mcmc_areas(fit5, pars = vars(reg_ratelow,baseline_log_odds))
-# pp_check(fit2, type = 'overlaid')
-# mcmc_hist(fit2, pars = vars(reg_ratelow,reg_distreversed,baseline_log_odds,`reg_distreversed:baseline_log_odds`))
-# posterior_vs_prior(fit2, pars="beta")
-# posterior_interval(fit2) %>% 
-#   round(2)
-# mcmc_scatter(fit2, pars = c('baseline_log_odds','reg_distreversed'))
-# brms::hypothesis()
+tidy(fit3)
 
-## larger word-level predictors
+# anyway.
 
-fit7 = stan_glmer(picked_v1 ~ reg_rate + reg_dist * derivational + (1|part_id) + (1|base), family = binomial, data = posttest, cores = 8, chains = 8, iter = 3000)
-
-fit7
-mcmc_areas(fit7, pars = vars(reg_ratelow,reg_distreversed,`derivational-lik`,`derivational-zik`,`reg_distreversed:derivational-lik`,`reg_distreversed:derivational-zik`))
-
-####
-lm1 = lme4::glmer(picked_v1 ~ reg_rate + reg_dist * baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
-lm2 = lme4::glmer(picked_v1 ~ reg_rate + baseline_log_odds + (1|part_id) + (1|base), family = binomial, data = posttest)
-
-exp((BIC(lm2) - BIC(lm1))/2)
-
-broom.mixed::tidy(lm1)

@@ -200,3 +200,7 @@ d %>%
   distinct(part_id,list_number,reg_rate,reg_dist) %>% 
   count(list_number,reg_rate,reg_dist) %>% 
   kable(caption = 'List counts.')
+
+n_to_go = 84 - length(unique(d$part_id))
+
+glue('Only {n_to_go} participants to go, brother!')

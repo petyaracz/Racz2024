@@ -93,5 +93,5 @@ triangles %>%
   select(set_name,test) %>% 
   unnest(test) %>% 
   ungroup() %>% 
-  select(set_name,estimate,conf.low,conf.high) %>% 
+  select(set_name,estimate,conf.low,conf.high,p.value) %>% 
   write_tsv('baseline_triangle_acc.tsv')
