@@ -66,13 +66,15 @@ checkBuild = function(dat,sample_number){
 s = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')
 cvc = filter(s, variation == 'cselekszenek/cselekednek')
 ik = filter(s, variation == 'lakok/lakom')
+n = filter(s, variation == 'hotelban/hotelben')
 
 # -- build list -- #
 
 ik_m = buildMaster(ik)
 cvc_m = buildMaster(cvc)
+n_m = buildMaster(n)
 
-master = bind_rows(ik_m,cvc_m) %>%
+master = bind_rows(ik_m,cvc_m,n_m) %>%
   mutate(file_name = glue('{str_extract(variation, "^.*(?=/)")}_{sample_number}_{reg_rate}_{reg_dist}'))
   
 # -- order, thin -- #
@@ -80,8 +82,8 @@ master = bind_rows(ik_m,cvc_m) %>%
 master %<>% 
   ungroup() %>% 
   arrange(file_name,word_rank) %>% 
-  distinct(file_name,variation) %>% 
-  mutate(column = 1:24) %>% 
+  distinct(file_name,variation) %>%
+  mutate(column = 1:n()) %>% 
   group_by(variation) %>% 
   mutate(list_number = 0:11) %>% 
   ungroup() %>% 
