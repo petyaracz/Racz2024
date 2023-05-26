@@ -112,7 +112,8 @@ d %<>% filter(
 )
 
 # write_tsv(d, 'exp_data/esp/esp_master_lakok.tsv')
-write_tsv(d, 'exp_data/esp/esp_master_cselekszik.tsv') # !!!
+# write_tsv(d, 'exp_data/esp/esp_master_cselekszik.tsv')
+write_tsv(d, 'exp_data/esp/esp_master_hotelban.tsv')
 
 # -- checks -- #
 
