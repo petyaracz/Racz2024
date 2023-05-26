@@ -49,6 +49,8 @@ interactions = c(
 'reg_rate * variation + baseline_log_odds_jitter * reg_dist * variation',
 # This might work but with no interaction w/ variation for distxbasel which is awkward
 'reg_rate * variation + baseline_log_odds_jitter * reg_dist',
+# This could be a thing
+'reg_rate * baseline_log_odds_jitter * reg_dist + variation',
 # or we just overfit this
 'reg_rate * variation * baseline_log_odds_jitter * reg_dist'
 )
@@ -58,7 +60,7 @@ formulae = glue('picked_v1 ~ 1 + {interactions} + (1|part_id) + (1|base)')
 # -- model fitting -- #
 
 tic('fitting takes this long:')
-for (i in 1:6){
+for (i in 1:7){
   glue('fitting model {i}: {formulae[i]}...')
   fit = stan_glmer(formula = ., data = posttest, family = binomial(link = 'logit'), iter = 4000, chains = 12, cores = 12, refresh = 0)
   glue('saving model {i}...')
@@ -68,7 +70,7 @@ for (i in 1:6){
 toc()
 
 tic('loo takes this long:')
-for (i in 1:6){
+for (i in 1:7){
   glue('fitting loo {i}: {formulae[i]}...')
   fit = load(glue('models/glm/fit{i}.Rda'))
   glue('saving loo for model {i}...')
