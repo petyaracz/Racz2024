@@ -81,9 +81,10 @@ path = '~/Github/Pavlovia/hesp/data/'
 
 d = tibble(
     dat_id = dat_id,
-    record_date = str_extract(dat_id, '202[234]-[0-9]{2}-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% # aah it's another year
+    record_date = str_extract(dat_id, '202[34]-[0-1][0-9]-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% # aah it's another year
       lubridate::ymd_hm()
   ) %>% 
+  filter(record_date > '2023-05-25') %>% 
   mutate(
     data = map(dat_id, ~ read_csv(glue('{path}{.}'))),
     n_rows = map(data, ~ nrow(.))
@@ -91,7 +92,6 @@ d = tibble(
 
 d %<>%
   filter(
-    record_date > '2022-11-17',
     n_rows == 176
          )
 
