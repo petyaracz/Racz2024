@@ -1,5 +1,7 @@
 # -- header -- #
 
+set.seed(1337)
+
 setwd('~/Github/Racz2024/')
 library(tidyverse)
 library(glue)
@@ -32,6 +34,8 @@ posttest = d %>%
     reg_dist = fct_relevel(reg_dist, 'typical')
   )
 
+posttest = sample_n(posttest, n()) # shuffle for mcmc
+
 # -- jitter log odds -- #
 
 posttest$baseline_log_odds_jitter = jitter(posttest$baseline_log_odds, factor = .0001)
@@ -52,7 +56,11 @@ interactions = c(
 # This could be a thing
 'reg_rate * baseline_log_odds_jitter * reg_dist + variation',
 # or we just overfit this
-'reg_rate * variation * baseline_log_odds_jitter * reg_dist'
+'reg_rate * variation * baseline_log_odds_jitter * reg_dist',
+# this might be a thing
+'reg_rate * variation * reg_dist + baseline_log_odds_jitter',
+# also this
+'reg_rate * reg_dist + variation + baseline_log_odds_jitter'
 )
 
 formulae = glue('picked_v1 ~ 1 + {interactions} + (1|part_id) + (1|base)')
@@ -60,22 +68,22 @@ formulae = glue('picked_v1 ~ 1 + {interactions} + (1|part_id) + (1|base)')
 # -- model fitting -- #
 
 tic('fitting takes this long:')
-for (i in 1:7){
-  glue('fitting model {i}: {formulae[i]}...')
-  fit = stan_glmer(formula = ., data = posttest, family = binomial(link = 'logit'), iter = 4000, chains = 12, cores = 12, refresh = 0)
-  glue('saving model {i}...')
+for (i in 8:9){
+  print(glue('fitting model {i}: {formulae[i]}...'))
+  fit = stan_glmer(formula = formulae[i], data = posttest, family = binomial(link = 'logit'), iter = 4000, chains = 12, cores = 12, refresh = 0)
+  print(glue('saving model {i}...'))
   save(fit, file = glue('models/glm/fit{i}.Rda'))
-  glue('model {i} saved.')
+  print(glue('model {i} saved.'))
 }
 toc()
 
 tic('loo takes this long:')
-for (i in 1:7){
-  glue('fitting loo {i}: {formulae[i]}...')
-  fit = load(glue('models/glm/fit{i}.Rda'))
-  glue('saving loo for model {i}...')
+for (i in 1:9){
+  print(glue('fitting loo {i}: {formulae[i]}...'))
+  load(glue('models/glm/fit{i}.Rda'))
+  print(glue('saving loo for model {i}...'))
   loo_fit = loo(fit, k_threshold = .7, cores = 14)
   save(loo_fit, file = glue('models/loo_fit{i}.Rda'))
-  glue('loo for model {i} saved.')
+  print(glue('loo for model {i} saved.'))
 }
 toc()
