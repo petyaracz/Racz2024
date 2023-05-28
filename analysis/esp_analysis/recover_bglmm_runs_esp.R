@@ -5,7 +5,7 @@ library(tidyverse)
 library(glue)
 library(rstanarm)
 library(broom.mixed)
-library(bayestestR)
+library(brms)
 
 # load fits
 load('models/glm/fit1.Rda')
@@ -85,49 +85,12 @@ loo_fit2
 loo_fit3
 loo_compare(loo_fit2,loo_fit3)
 
-# whatever here's a plot
 
-d1 = read_tsv('exp_data/esp/esp_master_lakok.tsv')
-d2 = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
-b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
 
-library(gghalves)
-library(ggthemes)
-
-d1$part_yob = as.double(d1$part_yob)
-
-d = bind_rows(d1,d2)
-
-d = b %>% 
-  select(base,log_odds,derivational,nsyl) %>% 
-  rename(baseline_log_odds = log_odds) %>% 
-  right_join(d)
-
-posttest = d %>% 
-  filter(trial_kind == 'posttest trial') %>% 
-  mutate(
-    derivational = fct_relevel(derivational, '-szik'),
-    two_syl = nsyl == 2,
-    reg_rate = fct_relevel(reg_rate, 'high'),
-    reg_dist = fct_relevel(reg_dist, 'typical')
-  )
-
-posttest %>% 
-  count(baseline_log_odds,reg_dist,variation,base,picked_v1) %>% 
-  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
-  mutate(log_odds = log((`TRUE`+1)/(`FALSE`+1))) %>% 
-  ggplot(aes(baseline_log_odds,log_odds, colour = reg_dist)) +
-  geom_point() +
-  geom_smooth(method = 'lm') +
-  theme_bw() +
-  facet_wrap(~ variation)
-
-library(lme4)
-
-ffit1 = glmer(picked_v1 ~ 1 + variation * reg_dist * baseline_log_odds + reg_rate + (1|part_id) + (1|base), family = binomial, data = posttest)
-ffit2 = glmer(picked_v1 ~ 1 + variation + reg_dist * baseline_log_odds + reg_rate + (1|part_id) + (1|base), family = binomial, data = posttest)
-anova(ffit1,ffit2)
-tidy(ffit1,conf.int=T) %>% View
-# no sorry its probs fit2
-fit2
-# maybe test var instead of mean
+# fit2, fit3: add diagnostic file (like below) and run for waaay more iterations
+# fit_1 <- stan_glm(mpg ~ wt + qsec + am, data = mtcars,
+#                   chains = 2, cores = 2, iter = 5000,
+#                   diagnostic_file = file.path(tempdir(), "df.csv"))
+# fit2_bridge = bridgesampling::bridge_sampler(fit2)
+# fit3_bridge = bridgesampling::bridge_sampler(fit3)
+# bf(fit2_bridge,fit3_bridge)
