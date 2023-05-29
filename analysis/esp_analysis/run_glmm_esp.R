@@ -1,39 +1,4 @@
-# -- header -- #
 
-set.seed(1337)
-
-setwd('~/Github/Racz2024/')
-library(tidyverse)
-library(glue)
-library(lme4)
-
-options(MC.cores=parallel::detectCores())
-
-d1 = read_tsv('exp_data/esp/esp_master_lakok.tsv')
-d2 = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
-b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
-
-# -- wrangling -- #
-
-d1$part_yob = as.double(d1$part_yob)
-
-d = bind_rows(d1,d2)
-
-d = b %>% 
-  select(base,log_odds,derivational,nsyl) %>% 
-  rename(baseline_log_odds = log_odds) %>% 
-  right_join(d)
-
-posttest = d %>% 
-  filter(trial_kind == 'posttest trial') %>% 
-  mutate(
-    derivational = fct_relevel(derivational, '-szik'),
-    two_syl = nsyl == 2,
-    reg_rate = fct_relevel(reg_rate, 'high'),
-    reg_dist = fct_relevel(reg_dist, 'typical')
-  )
-
-posttest = sample_n(posttest, n()) # shuffle for mcmc
 
 # -- jitter log odds -- #
 
