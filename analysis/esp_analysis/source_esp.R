@@ -4,6 +4,16 @@ set.seed(1337)
 
 options(MC.cores=parallel::detectCores())
 
+# -- fun -- #
+
+newIndex = . %>% 
+  arrange(trial_index) %>% 
+  group_by(dat_id) %>% 
+  mutate(i = 1:n()) %>% 
+  ungroup()
+
+# -- read -- #
+
 d1 = read_tsv('exp_data/esp/esp_master_lakok.tsv')
 d2 = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
@@ -33,10 +43,12 @@ d = b %>%
   )
 
 posttest = d %>% 
-  filter(trial_kind == 'posttest trial')
+  filter(trial_kind == 'posttest trial') %>% 
+  newIndex
 
 esp = d %>% 
-  filter(trial_kind == 'esp trial')
+  filter(trial_kind == 'esp trial') %>% 
+  newIndex
 
 # -- gc -- #
 

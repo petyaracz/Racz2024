@@ -9,6 +9,7 @@ library(lme4)
 library(mgcv)
 library(performance)
 library(broom.mixed)
+library(parallel)
 
 # -- source -- #
 
@@ -20,51 +21,105 @@ source('analysis/esp_analysis/source_esp.R')
 
 esp$base = as.factor(esp$base)
 esp$part_id = as.factor(esp$part_id)
+esp$reg_dist_variation = as.factor(interaction(esp$reg_dist,esp$variation))
+esp$reg_rate_variation = as.factor(interaction(esp$reg_rate,esp$variation))
+esp$reg_rate_dist = as.factor(interaction(esp$reg_rate,esp$reg_dist))
+esp$reg_rate_dist_variation = as.factor(interaction(esp$reg_rate,esp$reg_dist,esp$variation))
 
-bam1 = bam(esp_match ~ reg_rate + reg_dist + variation + s(trial_index) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+# -- syntax -- #
 
-bam2 = bam(esp_match ~ reg_rate + reg_dist + variation + s(trial_index) + s(base, bs="re") + s(trial_index, part_id, bs="fs", m=1), data = esp, family = binomial("logit"), discrete = T)
-# overfit
+interaction_e = c(
+  # no interactions
+  'reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i)',
+  # variation x index
+  'reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = variation)',
+  # dist x index
+  'reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = reg_dist)',
+  # rate x index
+  'reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = reg_rate)',
+  # rate x dist x index
+  'reg_rate_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = reg_rate_dist)',
+  # variation x dist x index
+  'reg_rate + reg_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = reg_dist_variation)',
+  # rate x variation x index
+  'reg_dist + reg_rate_variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = reg_rate_variation)',
+  # rate x dist x index
+  'reg_rate_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(i, by = reg_rate_dist_variation)'
+)
 
-bam3 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(trial_index) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+formula_e = glue('esp_match ~ {interaction_e} + s(base, bs="re") + s(part_id, bs="re")')
 
-summary(bam3)
+# -- fit -- #
 
-bam4 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter, by = variation) + s(trial_index) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+fit_e = map(formula_e, ~ bam(formula = as.formula(.), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)) # gam needs 'as.formula()'
 
-summary(bam4)
+# save(fit_e, file = 'fits_e.Rda')
 
-itsadug::compareML(bam3,bam4)
+fits_e = tibble(
+  interaction_e,formula_e,fit_e
+)
 
-bam5 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter, by = reg_dist) + s(trial_index) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+# -- check -- #
 
-itsadug::compareML(bam3,bam5)
+# for (i in 1:nrow(fits_e)){
+#   plot(check_model(fits_e$fit_e[[i]])) + plot_annotation(title = fits_e$interaction[[i]])
+#   ggsave(glue('analysis/esp_analysis/diagnostics/diagnostic_e{i}.pdf'), width = 8, height = 10)
+# }
 
-bam6 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter, by = reg_rate) + s(trial_index) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+map(fits_e$fit_e, ~ gam.check(.))
 
-itsadug::compareML(bam3,bam6)
+# 8 overfit, 4 badly fit?
 
-bam7 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter, by = reg_rate) + s(baseline_log_odds_jitter, by = reg_dist) + s(baseline_log_odds_jitter, by = variation) + s(trial_index) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[2]])
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[3]])
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[4]]) # 3 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[5]])
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[6]]) # 6 better
+itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[6]]) # sameish
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[7]]) # sameish
+itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[7]])
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[8]])
 
-plot(bam7)
-# reg rate int looks similar
+plot(fits_e$fit_e[[1]])
+plot(fits_e$fit_e[[3]])
 
-bam7 = bam(esp_match ~ reg_rate + reg_dist + variation + s(trial_index, by = reg_rate) + s(trial_index, by = reg_dist) + s(trial_index, by = variation) + s(baseline_log_odds_jitter) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+summary(fits_e$fit_e[[1]])
+summary(fits_e$fit_e[[3]])
+summary(fits_e$fit_e[[6]])
 
-plot(bam7)
+# this suggests a best model which has dist * variation but only as parametric effects
 
-esp$interaction = interaction(esp$variation,esp$reg_dist)
+fit9 = bam(esp_match ~ reg_rate + reg_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
+fit10 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
+fit11 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(i, part_id, bs = "fs") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16) # run dis
 
-bam8 = bam(esp_match ~ interaction + variation + s(trial_index, by = interaction) + s(baseline_log_odds_jitter) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+itsadug::compareML(fit9,fit10)
 
-plot(bam8)
+summary(fit10)
+# Formula:
+#   esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + 
+#   s(i) + s(base, bs = "re") + s(part_id, bs = "re")
+# 
+# Parametric coefficients:
+#   Estimate Std. Error z value Pr(>|z|)    
+# (Intercept)                        0.66465    0.06185  10.747   <2e-16 ***
+#   reg_ratelow                       -0.03776    0.05994  -0.630   0.5287    
+# reg_distreversed                  -0.54667    0.05996  -9.118   <2e-16 ***
+#   variationcselekszenek/cselekednek -0.10775    0.06371  -1.691   0.0908 .  
+# ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# Approximate significance of smooth terms:
+#   edf  Ref.df Chi.sq  p-value    
+# s(baseline_log_odds_jitter)  6.960   7.966  97.72  < 2e-16 ***
+#   s(i)                         1.004   1.008  12.65 0.000385 ***
+#   s(base)                     27.841 321.000  30.59 0.103851    
+# s(part_id)                  80.570 166.000 158.89  < 2e-16 ***
 
-bam9 = bam(esp_match ~ reg_rate + reg_dist + variation + s(trial_index, by = reg_rate) + s(trial_index, by = reg_dist) + s(baseline_log_odds_jitter) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), discrete = T)
+plot(fit10)
+# if this is a linear effect for i I may well fit a glmer.
 
-itsadug::compareML(bam8,bam9)
-
-# I've seen enough. there's a variation x reg rate effect.
-
+best_fit_e = glmer(esp_match ~ 1 + reg_rate + reg_dist + variation + baseline_log_odds_jitter + i + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))
 
 ##########################################
 # posttest
@@ -72,7 +127,7 @@ itsadug::compareML(bam8,bam9)
 
 # -- syntax -- #
 
-interaction = c(
+interaction_p = c(
   # no interactions
   'reg_rate + reg_dist + baseline_log_odds_jitter + variation',
   # baseline x dist interaction should definitely show
@@ -93,30 +148,28 @@ interaction = c(
   'reg_rate * reg_dist + variation + baseline_log_odds_jitter'
 )
 
-formula = glue('picked_v1 ~ 1 + {interaction} + (1|part_id) + (1|base)')
+formula_p = glue('picked_v1 ~ 1 + {interaction} + (1|part_id) + (1|base)')
 
 # -- fit -- #
 
-fit = map(formula, ~ glmer(formula = ., data = posttest, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000))))
+fit_p = map(formula_p, ~ glmer(formula = as.formula(.), data = posttest, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000))))
 
-fits = tibble(
-  interaction,formula,fit
+fits_p = tibble(
+  interaction_p,formula_p,fit_p
 )
 
 # -- check -- #
 
 for (i in 1:9){
-  plot(check_model(fits$fit[[i]])) + plot_annotation(title = fits$interaction[[i]])
-  ggsave(glue('analysis/esp_analysis/diagnostics/diagnostic{i}.pdf'), width = 8, height = 10)
+  plot(check_model(fits_p$fit_p[[i]])) + plot_annotation(title = fits_p$interaction_p[[i]])
+  ggsave(glue('analysis/esp_analysis/diagnostics/diagnostic_p{i}.pdf'), width = 8, height = 10)
 }
 
 # more complex models look overfit, which should be no surprise to anyone
 # 7 and 8 are out for sure
 # binned residuals are slightly worrying, so once we pick the best models, we should think about random effects
-perf = compare_performance(fits$fit)
-perf %>% 
-  write_tsv('analysis/esp_analysis/diagnostics/performances.tsv')
-perf %>% 
+perf_p = compare_performance(fits_p$fit_p)
+perf_p %>% 
   select(Name,AIC,BIC,R2_conditional,R2_marginal,RMSE,Log_loss)
 
 # based on aic, bic, loss, marginal r2, overfitting info, this seems to boil down to 2 vs 3

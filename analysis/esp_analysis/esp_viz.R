@@ -59,41 +59,18 @@ b %>%
 
 # Baseline responses to nonce words center around zero. The lakok variation is clearly more poised towards + vs - than the cselekszenek variation.
 
-# People don't just pick words at random in the baseline. Let's assume two models, where one predicts responses based only on participant mean. The other based on participant mean and word mean.
+# People don't just pick words at random in the baseline. It varies across various characteristics.
 
-# participant weight
-b0 %<>% 
-  count(file_name,resp_is_first_variant) %>% 
-  logOdds(resp_is_first_variant) %>% 
-  select(file_name,log_odds) %>% 
-  rename(participant_weight = log_odds) %>% 
-  left_join(b0)
+b %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
+  distinct(base,variation,derivational,nsyl,log_odds) %>% 
+  ggplot(aes(log_odds,derivational,fill = as.factor(nsyl))) +
+  geom_vline(xintercept = 0) +
+  geom_boxplot() +
+  theme_bw() +
+  facet_wrap( ~ variation)
 
-# word weight
-b0 %<>% 
-  count(word,resp_is_first_variant) %>% 
-  logOdds(resp_is_first_variant) %>% 
-  select(word,log_odds) %>% 
-  rename(word_weight = log_odds) %>% 
-  left_join(b0)
-
-# two models
-b0 %<>% 
-  mutate(combined_weight = participant_weight + word_weight)
-
-b0 %>% 
-  ggplot(aes(combined_weight,as.double(resp_is_first_variant))) +
-  geom_smooth(method = "glm", method.args = list(family = "binomial")) +
-  theme_bw()
-
-b0 %>% 
-  ggplot(aes(participant_weight,as.double(resp_is_first_variant))) +
-  geom_smooth(method = "glm", method.args = list(family = "binomial")) +
-  theme_bw()
-
-# The combined weight is a better. If people picked words at random, word weight would not be informative. 
-# Uh I'm not sure this is true. I think so?
-
+# what happens in esp?
 
 esp %>% 
   filter(i %in% 12:54) %>% # burn-in
@@ -142,6 +119,16 @@ esp %>%
 
 # Distributions matter. For prompt words, correlation w/ baseline log odds gets worse with a reversed distribution, but only in lakok.
 
+# People are more likely to shift a word if they didn't have strong priors on what it would be doing in the first place, this remains relatively stable across the esp phase and doesn't seem to hinge on variation type.
+
+esp %>% 
+  ggplot(aes(baseline_log_odds,i,z = esp_match)) +
+  geom_bin_2d() +
+  theme_few() +
+  facet_wrap( ~ variation)
+  
+# let's take a look at the posttest.
+
 posttest %>% 
   mutate(
     reg_rate = fct_relevel(reg_rate, 'low'),
@@ -160,9 +147,11 @@ posttest %>%
 # However, the lexical distributions still matter.
 
 posttest %>% 
-  ggplot(aes(baseline_log_odds,as.double(picked_v1),colour = reg_dist)) +
+  count(base,baseline_log_odds,reg_dist,variation,picked_v1) %>% 
+  logOdds(picked_v1) %>% 
+  ggplot(aes(baseline_log_odds,log_odds,colour = reg_dist)) +
   # geom_point(alpha = .1) +
-  geom_smooth(method = "glm", method.args = list(family = "binomial")) +
+  geom_smooth(method = 'lm') +
   theme_bw() +
   facet_wrap( ~ variation)
 
