@@ -204,7 +204,7 @@ flag3 = d %>%
 if(all(flag1,flag2,flag3)){print('Checks completed successfully.')}else{print('Ruh-roh.')}
 
 # -- filters -- #
-  
+
 print('Now that we tallied everyone who finished one way or another, we need to make sure the data meet our exclusion criteria and we still have 7 people per list for each group.')
 
 ncareless = d %>% 
@@ -271,23 +271,21 @@ d2 %>%
   pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
   kable(caption = 'List counts.')
 
-print('some lists have too many people on them.')
+print('some lists have more participants than we wanted.')
 
-slurplerflous = d2 %>% 
+keep_participants = d2 %>%
+  mutate(list_number = as.double(list_number)) %>% 
   filter(trial_kind == 'esp trial') %>% 
-  distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
-  count(list_number,reg_rate,reg_dist,variation) %>% 
-  filter(n > 7) %>% 
-  left_join(d2) %>% 
-  distinct(part_id,variation,list_number,record_date) %>% 
-  arrange(variation,list_number,record_date) %>% 
-  group_by(variation,list_number) %>% 
-  mutate(row_id = 1:n()) %>%
-  filter(row_id > 7) %>% 
+  distinct(part_id,dat_id,record_date,variation,list_number) %>% 
+  arrange(list_number,variation,record_date) %>% 
+  group_by(list_number,variation) %>% 
+  mutate(id = 1:n()) %>% 
+  filter(id < 8) %>% 
   pull(part_id)
 
-d3 = d2 %>% 
-  filter(!part_id %in% slurplerflous)
+d3 = filter(d2, part_id %in% keep_participants)
+
+print("there we go:")
 
 d3 %>% 
   filter(trial_kind == 'esp trial') %>% 
@@ -295,5 +293,13 @@ d3 %>%
   count(list_number,reg_rate,reg_dist,variation) %>% 
   pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
   kable(caption = 'List counts.')
+
+print('how much data did we exclude by outlier removal for lakik and cselekszenek?')
+
+rows_left = d3 %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
+  nrow()
+rows_expected = 108 * 7 * 12 * 2
+glue('{round(rows_left/rows_expected*100)}% of observations remain.')
 
 write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
