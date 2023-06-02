@@ -14,20 +14,14 @@ newIndex = . %>%
 
 # -- read -- #
 
-d1 = read_tsv('exp_data/esp/esp_master_lakok.tsv')
-d2 = read_tsv('exp_data/esp/esp_master_cselekszik.tsv')
+d = read_tsv('exp_data/esp/esp_master_all_filtered.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
-b0 = read_tsv('exp_data/baseline/baseline_tidy.tsv')
+# b0 = read_tsv('exp_data/baseline/baseline_tidy.tsv')
 
 # -- wrangling -- #
 
-d1$part_yob = as.double(d1$part_yob)
-print("don't worry about it.")
-
 b %<>% 
   mutate(baseline_p = resp1 / (resp1+resp2))
-
-d = bind_rows(d1,d2)
 
 d = b %>% 
   select(base,log_odds,baseline_p,derivational,nsyl) %>% 
@@ -50,9 +44,7 @@ esp = d %>%
   filter(trial_kind == 'esp trial') %>% 
   newIndex
 
-# -- gc -- #
+esp = filter(esp, variation != 'hotelban/hotelben')
+esp$abs_baseline_log_odds_jitter = abs(esp$baseline_log_odds_jitter)
 
-# rm(b)
-rm(d1)
-rm(d2)
-gc()
+posttest = filter(posttest, variation != 'hotelban/hotelben')

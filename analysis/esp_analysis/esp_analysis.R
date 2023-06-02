@@ -19,6 +19,7 @@ source('analysis/esp_analysis/source_esp.R')
 # esp
 ##########################################
 
+esp = filter(esp, variation != 'hotelban/hotelben')
 esp$base = as.factor(esp$base)
 esp$part_id = as.factor(esp$part_id)
 esp$reg_dist_variation = as.factor(interaction(esp$reg_dist,esp$variation))
@@ -61,39 +62,38 @@ fits_e = tibble(
 
 # -- check -- #
 
-# for (i in 1:nrow(fits_e)){
-#   plot(check_model(fits_e$fit_e[[i]])) + plot_annotation(title = fits_e$interaction[[i]])
-#   ggsave(glue('analysis/esp_analysis/diagnostics/diagnostic_e{i}.pdf'), width = 8, height = 10)
-# }
-
 map(fits_e$fit_e, ~ gam.check(.))
 
-# 8 overfit, 4 badly fit?
+# f1 and particularly f2 seems underfit, f4 dodgy, f8 super overfit probably
 
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[2]])
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[3]])
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[4]]) # 3 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[2]]) # 2 lower aic than 1, not better fit
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[3]]) # 3 lower aic than 1, not better fit
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[4]]) 
 itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[5]])
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[6]]) # 6 better
-itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[6]]) # sameish
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[7]]) # sameish
-itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[7]])
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[6]]) # 6 lower aic than 1, better fit
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[7]])
 itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[8]])
+itsadug::compareML(fits_e$fit_e[[2]],fits_e$fit_e[[6]]) # 2 lower aic than 6, not better fit
+itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[6]]) # 3 lower aic than 6, better fit
+itsadug::compareML(fits_e$fit_e[[4]],fits_e$fit_e[[6]]) # 4 > 6
+itsadug::compareML(fits_e$fit_e[[5]],fits_e$fit_e[[6]]) # 5 > 6
+itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[2]]) # 2 > 3 or 2 == 3 in any case pick 2
 
 plot(fits_e$fit_e[[1]])
-plot(fits_e$fit_e[[3]])
+plot(fits_e$fit_e[[2]])
 
-summary(fits_e$fit_e[[1]])
-summary(fits_e$fit_e[[3]])
-summary(fits_e$fit_e[[6]])
+summary(fits_e$fit_e[[2]])
 
 # this suggests a best model which has dist * variation but only as parametric effects
 
 fit9 = bam(esp_match ~ reg_rate + reg_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
 fit10 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
-fit11 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(i, part_id, bs = "fs") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16) # run dis
+fit11 = bam(esp_match ~ reg_rate_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
+fit12 = bam(esp_match ~ reg_rate_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
 
-itsadug::compareML(fit9,fit10)
+itsadug::compareML(fit10,fit9)
+itsadug::compareML(fit10,fit11)
+itsadug::compareML(fit10,fit12)
 
 summary(fit10)
 # Formula:
@@ -102,28 +102,40 @@ summary(fit10)
 # 
 # Parametric coefficients:
 #   Estimate Std. Error z value Pr(>|z|)    
-# (Intercept)                        0.66465    0.06185  10.747   <2e-16 ***
-#   reg_ratelow                       -0.03776    0.05994  -0.630   0.5287    
-# reg_distreversed                  -0.54667    0.05996  -9.118   <2e-16 ***
-#   variationcselekszenek/cselekednek -0.10775    0.06371  -1.691   0.0908 .  
+# (Intercept)                        0.68593    0.06256  10.964   <2e-16 ***
+#   reg_ratelow                       -0.08149    0.06063  -1.344    0.179    
+# reg_distreversed                  -0.52480    0.06066  -8.651   <2e-16 ***
+#   variationcselekszenek/cselekednek -0.09722    0.06458  -1.506    0.132    
 # ---
 #   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 # 
 # Approximate significance of smooth terms:
 #   edf  Ref.df Chi.sq  p-value    
-# s(baseline_log_odds_jitter)  6.960   7.966  97.72  < 2e-16 ***
-#   s(i)                         1.004   1.008  12.65 0.000385 ***
-#   s(base)                     27.841 321.000  30.59 0.103851    
-# s(part_id)                  80.570 166.000 158.89  < 2e-16 ***
+# s(baseline_log_odds_jitter)  6.876   7.918 104.26  < 2e-16 ***
+#   s(i)                         1.002   1.004  11.14 0.000854 ***
+#   s(base)                     22.012 310.000  23.73 0.158376    
+# s(part_id)                  72.544 164.000 130.59  < 2e-16 ***
 
 plot(fit10)
 # if this is a linear effect for i I may well fit a glmer.
 
-best_fit_e = glmer(esp_match ~ 1 + reg_rate + reg_dist + variation + baseline_log_odds_jitter + i + (1|part_id) + (1|base), data = posttest, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))
+esp$abs_baseline_log_odds_jitter = abs(esp$baseline_log_odds_jitter)
+
+best_fit_e = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), data = esp, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))
+best_fit_e_2 = glmer(esp_match ~ 1 + reg_rate + reg_dist + scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), data = esp, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))
+
+anova(best_fit_e,best_fit_e_2)
+compare_performance(best_fit_e,best_fit_e_2)
+
+# best fit:
+
+tidy(best_fit_e, conf.int = T)
 
 ##########################################
 # posttest
 ##########################################
+
+posttest = filter(posttest, variation != 'hotelban/hotelben')
 
 # -- syntax -- #
 
@@ -148,7 +160,7 @@ interaction_p = c(
   'reg_rate * reg_dist + variation + baseline_log_odds_jitter'
 )
 
-formula_p = glue('picked_v1 ~ 1 + {interaction} + (1|part_id) + (1|base)')
+formula_p = glue('picked_v1 ~ 1 + {interaction_p} + (1|part_id) + (1|base)')
 
 # -- fit -- #
 
@@ -173,17 +185,18 @@ perf_p %>%
   select(Name,AIC,BIC,R2_conditional,R2_marginal,RMSE,Log_loss)
 
 # based on aic, bic, loss, marginal r2, overfitting info, this seems to boil down to 2 vs 3
-fit2 = fits$fit[[2]]
-fit3 = fits$fit[[3]]
+fit1 = fits_p$fit_p[[1]]
+fit2 = fits_p$fit_p[[2]]
+fit3 = fits_p$fit_p[[3]]
 
+binned_residuals(fit1)
 binned_residuals(fit2)
 binned_residuals(fit3)
-# some of this might be the bad participants that we will rerun anyway
 
 test_bf(fit1,fit2)
 test_bf(fit2,fit3)
-anova(fit2,fit3)
 anova(fit2,fit1)
+anova(fit2,fit3)
 
 # this is pretty clearly going for fit2
 
@@ -198,59 +211,20 @@ fit2c = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + v
               control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
               ))
 # fit2c is overfit right out of the box
-binned_residuals(fit2c) # this is in fact worse
-fit3b = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter * variation + (1 + baseline_log_odds_jitter|part_id) + (1|base), 
-              data = posttest, 
-              family = binomial(link = 'logit'), 
-              control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
-              ))
-fit3c = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter * variation + (1|part_id) + (1 + reg_dist |base), 
-              data = posttest, 
-              family = binomial(link = 'logit'), 
-              control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
-              ))
-# same for fit3c
-binned_residuals(fit3c)
 
-# sum: BIC supports the simpler model, goodness-of-fit and AIC support the more complex model.
+test_bf(fit2,fit2b)
+anova(fit2,fit2b)
+binned_residuals(fit2b)
 
-# eh
+# okay right fit2b seems overfit and doesn't really help with anything.
+# why residuals? distribution not a good match? unseen variation?
 
-# cv
-posttest %<>% 
-  sample_n(n()) 
-training = posttest[1:7500,]  
-test = posttest[7501:9180,]  
+# anyway.
 
-fit2t = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + baseline_log_odds_jitter|part_id) + (1|base), 
-              data = training, 
-              family = binomial(link = 'logit'), 
-              control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
-              ))
-fit3t = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter * variation + (1 + baseline_log_odds_jitter|part_id) + (1|base), 
-              data = training, 
-              family = binomial(link = 'logit'), 
-              control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
-              ))
-cor(test$picked_v1,predict(fit2t, test, type = 'response'))
-cor(test$picked_v1,predict(fit3t, test, type = 'response'))
-
-# jaj
+# best model:
 
 tidy(fit2, conf.int = T) %>%
   filter(effect == 'fixed') %>% 
   select(term,estimate,conf.low,conf.high)
 
-tidy(fit3, conf.int = T) %>%
-  filter(effect == 'fixed') %>% 
-  select(term,estimate,conf.low,conf.high)
-
-## summary
-
-# there are three meaningful possibilities
-# (1) no interaction. esp fits, posttest aic, bic, loss say otherwise
-# (2) there is baseline x dist x variation interaction. esp fits, posttest aic, loss support this
-# (3) there is only baseline x dist interaction, lakok and cselekszenek are the same. posttest bf / bic says this. also cv and probably bayesian GLM, but I'm not super sure about what that does exactly
-
-# based on aic, loss, esp: variation x dist effect.
-# based on bic: 
+plot(effects::allEffects(fit2))

@@ -8,7 +8,7 @@ library(magrittr)
 library(glue)
 library(ggthemes)
 library(gghalves)
-
+library(patchwork)
 
 # -- fun -- #
 
@@ -29,35 +29,32 @@ cloudPlot = function(dat,var){
     coord_flip()
 }
 
-newIndex = . %>% 
-  arrange(trial_index) %>% 
-  group_by(dat_id) %>% 
-  mutate(i = 1:n()) %>% 
-  ungroup()
-
 # -- source -- #
 
 source('analysis/esp_analysis/source_esp.R')
-
-# -- wranglë -- #
-
-esp %<>% 
-  newIndex()
-
-posttest %<>% 
-  newIndex()
 
 # -- viz -- #
 
 b %>% 
   filter(variation != 'hotelban/hotelben') %>% 
   distinct(base,variation,log_odds) %>% 
-  ggplot(aes(log_odds,variation)) +
-  geom_vline(xintercept = 0) +
-  geom_boxplot() +
-  theme_bw()
+  cloudPlot(variation)
 
-# Baseline responses to nonce words center around zero. The lakok variation is clearly more poised towards + vs - than the cselekszenek variation.
+# Baseline responses to nonce words center around zero. The lakok variation is clearly more poised towards + vs - than the cselekszenek variation. It is also more bimodal, probably because both stems of different lengths as well as different derivational endings pattern differently:
+
+p1 = b %>% 
+  filter(variation == 'lakok/lakom') %>% 
+  distinct(base,derivational,log_odds) %>% 
+  cloudPlot(as.character(derivational)) +
+  xlab('derivational suffix')
+
+p2 = b %>% 
+  filter(variation == 'lakok/lakom') %>% 
+  distinct(base,nsyl,log_odds) %>% 
+  cloudPlot(as.character(nsyl)) +
+  xlab('n syllables')
+
+p1 + p2 
 
 # People don't just pick words at random in the baseline. It varies across various characteristics.
 
@@ -73,6 +70,7 @@ b %>%
 # what happens in esp?
 
 esp %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
   filter(i %in% 12:54) %>% # burn-in
   mutate(
     reg_rate = fct_relevel(reg_rate, 'low'),
@@ -84,30 +82,37 @@ esp %>%
   geom_vline(xintercept = 0) +
   geom_boxplot() +
   theme_bw() +
-  facet_wrap( ~ variation, ncol = 2)
+  facet_wrap( ~ variation, ncol = 2) +
+  xlab('log odds match coplayer in ESP')
 
 # We look at the log odds of matching the co-player in the ESP phase. We only check the last 80% of the ESP phase to skip "burn-in".
-# For lakok, obvious distinctions across the four categories. For cselekszenek, much less pronounced.
+# Typical coplayers are easier to match than reversed ones. Interestingly, "high" (== lots of variant 1) seems easier than "low" (== lots of variant 2).
+# For lakok, more obvious distinctions across the four categories. For cselekszenek, much less pronounced.
 
 esp %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
   ggplot(aes(i,as.double(esp_match), colour = interaction(reg_rate,reg_dist))) +
   geom_smooth(method = "glm", method.args = list(family = "binomial")) +
   theme_bw() +
   facet_wrap( ~ variation, ncol = 2) +
-  scale_colour_colorblind()
+  scale_colour_colorblind() +
+  ylab('p match coplayer in esp (logistic regression curves)')
 
 # Learning trajectories are also different. For lakok, there is little learning in low typical, lot of learning in low reversed, the other two in between (with different intercepts). This is in part due to how much people like variant 1 in the first place (as seen in the baseline distributions). But the typical / reversed difference says that lexical distributions also matter: people have a lexical distribution they need to converge away from. For cselekszenek, there is some learning going on, but it is smeared overall. Low typical seems like the hardest category to learn, combined with the fact that people are already slightly good at it.
 
 esp %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
   ggplot(aes(i,as.double(picked_v1), colour = interaction(reg_rate,reg_dist))) +
   geom_smooth(method = "glm", method.args = list(family = "binomial")) +
   theme_bw() +
   facet_wrap( ~ variation, ncol = 2) +
-  scale_colour_colorblind()
+  scale_colour_colorblind() +
+  ylab('p picks variant 1 in esp (logistic regression curves)')
 
 # Differences across variation are apparent in what people converge to. For lakok, reaching the target set by reg rate (lots of variant 1 or few variant 1) is made harder by reg distribution. For cselekszenek, this isn't the case.
 
 esp %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
   filter(i %in% 12:54) %>% # burn-in
   count(base,baseline_log_odds,reg_dist,variation,picked_v1) %>% 
   logOdds(picked_v1) %>% 
@@ -130,23 +135,21 @@ esp %>%
 # let's take a look at the posttest.
 
 posttest %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
   mutate(
     reg_rate = fct_relevel(reg_rate, 'low'),
     reg_dist = fct_relevel(reg_dist, 'reversed')
   ) %>%
   count(picked_v1,reg_rate,variation,part_id) %>% 
   logOdds(picked_v1) %>% 
-  ggplot(aes(log_odds,reg_rate)) +
-  geom_vline(xintercept = 0) +
-  geom_boxplot() +
-  theme_bw()# +
-  # facet_wrap( ~ variation, ncol = 2)
+  cloudPlot(reg_rate)
 
 # The reg rate effects persist for the post test. There's no real difference here across variation or reg dist.
 
 # However, the lexical distributions still matter.
 
 posttest %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
   count(base,baseline_log_odds,reg_dist,variation,picked_v1) %>% 
   logOdds(picked_v1) %>% 
   ggplot(aes(baseline_log_odds,log_odds,colour = reg_dist)) +
@@ -156,3 +159,5 @@ posttest %>%
   facet_wrap( ~ variation)
 
 # We've seen that, in esp, the rate of convergence to the desired outcome (low or high rate of use for variant 1) is mediated by reg dist. The use of a verb in esp correlates with its use in the baseline. This is less true for the reversed distribution, where participant expectations are overwritten. But this is only happening in the lakok category, possible because there were relatively few participant expectations for cselekszenek in the first place. We see the same thing in the posttest.
+
+# The question is whether this apparent difference can be recovered by null hypothesis testing. Maybe the difference between lakok/lakom and cselekszenek/cselekednek across reg dist for the outcome variable (both in esp and posttest) is not strong enough for us to trust it.
