@@ -163,7 +163,9 @@ d %>%
 bad_ids = c(
   'hungarian-esp_esp_participant_SESSION_2023-05-09_10h49.20.190.csv',
   'hungarian-esp_esp_participant_SESSION_2023-05-26_20h45.16.179.csv',
-  'hungarian-esp_esp_participant_SESSION_2023-05-26_21h17.52.720.csv'
+  'hungarian-esp_esp_participant_SESSION_2023-05-26_21h17.52.720.csv',
+  'hungarian-esp_esp_participant_SESSION_2023-05-26_21h17.52.720.csv',
+  'hungarian-esp_esp_participant_SESSION_2023-06-06_18h33.41.94.csv'
 )
 
 d %<>% filter(!dat_id %in% bad_ids)
@@ -202,6 +204,15 @@ flag3 = d %>%
   any()
 
 if(all(flag1,flag2,flag3)){print('Checks completed successfully.')}else{print('Ruh-roh.')}
+
+# -- check list numbers -- #
+
+d %>% 
+  filter(trial_kind == 'esp trial',variation == 'hotelban/hotelben') %>% 
+  distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
+  count(list_number,reg_rate,reg_dist,variation) %>% 
+  pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
+  kable(caption = 'List counts.')
 
 # -- filters -- #
 
@@ -302,4 +313,4 @@ rows_left = d3 %>%
 rows_expected = 108 * 7 * 12 * 2
 glue('{round(rows_left/rows_expected*100)}% of observations remain.')
 
-write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
+# write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
