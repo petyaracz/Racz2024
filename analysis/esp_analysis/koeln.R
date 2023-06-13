@@ -1,3 +1,5 @@
+library(knitr)
+
 ik = read_tsv('resource/real_words/ik_verbs/ikes_pairs_webcorpus2.tsv')
 
 ikb = ik %>% 
@@ -48,6 +50,25 @@ ikex %>%
   relocate(rank, .before = base) %>% 
   kable
 
+
+posttest %>% 
+  filter(variation == 'lakok/lakom',base %in% ikex$base,reg_dist == 'typical') %>% 
+  count(base,reg_dist,baseline_log_odds,picked_v1) %>% 
+  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
+  mutate(posttest_log_odds = log((`TRUE` + 1)/(`FALSE` + 1))) %>% 
+  select(-`TRUE`,-`FALSE`) %>% 
+  ggplot(aes(baseline_log_odds,posttest_log_odds,label = base)) +
+  # geom_line(lty = 3, colour = 'lightgrey') +
+  geom_label(position = position_jitter()) +
+  theme_few() +
+  # scale_colour_colorblind() +
+  xlab('baseline preference for variant 1 (log odds)') +
+  ylab('post test preference for variant 1 (log odds)') +
+  labs(colour = 'co-player distribution') +
+  ggtitle('Typical co-player')
+
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic8a.png', width = 7, height = 6)
+
 posttest %>% 
   filter(variation == 'lakok/lakom',base %in% ikex$base) %>% 
   count(base,reg_dist,baseline_log_odds,picked_v1) %>% 
@@ -61,9 +82,10 @@ posttest %>%
   scale_colour_colorblind() +
   xlab('baseline preference for variant 1 (log odds)') +
   ylab('post test preference for variant 1 (log odds)') +
-  labs(colour = 'co-player distribution')
+  labs(colour = 'co-player distribution') +
+  ggtitle('Typical and reversed co-player')
 
-ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic8.png', width = 9, height = 6)
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic8b.png', width = 9, height = 6)
 
 v = read_tsv('resource/webcorpus2freqlist/verb_forms.tsv.gz')
 

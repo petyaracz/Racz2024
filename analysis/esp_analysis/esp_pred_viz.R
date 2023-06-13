@@ -94,7 +94,8 @@ espIndex = function(dat){
 esp %>% 
   group_by(i) %>% 
   espIndex +
-  ggtitle('Mean trial match with co-player')
+  ggtitle('Mean trial match with co-player') +
+  xlab('Matching trial number')
 
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic1.pdf', width = 8, height = 4)
 
@@ -102,22 +103,34 @@ p1 = esp %>%
   group_by(i,reg_rate) %>% 
   espIndex +
   facet_wrap( ~ reg_rate, nrow = 1) +
-  ylim(.4,.7)
+  ylim(.4,.7) +
+  xlab('Matching trial number')
 p2 = esp %>% 
   group_by(i,reg_dist) %>% 
   espIndex +
   facet_wrap( ~ reg_dist, nrow = 1) +
   ylim(.4,.7) +
-  theme(axis.title.y = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
+  theme(axis.title.y = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank()) +
+  xlab('Matching trial number')
 p3 = esp %>% 
   group_by(i,var) %>% 
   espIndex +
   facet_wrap( ~ var, nrow = 1) +
   ylim(.4,.7) +
-  theme(axis.title.y = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
+  theme(axis.title.y = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank()) +
+  xlab('Matching trial number')
 
-p1 + p2 + p3 + plot_annotation(title = 'Mean trial match with co-player')
+p1 + theme(panel.background = element_rect(fill = 'lightgrey')) + p2 + theme(panel.background = element_rect(fill = 'lightgrey')) + p3 + theme(panel.background = element_rect(fill = 'lightgrey')) + plot_annotation(title = 'Mean trial match with co-player')
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic2.pdf', width = 8, height = 4)
+
+p1 + p2 + theme(panel.background = element_rect(fill = 'lightgrey')) + p3 + theme(panel.background = element_rect(fill = 'lightgrey')) + plot_annotation(title = 'Mean trial match with co-player')
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic3.pdf', width = 8, height = 4)
+
+p1 + theme(panel.background = element_rect(fill = 'lightgrey')) + p2 + p3 + theme(panel.background = element_rect(fill = 'lightgrey')) + plot_annotation(title = 'Mean trial match with co-player')
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic4.pdf', width = 8, height = 4)
+
+p1 + theme(panel.background = element_rect(fill = 'lightgrey')) + p2 + theme(panel.background = element_rect(fill = 'lightgrey')) + p3 + plot_annotation(title = 'Mean trial match with co-player')
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic5.pdf', width = 8, height = 4)
 
 esp %>% 
   group_by(base,variation,reg_dist,baseline_log_odds) %>% 
@@ -129,7 +142,7 @@ esp %>%
   facet_wrap( ~ reg_dist) +
   xlab('baseline preference for variant 1 (log odds)') +
   ylab('esp preference for variant 1 (p)') +
-  ggtitle('Mean word match with co-player across\nword baseline log odds and\nregularisation distribution in ESP')
+  ggtitle('Mean word match with co-player across\nword baseline log odds and\nregularisation distribution in Matching task')
 
 # chef's kiss
 
