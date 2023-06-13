@@ -1,0 +1,235 @@
+---
+title: 'Supplementary Information: Learning Salient Morphological Variation'
+author: "Rácz, Péter"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FALSE, fig.path = 'figures/', fig.width = 8, fig.height = 8)
+
+set.seed(1337)
+
+library(tidyverse)
+library(knitr)
+
+b = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy_proc.tsv')
+bd = read_tsv('~/Github/Racz2024/exp_data/baseline/baseline_tidy.tsv')
+d = read_tsv('~/Github/Racz2024/exp_data/esp/esp_master_all_filtered.tsv')
+```
+
+# Structure
+
+There were three experiments. All experiments were coded in javascript and run remotely on the participant's home computer. The workhorse of the experiments was the written binary forced choice trial, in which you see a written prompt and you have to finish it with one of two choices. 
+
+The `baseline` experiment was used to benchmark the stimuli with one sample of participants, so that we know that the participant pool prefers variant 1 for word x but variant 2 for word y. 
+
+The `matching` experiment (referenced as `esp`, after extra-sensory perception, in the file structure) was run with a second set of participants. Its first half was a pretend game with a second player. The two of you have to pick the same ending for each prompt. Since the second player is inflexible, you only succeed in the game if you anticipate their responses. Its second half was similar to the baseline experiment in that you have to pick choices to finish prompts alone. This tests whether the patterns you learned in the first half persist once the second player disappears.
+
+The `integration` experiment was run with a third set of participants. Its first part is the `matching` experiment, with the matching game and the immediate post-test. It also involved a second post-test, after a period of sleep.
+
+The main questions of the paradigm are: Can people learn the morphological variations fed to them in the matching game? Does this knowledge persist and influence their responses in the immediate post test? Does it persist and influence responses in the second post test, after considerable time has passed?
+
+# Stimuli
+
+There are three sets of stimuli, variable patterns from Hungarian morphology. `Baseline` participants see examples from all see. `Matching game` participants only see one set of stimuli throughout.
+
+## Sets of variation
+
+We call the first variation `levelling`. It involves verbal inflection. Hungarian inflects verbs with definite and indefinite objects differently. The `1sg.pres.indef` of some verbs varies between the `-k` inflectional suffix (which is the default for this exponent) and the `-m` suffix (which is otherwise the `1sg.pres.def` suffix) -- see examples 1-4. Levelling is confined to one verb class (verbs that end in `-ik` in the canonical form, the `3sg.pres.indef`) and one paradigm slot, not appearing outside the `1sg.pres.indef`. 
+
+(1) **Nézem az almát.**
+`watch.1sg.pres.def the apple.acc`
+I watch the apple.
+
+(2) **Nézek egy almát.**
+`watch.1sg.pres.indef an apple.acc`
+I watch an apple.
+
+(3) **Eszem az almát.**
+`eat.1sg.pres.def an apple.acc`
+I eat the apple.
+
+(4) **Eszek/eszem egy almát.**
+`eat.1sg.pres.indef an apple.acc`
+I eat an apple.
+
+Many frequent verbs and many derivational suffixes are in the `-ik` category, meaning that levelling is productive and applies to a large number of frequent forms. It shows structured variation, sensitive to derivational morphology, frequency, and form-based similarity. It has no clear phonotactic or morphophonological triggers, any verb can end in `-k` or `-m` (as they do otherwise in the `indef` and the `def`, respectively). It is also has second-order indexicality: the neutralising `-m` variant is seen as educated, "proper" use ([Rácz 2019](https://www.jstor.org/stable/26863550)). A turn-of-the-century English analogy would be variation between `will` and `shall` in the first person, where `shall` was seen as more formal and educated but was also more likely to stand with certain more common verbs rather than others.
+
+The second variation is called `vowel deletion`. It also involves verbal inflection and is also confined to `-ik` verbs. These verbs end in two possible templates: CCik and CVCik. In certain cases, the vowel is deleted: Some verbs have a fixed CC template, others a fixed CVC template. Some verbs vary between CC and CVC across different paradigm slots (examples 5-6). Some verbs vary between CC and CVC in the same paradigm slot (example 7). This can be different paradigm slots for different verbs. Some instances of vowel deletion bring with themselves a change in the second consonant (example 7). Some cases of variation are lexicalised (example 8) ([Rácz, Rebrus, \& Törkenczy 2018](https://www.degruyter.com/document/doi/10.1515/cllt-2018-0014/html)).
+
+(5) **Felsöpör.**
+`perf.sweep.3sg.pres.indef`
+(S)he sweeps up.
+
+(6) **Felsöpri.**
+`perf.sweep.3sg.pres.def`
+(S)he sweeps it up.
+
+(7) **Nem tudják, mit cselekszenek/cselekednek.**
+`neg know.2pl.pres.def what do.2pl.pres.indef`
+They know not what they do.
+
+(8) **Ma az áldozatokra emlékezünk/emlékszünk.**
+`today the victim.pl.loc remember/commemorate.2pl.pres.indef`
+Today we remember/honour the victims.
+
+Variation is partly phonotactically and partly morphophonologically motivated. Certain pairs of consonants cannot occur adjacently in the stem unless they can be resyllabified, and this interacts with restrictions on the linking vowel in the suffix. In some verbs, this interaction leads to variable vowel deletion. In others, it cannot be resolved and results in morphological defectivity ([Rebrus \& Törkenczy 2009](https://www.researchgate.net/profile/Miklos-Toerkenczy/publication/299131111_Covert_and_overt_defectiveness_in_paradigms/links/56eee47608ae59dd41c7082b/Covert-and-overt-defectiveness-in-paradigms.pdf)). While subject to some metalinguistic awareness, vowel deletion does not carry any clear second-order indices and has not been discussed as a sociolinguistic marker in Hungarian.
+
+The third variation is called `front harmony`. Hungarian has vowel harmony: in most cases, the vowel in a suffix has to match the last vowel in the stem in both frontedness and roundness (examples 9-10). Some stem vowels are neutral, meaning that they do not determine the suffix vowel: Vowel harmony "skips" them and matches the suffix vowel to the preceding vowel in the stem (example 11). The vowel `e` is variably neutral: a stem with a back vowel and `e` can select a front suffix (matching `e`) or a back suffix (skipping `e` and matching the preceding back vowel) (example 12).
+
+(9) **fójerben**
+`foyer.loc`
+In the foyer.
+
+(10) **garázsnak**
+`garage.dat`
+To the garage.
+
+(11) **partival**
+`party.ins`
+With the party.
+
+(12) **hotelra/hotelre**
+`hotel.loc`
+On the hotel.
+
+Hungarian vowel harmony and its triggers of variation have seen extensive scrutiny in the theoretical linguistics literature (see e.g. (Hayes, Siptár, Zuraw, \& Londe 2009)[https://www.jstor.org/stable/40492955]).
+
+## Experimental stimuli
+
+I compiled a frequency list from the morphologically disambiguated (Hungarian Webcorpus 2)[https://hlt.bme.hu/en/resources/webcorpus2]. This was used to curate reference lists of existing forms for the three variable sets (scripts/build_words/build_real_list/build_real_word_lists/R). (In the scripts, levelling is called `ik`, vowel deletion is called `ep`, and front harmony is called `vh`.) The reference lists were generated by creating variable forms by hand, and cross-referencing them with the frequency list and a (spelling dictionary)[https://github.com/laszlonemeth/magyarispell].
+
+The next step was to use the reference sets to generate nonce forms for each variable sets. Because both vowel deletion and front harmony involve longer dependencies in the CV skeleton, off-the-shelf ngram models were not sufficient to generate nonce forms. Instead, I wrote a simple grammar to break up the words on the reference list to syllable-based units and generate noun and verb forms and checked the results by hand. The resulting lists were filtered so that each nonce word in each set (levelling, vowel deletion, front harmony) had at an edit distance of 2 or more with words in the reference set and with each other (scripts/build_words/build_nonce/list/*). Edit distance was based on a phonemic transcription of contrastive segments (as the language has digraphs in the orthography).
+
+The final stimuli list was further restricted to vary across set dimensions. For levelling, the paradigm slot was set: this variation is restricted to `1sg.indef`. Each nonce form had a one or bisyllabic stem and a derivational suffix. Hungarian verbs are a closed class, and new verbs enter the language via derivational morphology, using one of several possible derivational suffixes (see examples 13-15).
+
+(13) **guglizik**
+`google.v.der.3sg.pres.indef`
+(S)he googles.
+
+(14) **dúmozik**
+`doom.v.der.3sg.pres.indef`
+(S)he plays the video game Doom..v.der.3sg.pres.indef
+
+(15) **solymászik**
+`falcon.v.der.3sg.pres.indef`
+(S)he falcons.
+
+A set of examples for levelling can be seen in Table 1.
+
+```{r nonce_examples_1}
+b %>% 
+  filter(variation == 'lakok/lakom') %>% 
+  mutate(infl = '1sg') %>% 
+  group_by(derivational,nsyl,infl) %>% 
+  select(base,variant1,variant2,derivational,nsyl,infl) %>% 
+  sample_n(1) %>% 
+  kable('simple', caption = 'Levelling: example stimuli')
+```
+
+For vowel deletion, which occurs across many paradigm slots, variation was restricted to the first, second, or third person of the plural present indefinite. Otherwise, the structure was similar to levelling, with mono- or bisyllabic stems and the same three derivational suffixes. A set of examples for vowel deletion can be seen in Table 2.
+
+```{r nonce_examples_2}
+
+b %>% 
+  filter(variation == 'cselekszenek/cselekednek') %>% 
+  mutate(infl = case_when(
+    suffix == 'ünk' ~ '1pl',
+    suffix == 'nek' ~ '2pl',
+    suffix == 'tek' ~ '3pl'
+  )) %>% 
+  group_by(derivational,nsyl,infl) %>% 
+  select(base,variant1,variant2,derivational,nsyl,infl) %>% 
+  sample_n(1) %>% 
+  kable('simple', caption = 'Vowel deletion: example stimuli')
+```
+
+For front harmony, all stems were bisyllabic, with a back vowel and the variable neutral vowel `e` or `é`. Many paradigm slots of the case system show variation. Here, it was restricted to the inessive, the dative, and the adessive case. A set of examples for front harmony can be seen in Table 3.
+
+```{r nonce_examples_3}
+
+b %>% 
+  filter(variation == 'hotelban/hotelben') %>% 
+  mutate(decl = case_when(
+    suffix == 'ban' ~ 'in',
+    suffix == 'nak' ~ 'dat',
+    suffix == 'nál' ~ 'ad'
+  )) %>% 
+  group_by(vowel,decl) %>% 
+  select(base,variant1,variant2,vowel,decl) %>% 
+  sample_n(1) %>% 
+  kable('simple', caption = 'Vowel deletion: example stimuli')
+```
+
+Three sets of 162 forms each were created, balancing across the restrictions above. For each nonce word in each variable set, there are two possible variant choices: `-k` or `-m` for levelling, `cc` (vowel deleted) or `cvc` (vowel in situ) for vowel deletion, and back vowel or front vowel in suffix for front harmony.
+
+# Baseline task
+
+## Stimuli
+
+Each set of 162 stimuli were split to three lists. Each participant was randomly given one list for each variable set (levelling, vowel deletion, front harmony), 162 stimuli in total, in random order, not in blocks. Each stimulus was embedded in a prompt that the participant had to complete using one of two choices. The prompt was fixed across variable set and inflectional or declension suffix. The prompt ending unequivocally selects for a specific verb/noun complement. The two variants of this complement are specified as the two alternatives in the forced choice task. Example prompts can be seen in Table 4.
+
+```{r eval = F}
+b %>% 
+  group_by(variation,suffix) %>% 
+  sample_n(1) %>% 
+  ungroup() %>% 
+  select(variation,carrier_sentence,target_sentence) %>% 
+  kable('simple')
+```
+
+Prompts across variation and suffix
+
+variation        prompt                                                       translation          
+---------------  -----------------------------------------------------------  -------------------------
+levelling        Te bizony sokat bivégszel. Én is sokat...                    You do frequently VERB. I also frequently...
+vowel deletion   János imád brivepedni, ezért sokat brivepszik. Mi ritkán...  John loves to CVC VERB, so he often CC VERB. We rarely...           
+vowel deletion   János imád bribékedni, ezért sokat bribékszik. Ti ritkán...  John loves to CVC VERB, so he often CC VERB. You rarely...           
+vowel deletion   János imád döjözni, ezért sokat döjlik. Ők ritkán...         John loves to CVC VERB, so he often CC VERB. They rarely...    
+front harmony    Ez itt egy ítens. Ott vagyunk a...                           This is a NOUN. We are at the...
+front harmony    Ez itt egy vurnel. Elneveztem a kutyámat...                  This is a NOUN. I named my dog...
+front harmony    Ez itt egy trapszegy. Nincs is jobb egy jó...                This is a NOUN. Nothing better than a good...
+
+## Participants
+
+```{r baseline_sum}
+b1 = length(unique(bd$file_name))
+b2 = bd %>% 
+  distinct(file_name, `Mi a nemed?`) %>% 
+  count(`Mi a nemed?`) %>% 
+  filter(`Mi a nemed?` == 'nő') %>% 
+  pull(n)
+b3 = bd %>% 
+  distinct(file_name, `Melyik évben születtél?`) %>% 
+  summarise(median = 2022 - median(`Melyik évben születtél?`, na.rm = T)) %>% 
+  pull(median)
+b4 = range(b$resp1+b$resp2)
+b5 = median(b$resp1+b$resp2)
+b6 = bd %>% 
+  group_by(file_name) %>% 
+  summarise(sum = sum(keyboard_input.rt)/60) %>% 
+  summarise(median = median(sum))
+
+```
+
+`r b1` participants, `r b2` women, median age = `r b3` took part in the baseline experiment in early 2022, participating for course credit. 
+
+## Procedure
+
+The task was coded in (psychojs)[https://www.sciencedirect.com/science/article/pii/S0165027006005772] and hosted on (Pavlovia)[pavlovia.org]. Participants were instructed to finish prompts that contain words that might be unfamiliar to them. They were asked to respond as fast as possible but take time to read the prompts. An example preceded the trials.
+
+## Results
+
+Participants completed the task in a median `r b6` minutes. Given the randomisation, the number of responses per nonce word was not the same. Participants gave `r b4[1]`--`r b4[2]` responses to each nonce form, with a median of `r b5`.
+
+For each nonce form, I calculated the log odds of the counts of participants who picked variant 1 and those who picked variant 2.
+
+## Data and code
+
+Code used to set up and process the experiment is in `scripts/baseline_exp`. The code to run the experiment is in `interface/hesp_baseline.zip`. Raw data are in `exp_data/raw`, tidy data are in `exp_data/baseline`.
+
+# Matching task
+
+## Stimuli
