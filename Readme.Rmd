@@ -358,16 +358,42 @@ Participants who only picked the left button or the right button were to be excl
 
 `r 18144-nrow(d)` trials or `r (1-(nrow(d)/18144))*100`% of all trials were dropped. This is a relatively high number. This is likely both because the task was difficult and because participants completed it in an uncontrolled environment, both contributing to higher variability. Participants completed the matching game and the post test in 10-15 minutes.
 
+### Matching game
+
 We fit a generalised additive mixed model ([Wood 2023](https://cran.r-project.org/web/packages/mgcv/index.html)) on the matching data. The outcome variable was agreement with the co-player. The predictors were trial index, rate of use of variant 1 (high / low), distribution of use of variant 1 (typical / atypical), type of variation (levelling / vowel deletion), and the log odds of the number of variant 1 and variant 2 responses to the target form in the baseline task. Grouping factors were participant and target form. Models were fit using restricted maximum likelihood, a binomial error distribution, and a logit link function. We did not drop terms and instead explored all interactions and used goodness-of-fit tests and AIC for model comparison ([van Rij 2022](https://www.rdocumentation.org/packages/itsadug/versions/2.4.1)).
 
 The best model had a linear effect of trial index and a quadratic effect of baseline log odds of variant 1 / variant 2. We re-fit it as a generalised linear mixed model with a linear effect of trial index and a linear effect of the absolute baseline log odds of variant 1 and variant 2. We report this model below.
 
-We fit a generalised linear mixed model ([Bates 2023](https://cran.r-project.org/web/packages/lme4/index.html)) on the post test data. The outcome variable was agreement with the co-player. The predictors were rate of use of variant 1 (high / low), distribution of use of variant 1 (typical / atypical), type of variation (levelling / vowel deletion), and the log odds of the number of variant 1 and variant 2 responses to the target form in the baseline task. Grouping factors were participant and target form. Models were fit using restricted maximum likelihood, a binomial error distribution, and a logit link function. The post test analysis was pre-registered. Grouping factors were participant and target form. Models were fit using maximum likelihood, a binomial error distribution, and a logit link function. We did not drop terms and isntead explored all interactions and used goodness-of-fit tests, AIC, and Bayes Factors for model comparison. We used the performance package ([Lüdecke 2023](https://cran.r-project.org/web/packages/performance/index.html)) to check model health and to compare models. 
+### Post test
+
+We fit a generalised linear mixed model ([Bates 2023](https://cran.r-project.org/web/packages/lme4/index.html)) on the post test data. The outcome variable was agreement with the co-player. The predictors were rate of use of variant 1 (high / low), distribution of use of variant 1 (typical / atypical), type of variation (levelling / vowel deletion), and the log odds of the number of variant 1 and variant 2 responses to the target form in the baseline task. Grouping factors were participant and target form. Models were fit using restricted maximum likelihood, a binomial error distribution, and a logit link function. The post test analysis was pre-registered. Grouping factors were participant and target form. Models were fit using maximum likelihood, a binomial error distribution, and a logit link function. We did not drop terms and isntead explored all interactions and used goodness-of-fit tests, AIC, and Bayes Factors for model comparison. We used the performance package ([Lüdecke 2023](https://cran.r-project.org/web/packages/performance/index.html)) to check model health and to compare models.
+
+The model of the matching data was largely explorative. The model of the post test data was pre-registered, down to interactions and random effect structure, with the notable difference that the final analysis uses frequentist, rather than Bayesian methods. The main advantage of Bayesian statistics is that frequentist models often result in errors of magnitude by overfitting the data. The use of pre-registered sample size, exclusion criteria, and model structure, along with Bayes Factors to detect overfitting, largely mitigates this problem.
 
 The best model had an interaction of baseline log odds and co-player typicality. Random slopes did not improve this model. We report this model below.
 
 ## Results
 
+### Matching game
+
+`match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base)`
+
+![Matching 1](~/Github/Racz2024/analysis/esp_analysis/preds/pred1.png)
+
+![Matching 2](~/Github/Racz2024/analysis/esp_analysis/preds/pred2.png)
+
+![Matching 3](~/Github/Racz2024/analysis/esp_analysis/preds/pred3.png)
+
+### Post test
+
+`picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base)`
+
+![post 1](~/Github/Racz2024/analysis/esp_analysis/preds/pred4.png)
+
+![post 2](~/Github/Racz2024/analysis/esp_analysis/preds/pred5.png)
+
+![post 3](~/Github/Racz2024/analysis/esp_analysis/preds/pred6.png)
+
 ## Data and code
 
-Code used to set up and process the experiment is in `scripts/esp_exp`. The code to run the experiment is in `interface/hesp.zip`. Code to fit models is in `analysis/esp_analysis/esp_analysis.R`. Raw data are in `exp_data/raw`, tidy data are in `exp_data/baseline`.
+Code used to set up and process the experiment is in `scripts/esp_exp`. The code to run the experiment is in `interface/hesp.zip`. Code to fit models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise data is in `analysis/esp_analysis/esp_pred_viz.R`. Raw data are in `exp_data/raw`, tidy data are in `exp_data/baseline`.

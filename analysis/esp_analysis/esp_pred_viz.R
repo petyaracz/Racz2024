@@ -13,6 +13,12 @@ library(lme4)
 
 # -- fun -- #
 
+logOdds = function(dat,var){
+  dat %>% 
+    pivot_wider(names_from = {{var}}, values_from = n, values_fill = 0) %>% 
+    mutate(log_odds = log((`TRUE`+1)/(`FALSE`+1)))
+} 
+
 cloudPlot2 = function(dat,pred,out){
   dat %>% 
     ggplot(aes({{pred}},{{out}})) +
@@ -97,28 +103,34 @@ esp %>%
   ggtitle('Mean trial match with co-player') +
   xlab('Matching trial number')
 
-ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic1.pdf', width = 8, height = 4)
+ggsave('analysis/esp_analysis/preds/pred1.png', width = 8, height = 4)
 
 p1 = esp %>% 
   group_by(i,reg_rate) %>% 
   espIndex +
   facet_wrap( ~ reg_rate, nrow = 1) +
   ylim(.4,.7) +
-  xlab('Matching trial number')
+  xlab('Matching trial number') +
+  scale_x_continuous(breaks = c(1,25,54))
 p2 = esp %>% 
   group_by(i,reg_dist) %>% 
   espIndex +
   facet_wrap( ~ reg_dist, nrow = 1) +
   ylim(.4,.7) +
   theme(axis.title.y = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank()) +
-  xlab('Matching trial number')
+  xlab('Matching trial number') +
+  scale_x_continuous(breaks = c(1,25,54))
 p3 = esp %>% 
   group_by(i,var) %>% 
   espIndex +
   facet_wrap( ~ var, nrow = 1) +
   ylim(.4,.7) +
   theme(axis.title.y = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank()) +
-  xlab('Matching trial number')
+  xlab('Matching trial number') +
+  scale_x_continuous(breaks = c(1,25,54))
+
+p1 + p2 + p3 + plot_annotation(title = 'Mean trial match with co-player')
+ggsave('analysis/esp_analysis/preds/pred2.png', width = 8, height = 4)
 
 p1 + theme(panel.background = element_rect(fill = 'lightgrey')) + p2 + theme(panel.background = element_rect(fill = 'lightgrey')) + p3 + theme(panel.background = element_rect(fill = 'lightgrey')) + plot_annotation(title = 'Mean trial match with co-player')
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic2.pdf', width = 8, height = 4)
@@ -133,16 +145,17 @@ p1 + theme(panel.background = element_rect(fill = 'lightgrey')) + p2 + theme(pan
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic5.pdf', width = 8, height = 4)
 
 esp %>% 
-  group_by(base,variation,reg_dist,baseline_log_odds) %>% 
-  summarise(mean = mean(pred)) %>% 
-  ggplot(aes(baseline_log_odds,mean)) +
+  group_by(base,variation,reg_dist,abs_baseline_log_odds_jitter) %>% 
+  summarise(pred = mean(pred)) %>% 
+  ggplot(aes(abs_baseline_log_odds_jitter,pred)) +
   geom_point(alpha = .1) +
   # geom_smooth(method = 'lm', colour = 'white') +
   theme_few() +
   facet_wrap( ~ reg_dist) +
-  xlab('baseline preference for variant 1 (log odds)') +
-  ylab('esp preference for variant 1 (p)') +
-  ggtitle('Mean word match with co-player across\nword baseline log odds and\nregularisation distribution in Matching task')
+  xlab('baseline preference for variant 1 or 2 (absolute log odds)') +
+  ylab('predicted match with co-player') +
+  ggtitle('Mean word match with co-player across word absolute baseline log odds\nand regularisation distribution in Matching task')
+ggsave('analysis/esp_analysis/preds/pred3.png', width = 8, height = 4)
 
 # chef's kiss
 
@@ -153,9 +166,10 @@ posttest %>%
   summarise(mean = mean(pred)) %>% 
   mutate(reg_rate = factor(reg_rate, levels = c('low','high'))) %>% 
   cloudPlot2(reg_rate,mean) +
-  ggtitle('Mean participant preference\nfor variant 1 in posttest') +
+  ggtitle('Mean predicted participant preference\nfor variant 1 in posttest') +
   xlab('Regularisation rate') +
   ylab('mean predicted preference')
+ggsave('analysis/esp_analysis/preds/pred4.png', width = 5, height = 4)
 
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic6.pdf', width = 4, height = 4)
 
@@ -167,49 +181,33 @@ posttest %>%
   ylab('Regularisation rate')
 
 posttest %>% 
-  count(base,variation,reg_dist,reg_rate,baseline_log_odds,picked_v1) %>% 
-  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
-  mutate(posttest_log_odds = log((`TRUE` + 1)/(`FALSE` + 1))) %>% 
-  select(-`TRUE`,-`FALSE`) %>% 
-  ggplot(aes(baseline_log_odds,posttest_log_odds,colour = reg_dist)) +
+  group_by(base,variation,reg_dist,reg_rate,baseline_log_odds) %>% 
+  summarise(mean = mean(pred)) %>% 
+  ggplot(aes(baseline_log_odds,mean,colour = reg_dist)) +
   geom_point(alpha = .1) +
   geom_smooth(method = 'lm') +
   theme_few() +
   scale_colour_colorblind() +
   xlab('baseline preference for variant 1 (log odds)') +
-  ylab('post test preference for variant 1 (log odds)') +
+  ylab('post test preference for variant 1 (predicted)') +
   labs(colour = 'co-player distribution') +
   ggtitle('Mean word variant 1 across word baseline log odds and\nregularisation distribution in posttest')
-
+ggsave('analysis/esp_analysis/preds/pred5.png', width = 6, height = 4)
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic7.pdf', width = 6, height = 4)
 
 posttest %>% 
-  count(base,variation,reg_dist,reg_rate,baseline_log_odds,picked_v1,var) %>% 
-  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
-  mutate(posttest_log_odds = log((`TRUE` + 1)/(`FALSE` + 1))) %>% 
-  select(-`TRUE`,-`FALSE`) %>% 
-  ggplot(aes(baseline_log_odds,posttest_log_odds,colour = var)) +
+  group_by(base,variation,reg_dist,reg_rate,baseline_log_odds,var) %>% 
+  summarise(mean = mean(pred)) %>% 
+  ggplot(aes(baseline_log_odds,mean,colour = var)) +
   geom_point(alpha = .1) +
   geom_smooth(method = 'lm') +
   theme_few() +
   scale_colour_viridis_d() +
   xlab('baseline preference for variant 1 (log odds)') +
-  ylab('post test preference for variant 1 (log odds)') +
+  ylab('post test preference for variant 1 (predicted)') +
   labs(colour = 'co-player distribution') +
   ggtitle('Mean word variant 1 across word baseline log odds and\nregularisation distribution in posttest') +
   facet_wrap( ~ reg_dist)
-
+ggsave('analysis/esp_analysis/preds/pred6.png', width = 6, height = 4)
 ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Cologne_talk/pic9.pdf', width = 8, height = 4)
 
-posttest %>% 
-  count(base,reg_dist,baseline_log_odds,picked_v1) %>% 
-  pivot_wider(names_from = picked_v1, values_from = n, values_fill = 0) %>% 
-  mutate(
-    posttest_log_odds = log((`TRUE` + 1)/(`FALSE` + 1)),
-    diff = posttest_log_odds - baseline_log_odds
-    ) %>% 
-  select(-`TRUE`,-`FALSE`) %>% 
-  ggplot(aes(reg_dist,diff)) +
-  geom_boxplot()
-
-# this one's got its heart in the right place but its unfortunately incomprehensible
