@@ -610,20 +610,17 @@ model below.
 `match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base)`
 
 <figure>
-<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred1.png"
-alt="Matching 1" />
+<img src="analysis/esp_analysis/preds/pred1.png" alt="Matching 1" />
 <figcaption aria-hidden="true">Matching 1</figcaption>
 </figure>
 
 <figure>
-<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred2.png"
-alt="Matching 2" />
+<img src="analysis/esp_analysis/preds/pred2.png" alt="Matching 2" />
 <figcaption aria-hidden="true">Matching 2</figcaption>
 </figure>
 
 <figure>
-<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred3.png"
-alt="Matching 3" />
+<img src="analysis/esp_analysis/preds/pred3.png" alt="Matching 3" />
 <figcaption aria-hidden="true">Matching 3</figcaption>
 </figure>
 
@@ -632,20 +629,17 @@ alt="Matching 3" />
 `picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base)`
 
 <figure>
-<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred4.png"
-alt="post 1" />
+<img src="analysis/esp_analysis/preds/pred4.png" alt="post 1" />
 <figcaption aria-hidden="true">post 1</figcaption>
 </figure>
 
 <figure>
-<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred5.png"
-alt="post 2" />
+<img src="analysis/esp_analysis/preds/pred5.png" alt="post 2" />
 <figcaption aria-hidden="true">post 2</figcaption>
 </figure>
 
 <figure>
-<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred6.png"
-alt="post 3" />
+<img src="analysis/esp_analysis/preds/pred6.png" alt="post 3" />
 <figcaption aria-hidden="true">post 3</figcaption>
 </figure>
 
