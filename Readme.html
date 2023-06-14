@@ -11,7 +11,7 @@
 
 <meta name="author" content="Rácz, Péter" />
 
-<meta name="date" content="2023-06-13" />
+<meta name="date" content="2023-06-14" />
 
 <title>Supplementary Information: Learning Salient Morphological Variation</title>
 
@@ -353,33 +353,34 @@ display: none;
 <h1 class="title toc-ignore">Supplementary Information: Learning Salient
 Morphological Variation</h1>
 <h4 class="author">Rácz, Péter</h4>
-<h4 class="date">2023-06-13</h4>
+<h4 class="date">2023-06-14</h4>
 
 </div>
 
 
 <div id="structure" class="section level1">
 <h1>Structure</h1>
-<p>There are three experiments. All experiments are coded in javascript
-and run remotely on the participant’s home computer. The workhorse of
-the experiments is the written binary forced choice trial, in which you
-see a written prompt and you have to finish it with one of two
-choices.</p>
-<p>The <code>baseline</code> experiment is used to benchmark the stimuli
-with one sample of participants, so that we know that the participant
-pool prefers variant 1 for word x but variant 2 for word y.</p>
+<p>There were three experiments. All experiments were coded in
+javascript and run remotely on the participant’s home computer. The
+workhorse of the experiments was the written binary forced choice trial,
+in which you see a written prompt and you have to finish it using one of
+two options.</p>
+<p>The <code>baseline</code> experiment was used to benchmark the
+stimuli with one sample of participants, so that we know that the
+participant pool prefers variant 1 for word x but variant 2 for word
+y.</p>
 <p>The <code>matching</code> experiment (referenced as <code>esp</code>,
-after extra-sensory perception, in the file structure) is run with a
-second set of participants. Its first half is a pretend game with a
-second player. The two of you have to pick the same ending for each
-prompt. Since the second player is inflexible, you only succeed in the
-game if you anticipate their responses. Its second half is similar to
-the baseline experiment in that you have to pick choices to finish
-prompts alone. This tests whether the patterns you learned in the first
-half persist once the second player disappears.</p>
-<p>The <code>integration</code> experiment is run with a third set of
+after “extra-sensory perception”, in the file structure) was run with a
+second set of participants. Its first half was a pretend game with a
+pretend second player. The two of you have to pick the same ending for
+each prompt. Since the second player is inflexible, you only succeed in
+the game if you anticipate their responses. Its second half was similar
+to the baseline experiment in that you have to pick options to finish
+prompts by yourself. This is to check whether the patterns you learned
+in the first half persist once the second player disappears.</p>
+<p>The <code>integration</code> experiment was run with a third set of
 participants. Its first part is the <code>matching</code> experiment,
-with the matching game and the immediate post-test. It also involves a
+with the matching game and the immediate post-test. It also involved a
 second post-test, after a period of sleep.</p>
 <p>The main questions of the paradigm are: Can people learn the
 morphological variations fed to them in the matching game? Does this
@@ -391,8 +392,8 @@ after considerable time has passed?</p>
 <h1>Stimuli</h1>
 <p>There are three sets of stimuli, variable patterns from Hungarian
 morphology. <code>Baseline</code> participants see examples from all
-see. <code>Matching game</code> participants only see one set of stimuli
-throughout.</p>
+three. <code>Matching game</code> participants only see one set of
+stimuli throughout.</p>
 <div id="sets-of-variation" class="section level2">
 <h2>Sets of variation</h2>
 <p>We call the first variation <code>levelling</code>. It involves
@@ -426,12 +427,12 @@ triggers, any verb can end in <code>-k</code> or <code>-m</code> (as
 they do otherwise in the <code>indef</code> and the <code>def</code>,
 respectively). It is also has second-order indexicality: the
 neutralising <code>-m</code> variant is seen as educated, “proper” use
-(<a href="https://www.jstor.org/stable/26863550">Rácz 2019</a>). A
-turn-of-the-century English analogy would be variation between
+(<a href="https://www.jstor.org/stable/26863550">Rácz 2019</a>).</p>
+<p>A turn-of-the-century English analogy would be variation between
 <code>will</code> and <code>shall</code> in the first person, where
 <code>shall</code> was seen as more formal and educated but was also
-more likely to stand with certain more common verbs rather than
-others.</p>
+more likely to stand with certain more common verbs rather than others:
+compare “We shall see.” with “I shall bicycle home.”.</p>
 <p>The second variation is called <code>vowel deletion</code>. It also
 involves verbal inflection and is also confined to <code>-ik</code>
 verbs. These verbs end in two possible templates: CCik and CVCik. In
@@ -464,6 +465,11 @@ resolved and results in morphological defectivity (<a href="https://www.research
 &amp; Törkenczy 2009</a>). While subject to some metalinguistic
 awareness, vowel deletion does not carry any clear second-order indices
 and has not been discussed as a sociolinguistic marker in Hungarian.</p>
+<p>Vowel deletion in rapid speech can be observed in spoken English:
+“family” or “natural” can be pronounced either as [’f6mIlI] or [’f6mlI]
+and [’n6t@r@l] or [’n6tr@l]. This, however, is a lower-level phenomenon,
+gradient, closely related to vowel stress, not lexicalised, and not
+represented in the orthography.</p>
 <p>The third variation is called <code>front harmony</code>. Hungarian
 has vowel harmony: in most cases, the vowel in a suffix has to match the
 last vowel in the stem in both frontedness and roundness (examples
@@ -490,7 +496,7 @@ e.g. (Hayes, Siptár, Zuraw, &amp; Londe 2009)[<a href="https://www.jstor.org/s
 </div>
 <div id="experimental-stimuli" class="section level2">
 <h2>Experimental stimuli</h2>
-<p>I compiled a frequency list from the morphologically disambiguated
+<p>We compiled a frequency list from the morphologically disambiguated
 (Hungarian Webcorpus 2)[<a href="https://hlt.bme.hu/en/resources/webcorpus2" class="uri">https://hlt.bme.hu/en/resources/webcorpus2</a>]. This was
 used to curate reference lists of existing forms for the three variable
 sets (scripts/build_words/build_real_list/build_real_word_lists/R). (In
@@ -502,7 +508,7 @@ dictionary)[<a href="https://github.com/laszlonemeth/magyarispell" class="uri">h
 <p>The next step was to use the reference sets to generate nonce forms
 for each variable sets. Because both vowel deletion and front harmony
 involve longer dependencies in the CV skeleton, off-the-shelf ngram
-models were not sufficient to generate nonce forms. Instead, I wrote a
+models were not sufficient to generate nonce forms. Instead, we wrote a
 simple grammar to break up the words on the reference list to
 syllable-based units and generate noun and verb forms and checked the
 results by hand. The resulting lists were filtered so that each nonce
@@ -761,7 +767,7 @@ paradigm slots of the case system show variation. Here, it was
 restricted to the inessive, the dative, and the adessive case. A set of
 examples for front harmony can be seen in Table 3.</p>
 <table>
-<caption>Vowel deletion: example stimuli</caption>
+<caption>Front harmony: example stimuli</caption>
 <thead>
 <tr class="header">
 <th align="left">base</th>
@@ -817,7 +823,11 @@ examples for front harmony can be seen in Table 3.</p>
 </tbody>
 </table>
 <p>Three sets of 162 forms each were created, balancing across the
-restrictions above.</p>
+restrictions above. For each nonce word in each variable set, there are
+two possible variant choices: <code>-k</code> or <code>-m</code> for
+levelling, <code>cc</code> (vowel deleted) or <code>cvc</code> (vowel in
+situ) for vowel deletion, and back vowel or front vowel in suffix for
+front harmony.</p>
 </div>
 </div>
 <div id="baseline-task" class="section level1">
@@ -833,55 +843,72 @@ variable set and inflectional or declension suffix. The prompt ending
 unequivocally selects for a specific verb/noun complement. The two
 variants of this complement are specified as the two alternatives in the
 forced choice task. Example prompts can be seen in Table 4.</p>
-<p>Prompts across variation and suffix</p>
 <table>
+<caption>Example prompts across variation and suffix</caption>
 <thead>
 <tr class="header">
-<th align="left">variation</th>
 <th align="left">prompt</th>
-<th align="left">translation</th>
+<th align="left">variant1</th>
+<th align="left">variant2</th>
+<th align="left">gloss</th>
+<th align="left">variable set</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">levelling</td>
-<td align="left">Te bizony sokat bivégszel. Én is sokat…</td>
+<td align="left">Te bizony sokat spröbzöl. Én is sokat…</td>
+<td align="left">spröbzök</td>
+<td align="left">spröbzöm</td>
 <td align="left">You do frequently VERB. I also frequently…</td>
+<td align="left">levelling</td>
 </tr>
 <tr class="even">
-<td align="left">vowel deletion</td>
-<td align="left">János imád brivepedni, ezért sokat brivepszik. Mi
+<td align="left">János imád galározni, ezért sokat galárzik. Ők
 ritkán…</td>
-<td align="left">John loves to CVC VERB, so he often CC VERB. We
+<td align="left">galárzanak</td>
+<td align="left">galároznak</td>
+<td align="left">John loves to CVC VERB so he frequently CC VERB. They
 rarely…</td>
+<td align="left">vowel deletion</td>
 </tr>
 <tr class="odd">
-<td align="left">vowel deletion</td>
-<td align="left">János imád bribékedni, ezért sokat bribékszik. Ti
+<td align="left">János imád dilakozni, ezért sokat dilaklik. Ti
 ritkán…</td>
-<td align="left">John loves to CVC VERB, so he often CC VERB. You
+<td align="left">dilaklotok</td>
+<td align="left">dilakoztok</td>
+<td align="left">John loves to CVC VERB so he frequently CC VERB. You
 rarely…</td>
+<td align="left">vowel deletion</td>
 </tr>
 <tr class="even">
-<td align="left">vowel deletion</td>
-<td align="left">János imád döjözni, ezért sokat döjlik. Ők ritkán…</td>
-<td align="left">John loves to CVC VERB, so he often CC VERB. They
+<td align="left">János imád flerékedni, ezért sokat flerékszik. Mi
+ritkán…</td>
+<td align="left">flerékszünk</td>
+<td align="left">flerékedünk</td>
+<td align="left">John loves to CVC VERB so he frequently CC VERB. We
 rarely…</td>
+<td align="left">vowel deletion</td>
 </tr>
 <tr class="odd">
+<td align="left">Ez itt egy trikép. Ott vagyunk a…</td>
+<td align="left">triképban</td>
+<td align="left">triképben</td>
+<td align="left">This is a NOUN. We are there in the…</td>
 <td align="left">front harmony</td>
-<td align="left">Ez itt egy ítens. Ott vagyunk a…</td>
-<td align="left">This is a NOUN. We are at the…</td>
 </tr>
 <tr class="even">
-<td align="left">front harmony</td>
-<td align="left">Ez itt egy vurnel. Elneveztem a kutyámat…</td>
+<td align="left">Ez itt egy hágyét. Elneveztem a kutyámat…</td>
+<td align="left">hágyétnak</td>
+<td align="left">hágyétnek</td>
 <td align="left">This is a NOUN. I named my dog…</td>
+<td align="left">front harmony</td>
 </tr>
 <tr class="odd">
-<td align="left">front harmony</td>
-<td align="left">Ez itt egy trapszegy. Nincs is jobb egy jó…</td>
+<td align="left">Ez itt egy vismer. Nincs is jobb egy jó…</td>
+<td align="left">vismernál</td>
+<td align="left">vismernél</td>
 <td align="left">This is a NOUN. Nothing better than a good…</td>
+<td align="left">front harmony</td>
 </tr>
 </tbody>
 </table>
@@ -891,11 +918,702 @@ rarely…</td>
 <p>82 participants, 69 women, median age = 22 took part in the baseline
 experiment in early 2022, participating for course credit.</p>
 </div>
+<div id="procedure" class="section level2">
+<h2>Procedure</h2>
+<p>The task was coded in (psychojs)[<a href="https://www.sciencedirect.com/science/article/pii/S0165027006005772" class="uri">https://www.sciencedirect.com/science/article/pii/S0165027006005772</a>]
+and hosted on (Pavlovia)[pavlovia.org]. Participants were instructed
+that they would see prompts that contain words that might be unfamiliar
+to them. They were asked to pick a suffixed form to finish the prompt in
+a way that seems most natural or familiar to them. They were informed
+that different people might have different preferences and there are no
+correct or incorrect answers. An example preceded the trials.
+Participants used the keyboard to respond.</p>
+</div>
+<div id="hypotheses" class="section level2">
+<h2>Hypotheses</h2>
+<p>The aim of the task was to benchmark our stimuli. There were no
+starting hypotheses on the distributions.</p>
+</div>
+<div id="analysis" class="section level2">
+<h2>Analysis</h2>
+<p>Participants who only picked the left button or the right button were
+to be excluded from the data. No participants met this pre-registered
+exclusion criterion.</p>
+</div>
 <div id="results" class="section level2">
 <h2>Results</h2>
-<p>Given the randomisation, the number of responses per form was not the
+<p>Participants completed the task in a median 15.0747867 minutes. Given
+the randomisation, the number of responses per nonce word was not the
 same. Participants gave 26–29 responses to each nonce form, with a
 median of 27.</p>
+<p>For each nonce form, we calculated the log odds of the counts of
+participants who picked variant 1 and those who picked variant 2.</p>
+</div>
+<div id="data-and-code" class="section level2">
+<h2>Data and code</h2>
+<p>Code used to set up and process the experiment is in
+<code>scripts/baseline_exp</code>. The code to run the experiment is in
+<code>interface/hesp_baseline.zip</code>. Raw data are in
+<code>exp_data/raw</code>, tidy data are in
+<code>exp_data/baseline</code>.</p>
+</div>
+<div id="ethics" class="section level2">
+<h2>Ethics</h2>
+<p>Participants gave informed consent at the beginning of the
+experiment. The study was approved by the United Ethical Review
+Committee for Research in Psychology in Hungary (EPKEB, ref. number
+2021-119).</p>
+</div>
+</div>
+<div id="matching-task" class="section level1">
+<h1>Matching task</h1>
+<p>The sample size, design, exclusion criteria, and data analysis were
+<a href="https://aspredicted.org/BL1_S7V">pre-registered</a>. We only
+report the levelling and vowel deletion data.</p>
+<div id="stimuli-2" class="section level2">
+<h2>Stimuli</h2>
+<p>The matching task is played with a co-player and the participant has
+to match the way the co-player would finish the prompt. By manipulating
+the co-player’s responses, we can feed different morphological
+distributions to the participant. One participant sees words from one
+type of variation only (levelling / vowel deletion / front harmony),
+both in the matching task and the post test. One participant sees
+different words in the matching task and in the post test.</p>
+<p>We created three lists of 54 items each for each variation, sampled
+from the baseline. In each list, nonce forms were ranked from 1 (largest
+baseline preference for variant 1) to 54 (largest baseline preference
+for variant 2). Co-players used the baseline patterns as a reference.
+They diverged from them across two dimensions.</p>
+<p>Co-players had a <strong>high</strong> rate of use for variant 1
+(and, correspondingly, a low rate of use for variant 2) or a
+<strong>low</strong> rate of use for variant 1 (and a high rate for
+variant 2). <strong>High</strong> meant they picked variant 1 in 39/54
+trials (72%). <strong>Low</strong> meant they picked variant 1 in 15/54
+trials (28%).</p>
+<p>Co-players didn’t pick forms at random. The lists were sorted
+according to rank, going from words that showed the highest preference
+for variant 1 to those that showed the lowest preference for variant 1.
+One set of co-players picked the first 39 forms (in the
+<strong>high</strong> condition) or the first 15 forms (in the
+<strong>low</strong> condition) and then went on to choose variant 1 for
+these. This meant that these co-players acted like our average baseline
+participant, apart from having a quantitative preference for lots of
+variant 1 or few of variant 1. These were <strong>typical</strong>
+co-players.</p>
+<p>Another set of co-players reversed the list and chose variant 1 for
+the words that were least likely to select it in the baseline.
+Effectively, these co-players gave responses that were the opposite of
+the expectations of an average baseline participant. These were
+<strong>reversed</strong> co-players.</p>
+<p>Table 5 illustrates this. It shows the items on list 1 for the
+levelling set, sorted from strongest preference for variant 1 (“tomlik”)
+to strongest preference for variant 2 (“spilágzik”). A co-player with
+<strong>high</strong> preference for variant 1 and a
+<strong>typical</strong> distribution will pick the first variant,
+<code>-k</code> for the first 39 verbs and the second variant,
+<code>-m</code>, for the last 15. A co-player with <strong>low</strong>
+preference for variant 1 and a <strong>typical</strong> distribution
+will pick <code>-k</code> for the first 15 verbs and <code>-m</code> for
+the last 39. A co-player with <strong>high</strong> preference for
+<code>-k</code> and a <strong>reversed</strong> distribution will use
+the list upside-down and pick <code>-k</code> for the last 39 verbs and
+<code>-m</code> for the first 15 verbs. A co-player with
+<strong>low</strong> preference for <code>-k</code> and a
+<strong>reversed</strong> distribution will pick <code>-k</code> for the
+last 15 verbs and <code>-m</code> for the first 39 verbs.</p>
+<table>
+<caption>Levelling list 1 across co-player types</caption>
+<thead>
+<tr class="header">
+<th align="right">baseline rank</th>
+<th align="left">base</th>
+<th align="left">high typical</th>
+<th align="left">low typical</th>
+<th align="left">high reversed</th>
+<th align="left">low reversed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">tomlik</td>
+<td align="left">tomlo<strong>k</strong></td>
+<td align="left">tomlo<strong>k</strong></td>
+<td align="left">tomlo<strong>m</strong></td>
+<td align="left">tomlo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">fibamlik</td>
+<td align="left">fibamlo<strong>k</strong></td>
+<td align="left">fibamlo<strong>k</strong></td>
+<td align="left">fibamlo<strong>m</strong></td>
+<td align="left">fibamlo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">femlik</td>
+<td align="left">femle<strong>k</strong></td>
+<td align="left">femle<strong>k</strong></td>
+<td align="left">femle<strong>m</strong></td>
+<td align="left">femle<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">feténylik</td>
+<td align="left">fetényle<strong>k</strong></td>
+<td align="left">fetényle<strong>k</strong></td>
+<td align="left">fetényle<strong>m</strong></td>
+<td align="left">fetényle<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">spűmlik</td>
+<td align="left">spűmlö<strong>k</strong></td>
+<td align="left">spűmlö<strong>k</strong></td>
+<td align="left">spűmlö<strong>m</strong></td>
+<td align="left">spűmlö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">sztremlik</td>
+<td align="left">sztremle<strong>k</strong></td>
+<td align="left">sztremle<strong>k</strong></td>
+<td align="left">sztremle<strong>m</strong></td>
+<td align="left">sztremle<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">pratánylik</td>
+<td align="left">pratánylo<strong>k</strong></td>
+<td align="left">pratánylo<strong>k</strong></td>
+<td align="left">pratánylo<strong>m</strong></td>
+<td align="left">pratánylo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">spéslik</td>
+<td align="left">spésle<strong>k</strong></td>
+<td align="left">spésle<strong>k</strong></td>
+<td align="left">spésle<strong>m</strong></td>
+<td align="left">spésle<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">flagánylik</td>
+<td align="left">flagánylo<strong>k</strong></td>
+<td align="left">flagánylo<strong>k</strong></td>
+<td align="left">flagánylo<strong>m</strong></td>
+<td align="left">flagánylo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">jüslik</td>
+<td align="left">jüslö<strong>k</strong></td>
+<td align="left">jüslö<strong>k</strong></td>
+<td align="left">jüslö<strong>m</strong></td>
+<td align="left">jüslö<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">büglik</td>
+<td align="left">büglö<strong>k</strong></td>
+<td align="left">büglö<strong>k</strong></td>
+<td align="left">büglö<strong>m</strong></td>
+<td align="left">büglö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">prűrlik</td>
+<td align="left">prűrlö<strong>k</strong></td>
+<td align="left">prűrlö<strong>k</strong></td>
+<td align="left">prűrlö<strong>m</strong></td>
+<td align="left">prűrlö<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="left">ruslik</td>
+<td align="left">ruslo<strong>k</strong></td>
+<td align="left">ruslo<strong>k</strong></td>
+<td align="left">ruslo<strong>m</strong></td>
+<td align="left">ruslo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="left">marzik</td>
+<td align="left">marzo<strong>k</strong></td>
+<td align="left">marzo<strong>k</strong></td>
+<td align="left">marzo<strong>m</strong></td>
+<td align="left">marzo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">15</td>
+<td align="left">brüjlik</td>
+<td align="left">brüjlö<strong>k</strong></td>
+<td align="left">brüjlö<strong>k</strong></td>
+<td align="left">brüjlö<strong>m</strong></td>
+<td align="left">brüjlö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">16</td>
+<td align="left">csíszlik</td>
+<td align="left">csíszlo<strong>k</strong></td>
+<td align="left">csíszlo<strong>m</strong></td>
+<td align="left">csíszlo<strong>k</strong></td>
+<td align="left">csíszlo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">17</td>
+<td align="left">flüröslik</td>
+<td align="left">flüröslö<strong>k</strong></td>
+<td align="left">flüröslö<strong>m</strong></td>
+<td align="left">flüröslö<strong>k</strong></td>
+<td align="left">flüröslö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">18</td>
+<td align="left">szirlik</td>
+<td align="left">szirlo<strong>k</strong></td>
+<td align="left">szirlo<strong>m</strong></td>
+<td align="left">szirlo<strong>k</strong></td>
+<td align="left">szirlo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">19</td>
+<td align="left">klörlik</td>
+<td align="left">klörlö<strong>k</strong></td>
+<td align="left">klörlö<strong>m</strong></td>
+<td align="left">klörlö<strong>k</strong></td>
+<td align="left">klörlö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="left">nyáslik</td>
+<td align="left">nyáslo<strong>k</strong></td>
+<td align="left">nyáslo<strong>m</strong></td>
+<td align="left">nyáslo<strong>k</strong></td>
+<td align="left">nyáslo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">21</td>
+<td align="left">pebzik</td>
+<td align="left">pebze<strong>k</strong></td>
+<td align="left">pebze<strong>m</strong></td>
+<td align="left">pebze<strong>k</strong></td>
+<td align="left">pebze<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">22</td>
+<td align="left">juszlik</td>
+<td align="left">juszlo<strong>k</strong></td>
+<td align="left">juszlo<strong>m</strong></td>
+<td align="left">juszlo<strong>k</strong></td>
+<td align="left">juszlo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">23</td>
+<td align="left">klibamlik</td>
+<td align="left">klibamlo<strong>k</strong></td>
+<td align="left">klibamlo<strong>m</strong></td>
+<td align="left">klibamlo<strong>k</strong></td>
+<td align="left">klibamlo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">24</td>
+<td align="left">tínylik</td>
+<td align="left">tínylo<strong>k</strong></td>
+<td align="left">tínylo<strong>m</strong></td>
+<td align="left">tínylo<strong>k</strong></td>
+<td align="left">tínylo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">25</td>
+<td align="left">bölszik</td>
+<td align="left">bölszö<strong>k</strong></td>
+<td align="left">bölszö<strong>m</strong></td>
+<td align="left">bölszö<strong>k</strong></td>
+<td align="left">bölszö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">26</td>
+<td align="left">flűröklik</td>
+<td align="left">flűröklö<strong>k</strong></td>
+<td align="left">flűröklö<strong>m</strong></td>
+<td align="left">flűröklö<strong>k</strong></td>
+<td align="left">flűröklö<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">27</td>
+<td align="left">trilszik</td>
+<td align="left">trilszo<strong>k</strong></td>
+<td align="left">trilszo<strong>m</strong></td>
+<td align="left">trilszo<strong>k</strong></td>
+<td align="left">trilszo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">28</td>
+<td align="left">böjzik</td>
+<td align="left">böjzö<strong>k</strong></td>
+<td align="left">böjzö<strong>m</strong></td>
+<td align="left">böjzö<strong>k</strong></td>
+<td align="left">böjzö<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">29</td>
+<td align="left">sűzlik</td>
+<td align="left">sűzlö<strong>k</strong></td>
+<td align="left">sűzlö<strong>m</strong></td>
+<td align="left">sűzlö<strong>k</strong></td>
+<td align="left">sűzlö<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">30</td>
+<td align="left">hilarzik</td>
+<td align="left">hilarzo<strong>k</strong></td>
+<td align="left">hilarzo<strong>m</strong></td>
+<td align="left">hilarzo<strong>k</strong></td>
+<td align="left">hilarzo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">31</td>
+<td align="left">spibaklik</td>
+<td align="left">spibaklo<strong>k</strong></td>
+<td align="left">spibaklo<strong>m</strong></td>
+<td align="left">spibaklo<strong>k</strong></td>
+<td align="left">spibaklo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">32</td>
+<td align="left">tiregzik</td>
+<td align="left">tiregze<strong>k</strong></td>
+<td align="left">tiregze<strong>m</strong></td>
+<td align="left">tiregze<strong>k</strong></td>
+<td align="left">tiregze<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">33</td>
+<td align="left">fretszik</td>
+<td align="left">fretsze<strong>k</strong></td>
+<td align="left">fretsze<strong>m</strong></td>
+<td align="left">fretsze<strong>k</strong></td>
+<td align="left">fretsze<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">34</td>
+<td align="left">narjárzik</td>
+<td align="left">narjárzo<strong>k</strong></td>
+<td align="left">narjárzo<strong>m</strong></td>
+<td align="left">narjárzo<strong>k</strong></td>
+<td align="left">narjárzo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">35</td>
+<td align="left">spatárzik</td>
+<td align="left">spatárzo<strong>k</strong></td>
+<td align="left">spatárzo<strong>m</strong></td>
+<td align="left">spatárzo<strong>k</strong></td>
+<td align="left">spatárzo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">36</td>
+<td align="left">málapszik</td>
+<td align="left">málapszo<strong>k</strong></td>
+<td align="left">málapszo<strong>m</strong></td>
+<td align="left">málapszo<strong>k</strong></td>
+<td align="left">málapszo<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">37</td>
+<td align="left">lorjódzik</td>
+<td align="left">lorjódzo<strong>k</strong></td>
+<td align="left">lorjódzo<strong>m</strong></td>
+<td align="left">lorjódzo<strong>k</strong></td>
+<td align="left">lorjódzo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">38</td>
+<td align="left">ribegzik</td>
+<td align="left">ribegze<strong>k</strong></td>
+<td align="left">ribegze<strong>m</strong></td>
+<td align="left">ribegze<strong>k</strong></td>
+<td align="left">ribegze<strong>m</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">39</td>
+<td align="left">flagárzik</td>
+<td align="left">flagárzo<strong>k</strong></td>
+<td align="left">flagárzo<strong>m</strong></td>
+<td align="left">flagárzo<strong>k</strong></td>
+<td align="left">flagárzo<strong>m</strong></td>
+</tr>
+<tr class="even">
+<td align="right">40</td>
+<td align="left">frilegszik</td>
+<td align="left">frilegsze<strong>m</strong></td>
+<td align="left">frilegsze<strong>m</strong></td>
+<td align="left">frilegsze<strong>k</strong></td>
+<td align="left">frilegsze<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">41</td>
+<td align="left">sprökszik</td>
+<td align="left">sprökszö<strong>m</strong></td>
+<td align="left">sprökszö<strong>m</strong></td>
+<td align="left">sprökszö<strong>k</strong></td>
+<td align="left">sprökszö<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">42</td>
+<td align="left">brágaklik</td>
+<td align="left">brágaklo<strong>m</strong></td>
+<td align="left">brágaklo<strong>m</strong></td>
+<td align="left">brágaklo<strong>k</strong></td>
+<td align="left">brágaklo<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">43</td>
+<td align="left">prilegzik</td>
+<td align="left">prilegze<strong>m</strong></td>
+<td align="left">prilegze<strong>m</strong></td>
+<td align="left">prilegze<strong>k</strong></td>
+<td align="left">prilegze<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">44</td>
+<td align="left">drubódzik</td>
+<td align="left">drubódzo<strong>m</strong></td>
+<td align="left">drubódzo<strong>m</strong></td>
+<td align="left">drubódzo<strong>k</strong></td>
+<td align="left">drubódzo<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">45</td>
+<td align="left">siladzik</td>
+<td align="left">siladzo<strong>m</strong></td>
+<td align="left">siladzo<strong>m</strong></td>
+<td align="left">siladzo<strong>k</strong></td>
+<td align="left">siladzo<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">46</td>
+<td align="left">sojzik</td>
+<td align="left">sojzo<strong>m</strong></td>
+<td align="left">sojzo<strong>m</strong></td>
+<td align="left">sojzo<strong>k</strong></td>
+<td align="left">sojzo<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">47</td>
+<td align="left">piragszik</td>
+<td align="left">piragszo<strong>m</strong></td>
+<td align="left">piragszo<strong>m</strong></td>
+<td align="left">piragszo<strong>k</strong></td>
+<td align="left">piragszo<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">48</td>
+<td align="left">driládzik</td>
+<td align="left">driládzo<strong>m</strong></td>
+<td align="left">driládzo<strong>m</strong></td>
+<td align="left">driládzo<strong>k</strong></td>
+<td align="left">driládzo<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">49</td>
+<td align="left">ribzik</td>
+<td align="left">ribzo<strong>m</strong></td>
+<td align="left">ribzo<strong>m</strong></td>
+<td align="left">ribzo<strong>k</strong></td>
+<td align="left">ribzo<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">50</td>
+<td align="left">herégszik</td>
+<td align="left">herégsze<strong>m</strong></td>
+<td align="left">herégsze<strong>m</strong></td>
+<td align="left">herégsze<strong>k</strong></td>
+<td align="left">herégsze<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">51</td>
+<td align="left">sprogzik</td>
+<td align="left">sprogzo<strong>m</strong></td>
+<td align="left">sprogzo<strong>m</strong></td>
+<td align="left">sprogzo<strong>k</strong></td>
+<td align="left">sprogzo<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">52</td>
+<td align="left">vilakszik</td>
+<td align="left">vilakszo<strong>m</strong></td>
+<td align="left">vilakszo<strong>m</strong></td>
+<td align="left">vilakszo<strong>k</strong></td>
+<td align="left">vilakszo<strong>k</strong></td>
+</tr>
+<tr class="odd">
+<td align="right">53</td>
+<td align="left">pivegszik</td>
+<td align="left">pivegsze<strong>m</strong></td>
+<td align="left">pivegsze<strong>m</strong></td>
+<td align="left">pivegsze<strong>k</strong></td>
+<td align="left">pivegsze<strong>k</strong></td>
+</tr>
+<tr class="even">
+<td align="right">54</td>
+<td align="left">spilágzik</td>
+<td align="left">spilágzo<strong>m</strong></td>
+<td align="left">spilágzo<strong>m</strong></td>
+<td align="left">spilágzo<strong>k</strong></td>
+<td align="left">spilágzo<strong>k</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The matching task has a post test to check whether the participant
+maintains the patterns learned in the matching task. Participants were
+allocated to lists and conditions at random. If a participant had list
+1/2/3 in the matching game, they had list 2/3/1 in the post test.</p>
+<p>There were three lists and all four co-player types played all lists,
+resulting in 12 unique lists in total. The pre-registration specifies 50
+trials, the experiment had 54 trials.</p>
+<p>Participants saw words in a random order in both the matching game
+and the post test. The order of variants in each trial was also
+randomised.</p>
+</div>
+<div id="participants-1" class="section level2">
+<h2>Participants</h2>
+<p>182 participants completed the matching game in late 2022 and early
+2023. Sample size was pre-set to 7 per unique list (12 lists) or 21 per
+condition (high / low x typical / reversed x levelling / vowel
+deletion). 5participants who matched our exclusion criteria (see below)
+were excluded. Then, we kept data from the first seven participants in
+each list (excluding an additional 9 participants), resulting in a final
+total of 7 x 3 x 2 x 2 x 2 = 168 participants, 111 women. Median age was
+22. Participants completed the task for course credit.</p>
+</div>
+<div id="procedure-1" class="section level2">
+<h2>Procedure</h2>
+<p>The task was coded in <a href="jspsych.org">jspsych</a> and hosted on
+Pavlovia. Participants were instructed that they would see prompts that
+contain words that might be unfamiliar to them. They were asked to pick
+a suffixed form to finish the prompt in a way that seems most natural or
+familiar to them. They were informed that different people might have
+different preferences and there are no correct or incorrect answers. An
+example preceded the trials. Participants used the keyboard to
+respond.</p>
+<p>Participants were also instructed that they play this game with
+another player. The other player always has the same options as them.
+Their joint task is to choose the same option in each trial.
+Participants were instructed that, in order to do so, they have to pay
+attention to the other player’s answers and guess how they will choose
+next. If they get it right, they get a point.</p>
+<p>After an example trial, participants were informed that they would be
+connected to the other player. This was followed by a delay of circa
+five seconds during which the message “connecting to the other player…”
+was seen on the screen, followed by a brief message saying “connection
+successful”.</p>
+<p>Each matching game trial had the same forced-choice format as the
+baseline task, except that, instead of the keyboard, participants had to
+click on buttons to make a choice. In each trial, the other player would
+“think” for a random interval within 3-9 seconds, during which the
+message “the other player is thinking” was visible above the trial
+prompt. If the participant made a choice during this time, they had to
+wait for the other player to “finish” the trial. If the participant did
+not make a choice during this time, the message “the other player made a
+choice” became visible. Once the participant made their choice, they
+were informed about the co-player’s choice and whether it matched their
+own choice. A match was rewarded with a green tick and the message “you
+matched the other player”. A mismatch was rewarded with a red X and the
+message “you did not match the other player”. In addition, a match
+awarded a point and the current score of the player and the co-player
+was displayed on the screen.</p>
+<p>After the matching game, the participant was instructed to do the
+same task, to finish prompts, but, this time, without the co-player.
+Once the participant finished this post test, a message informed them of
+their final score. Score had no effect on the game or on participant
+compensation.</p>
+</div>
+<div id="hypotheses-1" class="section level2">
+<h2>Hypotheses</h2>
+<p>We expected people to (1) learn in the matching game and become
+better at predicting the co-players answers. We expected (2) learning to
+persist in the post test so that patterns in the post test are similar
+to patterns in the matching game. We expected that (3) learning will be
+easier and persistent effects stronger for the socially salient
+variation, levelling, as compared to vowel deletion.</p>
+<p>We do not know the priors of the participants. Some of them likely
+have a high or low preference for variant 1 themselves. We do know the
+priors for the target words, based on the baseline task.</p>
+<p>In terms of (1) learning, we can see how well participants converge
+to various co-players across levelling or vowel deletion stimuli. In
+terms of (2) persistent effects, we can look at differences in post test
+responses across target words and participants in the various co-player
+conditions (high / low, typical / reversed, levelling / vowel
+deletion).</p>
+</div>
+<div id="analysis-1" class="section level2">
+<h2>Analysis</h2>
+<p>Participants who only picked the left button or the right button were
+to be excluded from the data. No participants met this pre-registered
+exclusion criterion. Participants whose finished either the matching
+game or the post test slower than the median completion time plus three
+times the mean absolute deviation of completion times were excluded.
+Individual trials that had a longer response time than the median
+response time plus three times the mean absolute deviation of response
+times were also excluded. Median and mean absolute deviation were
+calculated separately for type of variation (levelling / vowel deletion)
+and phase (matching game or post test).</p>
+<p>1237 trials or 6.8176808% of all trials were dropped. This is a
+relatively high number. This is likely both because the task was
+difficult and because participants completed it in an uncontrolled
+environment, both contributing to higher variability. Participants
+completed the matching game and the post test in 10-15 minutes.</p>
+<p>We fit a generalised additive mixed model (<a href="https://cran.r-project.org/web/packages/mgcv/index.html">Wood
+2023</a>) on the matching data. The outcome variable was agreement with
+the co-player. The predictors were trial index, rate of use of variant 1
+(high / low), distribution of use of variant 1 (typical / atypical),
+type of variation (levelling / vowel deletion), and the log odds of the
+number of variant 1 and variant 2 responses to the target form in the
+baseline task. Grouping factors were participant and target form. Models
+were fit using restricted maximum likelihood, a binomial error
+distribution, and a logit link function. We did not drop terms and
+instead explored all interactions and used goodness-of-fit tests and AIC
+for model comparison (<a href="https://www.rdocumentation.org/packages/itsadug/versions/2.4.1">van
+Rij 2022</a>).</p>
+<p>The best model had a linear effect of trial index and a quadratic
+effect of baseline log odds of variant 1 / variant 2. We re-fit it as a
+generalised linear mixed model with a linear effect of trial index and a
+linear effect of the absolute baseline log odds of variant 1 and variant
+2. We report this model below.</p>
+<p>We fit a generalised linear mixed model (<a href="https://cran.r-project.org/web/packages/lme4/index.html">Bates
+2023</a>) on the post test data. The outcome variable was agreement with
+the co-player. The predictors were rate of use of variant 1 (high /
+low), distribution of use of variant 1 (typical / atypical), type of
+variation (levelling / vowel deletion), and the log odds of the number
+of variant 1 and variant 2 responses to the target form in the baseline
+task. Grouping factors were participant and target form. Models were fit
+using restricted maximum likelihood, a binomial error distribution, and
+a logit link function. The post test analysis was pre-registered.
+Grouping factors were participant and target form. Models were fit using
+maximum likelihood, a binomial error distribution, and a logit link
+function. We did not drop terms and isntead explored all interactions
+and used goodness-of-fit tests, AIC, and Bayes Factors for model
+comparison. We used the performance package (<a href="https://cran.r-project.org/web/packages/performance/index.html">Lüdecke
+2023</a>) to check model health and to compare models.</p>
+<p>The best model had an interaction of baseline log odds and co-player
+typicality. Random slopes did not improve this model. We report this
+model below.</p>
+</div>
+<div id="results-1" class="section level2">
+<h2>Results</h2>
+</div>
+<div id="data-and-code-1" class="section level2">
+<h2>Data and code</h2>
+<p>Code used to set up and process the experiment is in
+<code>scripts/esp_exp</code>. The code to run the experiment is in
+<code>interface/hesp.zip</code>. Code to fit models is in
+<code>analysis/esp_analysis/esp_analysis.R</code>. Raw data are in
+<code>exp_data/raw</code>, tidy data are in
+<code>exp_data/baseline</code>.</p>
 </div>
 </div>
 
