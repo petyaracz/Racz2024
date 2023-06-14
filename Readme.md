@@ -548,6 +548,8 @@ difficult and because participants completed it in an uncontrolled
 environment, both contributing to higher variability. Participants
 completed the matching game and the post test in 10-15 minutes.
 
+### Matching game
+
 We fit a generalised additive mixed model ([Wood
 2023](https://cran.r-project.org/web/packages/mgcv/index.html)) on the
 matching data. The outcome variable was agreement with the co-player.
@@ -568,6 +570,8 @@ generalised linear mixed model with a linear effect of trial index and a
 linear effect of the absolute baseline log odds of variant 1 and variant
 2. We report this model below.
 
+### Post test
+
 We fit a generalised linear mixed model ([Bates
 2023](https://cran.r-project.org/web/packages/lme4/index.html)) on the
 post test data. The outcome variable was agreement with the co-player.
@@ -586,15 +590,69 @@ used the performance package ([Lüdecke
 2023](https://cran.r-project.org/web/packages/performance/index.html))
 to check model health and to compare models.
 
+The model of the matching data was largely explorative. The model of the
+post test data was pre-registered, down to interactions and random
+effect structure, with the notable difference that the final analysis
+uses frequentist, rather than Bayesian methods. The main advantage of
+Bayesian statistics is that frequentist models often result in errors of
+magnitude by overfitting the data. The use of pre-registered sample
+size, exclusion criteria, and model structure, along with Bayes Factors
+to detect overfitting, largely mitigates this problem.
+
 The best model had an interaction of baseline log odds and co-player
 typicality. Random slopes did not improve this model. We report this
 model below.
 
 ## Results
 
+### Matching game
+
+`match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base)`
+
+<figure>
+<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred1.png"
+alt="Matching 1" />
+<figcaption aria-hidden="true">Matching 1</figcaption>
+</figure>
+
+<figure>
+<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred2.png"
+alt="Matching 2" />
+<figcaption aria-hidden="true">Matching 2</figcaption>
+</figure>
+
+<figure>
+<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred3.png"
+alt="Matching 3" />
+<figcaption aria-hidden="true">Matching 3</figcaption>
+</figure>
+
+### Post test
+
+`picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base)`
+
+<figure>
+<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred4.png"
+alt="post 1" />
+<figcaption aria-hidden="true">post 1</figcaption>
+</figure>
+
+<figure>
+<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred5.png"
+alt="post 2" />
+<figcaption aria-hidden="true">post 2</figcaption>
+</figure>
+
+<figure>
+<img src="~/Github/Racz2024/analysis/esp_analysis/preds/pred6.png"
+alt="post 3" />
+<figcaption aria-hidden="true">post 3</figcaption>
+</figure>
+
 ## Data and code
 
 Code used to set up and process the experiment is in `scripts/esp_exp`.
 The code to run the experiment is in `interface/hesp.zip`. Code to fit
-models is in `analysis/esp_analysis/esp_analysis.R`. Raw data are in
+models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise
+data is in `analysis/esp_analysis/esp_pred_viz.R`. Raw data are in
 `exp_data/raw`, tidy data are in `exp_data/baseline`.
