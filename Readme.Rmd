@@ -2,7 +2,7 @@
 title: 'Supplementary Information: Learning Salient Morphological Variation'
 author: "Rácz, Péter"
 date: "`r Sys.Date()`"
-output: html_document
+output: github_document
 ---
 
 
