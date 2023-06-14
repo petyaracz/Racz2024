@@ -378,21 +378,21 @@ The best model had an interaction of baseline log odds and co-player typicality.
 
 `match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base)`
 
-![Matching 1](~/Github/Racz2024/analysis/esp_analysis/preds/pred1.png)
+![Matching 1](analysis/esp_analysis/preds/pred1.png)
 
-![Matching 2](~/Github/Racz2024/analysis/esp_analysis/preds/pred2.png)
+![Matching 2](analysis/esp_analysis/preds/pred2.png)
 
-![Matching 3](~/Github/Racz2024/analysis/esp_analysis/preds/pred3.png)
+![Matching 3](analysis/esp_analysis/preds/pred3.png)
 
 ### Post test
 
 `picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base)`
 
-![post 1](~/Github/Racz2024/analysis/esp_analysis/preds/pred4.png)
+![post 1](analysis/esp_analysis/preds/pred4.png)
 
-![post 2](~/Github/Racz2024/analysis/esp_analysis/preds/pred5.png)
+![post 2](analysis/esp_analysis/preds/pred5.png)
 
-![post 3](~/Github/Racz2024/analysis/esp_analysis/preds/pred6.png)
+![post 3](analysis/esp_analysis/preds/pred6.png)
 
 ## Data and code
 
