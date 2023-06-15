@@ -34,29 +34,12 @@ cloudPlot2 = function(dat,pred,out){
 
 source('analysis/esp_analysis/source_esp.R')
 
-# -- best models -- #
+# -- coef -- #
 
-esp_fit = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), 
-      data = esp, 
-      family = binomial(link = 'logit'), 
-      control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
-                             ))
-
-posttest_fit = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base), 
-      data = posttest, 
-      family = binomial(link = 'logit'), 
-      control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
-      ))
-
-# -- predictions -- #
-
-esp$pred = predict(esp_fit, type = 'response')
-posttest$pred = predict(posttest_fit, type = 'response')
-
-# -- camera ready -- #
-
-esp$var = ifelse(esp$variation == 'lakok/lakom', 'levelling','vowel deletion')
-posttest$var = ifelse(posttest$variation == 'lakok/lakom', 'levelling','vowel deletion')
+broom.mixed::tidy(esp_fit, conf.int = T) %>% 
+  write_tsv('analysis/esp_analysis/esp_fit.tsv')
+broom.mixed::tidy(posttest_fit, conf.int = T) %>% 
+  write_tsv('analysis/esp_analysis/posttest_fit.tsv')
 
 # -- viz -- #
 

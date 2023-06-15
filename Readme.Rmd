@@ -23,6 +23,8 @@ d = read_tsv('~/Github/Racz2024/exp_data/esp/esp_master_all_filtered.tsv')
 allduf = read_tsv('~/Github/Racz2024/exp_data/esp/esp_master_all_unfiltered.tsv')
 alldf = read_tsv('~/Github/Racz2024/exp_data/esp/esp_master_all.tsv')
 
+esp_table = read_tsv('~/Github/Racz2024/analysis/esp_analysis/esp_fit.tsv')
+posttest_table = read_tsv('~/Github/Racz2024/analysis/esp_analysis/posttest_fit.tsv')
 
 d %<>% filter(variation %in% c('lakok/lakom','cselekszenek/cselekednek'))
 allduf %<>% filter(variation %in% c('lakok/lakom','cselekszenek/cselekednek'))
@@ -43,7 +45,7 @@ The main questions of the paradigm are: Can people learn the morphological varia
 
 # Stimuli
 
-There are three sets of stimuli, variable patterns from Hungarian morphology. `Baseline` participants see examples from all three. `Matching game` participants only see one set of stimuli throughout.
+There are three sets of stimuli, variable patterns from Hungarian morphology. `Baseline experiment` participants see examples from all three. `Matching experiment` participants only see one set of stimuli throughout.
 
 ## Sets of variation
 
@@ -91,7 +93,7 @@ Variation is partly phonotactically and partly morphophonologically motivated. C
 
 Vowel deletion in rapid speech can be observed in spoken English: "family" or "natural" can be pronounced either as ['f6mIlI] or ['f6mlI] and ['n6t\@r\@l] or ['n6tr\@l]. This, however, is a lower-level phenomenon, gradient, closely related to vowel stress, not lexicalised, and not represented in the orthography.
 
-The third variation is called `front harmony`. Hungarian has vowel harmony: in most cases, the vowel in a suffix has to match the last vowel in the stem in both frontedness and roundness (examples 9-10). Some stem vowels are neutral, meaning that they do not determine the suffix vowel: Vowel harmony "skips" them and matches the suffix vowel to the preceding vowel in the stem (example 11). The vowel `e` is variably neutral: a stem with a back vowel and `e` can select a front suffix (matching `e`) or a back suffix (skipping `e` and matching the preceding back vowel) (example 12).
+The third variation is called `front harmony`. Hungarian has vowel harmony: in most cases, the vowel in a suffix has to match the last vowel in the stem in both frontedness and roundness (examples 9-10). Some stem vowels are neutral, meaning that they do not determine the suffix vowel: Vowel harmony "skips" them and matches the suffix vowel to the preceding vowel in the stem (example 11). The vowel `e` is variably neutral: a stem with a back vowel and `e` can select a front suffix (agreeing with `e`) or a back suffix (skipping `e` and agreeing with the preceding back vowel) (example 12).
 
 (9) **fójerben**
 `foyer.loc`
@@ -140,7 +142,7 @@ b %>%
   group_by(derivational,nsyl,infl) %>% 
   select(base,variant1,variant2,derivational,nsyl,infl) %>% 
   sample_n(1) %>% 
-  kable('simple', caption = 'Levelling: example stimuli')
+  kable('simple', caption = 'Table 1. Levelling: example stimuli')
 ```
 
 For vowel deletion, which occurs across many paradigm slots, variation was restricted to the first, second, or third person of the plural present indefinite. Otherwise, the structure was similar to levelling, with mono- or bisyllabic stems and the same three derivational suffixes. A set of examples for vowel deletion can be seen in Table 2.
@@ -157,7 +159,7 @@ b %>%
   group_by(derivational,nsyl,infl) %>% 
   select(base,variant1,variant2,derivational,nsyl,infl) %>% 
   sample_n(1) %>% 
-  kable('simple', caption = 'Vowel deletion: example stimuli')
+  kable('simple', caption = 'Table 2. Vowel deletion: example stimuli')
 ```
 
 For front harmony, all stems were bisyllabic, with a back vowel and the variable neutral vowel `e` or `é`. Many paradigm slots of the case system show variation. Here, it was restricted to the inessive, the dative, and the adessive case. A set of examples for front harmony can be seen in Table 3.
@@ -174,12 +176,12 @@ b %>%
   group_by(vowel,decl) %>% 
   select(base,variant1,variant2,vowel,decl) %>% 
   sample_n(1) %>% 
-  kable('simple', caption = 'Front harmony: example stimuli')
+  kable('simple', caption = 'Table 3. Front harmony: example stimuli')
 ```
 
 Three sets of 162 forms each were created, balancing across the restrictions above. For each nonce word in each variable set, there are two possible variant choices: `-k` or `-m` for levelling, `cc` (vowel deleted) or `cvc` (vowel in situ) for vowel deletion, and back vowel or front vowel in suffix for front harmony.
 
-# Baseline task
+# Baseline experiment
 
 ## Stimuli
 
@@ -207,7 +209,7 @@ b %>%
       ),
     `variable set` = c('levelling',rep('vowel deletion',3), rep('front harmony',3))
     ) %>% 
-  kable('simple', caption = 'Example prompts across variation and suffix')
+  kable('simple', caption = 'Table 4. Example prompts across variation and suffix')
 ```
 
 ## Participants
@@ -236,7 +238,7 @@ b6 = bd %>%
 
 ## Procedure
 
-The task was coded in (psychojs)[https://www.sciencedirect.com/science/article/pii/S0165027006005772] and hosted on (Pavlovia)[pavlovia.org]. Participants were instructed that they would see prompts that contain words that might be unfamiliar to them. They were asked to pick a suffixed form to finish the prompt in a way that seems most natural or familiar to them. They were informed that different people might have different preferences and there are no correct or incorrect answers. An example preceded the trials. Participants used the keyboard to respond.
+The task was coded in [psychojs](https://www.sciencedirect.com/science/article/pii/S0165027006005772) and hosted on [Pavlovia](pavlovia.org). Participants were instructed that they would see prompts that contain words that might be unfamiliar to them. They were asked to pick a suffixed form to finish the prompt in a way that seems most natural or familiar to them. They were informed that different people might have different preferences and there are no correct or incorrect answers. An example preceded the trials. Participants used the keyboard to respond.
 
 ## Hypotheses
 
@@ -260,13 +262,13 @@ Code used to set up and process the experiment is in `scripts/baseline_exp`. The
 
 Participants gave informed consent at the beginning of the experiment. The study was approved by the United Ethical Review Committee for Research in Psychology in Hungary (EPKEB, ref.\ number 2021-119).
 
-# Matching task
+# Matching experiment
 
 The sample size, design, exclusion criteria, and data analysis were [pre-registered](https://aspredicted.org/BL1_S7V). We only report the levelling and vowel deletion data.
 
 ## Stimuli
 
-The matching task is played with a co-player and the participant has to match the way the co-player would finish the prompt. By manipulating the co-player's responses, we can feed different morphological distributions to the participant. One participant sees words from one type of variation only (levelling / vowel deletion / front harmony), both in the matching task and the post test. One participant sees different words in the matching task and in the post test.
+The matching game is played with a co-player and the participant has to match the way the co-player would finish the prompt. By manipulating the co-player's responses, we can feed different morphological distributions to the participant. The post test has the participant playing alone, in order to ascertain whether they persist in patterns they learned in the matching game. One participant sees words from one type of variation only (levelling / vowel deletion / front harmony), both in the matching game and the post test. One participant sees different words in the matching game and in the post test.
 
 We created three lists of 54 items each for each variation, sampled from the baseline. In each list, nonce forms were ranked from 1 (largest baseline preference for variant 1) to 54 (largest baseline preference for variant 2). Co-players used the baseline patterns as a reference. They diverged from them across two dimensions.
 
@@ -292,10 +294,10 @@ st %>%
   arrange(-log_odds) %>% 
   mutate(`baseline rank` = 1:n()) %>% 
   select(`baseline rank`, base, `high typical`, `low typical`, `high reversed`, `low reversed`) %>%  
-  kable('simple', digits = 2, caption = 'Levelling list 1 across co-player types')
+  kable('simple', digits = 2, caption = 'Table 5. Levelling list 1 across co-player types')
 ```
 
-The matching task has a post test to check whether the participant maintains the patterns learned in the matching task. Participants were allocated to lists and conditions at random. If a participant had list 1/2/3 in the matching game, they had list 2/3/1 in the post test.
+The matching experiment has a post test to check whether the participant maintains the patterns learned in the matching game. Participants were allocated to lists and conditions at random. If a participant had list 1/2/3 in the matching game, they had list 2/3/1 in the post test.
 
 There were three lists and all four co-player types played all lists, resulting in 12 unique lists in total. The pre-registration specifies 50 trials, the experiment had 54 trials.
 
@@ -330,7 +332,7 @@ d4 = d %>%
 
 ```
 
-`r d1` participants completed the matching game in late 2022 and early 2023. Sample size was pre-set to 7 per unique list (12 lists) or 21 per condition (high / low x typical / reversed x levelling / vowel deletion). `r d1-d1c `participants who matched our exclusion criteria (see below) were excluded. Then, we kept data from the first seven participants in each list (excluding an additional `r d1c-d1b` participants), resulting in a final total of 7 x 3 x 2 x 2 x 2 = `r d1b` participants, `r d2` women. Median age was `r d3`. Participants completed the task for course credit.
+`r d1` participants completed the matching experiment in late 2022 and early 2023. Sample size was pre-set to 7 per unique list (12 lists) or 21 per condition (high / low x typical / reversed x levelling / vowel deletion). `r d1-d1c `participants who matched our exclusion criteria (see below) were excluded. Then, we kept data from the first seven participants in each list (excluding an additional `r d1c-d1b` participants), resulting in a final total of 7 x 3 x 2 x 2 x 2 = `r d1b` participants, `r d2` women. Median age was `r d3`. Participants completed the task for course credit.
 
 ## Procedure
 
@@ -362,7 +364,7 @@ Participants who only picked the left button or the right button were to be excl
 
 We fit a generalised additive mixed model ([Wood 2023](https://cran.r-project.org/web/packages/mgcv/index.html)) on the matching data. The outcome variable was agreement with the co-player. The predictors were trial index, rate of use of variant 1 (high / low), distribution of use of variant 1 (typical / atypical), type of variation (levelling / vowel deletion), and the log odds of the number of variant 1 and variant 2 responses to the target form in the baseline task. Grouping factors were participant and target form. Models were fit using restricted maximum likelihood, a binomial error distribution, and a logit link function. We did not drop terms and instead explored all interactions and used goodness-of-fit tests and AIC for model comparison ([van Rij 2022](https://www.rdocumentation.org/packages/itsadug/versions/2.4.1)).
 
-The best model had a linear effect of trial index and a quadratic effect of baseline log odds of variant 1 / variant 2. We re-fit it as a generalised linear mixed model with a linear effect of trial index and a linear effect of the absolute baseline log odds of variant 1 and variant 2. We report this model below.
+The best model had a linear effect of trial index and a quadratic effect of baseline log odds of variant 1 / variant 2. Random smooths did not improve model fit. We re-fit it as a generalised linear mixed model with a linear effect of trial index and a linear effect of the absolute baseline log odds of variant 1 and variant 2. We report this model below.
 
 ### Post test
 
@@ -376,24 +378,88 @@ The best model had an interaction of baseline log odds and co-player typicality.
 
 ### Matching game
 
-`match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base)`
+The formula for the best model is `match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base)`. The outcome is the probability of matching the co-player. The summary of the fixed effects is in Table 6.
 
-![Matching 1](analysis/esp_analysis/preds/pred1.png)
+```{r esp_fit}
+esp_table %>% 
+  filter(effect == 'fixed') %>% 
+  rename(term2 = term) %>% 
+  add_column(term = c('Intercept','rate of v1: low','typicality reversed','abs. baseline log odds (scaled)','variation: vowel deletion', 'trial number (scaled)', 'typicality reversed : abs. baseline log odds (scaled)')) %>% 
+  select(term,estimate,std.error,statistic,conf.low,conf.high) %>% 
+  kable('simple', digits = 2, caption = 'Table 6. Best model, ESP matches')
+```
 
-![Matching 2](analysis/esp_analysis/preds/pred2.png)
+The intercept is above zero with a 95% confidence interval that excludes zero. This means that participants are, overall, above chance in matching the co-player in the 54 trials of the matching phase. Of the predictors, trial number, reversed co-player typicality and item baseline log odds have a significant effect on match success. We now look at these in detail.
 
-![Matching 3](analysis/esp_analysis/preds/pred3.png)
+Figure 1 shows the rate of mean predicted match per trial in the matching game. The dotted lines are standard errors. We see that, at the beginning, participants have about a 55% chance of matching the co-player -- above chance -- and this gradually improves during the game, reaching about 65% towards the final trial.
+
+![Figure 1](analysis/esp_analysis/preds/pred1.png)
+
+This shows that participants learn in the matching game. They are more likely to match the co-player in the end than in the beginning. Learning has a linear trajectory. The data do not support a non-linear learning trajectory nor across-participant variation in the shape of the learning trajectory. Participants have different random intercepts. Various conditions have meaningfully different fixed intercepts. The trajectory and the linearity of learning is always the same.
+
+This is shown in Figure 2, which shows mean predicted match across trial number in three splits: high / low use of variant 1 (left), typical or reversed co-player distribution (middle), and matching in levelling or vowel deletion stimuli (right).
+
+![Figure 2](analysis/esp_analysis/preds/pred2.png)
+
+Looking at the left-hand side, learning is not harder with either a high or low rate of variant 1.
+
+Looking at the middle, the only statistically significant difference is between the intercepts of matching a typical versus a reversed co-player. Matching a typical co-player is much easier right from the beginning. In contrast, participants are less likely than chance to match the reversed co-player initially. This demonstrates that learning goes beyond picking up on a rate of use for variant 1 / variant 2. If a co-player's choices reflect the baseline distribution of preference for variant 1 / variant 2, participants are much more likely to match the co-player right away. This then improves, likely because participants can adjust their expectations on the rate of use for variant 1 (high or low) on top of the typical distribution.
+
+In contrast, when a co-player's choices are counter-intuitive, participants start out mismatching the co-player. They then gradually adjust to the co-player's distribution, resulting in some improvement in matching.
+
+We think it possible that learning trajectories are not completely linear in real life, in which case the data do not provide us with enough evidence to reject linearity. At the same time, word-level distributions in both the matching game and the post test also suggest gradual convergence with the co-player across trials and lexical items.
+
+Looking at the right-hand side, we see that learning is not less difficult with the socially more salient variable set, levelling. Despite the clear second-order indices of levelling and the relative heterogeneity of vowel deletion, participants are equally capable of picking them up.
+
+One interaction in the model is between the baseline log odds of the target word in the prompt and co-player typicality. This can be seen in Figure 3. The horizontal axis shows the absolute log odds of picking variant 1 in the baseline. If this number is near zero, baseline participants showed no strong preference for variant 1 or variant 2 (since the plogis of 0 is .5). If it is a large number, baseline participants showed a strong preference for variant 1 (a large positive log odds) or variant 2 (a large negative log odds). The vertical axis is the predicted probability of matching a co-player in the matching game.
+
+When we look at the left-hand panel, we see how these two correlate when playing a typical co-player. All we see here is a reflection of the design: both high and low co-players pick variant 1 for words where variant 1 is strongly preferred in the baseline, and the same is true for variant 2, so matching words with high absolute baseline log odds is easier.
+
+When we look at the right-hand panel, we see a different pattern emerge when playing a reversed co-player. If the absolute baseline log odds of a word is a high value, that means it has a clear preference for variant 1 or variant 2. Conversely, the reversed co-player will pick the opposite variant. Matching the reversed co-player, then, will be harder. This, again, shows that participants have word-level expectations on whether variant 1 or variant 2 is more "appropriate". A co-player that respects these expectations is easier to match. A co-player that violates them is harder to match. Here again we see a linear trajectory: for any given word, the larger the baseline preference for variant 1 or variant 2, the harder it is to match a reversed co-player's pick. 
+
+![Figure 3](analysis/esp_analysis/preds/pred3.png)
+
+The results show that matching becomes easier in the course of the matching game and that reversed co-players are harder to match than typical ones, demonstrating an effect of word-level expectations (above and beyond overall expectations on the rate of use for variant 1 or variant 2). Curiously, learning is not easier with the socially salient variable set.
 
 ### Post test
 
-`picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base)`
+The best model for the post test is `picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base)`. Since there is no co-player here to match, the outcome is the probabilty of picking variant 1. The summary of the fixed effects is in Table 7.
 
-![post 1](analysis/esp_analysis/preds/pred4.png)
+```{r pt_fit}
+posttest_table %>% 
+  filter(effect == 'fixed') %>% 
+  rename(term2 = term) %>% 
+  add_column(term = c('Intercept','rate of v1: low','typicality reversed','baseline log odds','variation: vowel deletion', 'typicality reversed : abs. baseline log odds (scaled)')) %>% 
+  select(term,estimate,std.error,statistic,conf.low,conf.high) %>% 
+  kable('simple', digits = 2, caption = 'Table 7. Best model, ESP matches')
+```
 
-![post 2](analysis/esp_analysis/preds/pred5.png)
+The intercept is above zero and the effect of low co-player rate of use of variant 1 is negative. This means that participants use a high amount of variant 1 in the post test if they played a high-variant 1 co-player and a low amount if they played a low co-player. Target word baseline log odds of use of variant 1 is a strong predictor of post test use of variant 1, which makes sense. Otherwise, since the outcome is use of variant 1, we do not expect co-player typicality and variable set to have a single term effect. We are interested in interactions between terms. The one significant interaction is between target word baseline log odds of use of variant 1 and co-player typicality. We explore this below.
 
-![post 3](analysis/esp_analysis/preds/pred6.png)
+Essentially, participants maintain the patterns they learned in the matching phase. A clear example of this is that participants who played a high-variant 1 co-player will have a higher use of variant 1 in the post test than those who played a low-variant 1 co-player. This can be seen in Figure 4, which plots the distribution of mean predicted participant preference for variant 1 in the post test for participants who played a high variant 1 co-player (above) or a low variant 1 co-player (below).
+
+![Figure 4](analysis/esp_analysis/preds/pred4.png)
+
+The persistent adjustment goes beyond a shift in the rate of use of variant 1 and variant 2. This can be seen in Figure 5. The horizontal axis shows the baseline log odds of the use of variant 1 for each word and the vertical axis shows the mean predicted rate of use of variant 1 in the post test. The two are correlated: participants in the post test make similar choices to participants in the baseline experiment. 
+
+The strength of the correlation is significantly different depending on the type of co-player in the matching game: the choices of participants playing a reversed co-player have a weaker correlation with the baseline pattern. This is because we exposed these participants to a different lexical structure. Participants playing a typical co-player received evidence that supports their own lexical structure. Participants playing a reversed co-player received evidence that words that, in their judgement, strongly prefer variant 1 in fact strongly prefer variant 2, and those that strongly prefer variant 2 in fact strongly prefer variant 1. As a result, these participants adjusted their lexical patterns. Words that otherwise have a low preference for variant 1 now have a higher preference. Words that otherwise have a high preference for variant 1 now have a lower preference. The result is the difference in the rates of correlation, seen in Figure 5.
+
+![Figure 5](analysis/esp_analysis/preds/pred5.png)
+
+This effect is independent of whether the co-player had a high or low overall preference for variant 1. This also makes sense: half of the participants have seen a co-player with a high overall rate of variant 1 and half of the participants have seen a co-player with a low overall rate of variant 1 and the two groups average out. More interestingly, the variable set also makes no difference. This can be seen in Figure 6.
+
+Figure 6 shows the correlation of baseline log odds with predicted mean rate of use of variant 1 in the post test for each word, this time split across participants with typical and reversed co-players. The slope of the correlation is not different between participants who were exposed to levelling stimuli versus vowel deletion stimuli, either for the typical or the reversed co-player. This means that not only are the rates of learning similar for the two variable sets, the learned lexical structure is retained to a similar extent in the post test.
+
+![Figure 6](analysis/esp_analysis/preds/pred6.png)
 
 ## Data and code
 
 Code used to set up and process the experiment is in `scripts/esp_exp`. The code to run the experiment is in `interface/hesp.zip`. Code to fit models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise data is in `analysis/esp_analysis/esp_pred_viz.R`. Raw data are in `exp_data/raw`, tidy data are in `exp_data/baseline`.
+
+## Discussion
+
+summary
+limitations / researcher degrees of freedom
+comparison with english past tense
+notes on salience
+
