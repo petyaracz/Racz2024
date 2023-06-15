@@ -48,3 +48,28 @@ esp = filter(esp, variation != 'hotelban/hotelben')
 esp$abs_baseline_log_odds_jitter = abs(esp$baseline_log_odds_jitter)
 
 posttest = filter(posttest, variation != 'hotelban/hotelben')
+
+
+# -- best models -- #
+
+esp_fit = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), 
+                data = esp, 
+                family = binomial(link = 'logit'), 
+                control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
+                ))
+
+posttest_fit = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base), 
+                     data = posttest, 
+                     family = binomial(link = 'logit'), 
+                     control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
+                     ))
+
+# -- predictions -- #
+
+esp$pred = predict(esp_fit, type = 'response')
+posttest$pred = predict(posttest_fit, type = 'response')
+
+# -- camera ready -- #
+
+esp$var = ifelse(esp$variation == 'lakok/lakom', 'levelling','vowel deletion')
+posttest$var = ifelse(posttest$variation == 'lakok/lakom', 'levelling','vowel deletion')

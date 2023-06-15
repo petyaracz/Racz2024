@@ -91,30 +91,13 @@ fit10 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_ji
 fit11 = bam(esp_match ~ reg_rate_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
 fit12 = bam(esp_match ~ reg_rate_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
 
+fit10fr = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'fREML', discrete = T)
+fit10bfr = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re") + s(i, part_id, bs="fs", m=1), data = esp, family = binomial("logit"), method = 'fREML', discrete = T)
+# this is overfit.
+
 itsadug::compareML(fit10,fit9)
 itsadug::compareML(fit10,fit11)
 itsadug::compareML(fit10,fit12)
-
-summary(fit10)
-# Formula:
-#   esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + 
-#   s(i) + s(base, bs = "re") + s(part_id, bs = "re")
-# 
-# Parametric coefficients:
-#   Estimate Std. Error z value Pr(>|z|)    
-# (Intercept)                        0.68593    0.06256  10.964   <2e-16 ***
-#   reg_ratelow                       -0.08149    0.06063  -1.344    0.179    
-# reg_distreversed                  -0.52480    0.06066  -8.651   <2e-16 ***
-#   variationcselekszenek/cselekednek -0.09722    0.06458  -1.506    0.132    
-# ---
-#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-# 
-# Approximate significance of smooth terms:
-#   edf  Ref.df Chi.sq  p-value    
-# s(baseline_log_odds_jitter)  6.876   7.918 104.26  < 2e-16 ***
-#   s(i)                         1.002   1.004  11.14 0.000854 ***
-#   s(base)                     22.012 310.000  23.73 0.158376    
-# s(part_id)                  72.544 164.000 130.59  < 2e-16 ***
 
 plot(fit10)
 # if this is a linear effect for i I may well fit a glmer.
