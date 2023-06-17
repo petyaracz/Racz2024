@@ -1,7 +1,27 @@
 Supplementary Information: Learning Salient Morphological Variation
 ================
 Rácz, Péter
-2023-06-15
+2023-06-17
+
+# Summary
+
+We wanted to see whether people can learn morphological variation and
+how the social salience of the pattern in question feeds into this. We
+selected a set of variable patterns in Hungarian morphology, generated
+nonce forms, benchmarked them in a baseline experiment, and then had our
+participants play a word-matching game with an artificial co-player to
+see whether they can learn from the co-player’s responses in the game
+and adjust their representations of morphological variation.
+
+Here, we give descriptions and report on the baseline experiment for
+three variable patterns, levelling, vowel deletion, and front harmony.
+We report on the matching game and provide a discussion for two of
+these, levelling and vowel deletion.
+
+The results confirm that participants have detailed representations of
+variable patterns and are able to adjust these upon exposure to external
+stimuli. Contrary to our expectations, this adjustment was not easier
+for the socially salient morphological pattern.
 
 # Structure
 
@@ -53,16 +73,21 @@ examples 1-4. Levelling is confined to one verb class (verbs that end in
 `-ik` in the canonical form, the `3sg.pres.indef`) and one paradigm
 slot, not appearing outside the `1sg.pres.indef`.
 
-1)  **Nézem az almát.** `watch.1sg.pres.def the apple.acc` I watch the
-    apple.
+1)  **Nézem az almát.**  
+    `watch.1sg.pres.def the apple.acc`  
+    I watch the apple.
 
-2)  **Nézek egy almát.** `watch.1sg.pres.indef an apple.acc` I watch an
-    apple.
+2)  **Nézek egy almát.**  
+    `watch.1sg.pres.indef an apple.acc`  
+    I watch an apple.
 
-3)  **Eszem az almát.** `eat.1sg.pres.def an apple.acc` I eat the apple.
+3)  **Eszem az almát.**  
+    `eat.1sg.pres.def an apple.acc`  
+    I eat the apple.
 
-4)  **Eszek/eszem egy almát.** `eat.1sg.pres.indef an apple.acc` I eat
-    an apple.
+4)  **Eszek/eszem egy almát.**  
+    `eat.1sg.pres.indef an apple.acc`  
+    I eat an apple.
 
 Many frequent verbs and many derivational suffixes are in the `-ik`
 category, meaning that levelling is productive and applies to a large
@@ -92,17 +117,21 @@ a change in the second consonant (example 7). Some cases of variation
 are lexicalised (example 8) ([Rácz, Rebrus, & Törkenczy
 2018](https://www.degruyter.com/document/doi/10.1515/cllt-2018-0014/html)).
 
-5)  **Felsöpör.** `perf.sweep.3sg.pres.indef` (S)he sweeps up.
+5)  **Felsöpör.**  
+    `perf.sweep.3sg.pres.indef`  
+    (S)he sweeps up.
 
-6)  **Felsöpri.** `perf.sweep.3sg.pres.def` (S)he sweeps it up.
+6)  **Felsöpri.**  
+    `perf.sweep.3sg.pres.def`  
+    (S)he sweeps it up.
 
-7)  **Nem tudják, mit cselekszenek/cselekednek.**
-    `neg know.2pl.pres.def what do.2pl.pres.indef` They know not what
-    they do.
+7)  **Nem tudják, mit cselekszenek/cselekednek.**  
+    `neg know.2pl.pres.def what do.2pl.pres.indef`  
+    They know not what they do.
 
-8)  **Ma az áldozatokra emlékezünk/emlékszünk.**
-    `today the victim.pl.loc remember/commemorate.2pl.pres.indef` Today
-    we remember/honour the victims.
+8)  **Ma az áldozatokra emlékezünk/emlékszünk.**  
+    `today the victim.pl.loc remember/commemorate.2pl.pres.indef`  
+    Today we remember/honour the victims.
 
 Variation is partly phonotactically and partly morphophonologically
 motivated. Certain pairs of consonants cannot occur adjacently in the
@@ -131,13 +160,20 @@ neutral: a stem with a back vowel and `e` can select a front suffix
 (agreeing with `e`) or a back suffix (skipping `e` and agreeing with the
 preceding back vowel) (example 12).
 
-9)  **fójerben** `foyer.loc` In the foyer.
+9)  **fójerben**  
+    `foyer.loc`  
+    In the foyer.
 
-10) **garázsnak** `garage.dat` To the garage.
+10) **garázsnak**  
+    `garage.dat` To the garage.
 
-11) **partival** `party.ins` With the party.
+11) **partival**  
+    `party.ins`  
+    With the party.
 
-12) **hotelra/hotelre** `hotel.loc` On the hotel.
+12) **hotelra/hotelre**  
+    `hotel.loc`  
+    On the hotel.
 
 Hungarian vowel harmony and its triggers of variation have seen
 extensive scrutiny in the theoretical linguistics literature (see
@@ -177,12 +213,17 @@ and a derivational suffix. Hungarian verbs are a closed class, and new
 verbs enter the language via derivational morphology, using one of
 several possible derivational suffixes (see examples 13-15).
 
-13) **guglizik** `google.v.der.3sg.pres.indef` (S)he googles.
+13) **guglizik**  
+    `google.v.der.3sg.pres.indef`  
+    (S)he googles.
 
-14) **dúmozik** `doom.v.der.3sg.pres.indef` (S)he plays the video game
-    Doom..v.der.3sg.pres.indef
+14) **dúmozik**  
+    `doom.v.der.3sg.pres.indef`  
+    (S)he plays the video game Doom..v.der.3sg.pres.indef
 
-15) **solymászik** `falcon.v.der.3sg.pres.indef` (S)he falcons.
+15) **solymászik**  
+    `falcon.v.der.3sg.pres.indef`  
+    (S)he falcons.
 
 A set of examples for levelling can be seen in Table 1.
 
@@ -829,6 +870,62 @@ structure is retained to a similar extent in the post test.
 <figcaption aria-hidden="true">Figure 6</figcaption>
 </figure>
 
+## Discussion
+
+We reported results of an experiment in which we expose participants to
+a pattern of variation which is expressed over benchmarked nonce word
+stimuli but is based on existing variation in their native language. We
+do so using a matching game in which they have to agree with an
+artificial co-player in picking one variant out of two for a
+morphological exponent. Both variants are well-formed according to the
+rules of the language. The co-player made decisions based partly on
+patterns in the ambient language and partly based on condition-based
+manipulations. Participants were incentivised to learn variation and the
+question was whether its various attributes make it easier or harder for
+them to do so.
+
+Our participants learned the variable patterns. They improved in
+agreeing with the co-player over the course of the matching game and
+their subsequent post test responses sorted them in groups depending on
+what sort of co-player they had just seen. Learning did not solely
+consist of adjusting the rate of use for this or that variant but rather
+responded to the distribution of variants used by the co-player.
+Participants picked a specific variant for target words if these looked
+like target words that the co-player had used with a specific variant,
+even when they no longer played the co-player.
+
+Participants played our matching game using one of two distinct types of
+variation in Hungarian verbal inflection. One, levelling, is systematic
+and socially salient, the other, vowel deletion, is heterogeneous and
+has no clear metalinguistic or social indices. Despite this difference,
+participants readily learned both patterns.
+
+The paradigm had some limitations. Interaction was written, rather than
+spoken, the number of choices was pre-set, and variation was defined
+over a large number of unique nonce words, rather than a smaller number
+of existing words. Participants had no representation of the co-player,
+who remained an ill-defined, stripped-down social presence. The analysis
+of the matching game was explorative. The analysis of the post test was
+pre-registered along with the design and the sample size, minimising
+researcher degrees of freedom. This makes the absence of a difference
+between levelling and vowel deletion all the more remarkable.
+
+Beyond the absence of a salience effect, the results are interesting as
+a replication of complex morphological convergence in an interaction.
+The only other study of morphological convergence ((Rácz Beckner Hay
+Pierrehumbert
+2020)\[<https://www.linguisticsociety.org/sites/default/files/02_96.4Racz.pdf>\])
+used this paradigm. The main difference there was the use of the English
+past tense as the target variable distribution. The English past tense
+is a well-understood piece of variable inflectional morphology. At the
+same time, it contains a range of competing sets of variation, it is
+restricted to a small number of forms, and it shows extremely limited
+productivity in natural language. In contrast, both levelling and vowel
+deletion are fully productive, widely attested patterns in Hungarian.
+Attesting morphological convergence in Hungarian inflectional morphology
+lends further credence to the notion that such convergence is both
+possible and based on adjustments in rich lexical representations.
+
 ## Data and code
 
 Code used to set up and process the experiment is in `scripts/esp_exp`.
@@ -836,8 +933,3 @@ The code to run the experiment is in `interface/hesp.zip`. Code to fit
 models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise
 data is in `analysis/esp_analysis/esp_pred_viz.R`. Raw data are in
 `exp_data/raw`, tidy data are in `exp_data/baseline`.
-
-## Discussion
-
-summary limitations / researcher degrees of freedom comparison with
-english past tense notes on salience
