@@ -139,12 +139,12 @@ d %<>% filter(
 )
 
 # save unfiltered data
-write_tsv(d, 'exp_data/esp/esp_master_all_unfiltered.tsv')
+# write_tsv(d, 'exp_data/esp/esp_master_all_unfiltered.tsv')
 
 # print ids to a tsv
-d %>% 
-  distinct(record_date,dat_id,part_id) %>% 
-  write_tsv('exp_data/esp_completed_ids.tsv')
+# d %>% 
+#   distinct(record_date,dat_id,part_id) %>% 
+#   write_tsv('exp_data/esp_completed_ids.tsv')
 
 # -- some people did it twice -- #
 
@@ -248,7 +248,7 @@ slow_trials %>%
 print('But we need to drop specific responses if they were super slow:')
 
 too_long = d %>%
-  group_by(variation) %>% 
+  group_by(variation,trial_kind) %>% 
   mutate(
     rt = as.double(rt),
     median_rt = median(rt),
@@ -313,4 +313,4 @@ rows_left = d3 %>%
 rows_expected = 108 * 7 * 12 * 2
 glue('{round(rows_left/rows_expected*100)}% of observations remain.')
 
-# write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
+write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')

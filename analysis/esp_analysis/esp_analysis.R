@@ -52,9 +52,7 @@ formula_e = glue('esp_match ~ {interaction_e} + s(base, bs="re") + s(part_id, bs
 
 # -- fit -- #
 
-fit_e = map(formula_e, ~ bam(formula = as.formula(.), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)) # gam needs 'as.formula()'
-
-# save(fit_e, file = 'fits_e.Rda')
+fit_e = map(formula_e, ~ bam(formula = as.formula(.), data = esp, family = binomial("logit"), method = 'REML')) # gam needs 'as.formula()'
 
 fits_e = tibble(
   interaction_e,formula_e,fit_e
@@ -64,32 +62,44 @@ fits_e = tibble(
 
 map(fits_e$fit_e, ~ gam.check(.))
 
-# f1 and particularly f2 seems underfit, f4 dodgy, f8 super overfit probably
+# looks fine?
 
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[2]]) # 2 lower aic than 1, not better fit
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[3]]) # 3 lower aic than 1, not better fit
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[4]]) 
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[5]])
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[6]]) # 6 lower aic than 1, better fit
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[7]])
-itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[8]])
-itsadug::compareML(fits_e$fit_e[[2]],fits_e$fit_e[[6]]) # 2 lower aic than 6, not better fit
-itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[6]]) # 3 lower aic than 6, better fit
-itsadug::compareML(fits_e$fit_e[[4]],fits_e$fit_e[[6]]) # 4 > 6
-itsadug::compareML(fits_e$fit_e[[5]],fits_e$fit_e[[6]]) # 5 > 6
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[2]]) # 1 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[3]]) # 1 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[4]]) # 4 lower aic than 1 but not much better fit
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[5]]) # 1 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[6]]) # 6 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[7]]) # 1 better
+itsadug::compareML(fits_e$fit_e[[1]],fits_e$fit_e[[8]]) # 8 better
+itsadug::compareML(fits_e$fit_e[[6]],fits_e$fit_e[[7]]) # 6 better
+itsadug::compareML(fits_e$fit_e[[6]],fits_e$fit_e[[8]]) # 6 better
+itsadug::compareML(fits_e$fit_e[[4]],fits_e$fit_e[[6]]) # 6 better
+itsadug::compareML(fits_e$fit_e[[5]],fits_e$fit_e[[6]]) # 6 better
 itsadug::compareML(fits_e$fit_e[[3]],fits_e$fit_e[[2]]) # 2 > 3 or 2 == 3 in any case pick 2
 
-plot(fits_e$fit_e[[1]])
-plot(fits_e$fit_e[[2]])
-
-summary(fits_e$fit_e[[2]])
+summary(fits_e$fit_e[[6]])
 
 # this suggests a best model which has dist * variation but only as parametric effects
 
-fit9 = bam(esp_match ~ reg_rate + reg_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
-fit10 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
-fit11 = bam(esp_match ~ reg_rate_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
-fit12 = bam(esp_match ~ reg_rate_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML', nthreads = 16)
+fit9 = bam(esp_match ~ reg_rate + reg_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
+fit10 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
+fit11 = bam(esp_match ~ reg_rate_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
+fit12 = bam(esp_match ~ reg_rate_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
+
+fit6 = fits_e$fit_e[[6]]
+
+itsadug::compareML(fit6,fit9)
+itsadug::compareML(fit6,fit10)
+itsadug::compareML(fit6,fit11)
+itsadug::compareML(fit6,fit12)
+itsadug::compareML(fit9,fit10)
+itsadug::compareML(fit9,fit11)
+itsadug::compareML(fit10,fit11)
+itsadug::compareML(fit10,fit12)
+itsadug::compareML(fit9,fit12)
+itsadug::compareML(fit10,fit11)
+
+# the best one has main effects but no interaction
 
 fit10fr = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'fREML', discrete = T)
 fit10bfr = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re") + s(i, part_id, bs="fs", m=1), data = esp, family = binomial("logit"), method = 'fREML', discrete = T)
@@ -103,6 +113,8 @@ plot(fit10)
 # if this is a linear effect for i I may well fit a glmer.
 
 esp$abs_baseline_log_odds_jitter = abs(esp$baseline_log_odds_jitter)
+
+# ... and check for this particular interaction.
 
 best_fit_e = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), data = esp, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))
 best_fit_e_2 = glmer(esp_match ~ 1 + reg_rate + reg_dist + scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), data = esp, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))

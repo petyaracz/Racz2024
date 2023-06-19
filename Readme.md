@@ -1,7 +1,7 @@
 Supplementary Information: Learning Salient Morphological Variation
 ================
 Rácz, Péter
-2023-06-17
+2023-06-19
 
 # Summary
 
@@ -586,7 +586,7 @@ times were also excluded. Median and mean absolute deviation were
 calculated separately for type of variation (levelling / vowel deletion)
 and phase (matching game or post test).
 
-1237 trials or 6.8176808% of all trials were dropped. This is a
+1255 trials or 6.9168871% of all trials were dropped. This is a
 relatively high number. This is likely both because the task was
 difficult and because participants completed it in an uncontrolled
 environment, both contributing to higher variability. Participants
@@ -659,13 +659,13 @@ the fixed effects is in Table 6.
 
 | term                                                  | estimate | std.error | statistic | conf.low | conf.high |
 |:------------------------------------------------------|---------:|----------:|----------:|---------:|----------:|
-| Intercept                                             |     0.69 |      0.06 |     10.99 |     0.56 |      0.81 |
-| rate of v1: low                                       |    -0.08 |      0.06 |     -1.41 |    -0.20 |      0.03 |
-| typicality reversed                                   |    -0.54 |      0.06 |     -9.16 |    -0.65 |     -0.42 |
-| abs. baseline log odds (scaled)                       |     0.15 |      0.04 |      3.80 |     0.07 |      0.22 |
-| variation: vowel deletion                             |    -0.08 |      0.07 |     -1.18 |    -0.21 |      0.05 |
-| trial number (scaled)                                 |     0.08 |      0.02 |      3.54 |     0.04 |      0.13 |
-| typicality reversed : abs. baseline log odds (scaled) |    -0.57 |      0.05 |    -11.49 |    -0.66 |     -0.47 |
+| Intercept                                             |     0.69 |      0.06 |     10.90 |     0.56 |      0.81 |
+| rate of v1: low                                       |    -0.08 |      0.06 |     -1.31 |    -0.19 |      0.04 |
+| typicality reversed                                   |    -0.54 |      0.06 |     -9.18 |    -0.66 |     -0.43 |
+| abs. baseline log odds (scaled)                       |     0.16 |      0.04 |      4.01 |     0.08 |      0.23 |
+| variation: vowel deletion                             |    -0.08 |      0.07 |     -1.14 |    -0.21 |      0.06 |
+| trial number (scaled)                                 |     0.08 |      0.02 |      3.67 |     0.04 |      0.13 |
+| typicality reversed : abs. baseline log odds (scaled) |    -0.58 |      0.05 |    -11.67 |    -0.67 |     -0.48 |
 
 Table 6. Best model, ESP matches
 
@@ -787,12 +787,12 @@ of picking variant 1. The summary of the fixed effects is in Table 7.
 
 | term                                                  | estimate | std.error | statistic | conf.low | conf.high |
 |:------------------------------------------------------|---------:|----------:|----------:|---------:|----------:|
-| Intercept                                             |     0.92 |      0.25 |      3.75 |     0.44 |      1.41 |
-| rate of v1: low                                       |    -0.84 |      0.24 |     -3.46 |    -1.32 |     -0.37 |
-| typicality reversed                                   |    -0.06 |      0.24 |     -0.23 |    -0.54 |      0.42 |
-| baseline log odds                                     |     1.10 |      0.07 |     14.70 |     0.95 |      1.25 |
-| variation: vowel deletion                             |    -0.52 |      0.25 |     -2.09 |    -1.00 |     -0.03 |
-| typicality reversed : abs. baseline log odds (scaled) |    -0.20 |      0.09 |     -2.23 |    -0.38 |     -0.02 |
+| Intercept                                             |     0.93 |      0.25 |      3.74 |     0.44 |      1.41 |
+| rate of v1: low                                       |    -0.83 |      0.25 |     -3.39 |    -1.32 |     -0.35 |
+| typicality reversed                                   |    -0.05 |      0.25 |     -0.22 |    -0.54 |      0.43 |
+| baseline log odds                                     |     1.09 |      0.07 |     14.59 |     0.94 |      1.23 |
+| variation: vowel deletion                             |    -0.53 |      0.25 |     -2.11 |    -1.02 |     -0.04 |
+| typicality reversed : abs. baseline log odds (scaled) |    -0.19 |      0.09 |     -2.06 |    -0.37 |     -0.01 |
 
 Table 7. Best model, ESP matches
 
