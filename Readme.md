@@ -1,7 +1,7 @@
 Supplementary Information: Learning Salient Morphological Variation
 ================
 Rácz, Péter
-2023-06-19
+2023-06-20
 
 # Summary
 
@@ -899,6 +899,29 @@ variation in Hungarian verbal inflection. One, levelling, is systematic
 and socially salient, the other, vowel deletion, is heterogeneous and
 has no clear metalinguistic or social indices. Despite this difference,
 participants readily learned both patterns.
+
+There are two alternate explanations of the data. First, things might be
+simpler. There might be no real interaction between target word baseline
+log odds and co-player typicality in the post test. This would mean that
+participants only adjust their rate of use of variant 1 but do not
+otherwise learn from the co-player. This is less likely both because we
+see a reversed co-player effect, independent of rate of use, in the
+matching game itself and because model comparison finds the complexity
+of the interaction justified: this model is a better fit and it is more
+predictive. Second, things might be more complicated. There might be a
+three-way interaction between word baseline log odds, co-player
+typicality, and type of variation in the post test. For these data, this
+would show that meaningful convergence is only observed for the
+levelling set, not for the vowel deletion set. This would be in line
+with our expectations based on how the levelling set is more socially
+salient. This model is a better fit on the data and has a lower AIC, but
+a comparison of BIC values (the Bayes Factor) strongly indicates that
+its complexity is not justified. Neither do we see an effect of type of
+variation in the matching game. While the matching game and the post
+test spotlight different mechanisms and, indeed, the respective models
+predict different things (matching with the co-player; picking variant
+1). We would still expect them to pattern together, which is a part of
+the justification for selecting the best model.
 
 The paradigm had some limitations. Interaction was written, rather than
 spoken, the number of choices was pre-set, and variation was defined
