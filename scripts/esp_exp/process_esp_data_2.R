@@ -1,4 +1,4 @@
-# process hesp data
+# process prolific hesp data w/ sleep
 setwd('~/Github/Racz2024')
 library(tidyverse)
 library(magrittr)
@@ -7,7 +7,7 @@ library(knitr)
 
 # -- fun -- #
 
-procDat = function(dat){
+procDat1 = function(dat){
   
   part = dat %>% 
     filter(trial_type == 'survey-text') %>% 
@@ -65,6 +65,39 @@ procDat = function(dat){
   
 }
 
+procDat2 = function(dat){
+  
+  part = dat %>% 
+    filter(trial_type == 'survey-text') %>% 
+    pull(response)
+  
+  id = str_extract(part, '(?<=\"Q0\":\").*(?=\")')
+  
+  dat2 = dat %>% 
+    mutate(
+      trial_order = 1:n(),
+      part_id = id,
+      choice1 = str_extract(choices, '[a-záéíóőúűöü]+(?=\",)'),
+      choice2 = str_extract(choices, '(?<=,\")[a-záéíóőúűöü]+'),
+    ) %>%
+    select(part_id,list_number,trial_kind,trial_index,stimulus,choice1,choice2,response,response_string,rt,time_elapsed)
+  
+  master2 = master %>% 
+    rename('stimulus' = prompt) %>% 
+    select(-esp_response)
+  
+  posttest = dat2 %>% 
+    mutate(list_number = 8) %>%  # how EMBARASSING
+    inner_join(master2) %>% 
+    mutate( # this can stay empty
+      picked_left = response_string == choice1,
+      picked_v1 = response_string == variant1,
+      reg_rate = NA,
+      reg_dist = NA
+    )
+  
+}
+
 countKeys = function(dat, file_name, keyboard_input.keys, left, right){
   dat %>% 
     pivot_wider(id_cols = {{file_name}}, names_from = {{keyboard_input.keys}}, values_from = n, values_fill = 0) %>%
@@ -95,92 +128,89 @@ whichList = function(dat,l){
     distinct(list_number)
 }
 
+wrapDat = function(dat_id,path){
+  
+  dat = tibble(
+    dat_id = dat_id,
+    record_date = str_extract(dat_id, '202[1-4]-[0-1][0-9]-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% # aah it's another year
+      lubridate::ymd_hm()
+  )
+  
+  dat %<>% 
+    mutate(
+      data = map(dat_id, ~ read_csv(glue('{path}{.}'))),
+      n_rows = map(data, ~ nrow(.))
+    )
+
+return(dat)
+}
+  
 # -- helper -- #
 
 master = read_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
 
-# -- dat -- #
+# -- dat 1 -- #
 
-dat_id = list.files('~/Github/Pavlovia/hesp/data/')
-path = '~/Github/Pavlovia/hesp/data/'
-# simulated data:
-# dat_id = list.files('resource/simulated_hesp/')
-# path = 'resource/simulated_hesp/'
+dat_id1 = list.files('~/Github/Pavlovia/hesp/data/')
+path1 = '~/Github/Pavlovia/hesp/data/'
 
-d = tibble(
-  dat_id = dat_id,
-  record_date = str_extract(dat_id, '202[1-4]-[0-1][0-9]-[0-9]{2}_[0-9]{2}h[0-9]{2}') %>% # aah it's another year
-    lubridate::ymd_hm()
+d1 = wrapDat(dat_id1,path1) %>% 
+  filter(
+  n_rows == 176
 )
 
-d %<>% 
-  mutate(
-    data = map(dat_id, ~ read_csv(glue('{path}{.}'))),
-    n_rows = map(data, ~ nrow(.))
-  )
-
-d %<>%
-  filter(
-    n_rows == 176
-  )
-
-glue('{nrow(d)} complete files, {length(dat_id)-nrow(d)} attempts.')
-
-d %<>% mutate(
-  proc = map(data, ~ procDat(.)),
+d1 %<>% mutate(
+  proc = map(data, ~ procDat1(.)),
   start = str_extract(dat_id, '2022.*^(?=\\.csv$)')
 ) %>% 
   select(dat_id,record_date,proc) %>% 
-  unnest(cols = c(proc))
-
-# d[d$part_id == '' & d$part_gender == 'nő' & d$part_yob == 1997 & d$part_edu == 18,]$dat_id
-# d[d$dat_id == "hungarian-esp_esp_participant_SESSION_2022-11-21_15h30.11.810.csv",]$part_id = 'DAG7T4'
-
-d %<>% filter(
+  unnest(cols = c(proc)) %>% 
+  filter(
   !(part_id %in% c('petikevagyok','próba','proba','Peti','CsM','','szis','NN'))
 )
 
+# -- dat 2 -- #
+
+dat_id2 = list.files('~/Github/Pavlovia/hesp_sleep/data/')
+path2 = '~/Github/Pavlovia/hesp_sleep/data/'
+
+d2 = wrapDat(dat_id2,path2) %>% 
+  filter(
+    n_rows == 62 # ahem
+  )
+
+d2 %<>% mutate(
+  proc = map(data, ~ procDat2(.)),
+  start = str_extract(dat_id, '2022.*^(?=\\.csv$)')
+) %>% 
+  select(dat_id,record_date,proc) %>% 
+  unnest(cols = c(proc)) %>% 
+  filter(
+  !(part_id %in% c('petikevagyok','próba','proba','Peti','CsM','','szis','NN'))
+)
+
+# -- combine -- #
+
+d1 %>% 
+  distinct(part_id,reg_rate,reg_dist,trial_kind) %>% 
+  count(part_id,trial_kind)
+
+d2 %>% 
+  distinct(part_id,reg_rate,reg_dist,trial_kind) %>% 
+  count(part_id,trial_kind)
+
+d3 = bind_rows(d1,d2)
+
 # save unfiltered data
-write_tsv(d, 'exp_data/esp/esp_master_sleep_pt1_all_unfiltered.tsv')
+write_tsv(d3, 'exp_data/esp/esp_master_sleep_pt1_pt2_all_unfiltered.tsv')
 
 # -- checks -- #
 
-flag1 = d %>% 
-  filter(trial_kind == 'esp trial',esp_v1) %>% 
-  distinct(list_number,reg_rate,reg_dist,file_name,word_rank,variant1,esp_response,esp_v1,log_odds) %>%
-  group_by(reg_rate,reg_dist,list_number) %>% 
-  summarise(
-    word_ranks = glue('{min(word_rank)}:{max(word_rank)}')
-  ) %>% 
-  mutate(
-    flag = 
-      reg_rate == 'high' & reg_dist == 'typical' & word_ranks == '1:39' |
-      reg_rate == 'low' & reg_dist == 'typical' & word_ranks == '1:15' |
-      reg_rate == 'high' & reg_dist == 'reversed' & word_ranks == '16:54' |
-      reg_rate == 'low' & reg_dist == 'reversed' & word_ranks == '40:54' 
-  ) %>% 
-  pull(flag) %>% 
-  any()
-
-flag2 = d %>% 
-  filter(trial_kind == 'esp trial') %>% 
-  count(part_id,list_number,reg_rate,reg_dist,esp_v1) %>% 
-  mutate(flag = n == 15 | n == 39) %>% 
-  pull(flag) %>% 
-  any()
-
-flag3 = d %>% 
-  count(dat_id,part_id) %>% 
-  arrange(part_id) %>% 
-  mutate(flag = n == 108) %>% 
-  pull(flag) %>% 
-  any()
-
-if(all(flag1,flag2,flag3)){print('Checks completed successfully.')}else{print('Ruh-roh.')}
+# if the checks worked for the entire matching game run, they will work now, it's the same stimuli
 
 # -- check list numbers -- #
 
-d %>% 
+d3 %>% 
   filter(trial_kind == 'esp trial',variation == 'lakok/lakom') %>% 
   distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
   count(list_number,reg_rate,reg_dist,variation) %>% 
@@ -191,7 +221,7 @@ d %>%
 
 print('Now that we tallied everyone who finished one way or another, we need to make sure the data meet our exclusion criteria and we still have 21.')
 
-ncareless = d %>% 
+ncareless = d3 %>% 
   count(part_id,picked_left) %>% 
   countKeys(part_id,picked_left,`TRUE`,`FALSE`) %>% 
   nrow()
@@ -200,7 +230,7 @@ if(ncareless == 0){print('No very careless participants.')}else{glue('{ncareless
 
 print('These people were too slow overall and we need to rerun them:')
 
-slow_people = d %>% 
+slow_people = d3 %>% 
   mutate(rt = as.double(rt)) %>% 
   group_by(part_id,variation,trial_kind) %>% 
   overUpper(rt)
@@ -210,7 +240,7 @@ slow_people %>%
 
 print('These trial prompts were too slow overall and we could drop them:')
 
-slow_trials = d %>% 
+slow_trials = d3 %>% 
   mutate(rt = as.double(rt)) %>% 
   group_by(stimulus,variation,trial_kind) %>% 
   overUpper(rt)
@@ -220,7 +250,7 @@ slow_trials %>%
 
 print('But we need to drop specific responses if they were super slow:')
 
-too_long = d %>%
+too_long = d3 %>%
   group_by(variation,trial_kind) %>% 
   mutate(
     rt = as.double(rt),
@@ -233,43 +263,19 @@ too_long = d %>%
   select(dat_id,part_id,variation,stimulus,trial_kind,list_number,over_upper) %>% 
   filter(over_upper)
 
+too_long
+
 print('filtering...')
 
-d2 = d %>% anti_join(too_long)
-d2 %<>% filter(!part_id %in% slow_people$part_id)
-d2 %<>% filter(!stimulus %in% slow_trials$stimulus)
+d4 = d3 %>% anti_join(too_long)
+d4 %<>% filter(!part_id %in% slow_people$part_id)
+d4 %<>% filter(!stimulus %in% slow_trials$stimulus)
 
 print('now we need to check lists again.')
 
-d2 %>% 
-  filter(trial_kind == 'esp trial') %>% 
-  distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
-  count(variation,reg_rate,reg_dist) %>% 
-  pivot_wider(names_from = reg_dist, values_from = n) %>% 
+d4 %>% 
+  distinct(part_id,variation,trial_kind) %>% 
+  count(variation,trial_kind) %>% 
   kable(caption = 'Cond counts.')
 
-d2 %>% 
-  filter(trial_kind == 'esp trial') %>% 
-  distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
-  count(list_number,reg_rate,reg_dist,variation) %>% 
-  pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
-  kable(caption = 'List counts.')
-
-print("there we go:")
-
-d2 %>% 
-  filter(trial_kind == 'esp trial') %>% 
-  distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
-  count(list_number,reg_rate,reg_dist,variation) %>% 
-  pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
-  kable(caption = 'List counts.')
-
-print('how much data did we exclude by outlier removal for lakik and cselekszenek?')
-
-rows_left = d2 %>% 
-  filter(variation == 'lakok/lakom') %>% 
-  nrow()
-rows_expected = 108 * 7 * 12 * 2
-glue('{round(rows_left/rows_expected*100)}% of observations remain.')
-
-write_tsv(d2, 'exp_data/esp/esp_sleep_pt1_master_all_filtered.tsv')
+write_tsv(d4, 'exp_data/esp/esp_sleep_pt1_pt2_master_all_filtered.tsv')
