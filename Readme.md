@@ -1,7 +1,7 @@
 Supplementary Information: Learning Salient Morphological Variation
 ================
 Rácz, Péter
-2023-06-21
+2023-06-24
 
 # Summary
 
@@ -549,7 +549,7 @@ condition (high / low x typical / reversed x levelling / vowel
 deletion). 5participants who matched our exclusion criteria (see below)
 were excluded. Then, we kept data from the first seven participants in
 each list (excluding an additional 9 participants), resulting in a final
-total of 7 x 3 x 2 x 2 x 2 = 168 participants, 111 women. Median age was
+total of 7 x 3 x 2 x 2 x 2 = 168 participants, 109 women. Median age was
 22. Participants completed the task for course credit.
 
 ## Procedure
@@ -630,11 +630,11 @@ times were also excluded. Median and mean absolute deviation were
 calculated separately for type of pattern (levelling / vowel deletion)
 and phase (matching game or post-test).
 
-1255 trials or 6.9168871% of all trials were dropped. This is a
-relatively high number. This is likely both because the task was
-difficult and because participants completed it in an uncontrolled
-environment, both contributing to higher variability. Participants
-completed the matching game and the post-test in 10-15 minutes.
+802 trials or 4.420194% of all trials were dropped. This is a relatively
+high number. This is likely both because the task was difficult and
+because participants completed it in an uncontrolled environment, both
+contributing to higher variability. Participants completed the matching
+game and the post-test in 10-15 minutes.
 
 ### Matching game
 
@@ -672,8 +672,8 @@ factors were participant and target form. Models were fit using
 restricted maximum likelihood, a binomial error distribution, and a
 logit link function. The post-test analysis was pre-registered. We did
 not drop terms and instead explored all interactions and used
-goodness-of-fit tests, AIC, and Bayes Factors for model comparison. We
-used the performance package ([Lüdecke
+goodness-of-fit tests, AIC, and BIC for model comparison. We used the
+performance package ([Lüdecke
 2023](https://cran.r-project.org/web/packages/performance/index.html))
 to check model health and to compare models.
 
@@ -702,22 +702,22 @@ the fixed effects is in Table 6.
 
 | term                                                  | estimate | std.error | statistic | conf.low | conf.high |
 |:------------------------------------------------------|---------:|----------:|----------:|---------:|----------:|
-| Intercept                                             |     0.69 |      0.06 |     10.90 |     0.56 |      0.81 |
-| rate of v1: low                                       |    -0.08 |      0.06 |     -1.31 |    -0.19 |      0.04 |
-| typicality reversed                                   |    -0.54 |      0.06 |     -9.18 |    -0.66 |     -0.43 |
-| abs. baseline log odds (scaled)                       |     0.16 |      0.04 |      4.01 |     0.08 |      0.23 |
-| pattern: vowel deletion                               |    -0.08 |      0.07 |     -1.14 |    -0.21 |      0.06 |
-| trial number (scaled)                                 |     0.08 |      0.02 |      3.67 |     0.04 |      0.13 |
-| typicality reversed : abs. baseline log odds (scaled) |    -0.58 |      0.05 |    -11.67 |    -0.67 |     -0.48 |
+| Intercept                                             |     0.69 |      0.06 |     10.92 |     0.57 |      0.82 |
+| rate of v1: low                                       |    -0.06 |      0.06 |     -1.03 |    -0.18 |      0.06 |
+| typicality reversed                                   |    -0.53 |      0.06 |     -8.99 |    -0.65 |     -0.42 |
+| abs. baseline log odds (scaled)                       |     0.14 |      0.04 |      3.75 |     0.07 |      0.22 |
+| pattern: vowel deletion                               |    -0.11 |      0.07 |     -1.68 |    -0.24 |      0.02 |
+| trial number (scaled)                                 |     0.08 |      0.02 |      3.62 |     0.04 |      0.13 |
+| typicality reversed : abs. baseline log odds (scaled) |    -0.54 |      0.05 |    -11.24 |    -0.64 |     -0.45 |
 
 Table 6. Best model, matching game in main experiment
 
 The intercept is above zero with a 95% confidence interval that excludes
 zero. This means that participants are, overall, above chance in
 matching the co-player in the 54 trials of the matching phase. Of the
-predictors, trial number, reversed co-player typicality and target word
-baseline log odds have a significant effect on match success. We now
-look at these in detail.
+predictors, (scaled) trial number, reversed co-player typicality and
+(scaled) target word absolute baseline log odds have a significant
+effect on match success. We now look at these in detail.
 
 Figure 4 shows the rate of mean predicted match per trial in the
 matching game. The horizontal axis is trial number, going from the first
@@ -754,29 +754,29 @@ vowel deletion stimuli (right).
 Looking at the left-hand side, learning is not harder with either a high
 or low rate of variant 1.
 
-Looking at the middle, the only statistically significant difference is
-between the intercepts of matching a typical versus a reversed
-co-player. Matching a typical co-player is much easier right from the
-beginning. In contrast, participants are less likely than chance to
-match the reversed co-player initially. This demonstrates that learning
-goes beyond picking up on a rate of use for variant 1 / variant 2. If a
-co-player’s choices reflect the baseline distribution of preference for
-variant 1 / variant 2, participants are much more likely to match the
-co-player right away. This then improves, likely because participants
-can adjust their expectations on the rate of use for variant 1 (high or
-low) on top of the typical distribution.
+Looking at the middle, we see the only statistically significant
+difference: between the intercepts of matching a typical versus a
+reversed co-player. Matching a typical co-player is much easier right
+from the beginning. In contrast, participants are less likely than
+chance to match the reversed co-player initially. This demonstrates that
+learning goes beyond picking up on a rate of use for variant 1 / variant
+2. If a co-player’s choices reflect the baseline distribution of
+preference for variant 1 / variant 2, participants are much more likely
+to match the co-player right away. This then improves, likely because
+participants can adjust their expectations on the rate of use for
+variant 1 (high or low) on top of the typical distribution.
 
 In contrast, when a co-player’s choices are counter-intuitive,
 participants start out mismatching the co-player. They then gradually
 adjust to the co-player’s distribution, resulting in some improvement in
 matching.
 
-It is possible that learning trajectories are not completely linear in
-the population and what we see is that the data do not provide us with
-enough evidence to reject linearity. At the same time, word-level
-distributions in both the matching game and the post-test suggest
-gradual convergence with the co-player across trials and lexical items
-(see below).
+It is possible that learning trajectories are not completely homogenous
+and linear in the population and the data do not provide us with enough
+evidence to reject uniform slopes and linearity. At the same time,
+word-level distributions in both the matching game and the post-test
+suggest gradual convergence with the co-player across trials and lexical
+items (see below).
 
 Looking at the right-hand side, we see that learning is no easier with
 the socially more salient variable pattern, levelling. Despite the clear
@@ -840,12 +840,12 @@ Table 7.
 
 | term                                                  | estimate | std.error | statistic | conf.low | conf.high |
 |:------------------------------------------------------|---------:|----------:|----------:|---------:|----------:|
-| Intercept                                             |     0.93 |      0.25 |      3.74 |     0.44 |      1.41 |
-| rate of v1: low                                       |    -0.83 |      0.25 |     -3.39 |    -1.32 |     -0.35 |
-| typicality reversed                                   |    -0.05 |      0.25 |     -0.22 |    -0.54 |      0.43 |
-| baseline log odds                                     |     1.09 |      0.07 |     14.59 |     0.94 |      1.23 |
-| pattern: vowel deletion                               |    -0.53 |      0.25 |     -2.11 |    -1.02 |     -0.04 |
-| typicality reversed : abs. baseline log odds (scaled) |    -0.19 |      0.09 |     -2.06 |    -0.37 |     -0.01 |
+| Intercept                                             |     0.89 |      0.25 |      3.53 |     0.39 |      1.38 |
+| rate of v1: low                                       |    -0.80 |      0.25 |     -3.19 |    -1.28 |     -0.31 |
+| typicality reversed                                   |     0.01 |      0.25 |      0.05 |    -0.48 |      0.50 |
+| baseline log odds                                     |     1.08 |      0.07 |     14.86 |     0.94 |      1.23 |
+| pattern: vowel deletion                               |    -0.54 |      0.25 |     -2.14 |    -1.04 |     -0.05 |
+| typicality reversed : abs. baseline log odds (scaled) |    -0.23 |      0.09 |     -2.51 |    -0.41 |     -0.05 |
 
 Table 7. Best model, post-test in main experiment
 
@@ -971,14 +971,14 @@ specific data, this would mean that convergence only happens in the
 levelling pattern, not in the vowel deletion pattern. This would be in
 line with our expectations based on how the levelling pattern is more
 socially salient. This model is a better fit on the data and has a lower
-AIC, but a comparison of BIC values (the Bayes Factor) strongly
-indicates that its complexity is not justified. Neither do we see an
-effect of type of pattern in the matching game. The matching game and
-the post-test spotlight different mechanisms and, indeed, the respective
-models predict different things (matching with the co-player; picking
-variant 1). We would still expect them to pattern together, which is a
-part of the justification for selecting the best model for the
-post-test.
+AIC, but a comparison of BIC values and higher predictor collinearity
+(~3.5 for the three-way interaction) strongly indicate that its
+complexity is not justified. Neither do we see an effect of type of
+pattern in the matching game. The matching game and the post-test
+spotlight different mechanisms and, indeed, the respective models
+predict different things (matching with the co-player; picking variant
+1). We would still expect them to pattern together, which is a part of
+the justification for selecting the best model for the post-test.
 
 The paradigm had some limitations. Interaction was written, rather than
 spoken, the number of alternatives was pre-set, and the variable pattern
@@ -1030,7 +1030,7 @@ not differ significantly across list number in the main experiment.)
 
 ## Participants
 
-42 participants completed the task in Summer 2023 on
+37 participants completed the task in Summer 2023 on
 [Prolific](https://www.prolific.co/). They were all native speakers of
 Hungarian, residing in Hungary, age-matched to the sample of the main
 experiment. 14 were women. The median age was 14. Participants received
@@ -1041,8 +1041,8 @@ The integration experiment consisted of two parts that were separated by
 a night. The same participants took part in both. Participants were
 informed that the task has two parts, that the second part is much
 shorter than the first part, and that, since we want them to take part
-in both tasks, the second part pays as much as the first part. All
-participants that picked up the first part completed the second part.
+in both tasks, the second part pays as much as the first part. 42
+participants picked up the first part and 37 completed the second part.
 
 ## Procedure
 
@@ -1074,7 +1074,7 @@ patterns, levelling and vowel deletion, to pattern differently.
 ## Analysis
 
 The main experiment’s exclusion criteria were applied to the data. This
-removed 385 out of 6426 observations, resulting in 6041 observations.
+removed 275 out of 6426 observations, resulting in 6151 observations.
 
 ### Matching game
 
@@ -1105,19 +1105,19 @@ the fixed effects is in Table 8.
 
 | term                            | estimate | std.error | statistic | conf.low | conf.high |
 |:--------------------------------|---------:|----------:|----------:|---------:|----------:|
-| Intercept                       |    -0.04 |      0.16 |     -0.25 |    -0.34 |      0.27 |
-| abs. baseline log odds (scaled) |    -0.23 |      0.09 |     -2.51 |    -0.42 |     -0.05 |
-| pattern: levelling              |     0.08 |      0.23 |      0.36 |    -0.36 |      0.53 |
-| trial number (scaled)           |     0.25 |      0.05 |      4.97 |     0.15 |      0.34 |
+| Intercept                       |    -0.02 |      0.16 |     -0.15 |    -0.33 |      0.28 |
+| abs. baseline log odds (scaled) |    -0.26 |      0.09 |     -2.80 |    -0.44 |     -0.08 |
+| pattern: levelling              |     0.12 |      0.23 |      0.53 |    -0.32 |      0.56 |
+| trial number (scaled)           |     0.24 |      0.05 |      5.05 |     0.15 |      0.34 |
 
 Table 7. Best model, matching game in integration experiment
 
-Results are similar to the main experiment. Recall that this is a
-low-reversed co-player only. The intercept is not significantly over
-50%. It is harder to match the co-player when the target word has a high
-or low preference for variant 1. Finally, the chance of matching the
-co-player increases through trials, showing that, again, learning is
-taking place.
+Results are similar to the main experiment. Recall that this one is a
+low-reversed co-player only matching game. The intercept is not
+significantly over 50%. It is harder to match the co-player when the
+target word has a high or low preference for variant 1. Finally, the
+chance of matching the co-player increases through trials, showing that,
+again, learning is taking place.
 
 The predicted learning trajectory across matching game trials can be
 seen in Figure 10, which is very similar to what we see in the
@@ -1140,10 +1140,10 @@ the fixed effects is in Table 8.
 | term                                   | estimate | std.error | statistic | conf.low | conf.high |
 |:---------------------------------------|---------:|----------:|----------:|---------:|----------:|
 | Intercept                              |    -0.01 |      0.30 |     -0.03 |    -0.59 |      0.57 |
-| second post-test                       |    -0.18 |      0.12 |     -1.44 |    -0.41 |      0.06 |
-| variation: levelling                   |     0.16 |      0.42 |      0.39 |    -0.66 |      0.98 |
-| baseline log odds (scaled)             |     0.37 |      0.04 |      9.11 |     0.29 |      0.45 |
-| second post-test: variation: levelling |     0.38 |      0.16 |      2.32 |     0.06 |      0.69 |
+| second post-test                       |    -0.17 |      0.12 |     -1.37 |    -0.40 |      0.07 |
+| variation: levelling                   |     0.16 |      0.42 |      0.39 |    -0.66 |      0.99 |
+| baseline log odds (scaled)             |     0.37 |      0.04 |      9.10 |     0.29 |      0.45 |
+| second post-test: variation: levelling |     0.37 |      0.16 |      2.27 |     0.05 |      0.68 |
 
 Table \*. Best model, post-tests in integration experiment
 
