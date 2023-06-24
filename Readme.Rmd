@@ -633,6 +633,10 @@ There are two significant predictors here. If a word is more likely to pick vari
 
 We see a higher rate of use of variant 1 for levelling than for vowel deletion, in both the first, immediate, and the second, delayed post-test. We see no real shift in use between the post-tests. Participants show the same pattern in the first and the second post-test.
 
+We see a similar pattern in Figure 12, which shows raw target form log odds for the baseline, the first posttest, and the second posttest of the integration task, across the two patterns. Log odds decrease upon meeting the "low" co-player, and they slightly recover a day later, but the shift is not statistically significant.
+
+![Figure 12](analysis/esp_analysis/preds/pred23.png)
+
 ## Discussion
 
 The matching part of the integration experiment replicated the main experiment. People gradually improved in matching the co-player through the game. The integration experiment does not demonstrate the persistence of these patterns in the immediate post-test. This would require a comparison with a "high" and a "typical" co-player. We saw in the main experiment, however, that learned patterns persist in the post-test.

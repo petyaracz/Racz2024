@@ -1169,6 +1169,17 @@ post-test. We see no real shift in use between the post-tests.
 Participants show the same pattern in the first and the second
 post-test.
 
+We see a similar pattern in Figure 12, which shows raw target form log
+odds for the baseline, the first posttest, and the second posttest of
+the integration task, across the two patterns. Log odds decrease upon
+meeting the “low” co-player, and they slightly recover a day later, but
+the shift is not statistically significant.
+
+<figure>
+<img src="analysis/esp_analysis/preds/pred23.png" alt="Figure 12" />
+<figcaption aria-hidden="true">Figure 12</figcaption>
+</figure>
+
 ## Discussion
 
 The matching part of the integration experiment replicated the main
