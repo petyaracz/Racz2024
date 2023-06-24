@@ -120,7 +120,8 @@ best_fit_e = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_
 best_fit_e_2 = glmer(esp_match ~ 1 + reg_rate + reg_dist + scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), data = esp, family = binomial(link = 'logit'), control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)))
 
 anova(best_fit_e,best_fit_e_2)
-compare_performance(best_fit_e,best_fit_e_2)
+compare_performance(best_fit_e,best_fit_e_2) %>% 
+  select(AIC,BIC)
 
 # best fit:
 
@@ -188,10 +189,12 @@ binned_residuals(fit1)
 binned_residuals(fit2)
 binned_residuals(fit3)
 
-test_bf(fit1,fit2)
-test_bf(fit2,fit3)
+# I'm scared of bayes factors because of data colada. BIC is still useful as an indicator
 anova(fit2,fit1)
 anova(fit2,fit3)
+
+check_collinearity(fit2)
+check_collinearity(fit3)
 
 # this is pretty clearly going for fit2
 
@@ -207,7 +210,6 @@ fit2c = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + v
               ))
 # fit2c is overfit right out of the box
 
-test_bf(fit2,fit2b)
 anova(fit2,fit2b)
 binned_residuals(fit2b)
 

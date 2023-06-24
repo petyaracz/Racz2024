@@ -90,7 +90,10 @@ fit2 = glmer(picked_v1 ~ 1 + part_kind + scale(baseline_log_odds) + (1|part_id) 
 summary(fit2)
 
 anova(fit1,fit2)
-performance::test_bf(fit1,fit2)
+AIC(fit1,fit2)
+BIC(fit1,fit2)
+
+# eh
 
 # -- learning in esp -- #
 
@@ -148,9 +151,6 @@ fit7 = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) +
 
 performance::compare_performance(fit4,fit5,fit6,fit7) %>% 
   select(AIC,BIC,R2_conditional,Log_loss)
-performance::test_bf(fit6,fit4)
-performance::test_bf(fit6,fit5)
-performance::test_bf(fit6,fit7)
 anova(fit6,fit7)
 
 # okay, sold

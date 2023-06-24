@@ -264,7 +264,7 @@ print('filtering...')
 
 d2 = d %>% anti_join(too_long)
 d2 %<>% filter(!part_id %in% slow_people$part_id)
-d2 %<>% filter(!stimulus %in% slow_trials$stimulus)
+# d2 %<>% filter(!stimulus %in% slow_trials$stimulus) # not pre-registered / it makes sense
 
 print('now we need to check lists again.')
 

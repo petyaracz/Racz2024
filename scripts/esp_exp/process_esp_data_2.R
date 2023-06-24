@@ -269,7 +269,7 @@ print('filtering...')
 
 d4 = d3 %>% anti_join(too_long)
 d4 %<>% filter(!part_id %in% slow_people$part_id)
-d4 %<>% filter(!stimulus %in% slow_trials$stimulus)
+# d4 %<>% filter(!stimulus %in% slow_trials$stimulus)
 
 print('now we need to check lists again.')
 
