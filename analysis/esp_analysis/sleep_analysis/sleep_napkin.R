@@ -20,6 +20,12 @@ options(MC.cores=parallel::detectCores())
 
 # -- fun -- #
 
+logOdds = function(dat,var){
+  dat %>% 
+    pivot_wider(names_from = {{var}}, values_from = n, values_fill = 0) %>% 
+    mutate(log_odds = log((`TRUE`+1)/(`FALSE`+1)))
+} 
+
 newIndex = . %>% 
   arrange(trial_index) %>% 
   group_by(dat_id) %>% 
@@ -148,20 +154,24 @@ fit4 = glmer(picked_v1 ~ 1 + trial_kind * variation * scale(baseline_log_odds) +
 fit5 = glmer(picked_v1 ~ 1 + trial_kind * scale(baseline_log_odds) + variation + (1|part_id) + (1|base), data = posttests, family = binomial)
 fit6 = glmer(picked_v1 ~ 1 + trial_kind + scale(baseline_log_odds) + variation + (1|part_id) + (1|base), data = posttests, family = binomial)
 fit7 = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = posttests, family = binomial)
+fit8 = glmer(picked_v1 ~ 1 + trial_kind + scale(baseline_log_odds) * variation + (1|part_id) + (1|base), data = posttests, family = binomial)
 
-performance::compare_performance(fit4,fit5,fit6,fit7) %>% 
+performance::compare_performance(fit4,fit5,fit6,fit7,fit8) %>% 
   select(AIC,BIC,R2_conditional,Log_loss)
 anova(fit6,fit7)
+anova(fit7,fit8)
+
+tidy(fit6, conf.int=T)
 
 # okay, sold
-summary(fit7)
+tidy(fit7, conf.int=T)
 
 tidy(fit7, conf.int = T) %>% 
   write_tsv('~/Github/Racz2024/analysis/esp_analysis/sleep_analysis/posttest2_fit.tsv')
 
 posttests$pred = predict(fit7)
 
-posttests %>% 
+posttests %<>% 
   mutate(
     trial_kind = ifelse(trial_kind == 'posttest trial', 'first posttest trial', trial_kind),
     ylab = ifelse(variation == 'lakok/lakom', 'levelling','vowel deletion'),
@@ -173,7 +183,9 @@ posttests %>%
                     'vowel deletion; first posttest trial'
                     )
                   )
-         ) %>% 
+         )
+
+posttests %>% 
     group_by(part_id,ylab) %>% 
     summarise(mean = mean(pred)) %>%  
   cloudPlot2(ylab,mean) +
@@ -181,3 +193,27 @@ posttests %>%
   ylab('Regularisation rate') +
   xlab('Variation; test session')
 ggsave('analysis/esp_analysis/preds/pred22.png', width = 6, height = 4)
+
+lo1 = posttests %>% 
+  filter(str_detect(trial_kind, 'post')) %>% 
+  count(base,variation,trial_kind,picked_v1) %>% 
+  logOdds('picked_v1') %>% 
+  select(base,variation,trial_kind,log_odds)
+
+lo2 = posttests %>% 
+  distinct(base,variation,baseline_log_odds) %>% 
+  rename(log_odds = baseline_log_odds) %>% 
+  mutate(trial_kind = 'baseline')
+
+bind_rows(lo1,lo2) %>% 
+  mutate(trial_kind = factor(trial_kind, levels = c('second posttest trial', 'first posttest trial', 'baseline'))) %>% 
+  ggplot() +
+  geom_violin(aes(trial_kind, log_odds)) +
+  geom_boxplot(width = .1, aes(trial_kind, log_odds)) +
+  geom_line(aes(trial_kind, log_odds, group = base), alpha = .2) +
+  theme_few() +
+  facet_wrap( ~ variation, ncol = 1) +
+  xlab('test session') +
+  ylab('log odds of variant 1 / variant 2') +
+  coord_flip()
+ggsave('analysis/esp_analysis/preds/pred23.png', width = 6, height = 4)
