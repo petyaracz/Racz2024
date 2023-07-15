@@ -1,3 +1,9 @@
+#############################################
+#############################################
+# fit models on main exp: esp/matching game and posttest
+#############################################
+#############################################
+
 # -- header -- #
 
 setwd('~/Github/Racz2024/')
@@ -16,7 +22,7 @@ library(parallel)
 source('analysis/esp_analysis/source_esp.R')
 
 ##########################################
-# esp
+# esp / matching game
 ##########################################
 
 esp = filter(esp, variation != 'hotelban/hotelben')
@@ -28,6 +34,8 @@ esp$reg_rate_dist = as.factor(interaction(esp$reg_rate,esp$reg_dist))
 esp$reg_rate_dist_variation = as.factor(interaction(esp$reg_rate,esp$reg_dist,esp$variation))
 
 # -- syntax -- #
+
+# we don't drop terms, we test interactions
 
 interaction_e = c(
   # no interactions
@@ -81,6 +89,8 @@ summary(fits_e$fit_e[[6]])
 
 # this suggests a best model which has dist * variation but only as parametric effects
 
+# let's explore that
+
 fit9 = bam(esp_match ~ reg_rate + reg_dist_variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
 fit10 = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
 fit11 = bam(esp_match ~ reg_rate_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'REML')
@@ -101,6 +111,8 @@ itsadug::compareML(fit10,fit11)
 
 # the best one has main effects but no interaction
 
+# check for random smooths:
+
 fit10fr = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re"), data = esp, family = binomial("logit"), method = 'fREML', discrete = T)
 fit10bfr = bam(esp_match ~ reg_rate + reg_dist + variation + s(baseline_log_odds_jitter) + s(i) + s(base, bs="re") + s(part_id, bs="re") + s(i, part_id, bs="fs", m=1), data = esp, family = binomial("logit"), method = 'fREML', discrete = T)
 # this is overfit.
@@ -110,7 +122,8 @@ itsadug::compareML(fit10,fit11)
 itsadug::compareML(fit10,fit12)
 
 plot(fit10)
-# if this is a linear effect for i I may well fit a glmer.
+
+# if this is a linear effect for i and a quadratic effect for baseline log odds I may well fit a glmer.
 
 esp$abs_baseline_log_odds_jitter = abs(esp$baseline_log_odds_jitter)
 

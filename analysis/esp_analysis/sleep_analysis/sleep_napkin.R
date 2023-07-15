@@ -23,7 +23,8 @@ options(MC.cores=parallel::detectCores())
 logOdds = function(dat,var){
   dat %>% 
     pivot_wider(names_from = {{var}}, values_from = n, values_fill = 0) %>% 
-    mutate(log_odds = log((`TRUE`+1)/(`FALSE`+1)))
+    mutate(log_odds = log((`TRUE`+1)/(`FALSE`+1))) %>% 
+    select(-`FALSE`,-`TRUE`)
 } 
 
 newIndex = . %>% 
@@ -48,7 +49,7 @@ espIndex = function(dat){
 cloudPlot2 = function(dat,pred,out){
   dat %>% 
     ggplot(aes({{pred}},{{out}})) +
-    geom_hline(yintercept = 0.5) +
+    # geom_hline(yintercept = 0.5) +
     geom_half_violin(side = 'r') +
     geom_half_boxplot(width = .1, side = 'r') +
     geom_half_point(width = .25, side = 'l') +
@@ -68,11 +69,20 @@ d = b %>%
   inner_join(d) %>% 
   newIndex()
 
+write_tsv(d, '~/Github/Racz2024/exp_data/sleep/sleep.tsv')
+
 e = b %>% 
   select(base,log_odds) %>% 
   rename(baseline_log_odds = log_odds) %>% 
   inner_join(e) %>% 
   newIndex()
+
+fit7 = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = posttests, family = binomial)
+
+posttests = d %>% 
+  filter(str_detect(trial_kind, 'posttest trial'))
+
+posttests$pred = predict(fit7)
 
 # -- comp w/ esp -- #
 
@@ -125,6 +135,8 @@ tidy(fit3, conf.int = T) %>%
 
 esp$pred = predict(fit3)
 
+write_tsv(esp, '~/Github/Racz2024/exp_data/sleep/sleep_esp.tsv')
+
 esp %>% 
   group_by(i) %>% 
   espIndex() + 
@@ -132,7 +144,7 @@ esp %>%
   xlab('Matching trial number')
 
 ggsave('analysis/esp_analysis/preds/pred21.png', width = 8, height = 4)
-
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Duesseldorf_talk/pic10.pdf', width = 8, height = 4)
 
 # -- comp w/ retest -- #
 
@@ -147,21 +159,21 @@ d %>%
   theme_bw() +
   facet_wrap(~ variation)
 
-posttests = d %>% 
-  filter(str_detect(trial_kind, 'posttest trial'))
+# posttests = d %>%
+#   filter(str_detect(trial_kind, 'posttest trial'))
 
-fit4 = glmer(picked_v1 ~ 1 + trial_kind * variation * scale(baseline_log_odds) + (1|part_id) + (1|base), data = posttests, family = binomial)
-fit5 = glmer(picked_v1 ~ 1 + trial_kind * scale(baseline_log_odds) + variation + (1|part_id) + (1|base), data = posttests, family = binomial)
-fit6 = glmer(picked_v1 ~ 1 + trial_kind + scale(baseline_log_odds) + variation + (1|part_id) + (1|base), data = posttests, family = binomial)
-fit7 = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = posttests, family = binomial)
-fit8 = glmer(picked_v1 ~ 1 + trial_kind + scale(baseline_log_odds) * variation + (1|part_id) + (1|base), data = posttests, family = binomial)
+# fit4 = glmer(picked_v1 ~ 1 + trial_kind * variation * scale(baseline_log_odds) + (1|part_id) + (1|base), data = posttests, family = binomial)
+# fit5 = glmer(picked_v1 ~ 1 + trial_kind * scale(baseline_log_odds) + variation + (1|part_id) + (1|base), data = posttests, family = binomial)
+# fit6 = glmer(picked_v1 ~ 1 + trial_kind + scale(baseline_log_odds) + variation + (1|part_id) + (1|base), data = posttests, family = binomial)
+# fit7 = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = posttests, family = binomial)
+# fit8 = glmer(picked_v1 ~ 1 + trial_kind + scale(baseline_log_odds) * variation + (1|part_id) + (1|base), data = posttests, family = binomial)
 
-performance::compare_performance(fit4,fit5,fit6,fit7,fit8) %>% 
-  select(AIC,BIC,R2_conditional,Log_loss)
-anova(fit6,fit7)
-anova(fit7,fit8)
+# performance::compare_performance(fit4,fit5,fit6,fit7,fit8) %>% 
+  # select(AIC,BIC,R2_conditional,Log_loss)
+# anova(fit6,fit7)
+# anova(fit7,fit8)
 
-tidy(fit6, conf.int=T)
+# tidy(fit6, conf.int=T)
 
 # okay, sold
 tidy(fit7, conf.int=T)
@@ -185,14 +197,50 @@ posttests %<>%
                   )
          )
 
+posttests_logodds = posttests %>% 
+  count(ylab,base,picked_v1,variation) %>% 
+  logOdds(picked_v1) %>% 
+  mutate(ylab = as.character(ylab))
+
+posttests_logodds = b %>% 
+  filter(base %in% posttests_logodds$base) %>% 
+  distinct(base,log_odds,variation) %>% 
+  mutate(ylab = glue('{variation}; baseline')) %>% 
+  # rename(log_odds = baseline_log_odds) %>% 
+  bind_rows(posttests_logodds) %>% 
+  mutate(type = str_extract(ylab, '(baseline|first|second)'))
+
+posttests_logodds %>% 
+  mutate(
+    type = factor(type, levels = c('second','first','baseline')),
+    var2 = ifelse(variation == 'lakok/lakom', '1. levelling', '2. vowel deletion')
+         ) %>% 
+  cloudPlot2(type,log_odds) +
+  facet_wrap( ~ var2) +
+  ylab('raw log odds') +
+  xlab('test') +
+  ggtitle('Raw log odds across baseline - test - retest in integration exp')
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Duesseldorf_talk/pic11.pdf', width = 8, height = 4)  
 posttests %>% 
-    group_by(part_id,ylab) %>% 
-    summarise(mean = mean(pred)) %>%  
-  cloudPlot2(ylab,mean) +
-  ggtitle('Mean participant use of variant 1') +
-  ylab('Regularisation rate') +
-  xlab('Variation; test session')
-ggsave('analysis/esp_analysis/preds/pred22.png', width = 6, height = 4)
+  mutate(
+    pt = ifelse(trial_kind == 'posttest trial', 'immediate', 'after sleep'),
+    pt = factor(pt, levels = c('immediate', 'after sleep')),
+    var2 = ifelse(variation == 'lakok/lakom', '1. levelling', '2. vowel deletion')
+         ) %>% 
+  group_by(base,baseline_log_odds,var2,pt) %>% 
+  summarise(mean = mean(pred)) %>% 
+  ggplot(aes(baseline_log_odds,mean, colour = pt)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_few() +
+  scale_colour_brewer(palette = 'Accent') +
+  ylab('preference for variant 1 (predicted)') +
+  xlab('baseline preference for variant 1 (log odds)') +
+  labs(colour = 'post test') +
+  ggtitle('Mean word variant 1 across word baseline log odds and post test in the integration task') +
+  facet_wrap( ~ var2)
+ggsave('~/Documents/lectures_apps/lectures/ESPtalks/Duesseldorf_talk/pic12.pdf', width = 8, height = 4)
+  
 
 lo1 = posttests %>% 
   filter(str_detect(trial_kind, 'post')) %>% 

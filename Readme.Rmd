@@ -8,6 +8,8 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FALSE, fig.path = 'figures/', fig.width = 8, fig.height = 8)
 
+googlesheets4::gs4_auth(email = 'petermartonracz@gmail.com')
+
 set.seed(1337)
 
 library(tidyverse)
@@ -343,7 +345,7 @@ A co-player with **high** preference for `-k` and a **reversed** distribution wi
 ```{r matching_list_ex}
 # unique(st$file_name)
 
-st %>% 
+t5 = st %>% 
   filter(str_detect(file_name,'lakok_1')) %>% 
   mutate(
     interaction = interaction(reg_rate, reg_dist, sep = ' '),
@@ -353,8 +355,24 @@ st %>%
   pivot_wider(names_from = interaction, values_from = esp_response_bold) %>% 
   arrange(-log_odds) %>% 
   mutate(`baseline rank` = 1:n()) %>% 
-  select(`baseline rank`, base, `high typical`, `low typical`, `high reversed`, `low reversed`) %>%  
+  select(`baseline rank`, log_odds, base, `high typical`, `low typical`, `high reversed`, `low reversed`)
+
+t5 %>%  
   kable('simple', digits = 2, caption = 'Table 5. Levelling list 1 across co-player types')
+
+t5b = t5 %>% 
+  map_df(~ str_replace_all(., '\\*\\*', '')) %>% 
+  mutate(`baseline log odds of k/m` = round(as.double(log_odds),2)) %>% 
+  slice(1,seq(6,54,6)) %>% 
+  select(-log_odds) %>% 
+  relocate(`baseline log odds of k/m`, .after = `baseline rank`) 
+
+t5b %>% 
+  googlesheets4::write_sheet(ss = 'https://docs.google.com/spreadsheets/d/1ma5XC56IaMwgCfdpEDL_nUlGcjPigz8VLeH3UcRossM/edit?usp=sharing', sheet = 'Table 1')
+
+# t5b %>% 
+#   kable('latex')
+
 ```
 
 The second part of the main experiment is a post-test. It tests whether the participant maintains the patterns learned in the matching game. Participants were allocated to lists and conditions at random. If a participant had list 1/2/3 in the matching game, they had list 2/3/1 in the post-test.
@@ -440,26 +458,15 @@ The best model had an interaction of baseline log odds and co-player typicality.
 
 The formula for the best model is `p(match co-player) ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + pattern + scale(i) + (1|part_id) + (1|base)`. The outcome is the probability of matching the co-player. The summary of the fixed effects is in Table 6.
 
-```{r esp_fit}
-esp_table %>% 
-  filter(effect == 'fixed') %>% 
-  rename(term2 = term) %>% 
-  add_column(term = c('Intercept','rate of v1: low','typicality reversed','abs. baseline log odds (scaled)','pattern: vowel deletion', 'trial number (scaled)', 'typicality reversed : abs. baseline log odds (scaled)')) %>% 
-  select(term,estimate,std.error,statistic,conf.low,conf.high) %>% 
-  kable('simple', digits = 2, caption = 'Table 6. Best model, matching game in main experiment')
-```
+![Figure 3](figures/fig1.png)
 
 The intercept is above zero with a 95% confidence interval that excludes zero. This means that participants are, overall, above chance in matching the co-player in the 54 trials of the matching phase. Of the predictors, (scaled) trial number, reversed co-player typicality and (scaled) target word absolute baseline log odds have a significant effect on match success. We now look at these in detail.
 
-Figure 4 shows the rate of mean predicted match per trial in the matching game. The horizontal axis is trial number, going from the first to the last matching game trial. The vertical axis is rate of predicted overall agreement with the co-player in each trial. The dotted lines are standard errors. We see that, at the beginning, participants have about a 55% chance of matching the co-player -- above chance -- and this gradually improves during the game, reaching about 65% towards the final trial.
+Figure 4 shows mean predicted match across trial number in three splits: high / low use of variant 1 (left), typical or reversed co-player distribution (middle), and matching in levelling or vowel deletion stimuli (right).
 
-![Figure 4](analysis/esp_analysis/preds/pred1.png)
+The horizontal axis is trial number, going from the first to the last matching game trial. The vertical axis is rate of predicted overall agreement with the co-player in each trial. The dotted lines are standard errors. We see that participants are more likely to match the co-player in later trials across the board. This shows that participants learn in the matching game. They are more likely to match the co-player in the end than in the beginning. Learning has a linear trajectory. The data do not support a non-linear learning trajectory nor across-participant variation in the shape of the learning trajectory. Participants have different random intercepts. Various conditions have meaningfully different fixed intercepts. The direction and linearity of the learning curve is always the same.
 
-This shows that participants learn in the matching game. They are more likely to match the co-player in the end than in the beginning. Learning has a linear trajectory. The data do not support a non-linear learning trajectory nor across-participant variation in the shape of the learning trajectory. Participants have different random intercepts. Various conditions have meaningfully different fixed intercepts. The direction and linearity of the learning curve is always the same.
-
-This is shown in Figure 5, which shows mean predicted match across trial number in three splits: high / low use of variant 1 (left), typical or reversed co-player distribution (middle), and matching in levelling or vowel deletion stimuli (right).
-
-![Figure 5](analysis/esp_analysis/preds/pred2.png)
+![Figure 4](figures/fig2.png)
 
 Looking at the left-hand side, learning is not harder with either a high or low rate of variant 1.
 
@@ -478,8 +485,6 @@ When we look at the left-hand panel, we see how these two correlate when playing
 When we look at the right-hand panel, we see a different pattern emerge with a reversed co-player. If the absolute baseline log odds of a word is large, that means it has a clear preference for variant 1 or variant 2. The reversed co-player will pick the opposite variant. Matching the reversed co-player, then, will be harder. The more a nonce word behaves in a specific way "in general", the harder it gets to match the reversed co-player who goes against this general trend.
 
 This, again, shows that participants have word-level expectations on whether variant 1 or variant 2 is more "appropriate". A co-player that respects these expectations is easier to match. A co-player that violates them is harder to match. Here again we see a linear trajectory: for any given word, the larger the baseline preference for variant 1 or variant 2, the harder it is to match a reversed co-player's pick. This ties in with the linear learning trajectory: participants seem to adjust their representations of the co-player one word and one trial at a time. 
-
-![Figure 6](analysis/esp_analysis/preds/pred3.png)
 
 The results show that matching becomes easier in the course of the matching game and that reversed co-players are harder to match than typical ones, demonstrating an effect of word-level expectations (above and beyond overall expectations on the rate of use for variant 1 or variant 2). Curiously, learning is not easier with the socially salient variable pattern.
 
@@ -500,21 +505,19 @@ The intercept is above zero and the effect of low co-player rate of use of varia
 
 Since the outcome variable here is use of variant 1, we do not expect co-player typicality and variable pattern to have a single-term effect. We are interested in interactions between terms. The one significant interaction is between target word baseline log odds of use of variant 1 and co-player typicality. We explore this below.
 
-Essentially, participants maintain the patterns they learned in the matching phase. A clear example of this is that participants who played a high 1 co-player will have a higher use of variant 1 in the post-test than those who played a low 1 co-player. This can be seen in Figure 7, which plots the distribution of mean predicted participant preference on the horizontal axis for variant 1 in the post-test for participants who played a high variant 1 co-player (above) or a low variant 1 co-player (below).
+Essentially, participants maintain the patterns they learned in the matching phase. A clear example of this is that participants who played a high 1 co-player will have a higher use of variant 1 in the post-test than those who played a low 1 co-player.
 
-![Figure 7](analysis/esp_analysis/preds/pred4.png)
+The persistent adjustment goes beyond a shift in the rate of use of variant 1 and variant 2. This can be seen in Figure 5. The horizontal axis shows the baseline log odds of the use of variant 1 for each word and the vertical axis shows the mean predicted rate of use of variant 1 in the post-test. The two are correlated: participants in the post-test make similar choices to participants in the baseline experiment. 
 
-The persistent adjustment goes beyond a shift in the rate of use of variant 1 and variant 2. This can be seen in Figure 8. The horizontal axis shows the baseline log odds of the use of variant 1 for each word and the vertical axis shows the mean predicted rate of use of variant 1 in the post-test. The two are correlated: participants in the post-test make similar choices to participants in the baseline experiment. 
+The strength of the correlation is significantly different depending on the type of co-player in the matching game: the choices of participants playing a reversed co-player have a weaker correlation with the baseline pattern. This is because we exposed these participants to a different lexical structure. Participants playing a typical co-player received evidence that supports their own lexical structure. Participants playing a reversed co-player received evidence that words that, in their judgement, prefer variant 1 in fact strongly prefer variant 2, and, conversely, those that should prefer variant 2 in fact prefer variant 1. As a result, these participants adjusted their lexical patterns. Words that had a low preference for variant 1 now have a higher preference. Words that had a high preference for variant 1 now have a lower preference. The result is the difference in the rates of correlation across co-player typicality, seen in Figure 5.
 
-The strength of the correlation is significantly different depending on the type of co-player in the matching game: the choices of participants playing a reversed co-player have a weaker correlation with the baseline pattern. This is because we exposed these participants to a different lexical structure. Participants playing a typical co-player received evidence that supports their own lexical structure. Participants playing a reversed co-player received evidence that words that, in their judgement, prefer variant 1 in fact strongly prefer variant 2, and, conversely, those that should prefer variant 2 in fact prefer variant 1. As a result, these participants adjusted their lexical patterns. Words that had a low preference for variant 1 now have a higher preference. Words that had a high preference for variant 1 now have a lower preference. The result is the difference in the rates of correlation across co-player typicality, seen in Figure 8.
+![Figure 5](figures/fig6.png)
 
-![Figure 8](analysis/esp_analysis/preds/pred5.png)
+This effect is independent of whether the co-player had a high or low overall preference for variant 1. This also makes sense: half of the participants have seen a co-player with a high overall rate of variant 1 and half of the participants have seen a co-player with a low overall rate of variant 1 and the two groups average out. More interestingly, the variable pattern also makes no difference. This can be seen in Figure 6.
 
-This effect is independent of whether the co-player had a high or low overall preference for variant 1. This also makes sense: half of the participants have seen a co-player with a high overall rate of variant 1 and half of the participants have seen a co-player with a low overall rate of variant 1 and the two groups average out. More interestingly, the variable pattern also makes no difference. This can be seen in Figure 9.
+Figure 6 shows the correlation of baseline log odds with predicted mean rate of use of variant 1 in the post-test for each word, this time split across participants with typical and reversed co-players. The slope of the correlation is not different between participants who were exposed to levelling stimuli versus vowel deletion stimuli, either for the typical or the reversed co-player. This means that not only are the rates of learning similar for the two variable patterns, the learned lexical structure is retained to a similar extent in the post-test.
 
-Figure 9 shows the correlation of baseline log odds with predicted mean rate of use of variant 1 in the post-test for each word, this time split across participants with typical and reversed co-players. The slope of the correlation is not different between participants who were exposed to levelling stimuli versus vowel deletion stimuli, either for the typical or the reversed co-player. This means that not only are the rates of learning similar for the two variable patterns, the learned lexical structure is retained to a similar extent in the post-test.
-
-![Figure 9](analysis/esp_analysis/preds/pred6.png)
+![Figure 6](figures/fig7.png)
 
 ## Discussion
 
@@ -532,7 +535,7 @@ Beyond the absence of a salience effect, the results are interesting as a replic
 
 ## Data and code
 
-Code used to set up and process the experiment is in `scripts/esp_exp`. The code to run the experiment is in `interface/hesp.zip`. Code to fit models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise data is in `analysis/esp_analysis/esp_pred_viz.R`. Raw data are in `exp_data/raw`, tidy data are in `exp_data/baseline`.
+Code used to set up and process the experiment is in `scripts/esp_exp`. The code to run the experiment is in `interface/hesp.zip`. Code to fit models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise data is in `figures/paper_figures.R`. Raw data are in `exp_data/raw`, tidy data are in `exp_data/baseline`.
 
 # Integration experiment
 
@@ -594,8 +597,6 @@ We fit a generalised linear mixed model on the post-test data with the same para
 
 ### Matching game
 
-### Matching game
-
 The formula for the best model is `p(match co-player) ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + pattern + scale(i) + (1|part_id) + (1|base)`. The outcome is the probability of matching the co-player. The summary of the fixed effects is in Table 8.
 
 ```{r esp_fit2}
@@ -609,9 +610,9 @@ esp2_table %>%
 
 Results are similar to the main experiment. Recall that this one is a low-reversed co-player only matching game. The intercept is not significantly over 50%. It is harder to match the co-player when the target word has a high or low preference for variant 1. Finally, the chance of matching the co-player increases through trials, showing that, again, learning is taking place.
 
-The predicted learning trajectory across matching game trials can be seen in Figure 10, which is very similar to what we see in the "reversed" panel of Figure 5. Participants start out less likely than chance to match the co-player, and then gradually improve throughout the task.
+The predicted learning trajectory across matching game trials can be seen in Figure 7, which is very similar to what we see in the "reversed" panel of Figure 4. Participants start out less likely than chance to match the co-player, and then gradually improve throughout the task.
 
-![Figure 10](analysis/esp_analysis/preds/pred21.png)
+![Figure 7](figures/fig9.png)
 
 ### Post-tests
 
@@ -627,15 +628,11 @@ posttest2_table %>%
   kable('simple', digits = 2, caption = 'Table *. Best model, post-tests in integration experiment')
 ```
 
-There are two significant predictors here. If a word is more likely to pick variant 1 in the baseline task, it will be more likely to pick variant 1 in the post-test of the integration experiment. We saw the same effect in the main experiment. In addition, model comparison selected a significant interaction between type of variation and re-testing. In order to make sense of this, we show mean predicted rate of variant 1 across participants in the post-tests of the integration experiment in Figure 11, which shows the mean predicted preference for variant 1 across participants (horizontal axis) across the two patterns and the two post-tests (vertical axis).
+There are two significant predictors here. If a word is more likely to pick variant 1 in the baseline task, it will be more likely to pick variant 1 in the post-test of the integration experiment. We saw the same effect in the main experiment. In addition, model comparison selected a significant interaction between type of variation and re-testing. In order to make sense of this, we show mean predicted rate of variant 1 across participants in the post-tests of the integration experiment in Figure 8, which shows the mean predicted preference for variant 1 across participants (horizontal axis) across the two patterns and the two post-tests (vertical axis).
 
-![Figure 11](analysis/esp_analysis/preds/pred22.png)
+![Figure 8](figures/fig11.png)
 
 We see a higher rate of use of variant 1 for levelling than for vowel deletion, in both the first, immediate, and the second, delayed post-test. We see no real shift in use between the post-tests. Participants show the same pattern in the first and the second post-test.
-
-We see a similar pattern in Figure 12, which shows raw target form log odds for the baseline, the first posttest, and the second posttest of the integration task, across the two patterns. Log odds decrease upon meeting the "low" co-player, and they slightly recover a day later, but the shift is not statistically significant.
-
-![Figure 12](analysis/esp_analysis/preds/pred23.png)
 
 ## Discussion
 
