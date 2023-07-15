@@ -1,7 +1,7 @@
 Supplementary Information: Learning Salient Morphological Variation
 ================
 Rácz, Péter
-2023-06-24
+2023-07-13
 
 # Summary
 
@@ -469,62 +469,62 @@ preference for `-k` and a **reversed** distribution will pick `-k` for
 the last 15 verbs and `-m` for the first 39 verbs. Both will pick `-k`
 for verbs that strongly reject `-k`.
 
-| baseline rank | base       | high typical   | low typical    | high reversed  | low reversed   |
-|--------------:|:-----------|:---------------|:---------------|:---------------|:---------------|
-|             1 | tomlik     | tomlo**k**     | tomlo**k**     | tomlo**m**     | tomlo**m**     |
-|             2 | fibamlik   | fibamlo**k**   | fibamlo**k**   | fibamlo**m**   | fibamlo**m**   |
-|             3 | femlik     | femle**k**     | femle**k**     | femle**m**     | femle**m**     |
-|             4 | feténylik  | fetényle**k**  | fetényle**k**  | fetényle**m**  | fetényle**m**  |
-|             5 | spűmlik    | spűmlö**k**    | spűmlö**k**    | spűmlö**m**    | spűmlö**m**    |
-|             6 | sztremlik  | sztremle**k**  | sztremle**k**  | sztremle**m**  | sztremle**m**  |
-|             7 | pratánylik | pratánylo**k** | pratánylo**k** | pratánylo**m** | pratánylo**m** |
-|             8 | spéslik    | spésle**k**    | spésle**k**    | spésle**m**    | spésle**m**    |
-|             9 | flagánylik | flagánylo**k** | flagánylo**k** | flagánylo**m** | flagánylo**m** |
-|            10 | jüslik     | jüslö**k**     | jüslö**k**     | jüslö**m**     | jüslö**m**     |
-|            11 | büglik     | büglö**k**     | büglö**k**     | büglö**m**     | büglö**m**     |
-|            12 | prűrlik    | prűrlö**k**    | prűrlö**k**    | prűrlö**m**    | prűrlö**m**    |
-|            13 | ruslik     | ruslo**k**     | ruslo**k**     | ruslo**m**     | ruslo**m**     |
-|            14 | marzik     | marzo**k**     | marzo**k**     | marzo**m**     | marzo**m**     |
-|            15 | brüjlik    | brüjlö**k**    | brüjlö**k**    | brüjlö**m**    | brüjlö**m**    |
-|            16 | csíszlik   | csíszlo**k**   | csíszlo**m**   | csíszlo**k**   | csíszlo**m**   |
-|            17 | flüröslik  | flüröslö**k**  | flüröslö**m**  | flüröslö**k**  | flüröslö**m**  |
-|            18 | szirlik    | szirlo**k**    | szirlo**m**    | szirlo**k**    | szirlo**m**    |
-|            19 | klörlik    | klörlö**k**    | klörlö**m**    | klörlö**k**    | klörlö**m**    |
-|            20 | nyáslik    | nyáslo**k**    | nyáslo**m**    | nyáslo**k**    | nyáslo**m**    |
-|            21 | pebzik     | pebze**k**     | pebze**m**     | pebze**k**     | pebze**m**     |
-|            22 | juszlik    | juszlo**k**    | juszlo**m**    | juszlo**k**    | juszlo**m**    |
-|            23 | klibamlik  | klibamlo**k**  | klibamlo**m**  | klibamlo**k**  | klibamlo**m**  |
-|            24 | tínylik    | tínylo**k**    | tínylo**m**    | tínylo**k**    | tínylo**m**    |
-|            25 | bölszik    | bölszö**k**    | bölszö**m**    | bölszö**k**    | bölszö**m**    |
-|            26 | flűröklik  | flűröklö**k**  | flűröklö**m**  | flűröklö**k**  | flűröklö**m**  |
-|            27 | trilszik   | trilszo**k**   | trilszo**m**   | trilszo**k**   | trilszo**m**   |
-|            28 | böjzik     | böjzö**k**     | böjzö**m**     | böjzö**k**     | böjzö**m**     |
-|            29 | sűzlik     | sűzlö**k**     | sűzlö**m**     | sűzlö**k**     | sűzlö**m**     |
-|            30 | hilarzik   | hilarzo**k**   | hilarzo**m**   | hilarzo**k**   | hilarzo**m**   |
-|            31 | spibaklik  | spibaklo**k**  | spibaklo**m**  | spibaklo**k**  | spibaklo**m**  |
-|            32 | tiregzik   | tiregze**k**   | tiregze**m**   | tiregze**k**   | tiregze**m**   |
-|            33 | fretszik   | fretsze**k**   | fretsze**m**   | fretsze**k**   | fretsze**m**   |
-|            34 | narjárzik  | narjárzo**k**  | narjárzo**m**  | narjárzo**k**  | narjárzo**m**  |
-|            35 | spatárzik  | spatárzo**k**  | spatárzo**m**  | spatárzo**k**  | spatárzo**m**  |
-|            36 | málapszik  | málapszo**k**  | málapszo**m**  | málapszo**k**  | málapszo**m**  |
-|            37 | lorjódzik  | lorjódzo**k**  | lorjódzo**m**  | lorjódzo**k**  | lorjódzo**m**  |
-|            38 | ribegzik   | ribegze**k**   | ribegze**m**   | ribegze**k**   | ribegze**m**   |
-|            39 | flagárzik  | flagárzo**k**  | flagárzo**m**  | flagárzo**k**  | flagárzo**m**  |
-|            40 | frilegszik | frilegsze**m** | frilegsze**m** | frilegsze**k** | frilegsze**k** |
-|            41 | sprökszik  | sprökszö**m**  | sprökszö**m**  | sprökszö**k**  | sprökszö**k**  |
-|            42 | brágaklik  | brágaklo**m**  | brágaklo**m**  | brágaklo**k**  | brágaklo**k**  |
-|            43 | prilegzik  | prilegze**m**  | prilegze**m**  | prilegze**k**  | prilegze**k**  |
-|            44 | drubódzik  | drubódzo**m**  | drubódzo**m**  | drubódzo**k**  | drubódzo**k**  |
-|            45 | siladzik   | siladzo**m**   | siladzo**m**   | siladzo**k**   | siladzo**k**   |
-|            46 | sojzik     | sojzo**m**     | sojzo**m**     | sojzo**k**     | sojzo**k**     |
-|            47 | piragszik  | piragszo**m**  | piragszo**m**  | piragszo**k**  | piragszo**k**  |
-|            48 | driládzik  | driládzo**m**  | driládzo**m**  | driládzo**k**  | driládzo**k**  |
-|            49 | ribzik     | ribzo**m**     | ribzo**m**     | ribzo**k**     | ribzo**k**     |
-|            50 | herégszik  | herégsze**m**  | herégsze**m**  | herégsze**k**  | herégsze**k**  |
-|            51 | sprogzik   | sprogzo**m**   | sprogzo**m**   | sprogzo**k**   | sprogzo**k**   |
-|            52 | vilakszik  | vilakszo**m**  | vilakszo**m**  | vilakszo**k**  | vilakszo**k**  |
-|            53 | pivegszik  | pivegsze**m**  | pivegsze**m**  | pivegsze**k**  | pivegsze**k**  |
-|            54 | spilágzik  | spilágzo**m**  | spilágzo**m**  | spilágzo**k**  | spilágzo**k**  |
+| baseline rank | log_odds | base       | high typical   | low typical    | high reversed  | low reversed   |
+|--------------:|---------:|:-----------|:---------------|:---------------|:---------------|:---------------|
+|             1 |     2.23 | tomlik     | tomlo**k**     | tomlo**k**     | tomlo**m**     | tomlo**m**     |
+|             2 |     1.91 | fibamlik   | fibamlo**k**   | fibamlo**k**   | fibamlo**m**   | fibamlo**m**   |
+|             3 |     1.65 | femlik     | femle**k**     | femle**k**     | femle**m**     | femle**m**     |
+|             4 |     1.57 | feténylik  | fetényle**k**  | fetényle**k**  | fetényle**m**  | fetényle**m**  |
+|             5 |     1.57 | spűmlik    | spűmlö**k**    | spűmlö**k**    | spűmlö**m**    | spűmlö**m**    |
+|             6 |     1.34 | sztremlik  | sztremle**k**  | sztremle**k**  | sztremle**m**  | sztremle**m**  |
+|             7 |     1.23 | pratánylik | pratánylo**k** | pratánylo**k** | pratánylo**m** | pratánylo**m** |
+|             8 |     1.15 | spéslik    | spésle**k**    | spésle**k**    | spésle**m**    | spésle**m**    |
+|             9 |     1.06 | flagánylik | flagánylo**k** | flagánylo**k** | flagánylo**m** | flagánylo**m** |
+|            10 |     0.97 | jüslik     | jüslö**k**     | jüslö**k**     | jüslö**m**     | jüslö**m**     |
+|            11 |     0.92 | büglik     | büglö**k**     | büglö**k**     | büglö**m**     | büglö**m**     |
+|            12 |     0.92 | prűrlik    | prűrlö**k**    | prűrlö**k**    | prűrlö**m**    | prűrlö**m**    |
+|            13 |     0.89 | ruslik     | ruslo**k**     | ruslo**k**     | ruslo**m**     | ruslo**m**     |
+|            14 |     0.80 | marzik     | marzo**k**     | marzo**k**     | marzo**m**     | marzo**m**     |
+|            15 |     0.75 | brüjlik    | brüjlö**k**    | brüjlö**k**    | brüjlö**m**    | brüjlö**m**    |
+|            16 |     0.74 | csíszlik   | csíszlo**k**   | csíszlo**m**   | csíszlo**k**   | csíszlo**m**   |
+|            17 |     0.74 | flüröslik  | flüröslö**k**  | flüröslö**m**  | flüröslö**k**  | flüröslö**m**  |
+|            18 |     0.74 | szirlik    | szirlo**k**    | szirlo**m**    | szirlo**k**    | szirlo**m**    |
+|            19 |     0.64 | klörlik    | klörlö**k**    | klörlö**m**    | klörlö**k**    | klörlö**m**    |
+|            20 |     0.59 | nyáslik    | nyáslo**k**    | nyáslo**m**    | nyáslo**k**    | nyáslo**m**    |
+|            21 |     0.49 | pebzik     | pebze**k**     | pebze**m**     | pebze**k**     | pebze**m**     |
+|            22 |     0.46 | juszlik    | juszlo**k**    | juszlo**m**    | juszlo**k**    | juszlo**m**    |
+|            23 |     0.44 | klibamlik  | klibamlo**k**  | klibamlo**m**  | klibamlo**k**  | klibamlo**m**  |
+|            24 |     0.44 | tínylik    | tínylo**k**    | tínylo**m**    | tínylo**k**    | tínylo**m**    |
+|            25 |     0.35 | bölszik    | bölszö**k**    | bölszö**m**    | bölszö**k**    | bölszö**m**    |
+|            26 |     0.33 | flűröklik  | flűröklö**k**  | flűröklö**m**  | flűröklö**k**  | flűröklö**m**  |
+|            27 |     0.29 | trilszik   | trilszo**k**   | trilszo**m**   | trilszo**k**   | trilszo**m**   |
+|            28 |     0.14 | böjzik     | böjzö**k**     | böjzö**m**     | böjzö**k**     | böjzö**m**     |
+|            29 |     0.14 | sűzlik     | sűzlö**k**     | sűzlö**m**     | sűzlö**k**     | sűzlö**m**     |
+|            30 |     0.07 | hilarzik   | hilarzo**k**   | hilarzo**m**   | hilarzo**k**   | hilarzo**m**   |
+|            31 |     0.07 | spibaklik  | spibaklo**k**  | spibaklo**m**  | spibaklo**k**  | spibaklo**m**  |
+|            32 |     0.06 | tiregzik   | tiregze**k**   | tiregze**m**   | tiregze**k**   | tiregze**m**   |
+|            33 |     0.00 | fretszik   | fretsze**k**   | fretsze**m**   | fretsze**k**   | fretsze**m**   |
+|            34 |     0.00 | narjárzik  | narjárzo**k**  | narjárzo**m**  | narjárzo**k**  | narjárzo**m**  |
+|            35 |    -0.06 | spatárzik  | spatárzo**k**  | spatárzo**m**  | spatárzo**k**  | spatárzo**m**  |
+|            36 |    -0.07 | málapszik  | málapszo**k**  | málapszo**m**  | málapszo**k**  | málapszo**m**  |
+|            37 |    -0.19 | lorjódzik  | lorjódzo**k**  | lorjódzo**m**  | lorjódzo**k**  | lorjódzo**m**  |
+|            38 |    -0.19 | ribegzik   | ribegze**k**   | ribegze**m**   | ribegze**k**   | ribegze**m**   |
+|            39 |    -0.21 | flagárzik  | flagárzo**k**  | flagárzo**m**  | flagárzo**k**  | flagárzo**m**  |
+|            40 |    -0.29 | frilegszik | frilegsze**m** | frilegsze**m** | frilegsze**k** | frilegsze**k** |
+|            41 |    -0.29 | sprökszik  | sprökszö**m**  | sprökszö**m**  | sprökszö**k**  | sprökszö**k**  |
+|            42 |    -0.33 | brágaklik  | brágaklo**m**  | brágaklo**m**  | brágaklo**k**  | brágaklo**k**  |
+|            43 |    -0.35 | prilegzik  | prilegze**m**  | prilegze**m**  | prilegze**k**  | prilegze**k**  |
+|            44 |    -0.44 | drubódzik  | drubódzo**m**  | drubódzo**m**  | drubódzo**k**  | drubódzo**k**  |
+|            45 |    -0.44 | siladzik   | siladzo**m**   | siladzo**m**   | siladzo**k**   | siladzo**k**   |
+|            46 |    -0.46 | sojzik     | sojzo**m**     | sojzo**m**     | sojzo**k**     | sojzo**k**     |
+|            47 |    -0.59 | piragszik  | piragszo**m**  | piragszo**m**  | piragszo**k**  | piragszo**k**  |
+|            48 |    -0.60 | driládzik  | driládzo**m**  | driládzo**m**  | driládzo**k**  | driládzo**k**  |
+|            49 |    -0.60 | ribzik     | ribzo**m**     | ribzo**m**     | ribzo**k**     | ribzo**k**     |
+|            50 |    -0.64 | herégszik  | herégsze**m**  | herégsze**m**  | herégsze**k**  | herégsze**k**  |
+|            51 |    -0.74 | sprogzik   | sprogzo**m**   | sprogzo**m**   | sprogzo**k**   | sprogzo**k**   |
+|            52 |    -0.80 | vilakszik  | vilakszo**m**  | vilakszo**m**  | vilakszo**k**  | vilakszo**k**  |
+|            53 |    -0.89 | pivegszik  | pivegsze**m**  | pivegsze**m**  | pivegsze**k**  | pivegsze**k**  |
+|            54 |    -0.97 | spilágzik  | spilágzo**m**  | spilágzo**m**  | spilágzo**k**  | spilágzo**k**  |
 
 Table 5. Levelling list 1 across co-player types
 
@@ -700,17 +700,10 @@ The formula for the best model is
 The outcome is the probability of matching the co-player. The summary of
 the fixed effects is in Table 6.
 
-| term                                                  | estimate | std.error | statistic | conf.low | conf.high |
-|:------------------------------------------------------|---------:|----------:|----------:|---------:|----------:|
-| Intercept                                             |     0.69 |      0.06 |     10.92 |     0.57 |      0.82 |
-| rate of v1: low                                       |    -0.06 |      0.06 |     -1.03 |    -0.18 |      0.06 |
-| typicality reversed                                   |    -0.53 |      0.06 |     -8.99 |    -0.65 |     -0.42 |
-| abs. baseline log odds (scaled)                       |     0.14 |      0.04 |      3.75 |     0.07 |      0.22 |
-| pattern: vowel deletion                               |    -0.11 |      0.07 |     -1.68 |    -0.24 |      0.02 |
-| trial number (scaled)                                 |     0.08 |      0.02 |      3.62 |     0.04 |      0.13 |
-| typicality reversed : abs. baseline log odds (scaled) |    -0.54 |      0.05 |    -11.24 |    -0.64 |     -0.45 |
-
-Table 6. Best model, matching game in main experiment
+<figure>
+<img src="figures/fig1.png" alt="Figure 3" />
+<figcaption aria-hidden="true">Figure 3</figcaption>
+</figure>
 
 The intercept is above zero with a 95% confidence interval that excludes
 zero. This means that participants are, overall, above chance in
@@ -719,36 +712,27 @@ predictors, (scaled) trial number, reversed co-player typicality and
 (scaled) target word absolute baseline log odds have a significant
 effect on match success. We now look at these in detail.
 
-Figure 4 shows the rate of mean predicted match per trial in the
-matching game. The horizontal axis is trial number, going from the first
-to the last matching game trial. The vertical axis is rate of predicted
-overall agreement with the co-player in each trial. The dotted lines are
-standard errors. We see that, at the beginning, participants have about
-a 55% chance of matching the co-player – above chance – and this
-gradually improves during the game, reaching about 65% towards the final
-trial.
+Figure 4 shows mean predicted match across trial number in three splits:
+high / low use of variant 1 (left), typical or reversed co-player
+distribution (middle), and matching in levelling or vowel deletion
+stimuli (right).
+
+The horizontal axis is trial number, going from the first to the last
+matching game trial. The vertical axis is rate of predicted overall
+agreement with the co-player in each trial. The dotted lines are
+standard errors. We see that participants are more likely to match the
+co-player in later trials across the board. This shows that participants
+learn in the matching game. They are more likely to match the co-player
+in the end than in the beginning. Learning has a linear trajectory. The
+data do not support a non-linear learning trajectory nor
+across-participant variation in the shape of the learning trajectory.
+Participants have different random intercepts. Various conditions have
+meaningfully different fixed intercepts. The direction and linearity of
+the learning curve is always the same.
 
 <figure>
-<img src="analysis/esp_analysis/preds/pred1.png" alt="Figure 4" />
+<img src="figures/fig2.png" alt="Figure 4" />
 <figcaption aria-hidden="true">Figure 4</figcaption>
-</figure>
-
-This shows that participants learn in the matching game. They are more
-likely to match the co-player in the end than in the beginning. Learning
-has a linear trajectory. The data do not support a non-linear learning
-trajectory nor across-participant variation in the shape of the learning
-trajectory. Participants have different random intercepts. Various
-conditions have meaningfully different fixed intercepts. The direction
-and linearity of the learning curve is always the same.
-
-This is shown in Figure 5, which shows mean predicted match across trial
-number in three splits: high / low use of variant 1 (left), typical or
-reversed co-player distribution (middle), and matching in levelling or
-vowel deletion stimuli (right).
-
-<figure>
-<img src="analysis/esp_analysis/preds/pred2.png" alt="Figure 5" />
-<figcaption aria-hidden="true">Figure 5</figcaption>
 </figure>
 
 Looking at the left-hand side, learning is not harder with either a high
@@ -818,11 +802,6 @@ variant 2, the harder it is to match a reversed co-player’s pick. This
 ties in with the linear learning trajectory: participants seem to adjust
 their representations of the co-player one word and one trial at a time.
 
-<figure>
-<img src="analysis/esp_analysis/preds/pred3.png" alt="Figure 6" />
-<figcaption aria-hidden="true">Figure 6</figcaption>
-</figure>
-
 The results show that matching becomes easier in the course of the
 matching game and that reversed co-players are harder to match than
 typical ones, demonstrating an effect of word-level expectations (above
@@ -866,19 +845,10 @@ and co-player typicality. We explore this below.
 Essentially, participants maintain the patterns they learned in the
 matching phase. A clear example of this is that participants who played
 a high 1 co-player will have a higher use of variant 1 in the post-test
-than those who played a low 1 co-player. This can be seen in Figure 7,
-which plots the distribution of mean predicted participant preference on
-the horizontal axis for variant 1 in the post-test for participants who
-played a high variant 1 co-player (above) or a low variant 1 co-player
-(below).
-
-<figure>
-<img src="analysis/esp_analysis/preds/pred4.png" alt="Figure 7" />
-<figcaption aria-hidden="true">Figure 7</figcaption>
-</figure>
+than those who played a low 1 co-player.
 
 The persistent adjustment goes beyond a shift in the rate of use of
-variant 1 and variant 2. This can be seen in Figure 8. The horizontal
+variant 1 and variant 2. This can be seen in Figure 5. The horizontal
 axis shows the baseline log odds of the use of variant 1 for each word
 and the vertical axis shows the mean predicted rate of use of variant 1
 in the post-test. The two are correlated: participants in the post-test
@@ -897,11 +867,11 @@ As a result, these participants adjusted their lexical patterns. Words
 that had a low preference for variant 1 now have a higher preference.
 Words that had a high preference for variant 1 now have a lower
 preference. The result is the difference in the rates of correlation
-across co-player typicality, seen in Figure 8.
+across co-player typicality, seen in Figure 5.
 
 <figure>
-<img src="analysis/esp_analysis/preds/pred5.png" alt="Figure 8" />
-<figcaption aria-hidden="true">Figure 8</figcaption>
+<img src="figures/fig6.png" alt="Figure 5" />
+<figcaption aria-hidden="true">Figure 5</figcaption>
 </figure>
 
 This effect is independent of whether the co-player had a high or low
@@ -910,9 +880,9 @@ participants have seen a co-player with a high overall rate of variant 1
 and half of the participants have seen a co-player with a low overall
 rate of variant 1 and the two groups average out. More interestingly,
 the variable pattern also makes no difference. This can be seen in
-Figure 9.
+Figure 6.
 
-Figure 9 shows the correlation of baseline log odds with predicted mean
+Figure 6 shows the correlation of baseline log odds with predicted mean
 rate of use of variant 1 in the post-test for each word, this time split
 across participants with typical and reversed co-players. The slope of
 the correlation is not different between participants who were exposed
@@ -922,8 +892,8 @@ rates of learning similar for the two variable patterns, the learned
 lexical structure is retained to a similar extent in the post-test.
 
 <figure>
-<img src="analysis/esp_analysis/preds/pred6.png" alt="Figure 9" />
-<figcaption aria-hidden="true">Figure 9</figcaption>
+<img src="figures/fig7.png" alt="Figure 6" />
+<figcaption aria-hidden="true">Figure 6</figcaption>
 </figure>
 
 ## Discussion
@@ -1012,8 +982,8 @@ possible and based on adjustments in rich lexical representations.
 Code used to set up and process the experiment is in `scripts/esp_exp`.
 The code to run the experiment is in `interface/hesp.zip`. Code to fit
 models is in `analysis/esp_analysis/esp_analysis.R`. Code to visualise
-data is in `analysis/esp_analysis/esp_pred_viz.R`. Raw data are in
-`exp_data/raw`, tidy data are in `exp_data/baseline`.
+data is in `figures/paper_figures.R`. Raw data are in `exp_data/raw`,
+tidy data are in `exp_data/baseline`.
 
 # Integration experiment
 
@@ -1096,8 +1066,6 @@ and provide criticism for the best model.
 
 ### Matching game
 
-### Matching game
-
 The formula for the best model is
 `p(match co-player) ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + pattern + scale(i) + (1|part_id) + (1|base)`.
 The outcome is the probability of matching the co-player. The summary of
@@ -1120,14 +1088,13 @@ chance of matching the co-player increases through trials, showing that,
 again, learning is taking place.
 
 The predicted learning trajectory across matching game trials can be
-seen in Figure 10, which is very similar to what we see in the
-“reversed” panel of Figure 5. Participants start out less likely than
-chance to match the co-player, and then gradually improve throughout the
-task.
+seen in Figure 7, which is very similar to what we see in the “reversed”
+panel of Figure 4. Participants start out less likely than chance to
+match the co-player, and then gradually improve throughout the task.
 
 <figure>
-<img src="analysis/esp_analysis/preds/pred21.png" alt="Figure 10" />
-<figcaption aria-hidden="true">Figure 10</figcaption>
+<img src="figures/fig9.png" alt="Figure 7" />
+<figcaption aria-hidden="true">Figure 7</figcaption>
 </figure>
 
 ### Post-tests
@@ -1154,13 +1121,13 @@ same effect in the main experiment. In addition, model comparison
 selected a significant interaction between type of variation and
 re-testing. In order to make sense of this, we show mean predicted rate
 of variant 1 across participants in the post-tests of the integration
-experiment in Figure 11, which shows the mean predicted preference for
+experiment in Figure 8, which shows the mean predicted preference for
 variant 1 across participants (horizontal axis) across the two patterns
 and the two post-tests (vertical axis).
 
 <figure>
-<img src="analysis/esp_analysis/preds/pred22.png" alt="Figure 11" />
-<figcaption aria-hidden="true">Figure 11</figcaption>
+<img src="figures/fig11.png" alt="Figure 8" />
+<figcaption aria-hidden="true">Figure 8</figcaption>
 </figure>
 
 We see a higher rate of use of variant 1 for levelling than for vowel
@@ -1168,17 +1135,6 @@ deletion, in both the first, immediate, and the second, delayed
 post-test. We see no real shift in use between the post-tests.
 Participants show the same pattern in the first and the second
 post-test.
-
-We see a similar pattern in Figure 12, which shows raw target form log
-odds for the baseline, the first posttest, and the second posttest of
-the integration task, across the two patterns. Log odds decrease upon
-meeting the “low” co-player, and they slightly recover a day later, but
-the shift is not statistically significant.
-
-<figure>
-<img src="analysis/esp_analysis/preds/pred23.png" alt="Figure 12" />
-<figcaption aria-hidden="true">Figure 12</figcaption>
-</figure>
 
 ## Discussion
 

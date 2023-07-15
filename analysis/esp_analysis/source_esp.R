@@ -1,3 +1,9 @@
+#############################################
+#############################################
+# source data, functions, models for ESP / matching game analysis
+#############################################
+#############################################
+
 # -- header -- #
 
 set.seed(1337)
@@ -17,6 +23,7 @@ newIndex = . %>%
 d = read_tsv('exp_data/esp/esp_master_all_filtered.tsv')
 b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')  
 # b0 = read_tsv('exp_data/baseline/baseline_tidy.tsv')
+s = read_tsv('exp_data/sleep/sleep.tsv')
 
 # -- wrangling -- #
 
@@ -49,8 +56,15 @@ esp$abs_baseline_log_odds_jitter = abs(esp$baseline_log_odds_jitter)
 
 posttest = filter(posttest, variation != 'hotelban/hotelben')
 
+sesp = filter(s, trial_kind == 'esp trial') %>% 
+  mutate(abs_baseline_log_odds = abs(baseline_log_odds))
+
+sposttests = s %>%
+  filter(str_detect(trial_kind, 'posttest trial'))
 
 # -- best models -- #
+
+# see esp_analysis, sleep_analysis/sleep_napkin
 
 esp_fit = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), 
                 data = esp, 
@@ -64,10 +78,20 @@ posttest_fit = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jit
                      control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
                      ))
 
+s_esp_fit = glmer(esp_match ~ 1 + scale(abs_baseline_log_odds) + variation + scale(i) + (1|part_id) + (1|base), 
+             data = sesp, 
+             family = binomial(link = 'logit'), 
+             control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
+             ))
+
+s_posttests_fit = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = sposttests, family = binomial)
+
 # -- predictions -- #
 
 esp$pred = predict(esp_fit, type = 'response')
 posttest$pred = predict(posttest_fit, type = 'response')
+sesp$pred = predict(s_esp_fit, type = 'response')
+sposttests$pred = predict(s_posttests_fit, type = 'response')
 
 # -- camera ready -- #
 
