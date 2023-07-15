@@ -1,7 +1,8 @@
-Supplementary Information: Learning Salient Morphological Variation
+"Morphological convergence and sociolinguistic salience: an experimental study"
+Online supplement
 ================
 Rácz, Péter
-2023-07-13
+2023-07-15
 
 # Summary
 
