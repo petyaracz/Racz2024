@@ -11,8 +11,13 @@ library(ggthemes)
 library(gghalves)
 library(patchwork)
 library(lme4)
+library(ggpubr)
 
 # -- fun -- #
+
+toTidy = . %>% 
+  filter(variation != 'hotelban/hotelben') %>% 
+  mutate(name = ifelse(str_detect(variation, 'lakok'), '1. levelling', '2. vowel deletion'))
 
 espIndex = function(dat){
   summarise(dat, mean = mean(pred), se = sd(pred)/sqrt(n()),upper = mean + se, lower = mean - se) %>%
@@ -47,6 +52,8 @@ cloudPlot2 = function(dat,pred,out){
 # -- src -- #
 
 source('analysis/esp_analysis/source_esp.R')
+
+b2 = read_tsv('exp_data/baseline/baseline_tidy.tsv')
 
 # -- figures -- #
 

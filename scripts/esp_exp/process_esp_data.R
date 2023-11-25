@@ -1,4 +1,4 @@
-# process hesp data
+# process hesp data from pavlovia
 setwd('~/Github/Racz2024')
 library(tidyverse)
 library(magrittr)
@@ -100,6 +100,7 @@ master = read_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
 # -- dat -- #
 
 dat_id = list.files('~/Github/Pavlovia/hesp/data/')
+dat_id = dat_id[dat_id != 'raw_up_to_june_23.zip']
 path = '~/Github/Pavlovia/hesp/data/'
 # simulated data:
 # dat_id = list.files('resource/simulated_hesp/')
@@ -142,8 +143,8 @@ d %<>% filter(
 # write_tsv(d, 'exp_data/esp/esp_master_all_unfiltered.tsv')
 
 # print ids to a tsv
-# d %>% 
-#   distinct(record_date,dat_id,part_id) %>% 
+# d %>%
+#   distinct(record_date,dat_id,part_id) %>%
 #   write_tsv('exp_data/esp_completed_ids.tsv')
 
 # -- some people did it twice -- #
@@ -313,4 +314,4 @@ rows_left = d3 %>%
 rows_expected = 108 * 7 * 12 * 2
 glue('{round(rows_left/rows_expected*100)}% of observations remain.')
 
-write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
+# write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
