@@ -99,9 +99,12 @@ master = read_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
 
 # -- dat -- #
 
-dat_id = list.files('~/Github/Pavlovia/hesp/data/')
-dat_id = dat_id[dat_id != 'raw_up_to_june_23.zip']
-path = '~/Github/Pavlovia/hesp/data/'
+# dat_id = list.files('~/Github/Pavlovia/hesp/data/')
+dat_id_all = list.files('exp_data/raw_data/')
+dat_id_attempt = dat_id_all[str_detect(dat_id_all, 'hungarian-esp_PARTICIPANT_SESSION')]
+dat_id = dat_id_all[str_detect(dat_id_all, 'esp_esp')]
+# path = '~/Github/Pavlovia/hesp/data/'
+path = 'exp_data/raw_data/'
 # simulated data:
 # dat_id = list.files('resource/simulated_hesp/')
 # path = 'resource/simulated_hesp/'
@@ -123,11 +126,9 @@ d %<>%
     n_rows == 176
          )
 
-glue('{nrow(d)} complete files, {length(dat_id)-nrow(d)} attempts.')
-
 d %<>% mutate(
     proc = map(data, ~ procDat(.)),
-    start = str_extract(dat_id, '2022.*^(?=\\.csv$)')
+    start = str_extract(dat_id, '202.*^(?=\\.csv$)')
   ) %>% 
   select(dat_id,record_date,proc) %>% 
   unnest(cols = c(proc))
@@ -139,13 +140,9 @@ d %<>% filter(
   !(part_id %in% c('petikevagyok','próba','proba','Peti','CsM','','szis','NN'))
 )
 
-# save unfiltered data
-# write_tsv(d, 'exp_data/esp/esp_master_all_unfiltered.tsv')
+glue('{length(unique(d$part_id))} complete files, {length(dat_id_attempt)} attempts.')
 
-# print ids to a tsv
-# d %>%
-#   distinct(record_date,dat_id,part_id) %>%
-#   write_tsv('exp_data/esp_completed_ids.tsv')
+d_unf = d
 
 # -- some people did it twice -- #
 
@@ -165,8 +162,11 @@ bad_ids = c(
   'hungarian-esp_esp_participant_SESSION_2023-05-09_10h49.20.190.csv',
   'hungarian-esp_esp_participant_SESSION_2023-05-26_20h45.16.179.csv',
   'hungarian-esp_esp_participant_SESSION_2023-05-26_21h17.52.720.csv',
-  'hungarian-esp_esp_participant_SESSION_2023-05-26_21h17.52.720.csv',
-  'hungarian-esp_esp_participant_SESSION_2023-06-06_18h33.41.94.csv'
+  'hungarian-esp_esp_participant_SESSION_2023-06-06_18h33.41.94.csv',
+  'hungarian-esp_esp_participant_SESSION_2023-05-26_20h45.16.179.csv',
+  'hungarian-esp_esp_participant_SESSION_2023-05-26_23h43.18.577.csv',
+  'hungarian-esp_esp_participant_SESSION_2023-11-29_17h38.29.31.csv',
+  'hungarian-esp_esp_participant_SESSION_2023-12-04_16h00.15.833.csv'
 )
 
 d %<>% filter(!dat_id %in% bad_ids)
@@ -209,7 +209,7 @@ if(all(flag1,flag2,flag3)){print('Checks completed successfully.')}else{print('R
 # -- check list numbers -- #
 
 d %>% 
-  filter(trial_kind == 'esp trial',variation == 'hotelban/hotelben') %>% 
+  filter(trial_kind == 'esp trial') %>% 
   distinct(part_id,list_number,reg_rate,reg_dist,variation) %>% 
   count(list_number,reg_rate,reg_dist,variation) %>% 
   pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
@@ -306,12 +306,14 @@ d3 %>%
   pivot_wider(names_from = variation, values_from = n,values_fill = 0) %>% 
   kable(caption = 'List counts.')
 
-print('how much data did we exclude by outlier removal for lakik and cselekszenek?')
+print('how much data did we exclude by outlier removal')
 
 rows_left = d3 %>% 
-  filter(variation != 'hotelban/hotelben') %>% 
+  # filter(variation != 'hotelban/hotelben') %>% 
   nrow()
-rows_expected = 108 * 7 * 12 * 2
+rows_expected = 54 * 3 * 7 * 12 * 2
 glue('{round(rows_left/rows_expected*100)}% of observations remain.')
 
-# write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
+write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
+# save unfiltered data
+write_tsv(d_unf, 'exp_data/esp/esp_master_all_unfiltered.tsv')
