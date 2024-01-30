@@ -96,6 +96,7 @@ whichList = function(dat,l){
 # -- helper -- #
 
 master = read_tsv('resource/exp_input_files/esp/esp_master_input.tsv')
+baseline = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')
 
 # -- dat -- #
 
@@ -314,6 +315,21 @@ rows_left = d3 %>%
 rows_expected = 54 * 3 * 7 * 12 * 2
 glue('{round(rows_left/rows_expected*100)}% of observations remain.')
 
+# save exclusion information
+excluded = anti_join(d_unf,d3)
+write_tsv(excluded, 'exp_data/esp/esp_master_only_unfiltered.tsv')
+# save data
 write_tsv(d3, 'exp_data/esp/esp_master_all_filtered.tsv')
 # save unfiltered data
 write_tsv(d_unf, 'exp_data/esp/esp_master_all_unfiltered.tsv')
+
+# # nouns!
+# excluded %>% 
+#   filter(variation == 'hotelban/hotelben') %>% 
+#   write_tsv('../Racz2024c/dat/hotelban_excluded.tsv')
+# d3 %>% 
+#   filter(variation == 'hotelban/hotelben') %>% 
+#   write_tsv('../Racz2024c/dat/hotelban_filtered.tsv')
+# baseline %>% 
+#   filter(variation == 'hotelban/hotelben') %>% 
+#   write_tsv('../Racz2024c/dat/hotelban_baseline.tsv')

@@ -12,15 +12,16 @@ library(glue)
 library(magrittr)
 library(patchwork)
 library(ggthemes)
-# library(lme4)
+library(lme4)
 # library(mgcv)
-# library(performance)
+library(performance)
+library(sjPlot)
 # library(broom.mixed)
 # library(parallel)
 
 # -- source -- #
 
-source('analysis/esp_analysis/source_esp.R')
+source('analysis/noun_analysis/source_noun.R')
 
 # -- viz -- #
 
@@ -61,6 +62,19 @@ esp %>%
 
 # ... 
   
+fit1 = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + (1 + 1|part_id) + (1|base), 
+                     data = posttest, 
+                     family = binomial(link = 'logit'), 
+                     control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
+                     ))
+fit2 = glmer(picked_v1 ~ 1 + reg_rate + reg_dist + baseline_log_odds_jitter + (1 + 1|part_id) + (1|base), 
+             data = posttest, 
+             family = binomial(link = 'logit'), 
+             control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
+             ))
 
-posttest %>% 
-  
+
+plot(compare_performance(fit1, fit2, metrics = 'common'))
+test_likelihoodratio(fit1,fit2)
+broom.mixed::tidy(fit1, conf.int = T)
+# pincer pezsgot
