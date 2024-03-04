@@ -193,10 +193,14 @@ perf_p = compare_performance(fits_p$fit_p)
 perf_p %>% 
   select(Name,AIC,BIC,R2_conditional,R2_marginal,RMSE,Log_loss)
 
+plot(compare_performance(fits_p$fit_p, metrics = 'common'))
+
 # based on aic, bic, loss, marginal r2, overfitting info, this seems to boil down to 2 vs 3
 fit1 = fits_p$fit_p[[1]]
 fit2 = fits_p$fit_p[[2]]
 fit3 = fits_p$fit_p[[3]]
+
+plot(compare_performance(fit1,fit2,fit3, metrics = 'common'))
 
 binned_residuals(fit1)
 binned_residuals(fit2)
@@ -221,11 +225,10 @@ fit2c = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + v
               family = binomial(link = 'logit'), 
               control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
               ))
-# fit2c is overfit right out of the box
 
 anova(fit2,fit2b)
+anova(fit2,fit2c)
 binned_residuals(fit2b)
-
 # okay right fit2b seems overfit and doesn't really help with anything.
 # why residuals? distribution not a good match? unseen variation?
 
