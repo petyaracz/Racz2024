@@ -66,32 +66,25 @@ sposttests = s %>%
 
 # see esp_analysis, sleep_analysis/sleep_napkin
 
-esp_fit = glmer(esp_match ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), 
+esp_fit = glmer(as.double(esp_match) ~ 1 + reg_rate + reg_dist * scale(abs_baseline_log_odds_jitter) + variation + scale(i) + (1|part_id) + (1|base), 
                 data = esp, 
                 family = binomial(link = 'logit'), 
                 control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
                 ))
 
-posttest_fit = glmer(picked_v1 ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base), 
+posttest_fit = glmer(as.double(picked_v1) ~ 1 + reg_rate + reg_dist * baseline_log_odds_jitter + variation + (1 + 1|part_id) + (1|base), 
                      data = posttest, 
                      family = binomial(link = 'logit'), 
                      control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
                      ))
 
-s_esp_fit = glmer(esp_match ~ 1 + scale(abs_baseline_log_odds) + variation + scale(i) + (1|part_id) + (1|base), 
+s_esp_fit = glmer(as.double(esp_match) ~ 1 + scale(abs_baseline_log_odds) + variation + scale(i) + (1|part_id) + (1|base), 
              data = sesp, 
              family = binomial(link = 'logit'), 
              control = glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=20000)
              ))
 
-s_posttests_fit = glmer(picked_v1 ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = sposttests, family = binomial)
-
-# -- predictions -- #
-
-esp$pred = predict(esp_fit, type = 'response')
-posttest$pred = predict(posttest_fit, type = 'response')
-sesp$pred = predict(s_esp_fit, type = 'response')
-sposttests$pred = predict(s_posttests_fit, type = 'response')
+s_posttests_fit = glmer(as.double(picked_v1) ~ 1 + trial_kind * variation + scale(baseline_log_odds) + (1|part_id) + (1|base), data = sposttests, family = binomial)
 
 # -- camera ready -- #
 

@@ -1,0 +1,29 @@
+Experiment I
+
+Hungarian
+
+Ebben a játékban szavakat kell toldalékolni. Minden körben mutatunk majd egy példamondatot, amiben lesz egy szó. Alatta jön egy második mondat, ezt a mondatot neked kell majd befejezni, ugyanezzel a szóval. Minden mondathoz adunk két lehetőséget, ezeket balra és jobbra látod majd. A játék kb. negyedóráig tart.
+
+English
+
+In this game, you have to add suffixes to words. Each round we will show you a prompt sentence with a word in it. Underneath there will be a second sentence, you will have to complete this sentence with the same word. For each sentence we will give you two options, you will see them on the left and on the right. The game lasts about a quarter of an hour.
+
+Experiment II
+
+Hungarian
+
+A kísérletben szavakat fogsz látni. Ezek között lesznek olyanok, amelyeket ismersz, de előfordulhatnak olyanok is, amelyeket nem ismersz, sőt, vannak köztük kitalált szavak is. Minden szónál látni fogsz toldalékolt alakokat. A te feladatod az lesz, hogy minden szóhoz kiválaszd azt a toldalékolt alakot, amely a te számodra ismerősebben, természetesebben hangzik. Rossz válaszok nincsenek, mert van olyan, hogy különböző embereknek más és más szó tűnik jobb választásnak. A választ úgy tudod majd kiválasztani, ha rákattintasz. Ebben a szóválasztós játékban egy másik játékossal együtt veszel majd részt. A másik játékos is minden esetben azok közül a lehetőségek közül válogathat, mint te. Kettőtök feladata az, hogy ugyanazt a lehetőséget válasszátok minden esetben. Ahhoz, hogy ez sikerüljön, neked figyelned kell arra, hogy a másik játékos milyen válaszokat ad, és ennek alapján meg kell tippelned, hogyan választ legközelebb. Ha eltalálod, akkor pontot kapsz.
+
+English
+
+In the experiment you will see words. Some of these will be words you know, some you don't know, and some will be made-up words. For each word you will see suffixed variants. Your task will be to choose for each word the suffixed variant that sounds more familiar and natural to you. There are no wrong answers, because different words seem to be better choices for different people. You can choose the answer by clicking on it. You will be playing this word choice game with another player. The other player can choose from the same options as you in each case. It is up to the two of you to choose the same option in each case. In order to do this, you must pay attention to the other player's answers and guess how they will choose next. If you get it right, you get a point.
+
+Experiment III (re-test only)
+
+Hungarian
+
+A kísérlet nagyon hasonló ahhoz a kísérlethez, amelyben tegnap vettél részt. A kísérletben szavakat fogsz látni. Ezek között lesznek olyanok, amelyeket ismersz, de előfordulhatnak olyanok is, amelyeket nem ismersz, sőt, vannak köztük kitalált szavak is. Minden szónál látni fogsz toldalékolt alakokat. A te feladatod az lesz, hogy minden szóhoz kiválaszd azt a toldalékolt alakot, amely a te számodra ismerősebben, természetesebben hangzik. Rossz válaszok nincsenek, mert van olyan, hogy különböző embereknek más és más szó tűnik jobb választásnak. A választ úgy tudod majd kiválasztani, ha rákattintasz. Ezt a játékot egyedül fogod játszani.
+
+English
+
+The experiment is very similar to the one you participated in yesterday. In the experiment you will see words. Some of them you know, some you don't know, and some of them are made-up words. For each word you will see suffixed forms. Your task will be to choose for each word the suffixed form that sounds more familiar and natural to you. There are no wrong answers, because different words seem to be better choices for different people. You can choose the answer by clicking on it. You will play this game on your own.
