@@ -275,7 +275,7 @@ posttest %>%
   theme_few() +
   scale_colour_viridis_d() +
   xlab('baseline preference for variant 1 (log odds)') +
-  ylab('post-test preference for variant 1 (log odds)') +
+  ylab('post-test preference for\nvariant 1 (log odds)') +
   labs(colour = 'morphological pattern') +
   ggtitle('Word use of variant 1 in post-test vs baseline\nacross regularisation distribution in posttest') +
   facet_wrap( ~ reg_dist)
