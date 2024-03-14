@@ -1,1 +1,0 @@
-rules move around but there's no discernible pattern really. it seems that, from the rule point of view, typical / reversed move completely random words from one category to the other and the rules get confused by that. this isn't really a revelation though, we've known it already. sleepd doesn't change anything in this dataset but we've known that already.
