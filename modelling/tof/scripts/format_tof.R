@@ -71,6 +71,22 @@ countRules2 = . %>%
   ) %>% 
   ungroup()
 
+getBestRule = function(rules,var){
+  rules %>% 
+  group_by(base,variation,rule_type) %>% 
+    summarise(
+      best = max({{var}}),
+    ) %>% 
+    pivot_wider(names_from = rule_type, values_from = best, values_fill = 0) %>% 
+    mutate(
+      weight = case_when(
+        rule2 == 0 ~ 1,
+        rule1 != 0 & rule2 != 0 ~ rule1 / (rule1 + rule2)
+      )
+    ) %>% 
+    ungroup()
+}
+
 # -- read -- #
 
 # rules from our sort of MGL (the best one for each var)
@@ -139,6 +155,57 @@ with(rules, cor.test(adjusted_reliability,baseline_log_odds_rule))
 with(rules, cor.test(impugned_lower_confidence_limit,baseline_log_odds_rule))
 # yup.
 
+# for each verb, what is the best measure? adjusted rel, or impugned conf?
+rules %>% 
+  getBestRule(reliability) %>% 
+  left_join(b_in) %>% 
+  select(base,log_odds,weight,variation) %>% 
+  group_by(variation) %>% 
+  summarise(cor = cor(log_odds,weight))
+rules %>% 
+  getBestRule(adjusted_reliability) %>% 
+  left_join(b_in) %>% 
+  select(base,log_odds,weight,variation) %>% 
+  group_by(variation) %>% 
+  summarise(cor = cor(log_odds,weight))
+rules %>% 
+  getBestRule(impugned_lower_confidence_limit) %>% 
+  left_join(b_in) %>% 
+  select(base,log_odds,weight,variation) %>% 
+  group_by(variation) %>% 
+  summarise(cor = cor(log_odds,weight))
+
+# impugned whatever!
+# we get the best rules per rule type and verb based on adj. rel.
+rules2 = rules %>% 
+  arrange(base,variation,rule_type,-impugned_lower_confidence_limit) %>%
+  group_by(base,variation,rule_type) %>% 
+  slice(1) %>% 
+  select(base,variation,rule,rule_type,impugned_lower_confidence_limit) %>% 
+  ungroup()
+
+rules2a = filter(rules2, rule_type == 'rule1') %>% 
+  rename(rule1 = rule, impugned_lower_confidence_limit1 = impugned_lower_confidence_limit) %>% select(-rule_type)
+rules2b = filter(rules2, rule_type == 'rule2') %>% 
+  rename(rule2 = rule, impugned_lower_confidence_limit2 = impugned_lower_confidence_limit) %>% select(-rule_type)
+
+rules3 = left_join(rules2a,rules2b) %>% 
+  mutate(
+    weight = case_when(
+      is.na(impugned_lower_confidence_limit2) ~ 1,
+      !is.na(impugned_lower_confidence_limit2) ~ impugned_lower_confidence_limit1 / (impugned_lower_confidence_limit1 + impugned_lower_confidence_limit2)
+    )
+  )
+
+# sanity check:
+rules3 %>% 
+  left_join(b_in) %>% 
+  select(base,log_odds,weight,variation) %>% 
+  group_by(variation) %>% 
+  summarise(cor = cor(log_odds,weight))
+# ayup
+
+# best_impugned_confidence = max(impugned_lower_confidence_limit)
 # -- add to long data -- #
 
 intersect(names(rules), names(d))
@@ -149,6 +216,13 @@ intersect(names(rules), names(d))
 d2 = b_in %>% 
   select(base,input,output1,output2) %>% 
   inner_join(d)
+
+# add proper trial n
+d2 %<>%
+  group_by(trial_kind,part_id) %>% 
+  arrange(trial_index) %>% 
+  mutate(i = 1:n()) %>% 
+  ungroup()
 
 # takes a while:
 fulld = d2 %>% 
@@ -163,4 +237,6 @@ fulld
 
 # -- write -- #
 
-write_tsv(fulld, 'modelling/tof/dat/esp_master_all_filtered_rules.tsv')
+write_tsv(fulld, 'modelling/tof/dat/esp_master_all_filtered_rules.gz')
+write_tsv(rules, 'modelling/tof/dat/verb_tof_rules.tsv')
+write_tsv(rules3, 'modelling/tof/dat/verb_tof_weights.tsv')

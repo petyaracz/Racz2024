@@ -5,8 +5,105 @@ library(tidyverse)
 library(ggthemes)
 library(glue)
 library(patchwork)
+library(lme4)
 
-d = read_tsv('modelling/tof/dat/esp_master_all_filtered_rules.tsv')
+r = read_tsv('modelling/tof/dat/verb_tof_rules.tsv')
+w = read_tsv('modelling/tof/dat/verb_tof_weights.tsv')
+b = read_tsv('exp_data/baseline/baseline_tidy_proc.tsv')
+d = read_tsv('exp_data/esp/esp_master_all_filtered.tsv')
+e = read_tsv('modelling/tof/dat/esp_master_all_filtered_rules.gz')
+
+# -- wrangling -- #
+
+d %<>%
+  group_by(part_id,trial_kind) %>% 
+  arrange(trial_index) %>% 
+  mutate(i = 1:n()) %>% 
+  ungroup()
+
+dw = w %>% 
+  left_join(d) %>% 
+  mutate(
+    reg = glue('{reg_rate} {reg_dist}') %>% 
+      factor(levels = c(
+        'high typical', 'high reversed', 'low reversed', 'low typical'
+      ))
+  )
+
+bw = w %>% 
+  left_join(b)
+
+# -- best weights in baseline -- #
+
+bw %>% 
+  ggplot(aes(weight,log_odds, colour = variation)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw()
+
+bw %>% 
+  group_by(variation) %>% 
+  summarise(
+    cor = cor(log_odds,weight)
+  )
+
+# -- best weights across exp -- #
+
+# sums #
+
+dw %>% 
+  group_by(base,trial_kind,variation,reg) %>% 
+  summarise(
+    weight = mean(weight),
+    picked_v1 = mean(picked_v1)
+  ) %>% 
+  ggplot(aes(weight,picked_v1,colour = reg)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  facet_wrap( ~ trial_kind + variation) +
+  theme_bw()
+
+# trajectories #
+
+e %>% 
+  filter(
+    variation == 'lakok/lakom',
+    trial_kind == 'esp trial'
+  ) %>% 
+  mutate(
+    rule_diff = case_when(
+      rule_type == 'rule1' ~ picked_v1 - impugned_lower_confidence_limit,
+      rule_type == 'rule2' ~ picked_v1 - (1 - impugned_lower_confidence_limit)
+    ),
+    reg = glue('{reg_rate} {reg_dist}') %>% 
+      factor(levels = c(
+        'high typical', 'high reversed', 'low reversed', 'low typical'
+      )),
+    rule = str_replace(rule, '→', '->'),
+    rule2 = glue('{rule} ({round(impugned_lower_confidence_limit,2)})') %>%  
+                 fct_reorder(-impugned_lower_confidence_limit),
+    ntile_ilcl = ntile(impugned_lower_confidence_limit,4)
+  ) %>% 
+  ggplot(aes(i,rule_diff,colour = rule2)) +
+  geom_smooth(method = "loess", se = F) +
+  theme_few() +
+  facet_wrap( ~ ntile_ilcl + reg) +
+  scale_colour_viridis_d(option = 'turbo')
+# ahahahah yeah great
+ggsave('modelling/tof/viz/wiggle1.pdf', width = 13, height = 9)
+
+dw %>% 
+  filter(
+  variation == 'lakok/lakom',
+  trial_kind == 'esp trial'
+) %>% 
+  mutate(
+    weight_diff = weight - picked_v1
+  ) %>% 
+  ggplot(aes(i,weight_diff,colour = reg)) +
+  geom_smooth(method = "loess", se = F) +
+  theme_few() +
+  scale_colour_viridis_d(option = 'turbo')
 
 # -- 1-dim -- #
 
