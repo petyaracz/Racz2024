@@ -1,8 +1,8 @@
-"Morphological convergence and sociolinguistic salience: an experimental study"
-Online supplement
+Supplementary Information. Lexical and social effects on the learning
+and integration of inflectional morphology.
 ================
 Rácz, Péter
-2023-07-15
+2024-05-21
 
 # Summary
 
@@ -17,9 +17,9 @@ the adjusted representations persist beyond the initial experiment.
 
 Here, we give descriptions and report on the baseline experiment for
 three variable patterns, levelling, vowel deletion, and front harmony.
-We report on the main experiment and the integration experiment and
+**We report on the main experiment and the integration experiment and
 provide a discussion for two of these patterns, levelling and vowel
-deletion.
+deletion.**
 
 The results confirm that participants have detailed representations of
 variable patterns and are able to adjust these upon exposure to external
@@ -378,13 +378,13 @@ exclusion criterion.
 
 ## Results
 
-Participants completed the task in a median 15.0747867 minutes. Given
-the randomisation, the number of responses per nonce word was not the
-same. Participants gave 26–29 responses to each nonce form, with a
-median of 27. The three stimulus lists did not differ significantly in
-preference for variant 1 / 2 (based on a binomial GLMM predicting
-probability of variant 1 from list number with participant and target
-word grouping factors).
+Participants completed the task in a median 15.07 minutes. Given the
+randomisation, the number of responses per nonce word was not the same.
+Participants gave 26–29 responses to each nonce form, with a median of
+27. The three stimulus lists did not differ significantly in preference
+for variant 1 / 2 (based on a binomial GLMM predicting probability of
+variant 1 from list number with participant and target word grouping
+factors).
 
 For each nonce form, we calculated the log odds of the counts of
 participants who picked variant 1 and those who picked variant 2.
@@ -544,13 +544,13 @@ the post-test. The order of variants in each trial was also randomised.
 
 ## Participants
 
-182 participants completed the main experiment in late 2022 and early
+184 participants completed the main experiment in late 2022 and early
 2023. Sample size was pre-set to 7 per unique list (12 lists) or 21 per
 condition (high / low x typical / reversed x levelling / vowel
-deletion). 5participants who matched our exclusion criteria (see below)
+deletion). 7participants who matched our exclusion criteria (see below)
 were excluded. Then, we kept data from the first seven participants in
 each list (excluding an additional 9 participants), resulting in a final
-total of 7 x 3 x 2 x 2 x 2 = 168 participants, 109 women. Median age was
+total of 7 x 3 x 2 x 2 x 2 = 168 participants, 111 women. Median age was
 22. Participants completed the task for course credit.
 
 ## Procedure
@@ -631,7 +631,7 @@ times were also excluded. Median and mean absolute deviation were
 calculated separately for type of pattern (levelling / vowel deletion)
 and phase (matching game or post-test).
 
-802 trials or 4.420194% of all trials were dropped. This is a relatively
+670 trials or 3.69% of all trials were dropped. This is a relatively
 high number. This is likely both because the task was difficult and
 because participants completed it in an uncontrolled environment, both
 contributing to higher variability. Participants completed the matching

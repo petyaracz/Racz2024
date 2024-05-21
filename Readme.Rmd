@@ -1,5 +1,5 @@
 ---
-title: 'Supplementary Information: Learning Salient Morphological Variation'
+title: 'Supplementary Information. Lexical and social effects on the learning and integration of inflectional morphology.'
 author: "Rácz, Péter"
 date: "`r Sys.Date()`"
 output: github_document
@@ -8,7 +8,7 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FALSE, fig.path = 'figures/', fig.width = 8, fig.height = 8)
 
-googlesheets4::gs4_auth(email = 'petermartonracz@gmail.com')
+#googlesheets4::gs4_auth(email = 'petermartonracz@gmail.com')
 
 set.seed(1337)
 
@@ -47,7 +47,7 @@ alldf %<>% filter(variation %in% c('lakok/lakom','cselekszenek/cselekednek'))
 
 We wanted to see whether people can learn morphological variation and how the social salience of the pattern in question feeds into this. We selected a set of variable patterns in Hungarian morphology, generated nonce forms, benchmarked them in a baseline experiment, and then had our participants play a word-matching game with an artificial co-player to see whether they can learn from the co-player's responses in the game and adjust their representations of morphological variation, and whether the adjusted representations persist beyond the initial experiment.
 
-Here, we give descriptions and report on the baseline experiment for three variable patterns, levelling, vowel deletion, and front harmony. We report on the main experiment and the integration experiment and provide a discussion for two of these patterns, levelling and vowel deletion.
+Here, we give descriptions and report on the baseline experiment for three variable patterns, levelling, vowel deletion, and front harmony. __We report on the main experiment and the integration experiment and provide a discussion for two of these patterns, levelling and vowel deletion.__
 
 The results confirm that participants have detailed representations of variable patterns and are able to adjust these upon exposure to external stimuli. Contrary to our expectations, this adjustment was not easier for the socially salient morphological pattern.
 
@@ -304,7 +304,7 @@ Participants who only picked the left button or the right button were to be excl
 
 ## Results
 
-Participants completed the task in a median `r b6` minutes. Given the randomisation, the number of responses per nonce word was not the same. Participants gave `r b4[1]`--`r b4[2]` responses to each nonce form, with a median of `r b5`. The three stimulus lists did not differ significantly in preference for variant 1 / 2 (based on a binomial GLMM predicting probability of variant 1 from list number with participant and target word grouping factors).
+Participants completed the task in a median `r round(b6,2)` minutes. Given the randomisation, the number of responses per nonce word was not the same. Participants gave `r b4[1]`--`r b4[2]` responses to each nonce form, with a median of `r b5`. The three stimulus lists did not differ significantly in preference for variant 1 / 2 (based on a binomial GLMM predicting probability of variant 1 from list number with participant and target word grouping factors).
 
 For each nonce form, we calculated the log odds of the counts of participants who picked variant 1 and those who picked variant 2.
 
@@ -367,8 +367,8 @@ t5b = t5 %>%
   select(-log_odds) %>% 
   relocate(`baseline log odds of k/m`, .after = `baseline rank`) 
 
-t5b %>% 
-  googlesheets4::write_sheet(ss = 'https://docs.google.com/spreadsheets/d/1ma5XC56IaMwgCfdpEDL_nUlGcjPigz8VLeH3UcRossM/edit?usp=sharing', sheet = 'Table 1')
+# t5b %>% 
+#   googlesheets4::write_sheet(ss = 'https://docs.google.com/spreadsheets/d/1ma5XC56IaMwgCfdpEDL_nUlGcjPigz8VLeH3UcRossM/edit?usp=sharing', sheet = 'Table 1')
 
 # t5b %>% 
 #   kable('latex')
@@ -410,7 +410,7 @@ d4 = d %>%
 
 ```
 
-`r d1` participants completed the main experiment in late 2022 and early 2023. Sample size was pre-set to 7 per unique list (12 lists) or 21 per condition (high / low x typical / reversed x levelling / vowel deletion). `r d1-d1c `participants who matched our exclusion criteria (see below) were excluded. Then, we kept data from the first seven participants in each list (excluding an additional `r d1c-d1b` participants), resulting in a final total of 7 x 3 x 2 x 2 x 2 = `r d1b` participants, `r d2` women. Median age was `r d3`. Participants completed the task for course credit.
+`r d1` participants completed the main experiment in late 2022 and early 2023. Sample size was pre-set to 7 per unique list (12 lists) or 21 per condition (high / low x typical / reversed x levelling / vowel deletion). `r d1-d1c `participants who matched our exclusion criteria (see below) were excluded. Then, we kept data from the first seven participants in each list (excluding an additional `r d1c-d1b` participants), resulting in a final total of 7 x 3 x 2 x 2 x 2 = `r d1b` participants, `r d2` women. Median age was `r round(d3,2)`. Participants completed the task for course credit.
 
 ## Procedure
 
@@ -436,7 +436,7 @@ In terms of (1) learning, we can see how well participants converge to various c
 
 Participants who only picked the left button or the right button were to be excluded from the data. No participants met this pre-registered exclusion criterion. Participants who finished either the matching game or the post-test slower than the median completion time plus three times the mean absolute deviation of completion times were excluded. Individual trials that had a longer response time than the median response time plus three times the mean absolute deviation of response times were also excluded. Median and mean absolute deviation were calculated separately for type of pattern (levelling / vowel deletion) and phase (matching game or post-test).
 
-`r 18144-nrow(d)` trials or `r (1-(nrow(d)/18144))*100`% of all trials were dropped. This is a relatively high number. This is likely both because the task was difficult and because participants completed it in an uncontrolled environment, both contributing to higher variability. Participants completed the matching game and the post-test in 10-15 minutes.
+`r 18144-nrow(d)` trials or `r round((1-(nrow(d)/18144))*100,2)`% of all trials were dropped. This is a relatively high number. This is likely both because the task was difficult and because participants completed it in an uncontrolled environment, both contributing to higher variability. Participants completed the matching game and the post-test in 10-15 minutes.
 
 ### Matching game
 
@@ -567,7 +567,7 @@ i3 = i %>%
 
 ```
 
-`r i1b` participants completed the task in Summer 2023 on [Prolific](https://www.prolific.co/). They were all native speakers of Hungarian, residing in Hungary, age-matched to the sample of the main experiment. `r i2` were women. The median age was `r i2`. Participants received 4 GBP for completing the task, 2 GBP for part I and 2 GBP for part two. No participants met the exclusion criteria.
+`r i1b` participants completed the task in Summer 2023 on [Prolific](https://www.prolific.co/). They were all native speakers of Hungarian, residing in Hungary, age-matched to the sample of the main experiment. `r i2` were women. The median age was `r round(i2,2)`. Participants received 4 GBP for completing the task, 2 GBP for part I and 2 GBP for part two. No participants met the exclusion criteria.
 
 The integration experiment consisted of two parts that were separated by a night. The same participants took part in both. Participants were informed that the task has two parts, that the second part is much shorter than the first part, and that, since we want them to take part in both tasks, the second part pays as much as the first part. `r i1` participants picked up the first part and `r i1b` completed the second part.
 
