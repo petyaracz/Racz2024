@@ -6,7 +6,7 @@ library(broom.mixed)
 library(ggthemes)
 library(gghalves)
 
-setwd('~/Github/Racz2024')
+setwd('~/Github/published/Racz2024')
 
 d = read_tsv('exp_data/esp/esp_sleep_pt1_pt2_master_all_filtered.tsv')
 e = read_tsv('exp_data/esp/esp_master_all_filtered.tsv')

@@ -4,6 +4,10 @@ and integration of inflectional morphology.
 Rácz, Péter
 2024-05-21
 
+# Note
+
+> Frequency dictionary now at https://github.com/petyaracz/Webcorpus2FrequencyList
+
 # Summary
 
 We wanted to see whether people can learn morphological variation and
